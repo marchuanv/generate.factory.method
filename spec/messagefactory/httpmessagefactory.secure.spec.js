@@ -1,4 +1,4 @@
-const { ErrorMessages } = require("../../lib/errormessages");
+const errorMessages = require("../../lib/errormessages");
 const { HttpMessageFactory } = require("../../lib/http/httpmessagefactory");
 const { MessageFactory } = require("../../lib/messagefactory");
 const { MessageStatus } = require("../../lib/messagestatus");
@@ -10,7 +10,6 @@ const data = 'this is a test';
 const userid = 'joe';
 const secret = '12345';
 const fromHost = 'localhost:3000';
-const errorMessages = new ErrorMessages();
 const userIdentity = new UserIdentity({ userid });
 userIdentity.unregister();
 userIdentity.register({ secret });
