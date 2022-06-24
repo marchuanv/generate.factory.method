@@ -1,5 +1,6 @@
 const { HttpConnection } = require("../../lib/http/httpconnection");
 const { HttpRequestQueue } = require("../../lib/http/httprequestqueue");
+const http = require('http');
 
 describe("when opening an http connection and sending and http request given a hostname and port number", function() {
     beforeAll(async () => {
@@ -22,6 +23,12 @@ describe("when opening an http connection and sending and http request given a h
      
         // Arrange
         expect(this.connection.isOpen()).toBeTruthy();
+        setTimeout(() => {
+            const { httpResponse } = this.httpRequestQueue.dequeue();
+            if (httpResponse instanceof http.ServerResponse) {
+                httpResponse.writeHead(200, 'success', {}).end('Hello World from Server');
+            }
+        }, 2000);
 
         // Act
         await this.connection.send({ host: 'localhost', port: 3000, path: '/', headers: {}, method: 'POST', timeout: 5000, data: 'Hello World' });
