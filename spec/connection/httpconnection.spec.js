@@ -36,6 +36,7 @@ describe("when opening an http connection and sending and http request given a h
         // Assert
         const { httpResponse } = this.httpRequestQueue.dequeue();
         expect(httpResponse.body).toEqual('Hello World from Server');
+        expect(this.httpRequestQueue.isEmpty()).toBeTruthy();
 
     });
     it("it should have a closed connection", () => {
