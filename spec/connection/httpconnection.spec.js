@@ -34,7 +34,8 @@ describe("when opening an http connection and sending and http request given a h
         await this.connection.send({ host: 'localhost', port: 3000, path: '/', headers: {}, method: 'POST', timeout: 5000, data: 'Hello World' });
    
         // Assert
-        const queue = this.httpRequestQueue.getClonedQueue();
+        const { httpResponse } = this.httpRequestQueue.dequeue();
+        expect(httpResponse.body).toEqual('Hello World from Server');
 
     });
     it("it should have a closed connection", () => {
