@@ -7,7 +7,7 @@ const { MessageStatus } = require("../../lib/messagestatus");
 const { MessageHandler } = require("../../lib/messagehandler");
 const { Message } = require("../../lib/message");
 const { Content } = require("../../lib/content");
-jasmine.DEFAULT_TIMEOUT_INTERVAL = 10000;
+
 describe("when asking the http message handler to send and receive an http request message", function() {
   it("it should do that without error", async function() {
     

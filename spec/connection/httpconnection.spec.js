@@ -1,8 +1,10 @@
 const { HttpConnection } = require("../../lib/http/httpconnection");
+const { HttpRequestQueue } = require("../../lib/http/httprequestqueue");
 
-describe("when opening an http connection given a hostname and port number", function() {
+describe("when opening an http connection and sending and http request given a hostname and port number", function() {
     beforeAll(() => {
-        this.connection = new HttpConnection();
+        this.httpRequestQueue = new HttpRequestQueue();
+        this.connection = new HttpConnection({ httpRequestQueue });
     });
     it("it should have an open connection", async () => {
         // Arrange
@@ -23,6 +25,18 @@ describe("when opening an http connection given a hostname and port number", fun
    
         // Assert
         expect(address).not.toBeNull();
+    });
+    it("it should have a queued request and response", async () => {
+     
+        // Arrange
+        expect(this.connection.isOpen()).toBeTruthy();
+
+        // Act
+        await this.connection.send({ host: 'localhost', port: 3000, path: '/', headers: {}, method: 'POST', data: 'Hello World' });
+   
+        // Assert
+        const queue = this.httpRequestQueue.getClonedQueue();
+
     });
     it("it should have a closed connection", async () => {
         // Arrange
