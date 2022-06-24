@@ -2,20 +2,12 @@ const { HttpConnection } = require("../../lib/http/httpconnection");
 const { HttpRequestQueue } = require("../../lib/http/httprequestqueue");
 
 describe("when opening an http connection and sending and http request given a hostname and port number", function() {
-    beforeAll(() => {
+    beforeAll(async () => {
         this.httpRequestQueue = new HttpRequestQueue();
         this.connection = new HttpConnection({ httpRequestQueue });
+        await this.connection.open({ host: 'localhost', port: 3000, timeout: 5000 });
     });
-    it("it should have an open connection", async () => {
-        // Arrange
-
-        // Act
-        await this.connection.open({ host: 'localhost', port: 3000 });
-
-        // Assert
-        expect(this.connection.isOpen()).toBeTruthy();
-    });
-    it("it should return the server host address", async () => {
+    it("it should return the server host address", () => {
      
         // Arrange
         expect(this.connection.isOpen()).toBeTruthy();
@@ -32,13 +24,13 @@ describe("when opening an http connection and sending and http request given a h
         expect(this.connection.isOpen()).toBeTruthy();
 
         // Act
-        await this.connection.send({ host: 'localhost', port: 3000, path: '/', headers: {}, method: 'POST', data: 'Hello World' });
+        await this.connection.send({ host: 'localhost', port: 3000, path: '/', headers: {}, method: 'POST', timeout: 5000, data: 'Hello World' });
    
         // Assert
         const queue = this.httpRequestQueue.getClonedQueue();
 
     });
-    it("it should have a closed connection", async () => {
+    it("it should have a closed connection", () => {
         // Arrange
         expect(this.connection.isOpen()).toBeTruthy();
 
