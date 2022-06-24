@@ -24,4 +24,14 @@ describe("when opening an http connection given a hostname and port number", fun
         // Assert
         expect(address).not.toBeNull();
     });
+    it("it should have a closed connection", async () => {
+        // Arrange
+        expect(this.connection.isOpen()).toBeTruthy();
+
+        // Act
+        this.connection.close();
+
+        // Assert
+        expect(this.connection.isOpen()).toBeFalsy();
+    });
 });
