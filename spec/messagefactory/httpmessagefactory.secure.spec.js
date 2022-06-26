@@ -7,10 +7,10 @@ const { UserIdentity } = require("../../lib/useridentity");
 const utils = require('utils');
 
 const data = 'this is a test';
-const userid = 'joe';
+const userId = 'joe';
 const secret = '12345';
 const fromHost = 'localhost:3000';
-const userIdentity = new UserIdentity({ userid });
+const userIdentity = new UserIdentity({ userId });
 userIdentity.unregister();
 userIdentity.register({ secret });
 const { publicKey } = utils.generatePublicPrivateKeys(secret);
