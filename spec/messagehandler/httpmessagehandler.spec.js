@@ -1,5 +1,4 @@
 const { HttpMessageHandler } = require("../../lib/http/httpmessagehandler");
-const { ErrorMessages } = require("../../lib/errormessages");
 const { HttpMessageFactory } = require("../../lib/http/httpmessagefactory");
 const { MessageFactory } = require("../../lib/messagefactory");
 const { HttpConnection } = require("../../lib/http/httpconnection");
@@ -10,11 +9,10 @@ describe("when asking the http message handler to send and receive an http reque
   it("it should do that without error", async function() {
     
     // Arrange
-    const errorMessages = new ErrorMessages();
-    const messageFactory = new MessageFactory({ errorMessages });
-    const httpMessageFactory = new HttpMessageFactory({ messageFactory, errorMessages });
-    const httpConnection = new HttpConnection({ host: 'localhost', port: 3000, errorMessages });
-    const httpMessageHandler = new HttpMessageHandler({ httpMessageFactory, httpConnection, errorMessages });
+    const messageFactory = new MessageFactory();
+    const httpMessageFactory = new HttpMessageFactory({ messageFactory });
+    const httpConnection = new HttpConnection({ host: 'localhost', port: 3000 });
+    const httpMessageHandler = new HttpMessageHandler({ httpMessageFactory, httpConnection });
     httpMessageHandler.receive({ callback: ({ httpRequestMessage }) => {
       if (!(httpRequestMessage instanceof HttpRequestMessage)) {
         throw new Error("the 'httpRequestMessage' parameter is null, undefined or not of type: HttpRequestMessage");

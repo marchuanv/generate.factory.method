@@ -1,4 +1,3 @@
-const { ErrorMessages } = require('../../lib/errormessages');
 const { MessageBusFactory } = require('../../lib/messagebusfactory');
 describe("when publishing a message", function() {
  it("it should send the same message to all subscribers", function(done) {
@@ -8,8 +7,7 @@ describe("when publishing a message", function() {
   let callback = ({ from, data }) => assertCallback({ from, data });
   const channelName = 'messagebustest';
   const expectedData = 'hello from messagebus test';
-  const errorMessages = new ErrorMessages();
-  const messageBusFactory = new MessageBusFactory({ host: 'localhost', port: 3000, errorMessages });
+  const messageBusFactory = new MessageBusFactory({ host: 'localhost', port: 3000 });
   const messageBus = messageBusFactory.createunsecure();
   messageBus.subscribe({ channelName, callback });
 
