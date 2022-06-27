@@ -12,7 +12,7 @@ describe("when opening an http connection and sending and http request given a h
             httpRequestQueue: this.httpRequestQueue,
             httpResponseQueue: this.httpResponseQueue,
             hostAddress: this.hostAddress,
-            timeout: 6000
+            timeout: 5000
         });
         await this.connection.open();
     });
@@ -33,7 +33,7 @@ describe("when opening an http connection and sending and http request given a h
         const address = { host: 'localhost', port: 3000 };
         expect(this.connection.isOpen()).toBeTruthy();
         setTimeout( async () => {
-            const { httpResponse } = await this.httpRequestQueue.dequeue();
+            const { httpResponse } = await this.httpResponseQueue.dequeue();
             if (httpResponse instanceof http.ServerResponse) {
                 httpResponse.writeHead(200, 'success', {}).end('Hello World from Server');
             }
@@ -43,9 +43,9 @@ describe("when opening an http connection and sending and http request given a h
         await this.connection.send({ address , path: '/', headers: {}, method: 'POST', data: 'Hello World' });
    
         // Assert
-        const { httpResponse } = await this.httpRequestQueue.dequeue();
+        const { httpResponse } = await this.httpResponseQueue.dequeue();
         expect(httpResponse.body).toEqual('Hello World from Server');
-        expect(this.httpRequestQueue.isEmpty()).toBeTruthy();
+        expect(this.httpResponseQueue.isEmpty()).toBeTruthy();
 
     });
     it("it should have a closed connection", () => {
