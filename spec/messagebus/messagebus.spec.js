@@ -5,10 +5,11 @@ describe("when publishing a message", function() {
   // Arrange
   let assertCallback;
   let callback = ({ from, data }) => assertCallback({ from, data });
+  const address = { address: 'localhost', port: 3000 };
   const channelName = 'messagebustest';
   const expectedData = 'hello from messagebus test';
   const messageBusFactory = new MessageBusFactory();
-  const messageBus = messageBusFactory.createunsecure();
+  const messageBus = messageBusFactory.createunsecure({ address });
   messageBus.subscribe({ channelName, callback });
   //{ host: 'localhost', port: 3000 }
   // Act
