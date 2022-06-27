@@ -7,8 +7,14 @@ describe("when opening an http connection and sending and http request given a h
     beforeAll(async () => {
         this.httpRequestQueue = new HttpRequestQueue();
         this.httpResponseQueue = new HttpResponseQueue();
-        this.connection = new HttpConnection({ httpRequestQueue });
-        await this.connection.open({ host: 'localhost', port: 3000, timeout: 5000 });
+        this.hostAddress = { address: '127.0.0.1', family: 'IPv4', port: 3000 };
+        this.connection = new HttpConnection({ 
+            httpRequestQueue: this.httpRequestQueue,
+            httpResponseQueue: this.httpResponseQueue,
+            hostAddress: this.hostAddress,
+            timeout: 6000
+        });
+        await this.connection.open();
     });
     it("it should return the server host address", () => {
      
@@ -19,11 +25,12 @@ describe("when opening an http connection and sending and http request given a h
         const address = this.connection.getServerAddress();
    
         // Assert
-        expect(address).not.toBeNull();
+        expect(address).toEqual(this.hostAddress);
     });
     it("it should have a queued request and response", async () => {
      
         // Arrange
+        const address = { host: 'localhost', port: 3000 };
         expect(this.connection.isOpen()).toBeTruthy();
         setTimeout( async () => {
             const { httpResponse } = await this.httpRequestQueue.dequeue();
@@ -33,7 +40,7 @@ describe("when opening an http connection and sending and http request given a h
         }, 2000);
 
         // Act
-        await this.connection.send({ host: 'localhost', port: 3000, path: '/', headers: {}, method: 'POST', timeout: 5000, data: 'Hello World' });
+        await this.connection.send({ address , path: '/', headers: {}, method: 'POST', data: 'Hello World' });
    
         // Assert
         const { httpResponse } = await this.httpRequestQueue.dequeue();
