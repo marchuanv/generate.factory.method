@@ -7,10 +7,10 @@ describe("when publishing a message", function() {
   let callback = ({ from, data }) => assertCallback({ from, data });
   const channelName = 'messagebustest';
   const expectedData = 'hello from messagebus test';
-  const messageBusFactory = new MessageBusFactory({ host: 'localhost', port: 3000 });
+  const messageBusFactory = new MessageBusFactory();
   const messageBus = messageBusFactory.createunsecure();
   messageBus.subscribe({ channelName, callback });
-
+  //{ host: 'localhost', port: 3000 }
   // Act
   setTimeout( async () => {
     messageBus.publish({ channelName, data: expectedData });
