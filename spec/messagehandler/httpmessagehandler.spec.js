@@ -22,8 +22,7 @@ describe("when asking the http message handler to send and receive an http reque
     }});
 
     // Act
-    const message = await httpMessageHandler.send({ fromHost: 'localhost:3000', data: 'Hello World!' });
-    httpConnection.close();
+    const message = await httpMessageHandler.send({ host: 'localhost', port: 3000, data: 'Hello World!' });
 
     // Assert
     expect(message).not.toBeNull();
