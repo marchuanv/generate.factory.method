@@ -1,10 +1,9 @@
-const errorMessages = require("../../lib/errormessages");
 const { HttpMessageFactory } = require("../../lib/http/httpmessagefactory");
 const { MessageFactory } = require("../../lib/messagefactory");
 const { MessageStatus } = require("../../lib/messagestatus");
 
 const data = 'this is a test';
-const fromHost = 'localhost:3000';
+const address = 'localhost:3000';
 const messageFactory = new MessageFactory();
 const httpMessageFactory = new HttpMessageFactory({ messageFactory });
 
