@@ -9,7 +9,7 @@ describe("when asking the http message handler to send and receive an http reque
     const httpMessageHandlerFactory = new HttpMessageHandlerFactory()
     const httpMessageHandler = httpMessageHandlerFactory.createunsecure();
 
-    httpMessageHandler.receive({ callback: ({ httpRequestMessage }) => {
+    httpMessageHandler.receive({ host: 'localhost', port: 3000, callback: ({ httpRequestMessage }) => {
       if (!(httpRequestMessage instanceof HttpRequestMessage)) {
         throw new Error("the 'httpRequestMessage' parameter is null, undefined or not of type: HttpRequestMessage");
       }
