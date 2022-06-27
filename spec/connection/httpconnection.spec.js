@@ -23,8 +23,8 @@ describe("when opening an http connection and sending and http request given a h
      
         // Arrange
         expect(this.connection.isOpen()).toBeTruthy();
-        setTimeout(() => {
-            const { httpResponse } = this.httpRequestQueue.dequeue();
+        setTimeout( async () => {
+            const { httpResponse } = await this.httpRequestQueue.dequeue();
             if (httpResponse instanceof http.ServerResponse) {
                 httpResponse.writeHead(200, 'success', {}).end('Hello World from Server');
             }
