@@ -13,7 +13,7 @@ describe("when publishing a message", function() {
   //{ host: 'localhost', port: 3000 }
   // Act
   setTimeout( async () => {
-    messageBus.publish({ channelName, data: expectedData });
+    await messageBus.publish({ channelName, data: expectedData });
   },1000);
 
   // Assert
