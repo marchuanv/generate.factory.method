@@ -1,10 +1,12 @@
 const { HttpConnection } = require("../../lib/http/httpconnection");
 const { HttpRequestQueue } = require("../../lib/http/httprequestqueue");
+const { HttpResponseQueue } = require("../../lib/http/httpresponsequeue");
 const http = require('http');
 
 describe("when opening an http connection and sending and http request given a hostname and port number", function() {
     beforeAll(async () => {
         this.httpRequestQueue = new HttpRequestQueue();
+        this.httpResponseQueue = new HttpResponseQueue();
         this.connection = new HttpConnection({ httpRequestQueue });
         await this.connection.open({ host: 'localhost', port: 3000, timeout: 5000 });
     });
