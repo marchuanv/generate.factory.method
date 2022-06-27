@@ -1,4 +1,3 @@
-const errorMessages = require("../../lib/errormessages");
 const { HttpMessageFactory } = require("../../lib/http/httpmessagefactory");
 const { MessageFactory } = require("../../lib/messagefactory");
 const { MessageStatus } = require("../../lib/messagestatus");
@@ -16,8 +15,8 @@ userIdentity.register({ secret });
 const { publicKey } = utils.generatePublicPrivateKeys(secret);
 const encryption = new Encryption({ userIdentity });
 encryption.setRemoteRSAPublicKey({ base64RSAPublicKey: utils.stringToBase64(publicKey) });
-const messageFactory = new MessageFactory();
-const httpMessageFactory = new HttpMessageFactory({ messageFactory, encryption });
+const messageFactory = new MessageFactory(encryption);
+const httpMessageFactory = new HttpMessageFactory({ messageFactory });
 
 describe("when asking for a secure http request message", function() {
   it("it should instruct the http message factory to create one", async function() {
