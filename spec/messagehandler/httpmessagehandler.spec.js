@@ -4,7 +4,7 @@ const { HttpMessageHandlerFactory } = require("../../lib/http/httpmessagehandler
 const { HttpMessageFactory } = require('../../lib/http/httpmessagefactory');
 const { MessageFactory } = require("../../lib/messagefactory");
 
-describe("when asking the http message handler to send and receive an http request message", function() {
+describe("when asking the http message handler to send and receive an http request messages", function() {
   it("it should do that without error", async function() {
     
     // Arrange
@@ -30,5 +30,6 @@ describe("when asking the http message handler to send and receive an http reque
 
     // Assert
     expect(message).not.toBeNull();
+    expect(message.getContent()).toEqual('Hello From Server!')
   });
 });
