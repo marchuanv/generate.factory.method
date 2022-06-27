@@ -13,7 +13,7 @@ describe("when receiving data", function() {
     await subscription.receiveData({
       from: 'localhost:4000',
       data:'hello world'
-     });
+    });
   },1000);
 
   // Assert

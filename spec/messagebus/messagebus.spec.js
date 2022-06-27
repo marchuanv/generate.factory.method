@@ -20,8 +20,8 @@ describe("when publishing a message", function() {
 
   // Assert
   assertCallback = ({ from, data }) => {
-    expect(data).toEqual(expectedData);
     expect(from).toEqual('localhost:3000');
+    expect(data).toEqual(expectedData);
     done();
   };
 
