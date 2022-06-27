@@ -1,18 +1,14 @@
-const { HttpMessageHandler } = require("../../lib/http/httpmessagehandler");
-const { HttpMessageFactory } = require("../../lib/http/httpmessagefactory");
-const { MessageFactory } = require("../../lib/messagefactory");
-const { HttpConnection } = require("../../lib/http/httpconnection");
 const { HttpRequestMessage } = require("../../lib/http/httprequestmessage");
 const { MessageStatus } = require("../../lib/messagestatus");
+const { HttpMessageHandlerFactory } = require("../../lib/http/httpmessagehandlerfactory");
 
 describe("when asking the http message handler to send and receive an http request message", function() {
   it("it should do that without error", async function() {
     
     // Arrange
-    const messageFactory = new MessageFactory();
-    const httpMessageFactory = new HttpMessageFactory({ messageFactory });
-    const httpConnection = new HttpConnection({ host: 'localhost', port: 3000 });
-    const httpMessageHandler = new HttpMessageHandler({ httpMessageFactory, httpConnection });
+    const httpMessageHandlerFactory = new HttpMessageHandlerFactory()
+    const httpMessageHandler = httpMessageHandlerFactory.createunsecure();
+
     httpMessageHandler.receive({ callback: ({ httpRequestMessage }) => {
       if (!(httpRequestMessage instanceof HttpRequestMessage)) {
         throw new Error("the 'httpRequestMessage' parameter is null, undefined or not of type: HttpRequestMessage");
@@ -27,6 +23,7 @@ describe("when asking the http message handler to send and receive an http reque
 
     // Act
     const message = await httpMessageHandler.send({ fromHost: 'localhost:3000', data: 'Hello World!' });
+    httpConnection.close();
 
     // Assert
     expect(message).not.toBeNull();
