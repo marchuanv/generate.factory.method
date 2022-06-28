@@ -11,21 +11,22 @@ describe("when asking the message handler to send and receive request messages",
     
     // Arrange
     const hostAddress = { host: 'localhost', port: 3000 };
+    const recipientAddress = { address: 'localhost', port: 3000 };
     const httpMessageHandlerFactory = new HttpMessageHandlerFactory({ hostAddress, timeout: 3000 });
     const messageHandlerFactory = new MessageHandlerFactory({ httpMessageHandlerFactory, hostAddress });
     const messageHandler = messageHandlerFactory.createunsecure();
 
-    messageHandler.receive({ address: { address: 'localhost', port: 3000 }, callback: ({ message }) => {
+    messageHandler.receive({ recipientAddress, callback: ({ message }) => {
       if (!(message instanceof Message)) {
         throw new Error("the 'message' parameter is null, undefined or not of type: Message");
       }
       const data = 'Hello From Server!';
       const metadata = {};
-      return messageFactory.create({ address: { address: 'localhost', port: 3000 }, data, metadata, messageStatus: new MessageStatus({ code: 0 }) });
+      return messageFactory.create(recipientAddress, data, metadata, messageStatus: new MessageStatus({ code: 0 }) });
     }});
 
     // Act
-    const message = await messageHandler.send({ address: { address: 'localhost', port: 3000 }, data: 'Hello World!' });
+    const message = await messageHandler.send({ recipientAddress, data: 'Hello World!' });
 
     // Assert
     expect(message).not.toBeNull();
