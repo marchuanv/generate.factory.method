@@ -11,12 +11,13 @@ describe("when asking the message handler to send and receive request messages",
     
     // Arrange
     const hostAddress = { host: 'localhost', port: 3000 };
-    const httpMessageHandlerFactory = new HttpMessageHandlerFactory({ hostAddress });
+    const httpMessageHandlerFactory = new HttpMessageHandlerFactory({ hostAddress, timeout: 3000 });
     const messageFactory = new MessageFactory();
     const httpMessageFactory = new HttpMessageFactory({ messageFactory });
-    const messageHandler = new MessageHandlerFactory({ httpMessageHandlerFactory, httpMessageFactory });
+    const messageHandlerFactory = new MessageHandlerFactory({ httpMessageHandlerFactory, httpMessageFactory, hostAddress });
+    const messageHandler = messageHandlerFactory.createunsecure();
 
-    messageHandler.receive({ address: { address: 'localhost', port: 3000 }, callback: ({ message }) => {
+    await messageHandler.receive({ address: { address: 'localhost', port: 3000 }, callback: ({ message }) => {
       if (!(message instanceof Message)) {
         throw new Error("the 'message' parameter is null, undefined or not of type: Message");
       }
