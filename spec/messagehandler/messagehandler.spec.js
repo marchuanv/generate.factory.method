@@ -22,7 +22,7 @@ describe("when asking the message handler to send and receive request messages",
       }
       const data = 'Hello From Server!';
       const metadata = {};
-      return messageFactory.create(recipientAddress, data, metadata, messageStatus: new MessageStatus({ code: 0 }) });
+      return messageFactory.create({ recipientAddress, data, metadata, messageStatus: new MessageStatus({ code: 0 }) });
     }});
 
     // Act

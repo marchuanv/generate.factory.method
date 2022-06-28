@@ -3,13 +3,13 @@ const { MessageFactory } = require("../../lib/messagefactory");
 const { MessageStatus } = require("../../lib/messagestatus");
 
 const data = 'this is a test';
-const address = 'localhost:3000';
+const recipientAddress = { address: 'localhost', port: 3000 };
 const messageFactory = new MessageFactory();
 const httpMessageFactory = new HttpMessageFactory({ messageFactory });
 
 describe("when asking for an http request message", function() {
   it("it should instruct the http message factory to create one", async function() {
-    const httpRequestMessage = await httpMessageFactory.createHttpRequestMessage({ address, data, headers: { token: '12345' } });
+    const httpRequestMessage = await httpMessageFactory.createHttpRequestMessage({ recipientAddress, data, headers: { token: '12345' } });
     expect(httpRequestMessage).not.toBeNull();
     const headers = await httpRequestMessage.getHeaders();
     expect(headers).not.toBeNull();
@@ -25,7 +25,7 @@ describe("when asking for an http request message", function() {
 describe("when asking for an http response message", function() {
   it("it should instruct the http message factory to create one", async function() {
     const messageStatus = new MessageStatus({ code: 0 });
-    const httpResponseMessage = await httpMessageFactory.createHttpResponseMessage({ address, data, headers: { token: '12345' }, messageStatus });
+    const httpResponseMessage = await httpMessageFactory.createHttpResponseMessage({ recipientAddress, data, headers: { token: '12345' }, messageStatus });
     expect(httpResponseMessage).not.toBeNull();
     const headers = await httpResponseMessage.getHeaders();
     expect(headers).not.toBeNull();
