@@ -32,7 +32,7 @@ describe("when opening an http connection and sending and http request given a h
         });
 
         // Act
-        this.httpMessageQueue.enqueueRequest({ 
+        this.httpMessageQueue.enqueueRawRequest({ 
             recipientAddress: this.recipientAddress,
             path: '/',
             headers: {},
