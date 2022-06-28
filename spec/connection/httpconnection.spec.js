@@ -33,7 +33,7 @@ describe("when opening an http connection and sending and http request given a h
         const address = { host: 'localhost', port: 3000 };
         expect(this.connection.isOpen()).toBeTruthy();
         setTimeout( async () => {
-            const { httpResponse } = await this.httpResponseQueue.dequeue();
+            const { httpResponse } = await this.httpResponseQueue.dequeue({ isClient: false });
             if (httpResponse instanceof http.ServerResponse) {
                 httpResponse.writeHead(200, 'success', {}).end('Hello World from Server');
             }
@@ -43,7 +43,7 @@ describe("when opening an http connection and sending and http request given a h
         await this.connection.send({ address , path: '/', headers: {}, method: 'POST', data: 'Hello World' });
    
         // Assert
-        const { httpResponse } = await this.httpResponseQueue.dequeue();
+        const { httpResponse } = await this.httpResponseQueue.dequeue({ isClient: true });
         expect(httpResponse.body).toEqual('Hello World from Server');
         expect(this.httpResponseQueue.isEmpty()).toBeTruthy();
 
