@@ -20,7 +20,6 @@ describe("when asking the http message handler to send and receive an http reque
         throw new Error("the 'httpRequestMessage' parameter is null, undefined or not of type: HttpRequestMessage");
       }
       return httpMessageFactory.createHttpResponseMessage({ 
-        recipientAddress,
         data: 'Hello From Server!',
         headers: {},
         messageStatus: new MessageStatus({ code: 0 })
