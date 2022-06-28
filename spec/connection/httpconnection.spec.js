@@ -8,6 +8,7 @@ describe("when opening an http connection and sending and http request given a h
         this.httpRequestQueue = new HttpRequestQueue();
         this.httpResponseQueue = new HttpResponseQueue();
         this.hostAddress = { address: 'localhost', family: 'IPv4', port: 3000 };
+        this.recipientAddress = { address: 'localhost', port: 3000 };
         this.connection = new HttpConnection({ 
             httpRequestQueue: this.httpRequestQueue,
             httpResponseQueue: this.httpResponseQueue,
@@ -30,7 +31,6 @@ describe("when opening an http connection and sending and http request given a h
     it("it should have a queued request and response", async () => {
      
         // Arrange
-        const address = { address: 'localhost', port: 3000 };
         expect(this.connection.isOpen()).toBeTruthy();
         setTimeout( async () => {
             const { httpResponse } = await this.httpResponseQueue.dequeue({ isClient: false });
@@ -40,7 +40,13 @@ describe("when opening an http connection and sending and http request given a h
         }, 2000);
 
         // Act
-        await this.connection.send({ address , path: '/', headers: {}, method: 'POST', data: 'Hello World' });
+        await this.connection.send({ 
+            recipientAddress: this.recipientAddress, 
+            path: '/',
+            headers: {},
+            method: 'POST',
+            data: 'Hello World'
+        });
    
         // Assert
         const { httpResponse } = await this.httpResponseQueue.dequeue({ isClient: true });
