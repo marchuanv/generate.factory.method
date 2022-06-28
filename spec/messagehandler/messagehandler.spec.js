@@ -12,9 +12,7 @@ describe("when asking the message handler to send and receive request messages",
     // Arrange
     const hostAddress = { host: 'localhost', port: 3000 };
     const httpMessageHandlerFactory = new HttpMessageHandlerFactory({ hostAddress, timeout: 3000 });
-    const messageFactory = new MessageFactory();
-    const httpMessageFactory = new HttpMessageFactory({ messageFactory });
-    const messageHandlerFactory = new MessageHandlerFactory({ httpMessageHandlerFactory, httpMessageFactory, hostAddress });
+    const messageHandlerFactory = new MessageHandlerFactory({ httpMessageHandlerFactory, hostAddress });
     const messageHandler = messageHandlerFactory.createunsecure();
 
     await messageHandler.receive({ address: { address: 'localhost', port: 3000 }, callback: ({ message }) => {
