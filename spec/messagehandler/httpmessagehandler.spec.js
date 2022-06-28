@@ -8,7 +8,7 @@ describe("when asking the http message handler to send and receive an http reque
   it("it should do that without error", async function() {
     
     // Arrange
-    const httpMessageHandlerFactory = new HttpMessageHandlerFactory()
+    const httpMessageHandlerFactory = new HttpMessageHandlerFactory({ hostAddress: { address: 'localhost', port: 3000 } });
     const httpMessageHandler = httpMessageHandlerFactory.createunsecure();
     const messageFactory = new MessageFactory();
     const httpMessageFactory = new HttpMessageFactory({ messageFactory });
