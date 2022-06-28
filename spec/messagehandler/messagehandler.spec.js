@@ -15,7 +15,7 @@ describe("when asking the message handler to send and receive request messages",
     const messageHandlerFactory = new MessageHandlerFactory({ httpMessageHandlerFactory, hostAddress });
     const messageHandler = messageHandlerFactory.createunsecure();
 
-    await messageHandler.receive({ address: { address: 'localhost', port: 3000 }, callback: ({ message }) => {
+    messageHandler.receive({ address: { address: 'localhost', port: 3000 }, callback: ({ message }) => {
       if (!(message instanceof Message)) {
         throw new Error("the 'message' parameter is null, undefined or not of type: Message");
       }
