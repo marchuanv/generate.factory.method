@@ -5,7 +5,7 @@ const { HttpMessageFactory } = require('../../lib/http/httpmessagefactory');
 const { MessageFactory } = require("../../lib/messagefactory");
 
 describe("when asking the http message handler to send and receive an http request messages", function() {
-  it("it should do that without error", async function() {
+  it("it should succeed without any errors", async function() {
     
     // Arrange
     const httpMessageHandlerFactory = new HttpMessageHandlerFactory({ hostAddress: { address: 'localhost', port: 3000 }, timeout: 5000 });
@@ -26,10 +26,10 @@ describe("when asking the http message handler to send and receive an http reque
     }});
 
     // Act
-    const message = await httpMessageHandler.send({ address: { host: 'localhost', port: 3000}, data: 'Hello World!' });
+    const responseMessage = await httpMessageHandler.send({ address: { host: 'localhost', port: 3000}, data: 'Hello World!' });
 
     // Assert
-    expect(message).not.toBeNull();
-    expect(message.getContent()).toEqual('Hello From Server!')
+    expect(responseMessage).not.toBeNull();
+    expect(responseMessage.getContent()).toEqual('Hello From Server!')
   });
 });
