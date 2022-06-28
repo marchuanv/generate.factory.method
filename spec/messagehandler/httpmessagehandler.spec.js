@@ -9,17 +9,18 @@ describe("when asking the http message handler to send and receive an http reque
     
     // Arrange
     const hostAddress = { address: 'localhost', port: 3000 };
+    const recipientAddress = { address: 'localhost', port: 3000 };
     const httpMessageHandlerFactory = new HttpMessageHandlerFactory({ hostAddress, timeout: 5000 });
     const httpMessageHandler = httpMessageHandlerFactory.createunsecure();
     const messageFactory = new MessageFactory();
     const httpMessageFactory = new HttpMessageFactory({ messageFactory });
 
-    httpMessageHandler.receive({ address: { address: 'localhost', port: 3000 }, callback: ({ httpRequestMessage }) => {
+    httpMessageHandler.receive({ recipientAddress, callback: ({ httpRequestMessage }) => {
       if (!(httpRequestMessage instanceof HttpRequestMessage)) {
         throw new Error("the 'httpRequestMessage' parameter is null, undefined or not of type: HttpRequestMessage");
       }
       return httpMessageFactory.createHttpResponseMessage({ 
-        address: { address: 'localhost', port: 3000 },
+        recipientAddress,
         data: 'Hello From Server!',
         headers: {},
         messageStatus: new MessageStatus({ code: 0 })
@@ -27,7 +28,7 @@ describe("when asking the http message handler to send and receive an http reque
     }});
 
     // Act
-    const responseMessage = await httpMessageHandler.send({ address: { host: 'localhost', port: 3000}, data: 'Hello World!' });
+    const responseMessage = await httpMessageHandler.send({ recipientAddress, data: 'Hello World!' });
 
     // Assert
     expect(responseMessage).not.toBeNull();

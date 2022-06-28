@@ -1,13 +1,10 @@
 const { MessageStatus } = require("../../lib/messagestatus");
-const { MessageHandler } = require("../../lib/messagehandler");
 const { Message } = require("../../lib/message");
 const { HttpMessageHandlerFactory } = require("../../lib/http/httpmessagehandlerfactory");
 const { MessageHandlerFactory } = require("../../lib/messagehandlerfactory");
-const { HttpMessageFactory } = require("../../lib/http/httpmessagefactory");
-const { MessageFactory } = require("../../lib/messagefactory");
 
 describe("when asking the message handler to send and receive request messages", function() {
-  it("it should do that without error", async function() {
+  it("it should succeed without any errors", async function() {
     
     // Arrange
     const hostAddress = { host: 'localhost', port: 3000 };
