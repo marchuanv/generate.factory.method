@@ -15,7 +15,7 @@ describe("when asking the http message handler to send and receive an http reque
     const messageFactory = new MessageFactory();
     const httpMessageFactory = new HttpMessageFactory({ messageFactory });
 
-    httpMessageHandler.receive({ recipientAddress, callback: ({ httpRequestMessage }) => {
+    httpMessageHandler.receive({ callback: ({ httpRequestMessage }) => {
       if (!(httpRequestMessage instanceof HttpRequestMessage)) {
         throw new Error("the 'httpRequestMessage' parameter is null, undefined or not of type: HttpRequestMessage");
       }

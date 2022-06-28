@@ -13,7 +13,7 @@ describe("when asking the message handler to send and receive request messages",
     const messageHandlerFactory = new MessageHandlerFactory({ httpMessageHandlerFactory, hostAddress });
     const messageHandler = messageHandlerFactory.createunsecure();
 
-    messageHandler.receive({ recipientAddress, callback: ({ message }) => {
+    messageHandler.receive({ callback: ({ message }) => {
       if (!(message instanceof Message)) {
         throw new Error("the 'message' parameter is null, undefined or not of type: Message");
       }
