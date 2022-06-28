@@ -7,12 +7,12 @@ describe("when opening an http connection and sending and http request given a h
     beforeAll(async () => {
         this.httpRequestQueue = new HttpRequestQueue();
         this.httpResponseQueue = new HttpResponseQueue();
-        this.hostAddress = { address: '127.0.0.1', family: 'IPv4', port: 3000 };
+        this.hostAddress = { address: 'localhost', family: 'IPv4', port: 3000 };
         this.connection = new HttpConnection({ 
             httpRequestQueue: this.httpRequestQueue,
             httpResponseQueue: this.httpResponseQueue,
             hostAddress: this.hostAddress,
-            timeout: 5000
+            timeout: 10000
         });
         await this.connection.open();
     });
@@ -25,12 +25,12 @@ describe("when opening an http connection and sending and http request given a h
         const address = this.connection.getServerAddress();
    
         // Assert
-        expect(address).toEqual(this.hostAddress);
+        expect(address.address).toEqual('127.0.0.1');
     });
     it("it should have a queued request and response", async () => {
      
         // Arrange
-        const address = { host: 'localhost', port: 3000 };
+        const address = { address: 'localhost', port: 3000 };
         expect(this.connection.isOpen()).toBeTruthy();
         setTimeout( async () => {
             const { httpResponse } = await this.httpResponseQueue.dequeue({ isClient: false });
@@ -45,7 +45,7 @@ describe("when opening an http connection and sending and http request given a h
         // Assert
         const { httpResponse } = await this.httpResponseQueue.dequeue({ isClient: true });
         expect(httpResponse.body).toEqual('Hello World from Server');
-        expect(this.httpResponseQueue.isEmpty()).toBeTruthy();
+        expect(this.httpResponseQueue.isEmpty({ isClient: true })).toBeTruthy();
 
     });
     it("it should have a closed connection", () => {
