@@ -1,5 +1,5 @@
 const { MessageBusFactory } = require('../../lib/messagebusfactory');
-describe("when publishing a message", function() {
+xdescribe("when publishing a message", function() {
  it("it should send the same message to all subscribers", function(done) {
 
     // Arrange

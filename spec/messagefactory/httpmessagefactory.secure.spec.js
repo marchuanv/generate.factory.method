@@ -18,7 +18,7 @@ encryption.setRemoteRSAPublicKey({ base64RSAPublicKey: utils.stringToBase64(publ
 const messageFactory = new MessageFactory(encryption);
 const httpMessageFactory = new HttpMessageFactory({ messageFactory });
 
-describe("when asking for a secure http request message", function() {
+xdescribe("when asking for a secure http request message", function() {
   it("it should instruct the http message factory to create one", async function() {
     const httpRequestMessage = await httpMessageFactory.createHttpRequestMessage({ data, headers: { token: '12345' } });
     expect(httpRequestMessage).not.toBeNull();
@@ -33,7 +33,7 @@ describe("when asking for a secure http request message", function() {
   });
 });
 
-describe("when asking for a secure http response message", function() {
+xdescribe("when asking for a secure http response message", function() {
   it("it should instruct the http message factory to create one", async function() {
     const messageStatus = new MessageStatus({ code: 0 });
     const httpResponseMessage = await httpMessageFactory.createHttpResponseMessage({ data, headers: { token: '12345' }, messageStatus });

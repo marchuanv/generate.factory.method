@@ -2,7 +2,7 @@ const { Encryption } = require("../lib/encryption");
 const { UserIdentity } = require("../lib/useridentity");
 const utils = require("utils");
 
-describe("when encrypting data given a public key", function() {
+xdescribe("when encrypting data given a public key", function() {
     
     const secret = 'secret1234';
     const userIdentity = new UserIdentity({ userId: 'joe' });

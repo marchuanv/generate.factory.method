@@ -30,9 +30,7 @@ describe("when opening an http connection and sending and http request given a h
         // Arrange
         expect(this.connection.isOpen()).toBeTruthy();
         this.httpMessageQueue.dequeueResponse().then(({ httpResponse }) => {
-            if (httpResponse instanceof http.ServerResponse) {
-                httpResponse.writeHead(200, 'success', {}).end('Hello World from Server');
-            }
+            console.log('test received response');
         });
 
         // Act
