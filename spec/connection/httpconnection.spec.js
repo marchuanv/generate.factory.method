@@ -8,6 +8,7 @@ describe("when opening an http connection and sending and http request given a h
     beforeAll(async () => {
         const messageFactory = new MessageFactory();
         const httpMessageFactory = new HttpMessageFactory({ messageFactory });
+        this.httpMessageFactory = httpMessageFactory;
         this.httpMessageQueue = new HttpMessageQueue({ httpMessageFactory });
         this.hostAddress = { address: 'localhost', family: 'IPv4', port: 3000 };
         this.recipientAddress = { address: 'localhost', port: 3000 };
@@ -29,7 +30,11 @@ describe("when opening an http connection and sending and http request given a h
      
         // Arrange
         expect(this.connection.isOpen()).toBeTruthy();
-        this.httpMessageQueue.dequeueResponse().then(({ httpResponse }) => {
+        this.httpMessageQueue.dequeueRequest().then(({ httpRequest }) => {
+            const data = 'hello from server';
+            const headers = {};
+            const httpResponseMessage = this.httpMessageFactory.createHttpResponseMessage({ data, headers });
+            this.httpMessageQueue.enqueueResponseMessage({ httpResponseMessage });
             console.log('test received response');
         });
 
