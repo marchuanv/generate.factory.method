@@ -2,11 +2,17 @@ const { HttpConnection } = require("../../lib/http/httpconnection");
 const { HttpMessageQueue } = require("../../lib/http/httpmessagequeue");
 const { HttpMessageFactory } = require("../../lib/http/httpmessagefactory");
 const { MessageFactory } = require("../../lib/messagefactory");
-const http = require('http');
+const { UserIdentity } = require("../../lib/useridentity");
+const { Encryption } = require("../../lib/encryption");
+const { MessageStore } = require("../../lib/messagestore");
 
 describe("when opening an http connection and sending and http request given a hostname and port number", function() {
     beforeAll(async () => {
-        const messageFactory = new MessageFactory();
+        const userIdentity = new UserIdentity({ userId: 'admin' });
+        userIdentity.authenticate({ secret: 'admin' });
+        const encryption = new Encryption({ userIdentity });
+        const messageStore = new MessageStore();
+        const messageFactory = new MessageFactory({ encryption, messageStore });
         const httpMessageFactory = new HttpMessageFactory({ messageFactory });
         this.httpMessageFactory = httpMessageFactory;
         this.httpMessageQueue = new HttpMessageQueue({ httpMessageFactory });
