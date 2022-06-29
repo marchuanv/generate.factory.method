@@ -3,12 +3,12 @@ const { Message } = require("../../lib/message");
 const { HttpMessageHandlerFactory } = require("../../lib/http/httpmessagehandlerfactory");
 const { MessageHandlerFactory } = require("../../lib/messagehandlerfactory");
 
-xdescribe("when asking the message handler to send and receive request messages", function() {
+describe("when asking the message handler to send and receive request messages", function() {
   it("it should succeed without any errors", async function() {
     
     // Arrange
     const hostAddress = { host: 'localhost', port: 3000 };
-    const recipientAddress = { address: 'localhost', port: 3000 };
+    const sender = { address: 'localhost', port: 3000 };
     const httpMessageHandlerFactory = new HttpMessageHandlerFactory({ hostAddress, timeout: 3000 });
     const messageHandlerFactory = new MessageHandlerFactory({ httpMessageHandlerFactory, hostAddress });
     const messageHandler = messageHandlerFactory.createunsecure();
@@ -23,7 +23,7 @@ xdescribe("when asking the message handler to send and receive request messages"
     }});
 
     // Act
-    const message = await messageHandler.send({ recipientAddress, data: 'Hello World!' });
+    const message = await messageHandler.send({ metadata: { sender }, data: 'Hello World!' });
 
     // Assert
     expect(message).not.toBeNull();
