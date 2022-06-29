@@ -6,6 +6,14 @@
         ]
     },
     {
+        "name": "Content",
+        "parameters": [
+            "data",
+            "metadata",
+            "encryption"
+        ]
+    },
+    {
         "name": "ContentMetadata",
         "parameters": [
             "metadata",
@@ -16,6 +24,13 @@
         "name": "Encryption",
         "parameters": [
             "userIdentity"
+        ]
+    },
+    {
+        "name": "Message",
+        "parameters": [
+            "content",
+            "messageStatus"
         ]
     },
     {
@@ -37,6 +52,28 @@
         "parameters": [
             "encryption",
             "messageStore"
+        ]
+    },
+    {
+        "name": "MessageHandler",
+        "parameters": [
+            "httpMessageHandler",
+            "webSocketMessageHandler",
+            "httpMessageFactory",
+            "webSocketMessageFactory"
+        ]
+    },
+    {
+        "name": "MessageHandlerFactory",
+        "parameters": [
+            "httpMessageHandlerFactory",
+            "hostAddress"
+        ]
+    },
+    {
+        "name": "MessageStatus",
+        "parameters": [
+            "code"
         ]
     },
     {
