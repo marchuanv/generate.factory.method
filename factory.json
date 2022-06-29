@@ -1,1 +1,145 @@
-[]
+[
+    {
+        "name": "Component",
+        "parameters": [
+            "packageJson"
+        ]
+    },
+    {
+        "name": "ContentMetadata",
+        "parameters": [
+            "metadata",
+            "data"
+        ]
+    },
+    {
+        "name": "Encryption",
+        "parameters": [
+            "userIdentity"
+        ]
+    },
+    {
+        "name": "MessageBus",
+        "parameters": [
+            "messageHandler",
+            "subscriptionFactory"
+        ]
+    },
+    {
+        "name": "MessageBusFactory",
+        "parameters": [
+            "hostAddress",
+            "timeout"
+        ]
+    },
+    {
+        "name": "MessageFactory",
+        "parameters": [
+            "encryption",
+            "messageStore"
+        ]
+    },
+    {
+        "name": "MessageStore",
+        "parameters": []
+    },
+    {
+        "name": "Subscription",
+        "parameters": [
+            "channelName"
+        ]
+    },
+    {
+        "name": "SubscriptionFactory",
+        "parameters": []
+    },
+    {
+        "name": "UserIdentity",
+        "parameters": [
+            "userId"
+        ]
+    },
+    {
+        "name": "HttpConnection",
+        "parameters": [
+            "httpMessageQueue",
+            "hostAddress",
+            "timeout"
+        ]
+    },
+    {
+        "name": "HttpMessageFactory",
+        "parameters": [
+            "messageFactory"
+        ]
+    },
+    {
+        "name": "HttpMessageHandler",
+        "parameters": [
+            "httpMessageFactory",
+            "httpConnection",
+            "httpMessageQueue"
+        ]
+    },
+    {
+        "name": "HttpMessageHandlerFactory",
+        "parameters": [
+            "hostAddress",
+            "timeout"
+        ]
+    },
+    {
+        "name": "HttpMessageQueue",
+        "parameters": [
+            "httpMessageFactory"
+        ]
+    },
+    {
+        "name": "HttpMessageStatus",
+        "parameters": [
+            "messageStatus"
+        ]
+    },
+    {
+        "name": "HttpRequestMessage",
+        "parameters": [
+            "message"
+        ]
+    },
+    {
+        "name": "HttpResponseMessage",
+        "parameters": [
+            "message"
+        ]
+    },
+    {
+        "name": "WebSocketConnection",
+        "parameters": [
+            "host",
+            "port",
+            "websocketMessageHandlerFactory",
+            "errorMessages"
+        ]
+    },
+    {
+        "name": "WebSocketMessageFactory",
+        "parameters": [
+            "messageFactory"
+        ]
+    },
+    {
+        "name": "WebSocketMessageHandler",
+        "parameters": [
+            "messageFactory",
+            "errorMessages",
+            "connection"
+        ]
+    },
+    {
+        "name": "WebSocketMessageHandlerFactory",
+        "parameters": [
+            "websocketMessageFactory",
+            "errorMessages"
+        ]
+    }
+]
