@@ -47,8 +47,8 @@ describe("when opening an http connection and sending and http request given a h
         });
 
         // Assert
-        const { httpResponse } = await this.httpMessageQueue.dequeueResponseMessage();
-        expect(httpResponse.body).toEqual('Hello World from Server');
+        const { httpResponseMessage } = await this.httpMessageQueue.dequeueResponseMessage();
+        expect(httpResponseMessage.getContent()).toEqual('Hello World from Server');
     });
     it("it should have a closed connection", () => {
         // Arrange
