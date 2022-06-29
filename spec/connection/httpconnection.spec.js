@@ -6,7 +6,7 @@ const { UserIdentity } = require("../../lib/useridentity");
 const { Encryption } = require("../../lib/encryption");
 const { MessageStore } = require("../../lib/messagestore");
 
-describe("when opening an http connection and sending and http request given a hostname and port number", function() {
+xdescribe("when opening an http connection and sending and http request given a hostname and port number", function() {
     
     const userIdentity = new UserIdentity({ userId: 'admin' });
     userIdentity.authenticate({ secret: 'admin' });
