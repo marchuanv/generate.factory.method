@@ -31,7 +31,7 @@ describe("when opening an http connection and sending and http request given a h
         // Arrange
         expect(this.connection.isOpen()).toBeTruthy();
         this.httpMessageQueue.dequeueRequest().then(({ httpRequest }) => {
-            const data = 'hello from server';
+            const data = 'Hello World from Server';
             const headers = {};
             const httpResponseMessage = this.httpMessageFactory.createHttpResponseMessage({ data, headers });
             this.httpMessageQueue.enqueueResponseMessage({ httpResponseMessage });
@@ -47,9 +47,8 @@ describe("when opening an http connection and sending and http request given a h
         });
 
         // Assert
-        const httpResponse = await this.httpMessageQueue.dequeueResponse();
+        const { httpResponse } = await this.httpMessageQueue.dequeueResponse();
         expect(httpResponse.body).toEqual('Hello World from Server');
-        expect(this.httpMessageQueue.isEmpty()).toBeTruthy();
     });
     it("it should have a closed connection", () => {
         // Arrange
