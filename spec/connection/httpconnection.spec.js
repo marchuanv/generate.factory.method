@@ -1,10 +1,14 @@
 const { HttpConnection } = require("../../lib/http/httpconnection");
 const { HttpMessageQueue } = require("../../lib/http/httpmessagequeue");
+const { HttpMessageFactory } = require("../../lib/http/httpmessagefactory");
+const { MessageFactory } = require("../../lib/messagefactory");
 const http = require('http');
 
 describe("when opening an http connection and sending and http request given a hostname and port number", function() {
     beforeAll(async () => {
-        this.httpMessageQueue = new HttpMessageQueue();
+        const messageFactory = new MessageFactory();
+        const httpMessageFactory = new HttpMessageFactory({ messageFactory });
+        this.httpMessageQueue = new HttpMessageQueue({ httpMessageFactory });
         this.hostAddress = { address: 'localhost', family: 'IPv4', port: 3000 };
         this.recipientAddress = { address: 'localhost', port: 3000 };
         this.connection = new HttpConnection({ httpMessageQueue: this.httpMessageQueue, hostAddress: this.hostAddress, timeout: 10000 });
