@@ -2,7 +2,7 @@
     {
         "name": "Component",
         "parameters": [
-            "packageJson"
+            "ackageJson"
         ]
     },
     {
@@ -78,7 +78,9 @@
     },
     {
         "name": "MessageStore",
-        "parameters": []
+        "parameters": [
+            "rObject.defineProperty"
+        ]
     },
     {
         "name": "Subscription",
@@ -88,7 +90,9 @@
     },
     {
         "name": "SubscriptionFactory",
-        "parameters": []
+        "parameters": [
+            "rconstsubscriptions=[];rObject.defineProperty"
+        ]
     },
     {
         "name": "UserIdentity",
