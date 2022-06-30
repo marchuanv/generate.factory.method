@@ -50,7 +50,12 @@ for(const script of scripts) {
         const ctorArray = ctor.split('(');
         const name = ctorArray[0];
         let deconstruct = false;
-        const parameters = ctorArray[1].replace('{','').replace('}','').replace(')','').split(',').filter(p => p);
+        const parameters = ctorArray[1].replace('{','').replace('}','').replace(')','').split(',').filter(p => p).map((paramName) => {
+            return {
+                name: paramName,
+                reference: false
+            };
+        });
         if (ctorArray[1].startsWith('{')) {
             deconstruct = true;
         }
@@ -58,6 +63,13 @@ for(const script of scripts) {
         typeInfo.push({ name, script: scriptPath, variableName: expectedClassName, parameters, deconstruct });
     }
 }
+const references = typeInfo.filter(cnf => typeInfo.find(cnf2 => cnf2.parameters.find(p => p.name.toLowerCase() === cnf.variableName)));
+let refParams = typeInfo.map(info2 => info2.parameters.filter(p => references.find(ref => ref.variableName === p.name.toLowerCase())));
+refParams = refParams.flat();
+for (const p of refParams){
+    p.reference = true;
+}
+
 let factoryConfigString = utils.getJSONString(typeInfo);
 factoryConfigString = factoryConfigString.replace(/\[backslash\]/g,'\\\\')
 writeFileSync(factoryConfigPath, factoryConfigString,'utf8');

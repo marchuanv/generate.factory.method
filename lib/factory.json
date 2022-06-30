@@ -4,7 +4,10 @@
         "script": "C:\\component\\lib\\component.js",
         "variableName": "component",
         "parameters": [
-            "packageJson"
+            {
+                "name": "packageJson",
+                "reference": false
+            }
         ],
         "deconstruct": false
     },
@@ -13,9 +16,18 @@
         "script": "C:\\component\\lib\\content.js",
         "variableName": "content",
         "parameters": [
-            "data",
-            "metadata",
-            "encryption"
+            {
+                "name": "data",
+                "reference": false
+            },
+            {
+                "name": "metadata",
+                "reference": false
+            },
+            {
+                "name": "encryption",
+                "reference": true
+            }
         ],
         "deconstruct": true
     },
@@ -24,8 +36,14 @@
         "script": "C:\\component\\lib\\contentmetadata.js",
         "variableName": "contentmetadata",
         "parameters": [
-            "metadata",
-            "data"
+            {
+                "name": "metadata",
+                "reference": false
+            },
+            {
+                "name": "data",
+                "reference": false
+            }
         ],
         "deconstruct": true
     },
@@ -34,7 +52,10 @@
         "script": "C:\\component\\lib\\encryption.js",
         "variableName": "encryption",
         "parameters": [
-            "userIdentity"
+            {
+                "name": "userIdentity",
+                "reference": true
+            }
         ],
         "deconstruct": true
     },
@@ -43,8 +64,14 @@
         "script": "C:\\component\\lib\\message.js",
         "variableName": "message",
         "parameters": [
-            "content",
-            "messageStatus"
+            {
+                "name": "content",
+                "reference": true
+            },
+            {
+                "name": "messageStatus",
+                "reference": true
+            }
         ],
         "deconstruct": true
     },
@@ -53,8 +80,14 @@
         "script": "C:\\component\\lib\\messagebus.js",
         "variableName": "messagebus",
         "parameters": [
-            "messageHandler",
-            "subscriptionFactory"
+            {
+                "name": "messageHandler",
+                "reference": true
+            },
+            {
+                "name": "subscriptionFactory",
+                "reference": false
+            }
         ],
         "deconstruct": true
     },
@@ -63,10 +96,22 @@
         "script": "C:\\component\\lib\\messagehandler.js",
         "variableName": "messagehandler",
         "parameters": [
-            "httpMessageHandler",
-            "webSocketMessageHandler",
-            "httpMessageFactory",
-            "webSocketMessageFactory"
+            {
+                "name": "httpMessageHandler",
+                "reference": true
+            },
+            {
+                "name": "webSocketMessageHandler",
+                "reference": true
+            },
+            {
+                "name": "httpMessageFactory",
+                "reference": false
+            },
+            {
+                "name": "webSocketMessageFactory",
+                "reference": false
+            }
         ],
         "deconstruct": true
     },
@@ -75,7 +120,10 @@
         "script": "C:\\component\\lib\\messagestatus.js",
         "variableName": "messagestatus",
         "parameters": [
-            "code"
+            {
+                "name": "code",
+                "reference": false
+            }
         ],
         "deconstruct": true
     },
@@ -91,7 +139,10 @@
         "script": "C:\\component\\lib\\subscription.js",
         "variableName": "subscription",
         "parameters": [
-            "channelName"
+            {
+                "name": "channelName",
+                "reference": false
+            }
         ],
         "deconstruct": true
     },
@@ -100,7 +151,10 @@
         "script": "C:\\component\\lib\\useridentity.js",
         "variableName": "useridentity",
         "parameters": [
-            "userId"
+            {
+                "name": "userId",
+                "reference": false
+            }
         ],
         "deconstruct": true
     },
@@ -109,9 +163,18 @@
         "script": "C:\\component\\lib\\http\\httpconnection.js",
         "variableName": "httpconnection",
         "parameters": [
-            "httpMessageQueue",
-            "hostAddress",
-            "timeout"
+            {
+                "name": "httpMessageQueue",
+                "reference": true
+            },
+            {
+                "name": "hostAddress",
+                "reference": false
+            },
+            {
+                "name": "timeout",
+                "reference": false
+            }
         ],
         "deconstruct": true
     },
@@ -120,9 +183,18 @@
         "script": "C:\\component\\lib\\http\\httpmessagehandler.js",
         "variableName": "httpmessagehandler",
         "parameters": [
-            "httpMessageFactory",
-            "httpConnection",
-            "httpMessageQueue"
+            {
+                "name": "httpMessageFactory",
+                "reference": false
+            },
+            {
+                "name": "httpConnection",
+                "reference": true
+            },
+            {
+                "name": "httpMessageQueue",
+                "reference": true
+            }
         ],
         "deconstruct": true
     },
@@ -138,7 +210,10 @@
         "script": "C:\\component\\lib\\http\\httpmessagestatus.js",
         "variableName": "httpmessagestatus",
         "parameters": [
-            "messageStatus"
+            {
+                "name": "messageStatus",
+                "reference": true
+            }
         ],
         "deconstruct": true
     },
@@ -147,7 +222,10 @@
         "script": "C:\\component\\lib\\http\\httprequestmessage.js",
         "variableName": "httprequestmessage",
         "parameters": [
-            "message"
+            {
+                "name": "message",
+                "reference": true
+            }
         ],
         "deconstruct": true
     },
@@ -156,7 +234,10 @@
         "script": "C:\\component\\lib\\http\\httpresponsemessage.js",
         "variableName": "httpresponsemessage",
         "parameters": [
-            "message"
+            {
+                "name": "message",
+                "reference": true
+            }
         ],
         "deconstruct": true
     },
@@ -165,10 +246,22 @@
         "script": "C:\\component\\lib\\websocket\\websocketconnection.js",
         "variableName": "websocketconnection",
         "parameters": [
-            "host",
-            "port",
-            "websocketMessageHandlerFactory",
-            "errorMessages"
+            {
+                "name": "host",
+                "reference": false
+            },
+            {
+                "name": "port",
+                "reference": false
+            },
+            {
+                "name": "websocketMessageHandlerFactory",
+                "reference": false
+            },
+            {
+                "name": "errorMessages",
+                "reference": false
+            }
         ],
         "deconstruct": true
     },
@@ -177,9 +270,18 @@
         "script": "C:\\component\\lib\\websocket\\websocketmessagehandler.js",
         "variableName": "websocketmessagehandler",
         "parameters": [
-            "messageFactory",
-            "errorMessages",
-            "connection"
+            {
+                "name": "messageFactory",
+                "reference": false
+            },
+            {
+                "name": "errorMessages",
+                "reference": false
+            },
+            {
+                "name": "connection",
+                "reference": false
+            }
         ],
         "deconstruct": true
     }
