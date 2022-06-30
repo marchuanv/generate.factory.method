@@ -18,7 +18,7 @@
   },
   "scripts": {
     "build":"node build.js",
-    "test": "node node_modules/jasmine/bin/jasmine.js JASMINE_CONFIG_PATH=spec/support/jasmine.json "
+    "test": "npm run build && node node_modules/jasmine/bin/jasmine.js JASMINE_CONFIG_PATH=spec/support/jasmine.json "
   },
   "homepage": "https://github.com/marchuanv/component#readme",
   "dependencies": {
