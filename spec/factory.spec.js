@@ -1,11 +1,25 @@
 const { HttpConnection } = require('../lib/http/httpconnection');
+const factory = require('../lib/factory');
 describe("when asking the factory for an instance of a class", function() {
+    it("it should returned ctor paramters template", function() {
+        // Arrange
+        // Act
+        const parameters = factory.getCtorParameters(HttpConnection);
+        // Assert
+        expect(parameters).not.toBeNull();
+    });
     it("it should resolve and create and object", function() {
         // Arrange
-        const factory = require('../lib/factory')
+        const parameters = factory.getCtorParameters(HttpConnection);
+        const hostAddress = { address: 'localhost', family: 'IPv4', port: 3000 };
+        const timeout = 3000;
+        parameters.hostAddress = hostAddress;
+        parameters.timeout = timeout;
+
         // Act
-        factory.get(HttpConnection);
+        const instance = factory.get(HttpConnection, parameters);
+
         // Assert
-        expect(1).toEqual(1);
+        expect(instance instanceof HttpConnection).toBeTruthy();
     });
 });

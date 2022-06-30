@@ -5,7 +5,7 @@ const { Encryption } = require("../../lib/encryption");
 const { UserIdentity } = require("../../lib/useridentity");
 const { MessageStore } = require("../../lib/messagestore");
 
-describe("when asking for an http request message", function() {
+xdescribe("when asking for an http request message", function() {
   it("it should instruct the http message factory to create one", async function() {
 
     const messageStore = new MessageStore();
@@ -31,7 +31,7 @@ describe("when asking for an http request message", function() {
   });
 });
 
-describe("when asking for an http response message", function() {
+xdescribe("when asking for an http response message", function() {
   it("it should instruct the http message factory to create one", async function() {
 
     const messageStore = new MessageStore();
