@@ -18,6 +18,23 @@ describe("when asking the factory for an HttpConnection", function() {
         expect(instance instanceof HttpConnection).toBeTruthy();
     });
 });
+describe("when asking the factory for an HttpConnection", function() {
+    it("it should return an instance from the cache", function() {
+        // Arrange
+        const hostAddress = { address: 'localhost', family: 'IPv4', port: 3000 };
+        const timeout = 3000;
+        const userId = 'joe';
+        factory.httpconnection.hostAddress = hostAddress;
+        factory.httpconnection.timeout = timeout;
+        factory.httpconnection.userId = userId;
+
+        // Act
+        const instance = factory.httpconnection;
+
+        // Assert
+        expect(instance instanceof HttpConnection).toBeTruthy();
+    });
+});
 describe("when asking the factory for an HttpMessageHandler", function() {
     it("it should resolve all dependencies and create an instance", function() {
         // Arrange
