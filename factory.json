@@ -1,12 +1,14 @@
 [
     {
         "name": "Component",
+        "script": "C:\\component\\lib\\component.js",
         "parameters": [
             "ackageJson"
         ]
     },
     {
         "name": "Content",
+        "script": "C:\\component\\lib\\content.js",
         "parameters": [
             "data",
             "metadata",
@@ -15,6 +17,7 @@
     },
     {
         "name": "ContentMetadata",
+        "script": "C:\\component\\lib\\contentmetadata.js",
         "parameters": [
             "metadata",
             "data"
@@ -22,12 +25,14 @@
     },
     {
         "name": "Encryption",
+        "script": "C:\\component\\lib\\encryption.js",
         "parameters": [
             "userIdentity"
         ]
     },
     {
         "name": "Message",
+        "script": "C:\\component\\lib\\message.js",
         "parameters": [
             "content",
             "messageStatus"
@@ -35,6 +40,7 @@
     },
     {
         "name": "MessageBus",
+        "script": "C:\\component\\lib\\messagebus.js",
         "parameters": [
             "messageHandler",
             "subscriptionFactory"
@@ -42,6 +48,7 @@
     },
     {
         "name": "MessageBusFactory",
+        "script": "C:\\component\\lib\\messagebusfactory.js",
         "parameters": [
             "hostAddress",
             "timeout"
@@ -49,6 +56,7 @@
     },
     {
         "name": "MessageFactory",
+        "script": "C:\\component\\lib\\messagefactory.js",
         "parameters": [
             "encryption",
             "messageStore"
@@ -56,6 +64,7 @@
     },
     {
         "name": "MessageHandler",
+        "script": "C:\\component\\lib\\messagehandler.js",
         "parameters": [
             "httpMessageHandler",
             "webSocketMessageHandler",
@@ -65,6 +74,7 @@
     },
     {
         "name": "MessageHandlerFactory",
+        "script": "C:\\component\\lib\\messagehandlerfactory.js",
         "parameters": [
             "httpMessageHandlerFactory",
             "hostAddress"
@@ -72,36 +82,42 @@
     },
     {
         "name": "MessageStatus",
+        "script": "C:\\component\\lib\\messagestatus.js",
         "parameters": [
             "code"
         ]
     },
     {
         "name": "MessageStore",
+        "script": "C:\\component\\lib\\messagestore.js",
         "parameters": [
             "rObject.defineProperty"
         ]
     },
     {
         "name": "Subscription",
+        "script": "C:\\component\\lib\\subscription.js",
         "parameters": [
             "channelName"
         ]
     },
     {
         "name": "SubscriptionFactory",
+        "script": "C:\\component\\lib\\subscriptionfactory.js",
         "parameters": [
             "rconstsubscriptions=[];rObject.defineProperty"
         ]
     },
     {
         "name": "UserIdentity",
+        "script": "C:\\component\\lib\\useridentity.js",
         "parameters": [
             "userId"
         ]
     },
     {
         "name": "HttpConnection",
+        "script": "C:\\component\\lib\\http\\httpconnection.js",
         "parameters": [
             "httpMessageQueue",
             "hostAddress",
@@ -110,12 +126,14 @@
     },
     {
         "name": "HttpMessageFactory",
+        "script": "C:\\component\\lib\\http\\httpmessagefactory.js",
         "parameters": [
             "messageFactory"
         ]
     },
     {
         "name": "HttpMessageHandler",
+        "script": "C:\\component\\lib\\http\\httpmessagehandler.js",
         "parameters": [
             "httpMessageFactory",
             "httpConnection",
@@ -124,6 +142,7 @@
     },
     {
         "name": "HttpMessageHandlerFactory",
+        "script": "C:\\component\\lib\\http\\httpmessagehandlerfactory.js",
         "parameters": [
             "hostAddress",
             "timeout"
@@ -131,30 +150,35 @@
     },
     {
         "name": "HttpMessageQueue",
+        "script": "C:\\component\\lib\\http\\httpmessagequeue.js",
         "parameters": [
             "httpMessageFactory"
         ]
     },
     {
         "name": "HttpMessageStatus",
+        "script": "C:\\component\\lib\\http\\httpmessagestatus.js",
         "parameters": [
             "messageStatus"
         ]
     },
     {
         "name": "HttpRequestMessage",
+        "script": "C:\\component\\lib\\http\\httprequestmessage.js",
         "parameters": [
             "message"
         ]
     },
     {
         "name": "HttpResponseMessage",
+        "script": "C:\\component\\lib\\http\\httpresponsemessage.js",
         "parameters": [
             "message"
         ]
     },
     {
         "name": "WebSocketConnection",
+        "script": "C:\\component\\lib\\websocket\\websocketconnection.js",
         "parameters": [
             "host",
             "port",
@@ -164,12 +188,14 @@
     },
     {
         "name": "WebSocketMessageFactory",
+        "script": "C:\\component\\lib\\websocket\\websocketmessagefactory.js",
         "parameters": [
             "messageFactory"
         ]
     },
     {
         "name": "WebSocketMessageHandler",
+        "script": "C:\\component\\lib\\websocket\\websocketmessagehandler.js",
         "parameters": [
             "messageFactory",
             "errorMessages",
@@ -178,6 +204,7 @@
     },
     {
         "name": "WebSocketMessageHandlerFactory",
+        "script": "C:\\component\\lib\\websocket\\websocketmessagehandlerfactory.js",
         "parameters": [
             "websocketMessageFactory",
             "errorMessages"
