@@ -184,10 +184,6 @@
         "variableName": "httpmessagehandler",
         "parameters": [
             {
-                "name": "httpMessageFactory",
-                "reference": false
-            },
-            {
                 "name": "httpConnection",
                 "reference": true
             },
