@@ -53,24 +53,6 @@
         "deconstruct": true
     },
     {
-        "name": "MessageBusFactory",
-        "script": "C:\\component\\lib\\messagebusfactory.js",
-        "parameters": [
-            "hostAddress",
-            "timeout"
-        ],
-        "deconstruct": true
-    },
-    {
-        "name": "MessageFactory",
-        "script": "C:\\component\\lib\\messagefactory.js",
-        "parameters": [
-            "encryption",
-            "messageStore"
-        ],
-        "deconstruct": true
-    },
-    {
         "name": "MessageHandler",
         "script": "C:\\component\\lib\\messagehandler.js",
         "parameters": [
@@ -78,15 +60,6 @@
             "webSocketMessageHandler",
             "httpMessageFactory",
             "webSocketMessageFactory"
-        ],
-        "deconstruct": true
-    },
-    {
-        "name": "MessageHandlerFactory",
-        "script": "C:\\component\\lib\\messagehandlerfactory.js",
-        "parameters": [
-            "httpMessageHandlerFactory",
-            "hostAddress"
         ],
         "deconstruct": true
     },
@@ -113,12 +86,6 @@
         "deconstruct": true
     },
     {
-        "name": "SubscriptionFactory",
-        "script": "C:\\component\\lib\\subscriptionfactory.js",
-        "parameters": [],
-        "deconstruct": false
-    },
-    {
         "name": "UserIdentity",
         "script": "C:\\component\\lib\\useridentity.js",
         "parameters": [
@@ -137,29 +104,12 @@
         "deconstruct": true
     },
     {
-        "name": "HttpMessageFactory",
-        "script": "C:\\component\\lib\\http\\httpmessagefactory.js",
-        "parameters": [
-            "messageFactory"
-        ],
-        "deconstruct": true
-    },
-    {
         "name": "HttpMessageHandler",
         "script": "C:\\component\\lib\\http\\httpmessagehandler.js",
         "parameters": [
             "httpMessageFactory",
             "httpConnection",
             "httpMessageQueue"
-        ],
-        "deconstruct": true
-    },
-    {
-        "name": "HttpMessageHandlerFactory",
-        "script": "C:\\component\\lib\\http\\httpmessagehandlerfactory.js",
-        "parameters": [
-            "hostAddress",
-            "timeout"
         ],
         "deconstruct": true
     },
@@ -207,29 +157,12 @@
         "deconstruct": true
     },
     {
-        "name": "WebSocketMessageFactory",
-        "script": "C:\\component\\lib\\websocket\\websocketmessagefactory.js",
-        "parameters": [
-            "messageFactory"
-        ],
-        "deconstruct": true
-    },
-    {
         "name": "WebSocketMessageHandler",
         "script": "C:\\component\\lib\\websocket\\websocketmessagehandler.js",
         "parameters": [
             "messageFactory",
             "errorMessages",
             "connection"
-        ],
-        "deconstruct": true
-    },
-    {
-        "name": "WebSocketMessageHandlerFactory",
-        "script": "C:\\component\\lib\\websocket\\websocketmessagehandlerfactory.js",
-        "parameters": [
-            "websocketMessageFactory",
-            "errorMessages"
         ],
         "deconstruct": true
     }

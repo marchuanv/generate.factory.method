@@ -1,26 +1,17 @@
 const { HttpConnection } = require("../../lib/http/httpconnection");
-const { HttpMessageQueue } = require("../../lib/http/httpmessagequeue");
-const { HttpMessageFactory } = require("../../lib/http/httpmessagefactory");
-const { MessageFactory } = require("../../lib/messagefactory");
 const { UserIdentity } = require("../../lib/useridentity");
-const { Encryption } = require("../../lib/encryption");
-const { MessageStore } = require("../../lib/messagestore");
+const factory = require('../../lib/factory')
 
-xdescribe("when opening an http connection and sending and http request given a hostname and port number", function() {
+describe("when opening an http connection and sending and http request given a hostname and port number", function() {
     
-    const userIdentity = new UserIdentity({ userId: 'admin' });
+    const userIdentity = factory.get(UserIdentity, { userId: 'admin' });
     userIdentity.authenticate({ secret: 'admin' });
     if (!userIdentity.isRegistered()){
         userIdentity.register({ secret: 'admin' });
     }
-    const encryption = new Encryption({ userIdentity });
-    const messageStore = new MessageStore();
-    const messageFactory = new MessageFactory({ encryption, messageStore });
-    const httpMessageFactory = new HttpMessageFactory({ messageFactory });
-    const httpMessageQueue = new HttpMessageQueue({ httpMessageFactory });
     const hostAddress = { address: 'localhost', family: 'IPv4', port: 3000 };
     const recipientAddress = { address: 'localhost', port: 3000 };
-    const connection = new HttpConnection({ httpMessageQueue, hostAddress, timeout: 10000 });
+    const connection =  factory.get(HttpConnection, { hostAddress, timeout: 10000 });
 
     beforeAll(async () => {
         await connection.open();
