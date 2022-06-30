@@ -13,8 +13,10 @@ describe("when asking the factory for an instance of a class", function() {
         const parameters = factory.getCtorParameters(HttpConnection);
         const hostAddress = { address: 'localhost', family: 'IPv4', port: 3000 };
         const timeout = 3000;
+        const userId = 'joe';
         parameters.hostAddress = hostAddress;
         parameters.timeout = timeout;
+        parameters.userId = userId;
 
         // Act
         const instance = factory.get(HttpConnection, parameters);
