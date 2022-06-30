@@ -101,9 +101,7 @@
     {
         "name": "MessageStore",
         "script": "C:\\component\\lib\\messagestore.js",
-        "parameters": [
-            "rObject.defineProperty"
-        ],
+        "parameters": [],
         "deconstruct": false
     },
     {
@@ -117,9 +115,7 @@
     {
         "name": "SubscriptionFactory",
         "script": "C:\\component\\lib\\subscriptionfactory.js",
-        "parameters": [
-            "rconstsubscriptions=[];rObject.defineProperty"
-        ],
+        "parameters": [],
         "deconstruct": false
     },
     {

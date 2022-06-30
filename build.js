@@ -27,6 +27,10 @@ for(const script of scripts) {
             if (count === 1) {
                 count = 0;
                 step = 2;
+                if (currentValue === ')') {
+                    step = 3;
+                    return `${array.slice(index + 7, arrayIndex).join("")})`;
+                }
                 return `${array.slice(index + 7, arrayIndex).join("")}${currentValue}`;
             } else {
                 return previousValue + currentValue;
