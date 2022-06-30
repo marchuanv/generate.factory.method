@@ -27,7 +27,7 @@ for(const script of scripts) {
             if (count === 1) {
                 count = 0;
                 step = 2;
-                return array.slice(index + 7, arrayIndex).join("");
+                return `${array.slice(index + 7, arrayIndex).join("")}${currentValue}`;
             } else {
                 return previousValue + currentValue;
             }
@@ -43,11 +43,16 @@ for(const script of scripts) {
         }
     });
     if (step === 3) {
-        const name = ctor.split('(')[0];
-        let parameters = ctor.split('(')[1];
+        const ctorArray = ctor.split('(');
+        const name = ctorArray[0];
+        let deconstruct = false;
+        let parameters = ctorArray[1];
         parameters = parameters.replace('{','').replace('}','').replace(')','').split(',').filter(p => p);
+        if (ctorArray[1].startsWith('{')) {
+            deconstruct = true;
+        }
         const scriptPath = script.replace(/\\/g,'[backslash]')
-        factoryInfo.push({ name, script: scriptPath, parameters });
+        factoryInfo.push({ name, script: scriptPath, parameters, deconstruct });
     }
 }
 let factoryConfigString = utils.getJSONString(factoryInfo);
