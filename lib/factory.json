@@ -130,10 +130,8 @@
         "name": "HttpMessageQueue",
         "script": "C:\\component\\lib\\http\\httpmessagequeue.js",
         "variableName": "httpmessagequeue",
-        "parameters": [
-            "httpMessageFactory"
-        ],
-        "deconstruct": true
+        "parameters": [],
+        "deconstruct": false
     },
     {
         "name": "HttpMessageStatus",

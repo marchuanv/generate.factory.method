@@ -2,7 +2,7 @@ const { HttpConnection } = require("../../lib/http/httpconnection");
 const { UserIdentity } = require("../../lib/useridentity");
 const factory = require('../../lib/factory')
 
-describe("when opening an http connection and sending and http request given a hostname and port number", function() {
+xdescribe("when opening an http connection and sending and http request given a hostname and port number", function() {
     
     let connection;
     let recipientAddress;
