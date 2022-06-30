@@ -6,6 +6,7 @@
       "request": "launch",
       "cwd": "${workspaceFolder}",
       "runtimeExecutable": "npm",
-      "runtimeArgs": ["test"]
+      "runtimeArgs": ["test"],
+      "preLaunchTask": "npm: build"
     }]
 }
