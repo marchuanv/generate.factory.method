@@ -1,7 +1,5 @@
 const { MessageStatus } = require("../../lib/messagestatus");
 const { Message } = require("../../lib/message");
-const { HttpMessageHandlerFactory } = require("../../lib/http/httpmessagehandlerfactory");
-const { MessageHandlerFactory } = require("../../lib/messagehandlerfactory");
 
 xdescribe("when asking the message handler to send and receive request messages", function() {
   it("it should succeed without any errors", async function() {

@@ -6,10 +6,12 @@ const dir = readdirSync(path.join(__dirname, 'lib'), { withFileTypes: true }).fi
 const httpDir = readdirSync(path.join(__dirname, 'lib', 'http'), { withFileTypes: true }).filter(dirent => dirent.isFile()).map(file => path.join(__dirname, 'lib', 'http', file.name));
 const websocketDir = readdirSync(path.join(__dirname, 'lib', 'websocket'), { withFileTypes: true }).filter(dirent => dirent.isFile()).map(file => path.join(__dirname, 'lib', 'websocket', file.name));
 const scripts = dir.concat(httpDir.concat(websocketDir));
-const factoryConfigPath = path.join(__dirname, 'factory.json');
+const factoryConfigPath = path.join(__dirname, 'lib', 'factory.json');
 
-const factoryInfo = [];
+const typeInfo = [];
 for(const script of scripts) {
+    let step = 1;
+    let count = 0;
     const expectedClassName = path.basename(script).replace(path.extname(script),"");
     const scriptText = readFileSync(script, 'utf8');
     const scriptTextArray = [];
@@ -18,8 +20,6 @@ for(const script of scripts) {
             scriptTextArray.push(scriptText[i]);
         }
     }
-    let step = 1;
-    let count = 0;
     const ctor = scriptTextArray.reduce((previousValue, currentValue, arrayIndex, array) => {
         if (step === 1) {
             const index = previousValue.toLowerCase().replace('',' ').indexOf(`function${expectedClassName.toLowerCase()}(`);
@@ -50,15 +50,14 @@ for(const script of scripts) {
         const ctorArray = ctor.split('(');
         const name = ctorArray[0];
         let deconstruct = false;
-        let parameters = ctorArray[1];
-        parameters = parameters.replace('{','').replace('}','').replace(')','').split(',').filter(p => p);
+        const parameters = ctorArray[1].replace('{','').replace('}','').replace(')','').split(',').filter(p => p);
         if (ctorArray[1].startsWith('{')) {
             deconstruct = true;
         }
         const scriptPath = script.replace(/\\/g,'[backslash]')
-        factoryInfo.push({ name, script: scriptPath, parameters, deconstruct });
+        typeInfo.push({ name, script: scriptPath, variableName: expectedClassName, parameters, deconstruct });
     }
 }
-let factoryConfigString = utils.getJSONString(factoryInfo);
+let factoryConfigString = utils.getJSONString(typeInfo);
 factoryConfigString = factoryConfigString.replace(/\[backslash\]/g,'\\\\')
 writeFileSync(factoryConfigPath, factoryConfigString,'utf8');

@@ -1,5 +1,3 @@
-const { HttpMessageFactory } = require("../../lib/http/httpmessagefactory");
-const { MessageFactory } = require("../../lib/messagefactory");
 const { MessageStatus } = require("../../lib/messagestatus");
 const { Encryption } = require("../../lib/encryption");
 const { UserIdentity } = require("../../lib/useridentity");

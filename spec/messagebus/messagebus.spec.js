@@ -1,4 +1,3 @@
-const { MessageBusFactory } = require('../../lib/messagebusfactory');
 xdescribe("when publishing a message", function() {
  it("it should send the same message to all subscribers", function(done) {
 

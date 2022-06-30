@@ -2,6 +2,7 @@
     {
         "name": "Component",
         "script": "C:\\component\\lib\\component.js",
+        "variableName": "component",
         "parameters": [
             "packageJson"
         ],
@@ -10,6 +11,7 @@
     {
         "name": "Content",
         "script": "C:\\component\\lib\\content.js",
+        "variableName": "content",
         "parameters": [
             "data",
             "metadata",
@@ -20,6 +22,7 @@
     {
         "name": "ContentMetadata",
         "script": "C:\\component\\lib\\contentmetadata.js",
+        "variableName": "contentmetadata",
         "parameters": [
             "metadata",
             "data"
@@ -29,6 +32,7 @@
     {
         "name": "Encryption",
         "script": "C:\\component\\lib\\encryption.js",
+        "variableName": "encryption",
         "parameters": [
             "userIdentity"
         ],
@@ -37,6 +41,7 @@
     {
         "name": "Message",
         "script": "C:\\component\\lib\\message.js",
+        "variableName": "message",
         "parameters": [
             "content",
             "messageStatus"
@@ -46,6 +51,7 @@
     {
         "name": "MessageBus",
         "script": "C:\\component\\lib\\messagebus.js",
+        "variableName": "messagebus",
         "parameters": [
             "messageHandler",
             "subscriptionFactory"
@@ -55,6 +61,7 @@
     {
         "name": "MessageHandler",
         "script": "C:\\component\\lib\\messagehandler.js",
+        "variableName": "messagehandler",
         "parameters": [
             "httpMessageHandler",
             "webSocketMessageHandler",
@@ -66,6 +73,7 @@
     {
         "name": "MessageStatus",
         "script": "C:\\component\\lib\\messagestatus.js",
+        "variableName": "messagestatus",
         "parameters": [
             "code"
         ],
@@ -74,12 +82,14 @@
     {
         "name": "MessageStore",
         "script": "C:\\component\\lib\\messagestore.js",
+        "variableName": "messagestore",
         "parameters": [],
         "deconstruct": false
     },
     {
         "name": "Subscription",
         "script": "C:\\component\\lib\\subscription.js",
+        "variableName": "subscription",
         "parameters": [
             "channelName"
         ],
@@ -88,6 +98,7 @@
     {
         "name": "UserIdentity",
         "script": "C:\\component\\lib\\useridentity.js",
+        "variableName": "useridentity",
         "parameters": [
             "userId"
         ],
@@ -96,6 +107,7 @@
     {
         "name": "HttpConnection",
         "script": "C:\\component\\lib\\http\\httpconnection.js",
+        "variableName": "httpconnection",
         "parameters": [
             "httpMessageQueue",
             "hostAddress",
@@ -106,6 +118,7 @@
     {
         "name": "HttpMessageHandler",
         "script": "C:\\component\\lib\\http\\httpmessagehandler.js",
+        "variableName": "httpmessagehandler",
         "parameters": [
             "httpMessageFactory",
             "httpConnection",
@@ -116,6 +129,7 @@
     {
         "name": "HttpMessageQueue",
         "script": "C:\\component\\lib\\http\\httpmessagequeue.js",
+        "variableName": "httpmessagequeue",
         "parameters": [
             "httpMessageFactory"
         ],
@@ -124,6 +138,7 @@
     {
         "name": "HttpMessageStatus",
         "script": "C:\\component\\lib\\http\\httpmessagestatus.js",
+        "variableName": "httpmessagestatus",
         "parameters": [
             "messageStatus"
         ],
@@ -132,6 +147,7 @@
     {
         "name": "HttpRequestMessage",
         "script": "C:\\component\\lib\\http\\httprequestmessage.js",
+        "variableName": "httprequestmessage",
         "parameters": [
             "message"
         ],
@@ -140,6 +156,7 @@
     {
         "name": "HttpResponseMessage",
         "script": "C:\\component\\lib\\http\\httpresponsemessage.js",
+        "variableName": "httpresponsemessage",
         "parameters": [
             "message"
         ],
@@ -148,6 +165,7 @@
     {
         "name": "WebSocketConnection",
         "script": "C:\\component\\lib\\websocket\\websocketconnection.js",
+        "variableName": "websocketconnection",
         "parameters": [
             "host",
             "port",
@@ -159,6 +177,7 @@
     {
         "name": "WebSocketMessageHandler",
         "script": "C:\\component\\lib\\websocket\\websocketmessagehandler.js",
+        "variableName": "websocketmessagehandler",
         "parameters": [
             "messageFactory",
             "errorMessages",
