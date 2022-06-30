@@ -1,22 +1,20 @@
 const { Factory } = require('../../lib/factory')
 
 describe("when opening an http connection and sending and http request given a hostname and port number", function() {
-    
+    const recipientAddress = { address: 'localhost', port: 3000 };
+    const hostAddress = { address: 'localhost', family: 'IPv4', port: 3000 };
     beforeAll(async () => {
         // const userIdentity = factory.get(UserIdentity, { userId: 'admin' });
         // userIdentity.authenticate({ secret: 'admin' });
         // if (!userIdentity.isRegistered()){
         //     userIdentity.register({ secret: 'admin' });
         // }
-        // recipientAddress = { address: 'localhost', port: 3000 };
         this.factory = new Factory();
-        const hostAddress = { address: 'localhost', family: 'IPv4', port: 3000 };
         const timeout = 3000;
         this.factory.httpconnection.hostAddress = hostAddress;
         this.factory.httpconnection.timeout = timeout;
         await this.factory.httpconnection.open();
     });
-    
     it("it should return the server host address", () => {
      
         // Arrange
