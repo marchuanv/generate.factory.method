@@ -60,6 +60,13 @@
         "deconstruct": true
     },
     {
+        "name": "Factory",
+        "script": "C:\\component\\lib\\factory.js",
+        "variableName": "factory",
+        "parameters": [],
+        "deconstruct": false
+    },
+    {
         "name": "Message",
         "script": "C:\\component\\lib\\message.js",
         "variableName": "message",
