@@ -1,7 +1,8 @@
 const { HttpConnection } = require('../lib/http/httpconnection');
 const { HttpMessageHandler } = require('../lib/http/httpmessagehandler');
-const factory = require('../lib/factory');
+const { Factory } = require('../lib/factory');
 describe("when asking the factory for an HttpConnection", function() {
+    const factory = new Factory();
     it("it should resolve all dependencies and create an instance", function() {
         // Arrange
         const hostAddress = { address: 'localhost', family: 'IPv4', port: 3000 };
@@ -17,8 +18,6 @@ describe("when asking the factory for an HttpConnection", function() {
         // Assert
         expect(instance instanceof HttpConnection).toBeTruthy();
     });
-});
-describe("when asking the factory for an HttpConnection", function() {
     it("it should return an instance from the cache", function() {
         // Arrange
         const hostAddress = { address: 'localhost', family: 'IPv4', port: 3000 };
@@ -38,6 +37,7 @@ describe("when asking the factory for an HttpConnection", function() {
 describe("when asking the factory for an HttpMessageHandler", function() {
     it("it should resolve all dependencies and create an instance", function() {
         // Arrange
+        const factory = new Factory();
         const hostAddress = { address: 'localhost', family: 'IPv4', port: 3000 };
         const timeout = 3000;
 

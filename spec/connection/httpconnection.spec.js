@@ -2,7 +2,7 @@ const { HttpConnection } = require("../../lib/http/httpconnection");
 const { UserIdentity } = require("../../lib/useridentity");
 const factory = require('../../lib/factory')
 
-xdescribe("when opening an http connection and sending and http request given a hostname and port number", function() {
+describe("when opening an http connection and sending and http request given a hostname and port number", function() {
     
     let connection;
     let recipientAddress;
@@ -22,6 +22,7 @@ xdescribe("when opening an http connection and sending and http request given a 
     it("it should return the server host address", () => {
      
         // Arrange
+        factory.httpconnection
         expect(connection.isOpen()).toBeTruthy();
 
         // Act
