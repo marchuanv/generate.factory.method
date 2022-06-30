@@ -1,15 +1,15 @@
 const { HttpConnection } = require('../lib/http/httpconnection');
 const { HttpMessageHandler } = require('../lib/http/httpmessagehandler');
 const factory = require('../lib/factory');
-xdescribe("when asking the factory for an HttpConnection", function() {
+describe("when asking the factory for an HttpConnection", function() {
     it("it should resolve all dependencies and create an instance", function() {
         // Arrange
         const hostAddress = { address: 'localhost', family: 'IPv4', port: 3000 };
         const timeout = 3000;
         const userId = 'joe';
-        factory.httpconnection.ctorParams.hostAddress = hostAddress;
-        factory.httpconnection.ctorParams.timeout = timeout;
-        factory.httpconnection.ctorParams.userId = userId;
+        factory.httpconnection.hostAddress = hostAddress;
+        factory.httpconnection.timeout = timeout;
+        factory.httpconnection.userId = userId;
 
         // Act
         const instance = factory.httpconnection;
@@ -23,10 +23,9 @@ describe("when asking the factory for an HttpMessageHandler", function() {
         // Arrange
         const hostAddress = { address: 'localhost', family: 'IPv4', port: 3000 };
         const timeout = 3000;
-        const userId = 'joe';
-        factory.httpmessagehandler.ctorParams.hostAddress = hostAddress;
-        factory.httpmessagehandler.ctorParams.timeout = timeout;
-        factory.httpmessagehandler.ctorParams.userId = userId;
+
+        factory.httpmessagehandler.hostAddress = hostAddress;
+        factory.httpmessagehandler.timeout = timeout;
 
         // Act
         const instance = factory.httpmessagehandler;
