@@ -4,7 +4,8 @@ describe('when asking HttpMessageHandler to create an instance', function() {
   it("it should succeed without any errors", function() {
     
     // Arrange
-    const { httpConnection,httpMessageQueue } = [HttpConnection];
+    const {} = [];
+    const {httpconnection,httpmessagequeue} = [HttpConnection,HttpMessageQueue];
     // Act
     const instance = new HttpMessageHandlerFactory({ httpConnection,httpMessageQueue });
     // Assert

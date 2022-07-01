@@ -4,7 +4,8 @@ describe('when asking Component to create an instance', function() {
   it("it should succeed without any errors", function() {
     
     // Arrange
-    const { packageJson } = [];
+    const {} = [];
+    const {} = [];
     // Act
     const instance = new ComponentFactory({ packageJson });
     // Assert

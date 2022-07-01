@@ -4,7 +4,8 @@ describe('when asking MessageStore to create an instance', function() {
   it("it should succeed without any errors", function() {
     
     // Arrange
-    const {  } = [];
+    const {} = [];
+    const {} = [];
     // Act
     const instance = new MessageStoreFactory({  });
     // Assert
