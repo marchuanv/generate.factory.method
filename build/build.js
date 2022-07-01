@@ -48,9 +48,7 @@ for(const i of info) {
 
     const nonRefArgsVariableNames = i.params.filter(p => !p.reference).map(p => `const ${p.name} = null;`).join('\r\n');
     const factoryVariableNames = i.params.filter(p => p.reference).map(p => `const ${p.name}Factory = new ${p.typeName}Factory();`).join('\r\n');
-    const refArgsVariableNames = i.params.filter(p => p.reference)
-                                    .map(p => `const ${p.name} = ${p.name}Factory.create();`)
-                                    .join('\r\n');
+    const refArgsVariableNames = i.params.filter(p => p.reference).map(p => `const ${p.name} = ${p.name}Factory.create();`).join('\r\n');
     const requireScripts = i.params.filter(p => p.reference).map(p => `const { ${p.typeName}Factory } = require('${p.factoryScript}');`).join('\r\n');
 
     const factory = factoryTemplate
