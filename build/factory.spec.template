@@ -1,11 +1,9 @@
 const { [typename]Factory } = require('[scriptpath]'); 
-
 describe('when asking [typename] to create an instance', function() {
   it("it should succeed without any errors", function() {
-    
     // Arrange
+    [refArgsVariableNames]
     const {[nonRefArgs]} = [];
-    const {[refArgsVariableNames]} = [[refArgsFactory]];
     // Act
     const instance = new [typename]Factory([args]);
     // Assert

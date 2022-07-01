@@ -32,23 +32,31 @@ for(const script of scripts) {
 }
 
 for(const i of info) {
-    for(const p of i.params.filter(p => info.find(i => i.type.name.toLowerCase() === p.name.toLowerCase()))) {
-        p.reference = true;
+    for(const p of i.params) {
+        p.typeName = 'variable';
+        p.reference = false;
     }
+    for(const p of i.params.filter(p => info.find(i => i.type.name.toLowerCase() === p.name.toLowerCase()))) {
+        const depInfo = info.find(inf => inf.type.name.toLowerCase() === p.name.toLowerCase());
+        if (!depInfo) {
+            throw new Error(`${p.name} parameter does not have a referenced type`);
+        }
+        p.reference = true;
+        p.typeName = depInfo.type.name;
+    }
+    const refArgsVariableNames = i.params.filter(p => p.reference)
+                                    .map(p => `const ${p.name} = new ${p.typeName}();`)
+                                    .join('\r\n');
+    const nonRefArgs = i.params.filter(p => !p.reference).map(p => p.name).join(',');
+
     const factory = factoryTemplate
         .replace(/\[args\]/g, `{ ${i.params.map( x=>x.name )} }` )
         .replace(/\[scriptpath\]/g, i.script.replace(/\\/g,'\\\\'))
         .replace(/\[typename\]/g, i.type.name);
     writeFileSync(i.factoryScriptPath, factory, 'utf8');
-    const refArgsFactory = info.filter(inf => i.params.find(p => p.name.toLowerCase() === inf.type.name.toLowerCase() && p.reference))
-        .map(inf => inf.type.name)
-        .join(',');
-    const refArgsVariableNames = i.params.filter(p => p.reference).map(p => p.name).join(',');
-    const nonRefArgs = i.params.filter(p => !p.reference).map(p => p.name).join(',');
     const spec = factorySpecTemplate
         .replace(/\[nonRefArgs\]/g, nonRefArgs)
         .replace(/\[refArgsVariableNames\]/g, refArgsVariableNames)
-        .replace(/\[refArgsFactory\]/g, refArgsFactory)
         .replace(/\[scriptpath\]/g, i.factoryScriptPath.replace(/\\/g,'\\\\'))
         .replace(/\[typename\]/g, i.type.name)
         .replace(/\[args\]/g, `{ ${i.params.map( x=>x.name )} }` );
