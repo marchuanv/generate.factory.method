@@ -4,7 +4,7 @@ describe('when asking HttpRequestMessage to create an instance', function() {
   it("it should succeed without any errors", function() {
     
     // Arrange
-    const { message } = [{ message }];
+    const { message } = [Message];
     // Act
     const instance = new HttpRequestMessageFactory({ message });
     // Assert

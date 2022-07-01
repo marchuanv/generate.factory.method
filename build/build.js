@@ -41,9 +41,12 @@ for(const i of info) {
         .replace(/\[scriptpath\]/g, i.script.replace(/\\/g,'\\\\'))
         .replace(/\[typename\]/g, i.type.name);
     writeFileSync(i.factoryScriptPath, factory, 'utf8');
+    const refArgs = info.filter(inf => i.params.find(p => p.name.toLowerCase() === inf.type.name.toLowerCase() && p.reference))
+                        .map(inf => inf.type.name)
+                        .join(',');
     const spec = factorySpecTemplate
         .replace(/\[args\]/g, `{ ${i.params.map( x=>x.name )} }` )
-        .replace(/\[refArgs\]/g, `{ ${i.params.filter(x=>x.reference).map( x=>x.name )} }` )
+        .replace(/\[refArgs\]/g, refArgs)
         .replace(/\[scriptpath\]/g, i.factoryScriptPath.replace(/\\/g,'\\\\'))
         .replace(/\[typename\]/g, i.type.name);
     writeFileSync(i.specScriptPath, spec, 'utf8');

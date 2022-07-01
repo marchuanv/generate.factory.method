@@ -4,7 +4,7 @@ describe('when asking Message to create an instance', function() {
   it("it should succeed without any errors", function() {
     
     // Arrange
-    const { content,messageStatus } = [{ content }];
+    const { content,messageStatus } = [Content];
     // Act
     const instance = new MessageFactory({ content,messageStatus });
     // Assert
