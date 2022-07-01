@@ -51,29 +51,6 @@ function Factory() {
             return new type();
         }
     };
-    for(const config of factoryConfig) {
-        const scriptTypes = require(config.script);
-        const type = scriptTypes[Object.keys(scriptTypes)[0]];
-        const ctorParams = getCtorParameters({ type, isImmediate: false, isReference: false });
-        const ctorParamsTemplate = getCtorParameters({ type, isImmediate: false, isReference: false });
-        Object.defineProperty(this, config.variableName, { configurable: true, get : () => {
-            const ctorParamKeys = Object.keys(ctorParams);
-            const ctorParamsTemplateKeys = Object.keys(ctorParamsTemplate);
-            const allKeys = ctorParamsTemplateKeys.filter(key => ctorParamKeys.find(key2 => key2 === key)).filter(key => ctorParams[key]);
-            const hasAllKeys = allKeys.length === ctorParamsTemplateKeys.length;
-            const invalidKey = ctorParamKeys.find(key => ctorParamsTemplateKeys.filter(key2 => key2 === key).length === 0);
-            if (invalidKey) {
-                throw new Error(`${config.name} does not have a ${invalidKey} constructor parameter.`);
-            }
-            if (hasAllKeys) {
-                const instance = getInstance({ config, otherCtorParams: ctorParams });
-                Object.defineProperty(instance, 'factory', { value: this });
-                Object.freeze(instance);
-                Object.defineProperty(this, config.variableName, { value: instance });
-                return instance;
-            }
-            return ctorParams;
-        }});
-    }
+  
 }
 module.exports = { Factory };

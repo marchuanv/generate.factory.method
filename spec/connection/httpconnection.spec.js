@@ -1,4 +1,3 @@
-const { Factory } = require('../../lib/factory')
 
 describe("when opening an http connection and sending and http request given a hostname and port number", function() {
     const recipientAddress = { address: 'localhost', port: 3000 };
