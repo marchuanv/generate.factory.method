@@ -4,7 +4,7 @@ describe('when asking UserIdentity to create an instance', function() {
   it("it should succeed without any errors", function() {
     
     // Arrange
-    const {} = [];
+    const {userId} = [];
     const {} = [];
     // Act
     const instance = new UserIdentityFactory({ userId });

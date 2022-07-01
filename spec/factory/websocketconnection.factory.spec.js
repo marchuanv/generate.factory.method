@@ -4,7 +4,7 @@ describe('when asking WebSocketConnection to create an instance', function() {
   it("it should succeed without any errors", function() {
     
     // Arrange
-    const {} = [];
+    const {host,port} = [];
     const {} = [];
     // Act
     const instance = new WebSocketConnectionFactory({ host,port });

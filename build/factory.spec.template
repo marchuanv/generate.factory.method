@@ -4,7 +4,7 @@ describe('when asking [typename] to create an instance', function() {
   it("it should succeed without any errors", function() {
     
     // Arrange
-    const {[nonRefArgs]} = [[nonRefArgs]];
+    const {[nonRefArgs]} = [];
     const {[refArgsToLower]} = [[refArgs]];
     // Act
     const instance = new [typename]Factory([args]);

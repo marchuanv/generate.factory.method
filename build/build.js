@@ -46,12 +46,7 @@ for(const i of info) {
     const refArgsToLower = info.filter(inf => i.params.find(p => p.name.toLowerCase() === inf.type.name.toLowerCase() && p.reference))
         .map(inf => inf.type.name.toLowerCase())
         .join(',');
-    const nonRefArgs = info.map((inf) => {
-        const foundParam = i.params.find(p => p.name.toLowerCase() === inf.type.name.toLowerCase() && !p.reference);
-        if (foundParam) {
-            return foundParam.name;
-        }
-    }).filter(x=>x).join(',');
+    const nonRefArgs = i.params.filter(p => !p.reference).map(p => p.name).join(',');
     const spec = factorySpecTemplate
         .replace(/\[nonRefArgs\]/g, nonRefArgs)
         .replace(/\[refArgsToLower\]/g, refArgsToLower)

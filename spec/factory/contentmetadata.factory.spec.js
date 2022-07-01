@@ -4,7 +4,7 @@ describe('when asking ContentMetadata to create an instance', function() {
   it("it should succeed without any errors", function() {
     
     // Arrange
-    const {} = [];
+    const {metadata,data} = [];
     const {} = [];
     // Act
     const instance = new ContentMetadataFactory({ metadata,data });
