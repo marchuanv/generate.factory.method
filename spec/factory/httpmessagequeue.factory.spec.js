@@ -1,15 +1,11 @@
 const { HttpMessageQueueFactory } = require('C:\\component\\lib\\http\\httpmessagequeue.factory.js');
-[factoryVariableNames]
-
-
+[requireScripts]
 describe('when asking HttpMessageQueue to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
     [factoryVariableNames]
-
-    
-    const name = null;
-const callback = null;
+    [refArgsVariableNames]
+    [nonRefArgsVariableNames]
     // Act
     const instance = new HttpMessageQueueFactory({ name,callback });
     // Assert
