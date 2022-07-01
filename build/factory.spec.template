@@ -1,0 +1,13 @@
+const { [typename]Factory } = require('[scriptpath]'); 
+
+describe('when asking [typename] to create an instance', function() {
+  it("it should succeed without any errors", function() {
+    
+    // Arrange
+    const [args] = [];
+    // Act
+    const instance = new [typename]Factory([args]);
+    // Assert
+    expect(instance).not.toBeNull();
+  });
+});

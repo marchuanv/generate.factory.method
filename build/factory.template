@@ -1,0 +1,7 @@
+const { [typename] } = require('[scriptpath]'); 
+function [typename]Factory([args]) {
+    Object.defineProperty(this, 'create', { configurable: false, writable: false, value: () => {
+        return new [typename]([args]);
+    }});
+} 
+module.exports = { [typename]Factory }; 
