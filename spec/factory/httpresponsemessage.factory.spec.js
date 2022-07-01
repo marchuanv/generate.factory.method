@@ -1,9 +1,11 @@
-const { HttpResponseMessageFactory } = require('C:\\component\\lib\\http\\httpresponsemessage.factory.js'); 
+const { HttpResponseMessageFactory } = require('C:\\component\\lib\\http\\httpresponsemessage.factory.js');
+const { MessageFactory } = require('C:\\component\\lib\\message.factory.js');
 describe('when asking HttpResponseMessage to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
-    const message = new Message();
-    const {} = [];
+    const messageFactory = new MessageFactory();
+    const message = messageFactory.create();
+    
     // Act
     const instance = new HttpResponseMessageFactory({ message });
     // Assert

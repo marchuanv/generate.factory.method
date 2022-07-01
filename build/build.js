@@ -43,11 +43,15 @@ for(const i of info) {
         }
         p.reference = true;
         p.typeName = depInfo.type.name;
+        p.factoryScript = depInfo.factoryScriptPath.replace(/\\/g,'\\\\');
     }
+
+    const nonRefArgsVariableNames = i.params.filter(p => !p.reference).map(p => `const ${p.name} = null;`).join('\r\n');
+    const factoryVariableNames = i.params.filter(p => p.reference).map(p => `const ${p.name}Factory = new ${p.typeName}Factory();`).join('\r\n');
     const refArgsVariableNames = i.params.filter(p => p.reference)
-                                    .map(p => `const ${p.name} = new ${p.typeName}();`)
+                                    .map(p => `const ${p.name} = ${p.name}Factory.create();`)
                                     .join('\r\n');
-    const nonRefArgs = i.params.filter(p => !p.reference).map(p => p.name).join(',');
+    const requireScripts = i.params.filter(p => p.reference).map(p => `const { ${p.typeName}Factory } = require('${p.factoryScript}');`).join('\r\n');
 
     const factory = factoryTemplate
         .replace(/\[args\]/g, `{ ${i.params.map( x=>x.name )} }` )
@@ -55,45 +59,12 @@ for(const i of info) {
         .replace(/\[typename\]/g, i.type.name);
     writeFileSync(i.factoryScriptPath, factory, 'utf8');
     const spec = factorySpecTemplate
-        .replace(/\[nonRefArgs\]/g, nonRefArgs)
+        .replace(/\[requireScripts\]/g, requireScripts)
+        .replace(/\[nonRefArgsVariableNames\]/g, nonRefArgsVariableNames)
+        .replace(/\[factoryVariableNames\]/g, factoryVariableNames)
         .replace(/\[refArgsVariableNames\]/g, refArgsVariableNames)
         .replace(/\[scriptpath\]/g, i.factoryScriptPath.replace(/\\/g,'\\\\'))
         .replace(/\[typename\]/g, i.type.name)
         .replace(/\[args\]/g, `{ ${i.params.map( x=>x.name )} }` );
     writeFileSync(i.specScriptPath, spec, 'utf8');
 }
-// const references = typeInfo.filter(cnf => typeInfo.find(cnf2 => cnf2.parameters.find(p => p.name.toLowerCase() === cnf.variableName)));
-// let refParams = typeInfo.map(info2 => info2.parameters.filter(p => references.find(ref => ref.variableName === p.name.toLowerCase())));
-// refParams = refParams.flat();
-// for (const p of refParams){
-//     p.reference = true;
-// }
-
-// for(const config of typeInfo) {
-//     const scriptTypes = require(config.script);
-//     const type = scriptTypes[Object.keys(scriptTypes)[0]];
-//     const ctorParams = getCtorParameters({ type, isImmediate: false, isReference: false });
-//     const ctorParamsTemplate = getCtorParameters({ type, isImmediate: false, isReference: false });
-//     Object.defineProperty(this, config.variableName, { configurable: false, get : () => {
-//         const ctor = {
-//             create: (id, ...args) => {
-//                 const ctorParamKeys = Object.keys(args);
-//                 const ctorParamsTemplateKeys = Object.keys(ctorParamsTemplate);
-//                 const allKeys = ctorParamsTemplateKeys.filter(key => ctorParamKeys.find(key2 => key2 === key)).filter(key => ctorParams[key]);
-//                 const hasAllKeys = allKeys.length === ctorParamsTemplateKeys.length;
-//                 const invalidKey = ctorParamKeys.find(key => ctorParamsTemplateKeys.filter(key2 => key2 === key).length === 0);
-//                 if (invalidKey) {
-//                     throw new Error(`${config.name} does not have a ${invalidKey} constructor parameter.`);
-//                 }
-//                 if (hasAllKeys) {
-//                     const instance = getInstance({ config, otherCtorParams: ctorParams });
-//                     Object.defineProperty(instance, 'factory', { value: this });
-//                     Object.freeze(instance);
-//                     Object.defineProperty(this, config.variableName, { value: instance });
-//                     return instance;
-//                 }
-//             }
-//         };
-//         return ctor;
-//     }});
-// }

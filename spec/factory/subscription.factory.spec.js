@@ -1,9 +1,11 @@
-const { SubscriptionFactory } = require('C:\\component\\lib\\subscription.factory.js'); 
+const { SubscriptionFactory } = require('C:\\component\\lib\\subscription.factory.js');
+
 describe('when asking Subscription to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
     
-    const {channelName} = [];
+    
+    const channelName = null;
     // Act
     const instance = new SubscriptionFactory({ channelName });
     // Assert
