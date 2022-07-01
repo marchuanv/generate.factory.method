@@ -5,7 +5,7 @@ describe('when asking WebSocketMessageHandler to create an instance', function()
     
     // Arrange
     const {websocketMessageQueue} = [];
-    const {websocketconnection} = [WebSocketConnection];
+    const {websocketConnection} = [WebSocketConnection];
     // Act
     const instance = new WebSocketMessageHandlerFactory({ websocketConnection,websocketMessageQueue });
     // Assert

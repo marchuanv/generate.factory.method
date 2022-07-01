@@ -4,10 +4,10 @@ describe('when asking MessageBus to create an instance', function() {
   it("it should succeed without any errors", function() {
     
     // Arrange
-    const {subscriptionFactory} = [];
-    const {messagehandler} = [MessageHandler];
+    const {} = [];
+    const {messageHandler} = [MessageHandler];
     // Act
-    const instance = new MessageBusFactory({ messageHandler,subscriptionFactory });
+    const instance = new MessageBusFactory({ messageHandler });
     // Assert
     expect(instance).not.toBeNull();
   });

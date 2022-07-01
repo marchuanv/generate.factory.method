@@ -40,17 +40,15 @@ for(const i of info) {
         .replace(/\[scriptpath\]/g, i.script.replace(/\\/g,'\\\\'))
         .replace(/\[typename\]/g, i.type.name);
     writeFileSync(i.factoryScriptPath, factory, 'utf8');
-    const refArgs = info.filter(inf => i.params.find(p => p.name.toLowerCase() === inf.type.name.toLowerCase() && p.reference))
+    const refArgsFactory = info.filter(inf => i.params.find(p => p.name.toLowerCase() === inf.type.name.toLowerCase() && p.reference))
         .map(inf => inf.type.name)
         .join(',');
-    const refArgsToLower = info.filter(inf => i.params.find(p => p.name.toLowerCase() === inf.type.name.toLowerCase() && p.reference))
-        .map(inf => inf.type.name.toLowerCase())
-        .join(',');
+    const refArgsVariableNames = i.params.filter(p => p.reference).map(p => p.name).join(',');
     const nonRefArgs = i.params.filter(p => !p.reference).map(p => p.name).join(',');
     const spec = factorySpecTemplate
         .replace(/\[nonRefArgs\]/g, nonRefArgs)
-        .replace(/\[refArgsToLower\]/g, refArgsToLower)
-        .replace(/\[refArgs\]/g, refArgs)
+        .replace(/\[refArgsVariableNames\]/g, refArgsVariableNames)
+        .replace(/\[refArgsFactory\]/g, refArgsFactory)
         .replace(/\[scriptpath\]/g, i.factoryScriptPath.replace(/\\/g,'\\\\'))
         .replace(/\[typename\]/g, i.type.name)
         .replace(/\[args\]/g, `{ ${i.params.map( x=>x.name )} }` );

@@ -5,7 +5,7 @@ describe('when asking MessageHandler to create an instance', function() {
     
     // Arrange
     const {} = [];
-    const {httpmessagehandler,websocketmessagehandler} = [HttpMessageHandler,WebSocketMessageHandler];
+    const {httpMessageHandler,webSocketMessageHandler} = [HttpMessageHandler,WebSocketMessageHandler];
     // Act
     const instance = new MessageHandlerFactory({ httpMessageHandler,webSocketMessageHandler });
     // Assert

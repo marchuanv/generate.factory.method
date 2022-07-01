@@ -5,7 +5,7 @@ describe('when asking Encryption to create an instance', function() {
     
     // Arrange
     const {} = [];
-    const {useridentity} = [UserIdentity];
+    const {userIdentity} = [UserIdentity];
     // Act
     const instance = new EncryptionFactory({ userIdentity });
     // Assert

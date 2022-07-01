@@ -5,7 +5,7 @@ describe('when asking [typename] to create an instance', function() {
     
     // Arrange
     const {[nonRefArgs]} = [];
-    const {[refArgsToLower]} = [[refArgs]];
+    const {[refArgsVariableNames]} = [[refArgsFactory]];
     // Act
     const instance = new [typename]Factory([args]);
     // Assert

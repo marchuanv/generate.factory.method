@@ -5,7 +5,7 @@ describe('when asking HttpConnection to create an instance', function() {
     
     // Arrange
     const {hostAddress,timeout} = [];
-    const {httpmessagequeue} = [HttpMessageQueue];
+    const {httpMessageQueue} = [HttpMessageQueue];
     // Act
     const instance = new HttpConnectionFactory({ httpMessageQueue,hostAddress,timeout });
     // Assert
