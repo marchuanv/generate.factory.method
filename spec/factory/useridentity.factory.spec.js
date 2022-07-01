@@ -1,12 +1,12 @@
-const { UserIdentityFactoryFactory } = require('C:\\component\\lib\\useridentity.factory.js'); 
+const { UserIdentityFactory } = require('C:\\component\\lib\\useridentity.factory.js'); 
 
-describe('when asking UserIdentityFactory factory to create an instance', function() {
+describe('when asking UserIdentity to create an instance', function() {
   it("it should succeed without any errors", function() {
     
     // Arrange
-    const {  } = [];
+    const { userId } = [];
     // Act
-    const instance = new UserIdentityFactoryFactory({  });
+    const instance = new UserIdentityFactory({ userId });
     // Assert
     expect(instance).not.toBeNull();
   });

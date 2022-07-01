@@ -1,12 +1,12 @@
-const { EncryptionFactoryFactory } = require('C:\\component\\lib\\encryption.factory.js'); 
+const { EncryptionFactory } = require('C:\\component\\lib\\encryption.factory.js'); 
 
-describe('when asking EncryptionFactory factory to create an instance', function() {
+describe('when asking Encryption to create an instance', function() {
   it("it should succeed without any errors", function() {
     
     // Arrange
-    const {  } = [];
+    const { userIdentity } = [];
     // Act
-    const instance = new EncryptionFactoryFactory({  });
+    const instance = new EncryptionFactory({ userIdentity });
     // Assert
     expect(instance).not.toBeNull();
   });

@@ -36,7 +36,7 @@ for(const script of scripts) {
         const spec = factorySpecTemplate
             .replace(/\[args\]/g, `{ ${parameters.map( x=>x.name )} }` )
             .replace(/\[scriptpath\]/g, factoryScriptPath.replace(/\\/g,'\\\\'))
-            .replace(/\[typename\]/g, `${type.name}Factory`);
+            .replace(/\[typename\]/g, type.name);
         writeFileSync(specScriptPath, spec, 'utf8');
     }
 }
