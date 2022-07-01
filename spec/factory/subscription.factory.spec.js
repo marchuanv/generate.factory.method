@@ -4,7 +4,7 @@ describe('when asking Subscription to create an instance', function() {
   it("it should succeed without any errors", function() {
     
     // Arrange
-    const { channelName } = [];
+    const { channelName } = [{  }];
     // Act
     const instance = new SubscriptionFactory({ channelName });
     // Assert

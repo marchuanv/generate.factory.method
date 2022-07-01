@@ -14,6 +14,7 @@ if (!existsSync(specsFactoryDir)){
     mkdirSync(specsFactoryDir);
 }
 
+const info = [];
 for(const script of scripts) {
     const scriptName = path.basename(script).replace(path.extname(script),'');
     const scriptDir = script.replace(`\\${scriptName}.js`,'');
@@ -25,20 +26,27 @@ for(const script of scripts) {
     const keys = Object.keys(sc);
     for(const key of keys){
         const type = sc[key];
-        const parameters = utils.getFunctionParams(type);
-
-        const factory = factoryTemplate
-            .replace(/\[args\]/g, `{ ${parameters.map( x=>x.name )} }` )
-            .replace(/\[scriptpath\]/g, script.replace(/\\/g,'\\\\'))
-            .replace(/\[typename\]/g, type.name);
-        writeFileSync(factoryScriptPath, factory, 'utf8');
-
-        const spec = factorySpecTemplate
-            .replace(/\[args\]/g, `{ ${parameters.map( x=>x.name )} }` )
-            .replace(/\[scriptpath\]/g, factoryScriptPath.replace(/\\/g,'\\\\'))
-            .replace(/\[typename\]/g, type.name);
-        writeFileSync(specScriptPath, spec, 'utf8');
+        const allParams = utils.getFunctionParams(type);
+        const refTypeParams = allParams.filter(p => info.find(i => i.type.name.toLowerCase() === p.name.toLowerCase()));
+        for(const p of refTypeParams) {
+            p.reference = true;
+        }
+        info.push({ type, script, factoryScriptPath, specScriptPath, params: allParams });
     }
+}
+
+for(const i of info) {
+    const factory = factoryTemplate
+        .replace(/\[args\]/g, `{ ${i.params.map( x=>x.name )} }` )
+        .replace(/\[scriptpath\]/g, i.script.replace(/\\/g,'\\\\'))
+        .replace(/\[typename\]/g, i.type.name);
+    writeFileSync(i.factoryScriptPath, factory, 'utf8');
+    const spec = factorySpecTemplate
+        .replace(/\[args\]/g, `{ ${i.params.map( x=>x.name )} }` )
+        .replace(/\[refArgs\]/g, `{ ${i.params.filter(x=>x.reference).map( x=>x.name )} }` )
+        .replace(/\[scriptpath\]/g, i.factoryScriptPath.replace(/\\/g,'\\\\'))
+        .replace(/\[typename\]/g, i.type.name);
+    writeFileSync(i.specScriptPath, spec, 'utf8');
 }
 // const references = typeInfo.filter(cnf => typeInfo.find(cnf2 => cnf2.parameters.find(p => p.name.toLowerCase() === cnf.variableName)));
 // let refParams = typeInfo.map(info2 => info2.parameters.filter(p => references.find(ref => ref.variableName === p.name.toLowerCase())));

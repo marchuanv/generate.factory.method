@@ -4,7 +4,7 @@ describe('when asking WebSocketMessageHandler to create an instance', function()
   it("it should succeed without any errors", function() {
     
     // Arrange
-    const { messageFactory,errorMessages,connection } = [];
+    const { messageFactory,errorMessages,connection } = [{  }];
     // Act
     const instance = new WebSocketMessageHandlerFactory({ messageFactory,errorMessages,connection });
     // Assert
