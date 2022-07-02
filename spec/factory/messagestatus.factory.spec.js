@@ -1,4 +1,4 @@
-const { MessageStatusFactory } = require('C:\\component\\lib\\messagestatus.factory.js');
+const { MessageStatusFactory } = require('D:\\component\\lib\\messagestatus.factory.js');
 [requireScripts]
 describe('when asking MessageStatus to create an instance', function() {
   it("it should succeed without any errors", function() {

@@ -1,4 +1,4 @@
-const { WebSocketMessageHandlerFactory } = require('C:\\component\\lib\\websocket\\websocketmessagehandler.factory.js');
+const { WebSocketMessageHandlerFactory } = require('D:\\component\\lib\\websocket\\websocketmessagehandler.factory.js');
 [requireScripts]
 describe('when asking WebSocketMessageHandler to create an instance', function() {
   it("it should succeed without any errors", function() {

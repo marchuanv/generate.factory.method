@@ -33,7 +33,8 @@ function getDependencyTree(info, pass, types) {
             const sc = require(scriptPath);
             const key = Object.keys(sc)[0];
             const type = sc[key];
-            info = { type, typeName: type.name, scriptPath, factoryScriptPath, specScriptPath, parents: [], passes: [] };
+            const params = utils.getFunctionParams(type);
+            info = { type, typeName: type.name, scriptPath, factoryScriptPath, specScriptPath, parents: [], passes: [], params };
             types.push(info);
         }
         else {
@@ -52,8 +53,8 @@ function getDependencyTree(info, pass, types) {
         }
         return types;
     }
-    const params = utils.getFunctionParams(info.type);
-    const otherDep = types.find(inf => params.find(param => param.name.toLowerCase() === inf.typeName.toLowerCase())); // do other types depend on you?
+    
+    const otherDep = types.find(inf => info.params.find(param => param.name.toLowerCase() === inf.typeName.toLowerCase())); // do other types depend on you?
     if (otherDep && !info.parents.find(p => p.typeName === otherDep.typeName)) {
         info.parents.push(otherDep);
         return getDependencyTree(otherDep, pass, types);
@@ -62,24 +63,18 @@ function getDependencyTree(info, pass, types) {
         return getDependencyTree(null, pass, types);
     }
 }
-
-// for(const info of typeInfo) {
-//     const factory = factoryTemplate
-//         .replace(/\[args\]/g, `{ ${info.params.map( x=>x.name )} }` )
-//         .replace(/\[scriptpath\]/g, info.script.replace(/\\/g,'\\\\'))
-//         .replace(/\[typename\]/g, info.typeName);
-//     writeFileSync(info.factoryScriptPath, factory, 'utf8');
-//     const spec = factorySpecTemplate
-//         .replace(/\[scriptpath\]/g, info.factoryScriptPath.replace(/\\/g,'\\\\'))
-//         .replace(/\[typename\]/g, info.typeName)
-//         .replace(/\[args\]/g, `{ ${info.params.map( x => x.name )} }` );
-//     writeFileSync(info.specScriptPath, spec, 'utf8');
-// }
-
-const tree = getDependencyTree();
-
-console.log(utils.getJSONString(tree));
-
+for(const info of getDependencyTree()) {
+    const factory = factoryTemplate
+        .replace(/\[args\]/g, `{ ${info.params.map( x=>x.name )} }` )
+        .replace(/\[scriptpath\]/g, info.scriptPath.replace(/\\/g,'\\\\'))
+        .replace(/\[typename\]/g, info.typeName);
+    writeFileSync(info.factoryScriptPath, factory, 'utf8');
+    const spec = factorySpecTemplate
+        .replace(/\[scriptpath\]/g, info.factoryScriptPath.replace(/\\/g,'\\\\'))
+        .replace(/\[typename\]/g, info.typeName)
+        .replace(/\[args\]/g, `{ ${info.params.map( x => x.name )} }` );
+    writeFileSync(info.specScriptPath, spec, 'utf8');
+}
 
 // for(const info of typeInfo) {
 //     const requireScripts = info.params.filter(p => p.reference).map(p => `const { ${p.typeName}Factory } = require('${p.factoryScript}');`).join('\r\n');

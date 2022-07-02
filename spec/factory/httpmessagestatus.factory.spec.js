@@ -1,4 +1,4 @@
-const { HttpMessageStatusFactory } = require('C:\\component\\lib\\http\\httpmessagestatus.factory.js');
+const { HttpMessageStatusFactory } = require('D:\\component\\lib\\http\\httpmessagestatus.factory.js');
 [requireScripts]
 describe('when asking HttpMessageStatus to create an instance', function() {
   it("it should succeed without any errors", function() {

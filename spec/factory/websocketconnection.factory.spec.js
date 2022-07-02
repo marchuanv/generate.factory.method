@@ -1,4 +1,4 @@
-const { WebSocketConnectionFactory } = require('C:\\component\\lib\\websocket\\websocketconnection.factory.js');
+const { WebSocketConnectionFactory } = require('D:\\component\\lib\\websocket\\websocketconnection.factory.js');
 [requireScripts]
 describe('when asking WebSocketConnection to create an instance', function() {
   it("it should succeed without any errors", function() {

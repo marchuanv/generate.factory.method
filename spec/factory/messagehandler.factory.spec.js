@@ -1,4 +1,4 @@
-const { MessageHandlerFactory } = require('C:\\component\\lib\\messagehandler.factory.js');
+const { MessageHandlerFactory } = require('D:\\component\\lib\\messagehandler.factory.js');
 [requireScripts]
 describe('when asking MessageHandler to create an instance', function() {
   it("it should succeed without any errors", function() {

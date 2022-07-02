@@ -1,4 +1,4 @@
-const { UserIdentityFactory } = require('C:\\component\\lib\\useridentity.factory.js');
+const { UserIdentityFactory } = require('D:\\component\\lib\\useridentity.factory.js');
 [requireScripts]
 describe('when asking UserIdentity to create an instance', function() {
   it("it should succeed without any errors", function() {
