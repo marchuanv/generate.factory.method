@@ -14,12 +14,14 @@ if (!existsSync(specsFactoryDir)){
     mkdirSync(specsFactoryDir);
 }
 
-let typeInfo = [];
-function getDependencyTree({ info, pass, types }) {
+function getDependencyTree(info, pass, types) {
     if (!pass) {
         pass = 'firstpass';
     }
-    if (!info) {
+    if (!types) {
+        types = [];
+    }
+    if (!info || utils.isEmptyObject(info)) {
         const scriptPath = scripts.find(scPath => types.find(ti => ti.scriptPath === scPath) === undefined);
         if (scriptPath) {
             const scriptName = path.basename(scriptPath).replace(path.extname(scriptPath),'');
@@ -38,26 +40,26 @@ function getDependencyTree({ info, pass, types }) {
             info = types.find(inf =>  inf.passes.find(p => p === pass) === undefined);
         }
     }
-    if (!info) {
+    if (!info || utils.isEmptyObject(info)) {
         if (pass === 'firstpass') {
-            return getDependencyTree({ pass: 'secondpass', types });
+            return getDependencyTree(null, 'secondpass', types);
         }
         if (pass === 'secondpass') {
-            return getDependencyTree({ pass: 'thirdpass', types });
+            return getDependencyTree(null, 'thirdpass', types);
         }
         for(const inf of types){
             delete inf.passes;
         }
-        return;
+        return types;
     }
     const params = utils.getFunctionParams(info.type);
     const otherDep = types.find(inf => params.find(param => param.name.toLowerCase() === inf.typeName.toLowerCase())); // do other types depend on you?
     if (otherDep && !info.parents.find(p => p.typeName === otherDep.typeName)) {
         info.parents.push(otherDep);
-        getDependencyTree({ info: otherDep, pass, types });
+        return getDependencyTree(otherDep, pass, types);
     } else {
         info.passes.push(pass);
-        getDependencyTree({ pass, types });
+        return getDependencyTree(null, pass, types);
     }
 }
 
@@ -74,9 +76,9 @@ function getDependencyTree({ info, pass, types }) {
 //     writeFileSync(info.specScriptPath, spec, 'utf8');
 // }
 
-getDependencyTree({});
+const tree = getDependencyTree();
 
-console.log(utils.getJSONString(typeInfo));
+console.log(utils.getJSONString(tree));
 
 
 // for(const info of typeInfo) {
