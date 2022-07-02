@@ -14,81 +14,80 @@ if (!existsSync(specsFactoryDir)){
     mkdirSync(specsFactoryDir);
 }
 
-const typeInfo = [];
-const walkState = []
-function walkDependencies({ callback, reset, info, index }) {
-    let ws = walkState.find(ws => ws.Id === (info && info.Id));
-    if (!ws) {
-        if (!info) {
-            info = typeInfo.find(inf => walkState.find(ws => ws.Id === inf.Id) === undefined);
+let typeInfo = [];
+function getDependencyTree({ info }) {
+    //typeInfo = typeInfo.sort((inf1,inf2) => inf1.level - inf2.level);
+    if (!info) {
+        const scriptPath = scripts.find(scPath => typeInfo.find(ti => ti.scriptPath === scPath) === undefined);
+        if (scriptPath) {
+            const scriptName = path.basename(scriptPath).replace(path.extname(scriptPath),'');
+            const scriptDir = scriptPath.replace(`\\${scriptName}.js`,'');
+            const factoryScriptName = `${scriptName}.factory.js`;
+            const specScriptName = `${scriptName}.factory.spec.js`;
+            const factoryScriptPath = path.join(scriptDir, factoryScriptName);
+            const specScriptPath = path.join(specsFactoryDir, specScriptName);
+            const sc = require(scriptPath);
+            const key = Object.keys(sc)[0];
+            const type = sc[key];
+            const Id = utils.generateGUID();
+            info = { Id, typeName: type.name, scriptPath, factoryScriptPath, specScriptPath, parent: null };
+            typeInfo.push(info);
         }
-        ws = { Id: info.Id };
-        walkState.push(ws);
-        callback({ info });
+        else {
+            info = typeInfo.find(inf => inf.parent !== 'firstpass');
+        }
     }
-    let whitespace = '';
-    for(let i = 0; i < index; i++) {
-        whitespace = whitespace + ' ';
+    if (!info) {
+        return getDependencyTree({});
     }
-    console.log(`${whitespace}TypeInfo: `, info.typeName);
-    if (info.dependencies.length === 0) {
-        walkDependencies({ callback, reset, index: 0 });
+    const params = utils.getFunctionParams(info.typeName);
+    const otherDep = typeInfo.find(inf => params.find(param => param.typeName === inf.typeName )); // do other types depend on you?
+    if (otherDep) {
+        info.parent = otherDep;
+        getDependencyTree({ info: otherDep });
     } else {
-        for(const dep of info.dependencies) {
-            walkDependencies({ callback, reset, info: dep, index: index + 1 });
-        }
+        info.parent = 'firstpass';
+        getDependencyTree({});
     }
 }
 
-for(const script of scripts) {
-    const scriptName = path.basename(script).replace(path.extname(script),'');
-    const scriptDir = script.replace(`\\${scriptName}.js`,'');
-    const factoryScriptName = `${scriptName}.factory.js`;
-    const specScriptName = `${scriptName}.factory.spec.js`;
-    const factoryScriptPath = path.join(scriptDir, factoryScriptName);
-    const specScriptPath = path.join(specsFactoryDir, specScriptName);
-    const sc = require(script);
-    const keys = Object.keys(sc);
-    for(const key of keys){
-        const type = sc[key];
-        const allParams = utils.getFunctionParams(type);
-        const Id = utils.generateGUID();
-        typeInfo.push({ Id, typeName: type.name, script, factoryScriptPath, specScriptPath, params: allParams });
-    }
-}
+// for(const script of scripts) {
+    
+   
+// }
 
-for(const info of typeInfo) {
-    info.dependencies = [];
-    for(const param of info.params) {
-        const refTypeInfo = typeInfo.find(inf => inf.typeName.toLowerCase() === param.name.toLowerCase());
-        if (refTypeInfo) {
-            param.reference = true;
-            param.typeName = refTypeInfo.typeName;
-            info.dependencies.push(refTypeInfo);
-            param.factoryScript = refTypeInfo.factoryScriptPath.replace(/\\/g,'\\\\');
-        } else {
-            param.reference = false;
-            param.typeName = 'variable';
-        }
-    }
-}
+// for(const info of typeInfo) {
+//     info.dependencies = [];
+//     for(const param of info.params) {
+//         const refTypeInfo = typeInfo.find(inf => inf.typeName.toLowerCase() === param.name.toLowerCase());
+//         if (refTypeInfo) {
+//             param.reference = true;
+//             param.typeName = refTypeInfo.typeName;
+//             info.dependencies.push(refTypeInfo);
+//             param.factoryScript = refTypeInfo.factoryScriptPath.replace(/\\/g,'\\\\');
+//         } else {
+//             param.reference = false;
+//             param.typeName = 'variable';
+//         }
+//     }
+// }
 
-for(const info of typeInfo) {
-    const factory = factoryTemplate
-        .replace(/\[args\]/g, `{ ${info.params.map( x=>x.name )} }` )
-        .replace(/\[scriptpath\]/g, info.script.replace(/\\/g,'\\\\'))
-        .replace(/\[typename\]/g, info.typeName);
-    writeFileSync(info.factoryScriptPath, factory, 'utf8');
-    const spec = factorySpecTemplate
-        .replace(/\[scriptpath\]/g, info.factoryScriptPath.replace(/\\/g,'\\\\'))
-        .replace(/\[typename\]/g, info.typeName)
-        .replace(/\[args\]/g, `{ ${info.params.map( x => x.name )} }` );
-    writeFileSync(info.specScriptPath, spec, 'utf8');
-}
+// for(const info of typeInfo) {
+//     const factory = factoryTemplate
+//         .replace(/\[args\]/g, `{ ${info.params.map( x=>x.name )} }` )
+//         .replace(/\[scriptpath\]/g, info.script.replace(/\\/g,'\\\\'))
+//         .replace(/\[typename\]/g, info.typeName);
+//     writeFileSync(info.factoryScriptPath, factory, 'utf8');
+//     const spec = factorySpecTemplate
+//         .replace(/\[scriptpath\]/g, info.factoryScriptPath.replace(/\\/g,'\\\\'))
+//         .replace(/\[typename\]/g, info.typeName)
+//         .replace(/\[args\]/g, `{ ${info.params.map( x => x.name )} }` );
+//     writeFileSync(info.specScriptPath, spec, 'utf8');
+// }
 
-walkDependencies({ callback: ({ info }) => {
-  
-}});
+getDependencyTree({});
+
+console.log('done');
 
 
 // for(const info of typeInfo) {
