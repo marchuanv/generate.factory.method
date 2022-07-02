@@ -15,12 +15,12 @@ if (!existsSync(specsFactoryDir)){
 }
 
 let typeInfo = [];
-function getDependencyTree({ info, pass }) {
+function getDependencyTree({ info, pass, types }) {
     if (!pass) {
         pass = 'firstpass';
     }
     if (!info) {
-        const scriptPath = scripts.find(scPath => typeInfo.find(ti => ti.scriptPath === scPath) === undefined);
+        const scriptPath = scripts.find(scPath => types.find(ti => ti.scriptPath === scPath) === undefined);
         if (scriptPath) {
             const scriptName = path.basename(scriptPath).replace(path.extname(scriptPath),'');
             const scriptDir = scriptPath.replace(`\\${scriptName}.js`,'');
@@ -32,55 +32,34 @@ function getDependencyTree({ info, pass }) {
             const key = Object.keys(sc)[0];
             const type = sc[key];
             info = { type, typeName: type.name, scriptPath, factoryScriptPath, specScriptPath, parents: [], passes: [] };
-            typeInfo.push(info);
+            types.push(info);
         }
         else {
-            info = typeInfo.find(inf =>  inf.passes.find(p => p === pass) === undefined);
+            info = types.find(inf =>  inf.passes.find(p => p === pass) === undefined);
         }
     }
     if (!info) {
         if (pass === 'firstpass') {
-            return getDependencyTree({ pass: 'secondpass' });
+            return getDependencyTree({ pass: 'secondpass', types });
         }
         if (pass === 'secondpass') {
-            return getDependencyTree({ pass: 'thirdpass' });
+            return getDependencyTree({ pass: 'thirdpass', types });
         }
-        for(const inf of typeInfo){
+        for(const inf of types){
             delete inf.passes;
         }
         return;
     }
     const params = utils.getFunctionParams(info.type);
-    const otherDep = typeInfo.find(inf => params.find(param => param.name.toLowerCase() === inf.typeName.toLowerCase())); // do other types depend on you?
+    const otherDep = types.find(inf => params.find(param => param.name.toLowerCase() === inf.typeName.toLowerCase())); // do other types depend on you?
     if (otherDep && !info.parents.find(p => p.typeName === otherDep.typeName)) {
         info.parents.push(otherDep);
-        getDependencyTree({ info: otherDep, pass });
+        getDependencyTree({ info: otherDep, pass, types });
     } else {
         info.passes.push(pass);
-        getDependencyTree({ pass });
+        getDependencyTree({ pass, types });
     }
 }
-
-// for(const script of scripts) {
-    
-   
-// }
-
-// for(const info of typeInfo) {
-//     info.dependencies = [];
-//     for(const param of info.params) {
-//         const refTypeInfo = typeInfo.find(inf => inf.typeName.toLowerCase() === param.name.toLowerCase());
-//         if (refTypeInfo) {
-//             param.reference = true;
-//             param.typeName = refTypeInfo.typeName;
-//             info.dependencies.push(refTypeInfo);
-//             param.factoryScript = refTypeInfo.factoryScriptPath.replace(/\\/g,'\\\\');
-//         } else {
-//             param.reference = false;
-//             param.typeName = 'variable';
-//         }
-//     }
-// }
 
 // for(const info of typeInfo) {
 //     const factory = factoryTemplate
