@@ -34,7 +34,7 @@ function getDependencyTree(info, pass, types) {
             const key = Object.keys(sc)[0];
             const type = sc[key];
             const params = utils.getFunctionParams(type);
-            info = { type, typeName: type.name, scriptPath, factoryScriptPath, specScriptPath, parents: [], passes: [], params };
+            info = { type, typeName: type.name, scriptPath, factoryScriptPath, specScriptPath, parents: [], passes: [], params, variableName: '' };
             types.push(info);
         }
         else {
@@ -50,10 +50,14 @@ function getDependencyTree(info, pass, types) {
         }
         for(const inf of types){
             delete inf.passes;
+            inf.variableName =  types.map(t => t.params)
+                                    .flat()
+                                    .map(param => param.name)
+                                    .find(paramName => paramName.toLowerCase() === inf.typeName.toLowerCase());
         }
         return types;
     }
-    
+  
     const otherDep = types.find(inf => info.params.find(param => param.name.toLowerCase() === inf.typeName.toLowerCase())); // do other types depend on you?
     if (otherDep && !info.parents.find(p => p.typeName === otherDep.typeName)) {
         info.parents.push(otherDep);
@@ -78,12 +82,12 @@ for(const info of getDependencyTree()) {
 }
 
 for(const info of getDependencyTree()) {
-    const requireScripts = info.params.filter(p => p.reference).map(p => `const { ${p.typeName}Factory } = require('${p.factoryScript}');`).join('\r\n');
+    const requireScripts = info.parents.map(p => `const { ${p.typeName}Factory } = require('${p.factoryScriptPath.replace(/\\/g,'\\\\')}');`).join('\r\n');
     const nonRefArgsVariableNames = info.params.filter(p => !p.reference).map(p => `const ${p.name} = null;`).join('\r\n');
     const refArgsVariableNames = info.params.filter(p => p.reference).map(p => `const ${p.name} = ${p.name}Factory.create([nonRefArgsVariableNames]);`).join('\r\n');
-    const factoryVariableNames = info.params.filter(p => p.reference).map(p => `const ${p.name}Factory = new ${p.typeName}Factory([refArgsVariableNames]);`).join('\r\n');
+    const factoryVariableNames = info.params.map(p => `const ${p.name}Factory = new ${p.typeName}Factory([refArgsVariableNames]);`).join('\r\n');
     const spec = readFileSync(info.specScriptPath,'utf8')
-        .replace(/\[requireScripts\]/g, `[factoryVariableNames]\r\n${requireScripts}`)
+        .replace(/\[requireScripts\]/g, `${requireScripts}\r\n[factoryVariableNames]`)
         .replace(/\[nonRefArgsVariableNames\]/g, nonRefArgsVariableNames)
         .replace(/\[refArgsVariableNames\]/g, refArgsVariableNames)
         .replace(/\[factoryVariableNames\]/g, `[factoryVariableNames]\r\n${factoryVariableNames}`)

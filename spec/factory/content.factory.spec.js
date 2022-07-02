@@ -1,16 +1,11 @@
 const { ContentFactory } = require('D:\\component\\lib\\content.factory.js');
-[factoryVariableNames]
-
-
+[requireScripts]
 describe('when asking Content to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
     [factoryVariableNames]
-
-    
-    const data = null;
-const metadata = null;
-const encryption = null;
+    [refArgsVariableNames]
+    [nonRefArgsVariableNames]
     // Act
     const instance = new ContentFactory({ data,metadata,encryption });
     // Assert

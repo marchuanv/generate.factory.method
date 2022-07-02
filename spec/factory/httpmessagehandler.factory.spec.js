@@ -1,15 +1,11 @@
 const { HttpMessageHandlerFactory } = require('D:\\component\\lib\\http\\httpmessagehandler.factory.js');
-[factoryVariableNames]
-
-
+[requireScripts]
 describe('when asking HttpMessageHandler to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
     [factoryVariableNames]
-
-    
-    const httpConnection = null;
-const httpMessageQueue = null;
+    [refArgsVariableNames]
+    [nonRefArgsVariableNames]
     // Act
     const instance = new HttpMessageHandlerFactory({ httpConnection,httpMessageQueue });
     // Assert

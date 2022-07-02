@@ -1,15 +1,11 @@
 const { MessageFactory } = require('D:\\component\\lib\\message.factory.js');
-[factoryVariableNames]
-
-
+[requireScripts]
 describe('when asking Message to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
     [factoryVariableNames]
-
-    
-    const content = null;
-const messageStatus = null;
+    [refArgsVariableNames]
+    [nonRefArgsVariableNames]
     // Act
     const instance = new MessageFactory({ content,messageStatus });
     // Assert

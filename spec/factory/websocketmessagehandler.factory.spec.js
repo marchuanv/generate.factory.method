@@ -1,15 +1,11 @@
 const { WebSocketMessageHandlerFactory } = require('D:\\component\\lib\\websocket\\websocketmessagehandler.factory.js');
-[factoryVariableNames]
-
-
+[requireScripts]
 describe('when asking WebSocketMessageHandler to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
     [factoryVariableNames]
-
-    
-    const websocketConnection = null;
-const websocketMessageQueue = null;
+    [refArgsVariableNames]
+    [nonRefArgsVariableNames]
     // Act
     const instance = new WebSocketMessageHandlerFactory({ websocketConnection,websocketMessageQueue });
     // Assert
