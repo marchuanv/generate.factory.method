@@ -15,8 +15,10 @@ if (!existsSync(specsFactoryDir)){
 }
 
 let typeInfo = [];
-function getDependencyTree({ info }) {
-    //typeInfo = typeInfo.sort((inf1,inf2) => inf1.level - inf2.level);
+function getDependencyTree({ info, pass }) {
+    if (!pass) {
+        pass = 'firstpass';
+    }
     if (!info) {
         const scriptPath = scripts.find(scPath => typeInfo.find(ti => ti.scriptPath === scPath) === undefined);
         if (scriptPath) {
@@ -29,25 +31,33 @@ function getDependencyTree({ info }) {
             const sc = require(scriptPath);
             const key = Object.keys(sc)[0];
             const type = sc[key];
-            const Id = utils.generateGUID();
-            info = { Id, typeName: type.name, scriptPath, factoryScriptPath, specScriptPath, parent: null };
+            info = { type, typeName: type.name, scriptPath, factoryScriptPath, specScriptPath, parents: [], passes: [] };
             typeInfo.push(info);
         }
         else {
-            info = typeInfo.find(inf => inf.parent !== 'firstpass');
+            info = typeInfo.find(inf =>  inf.passes.find(p => p === pass) === undefined);
         }
     }
     if (!info) {
-        return getDependencyTree({});
+        if (pass === 'firstpass') {
+            return getDependencyTree({ pass: 'secondpass' });
+        }
+        if (pass === 'secondpass') {
+            return getDependencyTree({ pass: 'thirdpass' });
+        }
+        for(const inf of typeInfo){
+            delete inf.passes;
+        }
+        return;
     }
-    const params = utils.getFunctionParams(info.typeName);
-    const otherDep = typeInfo.find(inf => params.find(param => param.typeName === inf.typeName )); // do other types depend on you?
-    if (otherDep) {
-        info.parent = otherDep;
-        getDependencyTree({ info: otherDep });
+    const params = utils.getFunctionParams(info.type);
+    const otherDep = typeInfo.find(inf => params.find(param => param.name.toLowerCase() === inf.typeName.toLowerCase())); // do other types depend on you?
+    if (otherDep && !info.parents.find(p => p.typeName === otherDep.typeName)) {
+        info.parents.push(otherDep);
+        getDependencyTree({ info: otherDep, pass });
     } else {
-        info.parent = 'firstpass';
-        getDependencyTree({});
+        info.passes.push(pass);
+        getDependencyTree({ pass });
     }
 }
 
@@ -87,7 +97,7 @@ function getDependencyTree({ info }) {
 
 getDependencyTree({});
 
-console.log('done');
+console.log(utils.getJSONString(typeInfo));
 
 
 // for(const info of typeInfo) {
