@@ -1,11 +1,14 @@
 const { ComponentFactory } = require('D:\\component\\lib\\component.factory.js');
-[requireScripts]
+[factoryVariableNames]
+
+
 describe('when asking Component to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
     [factoryVariableNames]
-    [refArgsVariableNames]
-    [nonRefArgsVariableNames]
+
+    
+    const packageJson = null;
     // Act
     const instance = new ComponentFactory({ packageJson });
     // Assert

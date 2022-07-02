@@ -1,11 +1,15 @@
 const { AddressFactory } = require('D:\\component\\lib\\address.factory.js');
-[requireScripts]
+[factoryVariableNames]
+
+
 describe('when asking Address to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
     [factoryVariableNames]
-    [refArgsVariableNames]
-    [nonRefArgsVariableNames]
+
+    
+    const host = null;
+const port = null;
     // Act
     const instance = new AddressFactory({ host,port });
     // Assert

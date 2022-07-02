@@ -63,6 +63,7 @@ function getDependencyTree(info, pass, types) {
         return getDependencyTree(null, pass, types);
     }
 }
+
 for(const info of getDependencyTree()) {
     const factory = factoryTemplate
         .replace(/\[args\]/g, `{ ${info.params.map( x=>x.name )} }` )
@@ -76,18 +77,18 @@ for(const info of getDependencyTree()) {
     writeFileSync(info.specScriptPath, spec, 'utf8');
 }
 
-// for(const info of typeInfo) {
-//     const requireScripts = info.params.filter(p => p.reference).map(p => `const { ${p.typeName}Factory } = require('${p.factoryScript}');`).join('\r\n');
-//     const nonRefArgsVariableNames = info.params.filter(p => !p.reference).map(p => `const ${p.name} = null;`).join('\r\n');
-//     const refArgsVariableNames = info.params.filter(p => p.reference).map(p => `const ${p.name} = ${p.name}Factory.create([nonRefArgsVariableNames]);`).join('\r\n');
-//     const factoryVariableNames = info.params.filter(p => p.reference).map(p => `const ${p.name}Factory = new ${p.typeName}Factory([refArgsVariableNames]);`).join('\r\n');
-//     const spec = readFileSync(info.specScriptPath,'utf8')
-//         .replace(/\[requireScripts\]/g, `[factoryVariableNames]\r\n${requireScripts}`)
-//         .replace(/\[nonRefArgsVariableNames\]/g, nonRefArgsVariableNames)
-//         .replace(/\[refArgsVariableNames\]/g, refArgsVariableNames)
-//         .replace(/\[factoryVariableNames\]/g, `[factoryVariableNames]\r\n${factoryVariableNames}`)
-//     writeFileSync(info.specScriptPath, spec, 'utf8');
-// }
+for(const info of getDependencyTree()) {
+    const requireScripts = info.params.filter(p => p.reference).map(p => `const { ${p.typeName}Factory } = require('${p.factoryScript}');`).join('\r\n');
+    const nonRefArgsVariableNames = info.params.filter(p => !p.reference).map(p => `const ${p.name} = null;`).join('\r\n');
+    const refArgsVariableNames = info.params.filter(p => p.reference).map(p => `const ${p.name} = ${p.name}Factory.create([nonRefArgsVariableNames]);`).join('\r\n');
+    const factoryVariableNames = info.params.filter(p => p.reference).map(p => `const ${p.name}Factory = new ${p.typeName}Factory([refArgsVariableNames]);`).join('\r\n');
+    const spec = readFileSync(info.specScriptPath,'utf8')
+        .replace(/\[requireScripts\]/g, `[factoryVariableNames]\r\n${requireScripts}`)
+        .replace(/\[nonRefArgsVariableNames\]/g, nonRefArgsVariableNames)
+        .replace(/\[refArgsVariableNames\]/g, refArgsVariableNames)
+        .replace(/\[factoryVariableNames\]/g, `[factoryVariableNames]\r\n${factoryVariableNames}`)
+    writeFileSync(info.specScriptPath, spec, 'utf8');
+}
 
 
 

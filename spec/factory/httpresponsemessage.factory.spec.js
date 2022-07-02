@@ -1,11 +1,14 @@
 const { HttpResponseMessageFactory } = require('D:\\component\\lib\\http\\httpresponsemessage.factory.js');
-[requireScripts]
+[factoryVariableNames]
+
+
 describe('when asking HttpResponseMessage to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
     [factoryVariableNames]
-    [refArgsVariableNames]
-    [nonRefArgsVariableNames]
+
+    
+    const message = null;
     // Act
     const instance = new HttpResponseMessageFactory({ message });
     // Assert
