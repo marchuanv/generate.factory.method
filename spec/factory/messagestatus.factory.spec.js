@@ -1,11 +1,14 @@
 const { MessageStatusFactory } = require('D:\\component\\lib\\messagestatus.factory.js');
-[requireScripts]
+
+[factoryVariableNames]
+const codeFactory = new undefinedFactory([refArgsVariableNames]);
 describe('when asking MessageStatus to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
     [factoryVariableNames]
-    [refArgsVariableNames]
-    [nonRefArgsVariableNames]
+const codeFactory = new undefinedFactory([refArgsVariableNames]);
+    
+    const code = null;
     // Act
     const instance = new MessageStatusFactory({ code });
     // Assert

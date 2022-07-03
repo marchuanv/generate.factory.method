@@ -50,10 +50,15 @@ function getDependencyTree(info, pass, types) {
         }
         for(const inf of types){
             delete inf.passes;
-            inf.variableName =  types.map(t => t.params)
-                                    .flat()
-                                    .map(param => param.name)
-                                    .find(paramName => paramName.toLowerCase() === inf.typeName.toLowerCase());
+            inf.variableName =  types.map(t => t.params).flat()
+                                        .map(param => param.name)
+                                        .find(paramName => paramName.toLowerCase() === inf.typeName.toLowerCase());
+            if (!inf.variableName) {
+                let variableNameArray = inf.typeName.split('');
+                const firstLetter = variableNameArray[0].toLowerCase();
+                inf.variableName = `${firstLetter}${variableNameArray.splice(1,variableNameArray.length-1).join('')}`;
+            }
+
         }
         return types;
     }

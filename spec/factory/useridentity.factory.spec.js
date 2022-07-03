@@ -1,11 +1,14 @@
 const { UserIdentityFactory } = require('D:\\component\\lib\\useridentity.factory.js');
-[requireScripts]
+
+[factoryVariableNames]
+const userIdFactory = new undefinedFactory([refArgsVariableNames]);
 describe('when asking UserIdentity to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
     [factoryVariableNames]
-    [refArgsVariableNames]
-    [nonRefArgsVariableNames]
+const userIdFactory = new undefinedFactory([refArgsVariableNames]);
+    
+    const userId = null;
     // Act
     const instance = new UserIdentityFactory({ userId });
     // Assert
