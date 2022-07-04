@@ -9,15 +9,11 @@ describe('when asking HttpResponseMessage to create an instance', function() {
     // Arrange
     const userId = null;
 
-const userIdentity = null;
-
 const data = null;
 
 const metadata = null;
 
 const code = null;
-
-const messageStatus = null;
 
 const userIdentity = createUserIdentity({userId});
 const encryption = createEncryption({userIdentity});

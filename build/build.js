@@ -109,8 +109,9 @@ function walkDependencyTree(parent, callback, tracks = [], level = 0) {
 }
 
 for(const info of getDependencyTree()) {
+    
     if (!info.scriptPath) {
-        return;
+        continue;
     }
 
     const factory = factoryTemplate
@@ -137,14 +138,12 @@ for(const info of getDependencyTree()) {
 
     const specArrangeVariables = [];
     walkDependencyTree(info, (typeInfo) => {
-       // if (!typeInfo.scriptPath) {
-            for(const child of typeInfo.children.filter(c => !c.scriptPath)) {
-                specArrangeVariables.push(specVariablesTemplate
-                    .replace(/\[VariableName\]/g, child.variableName)
-                    .replace(/\[VariableValue\]/g, 'null')
-                );
-            }
-      //  }
+        for(const child of typeInfo.children.filter(c => !c.scriptPath)) {
+            specArrangeVariables.push(specVariablesTemplate
+                .replace(/\[VariableName\]/g, child.variableName)
+                .replace(/\[VariableValue\]/g, 'null')
+            );
+        }
     });
     walkDependencyTree(info, (typeInfo) => {
         if (typeInfo.scriptPath) {

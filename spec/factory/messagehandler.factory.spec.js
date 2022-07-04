@@ -12,25 +12,13 @@ describe('when asking MessageHandler to create an instance', function() {
 
 const callback = null;
 
-const httpMessageQueue = null;
-
 const hostAddress = null;
 
 const timeout = null;
 
-const websocketMessageQueue = null;
-
 const hostAddress = null;
 
 const timeout = null;
-
-const httpConnection = null;
-
-const httpMessageQueue = null;
-
-const websocketConnection = null;
-
-const websocketMessageQueue = null;
 
 const httpMessageQueue = createHttpMessageQueue({name,callback});
 const websocketMessageQueue = createWebSocketMessageQueue({});

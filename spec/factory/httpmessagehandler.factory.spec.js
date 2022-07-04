@@ -8,8 +8,6 @@ describe('when asking HttpMessageHandler to create an instance', function() {
 
 const callback = null;
 
-const httpMessageQueue = null;
-
 const hostAddress = null;
 
 const timeout = null;
