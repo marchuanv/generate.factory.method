@@ -18,14 +18,14 @@ if (!existsSync(specsFactoryDir)){
     mkdirSync(specsFactoryDir);
 }
 
-function getDependencyTree(info, pass, types) {
+function getDependencyTree(typeInfo, pass, types) {
     if (!pass) {
         pass = 'firstpass';
     }
     if (!types) {
         types = [];
     }
-    if (!info || utils.isEmptyObject(info)) {
+    if (!typeInfo || utils.isEmptyObject(typeInfo)) {
         const scriptPath = scripts.find(scPath => types.find(ti => ti.scriptPath === scPath) === undefined);
         if (scriptPath) {
             const scriptName = path.basename(scriptPath).replace(path.extname(scriptPath),'');
@@ -39,21 +39,31 @@ function getDependencyTree(info, pass, types) {
             const type = sc[key];
             const children = utils.getFunctionParams(type).map(param => utils.getJSONObject(typeInfoTemplate
                 .replace(/\[TypeName\]/g, param.name)
-                .replace(/\[ScriptPath\]/g,'')
-                .replace(/\[FactoryScriptPath\]/g,'')
-                .replace(/\[SpecScriptPath\]/g,'')
+                .replace(/\[ScriptPath\]/g,'NoScript')
+                .replace(/\[FactoryScriptPath\]/g,'NoScript')
+                .replace(/\[SpecScriptPath\]/g,'NoScript')
                 .replace(/\[ChildrenArray\]/g,'')
                 .replace(/\[PassesArray\]/g,'')
-                .replace(/\[VariableName\]/g,param.name)
+                .replace(/\[VariableName\]/g, param.name)
+                .replace(/\[IsReference\]/g, false)
             ));
-            info = { type, typeName: type.name, scriptPath, factoryScriptPath, specScriptPath, children, passes: [], variableName: '' };
-            types.push(info);
+            typeInfo = utils.getJSONObject(typeInfoTemplate
+                .replace(/\[TypeName\]/g, type.name)
+                .replace(/\[ScriptPath\]/g, scriptPath.replace(/\\/g,'\\\\') )
+                .replace(/\[FactoryScriptPath\]/g, factoryScriptPath.replace(/\\/g,'\\\\'))
+                .replace(/\[SpecScriptPath\]/g, specScriptPath.replace(/\\/g,'\\\\'))
+                .replace(/\[ChildrenArray\]/g, children.map(child => utils.getJSONString(child)).join(','))
+                .replace(/\[PassesArray\]/g, [])
+                .replace(/\[VariableName\]/g, '')
+                .replace(/\[IsReference\]/g, false)
+            );
+            types = types.concat(children).concat(typeInfo);
         }
         else {
-            info = types.find(inf =>  inf.passes.find(p => p === pass) === undefined);
+            typeInfo = types.find(inf =>  inf.passes.find(p => p === pass) === undefined);
         }
     }
-    if (!info || utils.isEmptyObject(info)) {
+    if (!typeInfo || utils.isEmptyObject(typeInfo)) {
         if (pass === 'firstpass') {
             return getDependencyTree(null, 'secondpass', types);
         }
@@ -74,11 +84,15 @@ function getDependencyTree(info, pass, types) {
         }
         return types;
     }
-    const refChildren = info.children.map(param => types.find(inf => inf.typeName.toLowerCase() === param.name.toLowerCase()));
-    if (refChildren.length > 0) {
-        info.children = refChildren;
+
+    //remove duplicates, prefer ones with scripts
+    types = types.filter(info => types.filter(info2 => info2.typeName.toLowerCase() === info.typeName.toLowerCase() && info2.scriptPath).length === 1);
+    if (pass === 'secondpass') {
+        const refChildren = types.filter(inf => inf.scriptPath && inf.scriptPath !== 'NoScript' && typeInfo.children.find(child => child.typeName.toLowerCase() === inf.typeName.toLowerCase()));
+        const children = typeInfo.children.filter(child => refChildren.find( refC => refC.typeName.toLowerCase() === child.typeName.toLowerCase()) === undefined );
+        typeInfo.children = children.concat(refChildren);
     }
-    info.passes.push(pass);
+    typeInfo.passes.push(pass);
     return getDependencyTree(null, pass, types);
 }
 
