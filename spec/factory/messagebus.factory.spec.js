@@ -17,10 +17,6 @@ const hostAddress = null;
 
 const timeout = null;
 
-const hostAddress = null;
-
-const timeout = null;
-
 const httpMessageQueue = createHttpMessageQueue({name,callback});
 const websocketMessageQueue = createWebSocketMessageQueue({});
 const httpConnection = createHttpConnection({httpMessageQueue,hostAddress,timeout});

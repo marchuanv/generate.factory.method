@@ -139,10 +139,12 @@ for(const info of getDependencyTree()) {
     const specArrangeVariables = [];
     walkDependencyTree(info, (typeInfo) => {
         for(const child of typeInfo.children.filter(c => !c.scriptPath)) {
-            specArrangeVariables.push(specVariablesTemplate
+            const variable = specVariablesTemplate
                 .replace(/\[VariableName\]/g, child.variableName)
-                .replace(/\[VariableValue\]/g, 'null')
-            );
+                .replace(/\[VariableValue\]/g, 'null');
+            if (specArrangeVariables.indexOf(variable) === -1){
+                specArrangeVariables.push(variable);
+            }
         }
     });
     walkDependencyTree(info, (typeInfo) => {
