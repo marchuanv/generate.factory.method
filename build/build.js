@@ -78,12 +78,13 @@ function getDependencyTree(info, pass, types) {
     }
 }
 
-function walkDependencyTree(info, callback, level = 0) {
-    if (info.parents.length > 0) {
-        for(const parent of info.parents) {
-            walkDependencyTree(parent, callback, level + 1);
-        }
-    } 
+function walkDependencyTree(info, callback, level) {
+    if (level === undefined) {
+        level = 0;
+    }
+    for(const parent of info.parents) {
+        walkDependencyTree(parent, callback, level + 1);
+    }
     if (level > 0) {
         callback(info);
     }
@@ -98,15 +99,16 @@ for(const info of getDependencyTree()) {
 
     //Require Scripts
     const factoryRequireScripts = [];
-    for(const parent of info.parents) {
+    walkDependencyTree(info, (nextInfo) => {
         factoryRequireScripts.push(factoryRequireTemplate
-            .replace(/\[TypeName\]/g, parent.typeName)
-            .replace(/\[RequireScriptPath\]/g, parent.factoryScriptPath)
+            .replace(/\[TypeName\]/g, nextInfo.typeName)
+            .replace(/\[RequireScriptPath\]/g, nextInfo.factoryScriptPath.replace(/\\/g,'\\\\'))
         );
-    }
+    });
+
     factoryRequireScripts.push(factoryRequireTemplate
         .replace(/\[TypeName\]/g, info.typeName)
-        .replace(/\[RequireScriptPath\]/g, info.factoryScriptPath)
+        .replace(/\[RequireScriptPath\]/g, info.factoryScriptPath.replace(/\\/g,'\\\\'))
     );
 
     const specArrangeVariables = [];

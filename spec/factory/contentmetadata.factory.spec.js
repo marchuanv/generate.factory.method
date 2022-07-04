@@ -1,4 +1,4 @@
-const { createContentMetadata } = require('C:\component\lib\contentmetadata.factory.js');
+const { createContentMetadata } = require('C:\\component\\lib\\contentmetadata.factory.js');
 describe('when asking ContentMetadata to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
