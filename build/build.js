@@ -78,6 +78,17 @@ function getDependencyTree(info, pass, types) {
     }
 }
 
+function walkDependencyTree(info, callback, level = 0) {
+    if (info.parents.length > 0) {
+        for(const parent of info.parents) {
+            walkDependencyTree(parent, callback, level + 1);
+        }
+    } 
+    if (level > 0) {
+        callback(info);
+    }
+}
+
 for(const info of getDependencyTree()) {
     const factory = factoryTemplate
         .replace(/\[args\]/g, `{ ${info.params.map( x=>x.name )} }` )
@@ -99,13 +110,13 @@ for(const info of getDependencyTree()) {
     );
 
     const specArrangeVariables = [];
-    for(const parent of info.parents) {
+    walkDependencyTree(info, (nextInfo) => {
         specArrangeVariables.push(factoryCallCreateTemplate
-            .replace(/\[TypeVariableName\]/g, parent.variableName)
-            .replace(/\[TypeName\]/g, parent.typeName)
-            .replace(/\[Args\]/g, parent.parents.map(parent2 => parent2.variableName).join(','))
+            .replace(/\[TypeVariableName\]/g, nextInfo.variableName)
+            .replace(/\[TypeName\]/g, nextInfo.typeName)
+            .replace(/\[Args\]/g, nextInfo.parents.map(parent2 => parent2.variableName).join(','))
         );
-    }
+    });
 
     const factorySpec = factorySpecTemplate
         .replace(/\[ScriptPath\]/g, info.factoryScriptPath.replace(/\\/g,'\\\\'))

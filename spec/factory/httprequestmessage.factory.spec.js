@@ -3,7 +3,11 @@ const { createHttpRequestMessage } = require('C:\component\lib\http\httprequestm
 describe('when asking HttpRequestMessage to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
-    const message = createMessage({content,messageStatus});
+    const userIdentity = createUserIdentity({});
+const encryption = createEncryption({userIdentity});
+const content = createContent({encryption});
+const messageStatus = createMessageStatus({});
+const message = createMessage({content,messageStatus});
     // Act
     const instance = createHttpRequestMessage({ message });
     // Assert
