@@ -2,7 +2,7 @@ const { createWebSocketConnection } = require('C:\component\lib\websocket\websoc
 describe('when asking WebSocketConnection to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
-    [SpecArrangeVariables]
+    
     // Act
     const instance = createWebSocketConnection({ host,port });
     // Assert

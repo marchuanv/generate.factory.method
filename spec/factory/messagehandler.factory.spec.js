@@ -4,7 +4,8 @@ const { createMessageHandler } = require('C:\component\lib\messagehandler.factor
 describe('when asking MessageHandler to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
-    [SpecArrangeVariables]
+    const httpMessageHandler = createHttpMessageHandler({httpConnection,httpMessageQueue});
+const webSocketMessageHandler = createWebSocketMessageHandler({websocketConnection});
     // Act
     const instance = createMessageHandler({ httpMessageHandler,webSocketMessageHandler });
     // Assert

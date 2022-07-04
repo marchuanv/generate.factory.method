@@ -99,6 +99,13 @@ for(const info of getDependencyTree()) {
     );
 
     const specArrangeVariables = [];
+    for(const parent of info.parents) {
+        specArrangeVariables.push(factoryCallCreateTemplate
+            .replace(/\[TypeVariableName\]/g, parent.variableName)
+            .replace(/\[TypeName\]/g, parent.typeName)
+            .replace(/\[Args\]/g, parent.parents.map(parent2 => parent2.variableName).join(','))
+        );
+    }
 
     const factorySpec = factorySpecTemplate
         .replace(/\[ScriptPath\]/g, info.factoryScriptPath.replace(/\\/g,'\\\\'))
