@@ -3,7 +3,7 @@ const { createHttpMessageStatus } = require('C:\\component\\lib\\http\\httpmessa
 describe('when asking HttpMessageStatus to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
-    const messageStatus = createMessageStatus({});
+    const messageStatus = createMessageStatus({[Args]});
     // Act
     const instance = createHttpMessageStatus({ messageStatus });
     // Assert

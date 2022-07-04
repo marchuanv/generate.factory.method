@@ -1,13 +1,11 @@
 const { createWebSocketMessageQueue } = require('C:\\component\\lib\\websocket\\websockMessageQueue.factory.js');
 const { createWebSocketConnection } = require('C:\\component\\lib\\websocket\\websocketconnection.factory.js');
-const { createWebSocketMessageQueue } = require('C:\\component\\lib\\websocket\\websockMessageQueue.factory.js');
 const { createWebSocketMessageHandler } = require('C:\\component\\lib\\websocket\\websocketmessagehandler.factory.js');
 describe('when asking WebSocketMessageHandler to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
-    const websocketMessageQueue = createWebSocketMessageQueue({});
-const websocketConnection = createWebSocketConnection({websocketMessageQueue});
-const websocketMessageQueue = createWebSocketMessageQueue({});
+    const websocketMessageQueue = createWebSocketMessageQueue({[Args]});
+const websocketConnection = createWebSocketConnection({[Args]});
     // Act
     const instance = createWebSocketMessageHandler({ websocketConnection,websocketMessageQueue });
     // Assert

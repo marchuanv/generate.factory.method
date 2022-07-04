@@ -36,7 +36,7 @@ function getDependencyTree(info, pass, types) {
             const key = Object.keys(sc)[0];
             const type = sc[key];
             const params = utils.getFunctionParams(type);
-            info = { type, typeName: type.name, scriptPath, factoryScriptPath, specScriptPath, parents: [], passes: [], params, variableName: '' };
+            info = { type, typeName: type.name, scriptPath, factoryScriptPath, specScriptPath, children: [], passes: [], params, variableName: '' };
             types.push(info);
         }
         else {
@@ -64,29 +64,27 @@ function getDependencyTree(info, pass, types) {
         }
         return types;
     }
-  
-    const otherDependencies = types.filter(inf => info.params.find(param => param.name.toLowerCase() === inf.typeName.toLowerCase()))
-                                .filter(oDep => info.parents.find(parent => parent.typeName === oDep.typeName) === undefined); // do other types depend on you?
-    if (otherDependencies.length > 0) {
-        for(const otherDep of otherDependencies) {
-            info.parents.push(otherDep);
-            return getDependencyTree(otherDep, pass, types);
-        }
-    } else {
-        info.passes.push(pass);
-        return getDependencyTree(null, pass, types);
+    const children = info.params.map(param => types.find(inf => inf.typeName.toLowerCase() === param.name.toLowerCase())).filter(inf => inf);
+    if (children.length > 0) {
+        info.children = children;
     }
+    info.passes.push(pass);
+    return getDependencyTree(null, pass, types);
 }
 
-function walkDependencyTree(info, callback, level) {
-    if (level === undefined) {
-        level = 0;
+function walkDependencyTree(parent, callback, tracks = [], level = 0) {
+    for(const child of parent.children) {
+        if (!tracks.find(track => track.info.typeName === child.typeName)) {
+            tracks.push({ level, info: child });
+        }
+        walkDependencyTree(child, callback, tracks, level + 1);
     }
-    for(const parent of info.parents) {
-        walkDependencyTree(parent, callback, level + 1);
-    }
-    if (level > 0) {
-        callback(info);
+    const isRoot = tracks.find(track => track.info.typeName === parent.typeName) === undefined;
+    if (isRoot) {
+        const orderedTracks = tracks.sort((a, b) => b.level - a.level);
+        for(const track of orderedTracks) {
+            callback(track.info);
+        }
     }
 }
 
@@ -116,7 +114,7 @@ for(const info of getDependencyTree()) {
         specArrangeVariables.push(factoryCallCreateTemplate
             .replace(/\[TypeVariableName\]/g, nextInfo.variableName)
             .replace(/\[TypeName\]/g, nextInfo.typeName)
-            .replace(/\[Args\]/g, nextInfo.parents.map(parent2 => parent2.variableName).join(','))
+           // .replace(/\[Args\]/g, nextInfo.parents.map(parent2 => parent2.variableName).join(','))
         );
     });
 
