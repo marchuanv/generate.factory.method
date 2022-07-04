@@ -137,21 +137,21 @@ for(const info of getDependencyTree()) {
 
     const specArrangeVariables = [];
     walkDependencyTree(info, (typeInfo) => {
-        if (!typeInfo.scriptPath) {
+       // if (!typeInfo.scriptPath) {
             for(const child of typeInfo.children.filter(c => !c.scriptPath)) {
                 specArrangeVariables.push(specVariablesTemplate
                     .replace(/\[VariableName\]/g, child.variableName)
                     .replace(/\[VariableValue\]/g, 'null')
                 );
             }
-        }
+      //  }
     });
     walkDependencyTree(info, (typeInfo) => {
         if (typeInfo.scriptPath) {
             specArrangeVariables.push(factoryCallCreateTemplate
                 .replace(/\[TypeVariableName\]/g, typeInfo.variableName)
                 .replace(/\[TypeName\]/g, typeInfo.typeName)
-                .replace(/\[Args\]/g, typeInfo.children.map(param => param.name).join(','))
+                .replace(/\[Args\]/g, typeInfo.children.map(c => c.variableName).join(','))
             );
         }
     });

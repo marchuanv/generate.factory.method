@@ -4,8 +4,10 @@ const { createContent } = require('C:\\component\\lib\\content.factory.js');
 describe('when asking Content to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
-    const userIdentity = createUserIdentity({});
-const encryption = createEncryption({});
+    const userId = null;
+
+const userIdentity = createUserIdentity({userId});
+const encryption = createEncryption({userIdentity});
     // Act
     const instance = createContent({ data,metadata,encryption });
     // Assert
