@@ -11,6 +11,8 @@ const factoryTemplate = readFileSync(path.join(__dirname,'factory.template'),'ut
 const factorySpecTemplate = readFileSync(path.join(__dirname,'factory.spec.template'),'utf8');
 const factoryRequireTemplate = readFileSync(path.join(__dirname,'factory.require.template'),'utf8');
 const factoryCallCreateTemplate = readFileSync(path.join(__dirname,'factory.call.create.template'),'utf8');
+const specVariablesTemplate = readFileSync(path.join(__dirname,'spec.variables.template'),'utf8');
+const typeInfoTemplate = readFileSync(path.join(__dirname,'typeinfo.template'),'utf8');
 
 if (!existsSync(specsFactoryDir)){
     mkdirSync(specsFactoryDir);
@@ -35,8 +37,16 @@ function getDependencyTree(info, pass, types) {
             const sc = require(scriptPath);
             const key = Object.keys(sc)[0];
             const type = sc[key];
-            const params = utils.getFunctionParams(type);
-            info = { type, typeName: type.name, scriptPath, factoryScriptPath, specScriptPath, children: [], passes: [], params, variableName: '' };
+            const children = utils.getFunctionParams(type).map(param => utils.getJSONObject(typeInfoTemplate
+                .replace(/\[TypeName\]/g, param.name)
+                .replace(/\[ScriptPath\]/g,'')
+                .replace(/\[FactoryScriptPath\]/g,'')
+                .replace(/\[SpecScriptPath\]/g,'')
+                .replace(/\[ChildrenArray\]/g,'')
+                .replace(/\[PassesArray\]/g,'')
+                .replace(/\[VariableName\]/g,param.name)
+            ));
+            info = { type, typeName: type.name, scriptPath, factoryScriptPath, specScriptPath, children, passes: [], variableName: '' };
             types.push(info);
         }
         else {
@@ -64,9 +74,9 @@ function getDependencyTree(info, pass, types) {
         }
         return types;
     }
-    const children = info.params.map(param => types.find(inf => inf.typeName.toLowerCase() === param.name.toLowerCase())).filter(inf => inf);
-    if (children.length > 0) {
-        info.children = children;
+    const refChildren = info.children.map(param => types.find(inf => inf.typeName.toLowerCase() === param.name.toLowerCase()));
+    if (refChildren.length > 0) {
+        info.children = refChildren;
     }
     info.passes.push(pass);
     return getDependencyTree(null, pass, types);
@@ -110,6 +120,14 @@ for(const info of getDependencyTree()) {
     );
 
     const specArrangeVariables = [];
+    walkDependencyTree(info, (nextInfo) => {
+        for(const param of nextInfo.params.filter(param => nextInfo.children.find(inf => inf.typeName.toLowerCase() === param.name ) === undefined)) {
+            specArrangeVariables.push(specVariablesTemplate
+                .replace(/\[VariableName\]/g, param.name)
+                .replace(/\[VariableValue\]/g, 'null')
+            );
+        }
+    });
     walkDependencyTree(info, (nextInfo) => {
         specArrangeVariables.push(factoryCallCreateTemplate
             .replace(/\[TypeVariableName\]/g, nextInfo.variableName)

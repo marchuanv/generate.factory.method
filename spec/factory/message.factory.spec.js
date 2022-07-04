@@ -6,7 +6,17 @@ const { createMessage } = require('C:\\component\\lib\\message.factory.js');
 describe('when asking Message to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
-    const userIdentity = createUserIdentity({userId});
+    const userId = null;
+
+const userIdentity = null;
+
+const data = null;
+
+const metadata = null;
+
+const code = null;
+
+const userIdentity = createUserIdentity({userId});
 const encryption = createEncryption({userIdentity});
 const content = createContent({data,metadata,encryption});
 const messageStatus = createMessageStatus({code});

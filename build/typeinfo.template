@@ -1,0 +1,9 @@
+{ 
+    "typeName":"[TypeName]",
+    "scriptPath":"[ScriptPath]",
+    "factoryScriptPath":"[FactoryScriptPath]",
+    "specScriptPath":"[SpecScriptPath]",
+    "children":[[ChildrenArray]],
+    "passes": [[PassesArray]],
+    "variableName":"[VariableName]"
+}

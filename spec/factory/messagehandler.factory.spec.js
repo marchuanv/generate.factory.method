@@ -8,7 +8,31 @@ const { createMessageHandler } = require('C:\\component\\lib\\messagehandler.fac
 describe('when asking MessageHandler to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
-    const httpMessageQueue = createHttpMessageQueue({name,callback});
+    const name = null;
+
+const callback = null;
+
+const httpMessageQueue = null;
+
+const hostAddress = null;
+
+const timeout = null;
+
+const websocketMessageQueue = null;
+
+const hostAddress = null;
+
+const timeout = null;
+
+const httpConnection = null;
+
+const httpMessageQueue = null;
+
+const websocketConnection = null;
+
+const websocketMessageQueue = null;
+
+const httpMessageQueue = createHttpMessageQueue({name,callback});
 const websocketMessageQueue = createWebSocketMessageQueue({});
 const httpConnection = createHttpConnection({httpMessageQueue,hostAddress,timeout});
 const websocketConnection = createWebSocketConnection({websocketMessageQueue,hostAddress,timeout});
