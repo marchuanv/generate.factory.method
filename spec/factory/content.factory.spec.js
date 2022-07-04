@@ -3,7 +3,7 @@ const { createContent } = require('C:\component\lib\content.factory.js');
 describe('when asking Content to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
-    const encryption = createEncryption(test);
+    [SpecArrangeVariables]
     // Act
     const instance = createContent({ data,metadata,encryption });
     // Assert

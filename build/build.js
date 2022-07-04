@@ -84,38 +84,41 @@ for(const info of getDependencyTree()) {
         .replace(/\[scriptpath\]/g, info.scriptPath.replace(/\\/g,'\\\\'))
         .replace(/\[typename\]/g, info.typeName);
     writeFileSync(info.factoryScriptPath, factory, 'utf8');
-    const spec = factorySpecTemplate
-        .replace(/\[ScriptPath\]/g, info.factoryScriptPath.replace(/\\/g,'\\\\'))
-        .replace(/\[TypeName\]/g, info.typeName)
-        .replace(/\[Args\]/g, `{ ${info.params.map( x => x.name )} }` );
-    writeFileSync(info.specScriptPath, spec, 'utf8');
-}
 
-//Require Scripts
-for(const info of getDependencyTree()) {
-    const factoryRequireScripts = info.parents.map(parent => factoryRequireTemplate
-        .replace(/\[TypeName\]/g, parent.typeName)
-        .replace(/\[RequireScriptPath\]/g, parent.factoryScriptPath)
-    );
+    //Require Scripts
+    const factoryRequireScripts = [];
+    for(const parent of info.parents) {
+        factoryRequireScripts.push(factoryRequireTemplate
+            .replace(/\[TypeName\]/g, parent.typeName)
+            .replace(/\[RequireScriptPath\]/g, parent.factoryScriptPath)
+        );
+    }
     factoryRequireScripts.push(factoryRequireTemplate
         .replace(/\[TypeName\]/g, info.typeName)
         .replace(/\[RequireScriptPath\]/g, info.factoryScriptPath)
     );
-    const spec = readFileSync(info.specScriptPath,'utf8').replace(/\[FactoryRequireScripts\]/g, factoryRequireScripts.join('\r\n'));
-    writeFileSync(info.specScriptPath, spec, 'utf8');
-}
 
+    const specArrangeVariables = [];
+
+    const factorySpec = factorySpecTemplate
+        .replace(/\[ScriptPath\]/g, info.factoryScriptPath.replace(/\\/g,'\\\\'))
+        .replace(/\[TypeName\]/g, info.typeName)
+        .replace(/\[Args\]/g, `{ ${info.params.map( x => x.name )} }` )
+        .replace(/\[FactoryRequireScripts\]/g, factoryRequireScripts.join('\r\n'))
+        .replace(/\[SpecArrangeVariables\]/g, specArrangeVariables.join('\r\n'));
+    writeFileSync(info.specScriptPath, factorySpec, 'utf8');
+}
 
 //Spec Arrange Variables
-for(const info of getDependencyTree()) {
-    const specArrangeVariables = info.parents.map(parent => factoryCallCreateTemplate
-        .replace(/\[TypeVariableName\]/g, parent.variableName)
-        .replace(/\[TypeName\]/g, parent.typeName)
-        .replace(/\[Args\]/g, 'test')
-    );
-    const spec = readFileSync(info.specScriptPath,'utf8').replace(/\[SpecArrangeVariables\]/g, specArrangeVariables.join('\r\n'));
-    writeFileSync(info.specScriptPath, spec, 'utf8');
-}
+// for(const info of getDependencyTree()) {
+//     const specArrangeVariables = info.parents.map(parent => factoryCallCreateTemplate
+//         .replace(/\[TypeVariableName\]/g, parent.variableName)
+//         .replace(/\[TypeName\]/g, parent.typeName)
+//         .replace(/\[Args\]/g, parent.parents.map(parent2 => parent2.variableName).join(','))
+//     );
+//     const spec = readFileSync(info.specScriptPath,'utf8').replace(/\[SpecArrangeVariables\]/g, specArrangeVariables.join('\r\n'));
+//     writeFileSync(info.specScriptPath, spec, 'utf8');
+// }
 
 
 

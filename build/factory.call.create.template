@@ -1,1 +1,1 @@
-const [TypeVariableName] = create[TypeName]([Args]);
+const [TypeVariableName] = create[TypeName]({[Args]});

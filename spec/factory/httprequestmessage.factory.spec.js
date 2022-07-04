@@ -3,7 +3,7 @@ const { createHttpRequestMessage } = require('C:\component\lib\http\httprequestm
 describe('when asking HttpRequestMessage to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
-    const message = createMessage(test);
+    [SpecArrangeVariables]
     // Act
     const instance = createHttpRequestMessage({ message });
     // Assert
