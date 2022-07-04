@@ -39,9 +39,9 @@ function getDependencyTree(typeInfo, pass, types) {
             const type = sc[key];
             const children = utils.getFunctionParams(type).map(param => utils.getJSONObject(typeInfoTemplate
                 .replace(/\[TypeName\]/g, param.name)
-                .replace(/\[ScriptPath\]/g,'NoScript')
-                .replace(/\[FactoryScriptPath\]/g,'NoScript')
-                .replace(/\[SpecScriptPath\]/g,'NoScript')
+                .replace(/\[ScriptPath\]/g,'')
+                .replace(/\[FactoryScriptPath\]/g,'')
+                .replace(/\[SpecScriptPath\]/g,'')
                 .replace(/\[ChildrenArray\]/g,'')
                 .replace(/\[PassesArray\]/g,'')
                 .replace(/\[VariableName\]/g, param.name)
@@ -70,16 +70,12 @@ function getDependencyTree(typeInfo, pass, types) {
         if (pass === 'secondpass') {
             return getDependencyTree(null, 'thirdpass', types);
         }
-
-      
-
         for(const typeInfo of types) {
             delete typeInfo.passes;
             typeInfo.children = typeInfo.children.map(child => {
                 let refChild = types.filter(inf => 
                     inf.typeName.toLowerCase() === child.typeName.toLowerCase() &&
-                    inf.scriptPath && 
-                    inf.scriptPath !== 'NoScript'
+                    inf.scriptPath
                 )[0];
                 if (refChild) {
                     refChild.variableName = child.variableName;
@@ -112,23 +108,26 @@ function walkDependencyTree(parent, callback, tracks = [], level = 0) {
     }
 }
 
-console.log(utils.getJSONString(getDependencyTree()));
-
-
 for(const info of getDependencyTree()) {
+    if (!info.scriptPath) {
+        return;
+    }
+
     const factory = factoryTemplate
-        .replace(/\[args\]/g, `{ ${info.params.map( x=>x.name )} }` )
+        .replace(/\[args\]/g, `{ ${info.children.map(x => x.variableName)} }` )
         .replace(/\[scriptpath\]/g, info.scriptPath.replace(/\\/g,'\\\\'))
         .replace(/\[typename\]/g, info.typeName);
     writeFileSync(info.factoryScriptPath, factory, 'utf8');
 
     //Require Scripts
     const factoryRequireScripts = [];
-    walkDependencyTree(info, (nextInfo) => {
-        factoryRequireScripts.push(factoryRequireTemplate
-            .replace(/\[TypeName\]/g, nextInfo.typeName)
-            .replace(/\[RequireScriptPath\]/g, nextInfo.factoryScriptPath.replace(/\\/g,'\\\\'))
-        );
+    walkDependencyTree(info, (typeInfo) => {
+        if (typeInfo.scriptPath) {
+            factoryRequireScripts.push(factoryRequireTemplate
+                .replace(/\[TypeName\]/g, typeInfo.typeName)
+                .replace(/\[RequireScriptPath\]/g, typeInfo.factoryScriptPath.replace(/\\/g,'\\\\'))
+            );
+        }
     });
 
     factoryRequireScripts.push(factoryRequireTemplate
@@ -137,26 +136,30 @@ for(const info of getDependencyTree()) {
     );
 
     const specArrangeVariables = [];
-    walkDependencyTree(info, (nextInfo) => {
-        for(const param of nextInfo.params.filter(param => nextInfo.children.find(inf => inf.typeName.toLowerCase() === param.name ) === undefined)) {
-            specArrangeVariables.push(specVariablesTemplate
-                .replace(/\[VariableName\]/g, param.name)
-                .replace(/\[VariableValue\]/g, 'null')
-            );
+    walkDependencyTree(info, (typeInfo) => {
+        if (!typeInfo.scriptPath) {
+            for(const child of typeInfo.children.filter(c => !c.scriptPath)) {
+                specArrangeVariables.push(specVariablesTemplate
+                    .replace(/\[VariableName\]/g, child.variableName)
+                    .replace(/\[VariableValue\]/g, 'null')
+                );
+            }
         }
     });
-    walkDependencyTree(info, (nextInfo) => {
-        specArrangeVariables.push(factoryCallCreateTemplate
-            .replace(/\[TypeVariableName\]/g, nextInfo.variableName)
-            .replace(/\[TypeName\]/g, nextInfo.typeName)
-            .replace(/\[Args\]/g, nextInfo.params.map(param => param.name).join(','))
-        );
+    walkDependencyTree(info, (typeInfo) => {
+        if (typeInfo.scriptPath) {
+            specArrangeVariables.push(factoryCallCreateTemplate
+                .replace(/\[TypeVariableName\]/g, typeInfo.variableName)
+                .replace(/\[TypeName\]/g, typeInfo.typeName)
+                .replace(/\[Args\]/g, typeInfo.children.map(param => param.name).join(','))
+            );
+        }
     });
 
     const factorySpec = factorySpecTemplate
         .replace(/\[ScriptPath\]/g, info.factoryScriptPath.replace(/\\/g,'\\\\'))
         .replace(/\[TypeName\]/g, info.typeName)
-        .replace(/\[Args\]/g, `{ ${info.params.map( x => x.name )} }` )
+        .replace(/\[Args\]/g, `{ ${info.children.map( x => x.variableName )} }` )
         .replace(/\[FactoryRequireScripts\]/g, factoryRequireScripts.join('\r\n'))
         .replace(/\[SpecArrangeVariables\]/g, specArrangeVariables.join('\r\n'));
     writeFileSync(info.specScriptPath, factorySpec, 'utf8');
