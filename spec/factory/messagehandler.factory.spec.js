@@ -8,8 +8,10 @@ describe('when asking MessageHandler to create an instance', function() {
 const httpConnection = createHttpConnection({httpMessageQueue});
 const httpMessageQueue = createHttpMessageQueue({});
 const httpMessageHandler = createHttpMessageHandler({httpConnection,httpMessageQueue});
-const websocketConnection = createWebSocketConnection({});
-const webSocketMessageHandler = createWebSocketMessageHandler({websocketConnection});
+const websocketMessageQueue = createWebSocketMessageQueue({});
+const websocketConnection = createWebSocketConnection({websocketMessageQueue});
+const websocketMessageQueue = createWebSocketMessageQueue({});
+const webSocketMessageHandler = createWebSocketMessageHandler({websocketConnection,websocketMessageQueue});
     // Act
     const instance = createMessageHandler({ httpMessageHandler,webSocketMessageHandler });
     // Assert

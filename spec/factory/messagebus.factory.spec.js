@@ -7,8 +7,10 @@ describe('when asking MessageBus to create an instance', function() {
 const httpConnection = createHttpConnection({httpMessageQueue});
 const httpMessageQueue = createHttpMessageQueue({});
 const httpMessageHandler = createHttpMessageHandler({httpConnection,httpMessageQueue});
-const websocketConnection = createWebSocketConnection({});
-const webSocketMessageHandler = createWebSocketMessageHandler({websocketConnection});
+const websocketMessageQueue = createWebSocketMessageQueue({});
+const websocketConnection = createWebSocketConnection({websocketMessageQueue});
+const websocketMessageQueue = createWebSocketMessageQueue({});
+const webSocketMessageHandler = createWebSocketMessageHandler({websocketConnection,websocketMessageQueue});
 const messageHandler = createMessageHandler({httpMessageHandler,webSocketMessageHandler});
     // Act
     const instance = createMessageBus({ messageHandler });
