@@ -9,13 +9,13 @@ const { createMessageBus } = require('C:\\component\\lib\\messagebus.factory.js'
 describe('when asking MessageBus to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
-    const httpMessageQueue = createHttpMessageQueue({[Args]});
-const websocketMessageQueue = createWebSocketMessageQueue({[Args]});
-const httpConnection = createHttpConnection({[Args]});
-const websocketConnection = createWebSocketConnection({[Args]});
-const httpMessageHandler = createHttpMessageHandler({[Args]});
-const webSocketMessageHandler = createWebSocketMessageHandler({[Args]});
-const messageHandler = createMessageHandler({[Args]});
+    const httpMessageQueue = createHttpMessageQueue({name,callback});
+const websocketMessageQueue = createWebSocketMessageQueue({});
+const httpConnection = createHttpConnection({httpMessageQueue,hostAddress,timeout});
+const websocketConnection = createWebSocketConnection({websocketMessageQueue,hostAddress,timeout});
+const httpMessageHandler = createHttpMessageHandler({httpConnection,httpMessageQueue});
+const webSocketMessageHandler = createWebSocketMessageHandler({websocketConnection,websocketMessageQueue});
+const messageHandler = createMessageHandler({httpMessageHandler,webSocketMessageHandler});
     // Act
     const instance = createMessageBus({ messageHandler });
     // Assert

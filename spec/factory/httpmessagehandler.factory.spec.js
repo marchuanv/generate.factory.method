@@ -4,8 +4,8 @@ const { createHttpMessageHandler } = require('C:\\component\\lib\\http\\httpmess
 describe('when asking HttpMessageHandler to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
-    const httpMessageQueue = createHttpMessageQueue({[Args]});
-const httpConnection = createHttpConnection({[Args]});
+    const httpMessageQueue = createHttpMessageQueue({name,callback});
+const httpConnection = createHttpConnection({httpMessageQueue,hostAddress,timeout});
     // Act
     const instance = createHttpMessageHandler({ httpConnection,httpMessageQueue });
     // Assert

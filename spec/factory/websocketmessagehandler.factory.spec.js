@@ -4,8 +4,8 @@ const { createWebSocketMessageHandler } = require('C:\\component\\lib\\websocket
 describe('when asking WebSocketMessageHandler to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
-    const websocketMessageQueue = createWebSocketMessageQueue({[Args]});
-const websocketConnection = createWebSocketConnection({[Args]});
+    const websocketMessageQueue = createWebSocketMessageQueue({});
+const websocketConnection = createWebSocketConnection({websocketMessageQueue,hostAddress,timeout});
     // Act
     const instance = createWebSocketMessageHandler({ websocketConnection,websocketMessageQueue });
     // Assert

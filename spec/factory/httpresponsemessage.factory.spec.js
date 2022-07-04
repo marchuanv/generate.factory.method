@@ -7,11 +7,11 @@ const { createHttpResponseMessage } = require('C:\\component\\lib\\http\\httpres
 describe('when asking HttpResponseMessage to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
-    const userIdentity = createUserIdentity({[Args]});
-const encryption = createEncryption({[Args]});
-const content = createContent({[Args]});
-const messageStatus = createMessageStatus({[Args]});
-const message = createMessage({[Args]});
+    const userIdentity = createUserIdentity({userId});
+const encryption = createEncryption({userIdentity});
+const content = createContent({data,metadata,encryption});
+const messageStatus = createMessageStatus({code});
+const message = createMessage({content,messageStatus});
     // Act
     const instance = createHttpResponseMessage({ message });
     // Assert

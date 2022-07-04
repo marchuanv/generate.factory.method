@@ -114,7 +114,7 @@ for(const info of getDependencyTree()) {
         specArrangeVariables.push(factoryCallCreateTemplate
             .replace(/\[TypeVariableName\]/g, nextInfo.variableName)
             .replace(/\[TypeName\]/g, nextInfo.typeName)
-           // .replace(/\[Args\]/g, nextInfo.parents.map(parent2 => parent2.variableName).join(','))
+            .replace(/\[Args\]/g, nextInfo.params.map(param => param.name).join(','))
         );
     });
 
