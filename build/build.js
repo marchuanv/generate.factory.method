@@ -13,6 +13,7 @@ const factoryRequireTemplate = readFileSync(path.join(__dirname,'factory.require
 const factoryCallCreateTemplate = readFileSync(path.join(__dirname,'factory.call.create.template'),'utf8');
 const specVariablesTemplate = readFileSync(path.join(__dirname,'spec.variables.template'),'utf8');
 const typeInfoTemplate = readFileSync(path.join(__dirname,'typeinfo.template'),'utf8');
+const specVariables = require('./spec.variables.values');
 
 if (!existsSync(specsFactoryDir)){
     mkdirSync(specsFactoryDir);
@@ -45,7 +46,7 @@ function getDependencyTree(typeInfo, pass, types) {
                 .replace(/\[ChildrenArray\]/g,'')
                 .replace(/\[PassesArray\]/g,'')
                 .replace(/\[VariableName\]/g, param.name)
-                .replace(/\[IsReference\]/g, false)
+                .replace(/\[VariableValue\]/g, specVariables[param.name] )
             ));
             typeInfo = utils.getJSONObject(typeInfoTemplate
                 .replace(/\[TypeName\]/g, type.name)
@@ -55,7 +56,7 @@ function getDependencyTree(typeInfo, pass, types) {
                 .replace(/\[ChildrenArray\]/g, children.map(child => utils.getJSONString(child)).join(','))
                 .replace(/\[PassesArray\]/g, [])
                 .replace(/\[VariableName\]/g, '')
-                .replace(/\[IsReference\]/g, false)
+                .replace(/\[VariableValue\]/g, '')
             );
             types = types.concat(children).concat(typeInfo);
         }
