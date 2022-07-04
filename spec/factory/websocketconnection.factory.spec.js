@@ -4,6 +4,10 @@ describe('when asking WebSocketConnection to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
     const websocketMessageQueue = createWebSocketMessageQueue({});
+const hostAddress = null;
+
+const timeout = null;
+
     // Act
     const instance = createWebSocketConnection({ websocketMessageQueue,hostAddress,timeout });
     // Assert

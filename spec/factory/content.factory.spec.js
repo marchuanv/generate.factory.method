@@ -7,6 +7,10 @@ describe('when asking Content to create an instance', function() {
     const userId = null;
 
 const userIdentity = createUserIdentity({userId});
+const data = null;
+
+const metadata = null;
+
 const encryption = createEncryption({userIdentity});
     // Act
     const instance = createContent({ data,metadata,encryption });

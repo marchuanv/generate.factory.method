@@ -2,7 +2,8 @@ const { createMessageStatus } = require('C:\\component\\lib\\messagestatus.facto
 describe('when asking MessageStatus to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
-    
+    const code = null;
+
     // Act
     const instance = createMessageStatus({ code });
     // Assert

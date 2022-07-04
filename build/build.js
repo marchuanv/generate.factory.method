@@ -138,21 +138,16 @@ for(const info of getDependencyTree()) {
 
     const specArrangeVariables = [];
     walkDependencyTree(info, (typeInfo) => {
-        for(const child of typeInfo.children.filter(c => !c.scriptPath)) {
-            const variable = specVariablesTemplate
-                .replace(/\[VariableName\]/g, child.variableName)
-                .replace(/\[VariableValue\]/g, 'null');
-            if (specArrangeVariables.indexOf(variable) === -1){
-                specArrangeVariables.push(variable);
-            }
-        }
-    });
-    walkDependencyTree(info, (typeInfo) => {
         if (typeInfo.scriptPath) {
             specArrangeVariables.push(factoryCallCreateTemplate
                 .replace(/\[TypeVariableName\]/g, typeInfo.variableName)
                 .replace(/\[TypeName\]/g, typeInfo.typeName)
                 .replace(/\[Args\]/g, typeInfo.children.map(c => c.variableName).join(','))
+            );
+        } else {
+            specArrangeVariables.push(specVariablesTemplate
+                .replace(/\[VariableName\]/g, typeInfo.variableName)
+                .replace(/\[VariableValue\]/g, 'null')
             );
         }
     });

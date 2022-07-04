@@ -8,11 +8,11 @@ describe('when asking HttpMessageHandler to create an instance', function() {
 
 const callback = null;
 
+const httpMessageQueue = createHttpMessageQueue({name,callback});
 const hostAddress = null;
 
 const timeout = null;
 
-const httpMessageQueue = createHttpMessageQueue({name,callback});
 const httpConnection = createHttpConnection({httpMessageQueue,hostAddress,timeout});
     // Act
     const instance = createHttpMessageHandler({ httpConnection,httpMessageQueue });

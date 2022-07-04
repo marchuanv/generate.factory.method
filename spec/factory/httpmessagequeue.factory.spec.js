@@ -2,7 +2,10 @@ const { createHttpMessageQueue } = require('C:\\component\\lib\\http\\httpmessag
 describe('when asking HttpMessageQueue to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
-    
+    const name = null;
+
+const callback = null;
+
     // Act
     const instance = createHttpMessageQueue({ name,callback });
     // Assert

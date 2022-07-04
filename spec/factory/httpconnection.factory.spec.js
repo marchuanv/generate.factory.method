@@ -8,6 +8,10 @@ describe('when asking HttpConnection to create an instance', function() {
 const callback = null;
 
 const httpMessageQueue = createHttpMessageQueue({name,callback});
+const hostAddress = null;
+
+const timeout = null;
+
     // Act
     const instance = createHttpConnection({ httpMessageQueue,hostAddress,timeout });
     // Assert

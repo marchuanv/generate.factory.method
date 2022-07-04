@@ -8,14 +8,14 @@ describe('when asking Message to create an instance', function() {
     // Arrange
     const userId = null;
 
+const userIdentity = createUserIdentity({userId});
 const data = null;
 
 const metadata = null;
 
+const encryption = createEncryption({userIdentity});
 const code = null;
 
-const userIdentity = createUserIdentity({userId});
-const encryption = createEncryption({userIdentity});
 const content = createContent({data,metadata,encryption});
 const messageStatus = createMessageStatus({code});
     // Act
