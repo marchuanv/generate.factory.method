@@ -1,8 +1,5 @@
-const utils = require('utils');
 const { [typename] } = require('[scriptpath]');
-function [typename]Factory([args]) {
-    utils.createProperty(this, 'create', () => {
-        return new [typename]([args]);
-    });
+function create[typename]([args]) {
+    return new [typename]([args]);
 }
-module.exports = { [typename]Factory };
+module.exports = { create[typename] };

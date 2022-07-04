@@ -9,6 +9,7 @@ const websocketScripts = readdirSync(path.join(libDir, 'websocket'), { withFileT
 const scripts = rootScripts.concat(httpScripts.concat(websocketScripts));
 const factoryTemplate = readFileSync(path.join(__dirname,'factory.template'),'utf8');
 const factorySpecTemplate = readFileSync(path.join(__dirname,'factory.spec.template'),'utf8');
+const factorySpecRequireFactoryTemplate = readFileSync(path.join(__dirname,'factory.spec.require.factory.template'),'utf8');
 
 if (!existsSync(specsFactoryDir)){
     mkdirSync(specsFactoryDir);
@@ -83,17 +84,29 @@ for(const info of getDependencyTree()) {
         .replace(/\[typename\]/g, info.typeName);
     writeFileSync(info.factoryScriptPath, factory, 'utf8');
     const spec = factorySpecTemplate
-        .replace(/\[scriptpath\]/g, info.factoryScriptPath.replace(/\\/g,'\\\\'))
-        .replace(/\[typename\]/g, info.typeName)
-        .replace(/\[args\]/g, `{ ${info.params.map( x => x.name )} }` );
+        .replace(/\[ScriptPath\]/g, info.factoryScriptPath.replace(/\\/g,'\\\\'))
+        .replace(/\[TypeName\]/g, info.typeName)
+        .replace(/\[Args\]/g, `{ ${info.params.map( x => x.name )} }` );
     writeFileSync(info.specScriptPath, spec, 'utf8');
 }
 
+//Require Scripts
 for(const info of getDependencyTree()) {
-    const requireScripts = info.parents.map(p => `const { ${p.typeName}Factory } = require('${p.factoryScriptPath.replace(/\\/g,'\\\\')}');`).join('\r\n');
-    const spec = readFileSync(info.specScriptPath,'utf8').replace(/\[requireScripts\]/g, `${requireScripts}\r\n[factoryVariableNames]`);
+    const factoryRequireScripts = [];
+    factoryRequireScripts.push(info.parents.map(p => factorySpecRequireFactoryTemplate
+        .replace(/\[TypeName\]/g, p.typeName)
+        .replace(/\[RequireScriptPath\]/g, p.factoryScriptPath)
+    ));
+    factoryRequireScripts.push(factorySpecRequireFactoryTemplate
+        .replace(/\[TypeName\]/g, info.typeName)
+        .replace(/\[RequireScriptPath\]/g, info.factoryScriptPath)
+    );
+    const spec = readFileSync(info.specScriptPath,'utf8').replace(/\[FactoryRequireScripts\]/g, factoryRequireScripts.join('\r\n'));
     writeFileSync(info.specScriptPath, spec, 'utf8');
 }
+
+
+
 
 // for(const info of getDependencyTree()) {
 //     const requireScripts = info.parents.map(p => `const { ${p.typeName}Factory } = require('${p.factoryScriptPath.replace(/\\/g,'\\\\')}');`).join('\r\n');
