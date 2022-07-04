@@ -4,7 +4,7 @@ describe('when asking MessageBus to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
     // Act
-    const instance = new MessageBusFactory({ messageHandler });
+    const instance = createMessageBus({ messageHandler });
     // Assert
     expect(instance).not.toBeNull();
   });

@@ -4,7 +4,7 @@ describe('when asking Content to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
     // Act
-    const instance = new ContentFactory({ data,metadata,encryption });
+    const instance = createContent({ data,metadata,encryption });
     // Assert
     expect(instance).not.toBeNull();
   });

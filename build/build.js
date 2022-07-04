@@ -92,11 +92,10 @@ for(const info of getDependencyTree()) {
 
 //Require Scripts
 for(const info of getDependencyTree()) {
-    const factoryRequireScripts = [];
-    factoryRequireScripts.push(info.parents.map(p => factorySpecRequireFactoryTemplate
-        .replace(/\[TypeName\]/g, p.typeName)
-        .replace(/\[RequireScriptPath\]/g, p.factoryScriptPath)
-    ));
+    const factoryRequireScripts = info.parents.map(parent => factorySpecRequireFactoryTemplate
+        .replace(/\[TypeName\]/g, parent.typeName)
+        .replace(/\[RequireScriptPath\]/g, parent.factoryScriptPath)
+    );
     factoryRequireScripts.push(factorySpecRequireFactoryTemplate
         .replace(/\[TypeName\]/g, info.typeName)
         .replace(/\[RequireScriptPath\]/g, info.factoryScriptPath)

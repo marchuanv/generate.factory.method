@@ -4,7 +4,7 @@ describe('when asking Encryption to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
     // Act
-    const instance = new EncryptionFactory({ userIdentity });
+    const instance = createEncryption({ userIdentity });
     // Assert
     expect(instance).not.toBeNull();
   });

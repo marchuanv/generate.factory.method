@@ -3,7 +3,7 @@ describe('when asking [TypeName] to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
     // Act
-    const instance = new [TypeName]Factory([Args]);
+    const instance = create[TypeName]([Args]);
     // Assert
     expect(instance).not.toBeNull();
   });
