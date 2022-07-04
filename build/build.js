@@ -63,10 +63,13 @@ function getDependencyTree(info, pass, types) {
         return types;
     }
   
-    const otherDep = types.find(inf => info.params.find(param => param.name.toLowerCase() === inf.typeName.toLowerCase())); // do other types depend on you?
-    if (otherDep && !info.parents.find(p => p.typeName === otherDep.typeName)) {
-        info.parents.push(otherDep);
-        return getDependencyTree(otherDep, pass, types);
+    const otherDependencies = types.filter(inf => info.params.find(param => param.name.toLowerCase() === inf.typeName.toLowerCase()))
+                                .filter(oDep => info.parents.find(parent => parent.typeName === oDep.typeName) === undefined); // do other types depend on you?
+    if (otherDependencies.length > 0) {
+        for(const otherDep of otherDependencies) {
+            info.parents.push(otherDep);
+            return getDependencyTree(otherDep, pass, types);
+        }
     } else {
         info.passes.push(pass);
         return getDependencyTree(null, pass, types);
@@ -88,16 +91,22 @@ for(const info of getDependencyTree()) {
 
 for(const info of getDependencyTree()) {
     const requireScripts = info.parents.map(p => `const { ${p.typeName}Factory } = require('${p.factoryScriptPath.replace(/\\/g,'\\\\')}');`).join('\r\n');
-    const nonRefArgsVariableNames = info.params.filter(p => !p.reference).map(p => `const ${p.name} = null;`).join('\r\n');
-    const refArgsVariableNames = info.params.filter(p => p.reference).map(p => `const ${p.name} = ${p.name}Factory.create([nonRefArgsVariableNames]);`).join('\r\n');
-    const factoryVariableNames = info.params.map(p => `const ${p.name}Factory = new ${p.typeName}Factory([refArgsVariableNames]);`).join('\r\n');
-    const spec = readFileSync(info.specScriptPath,'utf8')
-        .replace(/\[requireScripts\]/g, `${requireScripts}\r\n[factoryVariableNames]`)
-        .replace(/\[nonRefArgsVariableNames\]/g, nonRefArgsVariableNames)
-        .replace(/\[refArgsVariableNames\]/g, refArgsVariableNames)
-        .replace(/\[factoryVariableNames\]/g, `[factoryVariableNames]\r\n${factoryVariableNames}`)
+    const spec = readFileSync(info.specScriptPath,'utf8').replace(/\[requireScripts\]/g, `${requireScripts}\r\n[factoryVariableNames]`);
     writeFileSync(info.specScriptPath, spec, 'utf8');
 }
+
+// for(const info of getDependencyTree()) {
+//     const requireScripts = info.parents.map(p => `const { ${p.typeName}Factory } = require('${p.factoryScriptPath.replace(/\\/g,'\\\\')}');`).join('\r\n');
+//     // const nonRefArgsVariableNames = info.params.filter(p => !p.reference).map(p => `const ${p.name} = null;`).join('\r\n');
+//     // const refArgsVariableNames = info.params.filter(p => p.reference).map(p => `const ${p.name} = ${p.name}Factory.create([nonRefArgsVariableNames]);`).join('\r\n');
+//     // const factoryVariableNames = info.params.map(p => `const ${p.name}Factory = new ${p.typeName}Factory([refArgsVariableNames]);`).join('\r\n');
+//     const spec = readFileSync(info.specScriptPath,'utf8')
+//         .replace(/\[requireScripts\]/g, `${requireScripts}\r\n[factoryVariableNames]`)
+//         .replace(/\[nonRefArgsVariableNames\]/g, nonRefArgsVariableNames)
+//         .replace(/\[refArgsVariableNames\]/g, refArgsVariableNames)
+//         .replace(/\[factoryVariableNames\]/g, `[factoryVariableNames]\r\n${factoryVariableNames}`)
+//     writeFileSync(info.specScriptPath, spec, 'utf8');
+// }
 
 
 

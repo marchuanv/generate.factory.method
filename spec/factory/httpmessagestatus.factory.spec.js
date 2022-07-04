@@ -1,14 +1,12 @@
-const { HttpMessageStatusFactory } = require('D:\\component\\lib\\http\\httpmessagestatus.factory.js');
-const { MessageStatusFactory } = require('D:\\component\\lib\\messagestatus.factory.js');
+const { HttpMessageStatusFactory } = require('C:\\component\\lib\\http\\httpmessagestatus.factory.js');
+const { MessageStatusFactory } = require('C:\\component\\lib\\messagestatus.factory.js');
 [factoryVariableNames]
-const messageStatusFactory = new undefinedFactory([refArgsVariableNames]);
 describe('when asking HttpMessageStatus to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
     [factoryVariableNames]
-const messageStatusFactory = new undefinedFactory([refArgsVariableNames]);
-    
-    const messageStatus = null;
+    [refArgsVariableNames]
+    [nonRefArgsVariableNames]
     // Act
     const instance = new HttpMessageStatusFactory({ messageStatus });
     // Assert
