@@ -2,6 +2,7 @@
 describe('when asking [TypeName] to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
+    [SpecArrangeVariables]
     // Act
     const instance = create[TypeName]([Args]);
     // Assert

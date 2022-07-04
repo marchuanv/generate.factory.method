@@ -9,7 +9,8 @@ const websocketScripts = readdirSync(path.join(libDir, 'websocket'), { withFileT
 const scripts = rootScripts.concat(httpScripts.concat(websocketScripts));
 const factoryTemplate = readFileSync(path.join(__dirname,'factory.template'),'utf8');
 const factorySpecTemplate = readFileSync(path.join(__dirname,'factory.spec.template'),'utf8');
-const factorySpecRequireFactoryTemplate = readFileSync(path.join(__dirname,'factory.spec.require.factory.template'),'utf8');
+const factoryRequireTemplate = readFileSync(path.join(__dirname,'factory.require.template'),'utf8');
+const factoryCallCreateTemplate = readFileSync(path.join(__dirname,'factory.call.create.template'),'utf8');
 
 if (!existsSync(specsFactoryDir)){
     mkdirSync(specsFactoryDir);
@@ -92,15 +93,27 @@ for(const info of getDependencyTree()) {
 
 //Require Scripts
 for(const info of getDependencyTree()) {
-    const factoryRequireScripts = info.parents.map(parent => factorySpecRequireFactoryTemplate
+    const factoryRequireScripts = info.parents.map(parent => factoryRequireTemplate
         .replace(/\[TypeName\]/g, parent.typeName)
         .replace(/\[RequireScriptPath\]/g, parent.factoryScriptPath)
     );
-    factoryRequireScripts.push(factorySpecRequireFactoryTemplate
+    factoryRequireScripts.push(factoryRequireTemplate
         .replace(/\[TypeName\]/g, info.typeName)
         .replace(/\[RequireScriptPath\]/g, info.factoryScriptPath)
     );
     const spec = readFileSync(info.specScriptPath,'utf8').replace(/\[FactoryRequireScripts\]/g, factoryRequireScripts.join('\r\n'));
+    writeFileSync(info.specScriptPath, spec, 'utf8');
+}
+
+
+//Spec Arrange Variables
+for(const info of getDependencyTree()) {
+    const specArrangeVariables = info.parents.map(parent => factoryCallCreateTemplate
+        .replace(/\[TypeVariableName\]/g, parent.variableName)
+        .replace(/\[TypeName\]/g, parent.typeName)
+        .replace(/\[Args\]/g, 'test')
+    );
+    const spec = readFileSync(info.specScriptPath,'utf8').replace(/\[SpecArrangeVariables\]/g, specArrangeVariables.join('\r\n'));
     writeFileSync(info.specScriptPath, spec, 'utf8');
 }
 

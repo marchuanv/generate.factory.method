@@ -3,6 +3,7 @@ const { createHttpConnection } = require('C:\component\lib\http\httpconnection.f
 describe('when asking HttpConnection to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
+    const httpMessageQueue = createHttpMessageQueue(test);
     // Act
     const instance = createHttpConnection({ httpMessageQueue,hostAddress,timeout });
     // Assert
