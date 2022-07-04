@@ -70,28 +70,28 @@ function getDependencyTree(typeInfo, pass, types) {
         if (pass === 'secondpass') {
             return getDependencyTree(null, 'thirdpass', types);
         }
-        for(const inf of types){
-            delete inf.passes;
-            inf.variableName =  types.map(t => t.params).flat()
-                                        .map(param => param.name)
-                                        .find(paramName => paramName.toLowerCase() === inf.typeName.toLowerCase());
-            if (!inf.variableName) {
-                let variableNameArray = inf.typeName.split('');
-                const firstLetter = variableNameArray[0].toLowerCase();
-                inf.variableName = `${firstLetter}${variableNameArray.splice(1,variableNameArray.length-1).join('')}`;
-            }
 
+      
+
+        for(const typeInfo of types) {
+            delete typeInfo.passes;
+            typeInfo.children = typeInfo.children.map(child => {
+                let refChild = types.filter(inf => 
+                    inf.typeName.toLowerCase() === child.typeName.toLowerCase() &&
+                    inf.scriptPath && 
+                    inf.scriptPath !== 'NoScript'
+                )[0];
+                if (refChild) {
+                    refChild.variableName = child.variableName;
+                    return refChild
+                } else {
+                    return child;
+                }
+            });
         }
         return types;
     }
-
-    //remove duplicates, prefer ones with scripts
     types = types.filter(info => types.filter(info2 => info2.typeName.toLowerCase() === info.typeName.toLowerCase() && info2.scriptPath).length === 1);
-    if (pass === 'secondpass') {
-        const refChildren = types.filter(inf => inf.scriptPath && inf.scriptPath !== 'NoScript' && typeInfo.children.find(child => child.typeName.toLowerCase() === inf.typeName.toLowerCase()));
-        const children = typeInfo.children.filter(child => refChildren.find( refC => refC.typeName.toLowerCase() === child.typeName.toLowerCase()) === undefined );
-        typeInfo.children = children.concat(refChildren);
-    }
     typeInfo.passes.push(pass);
     return getDependencyTree(null, pass, types);
 }
@@ -111,6 +111,9 @@ function walkDependencyTree(parent, callback, tracks = [], level = 0) {
         }
     }
 }
+
+console.log(utils.getJSONString(getDependencyTree()));
+
 
 for(const info of getDependencyTree()) {
     const factory = factoryTemplate
