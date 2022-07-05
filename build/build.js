@@ -19,13 +19,7 @@ if (!existsSync(specsFactoryDir)){
     mkdirSync(specsFactoryDir);
 }
 
-function getDependencyTree(typeInfo, pass, types) {
-    if (!pass) {
-        pass = 'firstpass';
-    }
-    if (!types) {
-        types = [];
-    }
+function getDependencyTree(typeInfo, pass = 'firstpass', types = []) {
     if (!typeInfo || utils.isEmptyObject(typeInfo)) {
         const scriptPath = scripts.find(scPath => types.find(ti => ti.scriptPath === scPath) === undefined);
         if (scriptPath) {
@@ -46,23 +40,7 @@ function getDependencyTree(typeInfo, pass, types) {
                 .replace(/\[ChildrenArray\]/g,'')
                 .replace(/\[PassesArray\]/g,'')
                 .replace(/\[VariableName\]/g, param.name)
-                .replace(/\[VariableValue\]/g, (()=> {
-                    const value = specVariables[param.name];
-                    if (value === undefined) {
-                        throw new Error(`the ${param.name} value is undefined.`);
-                    }
-                    if (isNaN(value)) {
-                        if (typeof value === 'object') {
-                            return utils.getJSONString(value);
-                        } else {
-                            return `${value}`;
-                        }
-                    } else if (existsSync(value)) {
-                        return require(value);
-                    } else {
-                        return value;
-                    }
-                })())
+                .replace(/\[VariableValue\]/g, '')
             ));
             typeInfo = utils.getJSONObject(typeInfoTemplate
                 .replace(/\[TypeName\]/g, type.name)
@@ -87,6 +65,11 @@ function getDependencyTree(typeInfo, pass, types) {
         if (pass === 'secondpass') {
             return getDependencyTree(null, 'thirdpass', types);
         }
+        types = types.filter(info => types.find(info2 =>
+            info2.typeName.toLowerCase() === info.typeName.toLowerCase() && 
+            info2.scriptPath &&
+            info.scriptPath
+        ));
         for(const typeInfo of types) {
             delete typeInfo.passes;
             typeInfo.children = typeInfo.children.map(child => {
@@ -101,10 +84,26 @@ function getDependencyTree(typeInfo, pass, types) {
                     return child;
                 }
             });
+            for(const child of typeInfo.children.filter(child => !child.scriptPath)) {
+                const value = specVariables[child.variableName];
+                if (value === undefined) {
+                    throw new Error(`the ${child.variableName} value is undefined.`);
+                }
+                if (isNaN(value)) {
+                    if (typeof value === 'object') {
+                        child.variableValue = utils.getJSONString(value);
+                    } else {
+                        child.variableValue = `'${value}'`;
+                    }
+                } else if (existsSync(value)) {
+                    child.variableValue  = require(value);
+                } else {
+                    child.variableValue = value;
+                }
+            }
         }
         return types;
     }
-    types = types.filter(info => types.filter(info2 => info2.typeName.toLowerCase() === info.typeName.toLowerCase() && info2.scriptPath).length === 1);
     typeInfo.passes.push(pass);
     return getDependencyTree(null, pass, types);
 }

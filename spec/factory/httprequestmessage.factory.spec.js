@@ -7,15 +7,20 @@ const { createHttpRequestMessage } = require('C:\\component\\lib\\http\\httprequ
 describe('when asking HttpRequestMessage to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
-    const userId = 'undefined';
+    const userId = 'joe';
 
 const userIdentity = createUserIdentity({userId});
-const data = 'undefined';
+const data = 'Hello World';
 
-const metadata = '[object Object]';
+const metadata = {
+    "sender": {
+        "host": "localhost",
+        "port": 3000
+    }
+};
 
 const encryption = createEncryption({userIdentity});
-const code = 'undefined';
+const code = 1;
 
 const content = createContent({data,metadata,encryption});
 const messageStatus = createMessageStatus({code});

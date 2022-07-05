@@ -9,14 +9,17 @@ const { createMessageBus } = require('C:\\component\\lib\\messagebus.factory.js'
 describe('when asking MessageBus to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
-    const name = 'undefined';
+    const name = 'name?';
 
-const callback = 'undefined';
+const callback = '() => {}';
 
 const httpMessageQueue = createHttpMessageQueue({name,callback});
-const hostAddress = 'undefined';
+const hostAddress = {
+    "host": "localhost",
+    "port": 3000
+};
 
-const timeout = 'undefined';
+const timeout = 5000;
 
 const websocketMessageQueue = createWebSocketMessageQueue({});
 const httpConnection = createHttpConnection({httpMessageQueue,hostAddress,timeout});

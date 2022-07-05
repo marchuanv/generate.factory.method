@@ -3,5 +3,12 @@
     "port": 3000,
     "metadata": { "sender": { "host": "localhost", "port": 3000 }},
     "packageJson": "../spec/package.test.json",
-    "data": "Hello World"
+    "data": "Hello World",
+    "code": 1,
+    "channelName": "test",
+    "userId": "joe",
+    "hostAddress": { "host":"localhost", "port":3000 },
+    "timeout": 5000,
+    "name": "name?",
+    "callback": "() => {}"
 }
