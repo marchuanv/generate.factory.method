@@ -1,4 +1,4 @@
-const { createWebSocketMessageQueue } = require('C:\\component\\lib\\websocket\\websockMessageQueue.factory.js');
+const { createWebSocketMessageQueue } = require('C:\\component\\lib\\factory\\websockMessageQueue.factory.js');
 describe('when asking WebSocketMessageQueue to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange

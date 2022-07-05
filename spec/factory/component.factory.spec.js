@@ -1,4 +1,4 @@
-const { createComponent } = require('C:\\component\\lib\\component.factory.js');
+const { createComponent } = require('C:\\component\\lib\\factory\\component.factory.js');
 describe('when asking Component to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange

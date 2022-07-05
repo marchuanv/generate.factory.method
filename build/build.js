@@ -3,6 +3,7 @@ const path = require('path');
 const utils = require('utils');
 const libDir = path.join(__dirname, '../lib');
 const specsFactoryDir = path.join(__dirname, '../spec', 'factory');
+const libFactoryDir = path.join(__dirname, '../lib', 'factory');
 const rootScripts = readdirSync(libDir, { withFileTypes: true }).filter(dirent => dirent.isFile() && dirent.name.indexOf('.factory.js') === -1).map(file => path.join(libDir, file.name));
 const httpScripts = readdirSync(path.join(libDir, 'http'), { withFileTypes: true }).filter(dirent => dirent.isFile() && dirent.name.indexOf('.factory.js') === -1).map(file => path.join(libDir, 'http', file.name));
 const websocketScripts = readdirSync(path.join(libDir, 'websocket'), { withFileTypes: true }).filter(dirent => dirent.isFile() && dirent.name.indexOf('.factory.js') === -1).map(file => path.join(libDir, 'websocket', file.name));
@@ -18,16 +19,18 @@ const specVariables = require('./spec.variables.values');
 if (!existsSync(specsFactoryDir)){
     mkdirSync(specsFactoryDir);
 }
+if (!existsSync(libFactoryDir)){
+    mkdirSync(libFactoryDir);
+}
 
 function getDependencyTree(typeInfo, pass = 'firstpass', types = []) {
     if (!typeInfo || utils.isEmptyObject(typeInfo)) {
         const scriptPath = scripts.find(scPath => types.find(ti => ti.scriptPath === scPath) === undefined);
         if (scriptPath) {
             const scriptName = path.basename(scriptPath).replace(path.extname(scriptPath),'');
-            const scriptDir = scriptPath.replace(`\\${scriptName}.js`,'');
             const factoryScriptName = `${scriptName}.factory.js`;
             const specScriptName = `${scriptName}.factory.spec.js`;
-            const factoryScriptPath = path.join(scriptDir, factoryScriptName);
+            const factoryScriptPath = path.join(libDir, 'factory', factoryScriptName);
             const specScriptPath = path.join(specsFactoryDir, specScriptName);
             const sc = require(scriptPath);
             const key = Object.keys(sc)[0];

@@ -1,4 +1,4 @@
-const { createSubscription } = require('C:\\component\\lib\\subscription.factory.js');
+const { createSubscription } = require('C:\\component\\lib\\factory\\subscription.factory.js');
 describe('when asking Subscription to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange

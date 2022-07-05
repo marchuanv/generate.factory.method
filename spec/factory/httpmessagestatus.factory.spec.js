@@ -1,5 +1,5 @@
-const { createMessageStatus } = require('C:\\component\\lib\\messagestatus.factory.js');
-const { createHttpMessageStatus } = require('C:\\component\\lib\\http\\httpmessagestatus.factory.js');
+const { createMessageStatus } = require('C:\\component\\lib\\factory\\messagestatus.factory.js');
+const { createHttpMessageStatus } = require('C:\\component\\lib\\factory\\httpmessagestatus.factory.js');
 describe('when asking HttpMessageStatus to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
