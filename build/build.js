@@ -46,7 +46,23 @@ function getDependencyTree(typeInfo, pass, types) {
                 .replace(/\[ChildrenArray\]/g,'')
                 .replace(/\[PassesArray\]/g,'')
                 .replace(/\[VariableName\]/g, param.name)
-                .replace(/\[VariableValue\]/g, specVariables[param.name] )
+                .replace(/\[VariableValue\]/g, (()=> {
+                    const value = specVariables[param.name];
+                    if (value === undefined) {
+                        throw new Error(`the ${param.name} value is undefined.`);
+                    }
+                    if (isNaN(value)) {
+                        if (typeof value === 'object') {
+                            return utils.getJSONString(value);
+                        } else {
+                            return `${value}`;
+                        }
+                    } else if (existsSync(value)) {
+                        return require(value);
+                    } else {
+                        return value;
+                    }
+                })())
             ));
             typeInfo = utils.getJSONObject(typeInfoTemplate
                 .replace(/\[TypeName\]/g, type.name)
@@ -148,7 +164,7 @@ for(const info of getDependencyTree()) {
         } else {
             specArrangeVariables.push(specVariablesTemplate
                 .replace(/\[VariableName\]/g, typeInfo.variableName)
-                .replace(/\[VariableValue\]/g, 'null')
+                .replace(/\[VariableValue\]/g, typeInfo.variableValue)
             );
         }
     });

@@ -3,14 +3,14 @@ const { createHttpConnection } = require('C:\\component\\lib\\http\\httpconnecti
 describe('when asking HttpConnection to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
-    const name = null;
+    const name = 'undefined';
 
-const callback = null;
+const callback = 'undefined';
 
 const httpMessageQueue = createHttpMessageQueue({name,callback});
-const hostAddress = null;
+const hostAddress = 'undefined';
 
-const timeout = null;
+const timeout = 'undefined';
 
     // Act
     const instance = createHttpConnection({ httpMessageQueue,hostAddress,timeout });

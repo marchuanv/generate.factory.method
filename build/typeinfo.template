@@ -5,6 +5,6 @@
     "specScriptPath":"[SpecScriptPath]",
     "children":[[ChildrenArray]],
     "passes": [[PassesArray]],
-    "variableName":"[VariableName]".
+    "variableName":"[VariableName]",
     "variableValue":"[VariableValue]"
 }
