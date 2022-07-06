@@ -3,7 +3,7 @@ const { createHttpMessageStatus } = require('C:\\component\\lib\\factory\\httpme
 describe('when asking HttpMessageStatus to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
-    const code = 1;
+    const code = ;
 
 const messageStatus = createMessageStatus({code});
     // Act

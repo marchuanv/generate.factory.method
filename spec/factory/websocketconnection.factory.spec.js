@@ -4,12 +4,9 @@ describe('when asking WebSocketConnection to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
     const websocketMessageQueue = createWebSocketMessageQueue({});
-const hostAddress = {
-    "host": "localhost",
-    "port": 3000
-};
+const hostAddress = ;
 
-const timeout = 5000;
+const timeout = ;
 
     // Act
     const instance = createWebSocketConnection({ websocketMessageQueue,hostAddress,timeout });

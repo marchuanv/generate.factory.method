@@ -2,9 +2,9 @@ const { createAddress } = require('C:\\component\\lib\\factory\\address.factory.
 describe('when asking Address to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
-    const host = 'localhost';
+    const host = ;
 
-const port = 3000;
+const port = ;
 
     // Act
     const instance = createAddress({ host,port });

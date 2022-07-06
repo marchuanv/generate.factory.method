@@ -3,7 +3,7 @@ const { createEncryption } = require('C:\\component\\lib\\factory\\encryption.fa
 describe('when asking Encryption to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
-    const userId = 'joe';
+    const userId = ;
 
 const userIdentity = createUserIdentity({userId});
     // Act

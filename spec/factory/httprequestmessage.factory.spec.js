@@ -7,20 +7,15 @@ const { createHttpRequestMessage } = require('C:\\component\\lib\\factory\\httpr
 describe('when asking HttpRequestMessage to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
-    const userId = 'joe';
+    const userId = ;
 
 const userIdentity = createUserIdentity({userId});
-const data = 'Hello World';
+const data = ;
 
-const metadata = {
-    "sender": {
-        "host": "localhost",
-        "port": 3000
-    }
-};
+const metadata = ;
 
 const encryption = createEncryption({userIdentity});
-const code = 1;
+const code = ;
 
 const content = createContent({data,metadata,encryption});
 const messageStatus = createMessageStatus({code});

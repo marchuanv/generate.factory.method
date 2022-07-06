@@ -2,7 +2,7 @@ const { createUserIdentity } = require('C:\\component\\lib\\factory\\useridentit
 describe('when asking UserIdentity to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
-    const userId = 'joe';
+    const userId = ;
 
     // Act
     const instance = createUserIdentity({ userId });

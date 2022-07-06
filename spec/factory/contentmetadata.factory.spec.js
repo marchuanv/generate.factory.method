@@ -2,14 +2,9 @@ const { createContentMetadata } = require('C:\\component\\lib\\factory\\contentm
 describe('when asking ContentMetadata to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
-    const metadata = {
-    "sender": {
-        "host": "localhost",
-        "port": 3000
-    }
-};
+    const metadata = ;
 
-const data = 'Hello World';
+const data = ;
 
     // Act
     const instance = createContentMetadata({ metadata,data });

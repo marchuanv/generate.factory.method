@@ -3,6 +3,7 @@
     "scriptPath":"[ScriptPath]",
     "factoryScriptPath":"[FactoryScriptPath]",
     "specScriptPath":"[SpecScriptPath]",
+    "specVariablesPath":"[SpecVariablesPath]",
     "children":[[ChildrenArray]],
     "passes": [[PassesArray]],
     "variableName":"[VariableName]",

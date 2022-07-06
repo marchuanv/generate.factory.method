@@ -2,7 +2,7 @@ const { createMessageStatus } = require('C:\\component\\lib\\factory\\messagesta
 describe('when asking MessageStatus to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
-    const code = 1;
+    const code = ;
 
     // Act
     const instance = createMessageStatus({ code });

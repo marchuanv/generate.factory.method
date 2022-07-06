@@ -2,7 +2,7 @@ const { createSubscription } = require('C:\\component\\lib\\factory\\subscriptio
 describe('when asking Subscription to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
-    const channelName = 'test';
+    const channelName = ;
 
     // Act
     const instance = createSubscription({ channelName });
