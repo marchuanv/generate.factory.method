@@ -1,6 +1,6 @@
 {
-    "userId": null,
-    "data": null,
-    "metadata": null,
-    "code": null
+    "userId": "joe",
+    "data": "Hello World",
+    "metadata": { "host":"localhost", "port": 3000 },
+    "code": 0
 }

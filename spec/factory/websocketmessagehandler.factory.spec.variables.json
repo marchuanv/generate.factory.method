@@ -1,4 +1,4 @@
 {
     "hostAddress": null,
-    "timeout": null
+    "timeout": 5000
 }

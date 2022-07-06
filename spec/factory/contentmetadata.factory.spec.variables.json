@@ -1,4 +1,9 @@
 {
-    "metadata": null,
-    "data": null
+    "metadata": {
+        "sender": {
+            "host": "localhost",
+            "port": 3000
+        }
+    },
+    "data": "Hello World"
 }
