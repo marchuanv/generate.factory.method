@@ -1,4 +1,5 @@
 const { readdirSync, readFileSync, writeFileSync, mkdirSync, existsSync } = require('fs');
+const { join } = require('path');
 const path = require('path');
 const utils = require('utils');
 const libDir = path.join(__dirname, '../lib');
@@ -160,25 +161,34 @@ for(const info of getDependencyTree()) {
     const specArrangeVariables = [];
     walkDependencyTree(info, (typeInfo) => {
         if (typeInfo.scriptPath) {
-            specArrangeVariables.push({ snippet: factoryCallCreateTemplate
+            specArrangeVariables.push(factoryCallCreateTemplate
                 .replace(/\[TypeVariableName\]/g, typeInfo.variableName)
                 .replace(/\[TypeName\]/g, typeInfo.typeName)
                 .replace(/\[Args\]/g, typeInfo.children.map(c => c.variableName).join(','))
-            , reference: true });
-        } else {
-            const specVar = specVariablesTemplate
-                .replace(/\[VariableName\]/g, typeInfo.variableName)
-                .replace(/\[VariableValue\]/g, typeInfo.variableValue)
-            specArrangeVariables.push({ snippet: specVar, reference: false });
+            );
         }
     });
-    writeFileSync(info.specVariablesPath, specArrangeVariables.filter(sav => !sav.reference).map(sav => sav.snippet).join('\r\n'), 'utf8');
+
+    const specVariableValues = {};
+    if (!existsSync(info.specVariablesPath)) {
+        walkDependencyTree(info, (typeInfo) => {
+            if (!typeInfo.scriptPath) {
+                specVariableValues[typeInfo.variableName] = null;
+            }
+        });
+        writeFileSync(info.specVariablesPath, utils.getJSONString(specVariableValues), 'utf8');
+    }
+
+    specArrangeVariables.push(specVariablesTemplate
+        .replace(/\[VariableNames\]/g, Object.keys(specVariableValues),join(','))
+        .replace(/\[SpecVariablesPath\]/g, info.specVariablesPath)
+    );
 
     const factorySpec = factorySpecTemplate
         .replace(/\[ScriptPath\]/g, info.factoryScriptPath.replace(/\\/g,'\\\\'))
         .replace(/\[TypeName\]/g, info.typeName)
         .replace(/\[Args\]/g, `{ ${info.children.map( x => x.variableName )} }` )
         .replace(/\[FactoryRequireScripts\]/g, factoryRequireScripts.join('\r\n'))
-        .replace(/\[SpecArrangeVariables\]/g, specArrangeVariables.map(sav => sav.snippet).join('\r\n'));
+        .replace(/\[SpecArrangeVariables\]/g, specArrangeVariables.join('\r\n'));
     writeFileSync(info.specScriptPath, factorySpec, 'utf8');
 }

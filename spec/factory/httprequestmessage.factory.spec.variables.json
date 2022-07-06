@@ -1,7 +1,6 @@
-const userId = ;
-
-const data = ;
-
-const metadata = ;
-
-const code = ;
+{
+    "userId": null,
+    "data": null,
+    "metadata": null,
+    "code": null
+}

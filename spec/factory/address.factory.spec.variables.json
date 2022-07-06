@@ -1,3 +1,4 @@
-const host = ;
-
-const port = ;
+{
+    "host": null,
+    "port": null
+}

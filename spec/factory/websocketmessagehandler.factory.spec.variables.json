@@ -1,3 +1,4 @@
-const hostAddress = ;
-
-const timeout = ;
+{
+    "hostAddress": null,
+    "timeout": null
+}

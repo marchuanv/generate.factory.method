@@ -4,16 +4,10 @@ const { createHttpMessageHandler } = require('C:\\component\\lib\\factory\\httpm
 describe('when asking HttpMessageHandler to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
-    const name = ;
-
-const callback = ;
-
-const httpMessageQueue = createHttpMessageQueue({name,callback});
-const hostAddress = ;
-
-const timeout = ;
-
+    const httpMessageQueue = createHttpMessageQueue({name,callback});
 const httpConnection = createHttpConnection({httpMessageQueue,hostAddress,timeout});
+const {name,callback,hostAddress,timeout} = require('C:\component\spec\factory\httpmessagehandler.factory.spec.variables.json');
+
     // Act
     const instance = createHttpMessageHandler({ httpConnection,httpMessageQueue });
     // Assert

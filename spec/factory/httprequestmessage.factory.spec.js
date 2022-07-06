@@ -7,19 +7,13 @@ const { createHttpRequestMessage } = require('C:\\component\\lib\\factory\\httpr
 describe('when asking HttpRequestMessage to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
-    const userId = ;
-
-const userIdentity = createUserIdentity({userId});
-const data = ;
-
-const metadata = ;
-
+    const userIdentity = createUserIdentity({userId});
 const encryption = createEncryption({userIdentity});
-const code = ;
-
 const content = createContent({data,metadata,encryption});
 const messageStatus = createMessageStatus({code});
 const message = createMessage({content,messageStatus});
+const {userId,data,metadata,code} = require('C:\component\spec\factory\httprequestmessage.factory.spec.variables.json');
+
     // Act
     const instance = createHttpRequestMessage({ message });
     // Assert

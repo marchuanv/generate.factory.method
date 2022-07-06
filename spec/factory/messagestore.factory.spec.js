@@ -2,7 +2,8 @@ const { createMessageStore } = require('C:\\component\\lib\\factory\\messagestor
 describe('when asking MessageStore to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
-    
+    const {} = require('C:\component\spec\factory\messagestore.factory.spec.variables.json');
+
     // Act
     const instance = createMessageStore({  });
     // Assert

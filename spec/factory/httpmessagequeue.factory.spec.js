@@ -2,9 +2,7 @@ const { createHttpMessageQueue } = require('C:\\component\\lib\\factory\\httpmes
 describe('when asking HttpMessageQueue to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
-    const name = ;
-
-const callback = ;
+    const {name,callback} = require('C:\component\spec\factory\httpmessagequeue.factory.spec.variables.json');
 
     // Act
     const instance = createHttpMessageQueue({ name,callback });

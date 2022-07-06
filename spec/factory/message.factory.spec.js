@@ -6,18 +6,12 @@ const { createMessage } = require('C:\\component\\lib\\factory\\message.factory.
 describe('when asking Message to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
-    const userId = ;
-
-const userIdentity = createUserIdentity({userId});
-const data = ;
-
-const metadata = ;
-
+    const userIdentity = createUserIdentity({userId});
 const encryption = createEncryption({userIdentity});
-const code = ;
-
 const content = createContent({data,metadata,encryption});
 const messageStatus = createMessageStatus({code});
+const {userId,data,metadata,code} = require('C:\component\spec\factory\message.factory.spec.variables.json');
+
     // Act
     const instance = createMessage({ content,messageStatus });
     // Assert

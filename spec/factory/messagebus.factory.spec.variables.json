@@ -1,7 +1,6 @@
-const name = ;
-
-const callback = ;
-
-const hostAddress = ;
-
-const timeout = ;
+{
+    "name": null,
+    "callback": null,
+    "hostAddress": null,
+    "timeout": null
+}

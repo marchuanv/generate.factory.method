@@ -9,21 +9,15 @@ const { createMessageBus } = require('C:\\component\\lib\\factory\\messagebus.fa
 describe('when asking MessageBus to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
-    const name = ;
-
-const callback = ;
-
-const httpMessageQueue = createHttpMessageQueue({name,callback});
-const hostAddress = ;
-
-const timeout = ;
-
+    const httpMessageQueue = createHttpMessageQueue({name,callback});
 const websocketMessageQueue = createWebSocketMessageQueue({});
 const httpConnection = createHttpConnection({httpMessageQueue,hostAddress,timeout});
 const websocketConnection = createWebSocketConnection({websocketMessageQueue,hostAddress,timeout});
 const httpMessageHandler = createHttpMessageHandler({httpConnection,httpMessageQueue});
 const webSocketMessageHandler = createWebSocketMessageHandler({websocketConnection,websocketMessageQueue});
 const messageHandler = createMessageHandler({httpMessageHandler,webSocketMessageHandler});
+const {name,callback,hostAddress,timeout} = require('C:\component\spec\factory\messagebus.factory.spec.variables.json');
+
     // Act
     const instance = createMessageBus({ messageHandler });
     // Assert
