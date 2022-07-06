@@ -6,7 +6,7 @@ describe('when asking Content to create an instance', function() {
     // Arrange
     const userIdentity = createUserIdentity({userId});
 const encryption = createEncryption({userIdentity});
-const {userId,data,metadata} = require('C:\component\spec\factory\content.factory.spec.variables.json');
+const {userId,data,metadata} = require('C:\\component\\spec\\factory\\content.factory.spec.variables.json');
 
     // Act
     const instance = createContent({ data,metadata,encryption });

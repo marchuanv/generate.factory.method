@@ -6,7 +6,7 @@ describe('when asking HttpMessageHandler to create an instance', function() {
     // Arrange
     const httpMessageQueue = createHttpMessageQueue({name,callback});
 const httpConnection = createHttpConnection({httpMessageQueue,hostAddress,timeout});
-const {name,callback,hostAddress,timeout} = require('C:\component\spec\factory\httpmessagehandler.factory.spec.variables.json');
+const {name,callback,hostAddress,timeout} = require('C:\\component\\spec\\factory\\httpmessagehandler.factory.spec.variables.json');
 
     // Act
     const instance = createHttpMessageHandler({ httpConnection,httpMessageQueue });

@@ -12,7 +12,7 @@ const encryption = createEncryption({userIdentity});
 const content = createContent({data,metadata,encryption});
 const messageStatus = createMessageStatus({code});
 const message = createMessage({content,messageStatus});
-const {userId,data,metadata,code} = require('C:\component\spec\factory\httprequestmessage.factory.spec.variables.json');
+const {userId,data,metadata,code} = require('C:\\component\\spec\\factory\\httprequestmessage.factory.spec.variables.json');
 
     // Act
     const instance = createHttpRequestMessage({ message });

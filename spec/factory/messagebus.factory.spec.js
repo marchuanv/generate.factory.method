@@ -16,7 +16,7 @@ const websocketConnection = createWebSocketConnection({websocketMessageQueue,hos
 const httpMessageHandler = createHttpMessageHandler({httpConnection,httpMessageQueue});
 const webSocketMessageHandler = createWebSocketMessageHandler({websocketConnection,websocketMessageQueue});
 const messageHandler = createMessageHandler({httpMessageHandler,webSocketMessageHandler});
-const {name,callback,hostAddress,timeout} = require('C:\component\spec\factory\messagebus.factory.spec.variables.json');
+const {name,callback,hostAddress,timeout} = require('C:\\component\\spec\\factory\\messagebus.factory.spec.variables.json');
 
     // Act
     const instance = createMessageBus({ messageHandler });

@@ -169,19 +169,20 @@ for(const info of getDependencyTree()) {
         }
     });
 
-    const specVariableValues = {};
-    if (!existsSync(info.specVariablesPath)) {
-        walkDependencyTree(info, (typeInfo) => {
-            if (!typeInfo.scriptPath) {
-                specVariableValues[typeInfo.variableName] = null;
-            }
-        });
-        writeFileSync(info.specVariablesPath, utils.getJSONString(specVariableValues), 'utf8');
+    let specVariableValues = {};
+    if (existsSync(info.specVariablesPath)) {
+        specVariableValues = require(info.specVariablesPath);
     }
+    for(const child of info.children.filter(child => !child.scriptPath)) {
+        if (specVariableValues[child.variableName] === undefined) {
+            specVariableValues[child.variableName] = null;
+        }
+    }
+    writeFileSync(info.specVariablesPath, utils.getJSONString(specVariableValues), 'utf8');
 
     specArrangeVariables.push(specVariablesTemplate
         .replace(/\[VariableNames\]/g, Object.keys(specVariableValues),join(','))
-        .replace(/\[SpecVariablesPath\]/g, info.specVariablesPath)
+        .replace(/\[SpecVariablesPath\]/g, info.specVariablesPath.replace(/\\/g,'\\\\'))
     );
 
     const factorySpec = factorySpecTemplate

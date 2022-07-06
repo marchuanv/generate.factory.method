@@ -1,4 +1,4 @@
 {
-    "host": null,
-    "port": null
+    "host": "localhost",
+    "port": 3000
 }
