@@ -137,7 +137,7 @@ for(const info of getDependencyTree()) {
                 }
             });
             const factoryCallCreate = factoryCallCreateTemplate
-                .replace(/\[TypeVariableName\]/g, typeInfo.variableName)
+                .replace(/\[TypeVariableNames\]/g, [typeInfo.variableName])
                 .replace(/\[TypeName\]/g, typeInfo.typeName)
                 .replace(/\[Args\]/g, childSimpleArgs);
             if (!factoryCalls.find(x => x === factoryCallCreate)) {
