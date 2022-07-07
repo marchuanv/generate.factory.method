@@ -30,7 +30,7 @@ describe("when opening an http connection and sending and http request given a h
         this.messageQueue.dequeueRequestMessage().then(({ httpRequestMessage }) => {
             expect(httpRequestMessage).not.toBeNull();
             const data = 'Hello World from Server';
-            this.messageQueue.enqueueRawHttpResponse({ data, headers: {} });
+            this.messageQueue.enqueueRawHttpResponse({ data, headers: {}, httpStatusCode: 200 });
         });
 
         // Act
@@ -46,7 +46,7 @@ describe("when opening an http connection and sending and http request given a h
         expect(httpResponseMessage.getContent()).toEqual('Hello World from Server');
     });
     
-    xit("it should have a closed connection", () => {
+    it("it should have a closed connection", () => {
         // Arrange
         expect(this.httpConnection.isOpen()).toBeTruthy();
 
