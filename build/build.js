@@ -118,12 +118,8 @@ for(const info of getDependencyTree()) {
         }
     });
 
-    const factory = factoryTemplate
-        .replace(/\[Args\]/g, info.children.map(x => x.variableName) )
-        .replace(/\[ScriptPath\]/g, info.scriptPath.replace(/\\/g,'\\\\'))
-        .replace(/\[TypeName\]/g, info.typeName)
-        .replace(/\[SimpleArgs\]/g, simpleArgs);
-    writeFileSync(info.factoryScriptPath, factory, 'utf8');
+
+    const factoryCalls = [];
 
     //Require Scripts
     const factoryRequireScripts = [];
@@ -174,6 +170,14 @@ for(const info of getDependencyTree()) {
     specArrangeVariables.unshift(specVariablesTemplate
         .replace(/\[VariableNames\]/g, Object.keys(specVariableValues),join(','))
         .replace(/\[SpecVariablesPath\]/g, info.specVariablesPath.replace(/\\/g,'\\\\')));
+
+    const factory = factoryTemplate
+        .replace(/\[Args\]/g, info.children.map(x => x.variableName) )
+        .replace(/\[ScriptPath\]/g, info.scriptPath.replace(/\\/g,'\\\\'))
+        .replace(/\[TypeName\]/g, info.typeName)
+        .replace(/\[FactoryCalls\]/g, factoryCalls)
+        .replace(/\[SimpleArgs\]/g, simpleArgs);
+    writeFileSync(info.factoryScriptPath, factory, 'utf8');
 
     const factorySpec = factorySpecTemplate
         .replace(/\[ScriptPath\]/g, info.factoryScriptPath.replace(/\\/g,'\\\\'))
