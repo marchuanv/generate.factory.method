@@ -2,10 +2,10 @@ const { createMessageStatus } = require('C:\\component\\lib\\factory\\messagesta
 describe('when asking MessageStatus to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
-    const {} = require('C:\\component\\spec\\factory\\messagestatus.factory.spec.variables.json');
+    const {code} = require('C:\\component\\spec\\factory\\messagestatus.factory.spec.variables.json');
 
     // Act
-    const instance = createMessageStatus({  });
+    const instance = createMessageStatus({ code });
     // Assert
     expect(instance).not.toBeNull();
   });
