@@ -1,5 +1,4 @@
 const { readdirSync, readFileSync, writeFileSync, mkdirSync, existsSync } = require('fs');
-const { join } = require('path');
 const path = require('path');
 const utils = require('utils');
 const libDir = path.join(__dirname, '../lib');
@@ -116,10 +115,18 @@ for(const info of getDependencyTree()) {
     let factoryRequireScripts =[];
     walkDependencyTree(info, (typeInfo) => {
         if (typeInfo.scriptPath) {
+            const childSimpleArgs = [];
+            walkDependencyTree(typeInfo, (moreTypeInfo) => {
+                if (!moreTypeInfo.scriptPath) {
+                    if (!childSimpleArgs.find(x => x === moreTypeInfo.variableName)) {
+                        childSimpleArgs.push(moreTypeInfo.variableName);
+                    }
+                }
+            });
             const factoryCallCreate = factoryCallCreateTemplate
                 .replace(/\[TypeVariableName\]/g, typeInfo.variableName)
                 .replace(/\[TypeName\]/g, typeInfo.typeName)
-                .replace(/\[Args\]/g, typeInfo.children.map(c => c.variableName).join(','));
+                .replace(/\[Args\]/g, childSimpleArgs);
             if (!factoryCalls.find(x => x === factoryCallCreate)) {
                 factoryCalls.unshift(factoryCallCreate);
             }
@@ -151,7 +158,7 @@ for(const info of getDependencyTree()) {
 
     let specArrangeVariables = [];
     specArrangeVariables.unshift(specVariablesTemplate
-        .replace(/\[VariableNames\]/g, Object.keys(specVariableValues),join(','))
+        .replace(/\[VariableNames\]/g, Object.keys(specVariableValues).join(','))
         .replace(/\[SpecVariablesPath\]/g, info.specVariablesPath.replace(/\\/g,'\\\\')));
 
     const factory = factoryTemplate
