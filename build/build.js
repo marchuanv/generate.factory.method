@@ -98,9 +98,14 @@ function getDependencyTree(typeInfo, pass = 'firstpass', types = []) {
 }
 
 function walkDependencyTree(parent, callback) {
+    let _break = false;
     for(const child of parent.children) {
-        callback(child);
-        walkDependencyTree(child, callback);
+        callback(child, () => {
+            _break = true;
+        });
+        if (!_break) {
+            walkDependencyTree(child, callback);
+        }
     }
 }
 
@@ -113,7 +118,7 @@ for(const info of getDependencyTree()) {
     const simpleArgs = [];
     const factoryCalls = [];
     let factoryRequireScripts =[];
-    walkDependencyTree(info, (typeInfo) => {
+    walkDependencyTree(info, (typeInfo, breakCallback) => {
         if (typeInfo.scriptPath) {
             const childSimpleArgs = [];
             walkDependencyTree(typeInfo, (moreTypeInfo) => {
@@ -136,7 +141,11 @@ for(const info of getDependencyTree()) {
             if (!factoryRequireScripts.find(x => x === factoryRequire)) {
                 factoryRequireScripts.push(factoryRequire);
             }
-        } else {
+           breakCallback();
+        }
+    });
+    walkDependencyTree(info, (typeInfo, breakCallback) => {
+        if (!typeInfo.scriptPath) {
             if (!simpleArgs.find(x => x === typeInfo.variableName)) {
                 simpleArgs.push(typeInfo.variableName);
             }
