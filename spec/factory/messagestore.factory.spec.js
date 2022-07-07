@@ -5,7 +5,7 @@ describe('when asking the MessageStore factory to create an instance', function(
     const {} = require('C:\\component\\spec\\factory\\messagestore.factory.spec.variables.json');
 
     // Act
-    const instance = createMessageStore({  });
+    const instance = createMessageStore();
     // Assert
     expect(instance).not.toBeNull();
   });

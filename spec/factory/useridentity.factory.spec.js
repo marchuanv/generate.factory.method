@@ -5,7 +5,7 @@ describe('when asking the UserIdentity factory to create an instance', function(
     const {userId} = require('C:\\component\\spec\\factory\\useridentity.factory.spec.variables.json');
 
     // Act
-    const instance = createUserIdentity({ userId });
+    const instance = createUserIdentity(userId);
     // Assert
     expect(instance).not.toBeNull();
   });

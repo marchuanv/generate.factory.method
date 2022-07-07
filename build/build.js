@@ -112,32 +112,29 @@ for(const info of getDependencyTree()) {
     }
 
     const simpleArgs = [];
-    walkDependencyTree(info, (typeInfo) => {
-        if (!typeInfo.scriptPath) {
-            simpleArgs.push(typeInfo.variableName);
-        }
-    });
-
-
     const factoryCalls = [];
-
-    //Require Scripts
-    const factoryRequireScripts = [];
+    let factoryRequireScripts =[];
     walkDependencyTree(info, (typeInfo) => {
         if (typeInfo.scriptPath) {
+            const factoryCallCreate = factoryCallCreateTemplate
+                .replace(/\[TypeVariableName\]/g, typeInfo.variableName)
+                .replace(/\[TypeName\]/g, typeInfo.typeName)
+                .replace(/\[Args\]/g, typeInfo.children.map(c => c.variableName).join(','));
+            if (!factoryCalls.find(x => x === factoryCallCreate)) {
+                factoryCalls.unshift(factoryCallCreate);
+            }
             const factoryRequire = factoryRequireTemplate
                 .replace(/\[TypeName\]/g, typeInfo.typeName)
                 .replace(/\[RequireScriptPath\]/g, typeInfo.factoryScriptPath.replace(/\\/g,'\\\\'));
             if (!factoryRequireScripts.find(x => x === factoryRequire)) {
                 factoryRequireScripts.push(factoryRequire);
             }
+        } else {
+            simpleArgs.push(typeInfo.variableName);
         }
     });
 
-    factoryRequireScripts.push(factoryRequireTemplate
-        .replace(/\[TypeName\]/g, info.typeName)
-        .replace(/\[RequireScriptPath\]/g, info.factoryScriptPath.replace(/\\/g,'\\\\'))
-    );
+   
 
     let specVariableValues = {};
     if (existsSync(info.specVariablesPath)) {
@@ -154,19 +151,6 @@ for(const info of getDependencyTree()) {
     writeFileSync(info.specVariablesPath, utils.getJSONString(specVariableValues), 'utf8');
 
     let specArrangeVariables = [];
-
-    walkDependencyTree(info, (typeInfo) => {
-        if (typeInfo.scriptPath) {
-            const factoryCallCreate = factoryCallCreateTemplate
-                .replace(/\[TypeVariableName\]/g, typeInfo.variableName)
-                .replace(/\[TypeName\]/g, typeInfo.typeName)
-                .replace(/\[Args\]/g, typeInfo.children.map(c => c.variableName).join(','));
-            if (!specArrangeVariables.find(x => x === factoryCallCreate)) {
-                specArrangeVariables.unshift(factoryCallCreate);
-            }
-        }
-    });
-
     specArrangeVariables.unshift(specVariablesTemplate
         .replace(/\[VariableNames\]/g, Object.keys(specVariableValues),join(','))
         .replace(/\[SpecVariablesPath\]/g, info.specVariablesPath.replace(/\\/g,'\\\\')));
@@ -175,15 +159,22 @@ for(const info of getDependencyTree()) {
         .replace(/\[Args\]/g, info.children.map(x => x.variableName) )
         .replace(/\[ScriptPath\]/g, info.scriptPath.replace(/\\/g,'\\\\'))
         .replace(/\[TypeName\]/g, info.typeName)
-        .replace(/\[FactoryCalls\]/g, factoryCalls)
-        .replace(/\[SimpleArgs\]/g, simpleArgs);
+        .replace(/\[FactoryCalls\]/g, factoryCalls.join('\r\n'))
+        .replace(/\[SimpleArgs\]/g, simpleArgs)
+        .replace(/\[FactoryRequireScripts\]/g, factoryRequireScripts.join('\r\n'));
     writeFileSync(info.factoryScriptPath, factory, 'utf8');
+
+    factoryRequireScripts = [];
+    factoryRequireScripts.push(factoryRequireTemplate
+        .replace(/\[TypeName\]/g, info.typeName)
+        .replace(/\[RequireScriptPath\]/g, info.factoryScriptPath.replace(/\\/g,'\\\\'))
+    );
 
     const factorySpec = factorySpecTemplate
         .replace(/\[ScriptPath\]/g, info.factoryScriptPath.replace(/\\/g,'\\\\'))
         .replace(/\[TypeName\]/g, info.typeName)
-        .replace(/\[Args\]/g, `{ ${info.children.map( x => x.variableName )} }` )
-        .replace(/\[FactoryRequireScripts\]/g, factoryRequireScripts.join('\r\n'))
-        .replace(/\[SpecArrangeVariables\]/g, specArrangeVariables.join('\r\n'));
+        .replace(/\[Args\]/g, simpleArgs )
+        .replace(/\[SpecArrangeVariables\]/g, specArrangeVariables.join('\r\n'))
+        .replace(/\[FactoryRequireScripts\]/g, factoryRequireScripts.join('\r\n'));
     writeFileSync(info.specScriptPath, factorySpec, 'utf8');
 }

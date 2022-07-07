@@ -5,7 +5,7 @@ describe('when asking the Subscription factory to create an instance', function(
     const {channelName} = require('C:\\component\\spec\\factory\\subscription.factory.spec.variables.json');
 
     // Act
-    const instance = createSubscription({ channelName });
+    const instance = createSubscription(channelName);
     // Assert
     expect(instance).not.toBeNull();
   });

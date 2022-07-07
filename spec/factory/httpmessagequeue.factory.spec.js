@@ -5,7 +5,7 @@ describe('when asking the HttpMessageQueue factory to create an instance', funct
     const {} = require('C:\\component\\spec\\factory\\httpmessagequeue.factory.spec.variables.json');
 
     // Act
-    const instance = createHttpMessageQueue({  });
+    const instance = createHttpMessageQueue();
     // Assert
     expect(instance).not.toBeNull();
   });

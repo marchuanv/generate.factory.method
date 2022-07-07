@@ -5,7 +5,7 @@ describe('when asking the Address factory to create an instance', function() {
     const {host,port} = require('C:\\component\\spec\\factory\\address.factory.spec.variables.json');
 
     // Act
-    const instance = createAddress({ host,port });
+    const instance = createAddress(host,port);
     // Assert
     expect(instance).not.toBeNull();
   });

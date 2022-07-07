@@ -1,3 +1,4 @@
+[FactoryRequireScripts]
 const { [TypeName] } = require('[ScriptPath]');
 function create[TypeName]({[SimpleArgs]}) {
     [FactoryCalls]
