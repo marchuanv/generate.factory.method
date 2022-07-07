@@ -2,10 +2,11 @@
 describe("when opening an http connection and sending and http request given a hostname and port number", function() {
     const recipientAddress = { host: 'localhost', port: 3000 };
     const hostAddress = { host: 'localhost', port: 3000 };
+    const userId = 'joe';
     beforeAll(async () => {
         const timeout = 3000;
         const { createHttpConnection } = require('../../lib/factory/httpconnection.factory.js');
-        const { httpConnection, messageQueue } = createHttpConnection({ hostAddress, timeout });
+        const { httpConnection, messageQueue } = createHttpConnection({ hostAddress, userId, timeout });
         this.httpConnection = httpConnection;
         this.messageQueue = messageQueue;
         await this.httpConnection.open();
@@ -27,11 +28,11 @@ describe("when opening an http connection and sending and http request given a h
         // Arrange
         expect(this.httpConnection.isOpen()).toBeTruthy();
         this.messageQueue.dequeueRequestMessage().then(({ httpRequestMessage }) => {
+            expect(httpRequestMessage).not.toBeNull();
+            const { createHttpResponseMessage } = require('../../lib/factory/httpresponsemessage.factory');
             const data = 'Hello World from Server';
-            const headers = {};
-            const httpResponseMessage = this.factory.httpmessagefactory.createHttpResponseMessage({ data, headers });
+            const httpResponseMessage = createHttpResponseMessage({ userId, data, metadata: {}, messageStatusCode: 0 });
             this.messageQueue.enqueueResponseMessage({ httpResponseMessage });
-            console.log('test received response');
         });
 
         // Act
