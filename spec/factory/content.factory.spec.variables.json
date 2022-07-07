@@ -1,5 +1,5 @@
 {
-    "userId": null,
-    "data": null,
+    "userId": "joe",
+    "data": "Hello World",
     "metadata": null
 }
