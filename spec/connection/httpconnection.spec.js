@@ -35,7 +35,7 @@ describe("when opening an http connection and sending and http request given a h
         });
 
         // Act
-        await this.messageQueue.enqueueRawRequest({ 
+        await this.messageQueue.enqueueRawHttpRequest({ 
             path: '/',
             headers: { sender: recipientAddress },
             method: 'POST',

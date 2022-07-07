@@ -7,5 +7,7 @@
             "port": 4000
         }
     },
-    "messageStatusCode": 0
+    "messageStatusCode": 0,
+    "method": "POST",
+    "path": "/test"
 }
