@@ -1,5 +1,6 @@
-const { [typename] } = require('[scriptpath]');
-function create[typename]([args]) {
-    return new [typename]([args]);
+const { [TypeName] } = require('[ScriptPath]');
+function create[TypeName]({[SimpleArgs]}) {
+
+    return new [TypeName]({[Args]});
 }
-module.exports = { create[typename] };
+module.exports = { create[TypeName] };

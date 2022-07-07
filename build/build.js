@@ -111,10 +111,18 @@ for(const info of getDependencyTree()) {
         continue;
     }
 
+    const simpleArgs = [];
+    walkDependencyTree(info, (typeInfo) => {
+        if (!typeInfo.scriptPath) {
+            simpleArgs.push(typeInfo.variableName);
+        }
+    });
+
     const factory = factoryTemplate
-        .replace(/\[args\]/g, `{ ${info.children.map(x => x.variableName)} }` )
-        .replace(/\[scriptpath\]/g, info.scriptPath.replace(/\\/g,'\\\\'))
-        .replace(/\[typename\]/g, info.typeName);
+        .replace(/\[Args\]/g, info.children.map(x => x.variableName) )
+        .replace(/\[ScriptPath\]/g, info.scriptPath.replace(/\\/g,'\\\\'))
+        .replace(/\[TypeName\]/g, info.typeName)
+        .replace(/\[SimpleArgs\]/g, simpleArgs);
     writeFileSync(info.factoryScriptPath, factory, 'utf8');
 
     //Require Scripts
