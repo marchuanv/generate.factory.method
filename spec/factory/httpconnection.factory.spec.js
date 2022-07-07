@@ -3,9 +3,9 @@ const { createHttpConnection } = require('C:\\component\\lib\\factory\\httpconne
 describe('when asking HttpConnection to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
-    const httpMessageQueue = createHttpMessageQueue({});
-const {timeout,hostAddress} = require('C:\\component\\spec\\factory\\httpconnection.factory.spec.variables.json');
+    const {timeout,hostAddress} = require('C:\\component\\spec\\factory\\httpconnection.factory.spec.variables.json');
 
+const httpMessageQueue = createHttpMessageQueue({});
     // Act
     const instance = createHttpConnection({ timeout,httpMessageQueue,hostAddress });
     // Assert

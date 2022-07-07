@@ -98,19 +98,10 @@ function getDependencyTree(typeInfo, pass = 'firstpass', types = []) {
     return getDependencyTree(null, pass, types);
 }
 
-function walkDependencyTree(parent, callback, tracks = [], level = 0) {
+function walkDependencyTree(parent, callback) {
     for(const child of parent.children) {
-        if (!tracks.find(track => track.info.typeName === child.typeName)) {
-            tracks.push({ level, info: child });
-        }
-        walkDependencyTree(child, callback, tracks, level + 1);
-    }
-    const isRoot = tracks.find(track => track.info.typeName === parent.typeName) === undefined;
-    if (isRoot) {
-        const orderedTracks = tracks.sort((a, b) => b.level - a.level);
-        for(const track of orderedTracks) {
-            callback(track.info);
-        }
+        callback(child);
+        walkDependencyTree(child, callback);
     }
 }
 
@@ -130,10 +121,12 @@ for(const info of getDependencyTree()) {
     const factoryRequireScripts = [];
     walkDependencyTree(info, (typeInfo) => {
         if (typeInfo.scriptPath) {
-            factoryRequireScripts.push(factoryRequireTemplate
+            const factoryRequire = factoryRequireTemplate
                 .replace(/\[TypeName\]/g, typeInfo.typeName)
-                .replace(/\[RequireScriptPath\]/g, typeInfo.factoryScriptPath.replace(/\\/g,'\\\\'))
-            );
+                .replace(/\[RequireScriptPath\]/g, typeInfo.factoryScriptPath.replace(/\\/g,'\\\\'));
+            if (!factoryRequireScripts.find(x => x === factoryRequire)) {
+                factoryRequireScripts.push(factoryRequire);
+            }
         }
     });
 
@@ -142,32 +135,37 @@ for(const info of getDependencyTree()) {
         .replace(/\[RequireScriptPath\]/g, info.factoryScriptPath.replace(/\\/g,'\\\\'))
     );
 
-    const specArrangeVariables = [];
-    walkDependencyTree(info, (typeInfo) => {
-        if (typeInfo.scriptPath) {
-            specArrangeVariables.push(factoryCallCreateTemplate
-                .replace(/\[TypeVariableName\]/g, typeInfo.variableName)
-                .replace(/\[TypeName\]/g, typeInfo.typeName)
-                .replace(/\[Args\]/g, typeInfo.children.map(c => c.variableName).join(','))
-            );
-        }
-    });
-
     let specVariableValues = {};
     if (existsSync(info.specVariablesPath)) {
         specVariableValues = require(info.specVariablesPath);
     }
-    for(const child of info.children.filter(child => !child.scriptPath)) {
-        if (specVariableValues[child.variableName] === undefined) {
-            specVariableValues[child.variableName] = null;
+    walkDependencyTree(info,(typeInfo) => {
+        if (!typeInfo.scriptPath) {
+            if (specVariableValues[typeInfo.variableName] === undefined) {
+                specVariableValues[typeInfo.variableName] = null;
+            }
         }
-    }
+    });
+
     writeFileSync(info.specVariablesPath, utils.getJSONString(specVariableValues), 'utf8');
 
-    specArrangeVariables.push(specVariablesTemplate
+    let specArrangeVariables = [];
+
+    walkDependencyTree(info, (typeInfo) => {
+        if (typeInfo.scriptPath) {
+            const factoryCallCreate = factoryCallCreateTemplate
+                .replace(/\[TypeVariableName\]/g, typeInfo.variableName)
+                .replace(/\[TypeName\]/g, typeInfo.typeName)
+                .replace(/\[Args\]/g, typeInfo.children.map(c => c.variableName).join(','));
+            if (!specArrangeVariables.find(x => x === factoryCallCreate)) {
+                specArrangeVariables.unshift(factoryCallCreate);
+            }
+        }
+    });
+
+    specArrangeVariables.unshift(specVariablesTemplate
         .replace(/\[VariableNames\]/g, Object.keys(specVariableValues),join(','))
-        .replace(/\[SpecVariablesPath\]/g, info.specVariablesPath.replace(/\\/g,'\\\\'))
-    );
+        .replace(/\[SpecVariablesPath\]/g, info.specVariablesPath.replace(/\\/g,'\\\\')));
 
     const factorySpec = factorySpecTemplate
         .replace(/\[ScriptPath\]/g, info.factoryScriptPath.replace(/\\/g,'\\\\'))

@@ -3,9 +3,9 @@ const { createEncryption } = require('C:\\component\\lib\\factory\\encryption.fa
 describe('when asking Encryption to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
-    const userIdentity = createUserIdentity({userId});
-const {} = require('C:\\component\\spec\\factory\\encryption.factory.spec.variables.json');
+    const {userId} = require('C:\\component\\spec\\factory\\encryption.factory.spec.variables.json');
 
+const userIdentity = createUserIdentity({userId});
     // Act
     const instance = createEncryption({ userIdentity });
     // Assert

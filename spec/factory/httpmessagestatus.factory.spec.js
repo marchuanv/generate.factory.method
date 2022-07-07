@@ -3,9 +3,9 @@ const { createHttpMessageStatus } = require('C:\\component\\lib\\factory\\httpme
 describe('when asking HttpMessageStatus to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
-    const messageStatus = createMessageStatus({code});
-const {} = require('C:\\component\\spec\\factory\\httpmessagestatus.factory.spec.variables.json');
+    const {code} = require('C:\\component\\spec\\factory\\httpmessagestatus.factory.spec.variables.json');
 
+const messageStatus = createMessageStatus({code});
     // Act
     const instance = createHttpMessageStatus({ messageStatus });
     // Assert
