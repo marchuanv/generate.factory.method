@@ -23,7 +23,7 @@ describe("when opening an http connection and sending and http request given a h
         expect(address.address).toEqual('127.0.0.1');
     });
 
-    it("it should have a queued request and response", async () => {
+    it("it should have respond the a queued request", async () => {
      
         // Arrange
         expect(this.httpConnection.isOpen()).toBeTruthy();
