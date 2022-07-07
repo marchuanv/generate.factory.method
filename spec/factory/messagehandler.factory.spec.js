@@ -10,8 +10,8 @@ describe('when asking MessageHandler to create an instance', function() {
     // Arrange
     const httpMessageQueue = createHttpMessageQueue({});
 const websocketMessageQueue = createWebSocketMessageQueue({});
-const httpConnection = createHttpConnection({httpMessageQueuehostAddress,timeout,httpMessageQueue,hostAddress});
-const websocketConnection = createWebSocketConnection({websocketMessageQueuehostAddress,timeout,websocketMessageQueue,hostAddress});
+const httpConnection = createHttpConnection({timeout,httpMessageQueue,hostAddress});
+const websocketConnection = createWebSocketConnection({timeout,websocketMessageQueue,hostAddress});
 const httpMessageHandler = createHttpMessageHandler({httpConnection,httpMessageQueue});
 const webSocketMessageHandler = createWebSocketMessageHandler({websocketConnection,websocketMessageQueue});
 const {} = require('C:\\component\\spec\\factory\\messagehandler.factory.spec.variables.json');

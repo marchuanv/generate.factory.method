@@ -6,7 +6,7 @@ describe('when asking Message to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
     const encryption = createEncryption({});
-const content = createContent({datametadata,encryption,data,metadata});
+const content = createContent({encryption,data,metadata});
 const messageStatus = createMessageStatus({});
 const {} = require('C:\\component\\spec\\factory\\message.factory.spec.variables.json');
 

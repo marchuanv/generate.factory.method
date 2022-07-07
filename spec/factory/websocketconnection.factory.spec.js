@@ -7,7 +7,7 @@ describe('when asking WebSocketConnection to create an instance', function() {
 const {websocketMessageQueuehostAddress,timeout,hostAddress} = require('C:\\component\\spec\\factory\\websocketconnection.factory.spec.variables.json');
 
     // Act
-    const instance = createWebSocketConnection({ websocketMessageQueuehostAddress,timeout,websocketMessageQueue,hostAddress });
+    const instance = createWebSocketConnection({ timeout,websocketMessageQueue,hostAddress });
     // Assert
     expect(instance).not.toBeNull();
   });

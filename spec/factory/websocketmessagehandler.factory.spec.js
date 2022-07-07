@@ -5,7 +5,7 @@ describe('when asking WebSocketMessageHandler to create an instance', function()
   it("it should succeed without any errors", function() {
     // Arrange
     const websocketMessageQueue = createWebSocketMessageQueue({});
-const websocketConnection = createWebSocketConnection({websocketMessageQueuehostAddress,timeout,websocketMessageQueue,hostAddress});
+const websocketConnection = createWebSocketConnection({timeout,websocketMessageQueue,hostAddress});
 const {} = require('C:\\component\\spec\\factory\\websocketmessagehandler.factory.spec.variables.json');
 
     // Act
