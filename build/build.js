@@ -32,33 +32,37 @@ function getDependencyTree(typeInfo, pass = 'firstpass', types = []) {
             const factoryScriptPath = path.join(libDir, 'factory', factoryScriptName);
             const specScriptPath = path.join(specsFactoryDir, specScriptName);
             const specVariablesPath =  path.join(specsFactoryDir, `${scriptName}.factory.spec.variables.json`);
-            const sc = require(scriptPath);
-            const key = Object.keys(sc)[0];
-            const type = sc[key];
-            const parameters = utils.getFunctionParams(type) || [];
-            const children = parameters.map(param => utils.getJSONObject(typeInfoTemplate
-                .replace(/\[TypeName\]/g, param.name)
-                .replace(/\[ScriptPath\]/g,'')
-                .replace(/\[FactoryScriptPath\]/g,'')
-                .replace(/\[SpecScriptPath\]/g,'')
-                .replace(/\[SpecVariablesPath\]/g,'')
-                .replace(/\[ChildrenArray\]/g,'')
-                .replace(/\[PassesArray\]/g,'')
-                .replace(/\[VariableName\]/g, param.name)
-                .replace(/\[VariableValue\]/g, '')
-            ));
-            typeInfo = utils.getJSONObject(typeInfoTemplate
-                .replace(/\[TypeName\]/g, type.name)
-                .replace(/\[ScriptPath\]/g, scriptPath.replace(/\\/g,'\\\\') )
-                .replace(/\[FactoryScriptPath\]/g, factoryScriptPath.replace(/\\/g,'\\\\'))
-                .replace(/\[SpecScriptPath\]/g, specScriptPath.replace(/\\/g,'\\\\'))
-                .replace(/\[SpecVariablesPath\]/g, specVariablesPath.replace(/\\/g,'\\\\'))
-                .replace(/\[ChildrenArray\]/g, children.map(child => utils.getJSONString(child)).join(','))
-                .replace(/\[PassesArray\]/g, [])
-                .replace(/\[VariableName\]/g, '')
-                .replace(/\[VariableValue\]/g, '')
-            );
-            types = types.concat(children).concat(typeInfo);
+            try {
+                const sc = require(scriptPath);
+                const key = Object.keys(sc)[0];
+                const type = sc[key];
+                const parameters = utils.getFunctionParams(type) || [];
+                const children = parameters.map(param => utils.getJSONObject(typeInfoTemplate
+                    .replace(/\[TypeName\]/g, param.name)
+                    .replace(/\[ScriptPath\]/g,'')
+                    .replace(/\[FactoryScriptPath\]/g,'')
+                    .replace(/\[SpecScriptPath\]/g,'')
+                    .replace(/\[SpecVariablesPath\]/g,'')
+                    .replace(/\[ChildrenArray\]/g,'')
+                    .replace(/\[PassesArray\]/g,'')
+                    .replace(/\[VariableName\]/g, param.name)
+                    .replace(/\[VariableValue\]/g, '')
+                ));
+                typeInfo = utils.getJSONObject(typeInfoTemplate
+                    .replace(/\[TypeName\]/g, type.name)
+                    .replace(/\[ScriptPath\]/g, scriptPath.replace(/\\/g,'\\\\') )
+                    .replace(/\[FactoryScriptPath\]/g, factoryScriptPath.replace(/\\/g,'\\\\'))
+                    .replace(/\[SpecScriptPath\]/g, specScriptPath.replace(/\\/g,'\\\\'))
+                    .replace(/\[SpecVariablesPath\]/g, specVariablesPath.replace(/\\/g,'\\\\'))
+                    .replace(/\[ChildrenArray\]/g, children.map(child => utils.getJSONString(child)).join(','))
+                    .replace(/\[PassesArray\]/g, [])
+                    .replace(/\[VariableName\]/g, '')
+                    .replace(/\[VariableValue\]/g, '')
+                );
+                types = types.concat(children).concat(typeInfo);
+            } catch (err) {
+                console.log(`errors loading the ${scriptPath} script.`);
+            }
         }
         else {
             typeInfo = types.find(inf =>  inf.passes.find(p => p === pass) === undefined);
@@ -91,6 +95,9 @@ function getDependencyTree(typeInfo, pass = 'firstpass', types = []) {
                 }
             });
         }
+        for(const type of types.filter(inf => !inf.variableName)) {
+            type.variableName = `${type.typeName.split('')[0].toLowerCase()}${type.typeName.split('').splice(1,999).join('')}`;
+        }
         return types;
     }
     typeInfo.passes.push(pass);
@@ -116,6 +123,7 @@ for(const info of getDependencyTree()) {
     }
 
     const simpleArgs = [];
+    const refArgs = [];
     const factoryCalls = [];
     let factoryRequireScripts =[];
     walkDependencyTree(info, (typeInfo, breakCallback) => {
@@ -141,10 +149,13 @@ for(const info of getDependencyTree()) {
             if (!factoryRequireScripts.find(x => x === factoryRequire)) {
                 factoryRequireScripts.push(factoryRequire);
             }
+            if (!refArgs.find(x => x === typeInfo.variableName)) {
+                refArgs.push(typeInfo.variableName);
+            }
            breakCallback();
         }
     });
-    walkDependencyTree(info, (typeInfo, breakCallback) => {
+    walkDependencyTree(info, (typeInfo) => {
         if (!typeInfo.scriptPath) {
             if (!simpleArgs.find(x => x === typeInfo.variableName)) {
                 simpleArgs.push(typeInfo.variableName);
@@ -176,7 +187,9 @@ for(const info of getDependencyTree()) {
         .replace(/\[TypeName\]/g, info.typeName)
         .replace(/\[FactoryCalls\]/g, factoryCalls.join('\r\n'))
         .replace(/\[SimpleArgs\]/g, simpleArgs)
-        .replace(/\[FactoryRequireScripts\]/g, factoryRequireScripts.join('\r\n'));
+        .replace(/\[TypeVariableName\]/g, info.variableName)
+        .replace(/\[FactoryRequireScripts\]/g, factoryRequireScripts.join('\r\n'))
+        .replace(/\[ReturnVariables\]/g, refArgs.concat([info.variableName]));
     writeFileSync(info.factoryScriptPath, factory, 'utf8');
 
     factoryRequireScripts = [];

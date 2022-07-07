@@ -5,7 +5,9 @@ describe("when opening an http connection and sending and http request given a h
     beforeAll(async () => {
         const timeout = 3000;
         const { createHttpConnection } = require('../../lib/factory/httpconnection.factory.js');
-        this.httpConnection = createHttpConnection({ hostAddress, timeout });
+        const { httpConnection, httpMessageQueue } = createHttpConnection({ hostAddress, timeout });
+        this.httpConnection = httpConnection;
+        this.httpMessageQueue = httpMessageQueue;
         await this.httpConnection.open();
     });
     it("it should return the server host address", () => {
@@ -24,16 +26,16 @@ describe("when opening an http connection and sending and http request given a h
      
         // Arrange
         expect(this.httpConnection.isOpen()).toBeTruthy();
-        this.factory.httpmessagequeue.dequeueRequestMessage().then(({ httpRequestMessage }) => {
+        this.httpMessageQueue.dequeueRequestMessage().then(({ httpRequestMessage }) => {
             const data = 'Hello World from Server';
             const headers = {};
             const httpResponseMessage = this.factory.httpmessagefactory.createHttpResponseMessage({ data, headers });
-            this.factory.httpmessagequeue.enqueueResponseMessage({ httpResponseMessage });
+            this.httpMessageQueue.enqueueResponseMessage({ httpResponseMessage });
             console.log('test received response');
         });
 
         // Act
-        await this.factory.httpmessagequeue.enqueueRawRequest({ 
+        await this.httpMessageQueue.enqueueRawRequest({ 
             path: '/',
             headers: { sender: recipientAddress },
             method: 'POST',
@@ -41,7 +43,7 @@ describe("when opening an http connection and sending and http request given a h
         });
 
         // Assert
-        const { httpResponseMessage } = await this.factory.httpmessagequeue.dequeueResponseMessage();
+        const { httpResponseMessage } = await this.httpMessageQueue.dequeueResponseMessage();
         expect(httpResponseMessage.getContent()).toEqual('Hello World from Server');
     });
     

@@ -2,6 +2,7 @@
 const { [TypeName] } = require('[ScriptPath]');
 function create[TypeName]({[SimpleArgs]}) {
     [FactoryCalls]
-    return new [TypeName]({[Args]});
+    const [TypeVariableName] = new [TypeName]({[Args]});
+    return {[ReturnVariables]};
 }
 module.exports = { create[TypeName] };
