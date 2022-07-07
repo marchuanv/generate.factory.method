@@ -1,9 +1,5 @@
 {
-    "name": null,
-    "callback": null,
-    "hostAddress": {
-        "host": "localhost",
-        "port": 3000
-    },
-    "timeout": 5000
+    "httpMessageQueuehostAddress": null,
+    "timeout": null,
+    "hostAddress": null
 }

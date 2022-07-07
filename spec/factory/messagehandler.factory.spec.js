@@ -8,13 +8,13 @@ const { createMessageHandler } = require('C:\\component\\lib\\factory\\messageha
 describe('when asking MessageHandler to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
-    const httpMessageQueue = createHttpMessageQueue({name,callback});
+    const httpMessageQueue = createHttpMessageQueue({});
 const websocketMessageQueue = createWebSocketMessageQueue({});
-const httpConnection = createHttpConnection({httpMessageQueue,hostAddress,timeout});
-const websocketConnection = createWebSocketConnection({websocketMessageQueue,hostAddress,timeout});
+const httpConnection = createHttpConnection({httpMessageQueuehostAddress,timeout,httpMessageQueue,hostAddress});
+const websocketConnection = createWebSocketConnection({websocketMessageQueuehostAddress,timeout,websocketMessageQueue,hostAddress});
 const httpMessageHandler = createHttpMessageHandler({httpConnection,httpMessageQueue});
 const webSocketMessageHandler = createWebSocketMessageHandler({websocketConnection,websocketMessageQueue});
-const {name,callback,hostAddress,timeout} = require('C:\\component\\spec\\factory\\messagehandler.factory.spec.variables.json');
+const {} = require('C:\\component\\spec\\factory\\messagehandler.factory.spec.variables.json');
 
     // Act
     const instance = createMessageHandler({ httpMessageHandler,webSocketMessageHandler });

@@ -4,9 +4,9 @@ const { createHttpMessageHandler } = require('C:\\component\\lib\\factory\\httpm
 describe('when asking HttpMessageHandler to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
-    const httpMessageQueue = createHttpMessageQueue({name,callback});
-const httpConnection = createHttpConnection({httpMessageQueue,hostAddress,timeout});
-const {name,callback,hostAddress,timeout} = require('C:\\component\\spec\\factory\\httpmessagehandler.factory.spec.variables.json');
+    const httpMessageQueue = createHttpMessageQueue({});
+const httpConnection = createHttpConnection({httpMessageQueuehostAddress,timeout,httpMessageQueue,hostAddress});
+const {} = require('C:\\component\\spec\\factory\\httpmessagehandler.factory.spec.variables.json');
 
     // Act
     const instance = createHttpMessageHandler({ httpConnection,httpMessageQueue });
