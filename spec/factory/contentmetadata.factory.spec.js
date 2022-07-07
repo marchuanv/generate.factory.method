@@ -5,7 +5,7 @@ describe('when asking the ContentMetadata factory to create an instance', functi
     const {metadata,data} = require('C:\\component\\spec\\factory\\contentmetadata.factory.spec.variables.json');
 
     // Act
-    const instance = createContentMetadata(metadata,data);
+    const instance = createContentMetadata({metadata,data});
     // Assert
     expect(instance).not.toBeNull();
   });

@@ -130,11 +130,11 @@ for(const info of getDependencyTree()) {
                 factoryRequireScripts.push(factoryRequire);
             }
         } else {
-            simpleArgs.push(typeInfo.variableName);
+            if (!simpleArgs.find(x => x === typeInfo.variableName)) {
+                simpleArgs.push(typeInfo.variableName);
+            }
         }
     });
-
-   
 
     let specVariableValues = {};
     if (existsSync(info.specVariablesPath)) {
@@ -147,7 +147,6 @@ for(const info of getDependencyTree()) {
             }
         }
     });
-
     writeFileSync(info.specVariablesPath, utils.getJSONString(specVariableValues), 'utf8');
 
     let specArrangeVariables = [];

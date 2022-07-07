@@ -5,7 +5,7 @@ describe('when asking the WebSocketMessageQueue factory to create an instance', 
     const {} = require('C:\\component\\spec\\factory\\websockMessageQueue.factory.spec.variables.json');
 
     // Act
-    const instance = createWebSocketMessageQueue();
+    const instance = createWebSocketMessageQueue({});
     // Assert
     expect(instance).not.toBeNull();
   });

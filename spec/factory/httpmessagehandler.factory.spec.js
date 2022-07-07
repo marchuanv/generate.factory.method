@@ -5,7 +5,7 @@ describe('when asking the HttpMessageHandler factory to create an instance', fun
     const {timeout,hostAddress} = require('C:\\component\\spec\\factory\\httpmessagehandler.factory.spec.variables.json');
 
     // Act
-    const instance = createHttpMessageHandler(timeout,hostAddress);
+    const instance = createHttpMessageHandler({timeout,hostAddress});
     // Assert
     expect(instance).not.toBeNull();
   });

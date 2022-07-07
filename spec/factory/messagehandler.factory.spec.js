@@ -5,7 +5,7 @@ describe('when asking the MessageHandler factory to create an instance', functio
     const {timeout,hostAddress} = require('C:\\component\\spec\\factory\\messagehandler.factory.spec.variables.json');
 
     // Act
-    const instance = createMessageHandler(timeout,hostAddress,timeout,hostAddress);
+    const instance = createMessageHandler({timeout,hostAddress});
     // Assert
     expect(instance).not.toBeNull();
   });
