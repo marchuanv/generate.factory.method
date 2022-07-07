@@ -29,10 +29,8 @@ describe("when opening an http connection and sending and http request given a h
         expect(this.httpConnection.isOpen()).toBeTruthy();
         this.messageQueue.dequeueRequestMessage().then(({ httpRequestMessage }) => {
             expect(httpRequestMessage).not.toBeNull();
-            const { createHttpResponseMessage } = require('../../lib/factory/httpresponsemessage.factory');
             const data = 'Hello World from Server';
-            const httpResponseMessage = createHttpResponseMessage({ userId, data, metadata: {}, messageStatusCode: 0 });
-            this.messageQueue.enqueueResponseMessage({ httpResponseMessage });
+            this.messageQueue.enqueueRawHttpResponse({ data, headers: {} });
         });
 
         // Act
