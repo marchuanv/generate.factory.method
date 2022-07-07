@@ -3,7 +3,7 @@ const { createEncryption } = require('C:\\component\\lib\\factory\\encryption.fa
 const { createUserIdentity } = require('C:\\component\\lib\\factory\\useridentity.factory.js');
 const { createMessageStatus } = require('C:\\component\\lib\\factory\\messagestatus.factory.js');
 const { createMessage } = require('C:\\component\\lib\\factory\\message.factory.js');
-describe('when asking Message to create an instance', function() {
+describe('when asking the Message factory to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
     const {userId,data,metadata,code} = require('C:\\component\\spec\\factory\\message.factory.spec.variables.json');

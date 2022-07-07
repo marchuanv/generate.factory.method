@@ -1,5 +1,5 @@
 const { createSubscription } = require('C:\\component\\lib\\factory\\subscription.factory.js');
-describe('when asking Subscription to create an instance', function() {
+describe('when asking the Subscription factory to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
     const {channelName} = require('C:\\component\\spec\\factory\\subscription.factory.spec.variables.json');

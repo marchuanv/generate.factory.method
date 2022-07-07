@@ -1,5 +1,5 @@
 [FactoryRequireScripts]
-describe('when asking [TypeName] to create an instance', function() {
+describe('when asking the [TypeName] factory to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
     [SpecArrangeVariables]

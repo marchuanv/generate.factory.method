@@ -1,5 +1,5 @@
 const { createComponent } = require('C:\\component\\lib\\factory\\component.factory.js');
-describe('when asking Component to create an instance', function() {
+describe('when asking the Component factory to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
     const {packageJson} = require('C:\\component\\spec\\factory\\component.factory.spec.variables.json');

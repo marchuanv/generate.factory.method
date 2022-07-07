@@ -5,7 +5,7 @@ const { createWebSocketMessageHandler } = require('C:\\component\\lib\\factory\\
 const { createWebSocketConnection } = require('C:\\component\\lib\\factory\\websocketconnection.factory.js');
 const { createWebSocketMessageQueue } = require('C:\\component\\lib\\factory\\websockMessageQueue.factory.js');
 const { createMessageHandler } = require('C:\\component\\lib\\factory\\messagehandler.factory.js');
-describe('when asking MessageHandler to create an instance', function() {
+describe('when asking the MessageHandler factory to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
     const {timeout,hostAddress} = require('C:\\component\\spec\\factory\\messagehandler.factory.spec.variables.json');
