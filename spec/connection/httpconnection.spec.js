@@ -5,16 +5,16 @@ describe("when opening an http connection and sending and http request given a h
     beforeAll(async () => {
         const timeout = 3000;
         const { createHttpConnection } = require('../../lib/factory/httpconnection.factory.js');
-        this.httpconnection = createHttpConnection({ hostAddress, timeout });
-        await this.httpconnection.open();
+        this.httpConnection = createHttpConnection({ hostAddress, timeout });
+        await this.httpConnection.open();
     });
     it("it should return the server host address", () => {
      
         // Arrange
-        expect(this.httpconnection.isOpen()).toBeTruthy();
+        expect(this.httpConnection.isOpen()).toBeTruthy();
 
         // Act
-        const address = this.httpconnection.getServerAddress();
+        const address = this.httpConnection.getServerAddress();
    
         // Assert
         expect(address.address).toEqual('127.0.0.1');
@@ -23,7 +23,7 @@ describe("when opening an http connection and sending and http request given a h
     it("it should have a queued request and response", async () => {
      
         // Arrange
-        expect(this.httpconnection.isOpen()).toBeTruthy();
+        expect(this.httpConnection.isOpen()).toBeTruthy();
         this.factory.httpmessagequeue.dequeueRequestMessage().then(({ httpRequestMessage }) => {
             const data = 'Hello World from Server';
             const headers = {};
@@ -47,12 +47,12 @@ describe("when opening an http connection and sending and http request given a h
     
     xit("it should have a closed connection", () => {
         // Arrange
-        expect(connection.isOpen()).toBeTruthy();
+        expect(this.httpConnection.isOpen()).toBeTruthy();
 
         // Act
-        connection.close();
+        this.httpConnection.close();
 
         // Assert
-        expect(connection.isOpen()).toBeFalsy();
+        expect(this.httpConnection.isOpen()).toBeFalsy();
     });
 });
