@@ -1,5 +1,4 @@
 {
     "timeout": null,
-    "hostAddress": null,
-    "websocketMessageQueuehostAddress": null
+    "hostAddress": null
 }
