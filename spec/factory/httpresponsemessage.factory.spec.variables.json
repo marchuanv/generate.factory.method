@@ -1,6 +1,11 @@
 {
-    "userId": null,
-    "data": null,
-    "metadata": null,
-    "code": null
+    "userId": "joe",
+    "data": "Hello World",
+    "metadata": {
+        "sender": {
+            "host": "localhost",
+            "port": 4000
+        }
+    },
+    "code": 0
 }

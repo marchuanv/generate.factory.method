@@ -1,26 +1,20 @@
 
 describe("when opening an http connection and sending and http request given a hostname and port number", function() {
-    const recipientAddress = { address: 'localhost', port: 3000 };
-    const hostAddress = { address: 'localhost', family: 'IPv4', port: 3000 };
+    const recipientAddress = { host: 'localhost', port: 3000 };
+    const hostAddress = { host: 'localhost', port: 3000 };
     beforeAll(async () => {
-        // const userIdentity = factory.get(UserIdentity, { userId: 'admin' });
-        // userIdentity.authenticate({ secret: 'admin' });
-        // if (!userIdentity.isRegistered()){
-        //     userIdentity.register({ secret: 'admin' });
-        // }
-        this.factory = new Factory();
         const timeout = 3000;
-        this.factory.httpconnection.hostAddress = hostAddress;
-        this.factory.httpconnection.timeout = timeout;
-        await this.factory.httpconnection.open();
+        const { createHttpConnection } = require('../../lib/factory/httpconnection.factory.js');
+        this.httpconnection = createHttpConnection({ hostAddress, timeout });
+        await this.httpconnection.open();
     });
     it("it should return the server host address", () => {
      
         // Arrange
-        expect(this.factory.httpconnection.isOpen()).toBeTruthy();
+        expect(this.httpconnection.isOpen()).toBeTruthy();
 
         // Act
-        const address = factory.httpconnection.getServerAddress();
+        const address = this.httpconnection.getServerAddress();
    
         // Assert
         expect(address.address).toEqual('127.0.0.1');
@@ -29,7 +23,7 @@ describe("when opening an http connection and sending and http request given a h
     it("it should have a queued request and response", async () => {
      
         // Arrange
-        expect(this.factory.httpconnection.isOpen()).toBeTruthy();
+        expect(this.httpconnection.isOpen()).toBeTruthy();
         this.factory.httpmessagequeue.dequeueRequestMessage().then(({ httpRequestMessage }) => {
             const data = 'Hello World from Server';
             const headers = {};
