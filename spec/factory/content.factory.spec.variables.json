@@ -1,5 +1,10 @@
 {
     "userId": "joe",
     "data": "Hello World",
-    "metadata": null
+    "metadata": {
+        "sender": {
+            "host": "localhost",
+            "port": 4000
+        }
+    }
 }
