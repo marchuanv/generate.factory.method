@@ -23,11 +23,11 @@ describe("when opening an http connection and sending and http request given a h
         expect(address.address).toEqual('127.0.0.1');
     });
 
-    it("it should have respond the a queued request", async () => {
+    it("it should respond to a queued request", async () => {
      
         // Arrange
         expect(this.httpConnection.isOpen()).toBeTruthy();
-        this.messageQueue.dequeueRequestMessage().then(({ httpRequestMessage }) => {
+        this.messageQueue.dequeueHttpRequestMessage().then(({ httpRequestMessage }) => {
             expect(httpRequestMessage).not.toBeNull();
             const data = 'Hello World from Server';
             this.messageQueue.enqueueRawHttpResponse({ data, headers: {}, httpStatusCode: 200 });
@@ -42,7 +42,8 @@ describe("when opening an http connection and sending and http request given a h
         });
 
         // Assert
-        const { httpResponseMessage } = await this.messageQueue.dequeueResponseMessage();
+        const { httpResponseMessage } = await this.messageQueue.dequeueHttpResponseMessage();
+        expect(httpResponseMessage.getStatusCode()).toEqual(200);
         expect(httpResponseMessage.getContent()).toEqual('Hello World from Server');
     });
     
