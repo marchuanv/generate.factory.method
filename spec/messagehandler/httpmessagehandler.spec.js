@@ -1,22 +1,21 @@
 const { MessageStatus } = require("../../lib/messagestatus");
 
-xdescribe("when asking the http message handler to send and receive an http request messages", function() {
+describe("when asking the http message handler to send and receive an http request messages", function() {
   it("it should succeed without any errors", async function() {
     
     // Arrange
     const hostAddress = { address: 'localhost', port: 3000 };
-    const sender = { address: 'localhost', port: 3000 };
-    const httpMessageHandlerFactory = new HttpMessageHandlerFactory({ hostAddress, timeout: 5000 });
-    const { httpMessageHandler, httpMessageFactory } = httpMessageHandlerFactory.create();
+    const sender = { address: 'localhost', port: 4000 };
+    const userId = 'joe';
+    const { createHttpResponseMessage } = require('../../lib/factory/httpresponsemessage.factory');
+    const { createHttpMessageHandler } = require('../../lib/factory/httpmessagehandler.factory');
+
+    const { messageQueue, httpMessageHandler } = createHttpMessageHandler({ timeout: 5000, hostAddress, userId });
 
     httpMessageHandler.receive({ callback: ({ httpRequestMessage }) => {
       expect(httpRequestMessage).not.toBeNull();
-      const httpResponseMessage = httpMessageFactory.createHttpResponseMessage({ 
-        data: 'Hello From Server!',
-        headers: {},
-        messageStatus: new MessageStatus({ code: 0 })
-      });
-      return { httpResponseMessage };
+      const { httpResponseMessage } = createHttpResponseMessage({ userId, data: 'Hello World from Server', metadata: { sender }, messageStatusCode: 200 });
+      messageQueue.enqueueHttpResponseMessage({ httpResponseMessage });
     }});
 
     // Act
