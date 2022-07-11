@@ -2,7 +2,7 @@ const { createMessageHandler } = require('C:\\component\\lib\\factory\\messageha
 describe('when asking the MessageHandler factory to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
-    const {timeout,hostAddress,userId} = require('C:\\component\\spec\\factory\\messagehandler.factory.spec.variables.json');
+    const {timeout,hostAddress,userId,httpMessageHandler,webSocketMessageHandler} = require('C:\\component\\spec\\factory\\messagehandler.factory.spec.variables.json');
 
     // Act
     const instance = createMessageHandler({timeout,userId,hostAddress});
