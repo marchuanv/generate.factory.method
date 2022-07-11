@@ -5,8 +5,8 @@ xdescribe("when asking the message handler to send and receive request messages"
   it("it should succeed without any errors", async function() {
     
     // Arrange
-    const hostAddress = { host: 'localhost', port: 3000 };
-    const sender = { address: 'localhost', port: 3000 };
+    const hostAddress = { host: 'localhost', port: 7000 };
+    const sender = { host: 'localhost', port: 2000 };
     const httpMessageHandlerFactory = new HttpMessageHandlerFactory({ hostAddress, timeout: 3000 });
     const messageHandlerFactory = new MessageHandlerFactory({ httpMessageHandlerFactory, hostAddress });
     const messageHandler = messageHandlerFactory.createunsecure();
