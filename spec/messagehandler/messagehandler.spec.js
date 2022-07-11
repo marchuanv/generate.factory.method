@@ -15,7 +15,8 @@ describe("when asking the message handler to send and receive request messages",
 
     messageHandler.receive({ callback: ({ requestMessage }) => {
       expect(requestMessage).not.toBeNull();
-      return createMessage({ userId, data: epxectedData, metadata: { sender }, messageStatusCode: 200 });
+      const { message } = createMessage({ userId, data: epxectedData, metadata: { sender }, messageStatusCode: 200 });
+      return { responseMessage: message };
     }});
 
     //emulate server

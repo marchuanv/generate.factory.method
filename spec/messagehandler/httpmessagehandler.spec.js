@@ -13,7 +13,8 @@ describe("when asking the http message handler to send and receive an http reque
 
     httpMessageHandler.receive({ callback: ({ httpRequestMessage }) => {
       expect(httpRequestMessage).not.toBeNull();
-      return createMessage({ userId, data: epxectedData, metadata: { sender }, messageStatusCode: 200 });
+      const { message } = createMessage({ userId, data: epxectedData, metadata: { sender }, messageStatusCode: 200 });
+      return { responseMessage: message };
     }});
 
     //emulate server
