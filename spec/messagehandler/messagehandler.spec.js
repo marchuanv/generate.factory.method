@@ -1,29 +1,37 @@
-const { MessageStatus } = require("../../lib/messagestatus");
-const { Message } = require("../../lib/message");
+describe("when asking the message handler to send and receive request messages", function() {
+  
+  const sender = { host: 'localhost', port: 2000 };
+  const hostAddress = { host: 'localhost', port: 7000 };
+  const userId = 'joe';
+  const timeout = 5000;
 
-xdescribe("when asking the message handler to send and receive request messages", function() {
+  beforeAll(async () => {
+    const { createMessageHandler } = require('../../lib/factory/messagehandler.factory');
+    const { httpConnection, messageHandler } = createMessageHandler({ timeout, userId, hostAddress });
+    this.httpConnection = httpConnection;
+    this.messageHandler = messageHandler;
+    await this.httpConnection.open();
+  });
+
   it("it should succeed without any errors", async function() {
     
     // Arrange
-    const hostAddress = { host: 'localhost', port: 7000 };
-    const sender = { host: 'localhost', port: 2000 };
-    const httpMessageHandlerFactory = new HttpMessageHandlerFactory({ hostAddress, timeout: 3000 });
-    const messageHandlerFactory = new MessageHandlerFactory({ httpMessageHandlerFactory, hostAddress });
-    const messageHandler = messageHandlerFactory.createunsecure();
-
-    messageHandler.receive({ callback: ({ message }) => {
-      if (!(message instanceof Message)) {
-        throw new Error("the 'message' parameter is null, undefined or not of type: Message");
-      }
+    this.messageHandler.receive({ callback: ({ message }) => {
+      expect(message).not.toBeNull();
       const data = 'Hello From Server!';
       const metadata = {};
-      return messageFactory.create({ recipientAddress, data, metadata, messageStatus: new MessageStatus({ messageStatusCode: 0 }) });
+    
     }});
 
     // Act
-    const message = await messageHandler.send({ metadata: { sender }, data: 'Hello World!' });
+    const message = await this.messageHandler.send({ metadata: { sender }, data: 'Hello World!' });
 
     // Assert
     expect(message).not.toBeNull();
   });
+  
+  afterAll(async () => {
+    await this.httpConnection.close();
+  });
+
 });
