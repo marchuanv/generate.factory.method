@@ -1,5 +1,3 @@
-const { MessageStatus } = require("../../lib/messagestatus");
-
 describe("when asking the http message handler to send and receive an http request messages", function() {
   it("it should succeed without any errors", async function() {
     
