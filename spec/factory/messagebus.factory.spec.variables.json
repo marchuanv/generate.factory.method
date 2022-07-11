@@ -6,5 +6,6 @@
     },
     "userId": "joe",
     "httpMessageHandler": null,
-    "webSocketMessageHandler": null
+    "webSocketMessageHandler": null,
+    "channelName": null
 }
