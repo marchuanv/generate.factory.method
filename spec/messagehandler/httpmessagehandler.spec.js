@@ -15,7 +15,16 @@ describe("when asking the http message handler to send and receive an http reque
       expect(httpRequestMessage).not.toBeNull();
       return createHttpResponseMessage({ userId, data: epxectedData, metadata: { sender }, messageStatusCode: 200 });
     }});
-    const { httpRequestMessage } = createHttpRequestMessage({ method: 'POST', userId, data: 'Hello World!', metadata: { sender }, messageStatusCode: 2, path: 'test' });
+
+    //emulate server
+    const { httpRequestMessage } =  createHttpRequestMessage({ 
+                                        method: 'POST',
+                                        userId,
+                                        data: 'Hello World!',
+                                        metadata: { sender },
+                                        messageStatusCode: 2,
+                                        path: 'test'
+                                    });
     await messageQueue.enqueueHttpRequestMessage( { httpRequestMessage  });
 
     // Act
