@@ -1,1 +1,1 @@
-const {[TypeVariableNames]} = create[TypeName]({[Args]});
+factoryContainer.add(create[TypeName]({[Args]}));
