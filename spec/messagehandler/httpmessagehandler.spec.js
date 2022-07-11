@@ -25,7 +25,7 @@ describe("when asking the http message handler to send and receive an http reque
                                         messageStatusCode: 2,
                                         path: 'test'
                                     });
-    await messageQueue.enqueueHttpRequestMessage( { httpRequestMessage  });
+    await messageQueue.enqueueRequestMessage( { httpRequestMessage  });
 
     // Act
     const { httpResponseMessage } = await httpMessageHandler.send({ path: '/', headers: { sender }, method: 'POST', data: 'Hello World!' });

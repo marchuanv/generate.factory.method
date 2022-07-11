@@ -8,7 +8,8 @@ describe("when asking the message handler to send and receive request messages",
     const userId = 'joe';
     const timeout = 5000;
     const { createMessageHandler } = require('../../lib/factory/messagehandler.factory');
-    const { messageHandler } = createMessageHandler({ timeout, userId, hostAddress });
+    const { createHttpRequestMessage } = require('../../lib/factory/httprequestmessage.factory');
+    const { messageHandler, messageQueue } = createMessageHandler({ timeout, userId, hostAddress });
 
     messageHandler.receive({ callback: ({ message }) => {
       expect(message).not.toBeNull();
@@ -19,7 +20,7 @@ describe("when asking the message handler to send and receive request messages",
 
     //emulate server
     const { httpRequestMessage } = createHttpRequestMessage({ method: 'POST', userId, data: 'Hello World!', metadata: { sender }, messageStatusCode: 2, path: 'test' });
-    await messageQueue.enqueueHttpRequestMessage( { httpRequestMessage  });
+    await messageQueue.enqueueRequestMessage( { httpRequestMessage  });
 
     // Act
     const message = await messageHandler.send({ metadata: { sender }, data: 'Hello World!' });
