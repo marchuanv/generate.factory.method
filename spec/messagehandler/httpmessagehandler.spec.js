@@ -8,16 +8,18 @@ describe("when asking the http message handler to send and receive an http reque
     const { createHttpMessageHandler } = require('../../lib/factory/httpmessagehandler.factory');
     const { httpConnection, httpMessageHandler } = createHttpMessageHandler({ timeout: 5000, hostAddress, userId });
     this.httpConnection = httpConnection;
-    await this.httpConnection.open();
     this.httpMessageHandler = httpMessageHandler;
+    await this.httpConnection.open();
   });
-  it("it should succeed without any errors", async function() {
+
+  it("it should succeed without any errors", async () => {
     
     // Arrange
+    const epxectedData = 'Hello World From Server';
     const { createHttpResponseMessage } = require('../../lib/factory/httpresponsemessage.factory');
     this.httpMessageHandler.receive({ callback: ({ httpRequestMessage }) => {
       expect(httpRequestMessage).not.toBeNull();
-      return createHttpResponseMessage({ userId, data: 'Hello World from Server', metadata: { sender }, messageStatusCode: 200 });
+      return createHttpResponseMessage({ userId, data: epxectedData, metadata: { sender }, messageStatusCode: 200 });
     }});
 
     // Act
@@ -25,9 +27,11 @@ describe("when asking the http message handler to send and receive an http reque
 
     // Assert
     expect(httpResponseMessage).not.toBeNull();
-    expect(httpResponseMessage.getContent()).toEqual('Hello From Server!');
+    expect(httpResponseMessage.getContent()).toEqual(epxectedData);
   });
+
   beforeAll(async () => {
     await this.httpConnection.close();
   });
+
 });

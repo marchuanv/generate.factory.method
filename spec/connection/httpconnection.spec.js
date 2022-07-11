@@ -1,4 +1,3 @@
-
 describe("when opening an http connection and sending and http request given a hostname and port number", function() {
     const recipientAddress = { host: 'localhost', port: 3000 };
     const hostAddress = { host: 'localhost', port: 3000 };
