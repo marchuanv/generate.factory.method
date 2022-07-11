@@ -5,8 +5,8 @@ describe('when asking the MessageBus factory to create an instance', function() 
     const {timeout,hostAddress,userId,httpMessageHandler,webSocketMessageHandler} = require('C:\\component\\spec\\factory\\messagebus.factory.spec.variables.json');
 
     // Act
-    const instance = createMessageBus({userId,timeout,hostAddress});
+    const {messageBus} = createMessageBus({userId,timeout,hostAddress});
     // Assert
-    expect(instance).not.toBeNull();
+    expect(messageBus).not.toBeNull();
   });
 });

@@ -201,6 +201,7 @@ for(const info of getDependencyTree()) {
     const factorySpec = factorySpecTemplate
         .replace(/\[ScriptPath\]/g, info.factoryScriptPath.replace(/\\/g,'\\\\'))
         .replace(/\[TypeName\]/g, info.typeName)
+        .replace(/\[TypeVariableName\]/g, info.variableName)
         .replace(/\[Args\]/g, simpleArgs )
         .replace(/\[SpecArrangeVariables\]/g, specArrangeVariables.join('\r\n'))
         .replace(/\[FactoryRequireScripts\]/g, factoryRequireScripts.join('\r\n'));

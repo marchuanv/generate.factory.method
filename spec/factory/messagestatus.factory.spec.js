@@ -5,8 +5,8 @@ describe('when asking the MessageStatus factory to create an instance', function
     const {messageStatusCode} = require('C:\\component\\spec\\factory\\messagestatus.factory.spec.variables.json');
 
     // Act
-    const instance = createMessageStatus({messageStatusCode});
+    const {messageStatus} = createMessageStatus({messageStatusCode});
     // Assert
-    expect(instance).not.toBeNull();
+    expect(messageStatus).not.toBeNull();
   });
 });

@@ -3,9 +3,10 @@ const { FactoryContainer } = require('./factory.container.js');
 const { [TypeName] } = require('[ScriptPath]');
 function create[TypeName]({[SimpleArgs]}) {
     let factoryContainer = new FactoryContainer();
+    factoryContainer.add({[SimpleArgs]});
     [FactoryCalls]
-    const [TypeVariableName] = new [TypeName]({[Args]});
-    factoryContainer.add([TypeVariableName]);
+    const [TypeVariableName] = new [TypeName](factoryContainer);
+    factoryContainer.add({[TypeVariableName]});
     return factoryContainer;
 }
 module.exports = { create[TypeName] };

@@ -5,8 +5,8 @@ describe('when asking the WebSocketMessageHandler factory to create an instance'
     const {timeout,hostAddress} = require('C:\\component\\spec\\factory\\websocketmessagehandler.factory.spec.variables.json');
 
     // Act
-    const instance = createWebSocketMessageHandler({timeout,hostAddress});
+    const {webSocketMessageHandler} = createWebSocketMessageHandler({timeout,hostAddress});
     // Assert
-    expect(instance).not.toBeNull();
+    expect(webSocketMessageHandler).not.toBeNull();
   });
 });

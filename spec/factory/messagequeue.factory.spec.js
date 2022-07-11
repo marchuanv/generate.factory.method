@@ -5,8 +5,8 @@ describe('when asking the MessageQueue factory to create an instance', function(
     const {userId} = require('C:\\component\\spec\\factory\\messagequeue.factory.spec.variables.json');
 
     // Act
-    const instance = createMessageQueue({userId});
+    const {messageQueue} = createMessageQueue({userId});
     // Assert
-    expect(instance).not.toBeNull();
+    expect(messageQueue).not.toBeNull();
   });
 });

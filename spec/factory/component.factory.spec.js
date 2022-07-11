@@ -5,8 +5,8 @@ describe('when asking the Component factory to create an instance', function() {
     const {packageJson} = require('C:\\component\\spec\\factory\\component.factory.spec.variables.json');
 
     // Act
-    const instance = createComponent({packageJson});
+    const {component} = createComponent({packageJson});
     // Assert
-    expect(instance).not.toBeNull();
+    expect(component).not.toBeNull();
   });
 });

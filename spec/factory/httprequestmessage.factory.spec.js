@@ -5,8 +5,8 @@ describe('when asking the HttpRequestMessage factory to create an instance', fun
     const {userId,data,metadata,messageStatusCode,method,path} = require('C:\\component\\spec\\factory\\httprequestmessage.factory.spec.variables.json');
 
     // Act
-    const instance = createHttpRequestMessage({method,userId,data,metadata,messageStatusCode,path});
+    const {httpRequestMessage} = createHttpRequestMessage({method,userId,data,metadata,messageStatusCode,path});
     // Assert
-    expect(instance).not.toBeNull();
+    expect(httpRequestMessage).not.toBeNull();
   });
 });

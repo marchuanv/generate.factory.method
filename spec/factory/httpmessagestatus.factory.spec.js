@@ -5,8 +5,8 @@ describe('when asking the HttpMessageStatus factory to create an instance', func
     const {messageStatusCode} = require('C:\\component\\spec\\factory\\httpmessagestatus.factory.spec.variables.json');
 
     // Act
-    const instance = createHttpMessageStatus({messageStatusCode});
+    const {httpMessageStatus} = createHttpMessageStatus({messageStatusCode});
     // Assert
-    expect(instance).not.toBeNull();
+    expect(httpMessageStatus).not.toBeNull();
   });
 });

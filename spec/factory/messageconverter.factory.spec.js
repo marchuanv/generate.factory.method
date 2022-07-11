@@ -5,8 +5,8 @@ describe('when asking the MessageConverter factory to create an instance', funct
     const {} = require('C:\\component\\spec\\factory\\messageconverter.factory.spec.variables.json');
 
     // Act
-    const instance = createMessageConverter({});
+    const {messageConverter} = createMessageConverter({});
     // Assert
-    expect(instance).not.toBeNull();
+    expect(messageConverter).not.toBeNull();
   });
 });

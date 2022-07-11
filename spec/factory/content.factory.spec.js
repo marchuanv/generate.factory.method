@@ -5,8 +5,8 @@ describe('when asking the Content factory to create an instance', function() {
     const {userId,data,metadata} = require('C:\\component\\spec\\factory\\content.factory.spec.variables.json');
 
     // Act
-    const instance = createContent({userId,data,metadata});
+    const {content} = createContent({userId,data,metadata});
     // Assert
-    expect(instance).not.toBeNull();
+    expect(content).not.toBeNull();
   });
 });
