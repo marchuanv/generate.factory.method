@@ -6,14 +6,14 @@ describe("when asking the http message handler to send and receive an http reque
     const userId = 'joe';
     const sender = { host: 'localhost', port: 2000 };
     const epxectedData = 'Hello World From Server';
-    const { createHttpResponseMessage } = require('../../lib/factory/httpresponsemessage.factory');
+    const { createMessage } = require('../../lib/factory/message.factory');
     const { createHttpRequestMessage } = require('../../lib/factory/httprequestmessage.factory');
     const { createHttpMessageHandler } = require('../../lib/factory/httpmessagehandler.factory');
     const { messageQueue, httpMessageHandler } = createHttpMessageHandler({ userId });
 
     httpMessageHandler.receive({ callback: ({ httpRequestMessage }) => {
       expect(httpRequestMessage).not.toBeNull();
-      return createHttpResponseMessage({ userId, data: epxectedData, metadata: { sender }, messageStatusCode: 200 });
+      return createMessage({ userId, data: epxectedData, metadata: { sender }, messageStatusCode: 200 });
     }});
 
     //emulate server

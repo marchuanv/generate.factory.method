@@ -6,16 +6,16 @@ describe("when asking the message handler to send and receive request messages",
     const sender = { host: 'localhost', port: 2000 };
     const hostAddress = { host: 'localhost', port: 7000 };
     const userId = 'joe';
+    const epxectedData = 'Hello World From Server';
     const timeout = 5000;
+    const { createMessage } = require('../../lib/factory/message.factory');
     const { createMessageHandler } = require('../../lib/factory/messagehandler.factory');
     const { createHttpRequestMessage } = require('../../lib/factory/httprequestmessage.factory');
     const { messageHandler, messageQueue } = createMessageHandler({ timeout, userId, hostAddress });
 
-    messageHandler.receive({ callback: ({ message }) => {
-      expect(message).not.toBeNull();
-      const data = 'Hello From Server!';
-      const metadata = {};
-    
+    messageHandler.receive({ callback: ({ requestMessage }) => {
+      expect(requestMessage).not.toBeNull();
+      return createMessage({ userId, data: epxectedData, metadata: { sender }, messageStatusCode: 200 });
     }});
 
     //emulate server
