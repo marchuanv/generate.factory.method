@@ -6,5 +6,6 @@
             "host": "localhost",
             "port": 4000
         }
-    }
+    },
+    "userIdentity": null
 }

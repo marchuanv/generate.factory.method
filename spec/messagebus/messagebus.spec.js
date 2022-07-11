@@ -11,12 +11,12 @@ describe("when publishing a message", function() {
     const { createMessageBus } = require('../../lib/factory/messagebus.factory');
     const { messageBus } = createMessageBus({ userId, timeout, hostAddress, channelName });
 
-    messageBus.subscribe({ channelName, callback: (something) => {
+    messageBus.subscribe({ callback: (something) => {
       // Assert
       expect(something).not.toBeNull();
     }});
 
     // Act
-    await messageBus.publish({ channelName, data: expectedData });
+    await messageBus.publish({ data: expectedData });
   })
 });
