@@ -1,4 +1,4 @@
-xdescribe("when publishing a message", function() {
+describe("when publishing a message", function() {
  it("it should send the same message to all subscribers", function(done) {
 
     // Arrange

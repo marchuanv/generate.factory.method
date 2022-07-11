@@ -1,5 +1,5 @@
 const { Subscription } = require('../../lib/subscription');
-xdescribe("when receiving data", function() {
+describe("when receiving data", function() {
  it("it should notify all subscribers", function(done) {
   
   // Arrange
