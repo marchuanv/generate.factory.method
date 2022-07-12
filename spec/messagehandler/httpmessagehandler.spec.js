@@ -21,7 +21,7 @@ describe("when asking the http message handler to send, receive and respond, to 
 
     // Act
     const { message } = createMessage({ userId, data: expectedRequestData, metadata: { sender, method: 'POST' }, messageStatusCode: 2 });
-    const { httpResponseMessage } = await httpMessageHandler.send({ requestMessage: message });
+    const { responseMessage } = await httpMessageHandler.send({ requestMessage: message });
 
     //Assert
     expect(_requestMessage).not.toBeNull();
@@ -30,8 +30,8 @@ describe("when asking the http message handler to send, receive and respond, to 
     expect(host).toEqual('localhost');
     expect(port).toEqual(2000);
     expect(data).toEqual(expectedRequestData);
-    expect(httpResponseMessage).not.toBeNull();
-    expect(httpResponseMessage.getContent()).toEqual(expectedResponsetData);
+    expect(responseMessage).not.toBeNull();
+    expect(responseMessage.getContent()).toEqual(expectedResponsetData);
    
   });
 
