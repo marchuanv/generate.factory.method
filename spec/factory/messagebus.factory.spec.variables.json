@@ -1,9 +1,4 @@
 {
-    "timeout": 5000,
     "userId": "joe",
-    "channelName": "channeltest",
-    "host": "localhost",
-    "port": 3000,
-    "httpMessageHandler": null,
-    "webSocketMessageHandler": null
+    "channelName": "somechannel"
 }
