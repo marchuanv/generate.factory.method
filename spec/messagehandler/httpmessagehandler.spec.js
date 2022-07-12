@@ -8,7 +8,6 @@ describe("when asking the http message handler to send, receive and respond, to 
     const expectedRequestData = 'Hello World';
     const expectedResponsetData = 'Hello World From Server';
     const { createMessage } = require('../../lib/factory/message.factory');
-    const { createHttpRequestMessage } = require('../../lib/factory/httprequestmessage.factory');
     const { createHttpMessageHandler } = require('../../lib/factory/httpmessagehandler.factory');
     const { httpMessageHandler } = createHttpMessageHandler({ userId });
     let _requestMessage = null;
