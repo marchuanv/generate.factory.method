@@ -2,18 +2,21 @@ describe("when publishing a message", function() {
  it("it should send the same message to all subscribers", async function() {
 
     // Arrange
-    const timeout = 5000;
+    const host = "localhost";
+    const port = 3000;
     const userId = 'joe';
-    const hostAddress = { address: 'localhost', port: 3000 };
+    const timeout = 5000;
     const channelName = 'messagebustest';
     const expectedData = 'hello from messagebus test';
 
     const { createMessageBus } = require('../../lib/factory/messagebus.factory');
-    const { messageBus } = createMessageBus({ userId, timeout, hostAddress, channelName });
+    const { messageBus } = createMessageBus({ host, port, userId, timeout, channelName });
 
-    messageBus.subscribe({ callback: (something) => {
+    messageBus.subscribe({ callback: ({ host, port, data }) => {
       // Assert
-      expect(something).not.toBeNull();
+      expect(host).toEqual('localhost');
+      expect(port).toEqual(3000);
+      expect(data).toEqual('hello from messagebus test');
     }});
 
     // Act
