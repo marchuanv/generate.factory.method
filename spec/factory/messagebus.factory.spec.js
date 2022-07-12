@@ -2,10 +2,10 @@ const { createMessageBus } = require('C:\\component\\lib\\factory\\messagebus.fa
 describe('when asking the MessageBus factory to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
-    const {timeout,userId,channelName,host,port} = require('C:\\component\\spec\\factory\\messagebus.factory.spec.variables.json');
+    const {timeout,userId,channelName,host,port,subscriptionHandler} = require('C:\\component\\spec\\factory\\messagebus.factory.spec.variables.json');
 
     // Act
-    const {messageBus} = createMessageBus({host,port,userId,timeout,channelName});
+    const {messageBus} = createMessageBus({host,port,userId,timeout,subscriptionHandler});
     // Assert
     expect(messageBus).not.toBeNull();
   });
