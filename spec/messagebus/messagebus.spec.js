@@ -10,9 +10,9 @@ describe("when publishing a message", function() {
     const expectedData = 'hello from subscription callback';
 
     const { createMessageBus } = require('../../lib/factory/messagebus.factory');
-    const { messageBus } = createMessageBus({ host, port, userId, timeout, channelName });
+    const { messageBus, subscription } = createMessageBus({ host, port, userId, timeout, channelName });
 
-    messageBus.subscribe({ callback: ({ host, port, data }) => {
+    subscription.onDataReceived({ callback: ({ host, port, data }) => {
       // Assert
       expect(host).toEqual('localhost');
       expect(port).toEqual(3000);
