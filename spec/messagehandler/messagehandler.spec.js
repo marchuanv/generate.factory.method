@@ -19,9 +19,9 @@ describe("when asking the message handler to send and receive request messages",
       return { responseMessage: message };
     }});
 
-    //emulate server
-    const { httpRequestMessage } = createHttpRequestMessage({ method: 'POST', userId, data: 'Hello World!', metadata: { sender }, messageStatusCode: 2, path: 'test' });
-    await messageQueue.enqueueRequestMessage( { httpRequestMessage  });
+    // //emulate server
+    // const { httpRequestMessage } = createHttpRequestMessage({ method: 'POST', userId, data: 'Hello World!', metadata: { sender }, messageStatusCode: 2, path: 'test' });
+    // await messageQueue.enqueueRequestMessage( { httpRequestMessage   });
 
     // Act
     const message = await messageHandler.send({ metadata: { sender }, data: 'Hello World!' });

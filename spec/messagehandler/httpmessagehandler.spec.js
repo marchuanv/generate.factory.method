@@ -17,16 +17,16 @@ describe("when asking the http message handler to send and receive an http reque
       return { responseMessage: message };
     }});
 
-    //emulate server
-    const { httpRequestMessage } =  createHttpRequestMessage({ 
-                                        method: 'POST',
-                                        userId,
-                                        data: 'Hello World!',
-                                        metadata: { sender },
-                                        messageStatusCode: 2,
-                                        path: 'test'
-                                    });
-    await messageQueue.enqueueRequestMessage( { httpRequestMessage  });
+    // //emulate server
+    // const { httpRequestMessage } =  createHttpRequestMessage({ 
+    //                                     method: 'POST',
+    //                                     userId,
+    //                                     data: 'Hello World!',
+    //                                     metadata: { sender },
+    //                                     messageStatusCode: 2,
+    //                                     path: 'test'
+    //                                 });
+    // await messageQueue.enqueueRequestMessage( { httpRequestMessage });
 
     // Act
     const { httpResponseMessage } = await httpMessageHandler.send({ path: '/', headers: { sender }, method: 'POST', data: 'Hello World!' });
