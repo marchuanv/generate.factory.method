@@ -7,7 +7,7 @@ describe("when publishing a message", function() {
     const userId = 'joe';
     const timeout = 5000;
     const channelName = 'messagebustest';
-    const expectedData = 'hello from messagebus test';
+    const expectedData = 'hello from subscription callback';
 
     const { createMessageBus } = require('../../lib/factory/messagebus.factory');
     const { messageBus } = createMessageBus({ host, port, userId, timeout, channelName });
@@ -16,7 +16,7 @@ describe("when publishing a message", function() {
       // Assert
       expect(host).toEqual('localhost');
       expect(port).toEqual(3000);
-      expect(data).toEqual('hello from messagebus test');
+      expect(data).toEqual(expectedData);
     }});
 
     // Act
