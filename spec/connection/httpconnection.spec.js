@@ -1,13 +1,10 @@
 describe("when opening an http connection and sending and http request given a hostname and port number", function() {
-    const recipientAddress = { host: 'localhost', port: 3000 };
-    const hostAddress = { host: 'localhost', port: 3000 };
-    const userId = 'joe';
     beforeAll(async () => {
-        const timeout = 3000;
         const { createHttpConnection } = require('../../lib/factory/httpconnection.factory.js');
-        const { httpConnection, messageQueue } = createHttpConnection({ hostAddress, userId, timeout });
+        const { httpConnection, messageQueue, hostAddress } = createHttpConnection({ timeout: 5000, userId: "joe", host: "localhost", port: 3000 });
         this.httpConnection = httpConnection;
         this.messageQueue = messageQueue;
+        this.hostAddress = hostAddress;
         await this.httpConnection.open();
     });
     it("it should return the server host address", () => {
@@ -16,10 +13,10 @@ describe("when opening an http connection and sending and http request given a h
         expect(this.httpConnection.isOpen()).toBeTruthy();
 
         // Act
-        const address = this.httpConnection.getServerAddress();
+        const { host, port } = this.httpConnection.getServerAddress();
    
         // Assert
-        expect(address.address).toEqual('127.0.0.1');
+        expect(`${host}:${port}`).toEqual('localhost:3000');
     });
 
     it("it should respond to a queued request", async () => {
@@ -35,7 +32,7 @@ describe("when opening an http connection and sending and http request given a h
         // Act
         await this.messageQueue.enqueueRawHttpRequest({ 
             path: '/',
-            headers: { sender: recipientAddress },
+            headers: { sender: this.hostAddress },
             method: 'POST',
             data: 'Hello World'
         });
