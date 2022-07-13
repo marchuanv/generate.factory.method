@@ -1,7 +1,14 @@
 describe("when opening an http connection and sending and http request given a hostname and port number", function() {
     beforeAll(async () => {
         const { createHttpConnection } = require('../../lib/factory/httpconnection.factory.js');
-        const { httpConnection, messageQueue, hostAddress } = createHttpConnection({ timeout: 5000, userId: "joe", host: "localhost", port: 3000 });
+        const { httpConnection, messageQueue, hostAddress } = createHttpConnection({ 
+            timeout: 5000,
+            userId: 'joe',
+            senderHost: 'localhost',
+            senderPort: 2000,
+            host: 'localhost',
+            hostPort: 3000
+        });
         this.httpConnection = httpConnection;
         this.messageQueue = messageQueue;
         this.hostAddress = hostAddress;
@@ -30,12 +37,7 @@ describe("when opening an http connection and sending and http request given a h
         });
 
         // Act
-        await this.messageQueue.enqueueRawHttpRequest({ 
-            path: '/',
-            headers: { sender: this.hostAddress },
-            method: 'POST',
-            data: 'Hello World'
-        });
+        await this.messageQueue.enqueueRawHttpRequest({ path: '/', method: 'POST', data: 'Hello World' });
 
         // Assert
         const { httpResponseMessage } = await this.messageQueue.dequeueHttpResponseMessage();
