@@ -5,14 +5,16 @@ describe("when publishing a message", function() {
     const userId = 'joe';
     const channelName = 'messagebustest';
     const expectedData = 'hello from subscription callback';
+    const senderHost = 'localhost';
+    const senderPort = 200;
 
     const { createMessageBus } = require('../../lib/factory/messagebus.factory');
-    const { messageBus, subscription } = createMessageBus({ userId, host, port, channelName });
+    const { messageBus, subscription } = createMessageBus({ userId, senderHost, senderPort, channelName });
 
-    subscription.onDataReceived({ callback: ({ host, port, data }) => {
+    subscription.onDataReceived({ callback: ({ senderHost, senderPort, data }) => {
       // Assert
-      expect(host).toEqual('localhost');
-      expect(port).toEqual(3000);
+      expect(senderHost).toEqual('localhost');
+      expect(senderPort).toEqual(3000);
       expect(data).toEqual(expectedData);
     }});
 

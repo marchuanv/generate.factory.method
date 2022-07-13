@@ -28,9 +28,9 @@ describe("when asking the http message handler to send, receive and respond, to 
     //Assert
     expect(_requestMessage).not.toBeNull();
     const data = _requestMessage.getContent();
-    const { host, port } = _requestMessage.getSenderAddress();
-    expect(host).toEqual('localhost');
-    expect(port).toEqual(2000);
+    const address = _requestMessage.getSenderAddress();
+    expect(address.senderHost).toEqual('localhost');
+    expect(address.senderPort).toEqual(2000);
     expect(data).toEqual(expectedRequestData);
     expect(responseMessage).not.toBeNull();
     expect(responseMessage.getContent()).toEqual(expectedResponsetData);
