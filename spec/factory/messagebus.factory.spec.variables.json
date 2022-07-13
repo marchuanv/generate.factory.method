@@ -1,4 +1,6 @@
 {
     "userId": "joe",
-    "channelName": "somechannel"
+    "channelName": "somechannel",
+    "host": null,
+    "port": null
 }

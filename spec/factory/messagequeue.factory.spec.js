@@ -2,10 +2,10 @@ const { createMessageQueue } = require('C:\\component\\lib\\factory\\messagequeu
 describe('when asking the MessageQueue factory to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
-    const {userId} = require('C:\\component\\spec\\factory\\messagequeue.factory.spec.variables.json');
+    const {userId,host,port} = require('C:\\component\\spec\\factory\\messagequeue.factory.spec.variables.json');
 
     // Act
-    const {messageQueue} = createMessageQueue({userId});
+    const {messageQueue} = createMessageQueue({userId,host,port});
     // Assert
     expect(messageQueue).not.toBeNull();
   });

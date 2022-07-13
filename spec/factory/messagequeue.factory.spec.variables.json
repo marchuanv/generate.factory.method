@@ -1,3 +1,5 @@
 {
-    "userId": "joe"
+    "userId": "joe",
+    "host": null,
+    "port": null
 }
