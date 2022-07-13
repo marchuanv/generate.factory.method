@@ -2,10 +2,10 @@ const { createHttpResponseMessage } = require('C:\\component\\lib\\factory\\http
 describe('when asking the HttpResponseMessage factory to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
-    const {host,port,userId,data,token,messageStatusCode} = require('C:\\component\\spec\\factory\\httpresponsemessage.factory.spec.variables.json');
+    const {senderHost,senderPort,userId,data,token,messageStatusCode} = require('C:\\component\\spec\\factory\\httpresponsemessage.factory.spec.variables.json');
 
     // Act
-    const {httpResponseMessage} = createHttpResponseMessage({host,port,userId,data,token,messageStatusCode});
+    const {httpResponseMessage} = createHttpResponseMessage({senderHost,senderPort,userId,data,token,messageStatusCode});
     // Assert
     expect(httpResponseMessage).not.toBeNull();
   });

@@ -1,10 +1,5 @@
 {
-    "timeout": 5000,
-    "hostAddress": {
-        "host": "localhost",
-        "port": 3000
-    },
     "userId": "joe",
-    "host": null,
-    "port": null
+    "senderHost": "localhost",
+    "senderPort": 2000
 }

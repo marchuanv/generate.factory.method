@@ -2,10 +2,10 @@ const { createSenderAddress } = require('C:\\component\\lib\\factory\\senderaddr
 describe('when asking the SenderAddress factory to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
-    const {host,port} = require('C:\\component\\spec\\factory\\senderaddress.factory.spec.variables.json');
+    const {host,port,senderHost,senderPort} = require('C:\\component\\spec\\factory\\senderaddress.factory.spec.variables.json');
 
     // Act
-    const {senderAddress} = createSenderAddress({host,port});
+    const {senderAddress} = createSenderAddress({senderHost,senderPort});
     // Assert
     expect(senderAddress).not.toBeNull();
   });

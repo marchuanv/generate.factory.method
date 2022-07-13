@@ -1,5 +1,6 @@
 {
     "timeout": null,
     "host": null,
-    "port": null
+    "port": null,
+    "hostPort": null
 }

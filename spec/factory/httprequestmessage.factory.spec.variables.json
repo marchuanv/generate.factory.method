@@ -1,10 +1,10 @@
 {
     "method": "POST",
-    "host": "localhost",
-    "port": 3000,
     "userId": "joe",
     "data": "Hello World",
     "token": null,
     "messageStatusCode": 2,
-    "path": "/"
+    "path": "/",
+    "senderHost": "localhost",
+    "senderPort": 2000
 }

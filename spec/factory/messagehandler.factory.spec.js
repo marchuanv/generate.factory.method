@@ -2,10 +2,10 @@ const { createMessageHandler } = require('C:\\component\\lib\\factory\\messageha
 describe('when asking the MessageHandler factory to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
-    const {timeout,userId,host,port,httpMessageHandler,webSocketMessageHandler} = require('C:\\component\\spec\\factory\\messagehandler.factory.spec.variables.json');
+    const {userId,senderHost,senderPort} = require('C:\\component\\spec\\factory\\messagehandler.factory.spec.variables.json');
 
     // Act
-    const {messageHandler} = createMessageHandler({userId,host,port});
+    const {messageHandler} = createMessageHandler({userId,senderHost,senderPort});
     // Assert
     expect(messageHandler).not.toBeNull();
   });

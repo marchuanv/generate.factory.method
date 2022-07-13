@@ -7,7 +7,7 @@ describe("when publishing a message", function() {
     const expectedData = 'hello from subscription callback';
 
     const { createMessageBus } = require('../../lib/factory/messagebus.factory');
-    const { messageBus, subscription } = createMessageBus({ userId, channelName });
+    const { messageBus, subscription } = createMessageBus({ userId, host, port, channelName });
 
     subscription.onDataReceived({ callback: ({ host, port, data }) => {
       // Assert
