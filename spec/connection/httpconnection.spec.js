@@ -4,6 +4,8 @@ describe("when opening an http connection and sending and http request given a h
         const { httpConnection, messageQueue, hostAddress } = createHttpConnection({ 
             timeout: 5000,
             userId: 'joe',
+            recipientHost: 'localhost',
+            recipientPort: 3000,
             host: 'localhost',
             hostPort: 3000
         });
@@ -22,6 +24,17 @@ describe("when opening an http connection and sending and http request given a h
    
         // Assert
         expect(`${host}:${port}`).toEqual('localhost:3000');
+    });
+    it("it should return the recipient address", () => {
+     
+        // Arrange
+        expect(this.httpConnection.isOpen()).toBeTruthy();
+
+        // Act
+        const { recipientHost, recipientPort } = this.httpConnection.getRecipientAddress();
+   
+        // Assert
+        expect(`${recipientHost}:${recipientPort}`).toEqual('localhost:3000');
     });
 
     it("it should respond to a queued request", async () => {

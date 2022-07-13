@@ -4,5 +4,7 @@
     "host": "localhost",
     "hostPort": 3000,
     "senderHost": "localhost",
-    "senderPort": 2000
+    "senderPort": 2000,
+    "recipientHost": null,
+    "recipientPort": null
 }
