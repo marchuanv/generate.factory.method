@@ -4,8 +4,6 @@ describe("when opening an http connection and sending and http request given a h
         const { httpConnection, messageQueue, hostAddress } = createHttpConnection({ 
             timeout: 5000,
             userId: 'joe',
-            senderHost: 'localhost',
-            senderPort: 2000,
             host: 'localhost',
             hostPort: 3000
         });
@@ -29,15 +27,19 @@ describe("when opening an http connection and sending and http request given a h
     it("it should respond to a queued request", async () => {
      
         // Arrange
+        const path = '/';
+        const method = 'POST';
+        const senderHost = 'localhost';
+        const senderPort = 2000;
         expect(this.httpConnection.isOpen()).toBeTruthy();
         this.messageQueue.dequeueHttpRequestMessage().then(({ httpRequestMessage }) => {
             expect(httpRequestMessage).not.toBeNull();
             const data = 'Hello World from Server';
-            this.messageQueue.enqueueRawHttpResponse({ data, headers: {}, httpStatusCode: 200 });
+            this.messageQueue.enqueueRawHttpResponse({ path, method, senderHost, senderPort, data });
         });
 
         // Act
-        await this.messageQueue.enqueueRawHttpRequest({ path: '/', method: 'POST', data: 'Hello World' });
+        await this.messageQueue.enqueueRawHttpRequest({ path, method, senderHost, senderPort, data: 'Hello World' });
 
         // Assert
         const { httpResponseMessage } = await this.messageQueue.dequeueHttpResponseMessage();

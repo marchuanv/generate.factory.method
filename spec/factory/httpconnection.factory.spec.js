@@ -5,7 +5,7 @@ describe('when asking the HttpConnection factory to create an instance', functio
     const {timeout,userId,host,hostPort,senderHost,senderPort} = require('C:\\component\\spec\\factory\\httpconnection.factory.spec.variables.json');
 
     // Act
-    const {httpConnection} = createHttpConnection({timeout,userId,senderHost,senderPort,host,hostPort});
+    const {httpConnection} = createHttpConnection({timeout,userId,host,hostPort});
     // Assert
     expect(httpConnection).not.toBeNull();
   });

@@ -4,7 +4,9 @@ describe("when asking the http message handler to send, receive and respond, to 
     
     // Arrange
     const userId = 'joe';
-    const sender = { host: 'localhost', port: 2000 };
+    const senderHost = 'localhost';
+    const senderPort = 2000;
+    const token = null;
     const expectedRequestData = 'Hello World';
     const expectedResponsetData = 'Hello World From Server';
     const { createMessage } = require('../../lib/factory/message.factory');
@@ -13,14 +15,14 @@ describe("when asking the http message handler to send, receive and respond, to 
     let _requestMessage = null;
 
     httpMessageHandler.receive({ callback: async ({ requestMessage }) => {
-      const { message } = createMessage({ userId, data: expectedResponsetData, metadata: { sender }, messageStatusCode: 200 });
+      const { message } = createMessage({ senderHost, senderPort, userId, data: expectedResponsetData, token, messageStatusCode: 200 });
       await httpMessageHandler.respond({ responseMessage: message });
       expect(requestMessage).not.toBeNull();
       _requestMessage = requestMessage;
     }});
 
     // Act
-    const { message } = createMessage({ userId, data: expectedRequestData, metadata: { sender, method: 'POST' }, messageStatusCode: 2 });
+    const { message } = createMessage({ senderHost, senderPort, userId, data: expectedRequestData, token, messageStatusCode: 2 });
     const { responseMessage } = await httpMessageHandler.send({ requestMessage: message });
 
     //Assert
