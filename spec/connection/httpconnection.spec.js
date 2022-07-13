@@ -48,7 +48,7 @@ describe("when opening an http connection and sending and http request given a h
         this.messageQueue.dequeueHttpRequestMessage().then(({ httpRequestMessage }) => {
             expect(httpRequestMessage).not.toBeNull();
             const data = 'Hello World from Server';
-            this.messageQueue.enqueueRawHttpResponse({ path, method, senderHost, senderPort, data });
+            this.messageQueue.enqueueRawHttpResponse({ senderHost, senderPort, data, httpStatusCode: 200 });
         });
 
         // Act
