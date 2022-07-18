@@ -13,9 +13,8 @@ describe("when asking the message handler to send and receive request messages",
     let _requestMessage = null;
 
     messageHandler.receive({ callback: async ({ requestMessage }) => {
-      await messageHandler.respond({ data: expectedResponsetData, metadata: {} });
-      expect(requestMessage).not.toBeNull();
       _requestMessage = requestMessage;
+      await messageHandler.respond({ data: expectedResponsetData, metadata: {} });
     }});
 
     // Act
@@ -23,6 +22,7 @@ describe("when asking the message handler to send and receive request messages",
 
     //Assert
     expect(_requestMessage).not.toBeNull();
+    expect(_requestMessage.getMessageStatus().code).toEqual(2); //pending
     const data = _requestMessage.getContent();
     const adress = _requestMessage.getSenderAddress();
     expect(adress.senderHost).toEqual('localhost');
@@ -30,6 +30,7 @@ describe("when asking the message handler to send and receive request messages",
     expect(data).toEqual(expectedRequestData);
     expect(responseMessage).not.toBeNull();
     expect(responseMessage.getContent()).toEqual(expectedResponsetData);
+    expect(responseMessage.getMessageStatus().code).toEqual(0); //success
   });
   
 });

@@ -15,10 +15,9 @@ describe("when asking the http message handler to send, receive and respond, to 
     let _requestMessage = null;
 
     httpMessageHandler.receive({ callback: async ({ requestMessage }) => {
+      _requestMessage = requestMessage;
       const { message } = createMessage({ senderHost, senderPort, userId, data: expectedResponsetData, token, messageStatusCode: 200 });
       await httpMessageHandler.respond({ responseMessage: message });
-      expect(requestMessage).not.toBeNull();
-      _requestMessage = requestMessage;
     }});
 
     // Act
@@ -27,6 +26,7 @@ describe("when asking the http message handler to send, receive and respond, to 
 
     //Assert
     expect(_requestMessage).not.toBeNull();
+    expect(_requestMessage.getMessageStatus().code).toEqual(2); //pending
     const data = _requestMessage.getContent();
     const address = _requestMessage.getSenderAddress();
     expect(address.senderHost).toEqual('localhost');
@@ -34,7 +34,7 @@ describe("when asking the http message handler to send, receive and respond, to 
     expect(data).toEqual(expectedRequestData);
     expect(responseMessage).not.toBeNull();
     expect(responseMessage.getContent()).toEqual(expectedResponsetData);
-   
+    expect(responseMessage.getMessageStatus().code).toEqual(0); //success
   });
 
 });

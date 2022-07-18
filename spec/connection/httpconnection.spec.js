@@ -12,27 +12,24 @@ describe("when opening an http connection and sending and http request given a h
         this.httpConnection = httpConnection;
         this.messageQueue = messageQueue;
         this.hostAddress = hostAddress;
-        await this.httpConnection.open();
     });
-    it("it should return the server host address", () => {
-     
+    it("it should return the server host address", async () => {
         // Arrange
+        await this.httpConnection.open();
         expect(this.httpConnection.isOpen()).toBeTruthy();
 
         // Act
         const { host, port } = this.httpConnection.getServerAddress();
-   
+
         // Assert
         expect(`${host}:${port}`).toEqual('localhost:3000');
+        this.httpConnection.close();
+        expect(this.httpConnection.isOpen()).toBeFalsy();
     });
-    it("it should return the recipient address", () => {
-     
+    it("it should return the recipient address", async () => {
         // Arrange
-        expect(this.httpConnection.isOpen()).toBeTruthy();
-
         // Act
         const { recipientHost, recipientPort } = this.httpConnection.getRecipientAddress();
-   
         // Assert
         expect(`${recipientHost}:${recipientPort}`).toEqual('localhost:3000');
     });
@@ -44,30 +41,25 @@ describe("when opening an http connection and sending and http request given a h
         const method = 'POST';
         const senderHost = 'localhost';
         const senderPort = 2000;
+        let _httpRequestMessage = null;
+
+        await this.httpConnection.open();
         expect(this.httpConnection.isOpen()).toBeTruthy();
-        this.messageQueue.dequeueHttpRequestMessage().then(({ httpRequestMessage }) => {
-            expect(httpRequestMessage).not.toBeNull();
-            const data = 'Hello World from Server';
-            this.messageQueue.enqueueRawHttpResponse({ senderHost, senderPort, data, httpStatusCode: 200 });
+        await this.messageQueue.enqueueRawHttpRequest({ path, method, senderHost, senderPort, data: 'Hello World' });
+        this.messageQueue.dequeueHttpRequestMessage().then(async ({ httpRequestMessage }) => {
+            _httpRequestMessage = httpRequestMessage;
+            await this.messageQueue.enqueueRawHttpResponse({ senderHost, senderPort, data: 'Hello World from Server', httpStatusCode: 200 });
         });
 
         // Act
-        await this.messageQueue.enqueueRawHttpRequest({ path, method, senderHost, senderPort, data: 'Hello World' });
+        const { httpResponseMessage } = await messageQueue.dequeueHttpResponseMessage();
 
         // Assert
-        const { httpResponseMessage } = await this.messageQueue.dequeueHttpResponseMessage();
+        this.httpConnection.close();
+        expect(this.httpConnection.isOpen()).toBeFalsy();
+        expect(_httpRequestMessage).not.toBeNull();
+        expect(_httpRequestMessage.getStatusCode).toBeUndefined();
         expect(httpResponseMessage.getStatusCode()).toEqual(200);
         expect(httpResponseMessage.getContent()).toEqual('Hello World from Server');
-    });
-    
-    it("it should have a closed connection", () => {
-        // Arrange
-        expect(this.httpConnection.isOpen()).toBeTruthy();
-
-        // Act
-        this.httpConnection.close();
-
-        // Assert
-        expect(this.httpConnection.isOpen()).toBeFalsy();
     });
 });
