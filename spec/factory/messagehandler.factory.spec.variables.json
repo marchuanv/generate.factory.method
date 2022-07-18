@@ -4,5 +4,8 @@
     "senderPort": 3000,
     "token": "sometoken",
     "recipientHost": "localhost",
-    "recipientPort": 3000
+    "recipientPort": 3000,
+    "httpMessageHandler": null,
+    "webSocketMessageHandler": null,
+    "httpServerMessageQueue": null
 }

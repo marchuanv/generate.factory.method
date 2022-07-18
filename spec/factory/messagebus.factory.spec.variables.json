@@ -8,5 +8,8 @@
     "messageStatusCode": 2,
     "metadata": {},
     "recipientHost": "localhost",
-    "recipientPort": 3000
+    "recipientPort": 3000,
+    "httpMessageHandler": null,
+    "webSocketMessageHandler": null,
+    "httpServerMessageQueue": null
 }
