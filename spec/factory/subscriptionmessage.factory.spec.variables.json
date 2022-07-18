@@ -2,8 +2,9 @@
     "senderHost": "localhost",
     "senderPort": 2000,
     "userId": "joe",
-    "data": "Hello World",
+    "data": "subscriptiondata",
     "token": null,
     "messageStatusCode": 2,
+    "channelName": "somechannel",
     "metadata": null
 }

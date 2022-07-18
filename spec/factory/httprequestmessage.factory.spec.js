@@ -2,10 +2,10 @@ const { createHttpRequestMessage } = require('C:\\component\\lib\\factory\\httpr
 describe('when asking the HttpRequestMessage factory to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
-    const {method,userId,data,token,messageStatusCode,path,senderHost,senderPort} = require('C:\\component\\spec\\factory\\httprequestmessage.factory.spec.variables.json');
+    const {method,userId,data,token,messageStatusCode,path,senderHost,senderPort,metadata} = require('C:\\component\\spec\\factory\\httprequestmessage.factory.spec.variables.json');
 
     // Act
-    const {httpRequestMessage} = createHttpRequestMessage({method,senderHost,senderPort,userId,data,token,messageStatusCode,path});
+    const {httpRequestMessage} = createHttpRequestMessage({method,senderHost,senderPort,userId,data,token,metadata,messageStatusCode,path});
     // Assert
     expect(httpRequestMessage).not.toBeNull();
   });

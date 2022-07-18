@@ -4,5 +4,6 @@
     "userId": "joe",
     "data": "Hello World",
     "token": null,
-    "messageStatusCode": 2
+    "messageStatusCode": 2,
+    "metadata": null
 }

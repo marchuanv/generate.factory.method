@@ -6,5 +6,6 @@
     "messageStatusCode": 2,
     "path": "/",
     "senderHost": "localhost",
-    "senderPort": 2000
+    "senderPort": 2000,
+    "metadata": null
 }

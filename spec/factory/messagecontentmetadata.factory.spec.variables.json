@@ -2,5 +2,6 @@
     "senderHost": "localhost",
     "senderPort": 2000,
     "data": "Hello World",
-    "token": null
+    "token": null,
+    "metadata": null
 }
