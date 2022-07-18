@@ -6,5 +6,7 @@
     "token": null,
     "messageStatusCode": 2,
     "channelName": "somechannel",
-    "metadata": {}
+    "metadata": {},
+    "recipientHost": "localhost",
+    "recipientPort": 3000
 }

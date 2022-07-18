@@ -6,5 +6,7 @@
     "data": "Hello World",
     "token": null,
     "messageStatusCode": 2,
-    "metadata": {}
+    "metadata": {},
+    "recipientHost": "localhost",
+    "recipientPort": 3000
 }
