@@ -7,5 +7,5 @@
     "path": "/",
     "senderHost": "localhost",
     "senderPort": 2000,
-    "metadata": null
+    "metadata": {}
 }

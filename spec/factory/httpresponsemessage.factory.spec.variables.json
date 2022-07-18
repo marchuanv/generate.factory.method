@@ -5,5 +5,5 @@
     "data": "Hello World",
     "token": null,
     "messageStatusCode": 2,
-    "metadata": null
+    "metadata": {}
 }

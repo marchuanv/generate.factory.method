@@ -6,6 +6,5 @@
     "data": "Hello World",
     "token": null,
     "messageStatusCode": 2,
-    "subscription": null,
-    "metadata": null
+    "metadata": {}
 }

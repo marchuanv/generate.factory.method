@@ -4,5 +4,5 @@
     "userId": "joe",
     "data": "Hello World",
     "token": null,
-    "metadata": null
+    "metadata": {}
 }
