@@ -2,16 +2,11 @@
     "userId": "joe",
     "channelName": "somechannel",
     "senderHost": "localhost",
-    "senderPort": 2000,
+    "senderPort": 3000,
     "data": "Hello World",
     "token": "sometoken",
     "messageStatusCode": 2,
     "metadata": {},
     "recipientHost": "localhost",
-    "recipientPort": 3000,
-    "messageHandler": null,
-    "subscriptionMessage": null,
-    "httpMessageHandler": null,
-    "webSocketMessageHandler": null,
-    "senderAddress": null
+    "recipientPort": 3000
 }

@@ -2,5 +2,6 @@
     "timeout": null,
     "host": null,
     "port": null,
-    "hostPort": null
+    "hostPort": null,
+    "hostAddress": null
 }

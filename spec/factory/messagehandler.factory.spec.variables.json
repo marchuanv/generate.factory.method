@@ -1,9 +1,8 @@
 {
     "userId": "joe",
     "senderHost": "localhost",
-    "senderPort": 2000,
+    "senderPort": 3000,
     "token": "sometoken",
-    "httpMessageHandler": null,
-    "webSocketMessageHandler": null,
-    "senderAddress": null
+    "recipientHost": "localhost",
+    "recipientPort": 3000
 }

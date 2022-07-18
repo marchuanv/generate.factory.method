@@ -1,6 +1,6 @@
 {
     "senderHost": "localhost",
-    "senderPort": 2000,
+    "senderPort": 3000,
     "userId": "joe",
     "data": "Hello World",
     "token": null,

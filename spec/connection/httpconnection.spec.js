@@ -1,7 +1,7 @@
 describe("when opening an http connection and sending and http request given a hostname and port number", function() {
     beforeAll(async () => {
         const { createHttpConnection } = require('../../lib/factory/httpconnection.factory.js');
-        const { httpConnection, messageQueue, hostAddress } = createHttpConnection({ 
+        const { httpConnection, httpMessageQueue } = createHttpConnection({ 
             timeout: 8000,
             userId: 'joe',
             recipientHost: 'localhost',
@@ -10,8 +10,7 @@ describe("when opening an http connection and sending and http request given a h
             hostPort: 3000
         });
         this.httpConnection = httpConnection;
-        this.messageQueue = messageQueue;
-        this.hostAddress = hostAddress;
+        this.httpMessageQueue = httpMessageQueue;
     });
     it("it should return the server host address", async () => {
         // Arrange
@@ -26,13 +25,6 @@ describe("when opening an http connection and sending and http request given a h
         this.httpConnection.close();
         expect(this.httpConnection.isOpen()).toBeFalsy();
     });
-    it("it should return the recipient address", async () => {
-        // Arrange
-        // Act
-        const { recipientHost, recipientPort } = this.httpConnection.getRecipientAddress();
-        // Assert
-        expect(`${recipientHost}:${recipientPort}`).toEqual('localhost:3000');
-    });
 
     it("it should respond to a queued request", async () => {
      
@@ -45,14 +37,14 @@ describe("when opening an http connection and sending and http request given a h
 
         await this.httpConnection.open();
         expect(this.httpConnection.isOpen()).toBeTruthy();
-        await this.messageQueue.enqueueRawHttpRequest({ path, method, senderHost, senderPort, data: 'Hello World' });
-        this.messageQueue.dequeueHttpRequestMessage().then(async ({ httpRequestMessage }) => {
+        await this.httpMessageQueue.enqueueRawHttpRequest({ path, method, senderHost, senderPort, data: 'Hello World' });
+        this.httpMessageQueue.dequeueHttpRequestMessage().then(async ({ httpRequestMessage }) => {
             _httpRequestMessage = httpRequestMessage;
-            await this.messageQueue.enqueueRawHttpResponse({ senderHost, senderPort, data: 'Hello World from Server', httpStatusCode: 200 });
+            await this.httpMessageQueue.enqueueRawHttpResponse({ senderHost, senderPort, data: 'Hello World from Server', httpStatusCode: 200 });
         });
 
         // Act
-        const { httpResponseMessage } = await messageQueue.dequeueHttpResponseMessage();
+        const { httpResponseMessage } = await httpMessageQueue.dequeueHttpResponseMessage();
 
         // Assert
         this.httpConnection.close();
