@@ -2,5 +2,8 @@
     "userId": "joe",
     "senderHost": "localhost",
     "senderPort": 2000,
-    "token": "sometoken"
+    "token": "sometoken",
+    "httpMessageHandler": null,
+    "webSocketMessageHandler": null,
+    "senderAddress": null
 }
