@@ -22,7 +22,7 @@ describe("when asking the http message handler to send, receive and respond, to 
     }});
 
     // Act
-    const { message } = createMessage({ senderHost, senderPort, userId, data: expectedRequestData, token, messageStatusCode: 2 });
+    const { message } = createMessage({ senderHost, senderPort, userId, data: expectedRequestData, token, metadata: { path: "/" }, messageStatusCode: 2 });
     const { responseMessage } = await httpMessageHandler.send({ requestMessage: message });
 
     //Assert
