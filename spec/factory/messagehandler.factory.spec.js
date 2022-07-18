@@ -5,7 +5,7 @@ describe('when asking the MessageHandler factory to create an instance', functio
     const {userId,senderHost,senderPort,token,recipientHost,recipientPort} = require('C:\\component\\spec\\factory\\messagehandler.factory.spec.variables.json');
 
     // Act
-    const {messageHandler} = createMessageHandler({token,userId,senderHost,senderPort,recipientHost,recipientPort});
+    const {messageHandler} = createMessageHandler({token,userId,recipientHost,recipientPort,senderHost,senderPort});
     // Assert
     expect(messageHandler).not.toBeNull();
   });

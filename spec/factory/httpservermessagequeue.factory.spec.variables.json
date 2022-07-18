@@ -1,5 +1,7 @@
 {
     "userId": "joe",
     "senderHost": "localhost",
-    "senderPort": 3000
+    "senderPort": 3000,
+    "recipientHost": "localhost",
+    "recipientPort": 3000
 }

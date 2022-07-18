@@ -1,4 +1,4 @@
 {
-    "recipientHost": null,
-    "recipientPort": null
+    "recipientHost": "localhost",
+    "recipientPort": 3000
 }
