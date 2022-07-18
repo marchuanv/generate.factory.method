@@ -1,5 +1,6 @@
 {
     "userId": "joe",
     "senderHost": "localhost",
-    "senderPort": 2000
+    "senderPort": 2000,
+    "token": "sometoken"
 }
