@@ -39,17 +39,17 @@ describe("when asking the http message handler to send, receive and respond, to 
       const { requestMessage } = await messageQueue.dequeueRequestMessage();
       _requestMessage = requestMessage;
 
-      const { message } = createMessage({ 
-        recipientHost: 'localhost',
-        recipientPort: 3000,
-        userId: 'joe',
-        data: 'Hello From Server',
-        senderHost: 'localhost',
-        senderPort: 3000,
-        token: null,
-        metadata: { path },
-        messageStatusCode: 2 //pending
-      });
+      // const { message } = createMessage({ 
+      //   recipientHost: 'localhost',
+      //   recipientPort: 3000,
+      //   userId: 'joe',
+      //   data: 'Hello From Server',
+      //   senderHost: 'localhost',
+      //   senderPort: 3000,
+      //   token: null,
+      //   metadata: { path },
+      //   messageStatusCode: 2 //pending
+      // });
 
     });
    
