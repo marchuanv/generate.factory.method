@@ -5,7 +5,7 @@ describe('when asking the HttpMessageHandler factory to create an instance', fun
     const {userId,senderHost,senderPort,recipientHost,recipientPort,httpServerMessageQueue} = require('C:\\component\\spec\\factory\\httpmessagehandler.factory.spec.variables.json');
 
     // Act
-    const {httpMessageHandler} = createHttpMessageHandler({userId,recipientHost,recipientPort,senderHost,senderPort});
+    const {httpMessageHandler} = createHttpMessageHandler({recipientHost,recipientPort,userId,senderHost,senderPort});
     // Assert
     expect(httpMessageHandler).not.toBeNull();
   });

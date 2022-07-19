@@ -5,7 +5,7 @@ describe('when asking the MessageBus factory to create an instance', function() 
     const {userId,channelName,senderHost,senderPort,data,token,messageStatusCode,metadata,recipientHost,recipientPort,httpMessageHandler,webSocketMessageHandler,httpServerMessageQueue} = require('C:\\component\\spec\\factory\\messagebus.factory.spec.variables.json');
 
     // Act
-    const {messageBus} = createMessageBus({token,userId,recipientHost,recipientPort,senderHost,senderPort,data,metadata,messageStatusCode,channelName});
+    const {messageBus} = createMessageBus({token,recipientHost,recipientPort,userId,senderHost,senderPort,data,metadata,messageStatusCode,channelName});
     // Assert
     expect(messageBus).not.toBeNull();
   });
