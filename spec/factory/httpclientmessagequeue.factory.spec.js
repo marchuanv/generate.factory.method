@@ -2,7 +2,7 @@ const { createHttpClientMessageQueue } = require('C:\\component\\lib\\factory\\h
 describe('when asking the HttpClientMessageQueue factory to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
-    const {recipientHost,recipientPort,userId,senderHost,senderPort,messageQueueTypeCode,messageQueueArray} = require('C:\\component\\spec\\factory\\httpclientmessagequeue.factory.spec.variables.json');
+    const {recipientHost,recipientPort,userId,senderHost,senderPort,messageQueueTypeCode} = require('C:\\component\\spec\\factory\\httpclientmessagequeue.factory.spec.variables.json');
 
     // Act
     const {httpClientMessageQueue} = createHttpClientMessageQueue({recipientHost,recipientPort,messageQueueTypeCode,userId,senderHost,senderPort});

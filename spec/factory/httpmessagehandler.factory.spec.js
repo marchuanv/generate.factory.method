@@ -2,7 +2,7 @@ const { createHttpMessageHandler } = require('C:\\component\\lib\\factory\\httpm
 describe('when asking the HttpMessageHandler factory to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
-    const {userId,senderHost,senderPort,recipientHost,recipientPort,messageQueueTypeCode,messageQueueArray} = require('C:\\component\\spec\\factory\\httpmessagehandler.factory.spec.variables.json');
+    const {userId,senderHost,senderPort,recipientHost,recipientPort,messageQueueTypeCode} = require('C:\\component\\spec\\factory\\httpmessagehandler.factory.spec.variables.json');
 
     // Act
     const {httpMessageHandler} = createHttpMessageHandler({messageQueueTypeCode,recipientHost,recipientPort,userId,senderHost,senderPort});
