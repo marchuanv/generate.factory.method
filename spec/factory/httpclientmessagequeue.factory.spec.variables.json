@@ -4,5 +4,6 @@
     "userId": "joe",
     "senderHost": "localhost",
     "senderPort": 3000,
-    "messageQueueTypeCode": 1
+    "messageQueueTypeCode": 1,
+    "messageQueueArray": null
 }

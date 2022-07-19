@@ -12,30 +12,31 @@ describe("when queuing http messages", function() {
     const data = 'Hello World';
     const token = null;
     const messageQueueTypeCode = 2;
-    const isSyncedMessageQueueTypes = true;
-    let _httpClientMessageQueue01 = null;
-    let _httpClientMessageQueue02 = null;
+    let httpClientMessageQueue01 = null;
+    let httpClientMessageQueue02 = null;
+    const messageQueueArray = []; //shared messages
+
     const { createHttpClientMessageQueue } = require("../../lib/factory/httpclientmessagequeue.factory");
     const { createMessage } = require("../../lib/factory/message.factory");
     {
-      ({ httpClientMessageQueue: _httpClientMessageQueue01 } = createHttpClientMessageQueue({
-          recipientHost, recipientPort, messageQueueTypeCode, isSyncedMessageQueueTypes, userId, senderHost, senderPort
+      ({ httpClientMessageQueue: httpClientMessageQueue01 } = createHttpClientMessageQueue({
+          recipientHost, recipientPort, messageQueueTypeCode, messageQueueArray, userId, senderHost, senderPort
       }));
     }
     {
-      ({ httpClientMessageQueue: _httpClientMessageQueue02 } = createHttpClientMessageQueue({
-          recipientHost, recipientPort, messageQueueTypeCode, isSyncedMessageQueueTypes, userId, senderHost, senderPort
+      ({ httpClientMessageQueue: httpClientMessageQueue02 } = createHttpClientMessageQueue({
+          recipientHost, recipientPort, messageQueueTypeCode, messageQueueArray, userId, senderHost, senderPort
       }));
     }
 
     // Act
     {
       const { message } = createMessage({ recipientHost, recipientPort, userId, data, senderHost, senderPort, token, metadata, messageStatusCode });
-      _httpClientMessageQueue01.enqueueHttpRequestMessage({ requestMessage: message });
+      httpClientMessageQueue01.enqueueHttpRequestMessage({ requestMessage: message });
     }
 
     // Assert
-    const { httpRequestMessage } = await _httpClientMessageQueue02.dequeueHttpRequestMessage();
+    const { httpRequestMessage } = await httpClientMessageQueue02.dequeueHttpRequestMessage();
     expect(httpRequestMessage).not.toBeNull();
   });
   it("it should dequeue server http request messages without error", async function() {
@@ -47,25 +48,25 @@ describe("when queuing http messages", function() {
     const senderPort = 3000;
     const userId = 'joe';
     const messageQueueTypeCode = 2;
-    const isSyncedMessageQueueTypes = true;
-    let _httpServerMessageQueue01 = null;
-    let _httpServerMessageQueue02 = null;
+    let httpServerMessageQueue01 = null;
+    let httpServerMessageQueue02 = null;
+    const messageQueueArray = []; //shared messages
 
     const { createHttpServerMessageQueue } = require("../../lib/factory/httpservermessagequeue.factory");
     {
-      ({ httpServerMessageQueue: _httpServerMessageQueue01 } = createHttpServerMessageQueue({
-          recipientHost, recipientPort, messageQueueTypeCode, isSyncedMessageQueueTypes, userId, senderHost, senderPort
+      ({ httpServerMessageQueue: httpServerMessageQueue01 } = createHttpServerMessageQueue({
+          recipientHost, recipientPort, messageQueueTypeCode, messageQueueArray, userId, senderHost, senderPort
       }));
     }
     {
-      ({ httpServerMessageQueue: _httpServerMessageQueue02 } = createHttpServerMessageQueue({
-          recipientHost, recipientPort, messageQueueTypeCode, isSyncedMessageQueueTypes, userId, senderHost, senderPort
+      ({ httpServerMessageQueue: httpServerMessageQueue02 } = createHttpServerMessageQueue({
+          recipientHost, recipientPort, messageQueueTypeCode, messageQueueArray, userId, senderHost, senderPort
       }));
     }
-
+   
     // Act
     {
-      _httpServerMessageQueue01.enqueueHttpRequest({ httpRequest: {
+      httpServerMessageQueue01.enqueueHttpRequest({ httpRequest: {
         body: 'Hello World',
         headers: {},
         path: "/test",
@@ -74,7 +75,7 @@ describe("when queuing http messages", function() {
     }
 
     // Assert
-    const { httpRequestMessage } = await _httpServerMessageQueue02.dequeueHttpRequestMessage();
+    const { httpRequestMessage } = await httpServerMessageQueue02.dequeueHttpRequestMessage();
     expect(httpRequestMessage).not.toBeNull();
   });
   it("it should dequeue server http response messages without error", async function() {
@@ -90,30 +91,30 @@ describe("when queuing http messages", function() {
     const data = 'Hello World';
     const token = null;
     const messageQueueTypeCode = 2;
-    const isSyncedMessageQueueTypes = true;
-    let _httpServerMessageQueue01 = null;
-    let _httpServerMessageQueue02 = null;
+    let httpServerMessageQueue01 = null;
+    let httpServerMessageQueue02 = null;
+    const messageQueueArray = []; //shared messages
     const { createHttpServerMessageQueue } = require("../../lib/factory/httpservermessagequeue.factory");
     const { createMessage } = require("../../lib/factory/message.factory");
     {
-      ({ httpServerMessageQueue: _httpServerMessageQueue01 } = createHttpServerMessageQueue({
-          recipientHost, recipientPort, userId, messageQueueTypeCode, isSyncedMessageQueueTypes, senderHost, senderPort
+      ({ httpServerMessageQueue: httpServerMessageQueue01 } = createHttpServerMessageQueue({
+          recipientHost, recipientPort, userId, messageQueueTypeCode, messageQueueArray, senderHost, senderPort
       }));
     }
     {
-      ({ httpServerMessageQueue: _httpServerMessageQueue02 } = createHttpServerMessageQueue({
-          recipientHost, recipientPort, userId, messageQueueTypeCode, isSyncedMessageQueueTypes, senderHost, senderPort
+      ({ httpServerMessageQueue: httpServerMessageQueue02 } = createHttpServerMessageQueue({
+          recipientHost, recipientPort, userId, messageQueueTypeCode, messageQueueArray, senderHost, senderPort
       }));
     }
 
     // Act
     {
       const { message } = createMessage({ recipientHost, recipientPort, userId, data, senderHost, senderPort, token, metadata, messageStatusCode });
-      _httpServerMessageQueue01.enqueueHttpResponseMessage({ responseMessage: message });
+      httpServerMessageQueue01.enqueueHttpResponseMessage({ responseMessage: message });
     }
 
     // Assert
-    const { httpResponseMessage } = await _httpServerMessageQueue02.dequeueHttpResponseMessage();
+    const { httpResponseMessage } = await httpServerMessageQueue02.dequeueHttpResponseMessage();
     expect(httpResponseMessage).not.toBeNull();
   });
 });
