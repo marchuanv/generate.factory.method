@@ -8,8 +8,6 @@ describe("when opening an http connection and sending and http request given a h
             timeout: 8000,
             recipientHost: 'localhost',
             recipientPort: 3000,
-            messageQueueTypeCode: 5, //HttpMessageQueue
-            messageQueueArray: [], //all the queues will share this
             userId: 'joe',
             senderHost: 'localhost',
             senderPort: 3000
@@ -30,14 +28,11 @@ describe("when opening an http connection and sending and http request given a h
      
         // Arrange
         let _httpRequestMessage = null;
-        const messageQueueArray = [];
         const { createHttpConnection } = require('../../lib/factory/httpconnection.factory.js');
         const { httpConnection, httpClientMessageQueue, httpServerMessageQueue } = createHttpConnection({ 
             timeout: 8000,
             recipientHost: 'localhost',
             recipientPort: 3000,
-            messageQueueTypeCode: 5, //HttpMessageQueue
-            messageQueueArray, //all the queues will share this
             userId: 'joe',
             senderHost: 'localhost',
             senderPort: 3000
