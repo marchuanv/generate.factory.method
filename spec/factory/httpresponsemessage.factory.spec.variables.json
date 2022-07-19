@@ -4,8 +4,8 @@
     "userId": "joe",
     "data": "Hello World",
     "token": null,
-    "messageStatusCode": 2,
     "metadata": {},
     "recipientHost": "localhost",
-    "recipientPort": 3000
+    "recipientPort": 3000,
+    "messageStatusCode": 0
 }

@@ -3,11 +3,11 @@
     "userId": "joe",
     "data": "Hello World",
     "token": null,
-    "messageStatusCode": 2,
     "path": "/",
     "senderHost": "localhost",
     "senderPort": 3000,
     "metadata": {},
     "recipientHost": "localhost",
-    "recipientPort": 3000
+    "recipientPort": 3000,
+    "messageStatusCode": 2
 }
