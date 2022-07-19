@@ -12,24 +12,24 @@ describe("when queuing http messages", function() {
     const data = 'Hello World';
     const token = null;
     const messageQueueTypeCode = 2;
+    const isSyncedMessageQueueTypes = true;
     let _httpClientMessageQueue01 = null;
     let _httpClientMessageQueue02 = null;
     const { createHttpClientMessageQueue } = require("../../lib/factory/httpclientmessagequeue.factory");
     const { createMessage } = require("../../lib/factory/message.factory");
     {
       ({ httpClientMessageQueue: _httpClientMessageQueue01 } = createHttpClientMessageQueue({
-          recipientHost, recipientPort, messageQueueTypeCode, userId, senderHost, senderPort
+          recipientHost, recipientPort, messageQueueTypeCode, isSyncedMessageQueueTypes, userId, senderHost, senderPort
       }));
     }
     {
       ({ httpClientMessageQueue: _httpClientMessageQueue02 } = createHttpClientMessageQueue({
-          recipientHost, recipientPort, messageQueueTypeCode, userId, senderHost, senderPort
+          recipientHost, recipientPort, messageQueueTypeCode, isSyncedMessageQueueTypes, userId, senderHost, senderPort
       }));
     }
 
     // Act
     {
-      _httpClientMessageQueue01.sync({ httpClientMessageQueue:  _httpClientMessageQueue02 });
       const { message } = createMessage({ recipientHost, recipientPort, userId, data, senderHost, senderPort, token, metadata, messageStatusCode });
       _httpClientMessageQueue01.enqueueHttpRequestMessage({ requestMessage: message });
     }
@@ -47,25 +47,24 @@ describe("when queuing http messages", function() {
     const senderPort = 3000;
     const userId = 'joe';
     const messageQueueTypeCode = 2;
+    const isSyncedMessageQueueTypes = true;
     let _httpServerMessageQueue01 = null;
     let _httpServerMessageQueue02 = null;
 
     const { createHttpServerMessageQueue } = require("../../lib/factory/httpservermessagequeue.factory");
-    const { createMessage } = require("../../lib/factory/message.factory");
     {
       ({ httpServerMessageQueue: _httpServerMessageQueue01 } = createHttpServerMessageQueue({
-          recipientHost, recipientPort, messageQueueTypeCode, userId, senderHost, senderPort
+          recipientHost, recipientPort, messageQueueTypeCode, isSyncedMessageQueueTypes, userId, senderHost, senderPort
       }));
     }
     {
       ({ httpServerMessageQueue: _httpServerMessageQueue02 } = createHttpServerMessageQueue({
-          recipientHost, recipientPort, messageQueueTypeCode, userId, senderHost, senderPort
+          recipientHost, recipientPort, messageQueueTypeCode, isSyncedMessageQueueTypes, userId, senderHost, senderPort
       }));
     }
 
     // Act
     {
-      _httpServerMessageQueue01.sync({ httpServerMessageQueue:  _httpServerMessageQueue02 });
       _httpServerMessageQueue01.enqueueHttpRequest({ httpRequest: {
         body: 'Hello World',
         headers: {},
@@ -91,24 +90,24 @@ describe("when queuing http messages", function() {
     const data = 'Hello World';
     const token = null;
     const messageQueueTypeCode = 2;
+    const isSyncedMessageQueueTypes = true;
     let _httpServerMessageQueue01 = null;
     let _httpServerMessageQueue02 = null;
     const { createHttpServerMessageQueue } = require("../../lib/factory/httpservermessagequeue.factory");
     const { createMessage } = require("../../lib/factory/message.factory");
     {
       ({ httpServerMessageQueue: _httpServerMessageQueue01 } = createHttpServerMessageQueue({
-          recipientHost, recipientPort, userId, messageQueueTypeCode, senderHost, senderPort
+          recipientHost, recipientPort, userId, messageQueueTypeCode, isSyncedMessageQueueTypes, senderHost, senderPort
       }));
     }
     {
       ({ httpServerMessageQueue: _httpServerMessageQueue02 } = createHttpServerMessageQueue({
-          recipientHost, recipientPort, userId, messageQueueTypeCode, senderHost, senderPort
+          recipientHost, recipientPort, userId, messageQueueTypeCode, isSyncedMessageQueueTypes, senderHost, senderPort
       }));
     }
 
     // Act
     {
-      _httpServerMessageQueue01.sync({ httpServerMessageQueue:  _httpServerMessageQueue02 });
       const { message } = createMessage({ recipientHost, recipientPort, userId, data, senderHost, senderPort, token, metadata, messageStatusCode });
       _httpServerMessageQueue01.enqueueHttpResponseMessage({ responseMessage: message });
     }
