@@ -8,6 +8,7 @@ xdescribe("when opening an http connection and sending and http request given a 
             timeout: 8000,
             recipientHost: 'localhost',
             recipientPort: 3000,
+            messageQueueTypeCode: 2, //HttpServerMessageQueue
             userId: 'joe',
             senderHost: 'localhost',
             senderPort: 3000

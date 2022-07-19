@@ -11,20 +11,19 @@ describe("when queuing http messages", function() {
     const metadata = {};
     const data = 'Hello World';
     const token = null;
+    const messageQueueTypeCode = 2;
     let _httpClientMessageQueue01 = null;
     let _httpClientMessageQueue02 = null;
     const { createHttpClientMessageQueue } = require("../../lib/factory/httpclientmessagequeue.factory");
     const { createMessage } = require("../../lib/factory/message.factory");
     {
       ({ httpClientMessageQueue: _httpClientMessageQueue01 } = createHttpClientMessageQueue({
-        recipientHost, recipientPort, userId, 
-        senderHost, senderPort
+          recipientHost, recipientPort, messageQueueTypeCode, userId, senderHost, senderPort
       }));
     }
     {
       ({ httpClientMessageQueue: _httpClientMessageQueue02 } = createHttpClientMessageQueue({
-        recipientHost, recipientPort, userId, 
-        senderHost, senderPort
+          recipientHost, recipientPort, messageQueueTypeCode, userId, senderHost, senderPort
       }));
     }
 
@@ -47,24 +46,20 @@ describe("when queuing http messages", function() {
     const senderHost = 'localhost';
     const senderPort = 3000;
     const userId = 'joe';
-    const messageStatusCode = 2;
-    const metadata = {};
-    const data = 'Hello World';
-    const token = null;
+    const messageQueueTypeCode = 2;
     let _httpServerMessageQueue01 = null;
     let _httpServerMessageQueue02 = null;
+
     const { createHttpServerMessageQueue } = require("../../lib/factory/httpservermessagequeue.factory");
     const { createMessage } = require("../../lib/factory/message.factory");
     {
       ({ httpServerMessageQueue: _httpServerMessageQueue01 } = createHttpServerMessageQueue({
-        recipientHost, recipientPort, userId, 
-        senderHost, senderPort
+          recipientHost, recipientPort, messageQueueTypeCode, userId, senderHost, senderPort
       }));
     }
     {
       ({ httpServerMessageQueue: _httpServerMessageQueue02 } = createHttpServerMessageQueue({
-        recipientHost, recipientPort, userId, 
-        senderHost, senderPort
+          recipientHost, recipientPort, messageQueueTypeCode, userId, senderHost, senderPort
       }));
     }
 
@@ -95,20 +90,19 @@ describe("when queuing http messages", function() {
     const metadata = {};
     const data = 'Hello World';
     const token = null;
+    const messageQueueTypeCode = 2;
     let _httpServerMessageQueue01 = null;
     let _httpServerMessageQueue02 = null;
     const { createHttpServerMessageQueue } = require("../../lib/factory/httpservermessagequeue.factory");
     const { createMessage } = require("../../lib/factory/message.factory");
     {
       ({ httpServerMessageQueue: _httpServerMessageQueue01 } = createHttpServerMessageQueue({
-        recipientHost, recipientPort, userId, 
-        senderHost, senderPort
+          recipientHost, recipientPort, userId, messageQueueTypeCode, senderHost, senderPort
       }));
     }
     {
       ({ httpServerMessageQueue: _httpServerMessageQueue02 } = createHttpServerMessageQueue({
-        recipientHost, recipientPort, userId, 
-        senderHost, senderPort
+          recipientHost, recipientPort, userId, messageQueueTypeCode, senderHost, senderPort
       }));
     }
 

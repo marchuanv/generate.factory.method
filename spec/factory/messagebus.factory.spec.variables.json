@@ -9,5 +9,6 @@
     "metadata": {},
     "recipientHost": "localhost",
     "recipientPort": 3000,
-    "messageQueueTypeCode": 4
+    "messageQueueTypeCode": 4,
+    "isSyncedMessageQueueTypes": false
 }
