@@ -1,1 +1,1 @@
-factoryContainer.add(create[TypeName]({[Args]}));
+container.add(create[TypeName]({[Args]}));
