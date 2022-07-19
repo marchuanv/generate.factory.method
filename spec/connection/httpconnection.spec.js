@@ -1,6 +1,6 @@
 const { createMessage } = require('../../lib/factory/message.factory.js');
 
-xdescribe("when opening an http connection and sending and http request given a hostname and port number", function() {
+describe("when opening an http connection and sending and http request given a hostname and port number", function() {
     it("it should return the server host address", async () => {
         // Arrange
         const { createHttpConnection } = require('../../lib/factory/httpconnection.factory.js');
@@ -8,7 +8,8 @@ xdescribe("when opening an http connection and sending and http request given a 
             timeout: 8000,
             recipientHost: 'localhost',
             recipientPort: 3000,
-            messageQueueTypeCode: 2, //HttpServerMessageQueue
+            messageQueueTypeCode: 5, //HttpMessageQueue
+            messageQueueArray: [], //all the queues will share this
             userId: 'joe',
             senderHost: 'localhost',
             senderPort: 3000
@@ -29,11 +30,14 @@ xdescribe("when opening an http connection and sending and http request given a 
      
         // Arrange
         let _httpRequestMessage = null;
+        const messageQueueArray = [];
         const { createHttpConnection } = require('../../lib/factory/httpconnection.factory.js');
         const { httpConnection, httpClientMessageQueue, httpServerMessageQueue } = createHttpConnection({ 
             timeout: 8000,
             recipientHost: 'localhost',
             recipientPort: 3000,
+            messageQueueTypeCode: 5, //HttpMessageQueue
+            messageQueueArray, //all the queues will share this
             userId: 'joe',
             senderHost: 'localhost',
             senderPort: 3000
