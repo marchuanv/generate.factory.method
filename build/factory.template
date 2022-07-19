@@ -2,11 +2,10 @@ const factory = require('./factory.js');
 [FactoryRequireScripts]
 const { [TypeName] } = require('[ScriptPath]');
 function create[TypeName]({[SimpleArgs]}) {
-    let container = factory.createContainer([TypeName]);
-    container.add({[SimpleArgs]});
+    const container = factory.createContainer({ type: [TypeName], variableName:'[TypeVariableName]' });
+    container.config({[SimpleArgs]});
     [FactoryCalls]
-    const [TypeVariableName] = new [TypeName](container);
-    container.add({[TypeVariableName]});
+    container.complete();
     return container;
 }
 module.exports = { create[TypeName] };
