@@ -5,7 +5,7 @@ describe('when asking the MessageQueue factory to create an instance', function(
     const {messageQueueTypeCode,isSyncedMessageQueueTypes} = require('C:\\component\\spec\\factory\\messagequeue.factory.spec.variables.json');
 
     // Act
-    const {messageQueue} = createMessageQueue({isSyncedMessageQueueTypes,messageQueueTypeCode});
+    const {messageQueue} = createMessageQueue({messageQueueTypeCode});
     // Assert
     expect(messageQueue).not.toBeNull();
   });

@@ -5,6 +5,5 @@
     "senderPort": 3000,
     "recipientHost": "localhost",
     "recipientPort": 3000,
-    "messageQueueTypeCode": 2,
-    "isSyncedMessageQueueTypes": false
+    "messageQueueTypeCode": 2
 }

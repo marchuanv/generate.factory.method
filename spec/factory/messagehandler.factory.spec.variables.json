@@ -5,6 +5,5 @@
     "token": "sometoken",
     "recipientHost": "localhost",
     "recipientPort": 3000,
-    "messageQueueTypeCode": 4,
-    "isSyncedMessageQueueTypes": false
+    "messageQueueTypeCode": 4
 }
