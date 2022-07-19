@@ -1,3 +1,5 @@
 {
-    "packageJson": null
+    "packageJson": {
+        "name": "componenttest"
+    }
 }

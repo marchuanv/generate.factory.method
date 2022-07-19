@@ -9,7 +9,5 @@
     "metadata": {},
     "recipientHost": "localhost",
     "recipientPort": 3000,
-    "httpMessageHandler": null,
-    "webSocketMessageHandler": null,
-    "httpServerMessageQueue": null
+    "messageQueueTypeCode": 4
 }
