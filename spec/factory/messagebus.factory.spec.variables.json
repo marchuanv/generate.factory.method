@@ -8,7 +8,5 @@
     "messageStatusCode": 2,
     "metadata": {},
     "recipientHost": "localhost",
-    "recipientPort": 3000,
-    "messageHandler": null,
-    "subscriptionMessage": null
+    "recipientPort": 3000
 }
