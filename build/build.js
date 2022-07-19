@@ -59,6 +59,7 @@ function getDependencyTree(typeInfo, pass = 'firstpass', types = []) {
                     .replace(/\[PassesArray\]/g, [])
                     .replace(/\[VariableName\]/g, '')
                     .replace(/\[VariableValue\]/g, '')
+                    .replace(/\[IsSingleton\]/g, false)
                 );
                 types = types.concat(children).concat(typeInfo);
             } catch (err) {
@@ -190,7 +191,8 @@ for(const info of getDependencyTree()) {
         .replace(/\[SimpleArgs\]/g, simpleArgs)
         .replace(/\[TypeVariableName\]/g, info.variableName)
         .replace(/\[FactoryRequireScripts\]/g, factoryRequireScripts.join('\r\n'))
-        .replace(/\[ReturnVariables\]/g, refArgs.concat([info.variableName]));
+        .replace(/\[ReturnVariables\]/g, refArgs.concat([info.variableName]))
+        .replace(/\[IsSingleton\]/g, info.singleton);
     writeFileSync(info.factoryScriptPath, factory, 'utf8');
 
     factoryRequireScripts = [];

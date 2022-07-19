@@ -7,5 +7,6 @@
     "children":[[ChildrenArray]],
     "passes": [[PassesArray]],
     "variableName":"[VariableName]",
-    "variableValue":"[VariableValue]"
+    "variableValue":"[VariableValue]",
+    "singleton": "[IsSingleton]"
 }

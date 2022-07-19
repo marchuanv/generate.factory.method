@@ -4,5 +4,7 @@
     "userId": "joe",
     "data": "Hello World",
     "token": null,
-    "metadata": {}
+    "metadata": {},
+    "userIdentity": null,
+    "senderAddress": null
 }

@@ -3,5 +3,6 @@
     "senderPort": 2000,
     "data": "Hello World",
     "token": null,
-    "metadata": {}
+    "metadata": {},
+    "senderAddress": null
 }
