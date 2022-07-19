@@ -9,6 +9,5 @@
     "metadata": {},
     "recipientHost": "localhost",
     "recipientPort": 3000,
-    "messageQueueTypeCode": 4,
-    "messageQueueArray": null
+    "messageQueueTypeCode": 4
 }

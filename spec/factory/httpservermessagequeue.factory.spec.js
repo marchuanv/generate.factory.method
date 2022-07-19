@@ -5,7 +5,7 @@ describe('when asking the HttpServerMessageQueue factory to create an instance',
     const {userId,senderHost,senderPort,recipientHost,recipientPort,messageQueueTypeCode,messageQueueArray} = require('C:\\component\\spec\\factory\\httpservermessagequeue.factory.spec.variables.json');
 
     // Act
-    const {httpServerMessageQueue} = createHttpServerMessageQueue({recipientHost,recipientPort,messageQueueTypeCode,messageQueueArray,userId,senderHost,senderPort});
+    const {httpServerMessageQueue} = createHttpServerMessageQueue({recipientHost,recipientPort,messageQueueTypeCode,userId,senderHost,senderPort});
     // Assert
     expect(httpServerMessageQueue).not.toBeNull();
   });
