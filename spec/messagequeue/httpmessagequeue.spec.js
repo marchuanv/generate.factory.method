@@ -14,18 +14,17 @@ describe("when queuing http messages", function() {
     const messageQueueTypeCode = 2;
     let httpClientMessageQueue01 = null;
     let httpClientMessageQueue02 = null;
-    const messageQueueArray = []; //shared messages
 
     const { createHttpClientMessageQueue } = require("../../lib/factory/httpclientmessagequeue.factory");
     const { createMessage } = require("../../lib/factory/message.factory");
     {
       ({ httpClientMessageQueue: httpClientMessageQueue01 } = createHttpClientMessageQueue({
-          recipientHost, recipientPort, messageQueueTypeCode, messageQueueArray, userId, senderHost, senderPort
+          recipientHost, recipientPort, messageQueueTypeCode, userId, senderHost, senderPort
       }));
     }
     {
       ({ httpClientMessageQueue: httpClientMessageQueue02 } = createHttpClientMessageQueue({
-          recipientHost, recipientPort, messageQueueTypeCode, messageQueueArray, userId, senderHost, senderPort
+          recipientHost, recipientPort, messageQueueTypeCode, userId, senderHost, senderPort
       }));
     }
 
@@ -50,17 +49,16 @@ describe("when queuing http messages", function() {
     const messageQueueTypeCode = 2;
     let httpServerMessageQueue01 = null;
     let httpServerMessageQueue02 = null;
-    const messageQueueArray = []; //shared messages
 
     const { createHttpServerMessageQueue } = require("../../lib/factory/httpservermessagequeue.factory");
     {
       ({ httpServerMessageQueue: httpServerMessageQueue01 } = createHttpServerMessageQueue({
-          recipientHost, recipientPort, messageQueueTypeCode, messageQueueArray, userId, senderHost, senderPort
+          recipientHost, recipientPort, messageQueueTypeCode, userId, senderHost, senderPort
       }));
     }
     {
       ({ httpServerMessageQueue: httpServerMessageQueue02 } = createHttpServerMessageQueue({
-          recipientHost, recipientPort, messageQueueTypeCode, messageQueueArray, userId, senderHost, senderPort
+          recipientHost, recipientPort, messageQueueTypeCode, userId, senderHost, senderPort
       }));
     }
    
@@ -93,17 +91,16 @@ describe("when queuing http messages", function() {
     const messageQueueTypeCode = 2;
     let httpServerMessageQueue01 = null;
     let httpServerMessageQueue02 = null;
-    const messageQueueArray = []; //shared messages
     const { createHttpServerMessageQueue } = require("../../lib/factory/httpservermessagequeue.factory");
     const { createMessage } = require("../../lib/factory/message.factory");
     {
       ({ httpServerMessageQueue: httpServerMessageQueue01 } = createHttpServerMessageQueue({
-          recipientHost, recipientPort, userId, messageQueueTypeCode, messageQueueArray, senderHost, senderPort
+          recipientHost, recipientPort, userId, messageQueueTypeCode, senderHost, senderPort
       }));
     }
     {
       ({ httpServerMessageQueue: httpServerMessageQueue02 } = createHttpServerMessageQueue({
-          recipientHost, recipientPort, userId, messageQueueTypeCode, messageQueueArray, senderHost, senderPort
+          recipientHost, recipientPort, userId, messageQueueTypeCode, senderHost, senderPort
       }));
     }
 
