@@ -6,6 +6,6 @@ function create[TypeName]({[SimpleArgs]}) {
     container.config({[SimpleArgs]});
     [FactoryCalls]
     container.complete();
-    return container;
+    return container.references;
 }
 module.exports = { create[TypeName] };
