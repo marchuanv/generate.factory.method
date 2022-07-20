@@ -25,6 +25,7 @@ describe("when queuing http messages", function() {
     // Assert
     const { httpRequestMessage } = await httpClientMessageQueue.dequeueHttpRequestMessage();
     expect(httpRequestMessage).not.toBeNull();
+    expect(httpRequestMessage.getId()).toEqual(message.getId());
   });
   it("it should dequeue server http request messages without error", async function() {
 
