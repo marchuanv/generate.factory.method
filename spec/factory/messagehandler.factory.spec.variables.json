@@ -5,5 +5,7 @@
     "token": "sometoken",
     "recipientHost": "localhost",
     "recipientPort": 3000,
-    "messageQueueTypeArray": []
+    "messageQueueTypeArray": [
+        "HttpMessage"
+    ]
 }
