@@ -40,8 +40,8 @@ describe("when asking the http message handler to send, receive and respond, to 
         metadata: { path },   
         messageStatusCode: 0 //success
       });
-      await messageHandlerQueue.enqueueResponseMessage({ responseMessage: message });
       httpMessageHandler.respondToQueue();
+      await messageHandlerQueue.enqueueResponseMessage({ responseMessage: message });
     });
    
     // Act
