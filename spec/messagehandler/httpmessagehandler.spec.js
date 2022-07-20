@@ -16,21 +16,18 @@ describe("when asking the http message handler to send, receive and respond, to 
     const { createHttpMessageHandler } = require('../../lib/factory/httpmessagehandler.factory');
     const { createHttpConnection } = require('../../lib/factory/httpconnection.factory.js');
 
-    const { httpMessageHandler, messageHandlerQueue } = createHttpMessageHandler({ recipientHost, recipientPort, userId, senderHost, senderPort });
+    const { messageHandlerQueue } = createHttpMessageHandler({ recipientHost, recipientPort, userId, senderHost, senderPort });
     const { httpConnection } = createHttpConnection({ timeout, recipientHost, recipientPort, userId, senderHost, senderPort });
     await httpConnection.open();
     expect(httpConnection.isOpen()).toBeTruthy();
 
-    httpMessageHandler.receiveFromQueue().then(async ()=> {
-      const { requestMessage } = await messageHandlerQueue.dequeueRequestMessage();
+    messageHandlerQueue.dequeueRequestMessage().then(async ({ requestMessage }) => {
       _requestMessage = requestMessage;
       const { message } = createMessage({ recipientHost, recipientPort, userId, data: 'Hello From Server', senderHost, senderPort, token, metadata: { path }, messageStatusCode: 0 });
-      httpMessageHandler.respondToQueue();
       await messageHandlerQueue.enqueueResponseMessage({ responseMessage: message });
     });
-   
+
     // Act
-    httpMessageHandler.sendToQueue();
     const { message } = createMessage({ recipientHost, recipientPort, userId, data: 'Hello From Client', senderHost, senderPort, token, metadata: { path }, messageStatusCode: 2 });
     await messageHandlerQueue.enqueueRequestMessage({ requestMessage: message });
     const { responseMessage } = await messageHandlerQueue.dequeueResponseMessage();
