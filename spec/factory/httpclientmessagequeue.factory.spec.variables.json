@@ -3,8 +3,5 @@
     "recipientPort": 3000,
     "userId": "joe",
     "senderHost": "localhost",
-    "senderPort": 3000,
-    "messageQueueTypeArray": [
-        "HttpMessage"
-    ]
+    "senderPort": 3000
 }

@@ -8,8 +8,5 @@
     "messageStatusCode": 2,
     "metadata": {},
     "recipientHost": "localhost",
-    "recipientPort": 3000,
-    "messageQueueTypeArray": [
-        "HttpMessage"
-    ]
+    "recipientPort": 3000
 }

@@ -11,17 +11,11 @@ describe("when queuing http messages", function() {
     const metadata = {};
     const data = 'Hello World';
     const token = null;
-    const messageQueueTypeArray = [
-      "HttpClientResponseMessage",
-      "HttpClientRequestMessage",
-      "HttpServerResponseMessage",
-      "HttpServerRequestMessage"
-    ];
-
+ 
     const { createHttpClientMessageQueue } = require("../../lib/factory/httpclientmessagequeue.factory");
     const { createMessage } = require("../../lib/factory/message.factory");
     const { httpClientMessageQueue } = createHttpClientMessageQueue({
-        recipientHost, recipientPort, messageQueueTypeArray, userId, senderHost, senderPort
+        recipientHost, recipientPort, userId, senderHost, senderPort
     });
 
     // Act
@@ -40,16 +34,10 @@ describe("when queuing http messages", function() {
     const senderHost = 'localhost';
     const senderPort = 3000;
     const userId = 'joe';
-    const messageQueueTypeArray = [
-      "HttpClientResponseMessage",
-      "HttpClientRequestMessage",
-      "HttpServerResponseMessage",
-      "HttpServerRequestMessage"
-    ];
 
     const { createHttpServerMessageQueue } = require("../../lib/factory/httpservermessagequeue.factory");
     const { httpServerMessageQueue } = createHttpServerMessageQueue({
-        recipientHost, recipientPort, messageQueueTypeArray, userId, senderHost, senderPort
+        recipientHost, recipientPort, userId, senderHost, senderPort
     });
    
     // Act
@@ -76,16 +64,11 @@ describe("when queuing http messages", function() {
     const metadata = {};
     const data = 'Hello World';
     const token = null;
-    const messageQueueTypeArray = [
-      "HttpClientResponseMessage",
-      "HttpClientRequestMessage",
-      "HttpServerResponseMessage",
-      "HttpServerRequestMessage"
-    ];
+
     const { createHttpServerMessageQueue } = require("../../lib/factory/httpservermessagequeue.factory");
     const { createMessage } = require("../../lib/factory/message.factory");
     const { httpServerMessageQueue } = createHttpServerMessageQueue({
-        recipientHost, recipientPort, messageQueueTypeArray, userId, senderHost, senderPort
+        recipientHost, recipientPort, userId, senderHost, senderPort
     });
 
     // Act

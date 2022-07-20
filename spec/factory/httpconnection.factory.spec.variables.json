@@ -4,8 +4,5 @@
     "senderHost": "localhost",
     "senderPort": 3000,
     "recipientHost": "localhost",
-    "recipientPort": 3000,
-    "messageQueueTypeArray": [
-        "HttpMessage"
-    ]
+    "recipientPort": 3000
 }
