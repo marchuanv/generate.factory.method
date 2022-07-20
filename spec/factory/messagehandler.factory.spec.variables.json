@@ -1,8 +1,0 @@
-{
-    "userId": "joe",
-    "senderHost": "localhost",
-    "senderPort": 3000,
-    "token": "sometoken",
-    "recipientHost": "localhost",
-    "recipientPort": 3000
-}
