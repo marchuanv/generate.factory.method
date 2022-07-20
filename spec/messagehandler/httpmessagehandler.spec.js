@@ -31,7 +31,7 @@ describe("when asking the http message handler to send, receive and respond, to 
    
     // Act
     httpMessageHandler.sendToQueue();
-    const { message } = createMessage({ recipientHost, recipientPort, userId, data: 'Hello From Client', senderHost: 'localhost', senderPort, token, metadata: { path },messageStatusCode: 2 });
+    const { message } = createMessage({ recipientHost, recipientPort, userId, data: 'Hello From Client', senderHost, senderPort, token, metadata: { path }, messageStatusCode: 2 });
     await messageHandlerQueue.enqueueRequestMessage({ requestMessage: message });
     const { responseMessage } = await messageHandlerQueue.dequeueResponseMessage();
 
