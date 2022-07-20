@@ -8,6 +8,8 @@ describe("when asking the http message handler to send, receive and respond, to 
     const senderPort = 3000;
     const recipientHost = 'localhost';
     const recipientPort = 3000;
+    const timeout = 8000;
+    const token = null;
     let _requestMessage = null;
 
     const { createMessage } = require('../../lib/factory/message.factory');
@@ -15,48 +17,21 @@ describe("when asking the http message handler to send, receive and respond, to 
     const { createHttpConnection } = require('../../lib/factory/httpconnection.factory.js');
 
     const { httpMessageHandler, messageHandlerQueue } = createHttpMessageHandler({ recipientHost, recipientPort, userId, senderHost, senderPort });
-    const { httpConnection } = createHttpConnection({ 
-        timeout: 8000,
-        recipientHost: 'localhost',
-        recipientPort: 3000,
-        userId: 'joe',
-        senderHost: 'localhost',
-        senderPort: 3000
-    });
+    const { httpConnection } = createHttpConnection({ timeout, recipientHost, recipientPort, userId, senderHost, senderPort });
     await httpConnection.open();
     expect(httpConnection.isOpen()).toBeTruthy();
 
     httpMessageHandler.receiveFromQueue().then(async ()=> {
       const { requestMessage } = await messageHandlerQueue.dequeueRequestMessage();
       _requestMessage = requestMessage;
-      const { message } = createMessage({ 
-        recipientHost: 'localhost',
-        recipientPort: 3000,
-        userId: 'joe',
-        data: 'Hello From Server',
-        senderHost: 'localhost',
-        senderPort: 3000,
-        token: null,
-        metadata: { path },   
-        messageStatusCode: 0 //success
-      });
+      const { message } = createMessage({ recipientHost, recipientPort, userId, data: 'Hello From Server', senderHost, senderPort, token, metadata: { path }, messageStatusCode: 0 });
       httpMessageHandler.respondToQueue();
       await messageHandlerQueue.enqueueResponseMessage({ responseMessage: message });
     });
    
     // Act
     httpMessageHandler.sendToQueue();
-    const { message } = createMessage({ 
-      recipientHost: 'localhost',
-      recipientPort: 3000,
-      userId: 'joe',
-      data: 'Hello From Client',
-      senderHost: 'localhost',
-      senderPort: 3000,
-      token: null,
-      metadata: { path },
-      messageStatusCode: 2 //pending
-    });
+    const { message } = createMessage({ recipientHost, recipientPort, userId, data: 'Hello From Client', senderHost: 'localhost', senderPort, token, metadata: { path },messageStatusCode: 2 });
     await messageHandlerQueue.enqueueRequestMessage({ requestMessage: message });
     const { responseMessage } = await messageHandlerQueue.dequeueResponseMessage();
 
@@ -65,10 +40,12 @@ describe("when asking the http message handler to send, receive and respond, to 
     expect(httpConnection.isOpen()).toBeFalsy();
     expect(_requestMessage).not.toBeNull();
     expect(_requestMessage.getMessageStatus().code).toEqual(2); //pending
-    const address = _requestMessage.getSenderAddress();
-    expect(address.senderHost).toEqual('localhost');
-    expect(address.senderPort).toEqual(3000);
     expect(_requestMessage.getContent()).toEqual('Hello From Client');
+    {
+      const { senderHost, senderPort } = _requestMessage.getSenderAddress();
+      expect(senderHost).toEqual('localhost');
+      expect(senderPort).toEqual(3000);
+    }
     expect(responseMessage).not.toBeNull();
     expect(responseMessage.getContent()).toEqual('Hello From Server');
     expect(responseMessage.getMessageStatus().code).toEqual(0); //success
