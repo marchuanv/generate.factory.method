@@ -26,6 +26,7 @@ describe("when queuing http messages", function() {
     const { httpRequestMessage } = await httpClientMessageQueue.dequeueHttpRequestMessage();
     expect(httpRequestMessage).not.toBeNull();
     expect(httpRequestMessage.getId()).toEqual(message.getId());
+    expect(httpRequestMessage.getContent()).toEqual(message.getContent());
   });
   it("it should dequeue server http request messages without error", async function() {
 
@@ -35,23 +36,24 @@ describe("when queuing http messages", function() {
     const senderHost = 'localhost';
     const senderPort = 3000;
     const userId = 'joe';
-
     const { createHttpServerMessageQueue } = require("../../lib/factory/httpservermessagequeue.factory");
     const { httpServerMessageQueue } = createHttpServerMessageQueue({
         recipientHost, recipientPort, userId, senderHost, senderPort
     });
-   
-    // Act
-    httpServerMessageQueue.enqueueHttpRequest({ httpRequest: {
+    const httpRequest = {
       body: 'Hello World',
       headers: {},
       path: "/test",
       method: "POST"
-    }});
+    }
+
+    // Act
+    httpServerMessageQueue.enqueueHttpRequest({ httpRequest });
 
     // Assert
     const { httpRequestMessage } = await httpServerMessageQueue.dequeueHttpRequestMessage();
     expect(httpRequestMessage).not.toBeNull();
+    expect(httpRequestMessage.getContent()).toEqual(httpRequest.body);
   });
   it("it should dequeue server http response messages without error", async function() {
 
@@ -79,5 +81,7 @@ describe("when queuing http messages", function() {
     // Assert
     const { httpResponseMessage } = await httpServerMessageQueue.dequeueHttpResponseMessage();
     expect(httpResponseMessage).not.toBeNull();
+    expect(httpResponseMessage.getId()).toEqual(message.getId());
+    expect(httpResponseMessage.getContent()).toEqual(message.getContent());
   });
 });
