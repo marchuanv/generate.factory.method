@@ -1,5 +1,4 @@
-xdescribe("when asking the http message handler to send, receive and respond, to a request messages", function() {
-
+describe("when asking the http message handler to send, receive and respond, to a request messages", function() {
   it("it should succeed without any errors", async () => {
     
     // Arrange
@@ -15,24 +14,17 @@ xdescribe("when asking the http message handler to send, receive and respond, to
     const { createHttpMessageHandler } = require('../../lib/factory/httpmessagehandler.factory');
     const { createHttpConnection } = require('../../lib/factory/httpconnection.factory.js');
 
-    const httpConnection = null;
-    const { httpMessageHandler, httpClientMessageQueue, httpServerMessageQueue, messageQueue } = createHttpMessageHandler({ userId, recipientHost, recipientPort, senderHost, senderPort });
-    _httpClientMessageQueue = httpClientMessageQueue;
-    _httpServerMessageQueue = httpServerMessageQueue;
-    {
-      const { httpConnection, httpClientMessageQueue, httpServerMessageQueue } = createHttpConnection({ 
-          timeout: 8000,
-          recipientHost: 'localhost',
-          recipientPort: 3000,
-          userId: 'joe',
-          senderHost: 'localhost',
-          senderPort: 3000
-      });
-      await httpConnection.open();
-      expect(httpConnection.isOpen()).toBeTruthy();
-      _httpClientMessageQueue.sync({ httpClientMessageQueue });
-      _httpServerMessageQueue.sync({ httpServerMessageQueue });
-    }
+    const { httpMessageHandler, messageQueue } = createHttpMessageHandler({ recipientHost, recipientPort, userId, senderHost, senderPort });
+    const { httpConnection } = createHttpConnection({ 
+        timeout: 8000,
+        recipientHost: 'localhost',
+        recipientPort: 3000,
+        userId: 'joe',
+        senderHost: 'localhost',
+        senderPort: 3000
+    });
+    await httpConnection.open();
+    expect(httpConnection.isOpen()).toBeTruthy();
 
     httpMessageHandler.receiveFromQueue().then(async ()=> {
 
