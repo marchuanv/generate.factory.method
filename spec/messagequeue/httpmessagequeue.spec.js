@@ -1,4 +1,4 @@
-xdescribe("when queuing http messages", function() {
+describe("when queuing http messages", function() {
   it("it should dequeue http request messages without error", async function() {
 
     // Arrange
@@ -28,7 +28,7 @@ xdescribe("when queuing http messages", function() {
     expect(httpRequestMessage.getId()).toEqual(message.getId());
     expect(httpRequestMessage.getContent()).toEqual(message.getContent());
   });
-  it("it should dequeue server http request messages without error", async function() {
+  xit("it should dequeue server http request messages without error", async function() {
 
     // Arrange
     const recipientHost = 'localhost';
@@ -55,7 +55,7 @@ xdescribe("when queuing http messages", function() {
     expect(httpRequestMessage).not.toBeNull();
     expect(httpRequestMessage.getContent()).toEqual(httpRequest.body);
   });
-  it("it should dequeue server http response messages without error", async function() {
+  xit("it should dequeue server http response messages without error", async function() {
 
     // Arrange
     const recipientHost = 'localhost';
