@@ -16,8 +16,8 @@ describe("when asking the http message handler to send, receive and respond, to 
     const { createHttpMessageHandler } = require('../../lib/factory/httpmessagehandler.factory');
     const { createHttpConnection } = require('../../lib/factory/httpconnection.factory.js');
 
-    const { messageHandlerQueue } = createHttpMessageHandler({ recipientHost, recipientPort, userId, senderHost, senderPort });
-    const { httpConnection } = createHttpConnection({ timeout, recipientHost, recipientPort, userId, senderHost, senderPort });
+    const { messageHandlerQueue } = createHttpMessageHandler({ messageQueueTypeCode: 1, recipientHost, recipientPort, userId, senderHost, senderPort });
+    const { httpConnection } = createHttpConnection({ timeout, recipientHost, recipientPort, messageQueueTypeCode: 1, userId, senderHost, senderPort });
     await httpConnection.open();
     expect(httpConnection.isOpen()).toBeTruthy();
 

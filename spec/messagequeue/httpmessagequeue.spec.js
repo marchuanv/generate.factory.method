@@ -16,7 +16,7 @@ describe("when queuing http messages", function() {
     const { createHttpClientMessageQueue } = require("../../lib/factory/httpclientmessagequeue.factory");
     const { createMessage } = require("../../lib/factory/message.factory");
     const { httpClientMessageQueue } = createHttpClientMessageQueue({
-        recipientHost, recipientPort, userId, senderHost, senderPort
+        recipientHost, recipientPort, messageQueueTypeCode: 1, userId, senderHost, senderPort
     });
 
     // Act
@@ -40,7 +40,35 @@ describe("when queuing http messages", function() {
     const userId = 'joe';
     const { createHttpServerMessageQueue } = require("../../lib/factory/httpservermessagequeue.factory");
     const { httpServerMessageQueue } = createHttpServerMessageQueue({
-        recipientHost, recipientPort, userId, senderHost, senderPort
+        recipientHost, recipientPort, messageQueueTypeCode: 1, userId, senderHost, senderPort
+    });
+    const httpRequest = {
+      body: 'Hello World',
+      headers: {},
+      path: "/test",
+      method: "POST"
+    }
+
+    // Act
+    httpServerMessageQueue.enqueueHttpRequest({ httpRequest });
+
+    // Assert
+    const { httpRequestMessage } = await httpServerMessageQueue.dequeueHttpRequestMessage();
+    expect(httpRequestMessage).not.toBeNull();
+    expect(httpRequestMessage.getContent()).toEqual(httpRequest.body);
+  });
+
+  it("it should dequeue server http request messages without error", async function() {
+
+    // Arrange
+    const recipientHost = 'localhost';
+    const recipientPort = 3000;
+    const senderHost = 'localhost';
+    const senderPort = 3000;
+    const userId = 'joe';
+    const { createHttpServerMessageQueue } = require("../../lib/factory/httpservermessagequeue.factory");
+    const { httpServerMessageQueue } = createHttpServerMessageQueue({
+        recipientHost, recipientPort, messageQueueTypeCode: 1, userId, senderHost, senderPort
     });
     const httpRequest = {
       body: 'Hello World',
@@ -74,7 +102,7 @@ describe("when queuing http messages", function() {
     const { createHttpServerMessageQueue } = require("../../lib/factory/httpservermessagequeue.factory");
     const { createMessage } = require("../../lib/factory/message.factory");
     const { httpServerMessageQueue } = createHttpServerMessageQueue({
-        recipientHost, recipientPort, userId, senderHost, senderPort
+        recipientHost, recipientPort, messageQueueTypeCode: 1, userId, senderHost, senderPort
     });
 
     // Act

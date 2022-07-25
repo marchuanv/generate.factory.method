@@ -1,6 +1,7 @@
 const { createMessage } = require('../../lib/factory/message.factory.js');
 
 describe("when opening an http connection and sending and http request given a hostname and port number", function() {
+    
     it("it should return the server host address", async () => {
         // Arrange
         const { createHttpConnection } = require('../../lib/factory/httpconnection.factory.js');
@@ -8,6 +9,7 @@ describe("when opening an http connection and sending and http request given a h
             timeout: 8000,
             recipientHost: 'localhost',
             recipientPort: 3000,
+            messageQueueTypeCode: 1,
             userId: 'joe',
             senderHost: 'localhost',
             senderPort: 3000
@@ -33,6 +35,7 @@ describe("when opening an http connection and sending and http request given a h
             timeout: 8000,
             recipientHost: 'localhost',
             recipientPort: 3000,
+            messageQueueTypeCode: 1,
             userId: 'joe',
             senderHost: 'localhost',
             senderPort: 3000
