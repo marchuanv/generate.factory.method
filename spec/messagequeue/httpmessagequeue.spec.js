@@ -1,4 +1,5 @@
 describe("when queuing http messages", function() {
+
   it("it should dequeue http request messages without error", async function() {
 
     // Arrange
@@ -28,7 +29,8 @@ describe("when queuing http messages", function() {
     expect(httpRequestMessage.getId()).toEqual(message.getId());
     expect(httpRequestMessage.getContent()).toEqual(message.getContent());
   });
-  xit("it should dequeue server http request messages without error", async function() {
+
+  it("it should dequeue server http request messages without error", async function() {
 
     // Arrange
     const recipientHost = 'localhost';
@@ -55,7 +57,8 @@ describe("when queuing http messages", function() {
     expect(httpRequestMessage).not.toBeNull();
     expect(httpRequestMessage.getContent()).toEqual(httpRequest.body);
   });
-  xit("it should dequeue server http response messages without error", async function() {
+
+  it("it should dequeue server http response messages without error", async function() {
 
     // Arrange
     const recipientHost = 'localhost';
@@ -63,7 +66,7 @@ describe("when queuing http messages", function() {
     const senderHost = 'localhost';
     const senderPort = 3000;
     const userId = 'joe';
-    const messageStatusCode = 2;
+    const messageStatusCode = 0;
     const metadata = {};
     const data = 'Hello World';
     const token = null;
@@ -84,4 +87,5 @@ describe("when queuing http messages", function() {
     expect(httpResponseMessage.getId()).toEqual(message.getId());
     expect(httpResponseMessage.getContent()).toEqual(message.getContent());
   });
+
 });
