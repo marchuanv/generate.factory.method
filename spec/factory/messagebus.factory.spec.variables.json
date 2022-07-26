@@ -10,5 +10,7 @@
     "recipientHost": "localhost",
     "recipientPort": 3000,
     "Id": "randomid",
-    "messageQueueTypeCode": 3
+    "messageQueueTypeCode": 3,
+    "sharedMessageQueue": null,
+    "subscriptionMessage": null
 }

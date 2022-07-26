@@ -8,5 +8,6 @@
     "metadata": {},
     "recipientHost": "localhost",
     "recipientPort": 3000,
-    "Id": "randomid"
+    "Id": "randomid",
+    "userIdentity": null
 }
