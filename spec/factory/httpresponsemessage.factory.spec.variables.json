@@ -3,7 +3,6 @@
     "senderPort": 3000,
     "userId": "joe",
     "data": "Hello World",
-    "token": null,
     "metadata": {},
     "recipientHost": "localhost",
     "recipientPort": 3000,

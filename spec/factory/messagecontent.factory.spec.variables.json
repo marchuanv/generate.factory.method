@@ -3,6 +3,5 @@
     "senderPort": 2000,
     "userId": "joe",
     "data": "Hello World",
-    "token": "INVALID TOKEN",
     "metadata": {}
 }

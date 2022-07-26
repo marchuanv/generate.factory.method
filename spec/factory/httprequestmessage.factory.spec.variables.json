@@ -2,7 +2,6 @@
     "method": "POST",
     "userId": "joe",
     "data": "Hello World",
-    "token": null,
     "path": "/",
     "senderHost": "localhost",
     "senderPort": 3000,

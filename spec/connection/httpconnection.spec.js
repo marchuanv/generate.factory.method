@@ -42,14 +42,15 @@ describe("when opening an http connection and sending and http request given a h
         await httpConnection.open();
         expect(httpConnection.isOpen()).toBeTruthy();
         const { message } = createMessage({ 
+            metadata: { path: '/connectiontest' },
+            userId: 'joe',
             recipientHost: 'localhost',
             recipientPort: 3000,
-            userId: 'joe',
+            remoteBase64RSAPublicKey: "LS0tLS1CRUdJTiBQVUJMSUMgS0VZLS0tLS0NCk1JR2VNQTBHQ1NxR1NJYjNEUUVCQVFVQUE0R01BRENCaUFLQmdHTldFenp0b3JYcmJoSmxEdTBQaFlvUGxHZXN5bXowR0Z6czFvSEVUQ1lwWnY1TkxEaVpiNzFtNlpKY2RhSlZmSHJ2dTVxNDN6SGdObU84K0lMeE9tdFVLZnJBOHR1azcwSFl0QllCU05tZGVCZGRHSnZQYjVndFRiMksxUCtNY3VuUzVUbmw2U2RBZDFkVUdva1BGeEFwS3JGbkFPaHpWd0dEbUMvZE50QkhBZ01CQUFFPQ0KLS0tLS1FTkQgUFVCTElDIEtFWS0tLS0t",
             data: 'Hello From Client',
             senderHost: 'localhost',
             senderPort: 3000,
             token: null,
-            metadata: { path: '/connectiontest' },
             messageStatusCode: 2 //pending
         });
         await httpClientMessageQueue.enqueueHttpRequestMessage({ requestMessage: message });
@@ -59,6 +60,7 @@ describe("when opening an http connection and sending and http request given a h
                 recipientHost: 'localhost',
                 recipientPort: 3000,
                 userId: 'joe',
+                remoteBase64RSAPublicKey: "LS0tLS1CRUdJTiBQVUJMSUMgS0VZLS0tLS0NCk1JR2VNQTBHQ1NxR1NJYjNEUUVCQVFVQUE0R01BRENCaUFLQmdHTldFenp0b3JYcmJoSmxEdTBQaFlvUGxHZXN5bXowR0Z6czFvSEVUQ1lwWnY1TkxEaVpiNzFtNlpKY2RhSlZmSHJ2dTVxNDN6SGdObU84K0lMeE9tdFVLZnJBOHR1azcwSFl0QllCU05tZGVCZGRHSnZQYjVndFRiMksxUCtNY3VuUzVUbmw2U2RBZDFkVUdva1BGeEFwS3JGbkFPaHpWd0dEbUMvZE50QkhBZ01CQUFFPQ0KLS0tLS1FTkQgUFVCTElDIEtFWS0tLS0t",
                 data: 'Hello From Server',
                 senderHost: 'localhost',
                 senderPort: 3000,
