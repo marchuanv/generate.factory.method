@@ -7,5 +7,10 @@
     "metadata": {},
     "recipientHost": "localhost",
     "recipientPort": 3000,
-    "Id": "randomid"
+    "Id": "randomid",
+    "recipientAddress": null,
+    "messageContentSecurity": null,
+    "messageMetadata": null,
+    "messageStatus": null,
+    "senderAddress": null
 }

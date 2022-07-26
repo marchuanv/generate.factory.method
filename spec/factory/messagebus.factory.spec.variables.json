@@ -6,5 +6,8 @@
     "messageQueueTypeCode": 3,
     "channel": "testchannel",
     "userId": "joe",
-    "remoteBase64RSAPublicKey": null
+    "remoteBase64RSAPublicKey": null,
+    "messageHandlerQueue": null,
+    "senderAddress": null,
+    "recipientAddress": null
 }
