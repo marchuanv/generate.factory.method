@@ -1,16 +1,9 @@
 {
-    "userId": "joe",
-    "channelName": "somechannel",
     "senderHost": "localhost",
     "senderPort": 3000,
-    "data": "Hello World",
-    "token": "sometoken",
-    "messageStatusCode": 2,
-    "metadata": {},
     "recipientHost": "localhost",
     "recipientPort": 3000,
-    "Id": "randomid",
     "messageQueueTypeCode": 3,
-    "sharedMessageQueue": null,
-    "subscriptionMessage": null
+    "channel": "testchannel",
+    "userId": "joe"
 }

@@ -1,34 +1,37 @@
-xdescribe("when publishing a message", function() {
+describe("when publishing a message", function() {
  it("it should send the same message to all subscribers", async function() {
 
     // Arrange
     const userId = 'joe';
-    const channelName = 'messagebustest';
+    const channel = 'messagebustest';
     const expectedData = 'hello from subscription callback';
-    const senderhost = 'localhost';
-    const senderport = 2000;
-    const subscriptionData = 'subscriptiondata';
-    const token = null;
-    const messageStatusCode = 2;
+    const senderHost = 'localhost';
+    const senderPort = 3000;
+    const recipientHost = 'localhost';
+    const recipientPort = 3000;
+    const data = 'publishing some data';
+    let subscriberMessages = [];
 
     const { createMessageBus } = require('../../lib/factory/messagebus.factory');
-    const { messageBus, subscriptionMessage, messageQueue } =  createMessageBus({ 
-                                            userId, 
-                                            senderHost: senderhost,
-                                            senderPort: senderport,
-                                            data: subscriptionData,
-                                            token,
-                                            messageStatusCode,
-                                            channelName
-                                          });
-    subscription.onDataReceived({ callback: ({ senderHost, senderPort, data }) => {
-      // Assert
-      expect(senderHost).toEqual('localhost');
-      expect(senderPort).toEqual(2000);
-      expect(data).toEqual(expectedData);
+    const { messageBus } =  createMessageBus({ userId, messageQueueTypeCode: 3, senderHost, senderPort, recipientHost, recipientPort, channel });
+
+    messageBus.subscribe({ callback: ({ message }) => { //Subscriber01
+      subscriberMessages.push(message);
+    }});
+    messageBus.subscribe({ callback: ({ message }) => { //Subscriber02
+      subscriberMessages.push(message);
+    }});
+    messageBus.subscribe({ callback: ({ message }) => { //Subscriber03
+      subscriberMessages.push(message);
     }});
 
     // Act
     await messageBus.publish({ data: expectedData });
+
+    // Assert
+    expect(subscriberMessages.length).toEqual(3);
+    expect(senderHost).toEqual('localhost');
+    expect(senderPort).toEqual(2000);
+    expect(data).toEqual(expectedData);
   })
 });
