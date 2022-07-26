@@ -21,8 +21,8 @@ describe("when opening an http connection and sending and http request given a h
         const { host, port } = httpConnection.getServerAddress();
 
         // Assert
+        await httpConnection.close();
         expect(`${host}:${port}`).toEqual('localhost:3000');
-        httpConnection.close();
         expect(httpConnection.isOpen()).toBeFalsy();
     });
 
