@@ -1,6 +1,5 @@
 {
     "data": "MessageContentDataTest",
-    "messageContentSecurity": null,
-    "userId": null,
-    "metadata": null
+    "userId": "joe",
+    "metadata": {}
 }
