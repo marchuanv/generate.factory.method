@@ -21,7 +21,7 @@ describe("when queuing http messages", function() {
 
     // Act
     const { message } = createMessage({ recipientHost, recipientPort, userId, data, senderHost, senderPort, token, metadata, messageStatusCode });
-    httpClientMessageQueue.enqueueHttpRequestMessage({ requestMessage: message });
+    httpClientMessageQueue.enqueueHttpRequestMessage({ message });
 
     // Assert
     const { httpRequestMessage } = await httpClientMessageQueue.dequeueHttpRequestMessage();
@@ -82,7 +82,7 @@ describe("when queuing http messages", function() {
 
     // Act
     const { message } = createMessage({ recipientHost, recipientPort, userId, data, senderHost, senderPort, token, metadata, messageStatusCode });
-    httpServerMessageQueue.enqueueHttpResponseMessage({ responseMessage: message });
+    httpServerMessageQueue.enqueueHttpResponseMessage({ message });
 
     // Assert
     const { httpResponseMessage } = await httpServerMessageQueue.dequeueHttpResponseMessage();

@@ -53,7 +53,7 @@ describe("when opening an http connection and sending and http request given a h
             token: null,
             messageStatusCode: 2 //pending
         });
-        await httpClientMessageQueue.enqueueHttpRequestMessage({ requestMessage: message });
+        await httpClientMessageQueue.enqueueHttpRequestMessage({ message });
         httpServerMessageQueue.dequeueHttpRequestMessage().then(async ({ httpRequestMessage }) => {
             _httpRequestMessage = httpRequestMessage;
             const { message } = createMessage({ 
@@ -68,7 +68,7 @@ describe("when opening an http connection and sending and http request given a h
                 metadata: { path: '/connectiontest' },
                 messageStatusCode: 0 //success
             });
-            await httpServerMessageQueue.enqueueHttpResponseMessage({ responseMessage: message });
+            await httpServerMessageQueue.enqueueHttpResponseMessage({ message });
         });
 
         // Act
