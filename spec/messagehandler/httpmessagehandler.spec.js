@@ -36,16 +36,22 @@ describe("when asking the http message handler to send, receive and respond, to 
     await httpConnection.close();
     expect(httpConnection.isOpen()).toBeFalsy();
     expect(_requestMessage).not.toBeNull();
-    expect(_requestMessage.getMessageStatus().code).toEqual(2); //pending
-    expect(_requestMessage.getContent()).toEqual('Hello From Client');
+    {
+      const { code } = _requestMessage.getMessageStatus();
+      expect(code).toEqual(2); //pending
+    }
+    expect(_requestMessage.getDecryptedContent()).toEqual('Hello From Client');
     {
       const { senderHost, senderPort } = _requestMessage.getSenderAddress();
       expect(senderHost).toEqual('localhost');
       expect(senderPort).toEqual(3000);
     }
     expect(responseMessage).not.toBeNull();
-    expect(responseMessage.getContent()).toEqual('Hello From Server');
-    expect(responseMessage.getMessageStatus().code).toEqual(0); //success
+    expect(responseMessage.getDecryptedContent()).toEqual('Hello From Server');
+    {
+      const { code } = _requestMessage.getMessageStatus();
+      expect(code).toEqual(0); //success
+    }
   });
 
 });
