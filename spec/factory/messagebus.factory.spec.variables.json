@@ -7,7 +7,5 @@
     "channel": "testchannel",
     "userId": "joe",
     "remoteBase64RSAPublicKey": null,
-    "messageHandlerQueue": null,
-    "senderAddress": null,
-    "recipientAddress": null
+    "sharedMessageQueue": null
 }

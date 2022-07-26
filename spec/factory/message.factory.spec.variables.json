@@ -9,7 +9,8 @@
     "recipientPort": 3000,
     "Id": "randomid",
     "recipientAddress": null,
-    "messageContentSecurity": null,
+    "messageContent": null,
+    "messageContentMetadata": null,
     "messageMetadata": null,
     "messageStatus": null,
     "senderAddress": null
