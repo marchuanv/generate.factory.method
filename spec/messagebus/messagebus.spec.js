@@ -1,10 +1,10 @@
 describe("when publishing a message", function() {
- it("it should send the same message to all subscribers", async function() {
+ it("it should publish to all subscribers", async function() {
 
     // Arrange
     const userId = 'joe';
     const channel = 'messagebustest';
-    const expectedData = 'hello from subscription callback';
+    const expectedData = 'publishing some data';
     const senderHost = 'localhost';
     const senderPort = 3000;
     const recipientHost = 'localhost';
@@ -14,6 +14,8 @@ describe("when publishing a message", function() {
 
     const { createMessageBus } = require('../../lib/factory/messagebus.factory');
     const { messageBus } =  createMessageBus({ userId, messageQueueTypeCode: 3, senderHost, senderPort, recipientHost, recipientPort, channel });
+
+    await messageBus.start();
 
     messageBus.subscribe({ callback: ({ message }) => { //Subscriber01
       subscriberMessages.push(message);
@@ -26,12 +28,11 @@ describe("when publishing a message", function() {
     }});
 
     // Act
-    await messageBus.publish({ data: expectedData });
+    await messageBus.publish({ data });
 
     // Assert
+    await messageBus.stop();
     expect(subscriberMessages.length).toEqual(3);
-    expect(senderHost).toEqual('localhost');
-    expect(senderPort).toEqual(2000);
     expect(data).toEqual(expectedData);
   })
 });
