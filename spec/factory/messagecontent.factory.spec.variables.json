@@ -1,8 +1,6 @@
 {
-    "senderHost": "localhost",
-    "senderPort": 2000,
-    "userId": "joe",
-    "data": "Hello World",
-    "metadata": {},
-    "messageContentSecurity": null
+    "data": "MessageContentDataTest",
+    "messageContentSecurity": null,
+    "userId": null,
+    "metadata": null
 }

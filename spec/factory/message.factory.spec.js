@@ -5,7 +5,7 @@ describe('when asking the Message factory to create an instance', function() {
     const {senderHost,senderPort,userId,data,messageStatusCode,metadata,recipientHost,recipientPort,Id,recipientAddress,messageContentSecurity,messageMetadata,messageStatus,senderAddress} = require('C:\\component\\spec\\factory\\message.factory.spec.variables.json');
 
     // Act
-    const {message} = createMessage({recipientAddress,Id,data,messageContentSecurity,messageMetadata,messageStatus,senderAddress});
+    const {message} = createMessage({recipientHost,recipientPort,Id,data,userId,metadata,messageStatusCode,senderHost,senderPort});
     // Assert
     expect(message).not.toBeNull();
   });

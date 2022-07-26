@@ -5,7 +5,7 @@ describe('when asking the Encryption factory to create an instance', function() 
     const {userId,userIdentity} = require('C:\\component\\spec\\factory\\encryption.factory.spec.variables.json');
 
     // Act
-    const {encryption} = createEncryption({userIdentity});
+    const {encryption} = createEncryption({userId});
     // Assert
     expect(encryption).not.toBeNull();
   });
