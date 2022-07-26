@@ -16,22 +16,15 @@ describe("when publishing a message", function() {
     const { messageBus } =  createMessageBus({ userId, messageQueueTypeCode: 3, senderHost, senderPort, recipientHost, recipientPort, channel });
 
     await messageBus.start();
-
-    messageBus.subscribe({ callback: ({ message }) => { //Subscriber01
-      subscriberMessages.push(message);
-    }});
-    messageBus.subscribe({ callback: ({ message }) => { //Subscriber02
-      subscriberMessages.push(message);
-    }});
-    messageBus.subscribe({ callback: ({ message }) => { //Subscriber03
-      subscriberMessages.push(message);
-    }});
+    messageBus.subscribe({ callback: ({ message }) => subscriberMessages.push(message) }); //Subscriber01
+    messageBus.subscribe({ callback: ({ message }) => subscriberMessages.push(message) }); //Subscriber02
+    messageBus.subscribe({ callback: ({ message }) => subscriberMessages.push(message) }); //Subscriber03
 
     // Act
     await messageBus.publish({ data });
+    await messageBus.stop();
 
     // Assert
-    await messageBus.stop();
     expect(subscriberMessages.length).toEqual(3);
     expect(data).toEqual(expectedData);
   })
