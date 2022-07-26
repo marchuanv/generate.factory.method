@@ -11,16 +11,15 @@ describe("when asking the http message handler to send, receive and respond, to 
     const timeout = 8000;
     const token = null;
     let _requestMessage = null;
-
     const { createMessage } = require('../../lib/factory/message.factory');
     const { createHttpMessageHandler } = require('../../lib/factory/httpmessagehandler.factory');
     const { createHttpConnection } = require('../../lib/factory/httpconnection.factory.js');
-
-    const { messageHandlerQueue } = createHttpMessageHandler({ messageQueueTypeCode: 1, recipientHost, recipientPort, userId, senderHost, senderPort });
+    const { messageHandlerQueue, httpMessageHandler } = createHttpMessageHandler({ messageQueueTypeCode: 1, recipientHost, recipientPort, userId, senderHost, senderPort });
     const { httpConnection } = createHttpConnection({ timeout, recipientHost, recipientPort, messageQueueTypeCode: 1, userId, senderHost, senderPort });
+    await httpMessageHandler.start();
     await httpConnection.open();
+    await messageHandlerQueue.open();
     expect(httpConnection.isOpen()).toBeTruthy();
-
     messageHandlerQueue.dequeueRequestMessage().then(async ({ requestMessage }) => {
       _requestMessage = requestMessage;
       const { message } = createMessage({ recipientHost, recipientPort, userId, data: 'Hello From Server', senderHost, senderPort, token, metadata: { path }, messageStatusCode: 0 });
@@ -33,7 +32,8 @@ describe("when asking the http message handler to send, receive and respond, to 
     const { responseMessage } = await messageHandlerQueue.dequeueResponseMessage();
 
     //Assert
-    httpConnection.close();
+    await messageHandlerQueue.close();
+    await httpConnection.close();
     expect(httpConnection.isOpen()).toBeFalsy();
     expect(_requestMessage).not.toBeNull();
     expect(_requestMessage.getMessageStatus().code).toEqual(2); //pending

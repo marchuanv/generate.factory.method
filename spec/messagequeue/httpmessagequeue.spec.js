@@ -12,12 +12,12 @@ describe("when queuing http messages", function() {
     const metadata = {};
     const data = 'Hello World';
     const token = null;
- 
     const { createHttpClientMessageQueue } = require("../../lib/factory/httpclientmessagequeue.factory");
     const { createMessage } = require("../../lib/factory/message.factory");
     const { httpClientMessageQueue } = createHttpClientMessageQueue({
         recipientHost, recipientPort, messageQueueTypeCode: 1, userId, senderHost, senderPort
     });
+    await httpClientMessageQueue.open();
 
     // Act
     const { message } = createMessage({ recipientHost, recipientPort, userId, data, senderHost, senderPort, token, metadata, messageStatusCode });
@@ -25,6 +25,7 @@ describe("when queuing http messages", function() {
 
     // Assert
     const { httpRequestMessage } = await httpClientMessageQueue.dequeueHttpRequestMessage();
+    await httpClientMessageQueue.close();
     expect(httpRequestMessage).not.toBeNull();
     expect(httpRequestMessage.getId()).toEqual(message.getId());
     expect(httpRequestMessage.getContent()).toEqual(message.getContent());
@@ -42,6 +43,7 @@ describe("when queuing http messages", function() {
     const { httpServerMessageQueue } = createHttpServerMessageQueue({
         recipientHost, recipientPort, messageQueueTypeCode: 1, userId, senderHost, senderPort
     });
+    await httpServerMessageQueue.open();
     const httpRequest = {
       body: 'Hello World',
       headers: {},
@@ -54,6 +56,7 @@ describe("when queuing http messages", function() {
 
     // Assert
     const { httpRequestMessage } = await httpServerMessageQueue.dequeueHttpRequestMessage();
+    await httpServerMessageQueue.close();
     expect(httpRequestMessage).not.toBeNull();
     expect(httpRequestMessage.getContent()).toEqual(httpRequest.body);
   });
@@ -70,12 +73,12 @@ describe("when queuing http messages", function() {
     const metadata = {};
     const data = 'Hello World';
     const token = null;
-
     const { createHttpServerMessageQueue } = require("../../lib/factory/httpservermessagequeue.factory");
     const { createMessage } = require("../../lib/factory/message.factory");
     const { httpServerMessageQueue } = createHttpServerMessageQueue({
         recipientHost, recipientPort, messageQueueTypeCode: 1, userId, senderHost, senderPort
     });
+    await httpServerMessageQueue.open();
 
     // Act
     const { message } = createMessage({ recipientHost, recipientPort, userId, data, senderHost, senderPort, token, metadata, messageStatusCode });
@@ -83,6 +86,7 @@ describe("when queuing http messages", function() {
 
     // Assert
     const { httpResponseMessage } = await httpServerMessageQueue.dequeueHttpResponseMessage();
+    await httpServerMessageQueue.close();
     expect(httpResponseMessage).not.toBeNull();
     expect(httpResponseMessage.getId()).toEqual(message.getId());
     expect(httpResponseMessage.getContent()).toEqual(message.getContent());

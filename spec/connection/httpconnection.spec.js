@@ -27,7 +27,6 @@ describe("when opening an http connection and sending and http request given a h
     });
 
     it("it should respond to a queued request", async () => {
-     
         // Arrange
         let _httpRequestMessage = null;
         const { createHttpConnection } = require('../../lib/factory/httpconnection.factory.js');
@@ -74,7 +73,7 @@ describe("when opening an http connection and sending and http request given a h
         const { httpResponseMessage } = await httpClientMessageQueue.dequeueHttpResponseMessage();
 
         // Assert
-        httpConnection.close();
+        await httpConnection.close();
         expect(httpConnection.isOpen()).toBeFalsy();
         expect(_httpRequestMessage).not.toBeNull();
         expect(_httpRequestMessage.getStatusCode).toBeUndefined();
