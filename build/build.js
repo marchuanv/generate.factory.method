@@ -63,7 +63,7 @@ function getDependencyTree(typeInfo, pass = 'firstpass', types = []) {
                 );
                 types = types.concat(children).concat(typeInfo);
             } catch (err) {
-                console.log(`errors loading the ${scriptPath} script.`);
+                console.log(`errors loading the ${scriptPath} script: `, err);
             }
         }
         else {

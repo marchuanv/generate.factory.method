@@ -4,14 +4,16 @@ const utils = require("utils");
 
 xdescribe("when encrypting data given a public key", function() {
     
-    const secret = 'secret1234';
-    const userIdentity = new UserIdentity({ userId: 'joe' });
-    if (!userIdentity.isRegistered()){
-        userIdentity.register({ secret: 'admin' });
-    }
-    const base64RSAPublicKey = utils.stringToBase64('-----BEGIN PUBLIC KEY-----\r\nMIGeMA0GCSqGSIb3DQEBAQUAA4GMADCBiAKBgGNWEzztorXrbhJlDu0PhYoPlGesymz0GFzs1oHETCYpZv5NLDiZb71m6ZJcdaJVfHrvu5q43zHgNmO8+ILxOmtUKfrA8tuk70HYtBYBSNmdeBddGJvPb5gtTb2K1P+McunS5Tnl6SdAd1dUGokPFxApKrFnAOhzVwGDmC/dNtBHAgMBAAE=\r\n-----END PUBLIC KEY-----');
-    const encryption = new Encryption({ userIdentity });
-    encryption.setRemoteRSAPublicKey({ base64RSAPublicKey });
+    beforeAll(() => {
+        const secret = 'secret1234';
+        const userIdentity = new UserIdentity({ userId: 'joe' });
+        if (!userIdentity.isRegistered()){
+            userIdentity.register({ secret: 'admin' });
+        }
+        const base64RSAPublicKey = utils.stringToBase64('-----BEGIN PUBLIC KEY-----\r\nMIGeMA0GCSqGSIb3DQEBAQUAA4GMADCBiAKBgGNWEzztorXrbhJlDu0PhYoPlGesymz0GFzs1oHETCYpZv5NLDiZb71m6ZJcdaJVfHrvu5q43zHgNmO8+ILxOmtUKfrA8tuk70HYtBYBSNmdeBddGJvPb5gtTb2K1P+McunS5Tnl6SdAd1dUGokPFxApKrFnAOhzVwGDmC/dNtBHAgMBAAE=\r\n-----END PUBLIC KEY-----');
+        const encryption = new Encryption({ userIdentity });
+        encryption.setRemoteRSAPublicKey({ base64RSAPublicKey });
+    });
    
     it("it should encrypt and encode into a base64 string", function() {
         // Arrange

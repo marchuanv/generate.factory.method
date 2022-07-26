@@ -5,7 +5,7 @@ describe('when asking the MessageHandlerQueue factory to create an instance', fu
     const {messageQueueTypeCode,sharedMessageQueue} = require('C:\\component\\spec\\factory\\messagehandlerqueue.factory.spec.variables.json');
 
     // Act
-    const {messageHandlerQueue} = createMessageHandlerQueue({sharedMessageQueue,messageQueueTypeCode});
+    const {messageHandlerQueue} = createMessageHandlerQueue({messageQueueTypeCode});
     // Assert
     expect(messageHandlerQueue).not.toBeNull();
   });
