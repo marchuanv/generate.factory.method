@@ -1,8 +1,3 @@
 {
-    "userId": "joe",
-    "senderHost": "localhost",
-    "senderPort": 3000,
-    "recipientHost": "localhost",
-    "recipientPort": 3000,
     "messageQueueTypeCode": 3
 }

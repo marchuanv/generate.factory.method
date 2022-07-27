@@ -2,10 +2,10 @@ const { createHttpConnection } = require('C:\\component\\lib\\factory\\httpconne
 describe('when asking the HttpConnection factory to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
-    const {timeout,userId,senderHost,senderPort,recipientHost,recipientPort,messageQueueTypeCode} = require('C:\\component\\spec\\factory\\httpconnection.factory.spec.variables.json');
+    const {timeout,senderHost,senderPort,messageQueueTypeCode} = require('C:\\component\\spec\\factory\\httpconnection.factory.spec.variables.json');
 
     // Act
-    const {httpConnection} = createHttpConnection({timeout,recipientHost,recipientPort,messageQueueTypeCode,userId,senderHost,senderPort});
+    const {httpConnection} = createHttpConnection({timeout,messageQueueTypeCode,senderHost,senderPort});
     // Assert
     expect(httpConnection).not.toBeNull();
   });

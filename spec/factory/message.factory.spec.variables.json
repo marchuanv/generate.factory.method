@@ -1,7 +1,6 @@
 {
     "senderHost": "localhost",
     "senderPort": 3000,
-    "userId": "joe",
     "data": "Hello World",
     "messageStatusCode": 2,
     "metadata": {
