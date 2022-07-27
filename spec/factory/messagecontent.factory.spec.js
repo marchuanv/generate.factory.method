@@ -2,10 +2,10 @@ const { createMessageContent } = require('C:\\component\\lib\\factory\\messageco
 describe('when asking the MessageContent factory to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
-    const {data,userId,metadata} = require('C:\\component\\spec\\factory\\messagecontent.factory.spec.variables.json');
+    const {data,metadata} = require('C:\\component\\spec\\factory\\messagecontent.factory.spec.variables.json');
 
     // Act
-    const {messageContent} = createMessageContent({data,userId,metadata});
+    const {messageContent} = createMessageContent({data,metadata});
     // Assert
     expect(messageContent).not.toBeNull();
   });

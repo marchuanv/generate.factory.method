@@ -1,6 +1,5 @@
 {
     "data": "MessageContentDataTest",
-    "userId": "joe",
     "metadata": {
         "userId": "joe",
         "secret": "secret1234",
