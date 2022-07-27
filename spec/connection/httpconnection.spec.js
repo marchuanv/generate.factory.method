@@ -7,10 +7,7 @@ describe("when opening an http connection and sending and http request given a h
         const { createHttpConnection } = require('../../lib/factory/httpconnection.factory.js');
         const { httpConnection } = createHttpConnection({ 
             timeout: 8000,
-            recipientHost: 'localhost',
-            recipientPort: 3000,
             messageQueueTypeCode: 1,
-            userId: 'joe',
             senderHost: 'localhost',
             senderPort: 3000
         });
@@ -32,10 +29,7 @@ describe("when opening an http connection and sending and http request given a h
         const { createHttpConnection } = require('../../lib/factory/httpconnection.factory.js');
         const { httpConnection, httpClientMessageQueue, httpServerMessageQueue } = createHttpConnection({ 
             timeout: 8000,
-            recipientHost: 'localhost',
-            recipientPort: 3000,
             messageQueueTypeCode: 1,
-            userId: 'joe',
             senderHost: 'localhost',
             senderPort: 3000
         });
