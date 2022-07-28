@@ -38,6 +38,7 @@ describe("when opening an http connection and sending and http request given a h
         await httpClientMessageQueue.enqueueHttpRequestMessage(createMessage({ 
             recipientHost: 'localhost',
             recipientPort: 3000,
+            Id: null,
             data: 'Hello From Client',
             metadata: {
                 path: '/connectiontest',
@@ -54,6 +55,7 @@ describe("when opening an http connection and sending and http request given a h
             await httpServerMessageQueue.enqueueHttpResponseMessage(createMessage({ 
                 recipientHost: 'localhost',
                 recipientPort: 3000,
+                Id: null,
                 data: 'Hello From Server',
                 metadata: { 
                     userId: 'joe',
