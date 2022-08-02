@@ -23,12 +23,12 @@ describe("when opening an http connection and sending and http request given a h
         expect(httpConnection.isOpen()).toBeFalsy();
     });
 
-    it("it should respond to a queued request", async () => {
+    fit("it should respond to a queued request", async () => {
         // Arrange
         let _httpRequestMessage = null;
         const { createHttpConnection } = require('../../lib/factory/httpconnection.factory.js');
         const { httpConnection, httpClientMessageQueue, httpServerMessageQueue } = createHttpConnection({ 
-            timeout: 8000,
+            timeout: 15000,
             messageQueueTypeCode: 1,
             senderHost: 'localhost',
             senderPort: 3000
@@ -78,6 +78,6 @@ describe("when opening an http connection and sending and http request given a h
         expect(_httpRequestMessage).not.toBeNull();
         expect(_httpRequestMessage.getStatusCode).toBeUndefined();
         expect(httpResponseMessage.getStatusCode()).toEqual(200);
-        expect(httpResponseMessage.getContent()).toEqual('Hello From Server');
+        expect(httpResponseMessage.getDecryptedContent()).toEqual('Hello From Server');
     });
 });
