@@ -5,12 +5,7 @@ describe("when opening an http connection and sending and http request given a h
     it("it should return the server host address", async () => {
         // Arrange
         const { createHttpConnection } = require('../../lib/factory/httpconnection.factory.js');
-        const { httpConnection } = createHttpConnection({ 
-            timeout: 8000,
-            messageQueueTypeCode: 1,
-            senderHost: 'localhost',
-            senderPort: 3000
-        });
+        const { httpConnection } = createHttpConnection({ timeout: 8000, messageQueueTypeCode: 1, senderHost: 'localhost', senderPort: 3000 });
         await httpConnection.open();
         expect(httpConnection.isOpen()).toBeTruthy();
 
@@ -41,8 +36,8 @@ describe("when opening an http connection and sending and http request given a h
             Id: null,
             data: 'Hello From Client',
             metadata: {
-                path: '/connectiontest',
                 userId: 'joe',
+                path: '/connectiontest',
                 secret: "secret1234",
                 remoteBase64RSAPublicKey: "LS0tLS1CRUdJTiBQVUJMSUMgS0VZLS0tLS0NCk1JR2VNQTBHQ1NxR1NJYjNEUUVCQVFVQUE0R01BRENCaUFLQmdHTldFenp0b3JYcmJoSmxEdTBQaFlvUGxHZXN5bXowR0Z6czFvSEVUQ1lwWnY1TkxEaVpiNzFtNlpKY2RhSlZmSHJ2dTVxNDN6SGdObU84K0lMeE9tdFVLZnJBOHR1azcwSFl0QllCU05tZGVCZGRHSnZQYjVndFRiMksxUCtNY3VuUzVUbmw2U2RBZDFkVUdva1BGeEFwS3JGbkFPaHpWd0dEbUMvZE50QkhBZ01CQUFFPQ0KLS0tLS1FTkQgUFVCTElDIEtFWS0tLS0t",
             },
