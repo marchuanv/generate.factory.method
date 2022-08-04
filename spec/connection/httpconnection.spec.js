@@ -4,12 +4,11 @@ const { createUserSecurity } = require('../../lib/factory/usersecurity.factory.j
 
 describe("when opening an http connection and sending and http request given a hostname and port number", function() {
 
-    let userIdentity;
     const secret = 'httpconnectiontest1234';
     const userId = 'httpconnectiontest';
 
     beforeAll(() => {
-        ({ userSecurity } = createUserSecurity({ userId }));
+        const { userSecurity } = createUserSecurity({ userId });
         userSecurity.register({ secret });
     });
 
@@ -29,7 +28,7 @@ describe("when opening an http connection and sending and http request given a h
         expect(httpConnection.isOpen()).toBeFalsy();
     });
 
-    it("it should respond to a queued request", async () => {
+    fit("it should respond to a queued request", async () => {
         // Arrange
         let _httpRequestMessage = null;
         const { createHttpConnection } = require('../../lib/factory/httpconnection.factory.js');

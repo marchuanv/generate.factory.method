@@ -1,7 +1,7 @@
 const utils = require("utils");
 const { createUserSecurity } = require("../lib/factory/usersecurity.factory");
 
-fdescribe("when encrypting data given a public key", function() {
+describe("when encrypting data given a public key", function() {
     
     let userSecurity;
     let encryption;
