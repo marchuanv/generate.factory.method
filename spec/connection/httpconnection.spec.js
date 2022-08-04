@@ -1,6 +1,6 @@
 const utils = require('utils');
 const { createMessage } = require('../../lib/factory/message.factory.js');
-const { createUserIdentity } = require('../../lib/factory/useridentity.factory.js');
+const { createUserSecurity } = require('../../lib/factory/usersecurity.factory.js');
 
 describe("when opening an http connection and sending and http request given a hostname and port number", function() {
 
@@ -9,8 +9,8 @@ describe("when opening an http connection and sending and http request given a h
     const userId = 'httpconnectiontest';
 
     beforeAll(() => {
-        ({ userIdentity } = createUserIdentity({ userId }));
-        userIdentity.register({ secret });
+        ({ userSecurity } = createUserSecurity({ userId }));
+        userSecurity.register({ secret });
     });
 
     it("it should return the server host address", async () => {
@@ -41,8 +41,6 @@ describe("when opening an http connection and sending and http request given a h
         });
         await httpConnection.open();
         expect(httpConnection.isOpen()).toBeTruthy();
-        const  { publicKeyBase64 } = userIdentity.getBase64KeyPair();
-        const remoteBase64RSAPublicKey = publicKeyBase64;
         await httpClientMessageQueue.enqueueHttpRequestMessage(createMessage({ 
             recipientHost: 'localhost',
             recipientPort: 3000,
@@ -51,8 +49,7 @@ describe("when opening an http connection and sending and http request given a h
             metadata: {
                 userId,
                 path: '/connectiontest',
-                secret,
-                remoteBase64RSAPublicKey
+                secret
             },
             messageStatusCode: 2, //pending
             senderHost: 'localhost',
@@ -68,8 +65,7 @@ describe("when opening an http connection and sending and http request given a h
                 metadata: { 
                     userId,
                     path: '/connectiontest',
-                    secret,
-                    remoteBase64RSAPublicKey
+                    secret
                 },
                 messageStatusCode: 0, //success
                 senderHost: 'localhost',
