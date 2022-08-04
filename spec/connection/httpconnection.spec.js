@@ -1,7 +1,18 @@
+const utils = require('utils');
 const { createMessage } = require('../../lib/factory/message.factory.js');
+const { createUserIdentity } = require('../../lib/factory/useridentity.factory.js');
 
 describe("when opening an http connection and sending and http request given a hostname and port number", function() {
-    
+
+    let userIdentity;
+    const secret = 'secret1234';
+    const userId = 'joe';
+
+    beforeAll(() => {
+        ({ userIdentity } = createUserIdentity({ userId }));
+        userIdentity.register({ secret });
+    });
+
     it("it should return the server host address", async () => {
         // Arrange
         const { createHttpConnection } = require('../../lib/factory/httpconnection.factory.js');
@@ -18,7 +29,7 @@ describe("when opening an http connection and sending and http request given a h
         expect(httpConnection.isOpen()).toBeFalsy();
     });
 
-    fit("it should respond to a queued request", async () => {
+    it("it should respond to a queued request", async () => {
         // Arrange
         let _httpRequestMessage = null;
         const { createHttpConnection } = require('../../lib/factory/httpconnection.factory.js');
@@ -30,16 +41,18 @@ describe("when opening an http connection and sending and http request given a h
         });
         await httpConnection.open();
         expect(httpConnection.isOpen()).toBeTruthy();
+        const  { publicKeyBase64 } = userIdentity.getBase64KeyPair();
+        const remoteBase64RSAPublicKey = publicKeyBase64;
         await httpClientMessageQueue.enqueueHttpRequestMessage(createMessage({ 
             recipientHost: 'localhost',
             recipientPort: 3000,
             Id: null,
             data: 'Hello From Client',
             metadata: {
-                userId: 'joe',
+                userId,
                 path: '/connectiontest',
-                secret: "secret1234",
-                remoteBase64RSAPublicKey: "LS0tLS1CRUdJTiBQVUJMSUMgS0VZLS0tLS0NCk1JR2VNQTBHQ1NxR1NJYjNEUUVCQVFVQUE0R01BRENCaUFLQmdHTldFenp0b3JYcmJoSmxEdTBQaFlvUGxHZXN5bXowR0Z6czFvSEVUQ1lwWnY1TkxEaVpiNzFtNlpKY2RhSlZmSHJ2dTVxNDN6SGdObU84K0lMeE9tdFVLZnJBOHR1azcwSFl0QllCU05tZGVCZGRHSnZQYjVndFRiMksxUCtNY3VuUzVUbmw2U2RBZDFkVUdva1BGeEFwS3JGbkFPaHpWd0dEbUMvZE50QkhBZ01CQUFFPQ0KLS0tLS1FTkQgUFVCTElDIEtFWS0tLS0t",
+                secret,
+                remoteBase64RSAPublicKey
             },
             messageStatusCode: 2, //pending
             senderHost: 'localhost',
@@ -53,10 +66,10 @@ describe("when opening an http connection and sending and http request given a h
                 Id: null,
                 data: 'Hello From Server',
                 metadata: { 
-                    userId: 'joe',
+                    userId,
                     path: '/connectiontest',
-                    secret: "secret1234",
-                    remoteBase64RSAPublicKey: "LS0tLS1CRUdJTiBQVUJMSUMgS0VZLS0tLS0NCk1JR2VNQTBHQ1NxR1NJYjNEUUVCQVFVQUE0R01BRENCaUFLQmdHTldFenp0b3JYcmJoSmxEdTBQaFlvUGxHZXN5bXowR0Z6czFvSEVUQ1lwWnY1TkxEaVpiNzFtNlpKY2RhSlZmSHJ2dTVxNDN6SGdObU84K0lMeE9tdFVLZnJBOHR1azcwSFl0QllCU05tZGVCZGRHSnZQYjVndFRiMksxUCtNY3VuUzVUbmw2U2RBZDFkVUdva1BGeEFwS3JGbkFPaHpWd0dEbUMvZE50QkhBZ01CQUFFPQ0KLS0tLS1FTkQgUFVCTElDIEtFWS0tLS0t",
+                    secret,
+                    remoteBase64RSAPublicKey
                 },
                 messageStatusCode: 0, //success
                 senderHost: 'localhost',
@@ -73,6 +86,6 @@ describe("when opening an http connection and sending and http request given a h
         expect(_httpRequestMessage).not.toBeNull();
         expect(_httpRequestMessage.getStatusCode).toBeUndefined();
         expect(httpResponseMessage.getStatusCode()).toEqual(200);
-        expect(httpResponseMessage.getDecryptedContent()).toEqual('Hello From Server');
+        expect(utils.getJSONString(httpResponseMessage.getDecryptedContent())).toEqual(utils.getJSONString({ text: 'Hello From Server' }));
     });
 });
