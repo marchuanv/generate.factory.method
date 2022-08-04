@@ -10,6 +10,9 @@ describe("when opening an http connection and sending and http request given a h
     beforeAll(() => {
         const { userSecurity } = createUserSecurity({ userId });
         userSecurity.register({ secret });
+        const { base64RSAPublicKey } = userSecurity.getBase64KeyPair();
+        const remoteBase64RSAPublickey = base64RSAPublicKey;
+        userSecurity.authenticate({ secret, remoteBase64RSAPublickey });
     });
 
     it("it should return the server host address", async () => {
