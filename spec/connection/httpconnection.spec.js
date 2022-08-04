@@ -10,9 +10,7 @@ describe("when opening an http connection and sending and http request given a h
     beforeAll(() => {
         const { userSecurity } = createUserSecurity({ userId });
         userSecurity.register({ secret });
-        const { base64RSAPublicKey } = userSecurity.getBase64KeyPair();
-        const remoteBase64RSAPublickey = base64RSAPublicKey;
-        userSecurity.authenticate({ secret, remoteBase64RSAPublickey });
+        userSecurity.authenticate({ secret });
     });
 
     it("it should return the server host address", async () => {
@@ -50,8 +48,7 @@ describe("when opening an http connection and sending and http request given a h
             data: 'Hello From Client',
             metadata: {
                 userId,
-                path: '/connectiontest',
-                secret
+                path: '/connectiontest'
             },
             messageStatusCode: 2, //pending
             senderHost: 'localhost',
@@ -66,8 +63,7 @@ describe("when opening an http connection and sending and http request given a h
                 data: 'Hello From Server',
                 metadata: { 
                     userId,
-                    path: '/connectiontest',
-                    secret
+                    path: '/connectiontest'
                 },
                 messageStatusCode: 0, //success
                 senderHost: 'localhost',
