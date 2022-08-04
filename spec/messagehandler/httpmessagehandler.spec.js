@@ -1,8 +1,17 @@
 describe("when asking the http message handler to send, receive and respond, to a request messages", function() {
+
+  let userIdentity;
+  const secret = 'httpmessagehandler1234';
+  const userId = 'httpmessagehandler';
+
+  beforeAll(() => {
+    ({ userIdentity } = createUserIdentity({ userId }));
+    userIdentity.register({ secret });
+  });
+
   it("it should succeed without any errors", async () => {
     
     // Arrange
-    const userId = 'joe';
     const path = '/messagehandlertest';
     const senderHost = 'localhost';
     const senderPort = 3000;
@@ -22,12 +31,12 @@ describe("when asking the http message handler to send, receive and respond, to 
     expect(httpConnection.isOpen()).toBeTruthy();
     messageHandlerQueue.dequeueRequestMessage().then(async ({ requestMessage }) => {
       _requestMessage = requestMessage;
-      const { message } = createMessage({ recipientHost, recipientPort, userId, data: 'Hello From Server', senderHost, senderPort, token, metadata: { path }, messageStatusCode: 0 });
+      const { message } = createMessage({ messageStatusCode: 0, Id: null, data: 'Hello From Server', recipientHost, recipientPort, userId, senderHost, senderPort, metadata: { path }});
       await messageHandlerQueue.enqueueResponseMessage({ responseMessage: message });
     });
 
     // Act
-    const { message } = createMessage({ recipientHost, recipientPort, userId, data: 'Hello From Client', senderHost, senderPort, token, metadata: { path }, messageStatusCode: 2 });
+    const { message } = createMessage({ recipientHost, recipientPort, userId, data: 'Hello From Client', senderHost, senderPort, metadata: { path }, messageStatusCode: 2 });
     await messageHandlerQueue.enqueueRequestMessage({ requestMessage: message });
     const { responseMessage } = await messageHandlerQueue.dequeueResponseMessage();
 
