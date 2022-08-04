@@ -28,7 +28,7 @@ describe("when queuing http messages", function() {
     await httpClientMessageQueue.close();
     expect(httpRequestMessage).not.toBeNull();
     expect(httpRequestMessage.getId()).toEqual(message.getId());
-    expect(httpRequestMessage.getContent()).toEqual(message.getContent());
+    expect(httpRequestMessage.getDecryptedContent()).toEqual(message.getDecryptedContent());
   });
 
   it("it should dequeue server http request messages without error", async function() {
@@ -58,7 +58,7 @@ describe("when queuing http messages", function() {
     const { httpRequestMessage } = await httpServerMessageQueue.dequeueHttpRequestMessage();
     await httpServerMessageQueue.close();
     expect(httpRequestMessage).not.toBeNull();
-    expect(httpRequestMessage.getContent()).toEqual(httpRequest.body);
+    expect(httpRequestMessage.getDecryptedContent()).toEqual(httpRequest.body);
   });
 
   it("it should dequeue server http response messages without error", async function() {
@@ -89,7 +89,7 @@ describe("when queuing http messages", function() {
     await httpServerMessageQueue.close();
     expect(httpResponseMessage).not.toBeNull();
     expect(httpResponseMessage.getId()).toEqual(message.getId());
-    expect(httpResponseMessage.getContent()).toEqual(message.getContent());
+    expect(httpResponseMessage.getDecryptedContent()).toEqual(message.getDecryptedContent());
   });
 
 });

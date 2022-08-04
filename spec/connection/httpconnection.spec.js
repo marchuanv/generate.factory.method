@@ -5,8 +5,8 @@ const { createUserIdentity } = require('../../lib/factory/useridentity.factory.j
 describe("when opening an http connection and sending and http request given a hostname and port number", function() {
 
     let userIdentity;
-    const secret = 'secret1234';
-    const userId = 'joe';
+    const secret = 'httpconnectiontest1234';
+    const userId = 'httpconnectiontest';
 
     beforeAll(() => {
         ({ userIdentity } = createUserIdentity({ userId }));
