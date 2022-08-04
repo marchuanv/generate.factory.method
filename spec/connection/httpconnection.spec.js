@@ -1,5 +1,6 @@
 const utils = require('utils');
 const { createMessage } = require('../../lib/factory/message.factory.js');
+const { createSharedUserSessions } = require('../../lib/factory/sharedusersessions.factory.js');
 const { createUserSecurity } = require('../../lib/factory/usersecurity.factory.js');
 
 describe("when opening an http connection and sending and http request given a hostname and port number", function() {
@@ -8,7 +9,8 @@ describe("when opening an http connection and sending and http request given a h
     const userId = 'httpconnectiontest';
 
     beforeAll(() => {
-        const { userSecurity } = createUserSecurity({ userId });
+        const { sharedUserSessions } = createSharedUserSessions({});
+        const { userSecurity } = sharedUserSessions.ensureSession({ userId });
         userSecurity.register({ secret });
         userSecurity.authenticate({ secret });
     });
