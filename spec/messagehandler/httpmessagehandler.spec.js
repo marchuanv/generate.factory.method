@@ -1,12 +1,14 @@
 fdescribe("when asking the http message handler to send, receive and respond, to a request messages", function() {
 
-  let userIdentity;
   const secret = 'httpmessagehandler1234';
   const userId = 'httpmessagehandler';
 
   beforeAll(() => {
-    ({ userIdentity } = createUserIdentity({ userId }));
-    userIdentity.register({ secret });
+    const { createSharedUserSessions } = require('../../lib/factory/sharedusersessions.factory.js');
+    const { sharedUserSessions } = createSharedUserSessions({});
+    const { userSecurity } = sharedUserSessions.ensureSession({ userId });
+    userSecurity.register({ secret });
+    userSecurity.authenticate({ secret });
   });
 
   it("it should succeed without any errors", async () => {
@@ -18,13 +20,14 @@ fdescribe("when asking the http message handler to send, receive and respond, to
     const recipientHost = 'localhost';
     const recipientPort = 3000;
     const timeout = 8000;
-    const token = null;
+    let expectedDecryptedServerText;
+    let expectedDecryptedClientText;
     let _requestMessage = null;
     const { createMessage } = require('../../lib/factory/message.factory');
     const { createHttpMessageHandler } = require('../../lib/factory/httpmessagehandler.factory');
     const { createHttpConnection } = require('../../lib/factory/httpconnection.factory.js');
-    const { messageHandlerQueue, httpMessageHandler } = createHttpMessageHandler({ messageQueueTypeCode: 1, recipientHost, recipientPort, userId, senderHost, senderPort });
-    const { httpConnection } = createHttpConnection({ timeout, recipientHost, recipientPort, messageQueueTypeCode: 1, userId, senderHost, senderPort });
+    const { messageHandlerQueue, httpMessageHandler } = createHttpMessageHandler({ messageQueueTypeCode: 1 });
+    const { httpConnection } = createHttpConnection({ timeout, messageQueueTypeCode: 1, senderHost, senderPort });
     await httpMessageHandler.start();
     await httpConnection.open();
     await messageHandlerQueue.open();
@@ -33,11 +36,17 @@ fdescribe("when asking the http message handler to send, receive and respond, to
       _requestMessage = requestMessage;
       const { message } = createMessage({ messageStatusCode: 0, Id: null, data: 'Hello From Server', recipientHost, recipientPort, userId, senderHost, senderPort, metadata: { path }});
       await messageHandlerQueue.enqueueResponseMessage({ responseMessage: message });
+      const { text } = message.getDecryptedContent();
+      expectedDecryptedServerText = text;
     });
+    const { message } = createMessage({ messageStatusCode: 2, Id: null, data: 'Hello From Client', recipientHost, recipientPort, metadata: { path, userId }, senderHost, senderPort });
+    {
+      const { text } = message.getDecryptedContent();
+      expectedDecryptedClientText = text;
+    }
 
     // Act
-    const { message } = createMessage({ recipientHost, recipientPort, userId, data: 'Hello From Client', senderHost, senderPort, metadata: { path }, messageStatusCode: 2 });
-    await messageHandlerQueue.enqueueRequestMessage({ requestMessage: message });
+    await messageHandlerQueue.enqueueRequestMessage({ message });
     const { responseMessage } = await messageHandlerQueue.dequeueResponseMessage();
 
     //Assert
@@ -49,14 +58,20 @@ fdescribe("when asking the http message handler to send, receive and respond, to
       const { code } = _requestMessage.getMessageStatus();
       expect(code).toEqual(2); //pending
     }
-    expect(_requestMessage.getDecryptedContent()).toEqual('Hello From Client');
+    {
+      const { text } = _requestMessage.getDecryptedContent();
+      expect(text).toEqual(expectedDecryptedClientText);
+    }
     {
       const { senderHost, senderPort } = _requestMessage.getSenderAddress();
       expect(senderHost).toEqual('localhost');
       expect(senderPort).toEqual(3000);
     }
     expect(responseMessage).not.toBeNull();
-    expect(responseMessage.getDecryptedContent()).toEqual('Hello From Server');
+    {
+      const { text } = _requestMessage.getDecryptedContent();
+      expect(text).toEqual(expectedDecryptedServerText);
+    }
     {
       const { code } = _requestMessage.getMessageStatus();
       expect(code).toEqual(0); //success
