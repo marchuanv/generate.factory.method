@@ -1,14 +1,11 @@
 const utils = require('utils');
-const { createMessage } = require('../../lib/factory/message.factory.js');
-const { createSharedUserSessions } = require('../../lib/factory/sharedusersessions.factory.js');
-const { createUserSecurity } = require('../../lib/factory/usersecurity.factory.js');
-
 describe("when opening an http connection and sending and http request given a hostname and port number", function() {
 
     const secret = 'httpconnectiontest1234';
     const userId = 'httpconnectiontest';
 
     beforeAll(() => {
+        const { createSharedUserSessions } = require('../../lib/factory/sharedusersessions.factory.js');
         const { sharedUserSessions } = createSharedUserSessions({});
         const { userSecurity } = sharedUserSessions.ensureSession({ userId });
         userSecurity.register({ secret });
@@ -17,6 +14,7 @@ describe("when opening an http connection and sending and http request given a h
 
     it("it should return the server host address", async () => {
         // Arrange
+        
         const { createHttpConnection } = require('../../lib/factory/httpconnection.factory.js');
         const { httpConnection } = createHttpConnection({ timeout: 8000, messageQueueTypeCode: 1, senderHost: 'localhost', senderPort: 3000 });
         await httpConnection.open();
@@ -31,8 +29,9 @@ describe("when opening an http connection and sending and http request given a h
         expect(httpConnection.isOpen()).toBeFalsy();
     });
 
-    fit("it should respond to a queued request", async () => {
+    it("it should respond to a queued request", async () => {
         // Arrange
+        const { createMessage } = require('../../lib/factory/message.factory.js');
         let _httpRequestMessage = null;
         const { createHttpConnection } = require('../../lib/factory/httpconnection.factory.js');
         const { httpConnection, httpClientMessageQueue, httpServerMessageQueue } = createHttpConnection({ 
