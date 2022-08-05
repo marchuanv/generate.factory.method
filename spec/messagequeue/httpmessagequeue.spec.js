@@ -1,4 +1,4 @@
-fdescribe("when queuing http messages", function() {
+describe("when queuing http messages", function() {
 
   const secret = 'httpmessagequeue1234';
   const userId = 'httpmessagequeue';
@@ -14,6 +14,7 @@ fdescribe("when queuing http messages", function() {
   it("it should dequeue http request messages without error", async function() {
 
     // Arrange
+    let actualDecryptedText;
     const recipientHost = 'localhost';
     const recipientPort = 3000;
     const senderHost = 'localhost';
@@ -35,8 +36,12 @@ fdescribe("when queuing http messages", function() {
     await httpClientMessageQueue.close();
     expect(httpRequestMessage).not.toBeNull();
     expect(httpRequestMessage.getId()).toEqual(message.getId());
-    const { text } = httpRequestMessage.getDecryptedContent() || {};
-    expect(text).toEqual(message.getDecryptedContent());
+    {  //variable scoping
+      const { text } = httpRequestMessage.getDecryptedContent() || {};
+      actualDecryptedText = text;
+    }
+    const { text } = message.getDecryptedContent() || {};
+    expect(actualDecryptedText).toEqual(text);
   });
 
   it("it should dequeue server http request messages without error", async function() {
