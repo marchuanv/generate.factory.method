@@ -1,4 +1,4 @@
-fdescribe("when asking the http message handler to send, receive and respond, to a request messages", function() {
+describe("when asking the http message handler to send, receive and respond, to a request messages", function() {
 
   const secret = 'httpmessagehandler1234';
   const userId = 'httpmessagehandler';
