@@ -5,6 +5,6 @@
     "recipientPort": 3000,
     "messageQueueTypeCode": 3,
     "channel": "testchannel",
-    "remoteBase64RSAPublicKey": null,
-    "userId": "joe"
+    "userId": "joe",
+    "secret": "secret1234"
 }
