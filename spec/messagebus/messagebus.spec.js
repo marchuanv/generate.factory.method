@@ -1,4 +1,4 @@
-xdescribe("when publishing a message", function() {
+describe("when publishing a message", function() {
  it("it should publish to all subscribers", async function() {
 
     // Arrange
@@ -14,14 +14,7 @@ xdescribe("when publishing a message", function() {
     let base64rsapublickey = null;
 
     const { createMessageBus } = require('../../lib/factory/messagebus.factory');
-    const remoteBase64RSAPublicKey = "LS0tLS1CRUdJTiBQVUJMSUMgS0VZLS0tLS0NCk1JR2VNQTBHQ1NxR1NJYjNEUUVCQVFVQUE0R01BRENCaUFLQmdHTldFenp0b3JYcmJoSmxEdTBQaFlvUGxHZXN5bXowR0Z6czFvSEVUQ1lwWnY1TkxEaVpiNzFtNlpKY2RhSlZmSHJ2dTVxNDN6SGdObU84K0lMeE9tdFVLZnJBOHR1azcwSFl0QllCU05tZGVCZGRHSnZQYjVndFRiMksxUCtNY3VuUzVUbmw2U2RBZDFkVUdva1BGeEFwS3JGbkFPaHpWd0dEbUMvZE50QkhBZ01CQUFFPQ0KLS0tLS1FTkQgUFVCTElDIEtFWS0tLS0t";
-    const { messageBus } = createMessageBus({ 
-      remoteBase64RSAPublicKey,
-      messageQueueTypeCode: 3,
-      senderHost, senderPort,
-      recipientHost, recipientPort,
-      channel, userId
-    });
+    const { messageBus } = createMessageBus({ messageQueueTypeCode: 3, channel });
     
 
     await messageBus.start();
