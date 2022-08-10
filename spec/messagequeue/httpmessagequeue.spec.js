@@ -1,16 +1,16 @@
-describe("when queuing http messages", function() {
+fdescribe("when queuing http messages", function() {
 
-  let base64rsapublickey = null;
-  const userId = 'httpmessagequeue';
+  let token = null;
 
   beforeAll(() => {
+    const userId = 'httpmessagequeue';
     const secret = 'httpmessagequeue1234';
     const { createSharedUserSessions } = require('../../lib/factory/sharedusersessions.factory.js');
     const { sharedUserSessions } = createSharedUserSessions({});
     const { userSecurity } = sharedUserSessions.ensureSession({ userId });
     userSecurity.register({ secret });
     userSecurity.authenticate({ secret });
-    ({ base64RSAPublicKey: base64rsapublickey } = userSecurity.getBase64PublicKey());
+    ({ token } = userSecurity.getBase64PublicKey());
   });
 
   it("it should dequeue http request messages without error", async function() {
@@ -22,7 +22,7 @@ describe("when queuing http messages", function() {
     const senderHost = 'localhost';
     const senderPort = 3000;
     const messageStatusCode = 2;
-    const metadata = { base64rsapublickey };
+    const metadata = { };
     const data = 'Hello World';
     const { createHttpClientMessageQueue } = require("../../lib/factory/httpclientmessagequeue.factory");
     const { createMessage } = require("../../lib/factory/message.factory");
@@ -30,7 +30,7 @@ describe("when queuing http messages", function() {
     await httpClientMessageQueue.open();
 
     // Act
-    const { message } = createMessage({ messageStatusCode, Id: null, data, recipientHost, recipientPort, metadata, senderHost, userId, senderPort });
+    const { message } = createMessage({ messageStatusCode, Id: null, data, recipientHost, recipientPort, metadata, token, senderHost, senderPort });
     httpClientMessageQueue.enqueueHttpRequestMessage({ message });
 
     // Assert
@@ -64,7 +64,7 @@ describe("when queuing http messages", function() {
         recipientport: 3000,
         senderhost: 'localhost',
         senderport: 3000,
-        userid: userId,
+        token,
         base64rsapublickey
       },
       path: "/test",
@@ -93,7 +93,7 @@ describe("when queuing http messages", function() {
     const senderHost = 'localhost';
     const senderPort = 3000;
     const messageStatusCode = 0;
-    const metadata = { base64rsapublickey };
+    const metadata = { };
     const data = 'Hello World';
     const { createHttpServerMessageQueue } = require("../../lib/factory/httpservermessagequeue.factory");
     const { createMessage } = require("../../lib/factory/message.factory");
@@ -101,7 +101,7 @@ describe("when queuing http messages", function() {
     await httpServerMessageQueue.open();
 
     // Act
-    const { message } = createMessage({ messageStatusCode, Id: null, data, recipientHost, recipientPort, metadata, userId, senderHost, senderPort });
+    const { message } = createMessage({ messageStatusCode, Id: null, data, recipientHost, recipientPort, metadata, token, senderHost, senderPort });
     httpServerMessageQueue.enqueueHttpResponseMessage({ message });
 
     // Assert
