@@ -1,11 +1,11 @@
 
 describe("when queuing messages given bindings", function() {
 
-  const secret = 'sharedmessagequeue1234';
   const userId = 'sharedmessagequeue';
   let base64rsapublickey = null;
 
   beforeAll(() => {
+    const secret = 'sharedmessagequeue1234';
     const { createSharedUserSessions } = require('../../lib/factory/sharedusersessions.factory.js');
     const { sharedUserSessions } = createSharedUserSessions({});
     const { userSecurity } = sharedUserSessions.ensureSession({ userId });
