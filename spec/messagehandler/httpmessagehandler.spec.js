@@ -9,7 +9,6 @@ describe("when asking the http message handler to send, receive and respond, to 
     const { sharedUserSessions } = createSharedUserSessions({});
     const { userSecurity } = sharedUserSessions.ensureSession({ userId });
     userSecurity.register({ secret });
-    userSecurity.register({ secret });
     ({ token } = userSecurity.authenticate({ secret }));
   });
 

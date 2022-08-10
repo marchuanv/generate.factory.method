@@ -1,4 +1,4 @@
-fdescribe("when queuing http messages", function() {
+describe("when queuing http messages", function() {
 
   let token = null;
 
@@ -9,8 +9,7 @@ fdescribe("when queuing http messages", function() {
     const { sharedUserSessions } = createSharedUserSessions({});
     const { userSecurity } = sharedUserSessions.ensureSession({ userId });
     userSecurity.register({ secret });
-    userSecurity.authenticate({ secret });
-    ({ token } = userSecurity.getBase64PublicKey());
+    ({ token } = userSecurity.authenticate({ secret }));
   });
 
   it("it should dequeue http request messages without error", async function() {
@@ -64,8 +63,7 @@ fdescribe("when queuing http messages", function() {
         recipientport: 3000,
         senderhost: 'localhost',
         senderport: 3000,
-        token,
-        base64rsapublickey
+        token
       },
       path: "/test",
       method: "POST"
