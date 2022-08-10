@@ -1,10 +1,10 @@
 describe("when asking the http message handler to send, receive and respond, to a request messages", function() {
 
-  const secret = 'httpmessagehandler1234';
   const userId = 'httpmessagehandler';
   let base64rsapublickey = null;
 
   beforeAll(() => {
+    const secret = 'httpmessagehandler1234';
     const { createSharedUserSessions } = require('../../lib/factory/sharedusersessions.factory.js');
     const { sharedUserSessions } = createSharedUserSessions({});
     const { userSecurity } = sharedUserSessions.ensureSession({ userId });
