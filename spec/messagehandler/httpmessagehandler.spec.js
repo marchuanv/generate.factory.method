@@ -43,7 +43,6 @@ describe("when asking the http message handler to send, receive and respond, to 
       }
     });
    
-
     // Act
     {
       const { message } = createMessage({ messageStatusCode: 2, Id: null, data: 'Hello From Client', recipientHost, recipientPort, metadata: { path }, token, senderHost, senderPort });
@@ -60,7 +59,6 @@ describe("when asking the http message handler to send, receive and respond, to 
     await messageHandlerQueue.close();
     await httpConnection.close();
     expect(httpConnection.isOpen()).toBeFalsy();
-
     expect(requestMessage).not.toBeUndefined();
     expect(requestMessage).not.toBeNull();
     {
@@ -76,7 +74,6 @@ describe("when asking the http message handler to send, receive and respond, to 
       expect(senderHost).toEqual('localhost');
       expect(senderPort).toEqual(3000);
     }
-
     expect(responseMessage).not.toBeUndefined();
     expect(responseMessage).not.toBeNull();
     {
@@ -88,5 +85,4 @@ describe("when asking the http message handler to send, receive and respond, to 
       expect(code).toEqual(0); //success
     }
   });
-
 });
