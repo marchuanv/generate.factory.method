@@ -1,16 +1,16 @@
 describe("when asking the http message handler to send, receive and respond, to a request messages", function() {
 
-  const userId = 'httpmessagehandler';
-  let base64rsapublickey = null;
+  let token = null;
 
   beforeAll(() => {
+    const userId = 'httpmessagehandler';
     const secret = 'httpmessagehandler1234';
     const { createSharedUserSessions } = require('../../lib/factory/sharedusersessions.factory.js');
     const { sharedUserSessions } = createSharedUserSessions({});
     const { userSecurity } = sharedUserSessions.ensureSession({ userId });
     userSecurity.register({ secret });
-    userSecurity.authenticate({ secret });
-    ({ base64RSAPublicKey: base64rsapublickey } = userSecurity.getBase64PublicKey());
+    userSecurity.register({ secret });
+    ({ token } = userSecurity.authenticate({ secret }));
   });
 
   it("it should succeed without any errors", async () => {
@@ -37,7 +37,7 @@ describe("when asking the http message handler to send, receive and respond, to 
     messageHandlerQueue.dequeueRequestMessage().then(async ({ message }) => {
       requestMessage = message;
       {
-        const { message } = createMessage({ messageStatusCode: 0, Id: null, data: 'Hello From Server', recipientHost, recipientPort, metadata: { path, base64rsapublickey }, userId, senderHost, senderPort });
+        const { message } = createMessage({ messageStatusCode: 0, Id: null, data: 'Hello From Server', recipientHost, recipientPort, metadata: { path, token }, senderHost, senderPort });
         await messageHandlerQueue.enqueueResponseMessage({ message });
         const { text } = message.getDecryptedContent();
         expectedDecryptedServerText = text;
@@ -47,7 +47,7 @@ describe("when asking the http message handler to send, receive and respond, to 
 
     // Act
     {
-      const { message } = createMessage({ messageStatusCode: 2, Id: null, data: 'Hello From Client', recipientHost, recipientPort, metadata: { path, base64rsapublickey }, userId, senderHost, senderPort });
+      const { message } = createMessage({ messageStatusCode: 2, Id: null, data: 'Hello From Client', recipientHost, recipientPort, metadata: { path, token }, senderHost, senderPort });
       {
         const { text } = message.getDecryptedContent();
         expectedDecryptedClientText = text;

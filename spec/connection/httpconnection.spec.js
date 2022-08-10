@@ -1,17 +1,16 @@
 const utils = require('utils');
-describe("when opening an http connection and sending and http request given a hostname and port number", function() {
+fdescribe("when opening an http connection and sending and http request given a hostname and port number", function() {
 
-    const userId = 'httpconnectiontest';
-    let base64rsapublickey = null;
+    let token = null;
 
     beforeAll(() => {
+        const userId = 'httpconnectiontest';
         const secret = 'httpconnectiontest1234';
         const { createSharedUserSessions } = require('../../lib/factory/sharedusersessions.factory.js');
         const { sharedUserSessions } = createSharedUserSessions({});
         const { userSecurity } = sharedUserSessions.ensureSession({ userId });
         userSecurity.register({ secret });
-        userSecurity.authenticate({ secret });
-        ({ base64RSAPublicKey: base64rsapublickey } = userSecurity.getBase64PublicKey());
+        ({ token } = userSecurity.authenticate({ secret }));
     });
 
     it("it should return the server host address", async () => {
@@ -50,8 +49,8 @@ describe("when opening an http connection and sending and http request given a h
             recipientPort: 3000,
             Id: null,
             data: 'Hello From Client',
-            metadata: { path: '/connectiontest', base64rsapublickey },
-            userId,
+            metadata: { path: '/connectiontest' },
+            token,
             messageStatusCode: 2, //pending
             senderHost: 'localhost',
             senderPort: 3000
@@ -63,8 +62,8 @@ describe("when opening an http connection and sending and http request given a h
                 recipientPort: 3000,
                 Id: null,
                 data: 'Hello From Server',
-                metadata: {  path: '/connectiontest', base64rsapublickey },
-                userId,
+                metadata: {  path: '/connectiontest' },
+                token,
                 messageStatusCode: 0, //success
                 senderHost: 'localhost',
                 senderPort: 3000
