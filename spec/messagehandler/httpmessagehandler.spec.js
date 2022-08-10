@@ -29,10 +29,12 @@ fdescribe("when asking the http message handler to send, receive and respond, to
     const { createHttpConnection } = require('../../lib/factory/httpconnection.factory.js');
     const { messageHandlerQueue, httpMessageHandler } = createHttpMessageHandler({ messageQueueTypeCode: 1 });
     const { httpConnection } = createHttpConnection({ timeout, messageQueueTypeCode: 1, senderHost, senderPort });
-    await httpMessageHandler.start();
+    
     await httpConnection.open();
-
     expect(httpConnection.isOpen()).toBeTruthy();
+
+    await httpMessageHandler.start();
+
     messageHandlerQueue.dequeueRequestMessage().then(async ({ message }) => {
       requestMessage = message;
       {
