@@ -1,4 +1,4 @@
-describe("when queuing http messages", function() {
+fdescribe("when queuing http messages", function() {
 
   const secret = 'httpmessagequeue1234';
   const userId = 'httpmessagequeue';
@@ -20,7 +20,7 @@ describe("when queuing http messages", function() {
     const senderHost = 'localhost';
     const senderPort = 3000;
     const messageStatusCode = 2;
-    const metadata = { userId };
+    const metadata = { };
     const data = 'Hello World';
     const { createHttpClientMessageQueue } = require("../../lib/factory/httpclientmessagequeue.factory");
     const { createMessage } = require("../../lib/factory/message.factory");
@@ -28,19 +28,24 @@ describe("when queuing http messages", function() {
     await httpClientMessageQueue.open();
 
     // Act
-    const { message } = createMessage({ messageStatusCode, Id: null, data, recipientHost, recipientPort, metadata, senderHost, senderPort });
+    const { message } = createMessage({ messageStatusCode, Id: null, data, recipientHost, recipientPort, metadata, senderHost, userId, senderPort });
     httpClientMessageQueue.enqueueHttpRequestMessage({ message });
 
     // Assert
     const { httpRequestMessage } = await httpClientMessageQueue.dequeueHttpRequestMessage();
     await httpClientMessageQueue.close();
+    expect(httpRequestMessage).not.toBeUndefined();
     expect(httpRequestMessage).not.toBeNull();
     expect(httpRequestMessage.getId()).toEqual(message.getId());
     {  //variable scoping
       const { text } = httpRequestMessage.getDecryptedContent() || {};
+      expect(text).not.toBeUndefined();
+      expect(text).not.toBeNull();
       actualDecryptedText = text;
     }
     const { text } = message.getDecryptedContent() || {};
+    expect(text).not.toBeUndefined();
+    expect(text).not.toBeNull();
     expect(actualDecryptedText).toEqual(text);
   });
 
@@ -71,18 +76,21 @@ describe("when queuing http messages", function() {
     await httpServerMessageQueue.close();
     expect(httpRequestMessage).not.toBeNull();
     const { text } = httpRequestMessage.getDecryptedContent();
+    expect(text).not.toBeUndefined();
+    expect(text).not.toBeNull();
     expect(text).toEqual(httpRequest.body);
   });
 
   it("it should dequeue server http response messages without error", async function() {
 
     // Arrange
+    let actualDecryptedText;
     const recipientHost = 'localhost';
     const recipientPort = 3000;
     const senderHost = 'localhost';
     const senderPort = 3000;
     const messageStatusCode = 0;
-    const metadata = { userId };
+    const metadata = { };
     const data = 'Hello World';
     const { createHttpServerMessageQueue } = require("../../lib/factory/httpservermessagequeue.factory");
     const { createMessage } = require("../../lib/factory/message.factory");
@@ -90,15 +98,24 @@ describe("when queuing http messages", function() {
     await httpServerMessageQueue.open();
 
     // Act
-    const { message } = createMessage({ messageStatusCode, Id: null, data, recipientHost, recipientPort, metadata, senderHost, senderPort });
+    const { message } = createMessage({ messageStatusCode, Id: null, data, recipientHost, recipientPort, metadata, userId, senderHost, senderPort });
     httpServerMessageQueue.enqueueHttpResponseMessage({ message });
 
     // Assert
     const { httpResponseMessage } = await httpServerMessageQueue.dequeueHttpResponseMessage();
     await httpServerMessageQueue.close();
+    expect(httpResponseMessage).not.toBeUndefined();
     expect(httpResponseMessage).not.toBeNull();
     expect(httpResponseMessage.getId()).toEqual(message.getId());
-    expect(httpResponseMessage.getDecryptedContent()).toEqual(message.getDecryptedContent());
+    {  //variable scoping
+      const { text } = httpResponseMessage.getDecryptedContent() || {};
+      expect(text).not.toBeUndefined();
+      expect(text).not.toBeNull();
+      actualDecryptedText = text;
+    }
+    const { text } = message.getDecryptedContent() || {};
+    expect(text).not.toBeUndefined();
+    expect(text).not.toBeNull();
+    expect(actualDecryptedText).toEqual(text);
   });
-
 });
