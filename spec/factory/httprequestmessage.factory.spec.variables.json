@@ -3,7 +3,7 @@
     "senderHost": "localhost",
     "senderPort": 3000,
     "metadata": {
-        "path": "/",
+        "path": "/"
     },
     "recipientHost": "localhost",
     "recipientPort": 3000,
