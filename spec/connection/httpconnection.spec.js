@@ -44,8 +44,7 @@ fdescribe("when opening an http connection and sending and http request given a 
         });
         await httpConnection.open();
         expect(httpConnection.isOpen()).toBeTruthy();
-        httpClientMessageQueue.open();
-        httpServerMessageQueue.open();
+
         await httpClientMessageQueue.enqueueHttpRequestMessage(createMessage({ 
             recipientHost: 'localhost',
             recipientPort: 3000,
@@ -76,8 +75,6 @@ fdescribe("when opening an http connection and sending and http request given a 
         const { httpResponseMessage } = await httpClientMessageQueue.dequeueHttpResponseMessage();
 
         // Assert
-        httpClientMessageQueue.close();
-        httpServerMessageQueue.close();
         await httpConnection.close();
         expect(httpConnection.isOpen()).toBeFalsy();
         expect(_httpRequestMessage).not.toBeNull();

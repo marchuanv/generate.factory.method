@@ -26,7 +26,6 @@ describe("when queuing http messages", function() {
     const { createHttpClientMessageQueue } = require("../../lib/factory/httpclientmessagequeue.factory");
     const { createMessage } = require("../../lib/factory/message.factory");
     const { httpClientMessageQueue } = createHttpClientMessageQueue({ messageQueueTypeCode: 1 });
-    await httpClientMessageQueue.open();
 
     // Act
     const { message } = createMessage({ messageStatusCode, Id: null, data, recipientHost, recipientPort, metadata, token, senderHost, senderPort });
@@ -34,7 +33,6 @@ describe("when queuing http messages", function() {
 
     // Assert
     const { httpRequestMessage } = await httpClientMessageQueue.dequeueHttpRequestMessage();
-    await httpClientMessageQueue.close();
     expect(httpRequestMessage).not.toBeUndefined();
     expect(httpRequestMessage).not.toBeNull();
     expect(httpRequestMessage.getId()).toEqual(message.getId());
@@ -55,7 +53,6 @@ describe("when queuing http messages", function() {
     // Arrange
     const { createHttpServerMessageQueue } = require("../../lib/factory/httpservermessagequeue.factory");
     const { httpServerMessageQueue } = createHttpServerMessageQueue({ messageQueueTypeCode: 1 });
-    await httpServerMessageQueue.open();
     const httpRequest = {
       body: 'Hello World',
       headers: {
@@ -74,7 +71,6 @@ describe("when queuing http messages", function() {
 
     // Assert
     const { httpRequestMessage } = await httpServerMessageQueue.dequeueHttpRequestMessage();
-    await httpServerMessageQueue.close();
     expect(httpRequestMessage).not.toBeNull();
     const { text } = httpRequestMessage.getDecryptedContent();
     expect(text).not.toBeUndefined();
@@ -96,7 +92,6 @@ describe("when queuing http messages", function() {
     const { createHttpServerMessageQueue } = require("../../lib/factory/httpservermessagequeue.factory");
     const { createMessage } = require("../../lib/factory/message.factory");
     const { httpServerMessageQueue } = createHttpServerMessageQueue({ messageQueueTypeCode: 1 });
-    await httpServerMessageQueue.open();
 
     // Act
     const { message } = createMessage({ messageStatusCode, Id: null, data, recipientHost, recipientPort, metadata, token, senderHost, senderPort });
@@ -104,7 +99,6 @@ describe("when queuing http messages", function() {
 
     // Assert
     const { httpResponseMessage } = await httpServerMessageQueue.dequeueHttpResponseMessage();
-    await httpServerMessageQueue.close();
     expect(httpResponseMessage).not.toBeUndefined();
     expect(httpResponseMessage).not.toBeNull();
     expect(httpResponseMessage.getId()).toEqual(message.getId());

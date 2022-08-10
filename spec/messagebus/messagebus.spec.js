@@ -59,7 +59,6 @@ describe("when publishing a message", function() {
     }
     expect(data).toEqual(expectedData);
 
-    await messageHandlerQueue.close();
     await httpConnection.close();
     expect(httpConnection.isOpen()).toBeFalsy();
   })
