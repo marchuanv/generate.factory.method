@@ -3,6 +3,7 @@ fdescribe("when opening an http connection and sending and http request given a 
 
     const secret = 'httpconnectiontest1234';
     const userId = 'httpconnectiontest';
+    let base64rsapublickey = null;
 
     beforeAll(() => {
         const { createSharedUserSessions } = require('../../lib/factory/sharedusersessions.factory.js');
@@ -10,6 +11,7 @@ fdescribe("when opening an http connection and sending and http request given a 
         const { userSecurity } = sharedUserSessions.ensureSession({ userId });
         userSecurity.register({ secret });
         userSecurity.authenticate({ secret });
+        ({ base64RSAPublicKey: base64rsapublickey } = userSecurity.getBase64PublicKey());
     });
 
     it("it should return the server host address", async () => {
@@ -48,7 +50,7 @@ fdescribe("when opening an http connection and sending and http request given a 
             recipientPort: 3000,
             Id: null,
             data: 'Hello From Client',
-            metadata: { path: '/connectiontest' },
+            metadata: { path: '/connectiontest', base64rsapublickey },
             userId,
             messageStatusCode: 2, //pending
             senderHost: 'localhost',
@@ -61,7 +63,7 @@ fdescribe("when opening an http connection and sending and http request given a 
                 recipientPort: 3000,
                 Id: null,
                 data: 'Hello From Server',
-                metadata: {  path: '/connectiontest' },
+                metadata: {  path: '/connectiontest', base64rsapublickey },
                 userId,
                 messageStatusCode: 0, //success
                 senderHost: 'localhost',
