@@ -1,4 +1,4 @@
-describe("when asking the http message handler to send, receive and respond, to a request messages", function() {
+fdescribe("when asking the http message handler to send, receive and respond, to a request messages", function() {
 
   let token = null;
 
@@ -31,7 +31,7 @@ describe("when asking the http message handler to send, receive and respond, to 
     const { httpConnection } = createHttpConnection({ timeout, messageQueueTypeCode: 1, senderHost, senderPort });
     await httpMessageHandler.start();
     await httpConnection.open();
-    await messageHandlerQueue.open();
+
     expect(httpConnection.isOpen()).toBeTruthy();
     messageHandlerQueue.dequeueRequestMessage().then(async ({ message }) => {
       requestMessage = message;
@@ -56,7 +56,7 @@ describe("when asking the http message handler to send, receive and respond, to 
     const responseMessage = message;
 
     //Assert
-    await messageHandlerQueue.close();
+    await httpMessageHandler.stop();
     await httpConnection.close();
     expect(httpConnection.isOpen()).toBeFalsy();
     expect(requestMessage).not.toBeUndefined();
