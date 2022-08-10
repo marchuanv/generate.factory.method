@@ -1,5 +1,6 @@
 fdescribe("when queuing http messages", function() {
 
+  let base64rsapublickey = null;
   const secret = 'httpmessagequeue1234';
   const userId = 'httpmessagequeue';
 
@@ -9,6 +10,7 @@ fdescribe("when queuing http messages", function() {
     const { userSecurity } = sharedUserSessions.ensureSession({ userId });
     userSecurity.register({ secret });
     userSecurity.authenticate({ secret });
+    ({ base64RSAPublicKey: base64rsapublickey } = userSecurity.getBase64PublicKey());
   });
 
   it("it should dequeue http request messages without error", async function() {
@@ -20,7 +22,7 @@ fdescribe("when queuing http messages", function() {
     const senderHost = 'localhost';
     const senderPort = 3000;
     const messageStatusCode = 2;
-    const metadata = { };
+    const metadata = { base64rsapublickey };
     const data = 'Hello World';
     const { createHttpClientMessageQueue } = require("../../lib/factory/httpclientmessagequeue.factory");
     const { createMessage } = require("../../lib/factory/message.factory");
@@ -62,7 +64,8 @@ fdescribe("when queuing http messages", function() {
         recipientport: 3000,
         senderhost: 'localhost',
         senderport: 3000,
-        userid: userId
+        userid: userId,
+        base64rsapublickey
       },
       path: "/test",
       method: "POST"
@@ -90,7 +93,7 @@ fdescribe("when queuing http messages", function() {
     const senderHost = 'localhost';
     const senderPort = 3000;
     const messageStatusCode = 0;
-    const metadata = { };
+    const metadata = { base64rsapublickey };
     const data = 'Hello World';
     const { createHttpServerMessageQueue } = require("../../lib/factory/httpservermessagequeue.factory");
     const { createMessage } = require("../../lib/factory/message.factory");
