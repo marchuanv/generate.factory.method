@@ -1,4 +1,4 @@
-fdescribe("when queuing http messages", function() {
+describe("when queuing http messages", function() {
 
   let base64rsapublickey = null;
   const secret = 'httpmessagequeue1234';

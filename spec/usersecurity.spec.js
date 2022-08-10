@@ -12,8 +12,6 @@ describe("when encrypting data given a public key", function() {
         ({ userSecurity } = createUserSecurity({ userId }));
         userSecurity.register({ secret });
         userSecurity.authenticate({ secret });
-        const { base64RSAPublicKey } = userSecurity.getBase64KeyPair();
-        userSecurity.setRemoteBase64RSAPublicKey({ base64RSAPublicKey });
     });
    
     it("it should encrypt and encode into a base64 string", function() {
