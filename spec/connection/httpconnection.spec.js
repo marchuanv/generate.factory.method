@@ -1,5 +1,5 @@
 const utils = require('utils');
-describe("when opening an http connection and sending and http request given a hostname and port number", function() {
+fdescribe("when opening an http connection and sending and http request given a hostname and port number", function() {
 
     let token = null;
 
@@ -44,6 +44,8 @@ describe("when opening an http connection and sending and http request given a h
         });
         await httpConnection.open();
         expect(httpConnection.isOpen()).toBeTruthy();
+        httpClientMessageQueue.open();
+        httpServerMessageQueue.open();
         await httpClientMessageQueue.enqueueHttpRequestMessage(createMessage({ 
             recipientHost: 'localhost',
             recipientPort: 3000,
@@ -74,6 +76,8 @@ describe("when opening an http connection and sending and http request given a h
         const { httpResponseMessage } = await httpClientMessageQueue.dequeueHttpResponseMessage();
 
         // Assert
+        httpClientMessageQueue.close();
+        httpServerMessageQueue.close();
         await httpConnection.close();
         expect(httpConnection.isOpen()).toBeFalsy();
         expect(_httpRequestMessage).not.toBeNull();
