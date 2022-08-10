@@ -13,8 +13,8 @@ fdescribe("when opening an http connection and sending and http request given a 
     });
 
     it("it should return the server host address", async () => {
+
         // Arrange
-        
         const { createHttpConnection } = require('../../lib/factory/httpconnection.factory.js');
         const { httpConnection } = createHttpConnection({ timeout: 8000, messageQueueTypeCode: 1, senderHost: 'localhost', senderPort: 3000 });
         await httpConnection.open();
@@ -27,6 +27,7 @@ fdescribe("when opening an http connection and sending and http request given a 
         await httpConnection.close();
         expect(`${host}:${port}`).toEqual('localhost:3000');
         expect(httpConnection.isOpen()).toBeFalsy();
+        
     });
 
     it("it should respond to a queued request", async () => {
