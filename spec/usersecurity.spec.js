@@ -4,11 +4,10 @@ const { createUserSecurity } = require("../lib/factory/usersecurity.factory");
 describe("when encrypting data given a public key", function() {
     
     let userSecurity;
-    let encryption;
-    const secret = 'encryptiontest1234';
     const userId = 'encryptiontest';
 
     beforeAll(() => {
+        const secret = 'encryptiontest1234';
         ({ userSecurity } = createUserSecurity({ userId }));
         userSecurity.register({ secret });
         userSecurity.authenticate({ secret });
