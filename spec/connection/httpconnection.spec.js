@@ -47,10 +47,7 @@ fdescribe("when opening an http connection and sending and http request given a 
             recipientPort: 3000,
             Id: null,
             data: 'Hello From Client',
-            metadata: {
-                ,
-                path: '/connectiontest'
-            },
+            metadata: { path: '/connectiontest' },
             messageStatusCode: 2, //pending
             senderHost: 'localhost',
             senderPort: 3000
@@ -62,10 +59,7 @@ fdescribe("when opening an http connection and sending and http request given a 
                 recipientPort: 3000,
                 Id: null,
                 data: 'Hello From Server',
-                metadata: { 
-                    userId,
-                    path: '/connectiontest'
-                },
+                metadata: {  path: '/connectiontest' },
                 messageStatusCode: 0, //success
                 senderHost: 'localhost',
                 senderPort: 3000
