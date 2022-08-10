@@ -1,11 +1,11 @@
 const utils = require('utils');
-describe("when opening an http connection and sending and http request given a hostname and port number", function() {
+fdescribe("when opening an http connection and sending and http request given a hostname and port number", function() {
 
-    const secret = 'httpconnectiontest1234';
     const userId = 'httpconnectiontest';
     let base64rsapublickey = null;
 
     beforeAll(() => {
+        const secret = 'httpconnectiontest1234';
         const { createSharedUserSessions } = require('../../lib/factory/sharedusersessions.factory.js');
         const { sharedUserSessions } = createSharedUserSessions({});
         const { userSecurity } = sharedUserSessions.ensureSession({ userId });
