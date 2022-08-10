@@ -1,17 +1,16 @@
 
-describe("when queuing messages given bindings", function() {
+fdescribe("when queuing messages given bindings", function() {
 
-  const userId = 'sharedmessagequeue';
-  let base64rsapublickey = null;
+  let token = null;
 
   beforeAll(() => {
+    const userId = 'sharedmessagequeue';
     const secret = 'sharedmessagequeue1234';
     const { createSharedUserSessions } = require('../../lib/factory/sharedusersessions.factory.js');
     const { sharedUserSessions } = createSharedUserSessions({});
     const { userSecurity } = sharedUserSessions.ensureSession({ userId });
     userSecurity.register({ secret });
-    userSecurity.authenticate({ secret });
-    ({ base64RSAPublicKey: base64rsapublickey } = userSecurity.getBase64PublicKey());
+    ({ token } = userSecurity.authenticate({ secret }));
   });
 
   it("it should dequeue a queued message", async function() {
@@ -24,7 +23,7 @@ describe("when queuing messages given bindings", function() {
     const senderHost = 'localhost';
     const senderPort = 3000;
     const messageStatusCode = 2;
-    const metadata = { base64rsapublickey };
+    const metadata = { };
     const data = 'Hello World';
     const { createSharedMessageQueue } = require("../../lib/factory/sharedmessagequeue.factory");
     const { createMessage } = require("../../lib/factory/message.factory");
@@ -34,7 +33,7 @@ describe("when queuing messages given bindings", function() {
 
     // Act
     {
-      const { message } = createMessage({ messageStatusCode, Id: null, data, recipientHost, recipientPort, metadata, userId, senderHost, senderPort });
+      const { message } = createMessage({ messageStatusCode, Id: null, data, recipientHost, recipientPort, metadata, token, senderHost, senderPort });
       await sharedMessageQueue.queueMessage({ message, messageQueueType: "test" });
       sentMessageId = message.getId();
       const { text } = message.getDecryptedContent();
