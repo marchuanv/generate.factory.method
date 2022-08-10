@@ -1,4 +1,4 @@
-describe("when asking the http message handler to send, receive and respond, to a request messages", function() {
+fdescribe("when asking the http message handler to send, receive and respond, to a request messages", function() {
 
   let token = null;
 
@@ -29,8 +29,6 @@ describe("when asking the http message handler to send, receive and respond, to 
     const { createHttpConnection } = require('../../lib/factory/httpconnection.factory.js');
     const { messageHandlerQueue, httpMessageHandler } = createHttpMessageHandler({ messageQueueTypeCode: 1 });
     const { httpConnection } = createHttpConnection({ timeout, messageQueueTypeCode: 1, senderHost, senderPort });
-    await httpMessageHandler.start();
-    
     await httpConnection.open();
     expect(httpConnection.isOpen()).toBeTruthy();
 
@@ -59,7 +57,6 @@ describe("when asking the http message handler to send, receive and respond, to 
     //Assert
     await httpConnection.close();
     expect(httpConnection.isOpen()).toBeFalsy();
-    await httpMessageHandler.stop();
     expect(requestMessage).not.toBeUndefined();
     expect(requestMessage).not.toBeNull();
     {
