@@ -1,5 +1,4 @@
-
-fdescribe("when queuing messages given bindings", function() {
+describe("when queuing messages given bindings", function() {
 
   let token = null;
 
