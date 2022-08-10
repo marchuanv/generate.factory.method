@@ -1,5 +1,5 @@
 const utils = require('utils');
-fdescribe("when opening an http connection and sending and http request given a hostname and port number", function() {
+describe("when opening an http connection and sending and http request given a hostname and port number", function() {
 
     const userId = 'httpconnectiontest';
     let base64rsapublickey = null;

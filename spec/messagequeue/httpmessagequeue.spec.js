@@ -1,10 +1,10 @@
 describe("when queuing http messages", function() {
 
   let base64rsapublickey = null;
-  const secret = 'httpmessagequeue1234';
   const userId = 'httpmessagequeue';
 
   beforeAll(() => {
+    const secret = 'httpmessagequeue1234';
     const { createSharedUserSessions } = require('../../lib/factory/sharedusersessions.factory.js');
     const { sharedUserSessions } = createSharedUserSessions({});
     const { userSecurity } = sharedUserSessions.ensureSession({ userId });
