@@ -36,7 +36,7 @@ describe("when asking the http message handler to send, receive and respond, to 
     messageHandlerQueue.dequeueRequestMessage().then(async ({ message }) => {
       requestMessage = message;
       {
-        const { message } = createMessage({ messageStatusCode: 0, Id: null, data: 'Hello From Server', recipientHost, recipientPort, metadata: { path, token }, senderHost, senderPort });
+        const { message } = createMessage({ messageStatusCode: 0, Id: null, data: 'Hello From Server', recipientHost, recipientPort, metadata: { path }, token, senderHost, senderPort });
         await messageHandlerQueue.enqueueResponseMessage({ message });
         const { text } = message.getDecryptedContent();
         expectedDecryptedServerText = text;
@@ -46,7 +46,7 @@ describe("when asking the http message handler to send, receive and respond, to 
 
     // Act
     {
-      const { message } = createMessage({ messageStatusCode: 2, Id: null, data: 'Hello From Client', recipientHost, recipientPort, metadata: { path, token }, senderHost, senderPort });
+      const { message } = createMessage({ messageStatusCode: 2, Id: null, data: 'Hello From Client', recipientHost, recipientPort, metadata: { path }, token, senderHost, senderPort });
       {
         const { text } = message.getDecryptedContent();
         expectedDecryptedClientText = text;
