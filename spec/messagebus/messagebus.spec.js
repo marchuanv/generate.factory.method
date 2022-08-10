@@ -1,4 +1,4 @@
-fdescribe("when publishing a message", function() {
+describe("when publishing a message", function() {
  it("it should publish to all subscribers", async function() {
 
     // Arrange
