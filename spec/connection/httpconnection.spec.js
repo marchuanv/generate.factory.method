@@ -1,5 +1,5 @@
 const utils = require('utils');
-describe("when opening an http connection and sending and http request given a hostname and port number", function() {
+fdescribe("when opening an http connection and sending and http request given a hostname and port number", function() {
 
     const secret = 'httpconnectiontest1234';
     const userId = 'httpconnectiontest';
@@ -48,7 +48,7 @@ describe("when opening an http connection and sending and http request given a h
             Id: null,
             data: 'Hello From Client',
             metadata: {
-                userId,
+                ,
                 path: '/connectiontest'
             },
             messageStatusCode: 2, //pending
