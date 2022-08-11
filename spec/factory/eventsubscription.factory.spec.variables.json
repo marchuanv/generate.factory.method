@@ -2,5 +2,6 @@
     "eventCode": null,
     "eventSource": null,
     "eventDescription": null,
-    "sharedMessageQueue": null
+    "sharedMessageQueue": null,
+    "subscriptionName": null
 }

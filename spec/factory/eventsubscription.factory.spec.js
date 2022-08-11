@@ -2,10 +2,10 @@ const { createEventSubscription } = require('C:\\component\\lib\\factory\\events
 describe('when asking the EventSubscription factory to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
-    const {eventCode,eventSource,eventDescription,sharedMessageQueue} = require('C:\\component\\spec\\factory\\eventsubscription.factory.spec.variables.json');
+    const {eventCode,eventSource,eventDescription,sharedMessageQueue,subscriptionName} = require('C:\\component\\spec\\factory\\eventsubscription.factory.spec.variables.json');
 
     // Act
-    const {eventSubscription} = createEventSubscription({eventDescription,eventCode,eventSource});
+    const {eventSubscription} = createEventSubscription({eventDescription,eventCode,eventSource,subscriptionName});
     // Assert
     expect(eventSubscription).not.toBeNull();
   });
