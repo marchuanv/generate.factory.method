@@ -38,6 +38,7 @@ describe("when opening an http connection and sending and http request given a h
         const { createHttpConnection } = require('../../lib/factory/httpconnection.factory.js');
         const { httpConnection, httpClientMessageQueue, httpServerMessageQueue } = createHttpConnection({ 
             timeout: 15000,
+            messageQueueContextId: "httpconnection.spec.js",
             messageQueueTypeCode: 1,
             senderHost: 'localhost',
             senderPort: 3000
