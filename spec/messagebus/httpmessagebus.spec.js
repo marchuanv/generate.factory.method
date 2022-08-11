@@ -13,7 +13,7 @@ fdescribe("when starting an http message bus and sending and http request given 
         ({ token } = userSecurity.authenticate({ secret }));
     });
 
-    it("it should return the http messagebus host address", (done) => {
+    fit("it should return the http messagebus host address", (done) => {
         // Arrange
         const  messageQueueContextId = "httpconnectiontest1";
         const { createHttpMessageBus } = require('../../lib/factory/httpmessagebus.factory.js');
@@ -40,7 +40,7 @@ fdescribe("when starting an http message bus and sending and http request given 
         }});
     });
 
-    fit("it should respond to a queued request message", (done) => {
+    it("it should respond to a queued request message", (done) => {
         // Arrange
         const  messageQueueContextId = "httpconnectiontest2";
         const { createMessage } = require('../../lib/factory/message.factory.js');
