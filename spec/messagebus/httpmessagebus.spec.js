@@ -1,5 +1,5 @@
 const utils = require('utils');
-describe("when opening an http connection and sending and http request given a hostname and port number", function() {
+fdescribe("when starting an http message bus and sending and http request given a hostname and port number", function() {
 
     let token = null;
 
@@ -13,7 +13,7 @@ describe("when opening an http connection and sending and http request given a h
         ({ token } = userSecurity.authenticate({ secret }));
     });
 
-    it("it should return the server host address", async () => {
+    it("it should return the http messagebus host address", async () => {
 
         // Arrange
         const  messageQueueContextId = "httpconnectiontest1";
@@ -32,7 +32,7 @@ describe("when opening an http connection and sending and http request given a h
         
     });
 
-    it("it should respond to a queued request", async () => {
+    it("it should respond to a queued request message", async () => {
         // Arrange
         const  messageQueueContextId = "httpconnectiontest2";
         const { createMessage } = require('../../lib/factory/message.factory.js');
