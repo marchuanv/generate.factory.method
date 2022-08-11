@@ -26,7 +26,7 @@ describe("when queuing http messages", function() {
     const messageQueueContextId = 'httpmessagehandlertest1';
     const { createHttpClientMessageQueue } = require("../../lib/factory/httpclientmessagequeue.factory");
     const { createMessage } = require("../../lib/factory/message.factory");
-    const { httpClientMessageQueue } = createHttpClientMessageQueue({ messageQueueContextId, messageQueueTypeCode: 1 });
+    const { httpClientMessageQueue } = createHttpClientMessageQueue({ messageQueueContextId });
 
     // Act
     const { message } = createMessage({ messageStatusCode, Id: null, data, recipientHost, recipientPort, metadata, token, senderHost, senderPort });
@@ -54,7 +54,7 @@ describe("when queuing http messages", function() {
     // Arrange
     const messageQueueContextId = 'httpmessagehandlertest2';
     const { createHttpServerMessageQueue } = require("../../lib/factory/httpservermessagequeue.factory");
-    const { httpServerMessageQueue } = createHttpServerMessageQueue({ messageQueueContextId, messageQueueTypeCode: 1 });
+    const { httpServerMessageQueue } = createHttpServerMessageQueue({ messageQueueContextId });
     const httpRequest = {
       body: 'Hello World',
       headers: {
@@ -94,7 +94,7 @@ describe("when queuing http messages", function() {
     const messageQueueContextId = 'httpmessagehandlertest3';
     const { createHttpServerMessageQueue } = require("../../lib/factory/httpservermessagequeue.factory");
     const { createMessage } = require("../../lib/factory/message.factory");
-    const { httpServerMessageQueue } = createHttpServerMessageQueue({ messageQueueContextId, messageQueueTypeCode: 1 });
+    const { httpServerMessageQueue } = createHttpServerMessageQueue({ messageQueueContextId });
 
     // Act
     const { message } = createMessage({ messageStatusCode, Id: null, data, recipientHost, recipientPort, metadata, token, senderHost, senderPort });

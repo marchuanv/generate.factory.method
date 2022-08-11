@@ -2,6 +2,5 @@
     "timeout": 5000,
     "senderHost": "localhost",
     "senderPort": 3000,
-    "messageQueueTypeCode": 1,
     "messageQueueContextId": "factorytests"
 }

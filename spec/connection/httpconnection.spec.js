@@ -17,7 +17,7 @@ describe("when opening an http connection and sending and http request given a h
 
         // Arrange
         const { createHttpConnection } = require('../../lib/factory/httpconnection.factory.js');
-        const { httpConnection } = createHttpConnection({ timeout: 15000, messageQueueTypeCode: 1, senderHost: 'localhost', senderPort: 3000 });
+        const { httpConnection } = createHttpConnection({ timeout: 15000, senderHost: 'localhost', senderPort: 3000 });
         await httpConnection.open();
         expect(httpConnection.isOpen()).toBeTruthy();
 
@@ -39,7 +39,6 @@ describe("when opening an http connection and sending and http request given a h
         const { httpConnection, httpClientMessageQueue, httpServerMessageQueue } = createHttpConnection({ 
             timeout: 15000,
             messageQueueContextId: "httpconnection.spec.js",
-            messageQueueTypeCode: 1,
             senderHost: 'localhost',
             senderPort: 3000
         });

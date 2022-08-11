@@ -1,5 +1,4 @@
 {
-    "messageQueueTypeCode": 3,
     "channel": "blabla",
     "recipientHost": "localhost",
     "recipientPort": 3000,
