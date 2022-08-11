@@ -1,7 +1,7 @@
 {
-    "eventCode": null,
-    "eventSource": null,
+    "messageQueueContextId": "eventsubscriptionfactorytest",
+    "subscriptionName": "eventsubscriptionfactory",
     "eventDescription": null,
-    "sharedMessageQueue": null,
-    "subscriptionName": null
+    "eventCode": null,
+    "eventSource": null
 }
