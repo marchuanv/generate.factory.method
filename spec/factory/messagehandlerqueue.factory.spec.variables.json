@@ -1,3 +1,4 @@
 {
-    "messageQueueContextId": "messagehandlerqueue.factory"
+    "messageQueueContextId": "messagehandlerqueue.factory",
+    "sharedMessageQueue": null
 }
