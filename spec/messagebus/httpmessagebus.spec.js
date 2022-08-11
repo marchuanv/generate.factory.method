@@ -13,16 +13,16 @@ fdescribe("when starting an http message bus and sending and http request given 
         ({ token } = userSecurity.authenticate({ secret }));
     });
 
-    fit("it should return the http messagebus host address", (done) => {
+    it("it should return the http messagebus host address", (done) => {
         // Arrange
-        const  messageQueueContextId = "httpconnectiontest1";
+        const  messageQueueContextId = "HttpMessageBusTest1";
         const { createHttpMessageBus } = require('../../lib/factory/httpmessagebus.factory.js');
         const { createEventPublisher } = require('../../lib/factory/eventpublisher.factory.js');
         const { createEventSubscription } = require('../../lib/factory/eventsubscription.factory.js');
         const { httpMessageBus } = createHttpMessageBus({ timeout: 15000, messageQueueContextId, senderHost: 'localhost', senderPort: 3000 });
-        const { eventPublisher } = createEventPublisher({ eventCode: 1, eventSource: 'HttpMessageBusTest', eventDescription: 'Start Http Message Bus' });
+        const { eventPublisher } = createEventPublisher({ eventCode: 1, eventSource: 'HttpMessageBusTest1', eventDescription: 'Start Http Message Bus' });
         eventPublisher.publish();
-        const { eventSubscription } = createEventSubscription({ eventCode: 3, subscriptionName: 'HttpMessageBusTest' }); // message bus started event
+        const { eventSubscription } = createEventSubscription({ eventCode: 3, subscriptionName: 'HttpMessageBusTest1' }); // message bus started event
         eventSubscription.subscribe({ callback: async () => {
 
             // Act
@@ -40,18 +40,18 @@ fdescribe("when starting an http message bus and sending and http request given 
         }});
     });
 
-    it("it should respond to a queued request message", (done) => {
+    fit("it should respond to a queued request message", (done) => {
         // Arrange
-        const  messageQueueContextId = "httpconnectiontest2";
+        const  messageQueueContextId = "HttpMessageBusTest2";
         const { createMessage } = require('../../lib/factory/message.factory.js');
         const { createHttpMessageBus } = require('../../lib/factory/httpmessagebus.factory.js');
         const { createEventPublisher } = require('../../lib/factory/eventpublisher.factory.js');
         const { createEventSubscription } = require('../../lib/factory/eventsubscription.factory.js');
         const { httpMessageBus, httpClientMessageQueue, httpServerMessageQueue } = createHttpMessageBus({ timeout: 15000, messageQueueContextId, senderHost: 'localhost', senderPort: 3000 });
 
-        const { eventPublisher } = createEventPublisher({ eventCode: 1, eventSource: 'HttpMessageBusTest', eventDescription: 'Start Http Message Bus' });
+        const { eventPublisher } = createEventPublisher({ eventCode: 1, eventSource: 'HttpMessageBusTest2', eventDescription: 'Start Http Message Bus' });
         eventPublisher.publish();
-        const { eventSubscription } = createEventSubscription({ eventCode: 3, subscriptionName: 'HttpMessageBusTest' });
+        const { eventSubscription } = createEventSubscription({ eventCode: 3, subscriptionName: 'HttpMessageBusTest2' });
         eventSubscription.subscribe({ callback: async () => {
             
             let _httpRequestMessage = null;
