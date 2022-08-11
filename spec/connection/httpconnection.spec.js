@@ -16,8 +16,9 @@ describe("when opening an http connection and sending and http request given a h
     it("it should return the server host address", async () => {
 
         // Arrange
+        const  messageQueueContextId = "httpconnectiontest1";
         const { createHttpConnection } = require('../../lib/factory/httpconnection.factory.js');
-        const { httpConnection } = createHttpConnection({ timeout: 15000, senderHost: 'localhost', senderPort: 3000 });
+        const { httpConnection } = createHttpConnection({ timeout: 15000, messageQueueContextId, senderHost: 'localhost', senderPort: 3000 });
         await httpConnection.open();
         expect(httpConnection.isOpen()).toBeTruthy();
 
@@ -33,15 +34,11 @@ describe("when opening an http connection and sending and http request given a h
 
     it("it should respond to a queued request", async () => {
         // Arrange
+        const  messageQueueContextId = "httpconnectiontest2";
         const { createMessage } = require('../../lib/factory/message.factory.js');
         let _httpRequestMessage = null;
         const { createHttpConnection } = require('../../lib/factory/httpconnection.factory.js');
-        const { httpConnection, httpClientMessageQueue, httpServerMessageQueue } = createHttpConnection({ 
-            timeout: 15000,
-            messageQueueContextId: "httpconnection.spec.js",
-            senderHost: 'localhost',
-            senderPort: 3000
-        });
+        const { httpConnection, httpClientMessageQueue, httpServerMessageQueue } = createHttpConnection({ timeout: 15000, messageQueueContextId, senderHost: 'localhost', senderPort: 3000 });
         await httpConnection.open();
         expect(httpConnection.isOpen()).toBeTruthy();
 
