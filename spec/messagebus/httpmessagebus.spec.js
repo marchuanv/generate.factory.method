@@ -48,13 +48,24 @@ fdescribe("when starting an http message bus and sending and http request given 
         const { createEventPublisher } = require('../../lib/factory/eventpublisher.factory.js');
         const { createEventSubscription } = require('../../lib/factory/eventsubscription.factory.js');
         const { httpMessageBus, httpClientMessageQueue, httpServerMessageQueue } = createHttpMessageBus({ timeout: 15000, messageQueueContextId, senderHost: 'localhost', senderPort: 3000 });
-
-        const { eventPublisher } = createEventPublisher({ eventCode: 1, eventSource: 'HttpMessageBusTest2', eventDescription: 'Start Http Message Bus' });
-        eventPublisher.publish();
+        
+        { 
+            //START
+            const { eventPublisher } = createEventPublisher({ eventCode: 1, eventSource: 'HttpMessageBusTest2', eventDescription: 'Start Http Message Bus' });
+            eventPublisher.publish();
+        }
+      
+        
         const { eventSubscription } = createEventSubscription({ eventCode: 3, subscriptionName: 'HttpMessageBusTest2' });
         eventSubscription.subscribe({ callback: async () => {
             
             let _httpRequestMessage = null;
+
+            {
+                //Http Request
+                const { eventPublisher } = createEventPublisher({ eventCode: 4, eventSource: 'HttpMessageBusTest2', eventDescription: 'Send Http Request' });
+                eventPublisher.publish();
+            }
 
             await httpClientMessageQueue.enqueueHttpRequestMessage(createMessage({ 
                 recipientHost: 'localhost',
