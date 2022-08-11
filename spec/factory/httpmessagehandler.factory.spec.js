@@ -2,10 +2,10 @@ const { createHttpMessageHandler } = require('C:\\component\\lib\\factory\\httpm
 describe('when asking the HttpMessageHandler factory to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
-    const {messageQueueTypeCode} = require('C:\\component\\spec\\factory\\httpmessagehandler.factory.spec.variables.json');
+    const {messageQueueTypeCode,messageQueueContextId} = require('C:\\component\\spec\\factory\\httpmessagehandler.factory.spec.variables.json');
 
     // Act
-    const {httpMessageHandler} = createHttpMessageHandler({messageQueueTypeCode});
+    const {httpMessageHandler} = createHttpMessageHandler({messageQueueContextId,messageQueueTypeCode});
     // Assert
     expect(httpMessageHandler).not.toBeNull();
   });

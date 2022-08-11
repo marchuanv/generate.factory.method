@@ -26,7 +26,7 @@ xdescribe("when publishing a message", function() {
 
     const { createHttpConnection } = require('../../lib/factory/httpconnection.factory.js');
     const { createHttpMessageHandler } = require('../../lib/factory/httpmessagehandler.factory');
-    const { httpConnection } = createHttpConnection({ timeout: 8000, messageQueueTypeCode: 1, senderHost, senderPort });
+    const { httpConnection } = createHttpConnection({ timeout: 15000, messageQueueTypeCode: 1, senderHost, senderPort });
     const { httpMessageHandler } = createHttpMessageHandler({ messageQueueTypeCode: 1 });
 
     await httpConnection.open();

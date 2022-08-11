@@ -20,7 +20,7 @@ describe("when asking the http message handler to send, receive and respond, to 
     const senderPort = 3000;
     const recipientHost = 'localhost';
     const recipientPort = 3000;
-    const timeout = 8000;
+    const timeout = 15000;
     let expectedDecryptedServerText;
     let expectedDecryptedClientText;
     let requestMessage = null;
