@@ -21,15 +21,15 @@ describe("when asking the http message handler to send, receive and respond, to 
     const recipientHost = 'localhost';
     const recipientPort = 3000;
     const timeout = 15000;
-    const messageQueueContextId = 'httpmessagehandlertest';
+    const contextId = 'httpmessagehandlertest';
     let expectedDecryptedServerText;
     let expectedDecryptedClientText;
     let requestMessage = null;
     const { createMessage } = require('../../lib/factory/message.factory');
     const { createHttpMessageHandler } = require('../../lib/factory/httpmessagehandler.factory');
     const { createHttpConnection } = require('../../lib/factory/httpconnection.factory.js');
-    const { messageHandlerQueue } = createHttpMessageHandler({ messageQueueContextId });
-    const { httpConnection } = createHttpConnection({ timeout, messageQueueContextId, senderHost, senderPort });
+    const { messageHandlerQueue } = createHttpMessageHandler({ contextId });
+    const { httpConnection } = createHttpConnection({ timeout, contextId, senderHost, senderPort });
     await httpConnection.open();
     expect(httpConnection.isOpen()).toBeTruthy();
 

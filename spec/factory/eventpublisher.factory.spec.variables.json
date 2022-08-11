@@ -1,5 +1,5 @@
 {
-    "messageQueueContextId": "eventpublisherfactorytest",
+    "contextId": "eventpublisherfactorytest",
     "eventDescription": "description",
     "eventCode": -1,
     "eventSource": "eventpublisherfactory"

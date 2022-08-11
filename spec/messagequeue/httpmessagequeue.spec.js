@@ -23,10 +23,10 @@ describe("when queuing http messages", function() {
     const messageStatusCode = 2;
     const metadata = { };
     const data = 'Hello World';
-    const messageQueueContextId = 'httpmessagehandlertest1';
+    const contextId = 'httpmessagehandlertest1';
     const { createHttpClientMessageQueue } = require("../../lib/factory/httpclientmessagequeue.factory");
     const { createMessage } = require("../../lib/factory/message.factory");
-    const { httpClientMessageQueue } = createHttpClientMessageQueue({ messageQueueContextId });
+    const { httpClientMessageQueue } = createHttpClientMessageQueue({ contextId });
 
     // Act
     const { message } = createMessage({ messageStatusCode, Id: null, data, recipientHost, recipientPort, metadata, token, senderHost, senderPort });
@@ -52,9 +52,9 @@ describe("when queuing http messages", function() {
   it("it should dequeue server http request messages without error", async function() {
 
     // Arrange
-    const messageQueueContextId = 'httpmessagehandlertest2';
+    const contextId = 'httpmessagehandlertest2';
     const { createHttpServerMessageQueue } = require("../../lib/factory/httpservermessagequeue.factory");
-    const { httpServerMessageQueue } = createHttpServerMessageQueue({ messageQueueContextId });
+    const { httpServerMessageQueue } = createHttpServerMessageQueue({ contextId });
     const httpRequest = {
       body: 'Hello World',
       headers: {
@@ -91,10 +91,10 @@ describe("when queuing http messages", function() {
     const messageStatusCode = 0;
     const metadata = { };
     const data = 'Hello World';
-    const messageQueueContextId = 'httpmessagehandlertest3';
+    const contextId = 'httpmessagehandlertest3';
     const { createHttpServerMessageQueue } = require("../../lib/factory/httpservermessagequeue.factory");
     const { createMessage } = require("../../lib/factory/message.factory");
-    const { httpServerMessageQueue } = createHttpServerMessageQueue({ messageQueueContextId });
+    const { httpServerMessageQueue } = createHttpServerMessageQueue({ contextId });
 
     // Act
     const { message } = createMessage({ messageStatusCode, Id: null, data, recipientHost, recipientPort, metadata, token, senderHost, senderPort });

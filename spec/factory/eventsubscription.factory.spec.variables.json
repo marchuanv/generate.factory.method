@@ -1,5 +1,5 @@
 {
-    "messageQueueContextId": "eventsubscriptionfactorytest",
+    "contextId": "eventsubscriptionfactorytest",
     "subscriptionName": "eventsubscriptionfactory",
     "eventDescription": null,
     "eventCode": null,

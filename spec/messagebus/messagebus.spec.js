@@ -22,13 +22,13 @@ describe("when publishing a message", function() {
     const senderPort = 3000;
     const recipientHost = 'localhost';
     const recipientPort = 3000;
-    const messageQueueContextId = 'messagebustests';
+    const contextId = 'messagebustests';
     let subscriberMessages = [];
 
     const { createHttpConnection } = require('../../lib/factory/httpconnection.factory.js');
     const { createHttpMessageHandler } = require('../../lib/factory/httpmessagehandler.factory');
-    const { httpConnection } = createHttpConnection({ timeout: 15000, messageQueueContextId, senderHost, senderPort });
-    createHttpMessageHandler({ messageQueueContextId });
+    const { httpConnection } = createHttpConnection({ timeout: 15000, contextId, senderHost, senderPort });
+    createHttpMessageHandler({ contextId });
 
     await httpConnection.open();
 
@@ -37,7 +37,7 @@ describe("when publishing a message", function() {
 
     const { createMessageBus } = require('../../lib/factory/messagebus.factory');
     const { messageBus } = createMessageBus({ 
-      recipientHost, recipientPort, messageQueueContextId, channel, token, senderHost, senderPort,
+      recipientHost, recipientPort, contextId, channel, token, senderHost, senderPort,
     });
 
     await messageBus.start();
