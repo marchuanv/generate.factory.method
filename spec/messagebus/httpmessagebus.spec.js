@@ -22,7 +22,7 @@ fdescribe("when starting an http message bus and sending and http request given 
         const { httpMessageBus } = createHttpMessageBus({ timeout: 15000, messageQueueContextId, senderHost: 'localhost', senderPort: 3000 });
         const { eventPublisher } = createEventPublisher({ eventCode: 1, eventSource: 'HttpMessageBusTest', eventDescription: 'Start Http Message Bus' });
         await eventPublisher.publish();
-        const { eventSubscription } = createEventSubscription({ eventCode: 3, eventSource: 'HttpMessageBusTest', eventDescription: 'Message Bus Started' });
+        const { eventSubscription } = createEventSubscription({ eventCode: 3 });
         eventSubscription.subscribe({ callback: async () => {
 
             // Act
@@ -50,7 +50,7 @@ fdescribe("when starting an http message bus and sending and http request given 
 
         const { eventPublisher } = createEventPublisher({ eventCode: 1, eventSource: 'HttpMessageBusTest', eventDescription: 'Start Http Message Bus' });
         await eventPublisher.publish();
-        const { eventSubscription } = createEventSubscription({ eventCode: 3, eventSource: 'HttpMessageBusTest', eventDescription: 'Message Bus Started' });
+        const { eventSubscription } = createEventSubscription({ eventCode: 3 });
         eventSubscription.subscribe({ callback: async () => {
             
             let _httpRequestMessage = null;
