@@ -14,69 +14,89 @@ fdescribe("when starting an http message bus and sending and http request given 
     });
 
     it("it should return the http messagebus host address", async () => {
-
         // Arrange
         const  messageQueueContextId = "httpconnectiontest1";
-        const { createHttpConnection } = require('../../lib/factory/httpconnection.factory.js');
-        const { httpConnection } = createHttpConnection({ timeout: 15000, messageQueueContextId, senderHost: 'localhost', senderPort: 3000 });
-        await httpConnection.open();
-        expect(httpConnection.isOpen()).toBeTruthy();
+        const { createHttpMessageBus } = require('../../lib/factory/httpmessagebus.factory.js');
+        const { createEventPublisher } = require('../../lib/factory/eventpublisher.factory.js');
+        const { createEventSubscription } = require('../../lib/factory/eventsubscription.factory.js');
+        const { httpMessageBus } = createHttpMessageBus({ timeout: 15000, messageQueueContextId, senderHost: 'localhost', senderPort: 3000 });
+        const { eventPublisher } = createEventPublisher({ eventCode: 1, eventSource: 'HttpMessageBusTest', eventDescription: 'Start Http Message Bus' });
+        await eventPublisher.publish();
+        const { eventSubscription } = createEventSubscription({ eventCode: 3, eventSource: 'HttpMessageBusTest', eventDescription: 'Message Bus Started' });
+        eventSubscription.subscribe({ callback: async () => {
 
-        // Act
-        const { host, port } = httpConnection.getServerAddress();
+            // Act
+            const { host, port } = httpMessageBus.getServerAddress();
 
-        // Assert
-        await httpConnection.close();
-        expect(`${host}:${port}`).toEqual('localhost:3000');
-        expect(httpConnection.isOpen()).toBeFalsy();
-        
+            // Assert
+            {   
+                // Stop The Message Bus
+                const { eventPublisher } = createEventPublisher({ eventCode: 8, eventSource: 'HttpMessageBusTest', eventDescription: 'Stop Http Message Bus' });
+                await eventPublisher.publish();
+            }
+            expect(`${host}:${port}`).toEqual('localhost:3000');
+            expect(httpMessageBus.isOpen()).toBeFalsy();
+        }});
     });
 
     it("it should respond to a queued request message", async () => {
         // Arrange
         const  messageQueueContextId = "httpconnectiontest2";
         const { createMessage } = require('../../lib/factory/message.factory.js');
-        let _httpRequestMessage = null;
-        const { createHttpConnection } = require('../../lib/factory/httpconnection.factory.js');
-        const { httpConnection, httpClientMessageQueue, httpServerMessageQueue } = createHttpConnection({ timeout: 15000, messageQueueContextId, senderHost: 'localhost', senderPort: 3000 });
-        await httpConnection.open();
-        expect(httpConnection.isOpen()).toBeTruthy();
+        const { createHttpMessageBus } = require('../../lib/factory/httpmessagebus.factory.js');
+        const { createEventPublisher } = require('../../lib/factory/eventpublisher.factory.js');
+        const { createEventSubscription } = require('../../lib/factory/eventsubscription.factory.js');
+        const { httpMessageBus, httpClientMessageQueue, httpServerMessageQueue } = createHttpMessageBus({ timeout: 15000, messageQueueContextId, senderHost: 'localhost', senderPort: 3000 });
 
-        await httpClientMessageQueue.enqueueHttpRequestMessage(createMessage({ 
-            recipientHost: 'localhost',
-            recipientPort: 3000,
-            Id: null,
-            data: 'Hello From Client',
-            metadata: { path: '/connectiontest' },
-            token,
-            messageStatusCode: 2, //pending
-            senderHost: 'localhost',
-            senderPort: 3000
-        }));
-        httpServerMessageQueue.dequeueHttpRequestMessage().then(async ({ httpRequestMessage }) => {
-            _httpRequestMessage = httpRequestMessage;
-            await httpServerMessageQueue.enqueueHttpResponseMessage(createMessage({ 
+        const { eventPublisher } = createEventPublisher({ eventCode: 1, eventSource: 'HttpMessageBusTest', eventDescription: 'Start Http Message Bus' });
+        await eventPublisher.publish();
+        const { eventSubscription } = createEventSubscription({ eventCode: 3, eventSource: 'HttpMessageBusTest', eventDescription: 'Message Bus Started' });
+        eventSubscription.subscribe({ callback: async () => {
+            
+            let _httpRequestMessage = null;
+
+            await httpClientMessageQueue.enqueueHttpRequestMessage(createMessage({ 
                 recipientHost: 'localhost',
                 recipientPort: 3000,
                 Id: null,
-                data: 'Hello From Server',
-                metadata: {  path: '/connectiontest' },
+                data: 'Hello From Client',
+                metadata: { path: '/connectiontest' },
                 token,
-                messageStatusCode: 0, //success
+                messageStatusCode: 2, //pending
                 senderHost: 'localhost',
                 senderPort: 3000
             }));
-        });
 
-        // Act
-        const { httpResponseMessage } = await httpClientMessageQueue.dequeueHttpResponseMessage();
+            httpServerMessageQueue.dequeueHttpRequestMessage().then(async ({ httpRequestMessage }) => {
+                _httpRequestMessage = httpRequestMessage;
+                await httpServerMessageQueue.enqueueHttpResponseMessage(createMessage({ 
+                    recipientHost: 'localhost',
+                    recipientPort: 3000,
+                    Id: null,
+                    data: 'Hello From Server',
+                    metadata: {  path: '/connectiontest' },
+                    token,
+                    messageStatusCode: 0, //success
+                    senderHost: 'localhost',
+                    senderPort: 3000
+                }));
+            });
 
-        // Assert
-        await httpConnection.close();
-        expect(httpConnection.isOpen()).toBeFalsy();
-        expect(_httpRequestMessage).not.toBeNull();
-        expect(_httpRequestMessage.getStatusCode).toBeUndefined();
-        expect(httpResponseMessage.getStatusCode()).toEqual(200);
-        expect(utils.getJSONString(httpResponseMessage.getDecryptedContent())).toEqual(utils.getJSONString({ text: 'Hello From Server' }));
+            // Act
+            const { httpResponseMessage } = await httpClientMessageQueue.dequeueHttpResponseMessage();
+
+            // Assert
+            {   
+                // Stop The Message Bus
+                const { eventPublisher } = createEventPublisher({ eventCode: 8, eventSource: 'HttpMessageBusTest', eventDescription: 'Stop Http Message Bus' });
+                await eventPublisher.publish();
+            }
+            expect(httpMessageBus.isOpen()).toBeFalsy();
+            expect(_httpRequestMessage).not.toBeNull();
+            expect(_httpRequestMessage.getStatusCode).toBeUndefined();
+            expect(httpResponseMessage.getStatusCode()).toEqual(200);
+            expect(utils.getJSONString(httpResponseMessage.getDecryptedContent())).toEqual(utils.getJSONString({ text: 'Hello From Server' }));
+
+        }});
     });
 });
