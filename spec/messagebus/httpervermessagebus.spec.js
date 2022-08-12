@@ -24,6 +24,7 @@ fdescribe("when sending an http request given a recipient address", function() {
         const { httpClientMessageBus } = createHttpClientMessageBus({ timeout: 15000, contextId, senderHost: 'localhost', senderPort: 3000 });
         const { httpServerMessageBus } = createHttpServerMessageBus({ timeout: 15000, contextId, senderHost: 'localhost', senderPort: 3000 });
 
+        httpServerMessageBus.initialise();
         httpServerMessageBus.subscribeToHttpRequestMessages({ callback: ({ httpRequestMessage }) => {
             _httpRequestMessage = httpRequestMessage;
             httpServerMessageBus.publishHttpResponseMessage(createHttpResponseMessage({
@@ -53,7 +54,7 @@ fdescribe("when sending an http request given a recipient address", function() {
         }));
 
         // Assert
-        httpClientMessageBus.subscribeToHttpResponseMessage({ callback: ({ httpResponseMessage }) => {
+        httpClientMessageBus.subscribeToHttpResponseMessages({ callback: ({ httpResponseMessage }) => {
             expect(_httpRequestMessage).not.toBeNull();
             expect(_httpRequestMessage).not.toBeUndefined();
             expect(httpResponseMessage).not.toBeNull();
