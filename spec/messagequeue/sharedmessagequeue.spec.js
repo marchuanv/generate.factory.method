@@ -28,7 +28,7 @@ describe("when queuing messages given bindings", function() {
     const { createMessage } = require("../../lib/factory/message.factory");
     const { sharedMessageQueue } = createSharedMessageQueue({});
     let sentMessageId = '';
-    await sharedMessageQueue.bind({ QueueName: "test" });
+    await sharedMessageQueue.bind({ queueName: "test" });
 
     // Act
     {
@@ -41,7 +41,7 @@ describe("when queuing messages given bindings", function() {
 
     // Assert
     {  //variable scoping
-      const { message } = await sharedMessageQueue.dequeueMessage({ QueueName: "test" });
+      const { message } = await sharedMessageQueue.dequeueMessage({ queueName: "test" });
       expect(message).not.toBeNull();
       expect(message.getId()).toEqual(sentMessageId);
       const { text } = message.getDecryptedContent() || {};
