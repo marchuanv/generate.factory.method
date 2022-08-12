@@ -41,6 +41,7 @@ fdescribe("when asking the server messagebus to subscribe to request messages an
 
     // Act
     serverMessageBus.subscribeToMessages({ callback: ({ message }) => {
+      requestMessage = message;
       serverMessageBus.publishMessage(createMessage({ 
         messageStatusCode: 0, Id: null, data: expectedDecryptedServerText,
         recipientHost, recipientPort, metadata, token, senderHost, senderPort 
