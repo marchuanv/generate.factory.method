@@ -1,4 +1,4 @@
-fdescribe("when asking the client message bus publish and subscribe to messages", function() {
+describe("when asking the client message bus publish and subscribe to response messages", function() {
 
   let token = null;
 
@@ -33,8 +33,10 @@ fdescribe("when asking the client message bus publish and subscribe to messages"
       const { createServerMessageBus } = require('../../lib/factory/servermessagebus.factory.js');
       const { serverMessageBus } = createServerMessageBus({ timeout, contextId, senderHost, senderPort });
       serverMessageBus.initialise();
-      const { message } = createMessage({ messageStatusCode: 0, Id: null, data: expectedDecryptedServerText, recipientHost, recipientPort, metadata, token, senderHost, senderPort });
-      serverMessageBus.publishMessage({ message });
+      serverMessageBus.publishMessage(createMessage({ 
+        messageStatusCode: 0, Id: null, data: expectedDecryptedServerText, 
+        recipientHost, recipientPort, metadata, token, senderHost, senderPort 
+      }));
       serverMessageBus.subscribeToMessages({ callback: ({ message }) => {
         requestMessage = message;
       }});
@@ -62,7 +64,6 @@ fdescribe("when asking the client message bus publish and subscribe to messages"
         const { code } = responseMessage.getMessageStatus();
         expect(code).toEqual(0); //success
       }
-
       expect(requestMessage).not.toBeUndefined();
       expect(requestMessage).not.toBeNull();
       {
@@ -78,7 +79,6 @@ fdescribe("when asking the client message bus publish and subscribe to messages"
         expect(senderHost).toEqual('localhost');
         expect(senderPort).toEqual(3000);
       }
-
       done();
     }});
   });
