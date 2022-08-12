@@ -3,8 +3,8 @@ describe("when sending an http request given a recipient address", function() {
     let token = null;
 
     beforeAll(() => {
-        const userId = 'httpconnectiontest';
-        const secret = 'httpconnectiontest1234';
+        const userId = 'httpervermessagebus';
+        const secret = 'httpervermessagebus1234';
         const { createSharedUserSessions } = require('../../lib/factory/sharedusersessions.factory.js');
         const { sharedUserSessions } = createSharedUserSessions({});
         const { userSecurity } = sharedUserSessions.ensureSession({ userId });
@@ -16,7 +16,7 @@ describe("when sending an http request given a recipient address", function() {
         
         // Arrange
         let _httpRequestMessage = null;
-        const  contextId = "HttpClientMessageBus";
+        const  contextId = "httpservermessagebustest";
         const { createHttpClientMessageBus } = require('../../lib/factory/httpclientmessagebus.factory.js');
         const { createHttpServerMessageBus } = require('../../lib/factory/httpservermessagebus.factory.js');
         const { createHttpRequestMessage } = require('../../lib/factory/httprequestmessage.factory.js');
@@ -32,7 +32,7 @@ describe("when sending an http request given a recipient address", function() {
                 data: 'Hello From Server',
                 recipientHost: 'localhost',
                 recipientPort: 3000,
-                metadata: { path: '/httpclientmessagebustest' },
+                metadata: { path: '/httpservermessagebustest' },
                 token,
                 senderHost: 'localhost',
                 senderPort: 3000
