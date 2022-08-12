@@ -1,4 +1,4 @@
-fdescribe("when sending an http request given an recipient address", function() {
+describe("when sending an http request given a recipient address", function() {
 
     let token = null;
 
@@ -12,7 +12,7 @@ fdescribe("when sending an http request given an recipient address", function() 
         ({ token } = userSecurity.authenticate({ secret }));
     });
 
-    it("it should proceed without error", (done) => {
+    it("it should respond to the http request", (done) => {
         
         // Arrange
         let _httpRequestMessage = null;
