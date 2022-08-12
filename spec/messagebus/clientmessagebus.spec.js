@@ -3,8 +3,8 @@ fdescribe("when asking the client message bus publish and subscribe to response 
   let token = null;
 
   beforeAll(() => {
-    const userId = 'messagebus';
-    const secret = 'messagebus1234';
+    const userId = 'clientmessagebus';
+    const secret = 'clientmessagebus1234';
     const { createSharedUserSessions } = require('../../lib/factory/sharedusersessions.factory.js');
     const { sharedUserSessions } = createSharedUserSessions({});
     const { userSecurity } = sharedUserSessions.ensureSession({ userId });
@@ -15,14 +15,14 @@ fdescribe("when asking the client message bus publish and subscribe to response 
   it("it should succeed without any errors", (done) => {
     
     // Arrange
-    const path = '/messagebustest';
+    const path = '/clientmessagebustest';
     const senderHost = 'localhost';
     const senderPort = 3000;
     const recipientHost = 'localhost';
     const recipientPort = 3000;
     const timeout = 15000;
-    const contextId = 'messagebustests';
-    const metadata = {};
+    const contextId = 'clientmessagebustest';
+    const metadata = { path };
     let expectedDecryptedClientText = 'Hello From Client';
     let expectedDecryptedServerText = 'Hello From Server';
     let requestMessage = null;
@@ -48,7 +48,7 @@ fdescribe("when asking the client message bus publish and subscribe to response 
     // Act
     clientMessageBus.publishMessage(createMessage({ 
       messageStatusCode: 2, Id: null, data: expectedDecryptedClientText,
-      recipientHost, recipientPort, metadata: { path }, token, senderHost, senderPort 
+      recipientHost, recipientPort, metadata, token, senderHost, senderPort 
     }));
 
     // Assert

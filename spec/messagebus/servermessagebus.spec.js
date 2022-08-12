@@ -3,8 +3,8 @@ fdescribe("when asking the server messagebus to subscribe to request messages an
   let token = null;
 
   beforeAll(() => {
-    const userId = 'messagebus';
-    const secret = 'messagebus1234';
+    const userId = 'servermessagebus';
+    const secret = 'servermessagebus1234';
     const { createSharedUserSessions } = require('../../lib/factory/sharedusersessions.factory.js');
     const { sharedUserSessions } = createSharedUserSessions({});
     const { userSecurity } = sharedUserSessions.ensureSession({ userId });
@@ -15,13 +15,13 @@ fdescribe("when asking the server messagebus to subscribe to request messages an
   it("it should succeed without any errors", (done) => {
     
     // Arrange
-    const path = '/messagebustest';
+    const path = '/servermessagebustest';
     const senderHost = 'localhost';
     const senderPort = 3000;
     const recipientHost = 'localhost';
     const recipientPort = 3000;
     const timeout = 15000;
-    const contextId = 'messagebustests';
+    const contextId = 'servermessagebustest';
     const metadata = { path };
     let expectedDecryptedClientText = 'Hello From Client';
     let expectedDecryptedServerText = 'Hello From Server';
