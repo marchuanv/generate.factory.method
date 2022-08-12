@@ -1,4 +1,4 @@
-fdescribe("when sending an http request given a recipient address", function() {
+describe("when sending an http request given a recipient address", function() {
 
     let token = null;
 

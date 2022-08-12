@@ -1,63 +1,88 @@
-describe("when publishing a message", function() {
-  
+fdescribe("when asking the message bus publish and subscribe to messages", function() {
+
   let token = null;
 
   beforeAll(() => {
-      const userId = 'messagebustestuser';
-      const secret = 'messagebustest1234';
-      const { createSharedUserSessions } = require('../../lib/factory/sharedusersessions.factory.js');
-      const { sharedUserSessions } = createSharedUserSessions({});
-      const { userSecurity } = sharedUserSessions.ensureSession({ userId });
-      userSecurity.register({ secret });
-      ({ token } = userSecurity.authenticate({ secret }));
+    const userId = 'messagebus';
+    const secret = 'messagebus1234';
+    const { createSharedUserSessions } = require('../../lib/factory/sharedusersessions.factory.js');
+    const { sharedUserSessions } = createSharedUserSessions({});
+    const { userSecurity } = sharedUserSessions.ensureSession({ userId });
+    userSecurity.register({ secret });
+    ({ token } = userSecurity.authenticate({ secret }));
   });
 
- it("it should publish to all subscribers", async function() {
-
+  it("it should succeed without any errors", (done) => {
+    
     // Arrange
-    const data = 'publishing some data';
-    const channel = 'blalbla';
-    const expectedData = 'publishing some data';
+    const path = '/messagebustest';
     const senderHost = 'localhost';
     const senderPort = 3000;
     const recipientHost = 'localhost';
     const recipientPort = 3000;
+    const timeout = 15000;
     const contextId = 'messagebustests';
-    let subscriberMessages = [];
+    let expectedDecryptedServerText;
+    let expectedDecryptedClientText;
+    let requestMessage = null;
+    const { createMessage } = require('../../lib/factory/message.factory');
+    const { createMessageBus} = require('../../lib/factory/messagebus.factory');
+    const { createHttpClientMessageBus } = require('../../lib/factory/httpclientmessagebus.factory.js');
+    const { createHttpServerMessageBus } = require('../../lib/factory/httpservermessagebus.factory.js');
+    const { httpClientMessageBus } = createHttpClientMessageBus({ timeout: 15000, contextId, senderHost: 'localhost', senderPort: 3000 });
+    const { httpServerMessageBus } = createHttpServerMessageBus({ timeout: 15000, contextId, senderHost: 'localhost', senderPort: 3000 });
+    const { messageBus } = createMessageBus({ contextId });
 
-    const { createHttpConnection } = require('../../lib/factory/httpconnection.factory.js');
-    const { createHttpMessageHandler } = require('../../lib/factory/httpmessagehandler.factory');
-    const { httpConnection } = createHttpConnection({ timeout: 15000, contextId, senderHost, senderPort });
-    createHttpMessageHandler({ contextId });
-
-    await httpConnection.open();
-
-    // Pre-Condition
-    expect(httpConnection.isOpen()).toBeTruthy();
-
-    const { createMessageBus } = require('../../lib/factory/messagebus.factory');
-    const { messageBus } = createMessageBus({ 
-      recipientHost, recipientPort, contextId, channel, token, senderHost, senderPort,
-    });
-
-    await messageBus.start();
-    messageBus.subscribe({ callback: ({ message }) => subscriberMessages.push(message) }); //Subscriber01
-    messageBus.subscribe({ callback: ({ message }) => subscriberMessages.push(message) }); //Subscriber02
-    messageBus.subscribe({ callback: ({ message }) => subscriberMessages.push(message) }); //Subscriber03
-
+    messageBus.subscribeToRequestMessages({ callback: ({ message }) => {
+      requestMessage = message;
+      {
+        const { message } = createMessage({ messageStatusCode: 0, Id: null, data: 'Hello From Server', recipientHost, recipientPort, metadata: { path }, token, senderHost, senderPort });
+        const { text } = message.getDecryptedContent();
+        expectedDecryptedServerText = text;
+        messageBus.publishResponseMessage({ message });
+      }
+    }});
+   
     // Act
-    await messageBus.publish({ data });
-    await messageBus.stop();
-
-    // Assert
-    expect(subscriberMessages.length).toEqual(3);
-    for(const msg of subscriberMessages) {
-      const { text } = msg.getDecryptedContent();
-      expect(text).toEqual(data);
+    {
+      const { message } = createMessage({ messageStatusCode: 2, Id: null, data: 'Hello From Client', recipientHost, recipientPort, metadata: { path }, token, senderHost, senderPort });
+      {
+        const { text } = message.getDecryptedContent();
+        expectedDecryptedClientText = text;
+      }
+      messageBus.publishRequestMessage({ message });
     }
-    expect(data).toEqual(expectedData);
-
-    await httpConnection.close();
-    expect(httpConnection.isOpen()).toBeFalsy();
-  })
+    messageBus.subscribeToResponseMessagess({ callback: ({ message }) => { 
+      const responseMessage = message;
+      //Assert
+      messageBus.close();
+      expect(messageBus.isOpen()).toBeFalsy();
+      expect(requestMessage).not.toBeUndefined();
+      expect(requestMessage).not.toBeNull();
+      {
+        const { code } = requestMessage.getMessageStatus();
+        expect(code).toEqual(2); //pending
+      }
+      {
+        const { text } = requestMessage.getDecryptedContent();
+        expect(text).toEqual(expectedDecryptedClientText);
+      }
+      {
+        const { senderHost, senderPort } = requestMessage.getSenderAddress();
+        expect(senderHost).toEqual('localhost');
+        expect(senderPort).toEqual(3000);
+      }
+      expect(responseMessage).not.toBeUndefined();
+      expect(responseMessage).not.toBeNull();
+      {
+        const { text } = responseMessage.getDecryptedContent();
+        expect(text).toEqual(expectedDecryptedServerText);
+      }
+      {
+        const { code } = responseMessage.getMessageStatus();
+        expect(code).toEqual(0); //success
+      }
+      done();
+    }});
+  });
 });
