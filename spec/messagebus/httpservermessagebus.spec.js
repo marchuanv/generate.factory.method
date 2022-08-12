@@ -1,5 +1,5 @@
 const utils = require('utils');
-fdescribe("when starting an http message bus and sending and http request given a hostname and port number", function() {
+describe("when starting an http message bus and sending and http request given a hostname and port number", function() {
 
     let token = null;
 
@@ -36,7 +36,7 @@ fdescribe("when starting an http message bus and sending and http request given 
             }
             expect(`${host}:${port}`).toEqual('localhost:3000');
             expect(httpMessageBus.isOpen()).toBeFalsy();
-            done();
+            setTimeout(done, 5000);
         }});
     });
 
@@ -64,7 +64,7 @@ fdescribe("when starting an http message bus and sending and http request given 
             {
                 //Http Request
                 const { eventPublisher } = createEventPublisher({ contextId, eventCode: 4, eventSource: 'HttpMessageBusTest2', eventDescription: 'Send Http Request' });
-                eventPublisher.publish();
+                await eventPublisher.publish();
             }
 
             await httpClientMessageQueue.enqueueHttpRequestMessage(createMessage({ 
@@ -108,7 +108,7 @@ fdescribe("when starting an http message bus and sending and http request given 
             expect(_httpRequestMessage.getStatusCode).toBeUndefined();
             expect(httpResponseMessage.getStatusCode()).toEqual(200);
             expect(utils.getJSONString(httpResponseMessage.getDecryptedContent())).toEqual(utils.getJSONString({ text: 'Hello From Server' }));
-            done();
+            setTimeout(done, 5000);
         }});
     });
 });

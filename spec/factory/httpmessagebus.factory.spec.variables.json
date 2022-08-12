@@ -1,6 +1,0 @@
-{
-    "timeout": 5000,
-    "senderHost": "localhost",
-    "senderPort": 3000,
-    "contextId": "httpmessagebusfactorytest"
-}

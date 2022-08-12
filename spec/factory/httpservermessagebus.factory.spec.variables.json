@@ -1,5 +1,5 @@
 {
-    "contextId": "httpmessagehandler.factory",
+    "contextId": null,
     "senderHost": null,
     "senderPort": null,
     "timeout": null
