@@ -1,4 +1,4 @@
-fdescribe("when asking the message bus publish and subscribe to messages", function() {
+describe("when asking the message bus publish and subscribe to messages", function() {
 
   let token = null;
 
