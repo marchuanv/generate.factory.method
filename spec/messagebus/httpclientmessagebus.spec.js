@@ -23,7 +23,6 @@ fdescribe("when an http client messagebus sends an http request message", functi
         const { httpClientMessageBus } = createHttpClientMessageBus({ timeout: 15000, contextId, senderHost: 'localhost', senderPort: 3000 });
         const { httpServerMessageBus } = createHttpServerMessageBus({ timeout: 15000, contextId, senderHost: 'localhost', senderPort: 3000 });
 
-        httpServerMessageBus.initialise();
         httpServerMessageBus.publishHttpResponseMessage(createHttpResponseMessage({
             messageStatusCode: 0, //success
             Id: null,

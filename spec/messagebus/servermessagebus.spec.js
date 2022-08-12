@@ -37,7 +37,6 @@ fdescribe("when asking the server messagebus to subscribe to request messages an
 
     const { createServerMessageBus } = require('../../lib/factory/servermessagebus.factory.js');
     const { serverMessageBus } = createServerMessageBus({ timeout, contextId, senderHost, senderPort });
-    serverMessageBus.initialise();
 
     // Act
     serverMessageBus.subscribeToMessages({ callback: ({ message }) => {

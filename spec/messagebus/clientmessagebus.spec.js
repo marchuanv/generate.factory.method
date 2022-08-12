@@ -32,7 +32,6 @@ fdescribe("when asking a client messagebus to publish a request", function() {
       //Simulate a Server
       const { createServerMessageBus } = require('../../lib/factory/servermessagebus.factory.js');
       const { serverMessageBus } = createServerMessageBus({ timeout, contextId, senderHost, senderPort });
-      serverMessageBus.initialise();
       serverMessageBus.publishMessage(createMessage({ 
         messageStatusCode: 0, Id: null, data: expectedDecryptedServerText, 
         recipientHost, recipientPort, metadata, token, senderHost, senderPort 
