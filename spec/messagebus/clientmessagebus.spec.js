@@ -22,15 +22,22 @@ fdescribe("when asking the client message bus publish and subscribe to messages"
     const recipientPort = 3000;
     const timeout = 15000;
     const contextId = 'messagebustests';
-    let expectedDecryptedServerText;
+    const metadata = {};
     let expectedDecryptedClientText;
+    let expectedDecryptedServerText;
+    let assertCallback = null;
 
     const { createMessage } = require('../../lib/factory/message.factory');
+    const { createHttpResponseMessage } = require('../../lib/factory/httpresponsemessage.factory');
     const { createClientMessageBus } = require('../../lib/factory/clientmessagebus.factory.js');
     const { createHttpServerMessageBus } = require('../../lib/factory/httpservermessagebus.factory.js');
     const { clientMessageBus } = createClientMessageBus({ timeout, contextId, senderHost, senderPort });
     const { httpServerMessageBus } = createHttpServerMessageBus({ timeout, contextId, senderHost, senderPort });
-    const assertCallback = null;
+
+    {
+      const { httpResponseMessage } = createHttpResponseMessage({ messageStatusCode: 0, Id: null, data: 'Hello World From Server', recipientHost, recipientPort, metadata, token, senderHost, senderPort });
+      httpServerMessageBus.publishHttpResponseMessage({ httpResponseMessage });
+    }
 
     clientMessageBus.subscribeToMessages({ callback: ({ message }) => {
       assertCallback({ responseMessage: message });
@@ -43,8 +50,8 @@ fdescribe("when asking the client message bus publish and subscribe to messages"
       const { text } = message.getDecryptedContent();
       expectedDecryptedClientText = text;
     }
-    messageBus.publishMessage({ message });
-    
+    clientMessageBus.publishMessage({ message });
+
     // Assert
     assertCallback = ({ responseMessage }) => {
       expect(messageBus.isOpen()).toBeFalsy();
