@@ -1,4 +1,4 @@
-fdescribe("when sending an http request given a recipient address", function() {
+fdescribe("when an http client messagebus sends an http request message", function() {
 
     let token = null;
 
@@ -12,10 +12,9 @@ fdescribe("when sending an http request given a recipient address", function() {
         ({ token } = userSecurity.authenticate({ secret }));
     });
 
-    it("it should respond to the http request", (done) => {
+    it("it should receive an http response message", (done) => {
         
         // Arrange
-        let _httpRequestMessage = null;
         const  contextId = "httpclientmessagebustest";
         const { createHttpClientMessageBus } = require('../../lib/factory/httpclientmessagebus.factory.js');
         const { createHttpServerMessageBus } = require('../../lib/factory/httpservermessagebus.factory.js');
@@ -25,20 +24,17 @@ fdescribe("when sending an http request given a recipient address", function() {
         const { httpServerMessageBus } = createHttpServerMessageBus({ timeout: 15000, contextId, senderHost: 'localhost', senderPort: 3000 });
 
         httpServerMessageBus.initialise();
-        httpServerMessageBus.subscribeToHttpRequestMessages({ callback: ({ httpRequestMessage }) => {
-            _httpRequestMessage = httpRequestMessage;
-            httpServerMessageBus.publishHttpResponseMessage(createHttpResponseMessage({
-                messageStatusCode: 0, //success
-                Id: null,
-                data: 'Hello From Server',
-                recipientHost: 'localhost',
-                recipientPort: 3000,
-                metadata: { path: '/httpclientmessagebustest' },
-                token,
-                senderHost: 'localhost',
-                senderPort: 3000
-            }));
-        }});
+        httpServerMessageBus.publishHttpResponseMessage(createHttpResponseMessage({
+            messageStatusCode: 0, //success
+            Id: null,
+            data: 'Hello From Server',
+            recipientHost: 'localhost',
+            recipientPort: 3000,
+            metadata: { path: '/httpclientmessagebustest' },
+            token,
+            senderHost: 'localhost',
+            senderPort: 3000
+        }));
 
         // Act
         httpClientMessageBus.publishHttpRequestMessage(createHttpRequestMessage({
@@ -55,8 +51,6 @@ fdescribe("when sending an http request given a recipient address", function() {
 
         // Assert
         httpClientMessageBus.subscribeToHttpResponseMessages({ callback: ({ httpResponseMessage }) => {
-            expect(_httpRequestMessage).not.toBeNull();
-            expect(_httpRequestMessage).not.toBeUndefined();
             expect(httpResponseMessage).not.toBeNull();
             expect(httpResponseMessage).not.toBeUndefined();
             done();

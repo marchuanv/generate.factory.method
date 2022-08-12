@@ -1,4 +1,4 @@
-fdescribe("when asking the client message bus publish and subscribe to response messages", function() {
+fdescribe("when asking a client messagebus to publish a request", function() {
 
   let token = null;
 
@@ -12,7 +12,7 @@ fdescribe("when asking the client message bus publish and subscribe to response 
     ({ token } = userSecurity.authenticate({ secret }));
   });
 
-  it("it should succeed without any errors", (done) => {
+  it("it should receive a response message", (done) => {
     
     // Arrange
     const path = '/clientmessagebustest';
