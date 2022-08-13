@@ -74,7 +74,7 @@ fdescribe("when asking a client messagebus to publish a request", function() {
         expect(senderHost).toEqual('localhost');
         expect(senderPort).toEqual(3000);
       }
-      done();
+      setTimeout(done, 5000);
     }});
   });
 });
