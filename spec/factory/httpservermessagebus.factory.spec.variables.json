@@ -3,5 +3,6 @@
     "senderHost": null,
     "senderPort": null,
     "timeout": null,
-    "eventLogger": null
+    "eventLogger": null,
+    "sharedLogging": null
 }

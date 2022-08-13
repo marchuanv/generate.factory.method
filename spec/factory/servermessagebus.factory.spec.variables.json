@@ -4,5 +4,6 @@
     "senderPort": 3000,
     "timeout": 15000,
     "httpServerMessageBus": null,
-    "eventLogger": null
+    "eventLogger": null,
+    "sharedLogging": null
 }

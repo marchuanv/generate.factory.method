@@ -75,7 +75,7 @@ fdescribe("when asking the server messagebus to subscribe to request messages an
         expect(senderHost).toEqual('localhost');
         expect(senderPort).toEqual(3000);
       }
-      setTimeout(done, 5000);
+      setTimeout(done, 1500);
     }});
   });
 });

@@ -1,4 +1,4 @@
-describe("when an http server messagebus receives an http request message", function() {
+fdescribe("when an http server messagebus receives an http request message", function() {
 
     let token = null;
 
@@ -36,7 +36,7 @@ describe("when an http server messagebus receives an http request message", func
         }));
 
         // Act
-        httpServerMessageBus.subscribeToHttpRequestMessages({ callback: ({ httpRequestMessage }) => {
+        httpServerMessageBus.subscribeToHttpRequestMessages({ callback: () => {
             httpServerMessageBus.publishHttpResponseMessage(createHttpResponseMessage({
                 messageStatusCode: 0, //success
                 Id: null,
@@ -54,7 +54,7 @@ describe("when an http server messagebus receives an http request message", func
         httpClientMessageBus.subscribeToHttpResponseMessages({ callback: ({ httpResponseMessage }) => {
             expect(httpResponseMessage).not.toBeNull();
             expect(httpResponseMessage).not.toBeUndefined();
-            done();
+            setTimeout(done, 1500);
         }});
 
     });

@@ -1,4 +1,4 @@
-describe("when an http client messagebus sends an http request message", function() {
+fdescribe("when an http client messagebus sends an http request message", function() {
 
     let token = null;
 
@@ -52,7 +52,7 @@ describe("when an http client messagebus sends an http request message", functio
         httpClientMessageBus.subscribeToHttpResponseMessages({ callback: ({ httpResponseMessage }) => {
             expect(httpResponseMessage).not.toBeNull();
             expect(httpResponseMessage).not.toBeUndefined();
-            done();
+            setTimeout(done, 1500);
         }});
 
     });
