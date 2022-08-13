@@ -3,5 +3,7 @@
     "subscriptionName": "eventsubscriptionfactory",
     "eventDescription": null,
     "eventCode": null,
-    "eventSource": null
+    "eventSource": null,
+    "eventLogger": null,
+    "sharedEventLogger": null
 }

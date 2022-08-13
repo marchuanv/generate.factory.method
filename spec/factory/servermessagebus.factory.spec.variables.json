@@ -3,5 +3,6 @@
     "senderHost": "localhost",
     "senderPort": 3000,
     "timeout": 15000,
-    "httpServerMessageBus": null
+    "httpServerMessageBus": null,
+    "eventLogger": null
 }

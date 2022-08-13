@@ -2,5 +2,6 @@
     "contextId": null,
     "senderHost": null,
     "senderPort": null,
-    "timeout": null
+    "timeout": null,
+    "eventLogger": null
 }

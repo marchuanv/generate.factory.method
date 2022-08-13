@@ -1,5 +1,6 @@
 {
     "contextId": "clientmessagebusfactory",
     "timeout": 15000,
-    "httpClientMessageBus": null
+    "httpClientMessageBus": null,
+    "eventLogger": null
 }
