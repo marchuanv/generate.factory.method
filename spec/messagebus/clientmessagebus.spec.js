@@ -57,8 +57,8 @@ fdescribe("when asking a client messagebus to publish a request", function() {
       expect(responseMessage).not.toBeNull();
       {
         const { text } = responseMessage.getDecryptedContent();
-        expect(text).toEqual(expectedDecryptedServerText);
         const { code } = responseMessage.getMessageStatus();
+        expect(text).toEqual(expectedDecryptedServerText);
         expect(code).toEqual(0); //success
       }
       expect(requestMessage).not.toBeUndefined();
