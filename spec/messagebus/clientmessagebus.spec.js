@@ -58,8 +58,6 @@ fdescribe("when asking a client messagebus to publish a request", function() {
       {
         const { text } = responseMessage.getDecryptedContent();
         expect(text).toEqual(expectedDecryptedServerText);
-      }
-      {
         const { code } = responseMessage.getMessageStatus();
         expect(code).toEqual(0); //success
       }
@@ -67,10 +65,8 @@ fdescribe("when asking a client messagebus to publish a request", function() {
       expect(requestMessage).not.toBeNull();
       {
         const { code } = requestMessage.getMessageStatus();
-        expect(code).toEqual(2); //pending
-      }
-      {
         const { text } = requestMessage.getDecryptedContent();
+        expect(code).toEqual(2); //pending
         expect(text).toEqual(expectedDecryptedClientText);
       }
       {

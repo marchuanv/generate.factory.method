@@ -1,8 +1,8 @@
-const { createClientMessageBus } = require('C:\\component\\lib\\factory\\clientmessagebus.factory.js');
+const { createClientMessageBus } = require('D:\\component\\lib\\factory\\clientmessagebus.factory.js');
 describe('when asking the ClientMessageBus factory to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
-    const {contextId,timeout,httpClientMessageBus} = require('C:\\component\\spec\\factory\\clientmessagebus.factory.spec.variables.json');
+    const {contextId,timeout,httpClientMessageBus} = require('D:\\component\\spec\\factory\\clientmessagebus.factory.spec.variables.json');
 
     // Act
     const {clientMessageBus} = createClientMessageBus({contextId,timeout});
