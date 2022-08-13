@@ -1,8 +1,6 @@
 {
-    "contextId": null,
-    "senderHost": null,
-    "senderPort": null,
-    "timeout": null,
-    "eventLogger": null,
-    "sharedLogging": null
+    "contextId": "httpservermessagebusfactoryspec",
+    "senderHost": "localhost",
+    "senderPort": 3000,
+    "timeout": 2000
 }

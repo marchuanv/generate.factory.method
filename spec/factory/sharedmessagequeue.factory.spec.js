@@ -2,7 +2,7 @@ const { createSharedMessageQueue } = require('D:\\component\\lib\\factory\\share
 describe('when asking the SharedMessageQueue factory to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
-    const {eventLogger} = require('D:\\component\\spec\\factory\\sharedmessagequeue.factory.spec.variables.json');
+    const {} = require('D:\\component\\spec\\factory\\sharedmessagequeue.factory.spec.variables.json');
 
     // Act
     const {sharedMessageQueue} = createSharedMessageQueue({});
