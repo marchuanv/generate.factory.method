@@ -1,4 +1,4 @@
-xdescribe("when initialising a component given a userid and secret", function() {
+fdescribe("when initialising a component given a userid and secret", function() {
  it("it should creste a secure messagebus", async function() {
   
     // Arrange
