@@ -1,4 +1,4 @@
-fdescribe("when initialising a component given a userid and secret", function() {
+fdescribe("when initialising a component given a client and server messagebus", function() {
 
   let token = null;
 
@@ -6,17 +6,18 @@ fdescribe("when initialising a component given a userid and secret", function() 
     
   });
 
- it("it should creste a secure messagebus", function(done) {
+ it("it should provide the capability for sending and receiving messages.", function(done) {
   
   // Arrange
+  const { createComponent } = require('../../lib/factory/component.factory.js');
+
   // Act
   {
     // Server Component
-    const { createComponent } = require('../../lib/factory/component.factory.js');
     const { component } = createComponent({ packageJson: {
       userId: 'componenttest',
-      recipientAddress: { recipientHost: 'localhost', recipientPort: 3000 },
-      senderAddress: { senderHost: 'localhost', senderPort: 2000 },
+      senderHost: 'localhost', senderPort: 3000,
+      recipientHost: 'localhost', recipientPort: 2000,
       isServerComponent: true
     }});
     component.initialise({ secret: 'secret1234' }).then(() => {
@@ -27,11 +28,10 @@ fdescribe("when initialising a component given a userid and secret", function() 
   }
   {
     // Client Component
-    const { createComponent } = require('../../lib/factory/component.factory.js');
     const { component } = createComponent({ packageJson: {
       userId: 'componenttest',
-      senderAddress: { senderHost: 'localhost', senderPort: 3000 },
-      recipientAddress: { recipientHost: 'localhost', recipientPort: 2000 },
+      senderHost: 'localhost', senderPort: 3000,
+      recipientHost: 'localhost', recipientPort: 2000,
       isServerComponent: false
     }});
     component.initialise({ secret: 'secret1234' }).then(() => {
@@ -44,20 +44,3 @@ fdescribe("when initialising a component given a userid and secret", function() 
   // Assert
  });
 });
-
-xdescribe("when sending data given a component", function() {
- it("it should instruct the messagebus to publish the data in the form of a message", function() {
-  // Arrange
-  // Act
-  // Assert
- });
-});
-
-xdescribe("when receiving data given a component", function() {
-    it("it should instruct the messagebus to subscribe to a channel listening for messages", function() {
-     // Arrange
-     // Act
-     // Assert
-    });
-   });
-   
