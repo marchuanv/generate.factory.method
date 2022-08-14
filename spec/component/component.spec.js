@@ -18,6 +18,7 @@ fdescribe("when initialising a component given a client and server messagebus", 
       userId: 'componenttest',
       senderHost: 'localhost', senderPort: 3000,
       recipientHost: 'localhost', recipientPort: 2000,
+      timeout: 15000,
       isServerComponent: true
     }});
     component.initialise({ secret: 'secret1234' }).then(() => {
@@ -30,8 +31,9 @@ fdescribe("when initialising a component given a client and server messagebus", 
     // Client Component
     const { component } = createComponent({ packageJson: {
       userId: 'componenttest',
-      senderHost: 'localhost', senderPort: 3000,
-      recipientHost: 'localhost', recipientPort: 2000,
+      senderHost: 'localhost', senderPort: 2000,
+      recipientHost: 'localhost', recipientPort: 3000,
+      timeout: 15000,
       isServerComponent: false
     }});
     component.initialise({ secret: 'secret1234' }).then(() => {
