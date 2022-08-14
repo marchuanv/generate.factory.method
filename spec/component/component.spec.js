@@ -37,7 +37,7 @@ fdescribe("when initialising a component given a userid and secret", function() 
     component.initialise({ secret: 'secret1234' }).then(() => {
       component.send({ object: { text: 'Hello From Client' } });
       component.receive({ callback: ({ message }) => {
-        done();
+        setTimeout(done,1500);
       }});
     });
   }
