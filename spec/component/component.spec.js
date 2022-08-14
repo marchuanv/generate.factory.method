@@ -15,6 +15,7 @@ fdescribe("when initialising a component given a userid and secret", function() 
     const { createComponent } = require('../../lib/factory/component.factory.js');
     const { component } = createComponent({ packageJson: {
       userId: 'componenttest',
+      recipientAddress: { recipientHost: 'localhost', recipientPort: 3000 },
       senderAddress: { senderHost: 'localhost', senderPort: 2000 },
       isServerComponent: true
     }});
@@ -29,6 +30,7 @@ fdescribe("when initialising a component given a userid and secret", function() 
     const { createComponent } = require('../../lib/factory/component.factory.js');
     const { component } = createComponent({ packageJson: {
       userId: 'componenttest',
+      senderAddress: { senderHost: 'localhost', senderPort: 3000 },
       recipientAddress: { recipientHost: 'localhost', recipientPort: 2000 },
       isServerComponent: false
     }});
