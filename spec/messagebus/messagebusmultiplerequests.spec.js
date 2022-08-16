@@ -50,10 +50,6 @@ fdescribe("when asking a client messagebus to publish multiple requests", functi
       messageStatusCode: 2, Id: null, data: expectedDecryptedClientText1,
       recipientHost, recipientPort, metadata, token, senderHost, senderPort 
     }));
-    clientMessageBus.publishMessage(createMessage({ 
-      messageStatusCode: 2, Id: null, data: expectedDecryptedClientText2,
-      recipientHost, recipientPort, metadata, token, senderHost, senderPort 
-    }));
 
     // Assert
     clientMessageBus.subscribeToMessages({ callback: ({ message }) => {
@@ -80,9 +76,41 @@ fdescribe("when asking a client messagebus to publish multiple requests", functi
         expect(senderHost).toEqual('localhost');
         expect(senderPort).toEqual(3000);
       }
+
+      clientMessageBus.publishMessage(createMessage({ 
+        messageStatusCode: 2, Id: null, data: expectedDecryptedClientText2,
+        recipientHost, recipientPort, metadata, token, senderHost, senderPort 
+      }));
+
+      clientMessageBus.subscribeToMessages({ callback: ({ message }) => {
+
+        const responseMessage = message;
+        expect(responseMessage).not.toBeUndefined();
+        expect(responseMessage).not.toBeNull();
+        {
+          const { text } = responseMessage.getDecryptedContent();
+          const { code } = responseMessage.getMessageStatus();
+          expect(text).toEqual(expectedDecryptedServerText);
+          expect(code).toEqual(0); //success
+        }
+        expect(requestMessage).not.toBeUndefined();
+        expect(requestMessage).not.toBeNull();
+        {
+          const { code } = requestMessage.getMessageStatus();
+          const { text } = requestMessage.getDecryptedContent();
+          expect(code).toEqual(2); //pending
+          expect(text).toEqual(expectedDecryptedClientText2);
+        }
+        {
+          const { senderHost, senderPort } = requestMessage.getSenderAddress();
+          expect(senderHost).toEqual('localhost');
+          expect(senderPort).toEqual(3000);
+        }
+
+        setTimeout(done, 10000);
+  
+      }});
+
     }});
-
-    setTimeout(done, 10000);
-
   });
 });
