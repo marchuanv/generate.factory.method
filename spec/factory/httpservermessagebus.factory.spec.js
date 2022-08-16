@@ -1,8 +1,8 @@
-const { createHttpServerMessageBus } = require('D:\\component\\lib\\factory\\httpservermessagebus.factory.js');
+const { createHttpServerMessageBus } = require('C:\\component\\lib\\factory\\httpservermessagebus.factory.js');
 describe('when asking the HttpServerMessageBus factory to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
-    const {contextId,senderHost,senderPort,timeout} = require('D:\\component\\spec\\factory\\httpservermessagebus.factory.spec.variables.json');
+    const {contextId,senderHost,senderPort,timeout} = require('C:\\component\\spec\\factory\\httpservermessagebus.factory.spec.variables.json');
 
     // Act
     const {httpServerMessageBus} = createHttpServerMessageBus({contextId,senderHost,senderPort,timeout});
