@@ -1,0 +1,5 @@
+{
+    "timeout": 15000,
+    "senderHost": "localhost",
+    "senderPort": 3000
+}
