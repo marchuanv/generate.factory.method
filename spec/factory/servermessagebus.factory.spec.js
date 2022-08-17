@@ -2,7 +2,7 @@ const { createServerMessageBus } = require('D:\\component\\lib\\factory\\serverm
 describe('when asking the ServerMessageBus factory to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
-    const {contextId,senderHost,senderPort,timeout} = require('D:\\component\\spec\\factory\\servermessagebus.factory.spec.variables.json');
+    const {contextId,senderHost,senderPort,timeout,sharedHttpServer} = require('D:\\component\\spec\\factory\\servermessagebus.factory.spec.variables.json');
 
     // Act
     const {serverMessageBus} = createServerMessageBus({contextId,timeout,senderHost,senderPort});

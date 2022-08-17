@@ -1,4 +1,4 @@
-describe("when asking a client messagebus to publish multiple requests", function() {
+fdescribe("when asking a client messagebus to publish multiple requests", function() {
 
   let token = null;
 
@@ -27,7 +27,8 @@ describe("when asking a client messagebus to publish multiple requests", functio
     let expectedDecryptedClientText2 = 'Hello From Client Second';
     let expectedDecryptedServerText1 = 'Hello From Server First';
     let expectedDecryptedServerText2 = 'Hello From Server Second';
-    let requestMessage = null;
+    let requestMessage1 = null;
+    let requestMessage2 = null;
     const { createMessage } = require('../../lib/factory/message.factory');
 
     { 
@@ -35,18 +36,19 @@ describe("when asking a client messagebus to publish multiple requests", functio
       const { createServerMessageBus } = require('../../lib/factory/servermessagebus.factory.js');
       const { serverMessageBus } = createServerMessageBus({ timeout, contextId, senderHost, senderPort });
       serverMessageBus.subscribeToMessages({ callback: ({ message }) => {
-        requestMessage = message;
+        requestMessage1 = message;
+      }});
+      serverMessageBus.subscribeToMessages({ callback: ({ message }) => {
+        requestMessage2 = message;
       }});
       serverMessageBus.publishMessage(createMessage({ 
         messageStatusCode: 0, Id: null, data: expectedDecryptedServerText1, 
         recipientHost, recipientPort, metadata, token, senderHost, senderPort 
       }));
-      setTimeout(() => {
-        serverMessageBus.publishMessage(createMessage({ 
-          messageStatusCode: 0, Id: null, data: expectedDecryptedServerText2, 
-          recipientHost, recipientPort, metadata, token, senderHost, senderPort 
-        }));
-      },1000);
+      serverMessageBus.publishMessage(createMessage({ 
+        messageStatusCode: 0, Id: null, data: expectedDecryptedServerText2, 
+        recipientHost, recipientPort, metadata, token, senderHost, senderPort 
+      }));
     }
 
     const { createClientMessageBus } = require('../../lib/factory/clientmessagebus.factory.js');
@@ -57,12 +59,10 @@ describe("when asking a client messagebus to publish multiple requests", functio
       messageStatusCode: 2, Id: null, data: expectedDecryptedClientText1,
       recipientHost, recipientPort, metadata, token, senderHost, senderPort 
     }));
-    setTimeout(() => {
-      clientMessageBus.publishMessage(createMessage({ 
-        messageStatusCode: 2, Id: null, data: expectedDecryptedClientText2,
-        recipientHost, recipientPort, metadata, token, senderHost, senderPort 
-      }));
-    },1000);
+    clientMessageBus.publishMessage(createMessage({ 
+      messageStatusCode: 2, Id: null, data: expectedDecryptedClientText2,
+      recipientHost, recipientPort, metadata, token, senderHost, senderPort 
+    }));
 
     // Assert
     clientMessageBus.subscribeToMessages({ callback: ({ message }) => {
@@ -75,21 +75,20 @@ describe("when asking a client messagebus to publish multiple requests", functio
         expect(text).toEqual(expectedDecryptedServerText1);
         expect(code).toEqual(0); //success
       }
-      expect(requestMessage).not.toBeUndefined();
-      expect(requestMessage).not.toBeNull();
+      expect(requestMessage1).not.toBeUndefined();
+      expect(requestMessage1).not.toBeNull();
       {
-        const { code } = requestMessage.getMessageStatus();
-        const { text } = requestMessage.getDecryptedContent();
+        const { code } = requestMessage1.getMessageStatus();
+        const { text } = requestMessage1.getDecryptedContent();
         expect(code).toEqual(2); //pending
         expect(text).toEqual(expectedDecryptedClientText1);
       }
       {
-        const { senderHost, senderPort } = requestMessage.getSenderAddress();
+        const { senderHost, senderPort } = requestMessage1.getSenderAddress();
         expect(senderHost).toEqual('localhost');
         expect(senderPort).toEqual(3000);
       }
     }});
-
     clientMessageBus.subscribeToMessages({ callback: ({ message }) => {
       const responseMessage = message;
       expect(responseMessage).not.toBeUndefined();
@@ -100,21 +99,20 @@ describe("when asking a client messagebus to publish multiple requests", functio
         expect(text).toEqual(expectedDecryptedServerText2);
         expect(code).toEqual(0); //success
       }
-      expect(requestMessage).not.toBeUndefined();
-      expect(requestMessage).not.toBeNull();
+      expect(requestMessage2).not.toBeUndefined();
+      expect(requestMessage2).not.toBeNull();
       {
-        const { code } = requestMessage.getMessageStatus();
-        const { text } = requestMessage.getDecryptedContent();
+        const { code } = requestMessage2.getMessageStatus();
+        const { text } = requestMessage2.getDecryptedContent();
         expect(code).toEqual(2); //pending
         expect(text).toEqual(expectedDecryptedClientText2);
       }
       {
-        const { senderHost, senderPort } = requestMessage.getSenderAddress();
+        const { senderHost, senderPort } = requestMessage2.getSenderAddress();
         expect(senderHost).toEqual('localhost');
         expect(senderPort).toEqual(3000);
       }
       setTimeout(done, 10000);
     }});
-
   });
 });
