@@ -1,4 +1,4 @@
-fdescribe("when asking a client messagebus to publish multiple requests", function() {
+describe("when asking a client messagebus to publish multiple requests", function() {
 
   let token = null;
 
