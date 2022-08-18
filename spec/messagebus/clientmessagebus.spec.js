@@ -5,9 +5,9 @@ describe("when asking a client messagebus to publish a request", function() {
   beforeAll(() => {
     const userId = 'clientmessagebus';
     const secret = 'clientmessagebus1234';
-    const { createSharedUserSessions } = require('../../lib/factory/sharedusersessions.factory.js');
-    const { sharedUserSessions } = createSharedUserSessions({});
-    const { userSecurity } = sharedUserSessions.ensureSession({ userId });
+    const { createUserSessions } = require('../../lib/factory/usersessions.factory.js');
+    const { userSessions } = createUserSessions({});
+    const { userSecurity } = userSessions.ensureSession({ userId });
     userSecurity.register({ secret });
     ({ token } = userSecurity.authenticate({ secret }));
   });

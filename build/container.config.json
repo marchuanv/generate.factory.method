@@ -1,0 +1,7 @@
+[
+    { "type": "MessageConverter", "singleton": true },
+    { "type": "MessageQueue", "singleton": true },
+    { "type": "Logger", "singleton": true },
+    { "type": "UserSessions", "singleton": true },
+    { "type": "HttpServer", "singleton": true }
+]

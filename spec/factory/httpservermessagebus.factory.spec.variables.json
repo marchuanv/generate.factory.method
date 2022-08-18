@@ -2,6 +2,5 @@
     "contextId": "httpservermessagebusfactoryspec",
     "senderHost": "localhost",
     "senderPort": 3000,
-    "timeout": 2000,
-    "sharedHttpServer": null
+    "timeout": 2000
 }

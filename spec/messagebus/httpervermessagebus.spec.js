@@ -5,9 +5,9 @@ describe("when an http server messagebus receives an http request message", func
     beforeAll(() => {
         const userId = 'httpervermessagebus';
         const secret = 'httpervermessagebus1234';
-        const { createSharedUserSessions } = require('../../lib/factory/sharedusersessions.factory.js');
-        const { sharedUserSessions } = createSharedUserSessions({});
-        const { userSecurity } = sharedUserSessions.ensureSession({ userId });
+        const { createUserSessions } = require('../../lib/factory/usersessions.factory.js');
+        const { userSessions } = createUserSessions({});
+        const { userSecurity } = userSessions.ensureSession({ userId });
         userSecurity.register({ secret });
         ({ token } = userSecurity.authenticate({ secret }));
     });

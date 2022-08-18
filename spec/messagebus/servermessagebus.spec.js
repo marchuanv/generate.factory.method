@@ -5,9 +5,9 @@ describe("when asking the server messagebus to subscribe to request messages and
   beforeAll(() => {
     const userId = 'servermessagebus';
     const secret = 'servermessagebus1234';
-    const { createSharedUserSessions } = require('../../lib/factory/sharedusersessions.factory.js');
-    const { sharedUserSessions } = createSharedUserSessions({});
-    const { userSecurity } = sharedUserSessions.ensureSession({ userId });
+    const { createUserSessions } = require('../../lib/factory/usersessions.factory.js');
+    const { userSessions } = createUserSessions({});
+    const { userSecurity } = userSessions.ensureSession({ userId });
     userSecurity.register({ secret });
     ({ token } = userSecurity.authenticate({ secret }));
   });
