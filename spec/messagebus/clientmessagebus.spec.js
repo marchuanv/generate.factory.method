@@ -1,12 +1,15 @@
+const utils = require('utils');
+
 describe("when asking a client messagebus to publish a request", function() {
 
   let token = null;
+  const scopeId = 'clientmessagebustest';
 
   beforeAll(() => {
     const userId = 'clientmessagebus';
     const secret = 'clientmessagebus1234';
     const { createUserSessions } = require('../../lib/factory/usersessions.factory.js');
-    const { userSessions } = createUserSessions({});
+    const { userSessions } = createUserSessions({ scopeId });
     const { userSecurity } = userSessions.ensureSession({ userId });
     userSecurity.register({ secret });
     ({ token } = userSecurity.authenticate({ secret }));
@@ -21,7 +24,7 @@ describe("when asking a client messagebus to publish a request", function() {
     const recipientHost = 'localhost';
     const recipientPort = 3000;
     const timeout = 15000;
-    const scopeId = 'clientmessagebustest';
+    
     const metadata = { path };
     let expectedDecryptedClientText = 'Hello From Client';
     let expectedDecryptedServerText = 'Hello From Server';
@@ -33,6 +36,7 @@ describe("when asking a client messagebus to publish a request", function() {
       const { createServerMessageBus } = require('../../lib/factory/servermessagebus.factory.js');
       const { serverMessageBus } = createServerMessageBus({ scopeId, timeout, senderHost, senderPort });
       serverMessageBus.publishMessage(createMessage({ 
+        scopeId: utils.generateGUID(),
         messageStatusCode: 0, Id: null, data: expectedDecryptedServerText, 
         recipientHost, recipientPort, metadata, token, senderHost, senderPort 
       }));
@@ -46,6 +50,7 @@ describe("when asking a client messagebus to publish a request", function() {
 
     // Act
     clientMessageBus.publishMessage(createMessage({ 
+      scopeId: utils.generateGUID(),
       messageStatusCode: 2, Id: null, data: expectedDecryptedClientText,
       recipientHost, recipientPort, metadata, token, senderHost, senderPort 
     }));
