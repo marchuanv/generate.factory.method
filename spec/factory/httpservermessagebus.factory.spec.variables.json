@@ -1,5 +1,5 @@
 {
-    "contextId": "httpservermessagebusfactoryspec",
+    "scopeId": "httpservermessagebusfactoryspec",
     "senderHost": "localhost",
     "senderPort": 3000,
     "timeout": 2000

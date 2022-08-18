@@ -1,5 +1,5 @@
 {
-    "contextId": "servermessagebusfactory",
+    "scopeId": "servermessagebusfactory",
     "senderHost": "localhost",
     "senderPort": 3000,
     "timeout": 15000

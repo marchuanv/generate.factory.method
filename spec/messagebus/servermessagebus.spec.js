@@ -21,7 +21,7 @@ describe("when asking the server messagebus to subscribe to request messages and
     const recipientHost = 'localhost';
     const recipientPort = 3000;
     const timeout = 15000;
-    const contextId = 'servermessagebustest';
+    const scopeId = 'servermessagebustest';
     const metadata = { path };
     let expectedDecryptedClientText = 'Hello From Client';
     let expectedDecryptedServerText = 'Hello From Server';
@@ -29,14 +29,14 @@ describe("when asking the server messagebus to subscribe to request messages and
     const { createMessage } = require('../../lib/factory/message.factory');
 
     const { createClientMessageBus } = require('../../lib/factory/clientmessagebus.factory.js');
-    const { clientMessageBus } = createClientMessageBus({ timeout, contextId, senderHost, senderPort });
+    const { clientMessageBus } = createClientMessageBus({ scopeId, timeout, senderHost, senderPort });
     clientMessageBus.publishMessage(createMessage({ 
       messageStatusCode: 2, Id: null, data: expectedDecryptedClientText,
       recipientHost, recipientPort, metadata, token, senderHost, senderPort 
     }));
 
     const { createServerMessageBus } = require('../../lib/factory/servermessagebus.factory.js');
-    const { serverMessageBus } = createServerMessageBus({ timeout, contextId, senderHost, senderPort });
+    const { serverMessageBus } = createServerMessageBus({ scopeId, timeout, senderHost, senderPort });
 
     // Act
     serverMessageBus.subscribeToMessages({ callback: ({ message }) => {

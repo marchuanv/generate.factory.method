@@ -15,13 +15,13 @@ describe("when an http server messagebus receives an http request message", func
     it("it should send an http response message", (done) => {
         
         // Arrange
-        const  contextId = "httpservermessagebustest";
+        const  scopeId = "httpservermessagebustest";
         const { createHttpClientMessageBus } = require('../../lib/factory/httpclientmessagebus.factory.js');
         const { createHttpServerMessageBus } = require('../../lib/factory/httpservermessagebus.factory.js');
         const { createHttpRequestMessage } = require('../../lib/factory/httprequestmessage.factory.js');
         const { createHttpResponseMessage } = require('../../lib/factory/httpresponsemessage.factory.js');
-        const { httpClientMessageBus } = createHttpClientMessageBus({ timeout: 15000, contextId, senderHost: 'localhost', senderPort: 3000 });
-        const { httpServerMessageBus } = createHttpServerMessageBus({ timeout: 15000, contextId, senderHost: 'localhost', senderPort: 3000 });
+        const { httpClientMessageBus } = createHttpClientMessageBus({ scopeId, timeout: 15000, senderHost: 'localhost', senderPort: 3000 });
+        const { httpServerMessageBus } = createHttpServerMessageBus({ scopeId, timeout: 15000, senderHost: 'localhost', senderPort: 3000 });
 
         httpClientMessageBus.publishHttpRequestMessage(createHttpRequestMessage({
             messageStatusCode: 2, //pending

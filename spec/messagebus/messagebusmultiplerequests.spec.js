@@ -21,7 +21,7 @@ describe("when asking a client messagebus to publish multiple requests", functio
     const recipientHost = 'localhost';
     const recipientPort = 3000;
     const timeout = 15000;
-    const contextId = 'messagebusmultiplerequests';
+    const scopeId  = 'messagebusmultiplerequests';
     const metadata = { path };
     let expectedDecryptedClientText1 = 'Hello From Client First';
     let expectedDecryptedClientText2 = 'Hello From Client Second';
@@ -34,7 +34,7 @@ describe("when asking a client messagebus to publish multiple requests", functio
     { 
       //Simulate a Server
       const { createServerMessageBus } = require('../../lib/factory/servermessagebus.factory.js');
-      const { serverMessageBus } = createServerMessageBus({ timeout, contextId, senderHost, senderPort });
+      const { serverMessageBus } = createServerMessageBus({ scopeId, timeout, senderHost, senderPort });
       serverMessageBus.subscribeToMessages({ callback: ({ message }) => {
         requestMessage1 = message;
       }});
@@ -52,7 +52,7 @@ describe("when asking a client messagebus to publish multiple requests", functio
     }
 
     const { createClientMessageBus } = require('../../lib/factory/clientmessagebus.factory.js');
-    const { clientMessageBus } = createClientMessageBus({ timeout, contextId, senderHost, senderPort });
+    const { clientMessageBus } = createClientMessageBus({ scopeId, timeout, senderHost, senderPort });
 
     // Act
     clientMessageBus.publishMessage(createMessage({ 

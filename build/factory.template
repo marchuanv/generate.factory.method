@@ -6,8 +6,8 @@ const { [TypeName] } = require('[ScriptPath]');
 * Create [TypeName] 
 * @param {[SimpleArgs]}
 */
-function create[TypeName]({[SimpleArgs]}) {
-    const container = factory.createContainer({ type: [TypeName], variableName:'[TypeVariableName]', singleton: [IsSingleton] });
+function create[TypeName]({ scopeId, [SimpleArgs] }) {
+    const container = factory.createContainer({ scopeId, type: [TypeName], variableName:'[TypeVariableName]', singleton: [IsSingleton] });
     container.config({[SimpleArgs]});
     [FactoryCalls]
     container.initialise();

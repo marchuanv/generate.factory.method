@@ -21,7 +21,7 @@ describe("when asking a client messagebus to publish a request", function() {
     const recipientHost = 'localhost';
     const recipientPort = 3000;
     const timeout = 15000;
-    const contextId = 'clientmessagebustest';
+    const scopeId = 'clientmessagebustest';
     const metadata = { path };
     let expectedDecryptedClientText = 'Hello From Client';
     let expectedDecryptedServerText = 'Hello From Server';
@@ -31,7 +31,7 @@ describe("when asking a client messagebus to publish a request", function() {
     { 
       //Simulate a Server
       const { createServerMessageBus } = require('../../lib/factory/servermessagebus.factory.js');
-      const { serverMessageBus } = createServerMessageBus({ timeout, contextId, senderHost, senderPort });
+      const { serverMessageBus } = createServerMessageBus({ scopeId, timeout, senderHost, senderPort });
       serverMessageBus.publishMessage(createMessage({ 
         messageStatusCode: 0, Id: null, data: expectedDecryptedServerText, 
         recipientHost, recipientPort, metadata, token, senderHost, senderPort 
@@ -42,7 +42,7 @@ describe("when asking a client messagebus to publish a request", function() {
     }
 
     const { createClientMessageBus } = require('../../lib/factory/clientmessagebus.factory.js');
-    const { clientMessageBus } = createClientMessageBus({ timeout, contextId, senderHost, senderPort });
+    const { clientMessageBus } = createClientMessageBus({ scopeId, timeout, senderHost, senderPort });
 
     // Act
     clientMessageBus.publishMessage(createMessage({ 

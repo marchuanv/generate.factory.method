@@ -1,4 +1,4 @@
 {
-    "contextId": "clientmessagebusfactory",
+    "scopeId": "clientmessagebusfactory",
     "timeout": 15000
 }
