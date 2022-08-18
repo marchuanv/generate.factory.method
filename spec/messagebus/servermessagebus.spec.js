@@ -1,8 +1,10 @@
+const utils = require('utils');
+
 describe("when asking the server messagebus to subscribe to request messages and publish a response", function() {
 
   let token = null;
   const scopeId = 'servermessagebustest';
-
+  
   beforeAll(() => {
     const userId = 'servermessagebus';
     const secret = 'servermessagebus1234';
