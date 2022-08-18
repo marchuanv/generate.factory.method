@@ -14,7 +14,7 @@ const factoryRequireTemplate = readFileSync(path.join(__dirname,'factory.require
 const factoryCallCreateTemplate = readFileSync(path.join(__dirname,'factory.call.create.template'),'utf8');
 const specVariablesTemplate = readFileSync(path.join(__dirname,'spec.variables.template'),'utf8');
 const typeInfoTemplate = readFileSync(path.join(__dirname,'typeinfo.template'),'utf8');
-const containerConfig = require(path.join(__dirname,'container.config.json'),'utf8');
+const singletonConfig = require(path.join(__dirname,'singletons.json'),'utf8');
 
 if (!existsSync(specsFactoryDir)){
     mkdirSync(specsFactoryDir);
@@ -37,7 +37,7 @@ function getDependencyTree(typeInfo, pass = 'firstpass', types = []) {
                 const sc = require(scriptPath);
                 const key = Object.keys(sc)[0];
                 const type = sc[key];
-                const singleton = containerConfig.find(cConf => cConf.typeName.toLowerCase() === key.toLowerCase() && cConf.singleton) ? true : false;
+                const singleton = singletonConfig.find(cConf => cConf.typeName.toLowerCase() === key.toLowerCase() && cConf.singleton) ? true : false;
                 const parameters = utils.getFunctionParams(type) || [];
                 const children = parameters.map(param => utils.getJSONObject(typeInfoTemplate
                     .replace(/\[TypeName\]/g, param.name)
