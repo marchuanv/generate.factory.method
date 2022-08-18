@@ -1,6 +1,8 @@
-describe("when initialising a component given a client and server messagebus", function() {
+fdescribe("when initialising a component given a client and server messagebus", function() {
 
   let token = null;
+  let clientScopeId = "clientcomponenttest";
+  let serverScopeId = "servercomponenttest";
 
   beforeAll(() => {
     
@@ -14,7 +16,7 @@ describe("when initialising a component given a client and server messagebus", f
   // Act
   {
     // Server Component
-    const { component } = createComponent({ packageJson: {
+    const { component } = createComponent({ scopeId: clientScopeId, packageJson: {
       userId: 'componenttest',
       senderHost: 'localhost', senderPort: 3000,
       recipientHost: 'localhost', recipientPort: 2000,
@@ -29,7 +31,7 @@ describe("when initialising a component given a client and server messagebus", f
   }
   {
     // Client Component
-    const { component } = createComponent({ packageJson: {
+    const { component } = createComponent({ scopeId: serverScopeId, packageJson: {
       userId: 'componenttest',
       senderHost: 'localhost', senderPort: 2000,
       recipientHost: 'localhost', recipientPort: 3000,

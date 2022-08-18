@@ -6,11 +6,14 @@ const { [TypeName] } = require('[ScriptPath]');
 * Create [TypeName] 
 * @param {[SimpleArgs]}
 */
-function create[TypeName]({ scopeId, [SimpleArgs] }) {
-    const container = factory.createContainer({ scopeId, type: [TypeName], variableName:'[TypeVariableName]', singleton: [IsSingleton] });
-    container.config({[SimpleArgs]});
-    [FactoryCalls]
-    container.initialise();
+function create[TypeName]({[SimpleArgs]}) {
+    let container = factory.getContainer({ scopeId, type: [TypeName], variableName:'[TypeVariableName]' });
+    if (!container) {
+        container = factory.createContainer({ scopeId, type: [TypeName], variableName:'[TypeVariableName]', singleton: [IsSingleton] });
+        container.config({[SimpleArgs]});
+            [FactoryCalls]
+    }
+    container.ensureInstance();
     return container.references;
 }
 module.exports = { create[TypeName] };

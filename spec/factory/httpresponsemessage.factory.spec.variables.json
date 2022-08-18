@@ -1,6 +1,6 @@
 {
+    "scopeId": "httpresponsemessagefactory",
     "data": "Hello World",
-    "userId": "joe",
     "metadata": {},
     "messageStatusCode": 0,
     "Id": "randomid",

@@ -125,13 +125,13 @@ for(const info of getDependencyTree()) {
         continue;
     }
 
-    const simpleArgs = [];
+    const simpleArgs = ['scopeId'];
     const refArgs = [];
     const factoryCalls = [];
     let factoryRequireScripts =[];
     walkDependencyTree(info, (typeInfo, breakCallback) => {
         if (typeInfo.scriptPath) {
-            const childSimpleArgs = [];
+            const childSimpleArgs = ['scopeId'];
             walkDependencyTree(typeInfo, (moreTypeInfo) => {
                 if (!moreTypeInfo.scriptPath) {
                     if (!childSimpleArgs.find(x => x === moreTypeInfo.variableName)) {

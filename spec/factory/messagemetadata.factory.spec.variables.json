@@ -1,5 +1,5 @@
 {
-    "userId": "joe",
+    "scopeId": "messagemetadatafactory",
     "metadata": {},
     "recipientHost": "localhost",
     "recipientPort": 3000,

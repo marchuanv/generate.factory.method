@@ -2,10 +2,10 @@ const { createRecipientAddress } = require('C:\\component\\lib\\factory\\recipie
 describe('when asking the RecipientAddress factory to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
-    const {recipientHost,recipientPort} = require('C:\\component\\spec\\factory\\recipientaddress.factory.spec.variables.json');
+    const {scopeId,recipientHost,recipientPort} = require('C:\\component\\spec\\factory\\recipientaddress.factory.spec.variables.json');
 
     // Act
-    const {recipientAddress} = createRecipientAddress({recipientHost,recipientPort});
+    const {recipientAddress} = createRecipientAddress({scopeId,recipientHost,recipientPort});
     // Assert
     expect(recipientAddress).not.toBeNull();
   });

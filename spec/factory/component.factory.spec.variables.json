@@ -1,4 +1,5 @@
 {
+    "scopeId": "componentfactory",
     "packageJson": {
         "name": "componentfactoryspec",
         "userId": "componentfactoryspec1234",

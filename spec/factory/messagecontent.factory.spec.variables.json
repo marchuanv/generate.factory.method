@@ -1,6 +1,6 @@
 {
+    "scopeId": "messagecontentfactory",
     "data": "MessageContentDataTest",
-    "userId": "joe",
     "metadata": {},
     "recipientHost": "localhost",
     "recipientPort": 3000,

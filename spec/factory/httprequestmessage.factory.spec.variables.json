@@ -1,4 +1,5 @@
 {
+    "scopeId": "httprequestmessagefactory",
     "data": "Hello World",
     "senderHost": "localhost",
     "senderPort": 3000,
