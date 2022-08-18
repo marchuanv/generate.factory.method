@@ -2,6 +2,7 @@ const factory = require('./factory.js');
 [FactoryRequireScripts]
 const { [TypeName] } = require('[ScriptPath]');
 /**
+* IsSingleton: [IsSingleton]
 * Create [TypeName]
 * @param {[SimpleArgs]}
 */
@@ -9,7 +10,7 @@ function create[TypeName]({[SimpleArgs]}) {
     const container = factory.createContainer({ type: [TypeName], variableName:'[TypeVariableName]', singleton: [IsSingleton] });
     container.config({[SimpleArgs]});
     [FactoryCalls]
-    container.complete();
+    container.initialise();
     return container.references;
 }
 module.exports = { create[TypeName] };
