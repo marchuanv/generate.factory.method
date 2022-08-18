@@ -2,8 +2,8 @@ const factory = require('./factory.js');
 [FactoryRequireScripts]
 const { [TypeName] } = require('[ScriptPath]');
 /**
-* IsSingleton: [IsSingleton]
-* Create [TypeName]
+* IsSingleton: [IsSingleton] 
+* Create [TypeName] 
 * @param {[SimpleArgs]}
 */
 function create[TypeName]({[SimpleArgs]}) {
