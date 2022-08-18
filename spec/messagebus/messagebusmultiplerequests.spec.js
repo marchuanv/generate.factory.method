@@ -1,12 +1,15 @@
+const utils = require('utils');
+
 describe("when asking a client messagebus to publish multiple requests", function() {
 
   let token = null;
-
+  const scopeId  = 'messagebusmultiplerequests';
+  
   beforeAll(() => {
     const userId = 'clientmessagebus';
     const secret = 'clientmessagebus1234';
     const { createUserSessions } = require('../../lib/factory/usersessions.factory.js');
-    const { userSessions } = createUserSessions({});
+    const { userSessions } = createUserSessions({ scopeId });
     const { userSecurity } = userSessions.ensureSession({ userId });
     userSecurity.register({ secret });
     ({ token } = userSecurity.authenticate({ secret }));
@@ -21,7 +24,6 @@ describe("when asking a client messagebus to publish multiple requests", functio
     const recipientHost = 'localhost';
     const recipientPort = 3000;
     const timeout = 15000;
-    const scopeId  = 'messagebusmultiplerequests';
     const metadata = { path };
     let expectedDecryptedClientText1 = 'Hello From Client First';
     let expectedDecryptedClientText2 = 'Hello From Client Second';
@@ -42,10 +44,12 @@ describe("when asking a client messagebus to publish multiple requests", functio
         requestMessage2 = message;
       }});
       serverMessageBus.publishMessage(createMessage({ 
+        scopeId: utils.generateGUID(),
         messageStatusCode: 0, Id: null, data: expectedDecryptedServerText1, 
         recipientHost, recipientPort, metadata, token, senderHost, senderPort 
       }));
       serverMessageBus.publishMessage(createMessage({ 
+        scopeId: utils.generateGUID(),
         messageStatusCode: 0, Id: null, data: expectedDecryptedServerText2, 
         recipientHost, recipientPort, metadata, token, senderHost, senderPort 
       }));
@@ -56,10 +60,12 @@ describe("when asking a client messagebus to publish multiple requests", functio
 
     // Act
     clientMessageBus.publishMessage(createMessage({ 
+      scopeId: utils.generateGUID(),
       messageStatusCode: 2, Id: null, data: expectedDecryptedClientText1,
       recipientHost, recipientPort, metadata, token, senderHost, senderPort 
     }));
     clientMessageBus.publishMessage(createMessage({ 
+      scopeId: utils.generateGUID(),
       messageStatusCode: 2, Id: null, data: expectedDecryptedClientText2,
       recipientHost, recipientPort, metadata, token, senderHost, senderPort 
     }));

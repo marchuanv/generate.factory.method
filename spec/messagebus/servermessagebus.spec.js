@@ -1,12 +1,13 @@
 describe("when asking the server messagebus to subscribe to request messages and publish a response", function() {
 
   let token = null;
+  const scopeId = 'servermessagebustest';
 
   beforeAll(() => {
     const userId = 'servermessagebus';
     const secret = 'servermessagebus1234';
     const { createUserSessions } = require('../../lib/factory/usersessions.factory.js');
-    const { userSessions } = createUserSessions({});
+    const { userSessions } = createUserSessions({ scopeId });
     const { userSecurity } = userSessions.ensureSession({ userId });
     userSecurity.register({ secret });
     ({ token } = userSecurity.authenticate({ secret }));
@@ -21,7 +22,6 @@ describe("when asking the server messagebus to subscribe to request messages and
     const recipientHost = 'localhost';
     const recipientPort = 3000;
     const timeout = 15000;
-    const scopeId = 'servermessagebustest';
     const metadata = { path };
     let expectedDecryptedClientText = 'Hello From Client';
     let expectedDecryptedServerText = 'Hello From Server';
@@ -31,6 +31,7 @@ describe("when asking the server messagebus to subscribe to request messages and
     const { createClientMessageBus } = require('../../lib/factory/clientmessagebus.factory.js');
     const { clientMessageBus } = createClientMessageBus({ scopeId, timeout, senderHost, senderPort });
     clientMessageBus.publishMessage(createMessage({ 
+      scopeId: utils.generateGUID(),
       messageStatusCode: 2, Id: null, data: expectedDecryptedClientText,
       recipientHost, recipientPort, metadata, token, senderHost, senderPort 
     }));
@@ -42,6 +43,7 @@ describe("when asking the server messagebus to subscribe to request messages and
     serverMessageBus.subscribeToMessages({ callback: ({ message }) => {
       requestMessage = message;
       serverMessageBus.publishMessage(createMessage({ 
+        scopeId: utils.generateGUID(),
         messageStatusCode: 0, Id: null, data: expectedDecryptedServerText,
         recipientHost, recipientPort, metadata, token, senderHost, senderPort 
       }));
