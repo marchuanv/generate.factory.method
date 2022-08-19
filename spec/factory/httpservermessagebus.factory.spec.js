@@ -5,7 +5,7 @@ describe('when asking the HttpServerMessageBus factory to create an instance', f
     const {scopeId,senderHost,senderPort,timeout} = require('C:\\component\\spec\\factory\\httpservermessagebus.factory.spec.variables.json');
 
     // Act
-    const {httpServerMessageBus} = createHttpServerMessageBus({scopeId,timeout,senderHost,senderPort});
+    const {httpServerMessageBus} = createHttpServerMessageBus({scopeId});
     // Assert
     expect(httpServerMessageBus).not.toBeNull();
   });
