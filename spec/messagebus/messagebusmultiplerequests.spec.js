@@ -71,7 +71,7 @@ describe("when asking a client messagebus to publish multiple requests", functio
     }));
 
     // Assert
-    clientMessageBus.subscribeToMessages({ callback: ({ message }) => {
+    clientMessageBus.subscribe({ callback: ({ message }) => {
       const responseMessage = message;
       expect(responseMessage).not.toBeUndefined();
       expect(responseMessage).not.toBeNull();
@@ -95,7 +95,7 @@ describe("when asking a client messagebus to publish multiple requests", functio
         expect(senderPort).toEqual(3000);
       }
     }});
-    clientMessageBus.subscribeToMessages({ callback: ({ message }) => {
+    clientMessageBus.subscribe({ callback: ({ message }) => {
       const responseMessage = message;
       expect(responseMessage).not.toBeUndefined();
       expect(responseMessage).not.toBeNull();

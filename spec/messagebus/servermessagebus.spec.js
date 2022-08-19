@@ -1,6 +1,6 @@
 const utils = require('utils');
 
-describe("when asking the server messagebus to subscribe to request messages and publish a response", function() {
+fdescribe("when asking the server messagebus to subscribe to request messages and publish a response", function() {
 
   let token = null;
   const scopeId = 'servermessagebustest';
@@ -32,7 +32,7 @@ describe("when asking the server messagebus to subscribe to request messages and
 
     const { createClientMessageBus } = require('../../lib/factory/clientmessagebus.factory.js');
     const { clientMessageBus } = createClientMessageBus({ scopeId, timeout, senderHost, senderPort });
-    clientMessageBus.publishMessage(createMessage({ 
+    clientMessageBus.publish(createMessage({ 
       scopeId: utils.generateGUID(),
       messageStatusCode: 2, Id: null, data: expectedDecryptedClientText,
       recipientHost, recipientPort, metadata, token, senderHost, senderPort 
@@ -42,9 +42,9 @@ describe("when asking the server messagebus to subscribe to request messages and
     const { serverMessageBus } = createServerMessageBus({ scopeId, timeout, senderHost, senderPort });
 
     // Act
-    serverMessageBus.subscribeToMessages({ callback: ({ message }) => {
+    serverMessageBus.subscribe({ callback: ({ message }) => {
       requestMessage = message;
-      serverMessageBus.publishMessage(createMessage({ 
+      serverMessageBus.publish(createMessage({ 
         scopeId: utils.generateGUID(),
         messageStatusCode: 0, Id: null, data: expectedDecryptedServerText,
         recipientHost, recipientPort, metadata, token, senderHost, senderPort 
@@ -52,7 +52,7 @@ describe("when asking the server messagebus to subscribe to request messages and
     }})
 
     // Assert
-    clientMessageBus.subscribeToMessages({ callback: ({ message }) => {
+    clientMessageBus.subscribe({ callback: ({ message }) => {
       const responseMessage = message;
       expect(responseMessage).not.toBeUndefined();
       expect(responseMessage).not.toBeNull();
