@@ -1,9 +1,13 @@
 const utils = require('utils');
 
 fdescribe("when asking a client messagebus to publish a request", function() {
-
-  let token = null;
-  const scopeId = 'clientmessagebustest';
+  
+  const scopeId = "clientmessagebustest";
+  const timeout = 15000;
+  const senderHost = 'localhost';
+  const senderPort = 3000;
+  const recipientHost = 'localhost';
+  const recipientPort = 3000;
 
   beforeAll(() => {
     const userId = 'clientmessagebus';
@@ -19,11 +23,6 @@ fdescribe("when asking a client messagebus to publish a request", function() {
     
     // Arrange
     const path = '/clientmessagebustest';
-    const senderHost = 'localhost';
-    const senderPort = 3000;
-    const recipientHost = 'localhost';
-    const recipientPort = 3000;
-    const timeout = 15000;
     
     const metadata = { path };
     let expectedDecryptedClientText = 'Hello From Client';
@@ -35,12 +34,12 @@ fdescribe("when asking a client messagebus to publish a request", function() {
       //Simulate a Server
       const { createServerMessageBus } = require('../../lib/factory/servermessagebus.factory.js');
       const { serverMessageBus } = createServerMessageBus({ scopeId, timeout, senderHost, senderPort });
-      serverMessageBus.publishMessage(createMessage({ 
+      serverMessageBus.publish(createMessage({ 
         scopeId: utils.generateGUID(),
         messageStatusCode: 0, Id: null, data: expectedDecryptedServerText, 
         recipientHost, recipientPort, metadata, token, senderHost, senderPort 
       }));
-      serverMessageBus.subscribeToMessages({ callback: ({ message }) => {
+      serverMessageBus.subscribe({ callback: ({ message }) => {
         requestMessage = message;
       }});
     }
@@ -49,14 +48,14 @@ fdescribe("when asking a client messagebus to publish a request", function() {
     const { clientMessageBus } = createClientMessageBus({ scopeId, timeout, senderHost, senderPort });
 
     // Act
-    clientMessageBus.publishMessage(createMessage({ 
+    clientMessageBus.publish(createMessage({ 
       scopeId: utils.generateGUID(),
       messageStatusCode: 2, Id: null, data: expectedDecryptedClientText,
       recipientHost, recipientPort, metadata, token, senderHost, senderPort 
     }));
 
     // Assert
-    clientMessageBus.subscribeToMessages({ callback: ({ message }) => {
+    clientMessageBus.subscribe({ callback: ({ message }) => {
       const responseMessage = message;
       expect(responseMessage).not.toBeUndefined();
       expect(responseMessage).not.toBeNull();

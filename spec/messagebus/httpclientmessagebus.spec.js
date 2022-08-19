@@ -2,7 +2,12 @@ const utils = require('utils');
 
 describe("when an http client messagebus sends an http request message", function() {
     let token = null;
-    const  scopeId = "httpclientmessagebustest";
+    const scopeId = "httpclientmessagebustest";
+    const timeout = 15000;
+    const senderHost = 'localhost';
+    const senderPort = 3000;
+    const recipientHost = 'localhost';
+    const recipientPort = 3000;
 
     beforeAll(() => {
         const userId = 'httpclientmessagebus';
@@ -21,20 +26,20 @@ describe("when an http client messagebus sends an http request message", functio
         const { createHttpServerMessageBus } = require('../../lib/factory/httpservermessagebus.factory.js');
         const { createHttpRequestMessage } = require('../../lib/factory/httprequestmessage.factory.js');
         const { createHttpResponseMessage } = require('../../lib/factory/httpresponsemessage.factory.js');
-        const { httpClientMessageBus } = createHttpClientMessageBus({ scopeId, timeout: 15000, senderHost: 'localhost', senderPort: 3000 });
-        const { httpServerMessageBus } = createHttpServerMessageBus({ scopeId, timeout: 15000, senderHost: 'localhost', senderPort: 3000 });
+        const { httpClientMessageBus } = createHttpClientMessageBus({ scopeId, timeout });
+        const { httpServerMessageBus } = createHttpServerMessageBus({ scopeId, timeout, senderHost, senderPort });
 
         httpServerMessageBus.publishHttpResponseMessage(createHttpResponseMessage({
             scopeId: utils.generateGUID(),
             messageStatusCode: 0, //success
             Id: null,
             data: 'Hello From Server',
-            recipientHost: 'localhost',
-            recipientPort: 3000,
+            recipientHost,
+            recipientPort,
             metadata: { path: '/httpclientmessagebustest' },
             token,
-            senderHost: 'localhost',
-            senderPort: 3000
+            senderHost,
+            senderPort
         }));
 
         // Act
@@ -43,12 +48,12 @@ describe("when an http client messagebus sends an http request message", functio
             messageStatusCode: 2, //pending
             Id: null,
             data: 'Hello From Client',
-            recipientHost: 'localhost',
-            recipientPort: 3000,
+            recipientHost,
+            recipientPort,
             metadata: { path: '/httpclientmessagebustest' },
             token,
-            senderHost: 'localhost',
-            senderPort: 3000
+            senderHost,
+            senderPort
         }));
 
         // Assert
