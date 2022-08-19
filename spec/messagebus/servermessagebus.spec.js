@@ -1,9 +1,11 @@
 const utils = require('utils');
-
-fdescribe("when asking the server messagebus to subscribe to request messages and publish a response", function() {
+describe("when asking the server messagebus to subscribe to request messages and publish a response", function() {
 
   let token = null;
   const scopeId = 'servermessagebustest';
+  const timeout = 15000;
+  const senderHost = 'localhost';
+  const senderPort = 3000;
   
   beforeAll(() => {
     const userId = 'servermessagebus';
@@ -13,17 +15,17 @@ fdescribe("when asking the server messagebus to subscribe to request messages an
     const { userSecurity } = userSessions.ensureSession({ userId });
     userSecurity.register({ secret });
     ({ token } = userSecurity.authenticate({ secret }));
+    const { createHttpServerMessageBus } = require('../../lib/factory/httpservermessagebus.factory.js');
+    createHttpServerMessageBus({ scopeId, timeout, senderHost, senderPort });
   });
 
   it("it should succeed without any errors", (done) => {
     
     // Arrange
     const path = '/servermessagebustest';
-    const senderHost = 'localhost';
-    const senderPort = 3000;
+  
     const recipientHost = 'localhost';
     const recipientPort = 3000;
-    const timeout = 15000;
     const metadata = { path };
     let expectedDecryptedClientText = 'Hello From Client';
     let expectedDecryptedServerText = 'Hello From Server';

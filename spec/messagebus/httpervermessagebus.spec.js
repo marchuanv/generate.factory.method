@@ -2,7 +2,10 @@ const utils = require('utils');
 describe("when an http server messagebus receives an http request message", function() {
 
     let token = null;
-    const  scopeId = "httpservermessagebustest";
+    const scopeId = "httpservermessagebustest";
+    const senderHost = 'localhost';
+    const senderPort = 3000;
+    const timeout = 15000;
 
     beforeAll(() => {
         const userId = 'httpervermessagebus';
@@ -12,6 +15,8 @@ describe("when an http server messagebus receives an http request message", func
         const { userSecurity } = userSessions.ensureSession({ userId });
         userSecurity.register({ secret });
         ({ token } = userSecurity.authenticate({ secret }));
+        const { createHttpServerMessageBus } = require('../../lib/factory/httpservermessagebus.factory.js');
+        createHttpServerMessageBus({ scopeId, timeout, senderHost, senderPort });
     });
 
     it("it should send an http response message", (done) => {
@@ -21,8 +26,8 @@ describe("when an http server messagebus receives an http request message", func
         const { createHttpServerMessageBus } = require('../../lib/factory/httpservermessagebus.factory.js');
         const { createHttpRequestMessage } = require('../../lib/factory/httprequestmessage.factory.js');
         const { createHttpResponseMessage } = require('../../lib/factory/httpresponsemessage.factory.js');
-        const { httpClientMessageBus } = createHttpClientMessageBus({ scopeId, timeout: 15000, senderHost: 'localhost', senderPort: 3000 });
-        const { httpServerMessageBus } = createHttpServerMessageBus({ scopeId, timeout: 15000, senderHost: 'localhost', senderPort: 3000 });
+        const { httpClientMessageBus } = createHttpClientMessageBus({ scopeId, timeout, senderHost, senderPort });
+        const { httpServerMessageBus } = createHttpServerMessageBus({ scopeId, timeout, senderHost, senderPort });
 
         httpClientMessageBus.publishHttpRequestMessage(createHttpRequestMessage({
             scopeId: utils.generateGUID(),
@@ -33,8 +38,8 @@ describe("when an http server messagebus receives an http request message", func
             recipientPort: 3000,
             metadata: { path: '/httpclientmessagebustest' },
             token,
-            senderHost: 'localhost',
-            senderPort: 3000
+            senderHost,
+            senderPort
         }));
 
         // Act
@@ -48,8 +53,8 @@ describe("when an http server messagebus receives an http request message", func
                 recipientPort: 3000,
                 metadata: { path: '/httpservermessagebustest' },
                 token,
-                senderHost: 'localhost',
-                senderPort: 3000
+                senderHost,
+                senderPort
             }));
         }});
     

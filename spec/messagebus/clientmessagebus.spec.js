@@ -17,6 +17,8 @@ fdescribe("when asking a client messagebus to publish a request", function() {
     const { userSecurity } = userSessions.ensureSession({ userId });
     userSecurity.register({ secret });
     ({ token } = userSecurity.authenticate({ secret }));
+    const { createHttpServerMessageBus } = require('../../lib/factory/httpservermessagebus.factory.js');
+    createHttpServerMessageBus({ scopeId, timeout, senderHost, senderPort });
   });
 
   it("it should receive a response message", (done) => {

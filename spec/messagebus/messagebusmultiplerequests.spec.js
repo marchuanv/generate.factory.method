@@ -1,9 +1,11 @@
 const utils = require('utils');
-
 describe("when asking a client messagebus to publish multiple requests", function() {
 
   let token = null;
   const scopeId  = 'messagebusmultiplerequests';
+  const timeout = 15000;
+  const senderHost = 'localhost';
+  const senderPort = 3000;
   
   beforeAll(() => {
     const userId = 'clientmessagebus';
@@ -13,17 +15,16 @@ describe("when asking a client messagebus to publish multiple requests", functio
     const { userSecurity } = userSessions.ensureSession({ userId });
     userSecurity.register({ secret });
     ({ token } = userSecurity.authenticate({ secret }));
+    const { createHttpServerMessageBus } = require('../../lib/factory/httpservermessagebus.factory.js');
+    createHttpServerMessageBus({ scopeId, timeout, senderHost, senderPort });
   });
 
   it("it should handle the responses for each request", (done) => {
     
     // Arrange
     const path = '/messagebusmultiplerequests';
-    const senderHost = 'localhost';
-    const senderPort = 3000;
     const recipientHost = 'localhost';
     const recipientPort = 3000;
-    const timeout = 15000;
     const metadata = { path };
     let expectedDecryptedClientText1 = 'Hello From Client First';
     let expectedDecryptedClientText2 = 'Hello From Client Second';
