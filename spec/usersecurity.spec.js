@@ -6,10 +6,11 @@ describe("when encrypting data given a public key", function() {
     let userSecurity;
     let token = null;
     const userId = 'encryptiontest';
+    const scopeId = 'usersecuritytest';
 
     beforeAll(() => {
         const secret = 'encryptiontest1234';
-        ({ userSecurity } = createUserSecurity({ userId }));
+        ({ userSecurity } = createUserSecurity({ scopeId, userId }));
         userSecurity.register({ secret });
         userSecurity.authenticate({ secret });
         ({ token } = userSecurity.authenticate({ secret }));

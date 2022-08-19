@@ -1,6 +1,0 @@
-{
-    "scopeId": "httpresponsemessagefactory",
-    "senderHost": "localhost",
-    "senderPort": 3000,
-    "timeout": 1500
-}

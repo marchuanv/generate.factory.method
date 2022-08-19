@@ -1,6 +1,6 @@
 const utils = require('utils');
 
-describe("when asking a client messagebus to publish a request", function() {
+fdescribe("when asking a client messagebus to publish a request", function() {
 
   let token = null;
   const scopeId = 'clientmessagebustest';
