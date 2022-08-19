@@ -1,5 +1,5 @@
 const utils = require('utils');
-describe("when asking the server messagebus to subscribe to request messages and publish a response", function() {
+fdescribe("when asking the server messagebus to subscribe to request messages and publish a response", function() {
 
   let token = null;
   const scopeId = 'servermessagebustest';
@@ -17,6 +17,8 @@ describe("when asking the server messagebus to subscribe to request messages and
     ({ token } = userSecurity.authenticate({ secret }));
     const { createHttpServerMessageBus } = require('../../lib/factory/httpservermessagebus.factory.js');
     createHttpServerMessageBus({ scopeId, timeout, senderHost, senderPort });
+    const { createHttpClientMessageBus } = require('../../lib/factory/httpclientmessagebus.factory.js');
+    createHttpClientMessageBus({ scopeId, timeout });
   });
 
   it("it should succeed without any errors", (done) => {

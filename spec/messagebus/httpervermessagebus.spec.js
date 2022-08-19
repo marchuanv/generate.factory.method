@@ -15,8 +15,6 @@ describe("when an http server messagebus receives an http request message", func
         const { userSecurity } = userSessions.ensureSession({ userId });
         userSecurity.register({ secret });
         ({ token } = userSecurity.authenticate({ secret }));
-        const { createHttpServerMessageBus } = require('../../lib/factory/httpservermessagebus.factory.js');
-        createHttpServerMessageBus({ scopeId, timeout, senderHost, senderPort });
     });
 
     it("it should send an http response message", (done) => {
