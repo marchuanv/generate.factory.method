@@ -1,4 +1,6 @@
 {
     "scopeId": "clientmessagebusfactory",
-    "timeout": 15000
+    "timeout": 15000,
+    "httpClientRequestMessageBus": null,
+    "httpClientResponseMessageBus": null
 }

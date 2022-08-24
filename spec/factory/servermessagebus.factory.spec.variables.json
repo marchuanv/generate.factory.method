@@ -2,5 +2,7 @@
     "scopeId": "servermessagebusfactory",
     "senderHost": "localhost",
     "senderPort": 3000,
-    "timeout": 15000
+    "timeout": 15000,
+    "httpServerResponseMessageBus": null,
+    "httpServerRequestsMessageBus": null
 }

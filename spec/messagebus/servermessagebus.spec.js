@@ -18,8 +18,10 @@ fdescribe("when asking the server messagebus to subscribe to request messages an
     createHttpServerMessageBus({ scopeId, timeout, senderHost, senderPort });
     const { createHttpServerMessageBusManager } = require('../../lib/factory/httpservermessagebusmanager.factory.js');
     const { createHttpClientMessageBus } = require('../../lib/factory/httpclientmessagebus.factory.js');
+    const { createHttpClientMessageBusManager } = require('../../lib/factory/httpclientmessagebusmanager.factory.js');
     createHttpClientMessageBus({ scopeId, timeout });
     createHttpServerMessageBusManager({ scopeId });
+    createHttpClientMessageBusManager({ scopeId });
   });
 
   it("it should succeed without any errors", (done) => {

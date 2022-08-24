@@ -18,10 +18,12 @@ fdescribe("when asking a client messagebus to publish a request", function() {
     ({ token } = userSecurity.authenticate({ secret }));
     const { createHttpServerMessageBus } = require('../../lib/factory/httpservermessagebus.factory.js');
     const { createHttpServerMessageBusManager } = require('../../lib/factory/httpservermessagebusmanager.factory.js');
+    const { createHttpClientMessageBusManager } = require('../../lib/factory/httpclientmessagebusmanager.factory.js');
     createHttpServerMessageBus({ scopeId, timeout, senderHost, senderPort });
     const { createHttpClientMessageBus } = require('../../lib/factory/httpclientmessagebus.factory.js');
     createHttpClientMessageBus({ scopeId, timeout });
     createHttpServerMessageBusManager({ scopeId });
+    createHttpClientMessageBusManager({ scopeId });
   });
 
   it("it should receive a response message", (done) => {
