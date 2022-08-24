@@ -16,8 +16,10 @@ fdescribe("when asking the server messagebus to subscribe to request messages an
     ({ token } = userSecurity.authenticate({ secret }));
     const { createHttpServerMessageBus } = require('../../lib/factory/httpservermessagebus.factory.js');
     createHttpServerMessageBus({ scopeId, timeout, senderHost, senderPort });
+    const { createHttpServerMessageBusManager } = require('../../lib/factory/httpservermessagebusmanager.factory.js');
     const { createHttpClientMessageBus } = require('../../lib/factory/httpclientmessagebus.factory.js');
     createHttpClientMessageBus({ scopeId, timeout });
+    createHttpServerMessageBusManager({ scopeId });
   });
 
   it("it should succeed without any errors", (done) => {

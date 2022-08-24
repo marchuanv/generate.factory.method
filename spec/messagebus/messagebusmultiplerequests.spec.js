@@ -17,8 +17,10 @@ describe("when asking a client messagebus to publish multiple requests", functio
     ({ token } = userSecurity.authenticate({ secret }));
     const { createHttpServerMessageBus } = require('../../lib/factory/httpservermessagebus.factory.js');
     createHttpServerMessageBus({ scopeId, timeout, senderHost, senderPort });
+    const { createHttpServerMessageBusManager } = require('../../lib/factory/httpservermessagebusmanager.factory.js');
     const { createHttpClientMessageBus } = require('../../lib/factory/httpclientmessagebus.factory.js');
     createHttpClientMessageBus({ scopeId, timeout });
+    createHttpServerMessageBusManager({ scopeId });
   });
 
   it("it should handle the responses for each request", (done) => {

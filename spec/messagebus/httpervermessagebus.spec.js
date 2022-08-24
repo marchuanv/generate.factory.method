@@ -11,10 +11,12 @@ describe("when an http server messagebus receives an http request message", func
         const userId = 'httpervermessagebus';
         const secret = 'httpervermessagebus1234';
         const { createUserSessions } = require('../../lib/factory/usersessions.factory.js');
+        const { createHttpServerMessageBusManager } = require('../../lib/factory/httpservermessagebusmanager.factory.js');
         const { userSessions } = createUserSessions({ scopeId });
         const { userSecurity } = userSessions.ensureSession({ userId });
         userSecurity.register({ secret });
         ({ token } = userSecurity.authenticate({ secret }));
+        createHttpServerMessageBusManager({ scopeId });
     });
 
     it("it should send an http response message", (done) => {
