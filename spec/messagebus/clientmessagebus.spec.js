@@ -34,8 +34,8 @@ describe("when asking a client messagebus to publish a request", function() {
     
     // Arrange
     const metadata = { path:  `/${scopeId}` };
-    let expectedDecryptedClientText = 'ClientTest: Hello From Client';
-    let expectedDecryptedServerText = 'ClientTest: Hello From Server';
+    const expectedDecryptedClientText = `${scopeId}: Hello From Client`;
+    const expectedDecryptedServerText = `${scopeId}: Hello From Server`;
     let requestMessage = null;
 
     { 
