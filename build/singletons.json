@@ -1,4 +1,13 @@
 [
     { "typeName": "MessageQueue", "singleton": true },
-    { "typeName": "Logger", "singleton": true }
+    { "typeName": "Logger", "singleton": true },
+    { "typeName": "HttpClientStartedMessageQueueBinding", "singleton": true },
+    { "typeName": "HttpClientStartMessageQueueBinding", "singleton": true },
+    { "typeName": "HttpClientStopMessageQueueBinding", "singleton": true },
+    { "typeName": "HttpClientStoppedMessageQueueBinding", "singleton": true },
+    { "typeName": "HttpServerStartedMessageQueueBinding", "singleton": true },
+    { "typeName": "HttpServerStartMessageQueueBinding", "singleton": true },
+    { "typeName": "HttpServerStopMessageQueueBinding", "singleton": true },
+    { "typeName": "HttpServerStoppedMessageQueueBinding", "singleton": true }
+
 ]
