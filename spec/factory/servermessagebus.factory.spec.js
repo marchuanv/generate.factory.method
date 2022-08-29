@@ -2,10 +2,10 @@ const { createServerMessageBus } = require('C:\\component\\lib\\factory\\serverm
 describe('when asking the ServerMessageBus factory to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
-    const {scopeId,senderHost,senderPort,timeout,httpServerRequestsMessageBus} = require('C:\\component\\spec\\factory\\servermessagebus.factory.spec.variables.json');
+    const {scopeId,senderHost,senderPort,timeout} = require('C:\\component\\spec\\factory\\servermessagebus.factory.spec.variables.json');
 
     // Act
-    const {serverMessageBus} = createServerMessageBus({scopeId,httpServerRequestsMessageBus});
+    const {serverMessageBus} = createServerMessageBus({scopeId});
     // Assert
     expect(serverMessageBus).not.toBeNull();
   });
