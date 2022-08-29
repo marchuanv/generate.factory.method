@@ -184,12 +184,14 @@ for(const info of getDependencyTree()) {
         .replace(/\[VariableNames\]/g, Object.keys(specVariableValues).join(','))
         .replace(/\[SpecVariablesPath\]/g, info.specVariablesPath.replace(/\\/g,'\\\\')));
 
+    const SimpleArgsFiltered = simpleArgs.filter(sa => sa !== 'scopeId');
     const factory = factoryTemplate
         .replace(/\[Args\]/g, info.children.map(x => x.variableName) )
         .replace(/\[ScriptPath\]/g, info.scriptPath.replace(/\\/g,'\\\\'))
         .replace(/\[TypeName\]/g, info.typeName)
         .replace(/\[FactoryCalls\]/g, factoryCalls.join('\r\n'))
         .replace(/\[SimpleArgs\]/g, simpleArgs)
+        .replace(/\[SimpleArgsFiltered\]/g, SimpleArgsFiltered)
         .replace(/\[TypeVariableName\]/g, info.variableName)
         .replace(/\[FactoryRequireScripts\]/g, factoryRequireScripts.join('\r\n'))
         .replace(/\[ReturnVariables\]/g, refArgs.concat([info.variableName]))

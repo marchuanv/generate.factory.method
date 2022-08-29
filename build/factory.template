@@ -10,7 +10,7 @@ function create[TypeName]({[SimpleArgs]}) {
     let container = factory.getContainer({ scopeId, type: [TypeName], variableName:'[TypeVariableName]', singleton: [IsSingleton] });
     if (!container) {
         container = factory.createContainer({ scopeId, type: [TypeName], variableName:'[TypeVariableName]', singleton: [IsSingleton] });
-        container.config({[SimpleArgs]});
+        container.config({[SimpleArgsFiltered]});
             [FactoryCalls]
     }
     container.ensureInstance();
