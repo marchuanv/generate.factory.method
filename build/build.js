@@ -7,7 +7,7 @@ const libFactoryDir = path.join(__dirname, '../lib', 'factory');
 const rootScripts = readdirSync(libDir, { withFileTypes: true }).filter(dirent => dirent.isFile() && dirent.name.indexOf('.factory.js') === -1).map(file => path.join(libDir, file.name));
 const httpScripts = readdirSync(path.join(libDir, 'http'), { withFileTypes: true }).filter(dirent => dirent.isFile() && dirent.name.indexOf('.factory.js') === -1).map(file => path.join(libDir, 'http', file.name));
 const websocketScripts = readdirSync(path.join(libDir, 'websocket'), { withFileTypes: true }).filter(dirent => dirent.isFile() && dirent.name.indexOf('.factory.js') === -1).map(file => path.join(libDir, 'websocket', file.name));
-const scripts = rootScripts.concat(httpScripts.concat(websocketScripts));
+const scripts = rootScripts.concat(httpScripts.concat(websocketScripts)).filter(scPath => scPath.indexOf('factory.js') === -1);
 const factoryTemplate = readFileSync(path.join(__dirname,'factory.template'),'utf8');
 const factorySpecTemplate = readFileSync(path.join(__dirname,'factory.spec.template'),'utf8');
 const factoryRequireTemplate = readFileSync(path.join(__dirname,'factory.require.template'),'utf8');
