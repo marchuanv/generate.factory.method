@@ -8,6 +8,7 @@
     { "typeName": "HttpServerStartedMessageQueueBinding", "singleton": true },
     { "typeName": "HttpServerStartMessageQueueBinding", "singleton": true },
     { "typeName": "HttpServerStopMessageQueueBinding", "singleton": true },
-    { "typeName": "HttpServerStoppedMessageQueueBinding", "singleton": true }
+    { "typeName": "HttpServerStoppedMessageQueueBinding", "singleton": true },
+    { "typeName": "UserSessions", "singleton": true }
 
 ]
