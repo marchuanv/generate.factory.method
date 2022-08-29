@@ -18,8 +18,8 @@ describe("when asking a client messagebus to publish a request", function() {
   const { createClientMessageBus } = require('../../lib/factory/clientmessagebus.factory.js');
 
   beforeAll(() => {
-    const userId = 'clientmessagebus';
-    const secret = 'clientmessagebus1234';
+    const userId = scopeId;
+    const secret = `${scopeId}1234`;
     const { userSessions } = createUserSessions({ scopeId });
     const { userSecurity } = userSessions.ensureSession({ userId });
     userSecurity.register({ secret });
