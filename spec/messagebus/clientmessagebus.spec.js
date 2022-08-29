@@ -32,8 +32,8 @@ fdescribe("when asking a client messagebus to publish a request", function() {
     const path = '/clientmessagebustest';
     
     const metadata = { path };
-    let expectedDecryptedClientText = 'Hello From Client';
-    let expectedDecryptedServerText = 'Hello From Server';
+    let expectedDecryptedClientText = 'ClientTest: Hello From Client';
+    let expectedDecryptedServerText = 'ClientTest: Hello From Server';
     let requestMessage = null;
     const { createMessage } = require('../../lib/factory/message.factory');
 

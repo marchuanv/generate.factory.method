@@ -1,5 +1,5 @@
 const utils = require('utils');
-describe("when asking the server messagebus to subscribe to request messages and publish a response", function() {
+fdescribe("when asking the server messagebus to subscribe to request messages and publish a response", function() {
   let token = null;
   const scopeId = 'servermessagebustest';
   const timeout = 15000;
@@ -14,11 +14,13 @@ describe("when asking the server messagebus to subscribe to request messages and
     const { userSecurity } = userSessions.ensureSession({ userId });
     userSecurity.register({ secret });
     ({ token } = userSecurity.authenticate({ secret }));
+    
     const { createHttpServerMessageBus } = require('../../lib/factory/httpservermessagebus.factory.js');
-    createHttpServerMessageBus({ scopeId, timeout, senderHost, senderPort });
     const { createHttpServerMessageBusManager } = require('../../lib/factory/httpservermessagebusmanager.factory.js');
     const { createHttpClientMessageBus } = require('../../lib/factory/httpclientmessagebus.factory.js');
     const { createHttpClientMessageBusManager } = require('../../lib/factory/httpclientmessagebusmanager.factory.js');
+    
+    createHttpServerMessageBus({ scopeId, timeout, senderHost, senderPort });
     createHttpClientMessageBus({ scopeId, timeout });
     createHttpServerMessageBusManager({ scopeId });
     createHttpClientMessageBusManager({ scopeId });
@@ -32,8 +34,8 @@ describe("when asking the server messagebus to subscribe to request messages and
     const recipientHost = 'localhost';
     const recipientPort = 3000;
     const metadata = { path };
-    let expectedDecryptedClientText = 'Hello From Client';
-    let expectedDecryptedServerText = 'Hello From Server';
+    let expectedDecryptedClientText = 'ServerTest: Hello From Client';
+    let expectedDecryptedServerText = 'ServerTest: Hello From Server';
     let requestMessage = null;
     const { createMessage } = require('../../lib/factory/message.factory');
 
