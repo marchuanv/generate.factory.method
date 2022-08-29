@@ -9,6 +9,7 @@ fdescribe("when an http server response messagebus publishes and http response m
     const recipientHost = 'localhost';
     const recipientPort = 3000;
     
+    const { createUserSessions } = require('../../lib/factory/usersessions.factory.js');
     const { createHttpServerMessageBus } = require('../../lib/factory/httpservermessagebus.factory.js');
     const { createHttpClientMessageBus } = require('../../lib/factory/httpclientmessagebus.factory.js');
     const { createHttpServerMessageBusManager } = require('../../lib/factory/httpservermessagebusmanager.factory.js');
@@ -22,7 +23,6 @@ fdescribe("when an http server response messagebus publishes and http response m
     beforeAll(() => {
         const userId = scopeId;
         const secret = `${scopeId}1234`;
-        const { createUserSessions } = require('../../lib/factory/usersessions.factory.js');
         const { userSessions } = createUserSessions({ scopeId });
         const { userSecurity } = userSessions.ensureSession({ userId });
         userSecurity.register({ secret });
