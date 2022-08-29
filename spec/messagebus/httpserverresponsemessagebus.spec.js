@@ -33,7 +33,7 @@ fdescribe("when an http server response messagebus publishes and http response m
         createHttpClientMessageBusManager({ scopeId });
     });
 
-    it("it should receive an http client response message", (done) => {
+    it("the http client response messagebus should receive an http response message", (done) => {
         
         // Arrange
         const metadata = { path: `/${scopeId}` };

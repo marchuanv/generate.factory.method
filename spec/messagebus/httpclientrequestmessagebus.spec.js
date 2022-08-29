@@ -1,5 +1,5 @@
 const utils = require('utils');
-describe("when an http client request messagebus publish an http request message", function() {
+describe("when an http client request messagebus publishes an http request message", function() {
     
     let token = null;
     const scopeId = "httpclientrequestmessagebustest";
@@ -33,7 +33,7 @@ describe("when an http client request messagebus publish an http request message
         createHttpClientMessageBusManager({ scopeId });
     });
 
-    it("it should handle the request and subscribe to the response", (done) => {
+    it("the http client response messagebus should receive an http response message", (done) => {
         
         // Arrange
         const metadata = { path: `/${scopeId}` };
