@@ -1,5 +1,5 @@
 const utils = require('utils');
-fdescribe("when an http server response messagebus publishes and http response message", function() {
+describe("when an http server response messagebus publishes and http response message", function() {
 
     let token = null;
     const scopeId = "httpserverresponsemessagebustest";
@@ -75,7 +75,7 @@ fdescribe("when an http server response messagebus publishes and http response m
             expect(httpResponseMessage).not.toBeNull();
             expect(httpResponseMessage).not.toBeUndefined();
             const { text } = httpResponseMessage.getDecryptedContent();
-            expect(text).toEqual(expectedDecryptedClientText);
+            expect(text).toEqual(expectedDecryptedServerText);
             setTimeout(done, 1500);
         }});
 

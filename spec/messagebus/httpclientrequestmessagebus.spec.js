@@ -75,7 +75,7 @@ describe("when an http client request messagebus publishes an http request messa
             expect(httpResponseMessage).not.toBeNull();
             expect(httpResponseMessage).not.toBeUndefined();
             const { text } = httpResponseMessage.getDecryptedContent();
-            expect(text).toEqual(expectedDecryptedClientText);
+            expect(text).toEqual(expectedDecryptedServerText);
             setTimeout(done, 1500);
         }});
 
