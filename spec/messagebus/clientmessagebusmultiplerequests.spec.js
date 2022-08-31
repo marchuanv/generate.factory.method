@@ -1,77 +1,77 @@
 const utils = require('utils');
-describe("when asking a client messagebus to publish multiple requests", function() {
+fdescribe("when asking a client messagebus to publish more than one request", function() {
 
   let token = null;
   const scopeId  = 'messagebusmultiplerequests';
   const timeout = 15000;
   const senderHost = 'localhost';
   const senderPort = 3000;
-  
+  const recipientHost = 'localhost';
+  const recipientPort = 3000;
+
+  const { createMessage } = require('../../lib/factory/message.factory');
+  const { createHttpServerMessageBusManager } = require('../../lib/factory/httpservermessagebusmanager.factory.js');
+  const { createHttpClientMessageBusManager } = require('../../lib/factory/httpclientmessagebusmanager.factory.js');
+  const { createHttpClientMessageBus } = require('../../lib/factory/httpclientmessagebus.factory.js');
+  const { createUserSessions } = require('../../lib/factory/usersessions.factory.js');
+  const { createHttpServerMessageBus } = require('../../lib/factory/httpservermessagebus.factory.js');
+  const { createServerMessageBus } = require('../../lib/factory/servermessagebus.factory.js');
+  const { createClientMessageBus } = require('../../lib/factory/clientmessagebus.factory.js');
+
   beforeAll(() => {
-    const userId = 'clientmessagebus';
-    const secret = 'clientmessagebus1234';
-    const { createUserSessions } = require('../../lib/factory/usersessions.factory.js');
+    const userId = scopeId;
+    const secret = `${scopeId}1234`;
     const { userSessions } = createUserSessions({ scopeId });
     const { userSecurity } = userSessions.ensureSession({ userId });
     userSecurity.register({ secret });
     ({ token } = userSecurity.authenticate({ secret }));
-    const { createHttpServerMessageBus } = require('../../lib/factory/httpservermessagebus.factory.js');
     createHttpServerMessageBus({ scopeId, timeout, senderHost, senderPort });
-    const { createHttpServerMessageBusManager } = require('../../lib/factory/httpservermessagebusmanager.factory.js');
-    const { createHttpClientMessageBusManager } = require('../../lib/factory/httpclientmessagebusmanager.factory.js');
-    const { createHttpClientMessageBus } = require('../../lib/factory/httpclientmessagebus.factory.js');
     createHttpClientMessageBus({ scopeId, timeout });
     createHttpServerMessageBusManager({ scopeId });
     createHttpClientMessageBusManager({ scopeId });
   });
 
-  it("it should handle the responses for each request", (done) => {
+  it("it should respond to every request", (done) => {
     
     // Arrange
-    const path = '/messagebusmultiplerequests';
-    const recipientHost = 'localhost';
-    const recipientPort = 3000;
-    const metadata = { path };
-    let expectedDecryptedClientText1 = 'Hello From Client First';
-    let expectedDecryptedClientText2 = 'Hello From Client Second';
-    let expectedDecryptedServerText1 = 'Hello From Server First';
-    let expectedDecryptedServerText2 = 'Hello From Server Second';
+    const metadata = { path:  `/${scopeId}` };
+    let expectedDecryptedClientText1 = `${scopeId}: Hello From Client First`;
+    let expectedDecryptedClientText2 = `${scopeId}: Hello From Client Second`;
+    let expectedDecryptedServerText1 = `${scopeId}: Hello From Server First`;
+    let expectedDecryptedServerText2 = `${scopeId}: Hello From Server Second`;
     let requestMessage1 = null;
     let requestMessage2 = null;
-    const { createMessage } = require('../../lib/factory/message.factory');
 
+    const { clientMessageBus } = createClientMessageBus({ scopeId, timeout, senderHost, senderPort });
     { 
       //Simulate a Server
-      const { createServerMessageBus } = require('../../lib/factory/servermessagebus.factory.js');
       const { serverMessageBus } = createServerMessageBus({ scopeId, timeout, senderHost, senderPort });
-      serverMessageBus.subscribeToMessages({ callback: ({ message }) => {
-        requestMessage1 = message;
-      }});
-      serverMessageBus.subscribeToMessages({ callback: ({ message }) => {
-        requestMessage2 = message;
-      }});
-      serverMessageBus.publishMessage(createMessage({ 
+      serverMessageBus.publish(createMessage({ 
         scopeId: utils.generateGUID(),
         messageStatusCode: 0, Id: null, data: expectedDecryptedServerText1, 
         recipientHost, recipientPort, metadata, token, senderHost, senderPort 
       }));
-      serverMessageBus.publishMessage(createMessage({ 
+      serverMessageBus.publish(createMessage({ 
         scopeId: utils.generateGUID(),
         messageStatusCode: 0, Id: null, data: expectedDecryptedServerText2, 
         recipientHost, recipientPort, metadata, token, senderHost, senderPort 
       }));
+      serverMessageBus.subscribe({ callback: ({ message }) => {
+        if (!requestMessage1) {
+          requestMessage1 = message;
+        } else {
+          requestMessage2 = message;
+        }
+      }});
     }
 
-    const { createClientMessageBus } = require('../../lib/factory/clientmessagebus.factory.js');
-    const { clientMessageBus } = createClientMessageBus({ scopeId, timeout, senderHost, senderPort });
-
     // Act
-    clientMessageBus.publishMessage(createMessage({ 
+    clientMessageBus.publish(createMessage({ 
       scopeId: utils.generateGUID(),
       messageStatusCode: 2, Id: null, data: expectedDecryptedClientText1,
       recipientHost, recipientPort, metadata, token, senderHost, senderPort 
     }));
-    clientMessageBus.publishMessage(createMessage({ 
+    clientMessageBus.publish(createMessage({ 
       scopeId: utils.generateGUID(),
       messageStatusCode: 2, Id: null, data: expectedDecryptedClientText2,
       recipientHost, recipientPort, metadata, token, senderHost, senderPort 
