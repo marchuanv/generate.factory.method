@@ -37,9 +37,7 @@ describe("when initialising a component given a client and server messagebus", f
   // Act
   clientComponent.initialise({ secret: 'secret1234' }).then(() => {
     clientComponent.send('Hello From Client');
-    clientComponent.receive({ callback: () => {
-      setTimeout(done,1500);
-    }});
+   
   });
   serverComponent.initialise({ secret: 'secret1234' }).then(() => {
     serverComponent.receive({ callback: () => {
@@ -48,7 +46,11 @@ describe("when initialising a component given a client and server messagebus", f
   });
 
   // Assert
-
+  clientComponent.receive({ callback: ({ message }) => {
+    expect(message).not.toBeUndefined();
+    expect(message).not.toBeNull();
+    setTimeout(done,1500);
+  }});
 
  });
 });
