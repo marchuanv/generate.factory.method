@@ -1,5 +1,3 @@
 {
-    "scopeId": "clientmessagebusfactory",
-    "httpClientRequestMessageBus": null,
-    "httpClientResponseMessageBus": null
+    "scopeId": "clientmessagebusfactory"
 }
