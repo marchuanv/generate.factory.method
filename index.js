@@ -9,7 +9,7 @@ if (!context.require){
 }
 if (module) {
     const path = require('path');
-    const { Component } = require("./lib/component.js");
+    const { createComponent } = require("./lib/factory/component.factory");
     const packageJson = require(path.join(module.parent.path, 'package.json'));
-    module.exports = new Component(packageJson);
+    module.exports = createComponent({ scopeId: packageJson.name, packageJson });
 }
