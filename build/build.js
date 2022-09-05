@@ -1,4 +1,4 @@
-const { readdirSync, readFileSync, writeFileSync, mkdirSync, existsSync } = require('fs');
+const { readdirSync, readFileSync, writeFileSync, mkdirSync, existsSync, appendFileSync } = require('fs');
 const path = require('path');
 const utils = require('utils');
 const libDir = path.join(__dirname, '../lib');
@@ -14,7 +14,11 @@ const factoryRequireTemplate = readFileSync(path.join(__dirname,'factory.require
 const factoryCallCreateTemplate = readFileSync(path.join(__dirname,'factory.call.create.template'),'utf8');
 const specVariablesTemplate = readFileSync(path.join(__dirname,'spec.variables.template'),'utf8');
 const typeInfoTemplate = readFileSync(path.join(__dirname,'typeinfo.template'),'utf8');
+const factoryMinificationTemplate = readFileSync(path.join(__dirname,'factory.minification.template'),'utf8');
 const singletonConfig = require(path.join(__dirname,'singletons.json'),'utf8');
+
+const componentMinPath = path.join(__dirname, '../component.min.js');
+writeFileSync(componentMinPath, `const factory = require('../factory.js');\r\nwindow.component = {};\r\n`, 'utf8');
 
 if (!existsSync(specsFactoryDir)){
     mkdirSync(specsFactoryDir);
@@ -197,6 +201,22 @@ for(const info of getDependencyTree()) {
         .replace(/\[ReturnVariables\]/g, refArgs.concat([info.variableName]))
         .replace(/\[IsSingleton\]/g, info.singleton);
     writeFileSync(info.factoryScriptPath, factory, 'utf8');
+
+    const script = require(info.scriptPath, 'utf8');
+    const type = script[info.typeName];
+    const factoryMinification = factoryMinificationTemplate
+        .replace(/\[TypeDefinition\]/g, type.toString())
+        .replace(/\[Args\]/g, info.children.map(x => x.variableName) )
+        .replace(/\[ScriptPath\]/g, info.scriptPath.replace(/\\/g,'\\\\'))
+        .replace(/\[TypeName\]/g, info.typeName)
+        .replace(/\[FactoryCalls\]/g, factoryCalls.join('\r\n'))
+        .replace(/\[SimpleArgs\]/g, simpleArgs)
+        .replace(/\[SimpleArgsFiltered\]/g, SimpleArgsFiltered)
+        .replace(/\[TypeVariableName\]/g, info.variableName)
+        .replace(/\[FactoryRequireScripts\]/g, factoryRequireScripts.join('\r\n'))
+        .replace(/\[ReturnVariables\]/g, refArgs.concat([info.variableName]))
+        .replace(/\[IsSingleton\]/g, info.singleton);
+    appendFileSync(componentMinPath, factoryMinification, 'utf8');
 
     factoryRequireScripts = [];
     factoryRequireScripts.push(factoryRequireTemplate

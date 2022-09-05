@@ -16,8 +16,9 @@
   "bugs": {
     "url": "https://github.com/marchuanv/component/issues"
   },
+  "type": "commonjs",
   "scripts": {
-    "build":"node build/build.js",
+    "build": "node build/build.js",
     "test": "npm run build && node node_modules/jasmine/bin/jasmine.js JASMINE_CONFIG_PATH=spec/support/jasmine.json "
   },
   "homepage": "https://github.com/marchuanv/component#readme",
@@ -26,7 +27,10 @@
     "utils": "marchuanv/utils"
   },
   "devDependencies": {
+    "@types/node": "^18.7.14",
     "jasmine": "^4.2.0",
-    "jasmine-spec-reporter": "^7.0.0"
+    "jasmine-spec-reporter": "^7.0.0",
+    "jsdom": "^20.0.0",
+    "minify": "^9.1.0"
   }
 }
