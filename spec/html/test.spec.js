@@ -1,8 +1,15 @@
 const utils = require('utils');
+const path = require('path');
 const { JSDOM } = require("jsdom");
 fdescribe("JSDOM", () => {
     it("it should work", () => {
-        const dom = new JSDOM(`<html><head><script src="../../component.min.js"></script></head><body></body><html>`, { runScripts: "dangerously" });
+        const options = {
+            runScripts: "dangerously",
+            resources: "usable"
+        };
+        const componentMinJSPath = `file://${path.join(__dirname, '../', '../', 'component.min.js')}`;
+        const source = `<!DOCTYPE html><html><body><div id="test"></div><script src="${componentMinJSPath}"></script></body></html>`;
+        const dom = new JSDOM(source, options);
         expect(dom).not.toBeNull();
         expect(dom).not.toBeUndefined();
         dom.window.onload = () => {
@@ -12,7 +19,7 @@ fdescribe("JSDOM", () => {
             expect(dom.window.createComponent).not.toBeUndefined();
         }
         dom.window.onerror = (err) => {
-            console.log('error:', err);
+            fail(err)
         }
     });
 });
