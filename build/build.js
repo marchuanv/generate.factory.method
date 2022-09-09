@@ -255,6 +255,10 @@ for(const info of getDependencyTree()) {
     const type = script[info.typeName];
     appendFileSync(componentMinPath, getFunctionCode(type), 'utf8');
 }
+for(const info of getDependencyTree()) {
+    const script =  readFileSync(info.minFactoryScriptPath, 'utf8');
+    appendFileSync(componentMinPath, script, 'utf8');
+}
 
 const options = { toplevel: true };
 let code = readFileSync(componentMinPath,'utf8');

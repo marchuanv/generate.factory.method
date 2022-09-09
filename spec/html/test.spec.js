@@ -13,8 +13,8 @@ fdescribe("JSDOM", () => {
         expect(dom).not.toBeNull();
         expect(dom).not.toBeUndefined();
         dom.window.onload = () => {
-            expect(dom.window.component).not.toBeNull();
-            expect(dom.window.component).not.toBeUndefined();
+            expect(dom.window.Component).not.toBeNull();
+            expect(dom.window.Component).not.toBeUndefined();
             expect(dom.window.createComponent).not.toBeNull();
             expect(dom.window.createComponent).not.toBeUndefined();
         }
