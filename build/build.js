@@ -1,3 +1,4 @@
+const UglifyJS = require("uglify-js");
 const { readdirSync, readFileSync, writeFileSync, mkdirSync, existsSync, appendFileSync } = require('fs');
 const path = require('path');
 const utils = require('utils');
@@ -16,15 +17,31 @@ const specVariablesTemplate = readFileSync(path.join(__dirname,'spec.variables.t
 const typeInfoTemplate = readFileSync(path.join(__dirname,'typeinfo.template'),'utf8');
 const factoryMinificationTemplate = readFileSync(path.join(__dirname,'factory.minification.template'),'utf8');
 const singletonConfig = require(path.join(__dirname,'singletons.json'),'utf8');
-
 const componentMinPath = path.join(__dirname, '../component.min.js');
-writeFileSync(componentMinPath, `const factory = require('../factory.js');\r\nwindow.component = {};\r\n`, 'utf8');
+const factory = require(path.join(libDir,'factory.js'));
 
 if (!existsSync(specsFactoryDir)){
     mkdirSync(specsFactoryDir);
 }
 if (!existsSync(libFactoryDir)){
     mkdirSync(libFactoryDir);
+}
+
+function getMinifiedFunction(func) {
+    let code = func.toString();
+    for(const funcName in func.prototype) {
+        let prop = func.prototype[funcName]; 
+        if (!prop) {
+            prop = "''";
+        }
+        code = `${code}\r\n${func.name}.prototype.${funcName} = ${prop.toString()};`;
+    }
+    const options = { toplevel: true };
+    ({ code } = UglifyJS.minify(code));
+    if (!code) {
+        throw new Error(`could not minify ${func.name}`);
+    }
+    return code;
 }
 
 function getDependencyTree(typeInfo, pass = 'firstpass', types = []) {
@@ -207,7 +224,15 @@ for(const info of getDependencyTree()) {
     writeFileSync(info.factoryScriptPath, factory, 'utf8');
 
     const factoryMinification = factoryMinificationTemplate
-        .replace(/\[ToDO\]/g, 'ToDo');
+        .replace(/\[Args\]/g, info.children.map(x => x.variableName) )
+        .replace(/\[TypeName\]/g, info.typeName)
+        .replace(/\[FactoryCalls\]/g, factoryCalls.join('\r\n'))
+        .replace(/\[SimpleArgs\]/g, simpleArgs)
+        .replace(/\[SimpleArgsFiltered\]/g, SimpleArgsFiltered)
+        .replace(/\[TypeVariableName\]/g, info.variableName)
+        .replace(/\[ReturnVariables\]/g, refArgs.concat([info.variableName]))
+        .replace(/\[IsSingleton\]/g, info.singleton);
+ 
     writeFileSync(info.minFactoryScriptPath, factoryMinification, 'utf8');
 
     factoryRequireScripts = [];
@@ -224,4 +249,13 @@ for(const info of getDependencyTree()) {
         .replace(/\[SpecArrangeVariables\]/g, specArrangeVariables.join('\r\n'))
         .replace(/\[FactoryRequireScripts\]/g, factoryRequireScripts.join('\r\n'));
     writeFileSync(info.specScriptPath, factorySpec, 'utf8');
+}
+
+//minification
+const { Factory } = factory;
+writeFileSync(componentMinPath, `${getMinifiedFunction(Factory)};\r\n`, 'utf8');
+for(const info of getDependencyTree()) {
+    const script =  require(info.scriptPath);
+    const type = script[info.typeName];
+    appendFileSync(componentMinPath, getMinifiedFunction(type), 'utf8');
 }
