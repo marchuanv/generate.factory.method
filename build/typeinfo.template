@@ -2,6 +2,7 @@
     "typeName":"[TypeName]",
     "scriptPath":"[ScriptPath]",
     "factoryScriptPath":"[FactoryScriptPath]",
+    "minFactoryScriptPath":"[MinFactoryScriptPath]",
     "specScriptPath":"[SpecScriptPath]",
     "specVariablesPath":"[SpecVariablesPath]",
     "children":[[ChildrenArray]],

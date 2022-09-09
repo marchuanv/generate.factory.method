@@ -8,7 +8,7 @@ fdescribe("JSDOM", () => {
             resources: "usable"
         };
         const componentMinJSPath = `file://${path.join(__dirname, '../', '../', 'component.min.js')}`;
-        const source = `<!DOCTYPE html><html><body><div id="test"></div><script src="${componentMinJSPath}"></script></body></html>`;
+        const source = `<!DOCTYPE html><html><body><div id="test"></div><script>require = (mod) => { console.log('requiring: ', mod); }</script><script src="${componentMinJSPath}"></script></body></html>`;
         const dom = new JSDOM(source, options);
         expect(dom).not.toBeNull();
         expect(dom).not.toBeUndefined();

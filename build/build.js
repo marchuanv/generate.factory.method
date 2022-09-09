@@ -33,8 +33,10 @@ function getDependencyTree(typeInfo, pass = 'firstpass', types = []) {
         if (scriptPath) {
             const scriptName = path.basename(scriptPath).replace(path.extname(scriptPath),'');
             const factoryScriptName = `${scriptName}.factory.js`;
+            const minFactoryScriptName = `${scriptName}.factory.min.js`;
             const specScriptName = `${scriptName}.factory.spec.js`;
             const factoryScriptPath = path.join(libDir, 'factory', factoryScriptName);
+            const minFactoryScriptPath = path.join(libDir, 'factory', minFactoryScriptName);
             const specScriptPath = path.join(specsFactoryDir, specScriptName);
             const specVariablesPath =  path.join(specsFactoryDir, `${scriptName}.factory.spec.variables.json`);
             try {
@@ -47,6 +49,7 @@ function getDependencyTree(typeInfo, pass = 'firstpass', types = []) {
                     .replace(/\[TypeName\]/g, param.name)
                     .replace(/\[ScriptPath\]/g,'')
                     .replace(/\[FactoryScriptPath\]/g,'')
+                    .replace(/\[MinFactoryScriptPath\]/g,'')
                     .replace(/\[SpecScriptPath\]/g,'')
                     .replace(/\[SpecVariablesPath\]/g,'')
                     .replace(/\[ChildrenArray\]/g,'')
@@ -58,6 +61,7 @@ function getDependencyTree(typeInfo, pass = 'firstpass', types = []) {
                     .replace(/\[TypeName\]/g, type.name)
                     .replace(/\[ScriptPath\]/g, scriptPath.replace(/\\/g,'\\\\') )
                     .replace(/\[FactoryScriptPath\]/g, factoryScriptPath.replace(/\\/g,'\\\\'))
+                    .replace(/\[MinFactoryScriptPath\]/g, minFactoryScriptPath.replace(/\\/g,'\\\\'))
                     .replace(/\[SpecScriptPath\]/g, specScriptPath.replace(/\\/g,'\\\\'))
                     .replace(/\[SpecVariablesPath\]/g, specVariablesPath.replace(/\\/g,'\\\\'))
                     .replace(/\[ChildrenArray\]/g, children.map(child => utils.getJSONString(child)).join(','))
@@ -202,21 +206,9 @@ for(const info of getDependencyTree()) {
         .replace(/\[IsSingleton\]/g, info.singleton);
     writeFileSync(info.factoryScriptPath, factory, 'utf8');
 
-    const script = require(info.scriptPath, 'utf8');
-    const type = script[info.typeName];
     const factoryMinification = factoryMinificationTemplate
-        .replace(/\[TypeDefinition\]/g, type.toString())
-        .replace(/\[Args\]/g, info.children.map(x => x.variableName) )
-        .replace(/\[ScriptPath\]/g, info.scriptPath.replace(/\\/g,'\\\\'))
-        .replace(/\[TypeName\]/g, info.typeName)
-        .replace(/\[FactoryCalls\]/g, factoryCalls.join('\r\n'))
-        .replace(/\[SimpleArgs\]/g, simpleArgs)
-        .replace(/\[SimpleArgsFiltered\]/g, SimpleArgsFiltered)
-        .replace(/\[TypeVariableName\]/g, info.variableName)
-        .replace(/\[FactoryRequireScripts\]/g, factoryRequireScripts.join('\r\n'))
-        .replace(/\[ReturnVariables\]/g, refArgs.concat([info.variableName]))
-        .replace(/\[IsSingleton\]/g, info.singleton);
-    appendFileSync(componentMinPath, factoryMinification, 'utf8');
+        .replace(/\[ToDO\]/g, 'ToDo');
+    writeFileSync(info.minFactoryScriptPath, factoryMinification, 'utf8');
 
     factoryRequireScripts = [];
     factoryRequireScripts.push(factoryRequireTemplate
