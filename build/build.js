@@ -27,7 +27,7 @@ if (!existsSync(libFactoryDir)){
     mkdirSync(libFactoryDir);
 }
 
-function getMinifiedFunction(func) {
+function getFunctionCode(func) {
     let code = func.toString();
     for(const funcName in func.prototype) {
         let prop = func.prototype[funcName]; 
@@ -36,11 +36,7 @@ function getMinifiedFunction(func) {
         }
         code = `${code}\r\n${func.name}.prototype.${funcName} = ${prop.toString()};`;
     }
-    const options = { toplevel: true };
-    ({ code } = UglifyJS.minify(code));
-    if (!code) {
-        throw new Error(`could not minify ${func.name}`);
-    }
+    code = `${code}\r\n`;
     return code;
 }
 
@@ -253,9 +249,17 @@ for(const info of getDependencyTree()) {
 
 //minification
 const { Factory } = factory;
-writeFileSync(componentMinPath, `${getMinifiedFunction(Factory)};\r\n`, 'utf8');
+writeFileSync(componentMinPath, `${getFunctionCode(Factory)};\r\n`, 'utf8');
 for(const info of getDependencyTree()) {
     const script =  require(info.scriptPath);
     const type = script[info.typeName];
-    appendFileSync(componentMinPath, getMinifiedFunction(type), 'utf8');
+    appendFileSync(componentMinPath, getFunctionCode(type), 'utf8');
 }
+
+const options = { toplevel: true };
+let code = readFileSync(componentMinPath,'utf8');
+({ code } = UglifyJS.minify(code));
+if (!code) {
+    throw new Error(`could not minify ${func.name}`);
+}
+writeFileSync(componentMinPath, code, 'utf8');
