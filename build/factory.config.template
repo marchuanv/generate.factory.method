@@ -1,0 +1,3 @@
+function [TypeName]CtorParamConfig() {
+}
+module.exports = { [TypeName]CtorParamConfig };

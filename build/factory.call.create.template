@@ -1,1 +1,1 @@
-container.config(create[TypeName]({[Args]}));
+container.reference(create[TypeName]({[Args]}));

@@ -1,6 +1,7 @@
 { 
     "typeName":"[TypeName]",
     "scriptPath":"[ScriptPath]",
+    "configScriptPath":"[ConfigScriptPath]",
     "factoryScriptPath":"[FactoryScriptPath]",
     "minFactoryScriptPath":"[MinFactoryScriptPath]",
     "specScriptPath":"[SpecScriptPath]",

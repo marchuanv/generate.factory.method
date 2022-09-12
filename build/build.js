@@ -11,6 +11,7 @@ const websocketScripts = readdirSync(path.join(libDir, 'websocket'), { withFileT
 const scripts = rootScripts.concat(httpScripts.concat(websocketScripts)).filter(scPath => scPath.indexOf('factory.js') === -1);
 const factoryTemplate = readFileSync(path.join(__dirname,'factory.template'),'utf8');
 const factorySpecTemplate = readFileSync(path.join(__dirname,'factory.spec.template'),'utf8');
+const factoryConfigTemplate = readFileSync(path.join(__dirname,'factory.config.template'),'utf8');
 const factoryRequireTemplate = readFileSync(path.join(__dirname,'factory.require.template'),'utf8');
 const factoryCallCreateTemplate = readFileSync(path.join(__dirname,'factory.call.create.template'),'utf8');
 const specVariablesTemplate = readFileSync(path.join(__dirname,'spec.variables.template'),'utf8');
@@ -45,6 +46,8 @@ function getDependencyTree(typeInfo, pass = 'firstpass', types = []) {
         const scriptPath = scripts.find(scPath => types.find(ti => ti.scriptPath === scPath) === undefined);
         if (scriptPath) {
             const scriptName = path.basename(scriptPath).replace(path.extname(scriptPath),'');
+            const configScriptName = `${scriptName}.factory.config.js`;
+            const configScriptPath = path.join(libDir, 'factory', configScriptName);
             const factoryScriptName = `${scriptName}.factory.js`;
             const minFactoryScriptName = `${scriptName}.factory.min.js`;
             const specScriptName = `${scriptName}.factory.spec.js`;
@@ -61,6 +64,7 @@ function getDependencyTree(typeInfo, pass = 'firstpass', types = []) {
                 const children = parameters.map(param => utils.getJSONObject(typeInfoTemplate
                     .replace(/\[TypeName\]/g, param.name)
                     .replace(/\[ScriptPath\]/g,'')
+                    .replace(/\[ConfigScriptPath\]/g,'')
                     .replace(/\[FactoryScriptPath\]/g,'')
                     .replace(/\[MinFactoryScriptPath\]/g,'')
                     .replace(/\[SpecScriptPath\]/g,'')
@@ -73,6 +77,7 @@ function getDependencyTree(typeInfo, pass = 'firstpass', types = []) {
                 typeInfo = utils.getJSONObject(typeInfoTemplate
                     .replace(/\[TypeName\]/g, type.name)
                     .replace(/\[ScriptPath\]/g, scriptPath.replace(/\\/g,'\\\\') )
+                    .replace(/\[ConfigScriptPath\]/g, configScriptPath.replace(/\\/g,'\\\\') )
                     .replace(/\[FactoryScriptPath\]/g, factoryScriptPath.replace(/\\/g,'\\\\'))
                     .replace(/\[MinFactoryScriptPath\]/g, minFactoryScriptPath.replace(/\\/g,'\\\\'))
                     .replace(/\[SpecScriptPath\]/g, specScriptPath.replace(/\\/g,'\\\\'))
@@ -205,10 +210,15 @@ for(const info of getDependencyTree()) {
         .replace(/\[VariableNames\]/g, Object.keys(specVariableValues).join(','))
         .replace(/\[SpecVariablesPath\]/g, info.specVariablesPath.replace(/\\/g,'\\\\')));
 
+    const factoryConfig = factoryConfigTemplate
+        .replace(/\[TypeName\]/g, info.typeName);
+    writeFileSync(info.configScriptPath, factoryConfig, 'utf8');
+
     const SimpleArgsFiltered = simpleArgs.filter(sa => sa !== 'scopeId');
     const factory = factoryTemplate
         .replace(/\[Args\]/g, info.children.map(x => x.variableName) )
         .replace(/\[ScriptPath\]/g, info.scriptPath.replace(/\\/g,'\\\\'))
+        .replace(/\[ConfigScriptPath\]/g, info.configScriptPath.replace(/\\/g,'\\\\'))
         .replace(/\[TypeName\]/g, info.typeName)
         .replace(/\[FactoryCalls\]/g, factoryCalls.join('\r\n'))
         .replace(/\[SimpleArgs\]/g, simpleArgs)

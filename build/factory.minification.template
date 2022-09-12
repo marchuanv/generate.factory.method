@@ -1,10 +1,8 @@
 function create[TypeName]({[SimpleArgs]}) {
-    let container = factory.getContainer({ scopeId, type: [TypeName], variableName:'[TypeVariableName]', singleton: [IsSingleton] });
-    if (!container) {
-        container = factory.createContainer({ scopeId, type: [TypeName], variableName:'[TypeVariableName]', singleton: [IsSingleton] });
-        container.config({[SimpleArgsFiltered]});
-            [FactoryCalls]
-    }
+    const container = factory.getContainer({ scopeId, type: [TypeName], variableName:'[TypeVariableName]', singleton: [IsSingleton] });
+    container.config(new [TypeName]CtorParamConfig());
+    container.reference({[SimpleArgsFiltered]});
+        [FactoryCalls]
     container.ensureInstance();
     return container.references;
 }
