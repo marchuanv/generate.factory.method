@@ -5,10 +5,10 @@ const utils = require('utils');
 const libDir = path.join(__dirname, '../lib');
 const specsFactoryDir = path.join(__dirname, '../spec', 'factory');
 const libFactoryDir = path.join(__dirname, '../lib', 'factory');
-const rootScripts = readdirSync(libDir, { withFileTypes: true }).filter(dirent => dirent.isFile() && dirent.name.indexOf('.factory.js') === -1).map(file => path.join(libDir, file.name));
-const httpScripts = readdirSync(path.join(libDir, 'http'), { withFileTypes: true }).filter(dirent => dirent.isFile() && dirent.name.indexOf('.factory.js') === -1).map(file => path.join(libDir, 'http', file.name));
-const websocketScripts = readdirSync(path.join(libDir, 'websocket'), { withFileTypes: true }).filter(dirent => dirent.isFile() && dirent.name.indexOf('.factory.js') === -1).map(file => path.join(libDir, 'websocket', file.name));
-const scripts = rootScripts.concat(httpScripts.concat(websocketScripts)).filter(scPath => scPath.indexOf('factory.js') === -1);
+const rootScripts = readdirSync(libDir, { withFileTypes: true }).filter(dirent => dirent.isFile()).map(file => path.join(libDir, file.name));
+const httpScripts = readdirSync(path.join(libDir, 'http'), { withFileTypes: true }).filter(dirent => dirent.isFile()).map(file => path.join(libDir, 'http', file.name));
+const websocketScripts = readdirSync(path.join(libDir, 'websocket'), { withFileTypes: true }).filter(dirent => dirent.isFile()).map(file => path.join(libDir, 'websocket', file.name));
+const scripts = rootScripts.concat(httpScripts.concat(websocketScripts)).filter(scPath => scPath.indexOf('prototype.js') > -1);
 const factoryTemplate = readFileSync(path.join(__dirname,'factory.template'),'utf8');
 const factorySpecTemplate = readFileSync(path.join(__dirname,'factory.spec.template'),'utf8');
 const factoryConfigTemplate = readFileSync(path.join(__dirname,'factory.config.template'),'utf8');
@@ -45,20 +45,22 @@ function getDependencyTree(typeInfo, pass = 'firstpass', types = []) {
     if (!typeInfo || utils.isEmptyObject(typeInfo)) {
         const scriptPath = scripts.find(scPath => types.find(ti => ti.scriptPath === scPath) === undefined);
         if (scriptPath) {
-            const scriptName = path.basename(scriptPath).replace(path.extname(scriptPath),'');
-            const configScriptName = `${scriptName}.factory.config.js`;
-            const configScriptPath = path.join(libDir, 'factory', configScriptName);
-            const factoryScriptName = `${scriptName}.factory.js`;
-            const minFactoryScriptName = `${scriptName}.factory.min.js`;
-            const specScriptName = `${scriptName}.factory.spec.js`;
-            const factoryScriptPath = path.join(libDir, 'factory', factoryScriptName);
-            const minFactoryScriptPath = path.join(libDir, 'factory', minFactoryScriptName);
-            const specScriptPath = path.join(specsFactoryDir, specScriptName);
-            const specVariablesPath =  path.join(specsFactoryDir, `${scriptName}.factory.spec.variables.json`);
             try {
                 const sc = require(scriptPath);
                 const key = Object.keys(sc)[0];
                 const type = sc[key];
+                
+                const scriptName = type.name.toLowerCase();
+                const configScriptName = `${scriptName}.factory.config.js`;
+                const configScriptPath = path.join(libDir, 'factory', configScriptName);
+                const factoryScriptName = `${scriptName}.factory.js`;
+                const minFactoryScriptName = `${scriptName}.factory.min.js`;
+                const specScriptName = `${scriptName}.factory.spec.js`;
+                const factoryScriptPath = path.join(libDir, 'factory', factoryScriptName);
+                const minFactoryScriptPath = path.join(libDir, 'factory', minFactoryScriptName);
+                const specScriptPath = path.join(specsFactoryDir, specScriptName);
+                const specVariablesPath =  path.join(specsFactoryDir, `${scriptName}.factory.spec.variables.json`);
+
                 const singleton = singletonConfig.find(cConf => cConf.typeName.toLowerCase() === key.toLowerCase() && cConf.singleton) ? true : false;
                 const parameters = utils.getFunctionParams(type) || [];
                 const children = parameters.map(param => utils.getJSONObject(typeInfoTemplate
@@ -146,11 +148,9 @@ function walkDependencyTree(parent, callback) {
 }
 
 for(const info of getDependencyTree()) {
-    
     if (!info.scriptPath) {
         continue;
     }
-
     const simpleArgs = ['scopeId'];
     const refArgs = [];
     const factoryCalls = [];

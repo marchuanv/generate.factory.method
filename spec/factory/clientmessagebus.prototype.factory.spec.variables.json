@@ -1,0 +1,7 @@
+{
+    "messageConverter": null,
+    "httpClientRequestMessageBus": null,
+    "httpClientResponseMessageBus": null,
+    "webSocketClientRequestMessagebus": null,
+    "webSocketClientResponseMessageBus": null
+}
