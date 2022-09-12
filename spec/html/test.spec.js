@@ -1,7 +1,7 @@
 const utils = require('utils');
 const path = require('path');
 const { JSDOM } = require("jsdom");
-fdescribe("JSDOM", () => {
+xdescribe("JSDOM", () => {
     it("it should work", () => {
         const options = {
             runScripts: "dangerously",
