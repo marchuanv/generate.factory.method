@@ -1,3 +1,4 @@
 {
-    "scopeId": "httpclientresponsemessagequeuebindingfactory"
+    "scopeId": "httpclientresponsemessagequeuebindingfactory",
+    "messageQueue": null
 }

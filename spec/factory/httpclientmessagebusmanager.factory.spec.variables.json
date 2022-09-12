@@ -2,5 +2,6 @@
     "scopeId": "httpclientmessagebusmanagerfactory",
     "httpClientStopMessageQueueBinding": null,
     "httpClientStartMessageQueueBinding": null,
-    "httpClientStartedMessageQueueBinding": null
+    "httpClientStartedMessageQueueBinding": null,
+    "messageQueue": null
 }

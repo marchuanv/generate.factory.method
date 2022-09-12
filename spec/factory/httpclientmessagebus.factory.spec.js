@@ -5,7 +5,7 @@ describe('when asking the HttpClientMessageBus factory to create an instance', f
     const {timeout,scopeId,httpClientRequestMessageQueueBinding,httpClientResponseMessageQueueBinding,httpClientStartMessageQueueBinding,httpClientStartedMessageQueueBinding,httpClientStopMessageQueueBinding,httpClientStoppedMessageQueueBinding,messageQueue} = require('C:\\component\\spec\\factory\\httpclientmessagebus.factory.spec.variables.json');
 
     // Act
-    const {httpClientMessageBus} = createHttpClientMessageBus({scopeId,timeout,messageQueue,httpClientResponseMessageQueueBinding,httpClientStartMessageQueueBinding,httpClientStartedMessageQueueBinding,httpClientStopMessageQueueBinding});
+    const {httpClientMessageBus} = createHttpClientMessageBus({scopeId,timeout,messageQueue});
     // Assert
     expect(httpClientMessageBus).not.toBeNull();
   });
