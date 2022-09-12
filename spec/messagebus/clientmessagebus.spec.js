@@ -1,5 +1,5 @@
 const utils = require('utils');
-fdescribe("when asking a client messagebus to publish a request", function() {
+describe("when asking a client messagebus to publish a request", function() {
   
   const scopeId = "clientmessagebustest";
   const timeout = 15000;
