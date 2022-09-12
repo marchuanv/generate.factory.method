@@ -4,5 +4,7 @@
     "senderPort": 3000,
     "timeout": 15000,
     "httpServerResponseMessageBus": null,
-    "httpServerRequestMessageBus": null
+    "httpServerRequestMessageBus": null,
+    "webSocketServerRequestMessageBus": null,
+    "webSocketServerResponseMessageBus": null
 }
