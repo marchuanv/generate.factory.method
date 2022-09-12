@@ -2,7 +2,7 @@ const { Factory } = require('../factory.js');
 const factory = new Factory();
 [FactoryRequireScripts]
 const { [TypeName] } = require('[ScriptPath]');
-const { [TypeName]CtorParamConfig } = require('[ConfigScriptPath]');
+const get[TypeName]FactoryConfig = require('[ConfigScriptPath]');
 /**
 * IsSingleton: [IsSingleton] 
 * Create [TypeName] 
@@ -10,7 +10,7 @@ const { [TypeName]CtorParamConfig } = require('[ConfigScriptPath]');
 */
 function create[TypeName]({[SimpleArgs]}) {
     const container = factory.getContainer({ scopeId, type: [TypeName], variableName:'[TypeVariableName]', singleton: [IsSingleton] });
-    container.config(new [TypeName]CtorParamConfig());
+    container.config(get[TypeName]FactoryConfig());
     container.reference({[SimpleArgsFiltered]});
         [FactoryCalls]
     container.ensureInstance();

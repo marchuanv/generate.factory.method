@@ -4,5 +4,6 @@
     "httpClientRequestMessageBus": null,
     "httpClientResponseMessageBus": null,
     "webSocketClientRequestMessagebus": null,
-    "webSocketClientResponseMessageBus": null
+    "webSocketClientResponseMessageBus": null,
+    "messageQueue": null
 }

@@ -6,5 +6,6 @@
     "httpClientStartMessageQueueBinding": null,
     "httpClientStartedMessageQueueBinding": null,
     "httpClientStopMessageQueueBinding": null,
-    "httpClientStoppedMessageQueueBinding": null
+    "httpClientStoppedMessageQueueBinding": null,
+    "messageQueue": null
 }
