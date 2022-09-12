@@ -5,7 +5,7 @@ describe('when asking the HttpServerMessageBusManager factory to create an insta
     const {scopeId,messageQueue} = require('C:\\component\\spec\\factory\\httpservermessagebusmanager.factory.spec.variables.json');
 
     // Act
-    const {httpServerMessageBusManager} = createHttpServerMessageBusManager({scopeId,messageQueue});
+    const {httpServerMessageBusManager} = createHttpServerMessageBusManager({scopeId});
     // Assert
     expect(httpServerMessageBusManager).not.toBeNull();
   });

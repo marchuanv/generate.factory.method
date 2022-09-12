@@ -5,7 +5,7 @@ describe('when asking the HttpClientStoppedMessageQueueBinding factory to create
     const {scopeId,messageQueue} = require('C:\\component\\spec\\factory\\httpclientstoppedmessagequeuebinding.factory.spec.variables.json');
 
     // Act
-    const {httpClientStoppedMessageQueueBinding} = createHttpClientStoppedMessageQueueBinding({scopeId,messageQueue});
+    const {httpClientStoppedMessageQueueBinding} = createHttpClientStoppedMessageQueueBinding({scopeId});
     // Assert
     expect(httpClientStoppedMessageQueueBinding).not.toBeNull();
   });

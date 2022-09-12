@@ -5,7 +5,7 @@ describe('when asking the HttpServerStartedMessageQueueBinding factory to create
     const {scopeId,messageQueue} = require('C:\\component\\spec\\factory\\httpserverstartedmessagequeuebinding.factory.spec.variables.json');
 
     // Act
-    const {httpServerStartedMessageQueueBinding} = createHttpServerStartedMessageQueueBinding({scopeId,messageQueue});
+    const {httpServerStartedMessageQueueBinding} = createHttpServerStartedMessageQueueBinding({scopeId});
     // Assert
     expect(httpServerStartedMessageQueueBinding).not.toBeNull();
   });

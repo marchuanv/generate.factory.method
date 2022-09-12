@@ -5,7 +5,7 @@ describe('when asking the HttpResponseMessage factory to create an instance', fu
     const {scopeId,data,metadata,messageStatusCode,Id,senderHost,senderPort,recipientHost,recipientPort,token,message} = require('C:\\component\\spec\\factory\\httpresponsemessage.factory.spec.variables.json');
 
     // Act
-    const {httpResponseMessage} = createHttpResponseMessage({scopeId,message});
+    const {httpResponseMessage} = createHttpResponseMessage({scopeId,messageStatusCode,Id,data,recipientHost,recipientPort,metadata,token,senderHost,senderPort});
     // Assert
     expect(httpResponseMessage).not.toBeNull();
   });

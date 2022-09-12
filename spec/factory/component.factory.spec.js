@@ -5,7 +5,7 @@ describe('when asking the Component factory to create an instance', function() {
     const {scopeId,packageJson,webSocketServerRequestMessageBus,webSocketServerResponseMessageBus,messageConverter,messageQueue,httpClientResponseMessageBus,serverMessageBus,userSessions} = require('C:\\component\\spec\\factory\\component.factory.spec.variables.json');
 
     // Act
-    const {component} = createComponent({scopeId,packageJson,messageConverter,messageQueue,httpClientResponseMessageBus,serverMessageBus,userSessions});
+    const {component} = createComponent({scopeId,packageJson,webSocketServerRequestMessageBus,webSocketServerResponseMessageBus});
     // Assert
     expect(component).not.toBeNull();
   });

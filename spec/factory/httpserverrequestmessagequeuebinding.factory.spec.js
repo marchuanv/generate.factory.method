@@ -5,7 +5,7 @@ describe('when asking the HttpServerRequestMessageQueueBinding factory to create
     const {scopeId,messageQueue} = require('C:\\component\\spec\\factory\\httpserverrequestmessagequeuebinding.factory.spec.variables.json');
 
     // Act
-    const {httpServerRequestMessageQueueBinding} = createHttpServerRequestMessageQueueBinding({scopeId,messageQueue});
+    const {httpServerRequestMessageQueueBinding} = createHttpServerRequestMessageQueueBinding({scopeId});
     // Assert
     expect(httpServerRequestMessageQueueBinding).not.toBeNull();
   });

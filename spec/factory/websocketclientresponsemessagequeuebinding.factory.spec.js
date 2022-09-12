@@ -5,7 +5,7 @@ describe('when asking the WebSocketClientResponseMessageQueueBinding factory to 
     const {scopeId,messageQueue} = require('C:\\component\\spec\\factory\\websocketclientresponsemessagequeuebinding.factory.spec.variables.json');
 
     // Act
-    const {websocketClientResponseMessageQueueBinding} = createWebSocketClientResponseMessageQueueBinding({scopeId,messageQueue});
+    const {websocketClientResponseMessageQueueBinding} = createWebSocketClientResponseMessageQueueBinding({scopeId});
     // Assert
     expect(websocketClientResponseMessageQueueBinding).not.toBeNull();
   });
