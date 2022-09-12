@@ -2,10 +2,10 @@ const { createWebSocketClientRequestMessageBus } = require('C:\\component\\lib\\
 describe('when asking the WebSocketClientRequestMessageBus factory to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
-    const {scopeId} = require('C:\\component\\spec\\factory\\websocketclientrequestmessagebus.factory.spec.variables.json');
+    const {scopeId,messageQueue} = require('C:\\component\\spec\\factory\\websocketclientrequestmessagebus.factory.spec.variables.json');
 
     // Act
-    const {webSocketClientRequestMessagebus} = createWebSocketClientRequestMessageBus({scopeId});
+    const {webSocketClientRequestMessagebus} = createWebSocketClientRequestMessageBus({scopeId,messageQueue});
     // Assert
     expect(webSocketClientRequestMessagebus).not.toBeNull();
   });

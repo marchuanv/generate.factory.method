@@ -13,5 +13,10 @@
         }
     },
     "webSocketServerRequestMessageBus": null,
-    "webSocketServerResponseMessageBus": null
+    "webSocketServerResponseMessageBus": null,
+    "messageConverter": null,
+    "messageQueue": null,
+    "httpClientResponseMessageBus": null,
+    "serverMessageBus": null,
+    "userSessions": null
 }
