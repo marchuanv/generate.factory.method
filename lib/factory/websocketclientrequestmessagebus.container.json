@@ -1,0 +1,20 @@
+{
+    "WebSocketClientRequestMessageBusFactoryContainer": {
+        "bindings": {
+            "global": {
+                "primitiveArgs": {
+                    "scopeId": "global"
+                },
+                "refArgs": {
+                    "websocketClientRequestMessageQueueBinding": "type:WebSocketClientRequestMessageQueueBinding"
+                },
+                "instance": {
+                    "webSocketClientRequestMessageBus": null
+                }
+            }
+        },
+        "type": "type:WebSocketClientRequestMessageBus",
+        "variableName": "webSocketClientRequestMessageBus",
+        "isSingleton": false
+    }
+}

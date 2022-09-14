@@ -1,0 +1,14 @@
+{
+    "[TypeName]FactoryContainer": {
+        "bindings": {
+            "global": {
+                "primitiveArgs": [PrimitiveArgs],
+                "refArgs": [RefArgs],
+                "instance": { "[TypeVariableName]": null  }
+            }
+        },
+        "type": "type:[TypeName]",
+        "variableName": "[TypeVariableName]", 
+        "isSingleton": [IsSingleton]
+    }
+}

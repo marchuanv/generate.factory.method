@@ -1,0 +1,18 @@
+{
+    "UserSessionsFactoryContainer": {
+        "bindings": {
+            "global": {
+                "primitiveArgs": {
+                    "scopeId": "global"
+                },
+                "refArgs": {},
+                "instance": {
+                    "userSessions": null
+                }
+            }
+        },
+        "type": "type:UserSessions",
+        "variableName": "userSessions",
+        "isSingleton": true
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "ServerMessageBusFactoryContainer": {
+        "bindings": {
+            "global": {
+                "primitiveArgs": {
+                    "scopeId": "global"
+                },
+                "refArgs": {
+                    "messageConverter": "type:MessageConverter",
+                    "httpServerResponseMessageBus": "type:HttpServerResponseMessageBus",
+                    "httpServerRequestMessageBus": "type:HttpServerRequestMessageBus",
+                    "webSocketServerRequestMessageBus": "type:WebSocketServerRequestMessageBus",
+                    "webSocketServerResponseMessageBus": "type:WebSocketServerResponseMessageBus"
+                },
+                "instance": {
+                    "serverMessageBus": null
+                }
+            }
+        },
+        "type": "type:ServerMessageBus",
+        "variableName": "serverMessageBus",
+        "isSingleton": false
+    }
+}

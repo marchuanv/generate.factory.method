@@ -1,0 +1,18 @@
+{
+    "LoggerFactoryContainer": {
+        "bindings": {
+            "global": {
+                "primitiveArgs": {
+                    "scopeId": "global"
+                },
+                "refArgs": {},
+                "instance": {
+                    "logger": null
+                }
+            }
+        },
+        "type": "type:Logger",
+        "variableName": "logger",
+        "isSingleton": true
+    }
+}

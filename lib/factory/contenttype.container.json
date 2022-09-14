@@ -1,0 +1,19 @@
+{
+    "ContentTypeFactoryContainer": {
+        "bindings": {
+            "global": {
+                "primitiveArgs": {
+                    "scopeId": "global",
+                    "name": null
+                },
+                "refArgs": {},
+                "instance": {
+                    "contentType": null
+                }
+            }
+        },
+        "type": "type:ContentType",
+        "variableName": "contentType",
+        "isSingleton": false
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "HttpClientMessageBusManagerFactoryContainer": {
+        "bindings": {
+            "global": {
+                "primitiveArgs": {
+                    "scopeId": "global"
+                },
+                "refArgs": {
+                    "httpClientStopMessageQueueBinding": "type:HttpClientStopMessageQueueBinding",
+                    "httpClientStartMessageQueueBinding": "type:HttpClientStartMessageQueueBinding",
+                    "httpClientStartedMessageQueueBinding": "type:HttpClientStartedMessageQueueBinding"
+                },
+                "instance": {
+                    "httpClientMessageBusManager": null
+                }
+            }
+        },
+        "type": "type:HttpClientMessageBusManager",
+        "variableName": "httpClientMessageBusManager",
+        "isSingleton": false
+    }
+}

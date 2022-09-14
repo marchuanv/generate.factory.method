@@ -1,0 +1,20 @@
+{
+    "WebSocketServerRequestMessageQueueBindingFactoryContainer": {
+        "bindings": {
+            "global": {
+                "primitiveArgs": {
+                    "scopeId": "global"
+                },
+                "refArgs": {
+                    "messageQueue": "type:MessageQueue"
+                },
+                "instance": {
+                    "webSocketServerRequestMessageQueueBinding": null
+                }
+            }
+        },
+        "type": "type:WebSocketServerRequestMessageQueueBinding",
+        "variableName": "webSocketServerRequestMessageQueueBinding",
+        "isSingleton": false
+    }
+}

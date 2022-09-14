@@ -1,0 +1,20 @@
+{
+    "HttpClientStartMessageQueueBindingFactoryContainer": {
+        "bindings": {
+            "global": {
+                "primitiveArgs": {
+                    "scopeId": "global"
+                },
+                "refArgs": {
+                    "messageQueue": "type:MessageQueue"
+                },
+                "instance": {
+                    "httpClientStartMessageQueueBinding": null
+                }
+            }
+        },
+        "type": "type:HttpClientStartMessageQueueBinding",
+        "variableName": "httpClientStartMessageQueueBinding",
+        "isSingleton": true
+    }
+}

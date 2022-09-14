@@ -1,8 +1,11 @@
-function create[TypeName]({[SimpleArgs]}) {
-    const container = factory.getContainer({ scopeId, type: [TypeName], variableName:'[TypeVariableName]', singleton: [IsSingleton] });
-    container.config(get[TypeName]FactoryConfig());
-    container.reference({[SimpleArgsFiltered]});
-        [FactoryCalls]
+ [FactoryCalls]
+function create[TypeName]({[PrimitiveArgs]}) {
+    const args = {[PrimitiveArgs]};
+    for(const key of Object.keys(args)) {
+        [TypeName]FactoryConfig.ctorArgs[key] = args[key];
+    };
+    const container = factory.getContainer([TypeName]FactoryConfig);
+        
     container.ensureInstance();
     return container.references;
 }

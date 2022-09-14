@@ -5,8 +5,8 @@ describe('when asking the WebSocketClientRequestMessageBus factory to create an 
     const {scopeId} = require('C:\\component\\spec\\factory\\websocketclientrequestmessagebus.factory.spec.variables.json');
 
     // Act
-    const {webSocketClientRequestMessagebus} = createWebSocketClientRequestMessageBus({scopeId});
+    const {webSocketClientRequestMessageBus} = createWebSocketClientRequestMessageBus({scopeId});
     // Assert
-    expect(webSocketClientRequestMessagebus).not.toBeNull();
+    expect(webSocketClientRequestMessageBus).not.toBeNull();
   });
 });

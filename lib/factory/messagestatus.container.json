@@ -1,0 +1,19 @@
+{
+    "MessageStatusFactoryContainer": {
+        "bindings": {
+            "global": {
+                "primitiveArgs": {
+                    "scopeId": "global",
+                    "messageStatusCode": null
+                },
+                "refArgs": {},
+                "instance": {
+                    "messageStatus": null
+                }
+            }
+        },
+        "type": "type:MessageStatus",
+        "variableName": "messageStatus",
+        "isSingleton": false
+    }
+}

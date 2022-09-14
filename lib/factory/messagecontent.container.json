@@ -1,0 +1,29 @@
+{
+    "MessageContentFactoryContainer": {
+        "bindings": {
+            "global": {
+                "primitiveArgs": {
+                    "scopeId": "global",
+                    "data": null,
+                    "recipientHost": null,
+                    "recipientPort": null,
+                    "metadata": null,
+                    "token": null,
+                    "senderHost": null,
+                    "senderPort": null
+                },
+                "refArgs": {
+                    "messageContentMetadata": "type:MessageContentMetadata",
+                    "userSessions": "type:UserSessions",
+                    "messageMetadata": "type:MessageMetadata"
+                },
+                "instance": {
+                    "messageContent": null
+                }
+            }
+        },
+        "type": "type:MessageContent",
+        "variableName": "messageContent",
+        "isSingleton": false
+    }
+}

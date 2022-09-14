@@ -11,5 +11,7 @@
             "senderHost": "localhost",
             "senderPort": 3000
         }
-    }
+    },
+    "clientRequestMessageBus": null,
+    "clientResponseMessageBus": null
 }

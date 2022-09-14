@@ -1,0 +1,20 @@
+{
+    "WebSocketClientResponseMessageBusFactoryContainer": {
+        "bindings": {
+            "global": {
+                "primitiveArgs": {
+                    "scopeId": "global"
+                },
+                "refArgs": {
+                    "websocketClientResponseMessageQueueBinding": "type:WebSocketClientResponseMessageQueueBinding"
+                },
+                "instance": {
+                    "webSocketClientResponseMessageBus": null
+                }
+            }
+        },
+        "type": "type:WebSocketClientResponseMessageBus",
+        "variableName": "webSocketClientResponseMessageBus",
+        "isSingleton": false
+    }
+}

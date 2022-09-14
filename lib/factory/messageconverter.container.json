@@ -1,0 +1,18 @@
+{
+    "MessageConverterFactoryContainer": {
+        "bindings": {
+            "global": {
+                "primitiveArgs": {
+                    "scopeId": "global"
+                },
+                "refArgs": {},
+                "instance": {
+                    "messageConverter": null
+                }
+            }
+        },
+        "type": "type:MessageConverter",
+        "variableName": "messageConverter",
+        "isSingleton": false
+    }
+}

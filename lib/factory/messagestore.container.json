@@ -1,0 +1,18 @@
+{
+    "MessageStoreFactoryContainer": {
+        "bindings": {
+            "global": {
+                "primitiveArgs": {
+                    "scopeId": "global"
+                },
+                "refArgs": {},
+                "instance": {
+                    "messageStore": null
+                }
+            }
+        },
+        "type": "type:MessageStore",
+        "variableName": "messageStore",
+        "isSingleton": false
+    }
+}

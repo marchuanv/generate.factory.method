@@ -1,0 +1,20 @@
+{
+    "SenderAddressFactoryContainer": {
+        "bindings": {
+            "global": {
+                "primitiveArgs": {
+                    "scopeId": "global",
+                    "senderHost": null,
+                    "senderPort": null
+                },
+                "refArgs": {},
+                "instance": {
+                    "senderAddress": null
+                }
+            }
+        },
+        "type": "type:SenderAddress",
+        "variableName": "senderAddress",
+        "isSingleton": false
+    }
+}

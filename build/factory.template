@@ -1,19 +1,24 @@
 const { Factory } = require('../factory.js');
 const factory = new Factory();
 [FactoryRequireScripts]
+const { [TypeName]FactoryContainer } = require('[ContainerScriptPath]');
 const { [TypeName] } = require('[ScriptPath]');
-const get[TypeName]FactoryConfig = require('[ConfigScriptPath]');
+
 /**
-* IsSingleton: [IsSingleton] 
-* Create [TypeName] 
-* @param {[SimpleArgs]}
+* IsSingleton: [TypeName]FactoryContainer.singleton
+* Create [TypeName]
+* @param {[PrimitiveArgs]}
 */
-function create[TypeName]({[SimpleArgs]}) {
-    const container = factory.getContainer({ scopeId, type: [TypeName], variableName:'[TypeVariableName]', singleton: [IsSingleton] });
-    container.config(get[TypeName]FactoryConfig());
-    container.reference({[SimpleArgsFiltered]});
-        [FactoryCalls]
-    container.ensureInstance();
-    return container.references;
+function create[TypeName]({[PrimitiveArgs]}) {
+    const args = {[PrimitiveArgs]};
+    const { scopeId } = args;
+    const binding = [TypeName]FactoryContainer.bindings[scopeId];
+    if (!binding) {
+        throw new Error(`no binding found for scope: ${scopeId}`);
+    }
+    for(const key of Object.keys(args)) {
+       binding.primitiveArgs[key] = args[key];
+    };
+    return factory.getInstance({ scopeId }, [TypeName]FactoryContainer);
 }
 module.exports = { create[TypeName] };
