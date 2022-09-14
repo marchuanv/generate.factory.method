@@ -1,8 +1,9 @@
 const { Factory } = require('../factory.js');
-const factory = new Factory();
-[FactoryRequireScripts]
 const { [TypeName]FactoryContainer } = require('[ContainerScriptPath]');
 const { [TypeName] } = require('[ScriptPath]');
+[FactoryRequireScripts]
+
+const factory = new Factory([TypeName]FactoryContainer);
 
 /**
 * IsSingleton: [TypeName]FactoryContainer.singleton
@@ -16,8 +17,10 @@ function create[TypeName]({[PrimitiveArgs]}) {
         throw new Error(`no binding found for scope: ${scopeId}`);
     }
     for(const key of Object.keys(args)) {
-       binding.primitiveArgs[key] = args[key];
+        if (binding.primitiveArgs[key]) {
+            binding.primitiveArgs[key] = args[key];
+        }
     };
-    return factory.getInstance({ scopeId }, [TypeName]FactoryContainer);
+    return factory.getInstance({ scopeId });
 }
 module.exports = { create[TypeName] };

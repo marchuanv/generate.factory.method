@@ -1,0 +1,10 @@
+{
+    "ContentTypeFactoryContainerTestBinding": {
+        "primitiveArgs": {
+            "scopeId": "Test",
+            "name": null
+        },
+        "referenceArgs": {},
+        "instance": null
+    }
+}

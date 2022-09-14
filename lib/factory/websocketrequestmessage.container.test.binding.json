@@ -1,0 +1,51 @@
+{
+    "WebSocketRequestMessageFactoryContainerTestBinding": {
+        "primitiveArgs": {
+            "scopeId": "Test",
+            "messageStatusCode": null,
+            "Id": null,
+            "data": null,
+            "recipientHost": null,
+            "recipientPort": null,
+            "metadata": null,
+            "token": null,
+            "senderHost": null,
+            "senderPort": null
+        },
+        "referenceArgs": {
+            "message": {
+                "factoryMethod": "createMessage",
+                "factoryScript": "C://component//lib//factory//message.factory.js"
+            },
+            "messageStatus": {
+                "factoryMethod": "createMessageStatus",
+                "factoryScript": "C://component//lib//factory//messagestatus.factory.js"
+            },
+            "messageContent": {
+                "factoryMethod": "createMessageContent",
+                "factoryScript": "C://component//lib//factory//messagecontent.factory.js"
+            },
+            "messageContentMetadata": {
+                "factoryMethod": "createMessageContentMetadata",
+                "factoryScript": "C://component//lib//factory//messagecontentmetadata.factory.js"
+            },
+            "userSessions": {
+                "factoryMethod": "createUserSessions",
+                "factoryScript": "C://component//lib//factory//usersessions.factory.js"
+            },
+            "messageMetadata": {
+                "factoryMethod": "createMessageMetadata",
+                "factoryScript": "C://component//lib//factory//messagemetadata.factory.js"
+            },
+            "recipientAddress": {
+                "factoryMethod": "createRecipientAddress",
+                "factoryScript": "C://component//lib//factory//recipientaddress.factory.js"
+            },
+            "senderAddress": {
+                "factoryMethod": "createSenderAddress",
+                "factoryScript": "C://component//lib//factory//senderaddress.factory.js"
+            }
+        },
+        "instance": null
+    }
+}

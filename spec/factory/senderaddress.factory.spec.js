@@ -2,10 +2,13 @@ const { createSenderAddress } = require('C:\\component\\lib\\factory\\senderaddr
 describe('when asking the SenderAddress factory to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
-    const {scopeId,senderHost,senderPort} = require('C:\\component\\spec\\factory\\senderaddress.factory.spec.variables.json');
-
+    const specInput = {
+    "scopeId": "Test",
+    "senderHost": null,
+    "senderPort": null
+}
     // Act
-    const {senderAddress} = createSenderAddress({scopeId,senderHost,senderPort});
+    const {senderAddress} = createSenderAddress(scopeId,senderHost,senderPort);
     // Assert
     expect(senderAddress).not.toBeNull();
   });

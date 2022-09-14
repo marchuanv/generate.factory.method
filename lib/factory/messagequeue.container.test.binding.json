@@ -1,0 +1,14 @@
+{
+    "MessageQueueFactoryContainerTestBinding": {
+        "primitiveArgs": {
+            "scopeId": "Test"
+        },
+        "referenceArgs": {
+            "logger": {
+                "factoryMethod": "createLogger",
+                "factoryScript": "C://component//lib//factory//logger.factory.js"
+            }
+        },
+        "instance": null
+    }
+}

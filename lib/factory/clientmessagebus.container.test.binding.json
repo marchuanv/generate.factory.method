@@ -1,0 +1,16 @@
+{
+    "ClientMessageBusFactoryContainerTestBinding": {
+        "primitiveArgs": {
+            "scopeId": "Test",
+            "clientRequestMessageBus": null,
+            "clientResponseMessageBus": null
+        },
+        "referenceArgs": {
+            "messageConverter": {
+                "factoryMethod": "createMessageConverter",
+                "factoryScript": "C://component//lib//factory//messageconverter.factory.js"
+            }
+        },
+        "instance": null
+    }
+}

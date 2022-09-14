@@ -1,0 +1,17 @@
+{
+    "SenderAddressFactoryContainer": {
+        "Id": "[Id]",
+        "typeName": "SenderAddress",
+        "typeVariableName": "senderAddress",
+        "bindings": [
+            {
+                "name": "Global",
+                "bindingFilePath": "C://component//lib//factory//senderaddress.container.global.binding.json"
+            },
+            {
+                "name": "Test",
+                "bindingFilePath": "C://component//lib//factory//senderaddress.container.test.binding.json"
+            }
+        ]
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "MessageQueueFactoryContainerGlobalBinding": {
+        "primitiveArgs": {
+            "scopeId": "Global"
+        },
+        "referenceArgs": {
+            "logger": {
+                "factoryMethod": "createLogger",
+                "factoryScript": "C://component//lib//factory//logger.factory.js"
+            }
+        },
+        "instance": null
+    }
+}

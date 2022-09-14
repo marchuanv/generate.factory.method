@@ -2,10 +2,11 @@ const { createHttpClientRequestMessageBus } = require('C:\\component\\lib\\facto
 describe('when asking the HttpClientRequestMessageBus factory to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
-    const {scopeId} = require('C:\\component\\spec\\factory\\httpclientrequestmessagebus.factory.spec.variables.json');
-
+    const specInput = {
+    "scopeId": "Test"
+}
     // Act
-    const {httpClientRequestMessageBus} = createHttpClientRequestMessageBus({scopeId});
+    const {httpClientRequestMessageBus} = createHttpClientRequestMessageBus(scopeId);
     // Assert
     expect(httpClientRequestMessageBus).not.toBeNull();
   });

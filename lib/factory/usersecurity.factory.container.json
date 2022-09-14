@@ -1,0 +1,17 @@
+{
+    "UserSecurityFactoryContainer": {
+        "Id": "[Id]",
+        "typeName": "UserSecurity",
+        "typeVariableName": "userSecurity",
+        "bindings": [
+            {
+                "name": "Global",
+                "bindingFilePath": "C://component//lib//factory//usersecurity.container.global.binding.json"
+            },
+            {
+                "name": "Test",
+                "bindingFilePath": "C://component//lib//factory//usersecurity.container.test.binding.json"
+            }
+        ]
+    }
+}

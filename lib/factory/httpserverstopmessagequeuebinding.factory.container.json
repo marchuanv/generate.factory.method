@@ -1,0 +1,17 @@
+{
+    "HttpServerStopMessageQueueBindingFactoryContainer": {
+        "Id": "[Id]",
+        "typeName": "HttpServerStopMessageQueueBinding",
+        "typeVariableName": "httpServerStopMessageQueueBinding",
+        "bindings": [
+            {
+                "name": "Global",
+                "bindingFilePath": "C://component//lib//factory//httpserverstopmessagequeuebinding.container.global.binding.json"
+            },
+            {
+                "name": "Test",
+                "bindingFilePath": "C://component//lib//factory//httpserverstopmessagequeuebinding.container.test.binding.json"
+            }
+        ]
+    }
+}

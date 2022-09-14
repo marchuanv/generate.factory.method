@@ -1,0 +1,17 @@
+{
+    "WebSocketServerRequestMessageBusFactoryContainer": {
+        "Id": "[Id]",
+        "typeName": "WebSocketServerRequestMessageBus",
+        "typeVariableName": "webSocketServerRequestMessageBus",
+        "bindings": [
+            {
+                "name": "Global",
+                "bindingFilePath": "C://component//lib//factory//websocketserverrequestmessagebus.container.global.binding.json"
+            },
+            {
+                "name": "Test",
+                "bindingFilePath": "C://component//lib//factory//websocketserverrequestmessagebus.container.test.binding.json"
+            }
+        ]
+    }
+}

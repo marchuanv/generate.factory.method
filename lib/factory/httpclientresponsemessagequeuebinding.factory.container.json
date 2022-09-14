@@ -1,0 +1,17 @@
+{
+    "HttpClientResponseMessageQueueBindingFactoryContainer": {
+        "Id": "[Id]",
+        "typeName": "HttpClientResponseMessageQueueBinding",
+        "typeVariableName": "httpClientResponseMessageQueueBinding",
+        "bindings": [
+            {
+                "name": "Global",
+                "bindingFilePath": "C://component//lib//factory//httpclientresponsemessagequeuebinding.container.global.binding.json"
+            },
+            {
+                "name": "Test",
+                "bindingFilePath": "C://component//lib//factory//httpclientresponsemessagequeuebinding.container.test.binding.json"
+            }
+        ]
+    }
+}

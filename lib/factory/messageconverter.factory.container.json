@@ -1,0 +1,17 @@
+{
+    "MessageConverterFactoryContainer": {
+        "Id": "[Id]",
+        "typeName": "MessageConverter",
+        "typeVariableName": "messageConverter",
+        "bindings": [
+            {
+                "name": "Global",
+                "bindingFilePath": "C://component//lib//factory//messageconverter.container.global.binding.json"
+            },
+            {
+                "name": "Test",
+                "bindingFilePath": "C://component//lib//factory//messageconverter.container.test.binding.json"
+            }
+        ]
+    }
+}

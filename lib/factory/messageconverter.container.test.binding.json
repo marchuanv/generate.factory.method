@@ -1,0 +1,9 @@
+{
+    "MessageConverterFactoryContainerTestBinding": {
+        "primitiveArgs": {
+            "scopeId": "Test"
+        },
+        "referenceArgs": {},
+        "instance": null
+    }
+}

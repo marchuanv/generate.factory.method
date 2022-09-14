@@ -1,0 +1,22 @@
+{
+    "WebSocketClientResponseMessageBusFactoryContainerGlobalBinding": {
+        "primitiveArgs": {
+            "scopeId": "Global"
+        },
+        "referenceArgs": {
+            "websocketClientResponseMessageQueueBinding": {
+                "factoryMethod": "createWebSocketClientResponseMessageQueueBinding",
+                "factoryScript": "C://component//lib//factory//websocketclientresponsemessagequeuebinding.factory.js"
+            },
+            "messageQueue": {
+                "factoryMethod": "createMessageQueue",
+                "factoryScript": "C://component//lib//factory//messagequeue.factory.js"
+            },
+            "logger": {
+                "factoryMethod": "createLogger",
+                "factoryScript": "C://component//lib//factory//logger.factory.js"
+            }
+        },
+        "instance": null
+    }
+}

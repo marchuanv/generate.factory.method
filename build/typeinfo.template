@@ -5,10 +5,9 @@
     "factoryScriptPath":"[FactoryScriptPath]",
     "minFactoryScriptPath":"[MinFactoryScriptPath]",
     "specScriptPath":"[SpecScriptPath]",
-    "specVariablesPath":"[SpecVariablesPath]",
     "children":[[ChildrenArray]],
     "passes": [[PassesArray]],
     "variableName":"[VariableName]",
     "variableValue":"[VariableValue]",
-    "singleton": "[IsSingleton]"
+    "containerBindingScriptPath": "[ContainerBindingScriptPath]"
 }

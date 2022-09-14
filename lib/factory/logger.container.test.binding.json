@@ -1,0 +1,9 @@
+{
+    "LoggerFactoryContainerTestBinding": {
+        "primitiveArgs": {
+            "scopeId": "Test"
+        },
+        "referenceArgs": {},
+        "instance": null
+    }
+}

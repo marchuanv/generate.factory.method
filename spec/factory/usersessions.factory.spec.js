@@ -2,10 +2,11 @@ const { createUserSessions } = require('C:\\component\\lib\\factory\\usersession
 describe('when asking the UserSessions factory to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
-    const {scopeId} = require('C:\\component\\spec\\factory\\usersessions.factory.spec.variables.json');
-
+    const specInput = {
+    "scopeId": "Test"
+}
     // Act
-    const {userSessions} = createUserSessions({scopeId});
+    const {userSessions} = createUserSessions(scopeId);
     // Assert
     expect(userSessions).not.toBeNull();
   });

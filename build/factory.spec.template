@@ -4,7 +4,7 @@ describe('when asking the [TypeName] factory to create an instance', function() 
     // Arrange
     [SpecArrangeVariables]
     // Act
-    const {[TypeVariableName]} = create[TypeName]({[Args]});
+    const {[TypeVariableName]} = create[TypeName]([Args]);
     // Assert
     expect([TypeVariableName]).not.toBeNull();
   });

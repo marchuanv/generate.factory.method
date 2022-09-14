@@ -1,0 +1,10 @@
+{
+    "ContentTypeFactoryContainerGlobalBinding": {
+        "primitiveArgs": {
+            "scopeId": "Global",
+            "name": null
+        },
+        "referenceArgs": {},
+        "instance": null
+    }
+}

@@ -2,10 +2,11 @@ const { createMessageConverter } = require('C:\\component\\lib\\factory\\message
 describe('when asking the MessageConverter factory to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
-    const {scopeId} = require('C:\\component\\spec\\factory\\messageconverter.factory.spec.variables.json');
-
+    const specInput = {
+    "scopeId": "Test"
+}
     // Act
-    const {messageConverter} = createMessageConverter({scopeId});
+    const {messageConverter} = createMessageConverter(scopeId);
     // Assert
     expect(messageConverter).not.toBeNull();
   });

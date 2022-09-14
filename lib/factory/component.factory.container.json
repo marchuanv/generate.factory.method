@@ -1,0 +1,17 @@
+{
+    "ComponentFactoryContainer": {
+        "Id": "[Id]",
+        "typeName": "Component",
+        "typeVariableName": "component",
+        "bindings": [
+            {
+                "name": "Global",
+                "bindingFilePath": "C://component//lib//factory//component.container.global.binding.json"
+            },
+            {
+                "name": "Test",
+                "bindingFilePath": "C://component//lib//factory//component.container.test.binding.json"
+            }
+        ]
+    }
+}

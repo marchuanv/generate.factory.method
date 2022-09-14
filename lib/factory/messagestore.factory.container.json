@@ -1,0 +1,17 @@
+{
+    "MessageStoreFactoryContainer": {
+        "Id": "[Id]",
+        "typeName": "MessageStore",
+        "typeVariableName": "messageStore",
+        "bindings": [
+            {
+                "name": "Global",
+                "bindingFilePath": "C://component//lib//factory//messagestore.container.global.binding.json"
+            },
+            {
+                "name": "Test",
+                "bindingFilePath": "C://component//lib//factory//messagestore.container.test.binding.json"
+            }
+        ]
+    }
+}

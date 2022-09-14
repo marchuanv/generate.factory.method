@@ -1,0 +1,11 @@
+{
+    "RecipientAddressFactoryContainerTestBinding": {
+        "primitiveArgs": {
+            "scopeId": "Test",
+            "recipientHost": null,
+            "recipientPort": null
+        },
+        "referenceArgs": {},
+        "instance": null
+    }
+}

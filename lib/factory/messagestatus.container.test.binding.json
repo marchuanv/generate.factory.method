@@ -1,0 +1,10 @@
+{
+    "MessageStatusFactoryContainerTestBinding": {
+        "primitiveArgs": {
+            "scopeId": "Test",
+            "messageStatusCode": null
+        },
+        "referenceArgs": {},
+        "instance": null
+    }
+}

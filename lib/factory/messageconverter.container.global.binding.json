@@ -1,0 +1,9 @@
+{
+    "MessageConverterFactoryContainerGlobalBinding": {
+        "primitiveArgs": {
+            "scopeId": "Global"
+        },
+        "referenceArgs": {},
+        "instance": null
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "HttpClientRequestMessageBusFactoryContainerGlobalBinding": {
+        "primitiveArgs": {
+            "scopeId": "Global"
+        },
+        "referenceArgs": {
+            "httpClientRequestMessageQueueBinding": {
+                "factoryMethod": "createHttpClientRequestMessageQueueBinding",
+                "factoryScript": "C://component//lib//factory//httpclientrequestmessagequeuebinding.factory.js"
+            },
+            "messageQueue": {
+                "factoryMethod": "createMessageQueue",
+                "factoryScript": "C://component//lib//factory//messagequeue.factory.js"
+            },
+            "logger": {
+                "factoryMethod": "createLogger",
+                "factoryScript": "C://component//lib//factory//logger.factory.js"
+            }
+        },
+        "instance": null
+    }
+}

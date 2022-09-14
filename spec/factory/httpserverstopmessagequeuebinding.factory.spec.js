@@ -2,10 +2,11 @@ const { createHttpServerStopMessageQueueBinding } = require('C:\\component\\lib\
 describe('when asking the HttpServerStopMessageQueueBinding factory to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
-    const {scopeId} = require('C:\\component\\spec\\factory\\httpserverstopmessagequeuebinding.factory.spec.variables.json');
-
+    const specInput = {
+    "scopeId": "Test"
+}
     // Act
-    const {httpServerStopMessageQueueBinding} = createHttpServerStopMessageQueueBinding({scopeId});
+    const {httpServerStopMessageQueueBinding} = createHttpServerStopMessageQueueBinding(scopeId);
     // Assert
     expect(httpServerStopMessageQueueBinding).not.toBeNull();
   });

@@ -2,10 +2,12 @@ const { createMessageContentMetadata } = require('C:\\component\\lib\\factory\\m
 describe('when asking the MessageContentMetadata factory to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
-    const {scopeId,data} = require('C:\\component\\spec\\factory\\messagecontentmetadata.factory.spec.variables.json');
-
+    const specInput = {
+    "scopeId": "Test",
+    "data": null
+}
     // Act
-    const {messageContentMetadata} = createMessageContentMetadata({scopeId,data});
+    const {messageContentMetadata} = createMessageContentMetadata(scopeId,data);
     // Assert
     expect(messageContentMetadata).not.toBeNull();
   });

@@ -1,0 +1,17 @@
+{
+    "MessageQueueFactoryContainer": {
+        "Id": "[Id]",
+        "typeName": "MessageQueue",
+        "typeVariableName": "messageQueue",
+        "bindings": [
+            {
+                "name": "Global",
+                "bindingFilePath": "C://component//lib//factory//messagequeue.container.global.binding.json"
+            },
+            {
+                "name": "Test",
+                "bindingFilePath": "C://component//lib//factory//messagequeue.container.test.binding.json"
+            }
+        ]
+    }
+}

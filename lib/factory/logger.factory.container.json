@@ -1,0 +1,17 @@
+{
+    "LoggerFactoryContainer": {
+        "Id": "[Id]",
+        "typeName": "Logger",
+        "typeVariableName": "logger",
+        "bindings": [
+            {
+                "name": "Global",
+                "bindingFilePath": "C://component//lib//factory//logger.container.global.binding.json"
+            },
+            {
+                "name": "Test",
+                "bindingFilePath": "C://component//lib//factory//logger.container.test.binding.json"
+            }
+        ]
+    }
+}

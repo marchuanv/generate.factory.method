@@ -2,10 +2,11 @@ const { createWebSocketServerResponseMessageQueueBinding } = require('C:\\compon
 describe('when asking the WebSocketServerResponseMessageQueueBinding factory to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
-    const {scopeId} = require('C:\\component\\spec\\factory\\websocketserverresponsemessagequeuebinding.factory.spec.variables.json');
-
+    const specInput = {
+    "scopeId": "Test"
+}
     // Act
-    const {webSocketServerResponseMessageQueueBinding} = createWebSocketServerResponseMessageQueueBinding({scopeId});
+    const {webSocketServerResponseMessageQueueBinding} = createWebSocketServerResponseMessageQueueBinding(scopeId);
     // Assert
     expect(webSocketServerResponseMessageQueueBinding).not.toBeNull();
   });

@@ -1,0 +1,24 @@
+{
+    "MessageMetadataFactoryContainerGlobalBinding": {
+        "primitiveArgs": {
+            "scopeId": "Global",
+            "recipientHost": null,
+            "recipientPort": null,
+            "metadata": null,
+            "token": null,
+            "senderHost": null,
+            "senderPort": null
+        },
+        "referenceArgs": {
+            "recipientAddress": {
+                "factoryMethod": "createRecipientAddress",
+                "factoryScript": "C://component//lib//factory//recipientaddress.factory.js"
+            },
+            "senderAddress": {
+                "factoryMethod": "createSenderAddress",
+                "factoryScript": "C://component//lib//factory//senderaddress.factory.js"
+            }
+        },
+        "instance": null
+    }
+}

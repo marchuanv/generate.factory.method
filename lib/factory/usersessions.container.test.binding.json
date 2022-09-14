@@ -1,0 +1,9 @@
+{
+    "UserSessionsFactoryContainerTestBinding": {
+        "primitiveArgs": {
+            "scopeId": "Test"
+        },
+        "referenceArgs": {},
+        "instance": null
+    }
+}

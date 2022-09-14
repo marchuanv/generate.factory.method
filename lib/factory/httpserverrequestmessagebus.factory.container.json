@@ -1,0 +1,17 @@
+{
+    "HttpServerRequestMessageBusFactoryContainer": {
+        "Id": "[Id]",
+        "typeName": "HttpServerRequestMessageBus",
+        "typeVariableName": "httpServerRequestMessageBus",
+        "bindings": [
+            {
+                "name": "Global",
+                "bindingFilePath": "C://component//lib//factory//httpserverrequestmessagebus.container.global.binding.json"
+            },
+            {
+                "name": "Test",
+                "bindingFilePath": "C://component//lib//factory//httpserverrequestmessagebus.container.test.binding.json"
+            }
+        ]
+    }
+}

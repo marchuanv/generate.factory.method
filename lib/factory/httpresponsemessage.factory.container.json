@@ -1,0 +1,17 @@
+{
+    "HttpResponseMessageFactoryContainer": {
+        "Id": "[Id]",
+        "typeName": "HttpResponseMessage",
+        "typeVariableName": "httpResponseMessage",
+        "bindings": [
+            {
+                "name": "Global",
+                "bindingFilePath": "C://component//lib//factory//httpresponsemessage.container.global.binding.json"
+            },
+            {
+                "name": "Test",
+                "bindingFilePath": "C://component//lib//factory//httpresponsemessage.container.test.binding.json"
+            }
+        ]
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "MessageStatusFactoryContainerGlobalBinding": {
+        "primitiveArgs": {
+            "scopeId": "Global",
+            "messageStatusCode": null
+        },
+        "referenceArgs": {},
+        "instance": null
+    }
+}

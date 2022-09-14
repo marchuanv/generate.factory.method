@@ -1,0 +1,22 @@
+{
+    "HttpClientResponseMessageBusFactoryContainerTestBinding": {
+        "primitiveArgs": {
+            "scopeId": "Test"
+        },
+        "referenceArgs": {
+            "httpClientResponseMessageQueueBinding": {
+                "factoryMethod": "createHttpClientResponseMessageQueueBinding",
+                "factoryScript": "C://component//lib//factory//httpclientresponsemessagequeuebinding.factory.js"
+            },
+            "messageQueue": {
+                "factoryMethod": "createMessageQueue",
+                "factoryScript": "C://component//lib//factory//messagequeue.factory.js"
+            },
+            "logger": {
+                "factoryMethod": "createLogger",
+                "factoryScript": "C://component//lib//factory//logger.factory.js"
+            }
+        },
+        "instance": null
+    }
+}

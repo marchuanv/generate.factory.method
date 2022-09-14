@@ -1,0 +1,16 @@
+{
+    "ServerMessageBusFactoryContainerGlobalBinding": {
+        "primitiveArgs": {
+            "scopeId": "Global",
+            "serverResponseMessageBus": null,
+            "serverRequestMessageBus": null
+        },
+        "referenceArgs": {
+            "messageConverter": {
+                "factoryMethod": "createMessageConverter",
+                "factoryScript": "C://component//lib//factory//messageconverter.factory.js"
+            }
+        },
+        "instance": null
+    }
+}

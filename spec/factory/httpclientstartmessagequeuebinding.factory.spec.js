@@ -2,10 +2,11 @@ const { createHttpClientStartMessageQueueBinding } = require('C:\\component\\lib
 describe('when asking the HttpClientStartMessageQueueBinding factory to create an instance', function() {
   it("it should succeed without any errors", function() {
     // Arrange
-    const {scopeId} = require('C:\\component\\spec\\factory\\httpclientstartmessagequeuebinding.factory.spec.variables.json');
-
+    const specInput = {
+    "scopeId": "Test"
+}
     // Act
-    const {httpClientStartMessageQueueBinding} = createHttpClientStartMessageQueueBinding({scopeId});
+    const {httpClientStartMessageQueueBinding} = createHttpClientStartMessageQueueBinding(scopeId);
     // Assert
     expect(httpClientStartMessageQueueBinding).not.toBeNull();
   });

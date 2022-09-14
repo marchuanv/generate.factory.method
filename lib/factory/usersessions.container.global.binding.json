@@ -1,0 +1,9 @@
+{
+    "UserSessionsFactoryContainerGlobalBinding": {
+        "primitiveArgs": {
+            "scopeId": "Global"
+        },
+        "referenceArgs": {},
+        "instance": null
+    }
+}

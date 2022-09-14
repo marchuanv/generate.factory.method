@@ -1,0 +1,17 @@
+{
+    "HttpRequestMessageFactoryContainer": {
+        "Id": "[Id]",
+        "typeName": "HttpRequestMessage",
+        "typeVariableName": "httpRequestMessage",
+        "bindings": [
+            {
+                "name": "Global",
+                "bindingFilePath": "C://component//lib//factory//httprequestmessage.container.global.binding.json"
+            },
+            {
+                "name": "Test",
+                "bindingFilePath": "C://component//lib//factory//httprequestmessage.container.test.binding.json"
+            }
+        ]
+    }
+}

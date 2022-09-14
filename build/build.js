@@ -12,11 +12,10 @@ const scripts = rootScripts.concat(httpScripts.concat(websocketScripts)).filter(
 const factoryTemplate = readFileSync(path.join(__dirname,'factory.template'),'utf8');
 const factorySpecTemplate = readFileSync(path.join(__dirname,'factory.spec.template'),'utf8');
 const factoryContainerTemplate = readFileSync(path.join(__dirname,'factory.container.template.json'),'utf8');
+const factoryContainerBindingTemplate = readFileSync(path.join(__dirname,'factory.container.binding.template.json'),'utf8');
 const factoryRequireTemplate = readFileSync(path.join(__dirname,'factory.require.template'),'utf8');
-const specVariablesTemplate = readFileSync(path.join(__dirname,'spec.variables.template'),'utf8');
 const typeInfoTemplate = readFileSync(path.join(__dirname,'typeinfo.template'),'utf8');
 const factoryMinificationTemplate = readFileSync(path.join(__dirname,'factory.minification.template'),'utf8');
-const singletonConfig = require(path.join(__dirname,'singletons.json'),'utf8');
 const componentMinPath = path.join(__dirname, '../component.min.js');
 const factory = require(path.join(libDir,'factory.js'));
 
@@ -50,26 +49,26 @@ function getDependencyTree(typeInfo, pass = 'firstpass', types = []) {
                 const type = sc[key];
                 
                 const scriptName = type.name.toLowerCase();
-                const containerScriptName = `${scriptName}.container.json`;
+                const containerScriptName = `${scriptName}.factory.container.json`;
                 const containerScriptPath = path.join(libDir, 'factory', containerScriptName);
+                const containerBindingScriptName = `${scriptName}.container.global.binding.json`;
+                const containerBindingScriptPath = path.join(libDir, 'factory', containerBindingScriptName);
                 const factoryScriptName = `${scriptName}.factory.js`;
                 const minFactoryScriptName = `${scriptName}.factory.min.js`;
                 const specScriptName = `${scriptName}.factory.spec.js`;
                 const factoryScriptPath = path.join(libDir, 'factory', factoryScriptName);
                 const minFactoryScriptPath = path.join(libDir, 'factory', minFactoryScriptName);
                 const specScriptPath = path.join(specsFactoryDir, specScriptName);
-                const specVariablesPath =  path.join(specsFactoryDir, `${scriptName}.factory.spec.variables.json`);
 
-                const singleton = singletonConfig.find(cConf => cConf.typeName.toLowerCase() === key.toLowerCase() && cConf.singleton) ? true : false;
                 const parameters = utils.getFunctionParams(type) || [];
                 const children = parameters.map(param => utils.getJSONObject(typeInfoTemplate
                     .replace(/\[TypeName\]/g, param.name)
                     .replace(/\[ScriptPath\]/g,'')
                     .replace(/\[ContainerScriptPath\]/g,'')
+                    .replace(/\[ContainerBindingScriptPath\]/g,'')
                     .replace(/\[FactoryScriptPath\]/g,'')
                     .replace(/\[MinFactoryScriptPath\]/g,'')
                     .replace(/\[SpecScriptPath\]/g,'')
-                    .replace(/\[SpecVariablesPath\]/g,'')
                     .replace(/\[ChildrenArray\]/g,'')
                     .replace(/\[PassesArray\]/g,'')
                     .replace(/\[VariableName\]/g, param.name)
@@ -79,15 +78,14 @@ function getDependencyTree(typeInfo, pass = 'firstpass', types = []) {
                     .replace(/\[TypeName\]/g, type.name)
                     .replace(/\[ScriptPath\]/g, scriptPath.replace(/\\/g,'\\\\') )
                     .replace(/\[ContainerScriptPath\]/g, containerScriptPath.replace(/\\/g,'\\\\') )
+                    .replace(/\[ContainerBindingScriptPath\]/g, containerBindingScriptPath.replace(/\\/g,'\\\\') )
                     .replace(/\[FactoryScriptPath\]/g, factoryScriptPath.replace(/\\/g,'\\\\'))
                     .replace(/\[MinFactoryScriptPath\]/g, minFactoryScriptPath.replace(/\\/g,'\\\\'))
                     .replace(/\[SpecScriptPath\]/g, specScriptPath.replace(/\\/g,'\\\\'))
-                    .replace(/\[SpecVariablesPath\]/g, specVariablesPath.replace(/\\/g,'\\\\'))
                     .replace(/\[ChildrenArray\]/g, children.map(child => utils.getJSONString(child)).join(','))
                     .replace(/\[PassesArray\]/g, [])
                     .replace(/\[VariableName\]/g, '')
                     .replace(/\[VariableValue\]/g, '')
-                    .replace(/\[IsSingleton\]/g, singleton)
                 );
                 types = types.concat(children).concat(typeInfo);
             } catch (err) {
@@ -150,113 +148,109 @@ for(const info of getDependencyTree()) {
     if (!info.scriptPath) {
         continue;
     }
-    const primitiveArgs = ['scopeId'];
-    const refArgs = [];
+    const referenceArgs = {};
+    const primitiveArgs = { scopeId: null };
+
     const factoryCalls = [];
     let factoryRequireScripts =[];
-    walkDependencyTree(info, (typeInfo, breakCallback) => {
-        if (typeInfo.scriptPath) {
-            const childPrimitiveArgsArgs = ['scopeId'];
-            walkDependencyTree(typeInfo, (moreTypeInfo) => {
-                if (!moreTypeInfo.scriptPath) {
-                    if (!childPrimitiveArgsArgs.find(x => x === moreTypeInfo.variableName)) {
-                        childPrimitiveArgsArgs.push(moreTypeInfo.variableName);
-                    }
-                }
-            });
-            const factoryRequire = factoryRequireTemplate
-                .replace(/\[TypeName\]/g, typeInfo.typeName)
-                .replace(/\[RequireScriptPath\]/g, typeInfo.factoryScriptPath.replace(/\\/g,'\\\\'));
-            if (!factoryRequireScripts.find(x => x === factoryRequire)) {
-                factoryRequireScripts.push(factoryRequire);
-            }
-            if (!refArgs.find(arg => arg === `"${typeInfo.variableName}": "type:${typeInfo.typeName}"` )) {
-                refArgs.push(`"${typeInfo.variableName}": "type:${typeInfo.typeName}"`);
-            }
-           breakCallback();
-        }
-    });
 
     walkDependencyTree(info, (typeInfo) => {
-        if (!typeInfo.scriptPath) {
-            if (!primitiveArgs.find(x => x === typeInfo.variableName)) {
-                primitiveArgs.push(typeInfo.variableName);
+        if (typeInfo.scriptPath) {
+            const keys = Object.keys(referenceArgs);
+            if (!keys.find(key => key === typeInfo.variableName)) {
+                referenceArgs[typeInfo.variableName] = {
+                    factoryMethod: `create${typeInfo.typeName}`,
+                    factoryScript: typeInfo.factoryScriptPath.replace(/\\/g,'//')
+                };
+            }
+        } else {
+            const keys = Object.keys(primitiveArgs);
+            if (!keys.find(key => key === typeInfo.variableName)) {
+                primitiveArgs[typeInfo.variableName] = null;
             }
         }
     });
 
-    const factoryContainer = factoryContainerTemplate
-        .replace(/\[TypeVariableName\]/g, info.variableName)
-        .replace(/\[IsSingleton\]/g, info.singleton)
-        .replace(/\[PrimitiveArgs\]/g, `{ ${ primitiveArgs.map(sa => `"${sa}": null` ).join(',')} }`)
-        .replace(/\[RefArgs\]/g, `{ ${refArgs.join(',')} }`)
-        .replace(/\[TypeName\]/g, info.typeName);
+    if (!existsSync(info.containerScriptPath)) {
+        const factoryContainer = factoryContainerTemplate
+            .replace(/\[TypeName\]/g, info.typeName)
+            .replace(/\[TypeVariableName\]/g, info.variableName);
+        const factoryContainerJson = utils.getJSONObject(factoryContainer);
+        writeFileSync(info.containerScriptPath, utils.getJSONString(factoryContainerJson), 'utf8');
+    }
 
-    if (existsSync(info.containerScriptPath)){
-        const config = require(info.containerScriptPath);
-        const loadedFactoryContainer = config[Object.keys(config)[0]];
-        for(const bindingName of Object.keys(loadedFactoryContainer.bindings)) {
-            const binding = loadedFactoryContainer.bindings[bindingName];
-            const newPrimitiveArgs = primitiveArgs.filter(argName => Object.keys(binding.primitiveArgs).find(key => key === argName) === undefined);
-            binding.primitiveArgs['scopeId'] = bindingName;
-            for(const argName of newPrimitiveArgs) {
-                if (!binding.refArgs[argName]) {
-                    binding.primitiveArgs[argName] = null;
-                }
-            };
-            for(const argName of Object.keys(binding.primitiveArgs)) {
-                const value = binding.primitiveArgs[argName];
-                if (value && value.indexOf('type:') > -1) {
-                    refArgs.push(`"${argName}": "${value.replace('type:','')}"`);
-                    delete binding.primitiveArgs[argName];
-                }
-            };
-            const refArgObjects = refArgs.map(refArg => utils.getJSONObject(`{${refArg}}`));
-            const newRefArgs = refArgObjects.filter(refArg => Object.keys(binding.refArgs).find(key => refArg[key]) === undefined);
-            for(const arg of newRefArgs) {
-                const key = Object.keys(arg)[0];
-                const value = arg[key];
-                binding.refArgs[key] = `type:${value}`;
-            };
-            binding.instance = {};
-            binding.instance[info.variableName] = null;
+    let container = require(info.containerScriptPath);
+    const containerRootName = Object.keys(container)[0];
+    container = container[containerRootName];
+    const bindingNames = container.bindings.map(b => b.name);
+    const { Id } = container;
+    for(const bindingName of bindingNames) {
+
+        const containerBindingScriptPath = info.containerBindingScriptPath.replace('global', bindingName.toLowerCase());
+        if (!existsSync(containerBindingScriptPath)) {
+            const factoryContainerBinding = factoryContainerBindingTemplate
+                .replace(/\[BindingId\]/g, bindingName)
+                .replace(/\[TypeName\]/g, info.typeName)
+                .replace(/\[PrimitiveArgs\]/g, `{ ${ Object.keys(primitiveArgs).map(key => `"${key}": null` ).join(',')} }`)
+                .replace(/\[ReferenceArgs\]/g, utils.getJSONString(referenceArgs));
+            const factoryContainerBindingJson = utils.getJSONObject(factoryContainerBinding);
+            writeFileSync(containerBindingScriptPath, utils.getJSONString(factoryContainerBindingJson), 'utf8');
+        }
+
+        let binding = require(containerBindingScriptPath);
+        const bindingRootName = Object.keys(binding)[0];
+        binding = binding[bindingRootName];
+        const newPrimitiveArgs = Object.keys(primitiveArgs).filter(key1 => Object.keys(binding.primitiveArgs).find(key2 => key1 === key2) === undefined);
+        binding.primitiveArgs['scopeId'] = bindingName;
+        for(const argName of newPrimitiveArgs) {
+            if (!binding.referenceArgs[argName]) {
+                binding.primitiveArgs[argName] = null;
+            }
         };
-        loadedFactoryContainer.type = `type:${info.typeName}`;
-        loadedFactoryContainer.variableName = info.variableName;
-        config[Object.keys(config)[0]] = loadedFactoryContainer;
-        writeFileSync(info.containerScriptPath, utils.getJSONString(config), 'utf8');
-    } else {
-        writeFileSync(info.containerScriptPath, factoryContainer, 'utf8');
-    }
-
-    let specVariableValues = {};
-    if (existsSync(info.specVariablesPath)) {
-        specVariableValues = require(info.specVariablesPath);
-    }
-    walkDependencyTree(info,(typeInfo) => {
-        if (!typeInfo.scriptPath) {
-            if (specVariableValues[typeInfo.variableName] === undefined) {
-                specVariableValues[typeInfo.variableName] = null;
+        for(const key of Object.keys(binding.primitiveArgs)) {
+            const value = binding.primitiveArgs[key];
+            if (value && typeof value === 'object') {
+                referenceArgs[key] = value;
+                delete binding.primitiveArgs[key];
             }
+        };
+        const newRefArgs = Object.keys(referenceArgs).filter(key1 => Object.keys(binding.referenceArgs).find(key2 => key2 === key1) === undefined);
+        for(const key of newRefArgs) {
+            const value = referenceArgs[key];
+            binding.referenceArgs[key] = value;
+        };
+        const bindingRoot = {};
+        bindingRoot[bindingRootName] = binding;
+        writeFileSync(containerBindingScriptPath, utils.getJSONString(bindingRoot), 'utf8');
+      
+        const containerBinding = container.bindings.find(b => b.name === bindingName);
+        containerBinding.bindingFilePath = containerBindingScriptPath.replace(/\\/g,'//');
+        const updatedContainer = {};
+        updatedContainer[containerRootName] = container;
+        writeFileSync(info.containerScriptPath, utils.getJSONString(updatedContainer), 'utf8');
+        if (containerBinding.name.toLowerCase().indexOf('test') > -1) {
+            factoryRequireScripts.push(factoryRequireTemplate
+                .replace(/\[TypeName\]/g, info.typeName)
+                .replace(/\[RequireScriptPath\]/g, info.factoryScriptPath.replace(/\\/g,'\\\\'))
+            );
+            const factorySpec = factorySpecTemplate
+                .replace(/\[ScriptPath\]/g, info.factoryScriptPath.replace(/\\/g,'\\\\'))
+                .replace(/\[TypeName\]/g, info.typeName)
+                .replace(/\[TypeVariableName\]/g, info.variableName)
+                .replace(/\[Args\]/g, Object.keys(binding.primitiveArgs).join(','))
+                .replace(/\[SpecArrangeVariables\]/g, `const specInput = ${utils.getJSONString(binding.primitiveArgs)}` ) 
+                .replace(/\[FactoryRequireScripts\]/g, factoryRequireScripts.join('\r\n'));
+            writeFileSync(info.specScriptPath, factorySpec, 'utf8');
         }
-    });
-    writeFileSync(info.specVariablesPath, utils.getJSONString(specVariableValues), 'utf8');
+    };
 
-    let specArrangeVariables = [];
-    specArrangeVariables.unshift(specVariablesTemplate
-        .replace(/\[VariableNames\]/g, Object.keys(specVariableValues).join(','))
-        .replace(/\[IsSingleton\]/g, info.singleton)
-        .replace(/\[SpecVariablesPath\]/g, info.specVariablesPath.replace(/\\/g,'\\\\')));
-
-    const primitiveArgsFiltered = primitiveArgs.filter(sa => sa !== 'scopeId');
     const factory = factoryTemplate
         .replace(/\[Args\]/g, info.children.map(x => x.variableName) )
         .replace(/\[ScriptPath\]/g, info.scriptPath.replace(/\\/g,'\\\\'))
         .replace(/\[ContainerScriptPath\]/g, info.containerScriptPath.replace(/\\/g,'\\\\'))
         .replace(/\[TypeName\]/g, info.typeName)
         .replace(/\[FactoryCalls\]/g, factoryCalls.join('\r\n'))
-        .replace(/\[PrimitiveArgs\]/g, primitiveArgs)
-        .replace(/\[PrimitiveArgsFiltered\]/g, primitiveArgsFiltered)
+        .replace(/\[PrimitiveArgs\]/g, Object.keys(primitiveArgs).join(','))
         .replace(/\[FactoryRequireScripts\]/g, factoryRequireScripts.join('\r\n'));
     writeFileSync(info.factoryScriptPath, factory, 'utf8');
 
@@ -264,44 +258,30 @@ for(const info of getDependencyTree()) {
         .replace(/\[Args\]/g, info.children.map(x => x.variableName) )
         .replace(/\[TypeName\]/g, info.typeName)
         .replace(/\[FactoryCalls\]/g, factoryCalls.join('\r\n'))
-        .replace(/\[PrimitiveArgs\]/g, primitiveArgs)
-        .replace(/\[PrimitiveArgsFiltered\]/g, primitiveArgsFiltered)
+        .replace(/\[PrimitiveArgs\]/g, Object.keys(primitiveArgs).join(','))
         .replace(/\[TypeVariableName\]/g, info.variableName);
     writeFileSync(info.minFactoryScriptPath, factoryMinification, 'utf8');
 
-    factoryRequireScripts = [];
-    factoryRequireScripts.push(factoryRequireTemplate
-        .replace(/\[TypeName\]/g, info.typeName)
-        .replace(/\[RequireScriptPath\]/g, info.factoryScriptPath.replace(/\\/g,'\\\\'))
-    );
-
-    const factorySpec = factorySpecTemplate
-        .replace(/\[ScriptPath\]/g, info.factoryScriptPath.replace(/\\/g,'\\\\'))
-        .replace(/\[TypeName\]/g, info.typeName)
-        .replace(/\[TypeVariableName\]/g, info.variableName)
-        .replace(/\[Args\]/g, primitiveArgs )
-        .replace(/\[SpecArrangeVariables\]/g, specArrangeVariables.join('\r\n'))
-        .replace(/\[FactoryRequireScripts\]/g, factoryRequireScripts.join('\r\n'));
-    writeFileSync(info.specScriptPath, factorySpec, 'utf8');
+   
 }
 
 //minification
-const { Factory } = factory;
-writeFileSync(componentMinPath, `${getFunctionCode(Factory)};\r\n`, 'utf8');
-for(const info of getDependencyTree()) {
-    const script =  require(info.scriptPath);
-    const type = script[info.typeName];
-    appendFileSync(componentMinPath, getFunctionCode(type), 'utf8');
-}
-for(const info of getDependencyTree()) {
-    const script =  readFileSync(info.minFactoryScriptPath, 'utf8');
-    appendFileSync(componentMinPath, script, 'utf8');
-}
+// const { Factory } = factory;
+// writeFileSync(componentMinPath, `${getFunctionCode(Factory)};\r\n`, 'utf8');
+// for(const info of getDependencyTree()) {
+//     const script =  require(info.scriptPath);
+//     const type = script[info.typeName];
+//     appendFileSync(componentMinPath, getFunctionCode(type), 'utf8');
+// }
+// for(const info of getDependencyTree()) {
+//     const script =  readFileSync(info.minFactoryScriptPath, 'utf8');
+//     appendFileSync(componentMinPath, script, 'utf8');
+// }
 
-const options = { toplevel: true };
-let code = readFileSync(componentMinPath,'utf8');
-({ code } = UglifyJS.minify(code));
-if (!code) {
-    throw new Error(`could not minify ${func.name}`);
-}
-writeFileSync(componentMinPath, code, 'utf8');
+// const options = { toplevel: true };
+// let code = readFileSync(componentMinPath,'utf8');
+// ({ code } = UglifyJS.minify(code));
+// if (!code) {
+//     throw new Error(`could not minify ${func.name}`);
+// }
+// writeFileSync(componentMinPath, code, 'utf8');
