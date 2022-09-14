@@ -4,14 +4,14 @@
             "global": {
                 "primitiveArgs": {
                     "scopeId": "global",
-                    "packageJson": null,
-                    "clientRequestMessageBus": null,
-                    "clientResponseMessageBus": null
+                    "packageJson": null
                 },
                 "refArgs": {
                     "clientMessageBus": "type:ClientMessageBus",
                     "serverMessageBus": "type:ServerMessageBus",
-                    "userSessions": "type:UserSessions"
+                    "userSessions": "type:UserSessions",
+                    "clientRequestMessageBus": "type:HttpClientRequestMessageBus",
+                    "clientResponseMessageBus": "type:HttpClientResponseMessageBus"
                 },
                 "instance": {
                     "component": null
