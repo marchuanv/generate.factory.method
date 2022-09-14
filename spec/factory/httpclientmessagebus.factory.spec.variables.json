@@ -1,11 +1,4 @@
 {
     "timeout": 15000,
-    "scopeId": "httpclientmessagebusfactoryspec",
-    "httpClientRequestMessageQueueBinding": null,
-    "httpClientResponseMessageQueueBinding": null,
-    "httpClientStartMessageQueueBinding": null,
-    "httpClientStartedMessageQueueBinding": null,
-    "httpClientStopMessageQueueBinding": null,
-    "httpClientStoppedMessageQueueBinding": null,
-    "messageQueue": null
+    "scopeId": "httpclientmessagebusfactoryspec"
 }

@@ -5,7 +5,7 @@ describe('when asking the ServerMessageBus factory to create an instance', funct
     const {scopeId,senderHost,senderPort,timeout,httpServerResponseMessageBus,httpServerRequestMessageBus,webSocketServerRequestMessageBus,webSocketServerResponseMessageBus} = require('C:\\component\\spec\\factory\\servermessagebus.factory.spec.variables.json');
 
     // Act
-    const {serverMessageBus} = createServerMessageBus({scopeId,webSocketServerRequestMessageBus,webSocketServerResponseMessageBus});
+    const {serverMessageBus} = createServerMessageBus({scopeId});
     // Assert
     expect(serverMessageBus).not.toBeNull();
   });
