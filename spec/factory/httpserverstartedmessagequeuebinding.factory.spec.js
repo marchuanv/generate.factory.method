@@ -1,12 +1,15 @@
 const { createHttpServerStartedMessageQueueBinding } = require('C:\\component\\lib\\factory\\httpserverstartedmessagequeuebinding.factory.js');
 describe('when asking the HttpServerStartedMessageQueueBinding factory to create an instance', function() {
   it("it should succeed without any errors", function() {
+
     // Arrange
-    const specInput = {
+    const testInputArgs =
+      {
     "scopeId": "Test"
 }
+
     // Act
-    const {httpServerStartedMessageQueueBinding} = createHttpServerStartedMessageQueueBinding(scopeId);
+    const {httpServerStartedMessageQueueBinding} = createHttpServerStartedMessageQueueBinding(testInputArgs);
     // Assert
     expect(httpServerStartedMessageQueueBinding).not.toBeNull();
   });

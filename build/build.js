@@ -238,7 +238,7 @@ for(const info of getDependencyTree()) {
                 .replace(/\[TypeName\]/g, info.typeName)
                 .replace(/\[TypeVariableName\]/g, info.variableName)
                 .replace(/\[Args\]/g, Object.keys(binding.primitiveArgs).join(','))
-                .replace(/\[SpecArrangeVariables\]/g, `const specInput = ${utils.getJSONString(binding.primitiveArgs)}` ) 
+                .replace(/\[SpecArrangeVariables\]/g, utils.getJSONString(binding.primitiveArgs)) 
                 .replace(/\[FactoryRequireScripts\]/g, factoryRequireScripts.join('\r\n'));
             writeFileSync(info.specScriptPath, factorySpec, 'utf8');
         }

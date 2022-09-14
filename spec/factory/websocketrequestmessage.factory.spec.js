@@ -1,8 +1,10 @@
 const { createWebSocketRequestMessage } = require('C:\\component\\lib\\factory\\websocketrequestmessage.factory.js');
 describe('when asking the WebSocketRequestMessage factory to create an instance', function() {
   it("it should succeed without any errors", function() {
+
     // Arrange
-    const specInput = {
+    const testInputArgs =
+      {
     "scopeId": "Test",
     "messageStatusCode": null,
     "Id": null,
@@ -14,8 +16,9 @@ describe('when asking the WebSocketRequestMessage factory to create an instance'
     "senderHost": null,
     "senderPort": null
 }
+
     // Act
-    const {webSocketRequestMessage} = createWebSocketRequestMessage(scopeId,messageStatusCode,Id,data,recipientHost,recipientPort,metadata,token,senderHost,senderPort);
+    const {webSocketRequestMessage} = createWebSocketRequestMessage(testInputArgs);
     // Assert
     expect(webSocketRequestMessage).not.toBeNull();
   });

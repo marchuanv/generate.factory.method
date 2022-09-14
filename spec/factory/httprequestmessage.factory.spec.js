@@ -1,8 +1,10 @@
 const { createHttpRequestMessage } = require('C:\\component\\lib\\factory\\httprequestmessage.factory.js');
 describe('when asking the HttpRequestMessage factory to create an instance', function() {
   it("it should succeed without any errors", function() {
+
     // Arrange
-    const specInput = {
+    const testInputArgs =
+      {
     "scopeId": "Test",
     "messageStatusCode": null,
     "Id": null,
@@ -14,8 +16,9 @@ describe('when asking the HttpRequestMessage factory to create an instance', fun
     "senderHost": null,
     "senderPort": null
 }
+
     // Act
-    const {httpRequestMessage} = createHttpRequestMessage(scopeId,messageStatusCode,Id,data,recipientHost,recipientPort,metadata,token,senderHost,senderPort);
+    const {httpRequestMessage} = createHttpRequestMessage(testInputArgs);
     // Assert
     expect(httpRequestMessage).not.toBeNull();
   });

@@ -1,12 +1,15 @@
 const { createWebSocketServerResponseMessageQueueBinding } = require('C:\\component\\lib\\factory\\websocketserverresponsemessagequeuebinding.factory.js');
 describe('when asking the WebSocketServerResponseMessageQueueBinding factory to create an instance', function() {
   it("it should succeed without any errors", function() {
+
     // Arrange
-    const specInput = {
+    const testInputArgs =
+      {
     "scopeId": "Test"
 }
+
     // Act
-    const {webSocketServerResponseMessageQueueBinding} = createWebSocketServerResponseMessageQueueBinding(scopeId);
+    const {webSocketServerResponseMessageQueueBinding} = createWebSocketServerResponseMessageQueueBinding(testInputArgs);
     // Assert
     expect(webSocketServerResponseMessageQueueBinding).not.toBeNull();
   });

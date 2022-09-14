@@ -1,10 +1,13 @@
 [FactoryRequireScripts]
 describe('when asking the [TypeName] factory to create an instance', function() {
   it("it should succeed without any errors", function() {
+
     // Arrange
-    [SpecArrangeVariables]
+    const testInputArgs =
+      [SpecArrangeVariables]
+
     // Act
-    const {[TypeVariableName]} = create[TypeName]([Args]);
+    const {[TypeVariableName]} = create[TypeName](testInputArgs);
     // Assert
     expect([TypeVariableName]).not.toBeNull();
   });

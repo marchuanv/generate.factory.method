@@ -1,8 +1,5 @@
 const { Factory } = require('../factory.js');
 const { [TypeName]FactoryContainer } = require('[ContainerScriptPath]');
-const { [TypeName] } = require('[ScriptPath]');
-[FactoryRequireScripts]
-
 const factory = new Factory([TypeName]FactoryContainer);
 
 /**

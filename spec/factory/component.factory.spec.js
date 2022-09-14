@@ -1,8 +1,10 @@
 const { createComponent } = require('C:\\component\\lib\\factory\\component.factory.js');
 describe('when asking the Component factory to create an instance', function() {
   it("it should succeed without any errors", function() {
+
     // Arrange
-    const specInput = {
+    const testInputArgs =
+      {
     "scopeId": "Test",
     "packageJson": null,
     "clientRequestMessageBus": null,
@@ -10,8 +12,9 @@ describe('when asking the Component factory to create an instance', function() {
     "serverResponseMessageBus": null,
     "serverRequestMessageBus": null
 }
+
     // Act
-    const {component} = createComponent(scopeId,packageJson,clientRequestMessageBus,clientResponseMessageBus,serverResponseMessageBus,serverRequestMessageBus);
+    const {component} = createComponent(testInputArgs);
     // Assert
     expect(component).not.toBeNull();
   });

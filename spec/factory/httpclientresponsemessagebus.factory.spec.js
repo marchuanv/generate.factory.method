@@ -1,12 +1,15 @@
 const { createHttpClientResponseMessageBus } = require('C:\\component\\lib\\factory\\httpclientresponsemessagebus.factory.js');
 describe('when asking the HttpClientResponseMessageBus factory to create an instance', function() {
   it("it should succeed without any errors", function() {
+
     // Arrange
-    const specInput = {
+    const testInputArgs =
+      {
     "scopeId": "Test"
 }
+
     // Act
-    const {httpClientResponseMessageBus} = createHttpClientResponseMessageBus(scopeId);
+    const {httpClientResponseMessageBus} = createHttpClientResponseMessageBus(testInputArgs);
     // Assert
     expect(httpClientResponseMessageBus).not.toBeNull();
   });

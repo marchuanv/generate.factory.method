@@ -1,8 +1,10 @@
 const { createMessage } = require('C:\\component\\lib\\factory\\message.factory.js');
 describe('when asking the Message factory to create an instance', function() {
   it("it should succeed without any errors", function() {
+
     // Arrange
-    const specInput = {
+    const testInputArgs =
+      {
     "scopeId": "Test",
     "messageStatusCode": null,
     "Id": null,
@@ -14,8 +16,9 @@ describe('when asking the Message factory to create an instance', function() {
     "senderHost": null,
     "senderPort": null
 }
+
     // Act
-    const {message} = createMessage(scopeId,messageStatusCode,Id,data,recipientHost,recipientPort,metadata,token,senderHost,senderPort);
+    const {message} = createMessage(testInputArgs);
     // Assert
     expect(message).not.toBeNull();
   });

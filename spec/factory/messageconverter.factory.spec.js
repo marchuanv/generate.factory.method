@@ -1,12 +1,15 @@
 const { createMessageConverter } = require('C:\\component\\lib\\factory\\messageconverter.factory.js');
 describe('when asking the MessageConverter factory to create an instance', function() {
   it("it should succeed without any errors", function() {
+
     // Arrange
-    const specInput = {
+    const testInputArgs =
+      {
     "scopeId": "Test"
 }
+
     // Act
-    const {messageConverter} = createMessageConverter(scopeId);
+    const {messageConverter} = createMessageConverter(testInputArgs);
     // Assert
     expect(messageConverter).not.toBeNull();
   });
