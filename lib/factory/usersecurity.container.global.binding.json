@@ -1,10 +1,9 @@
 {
-    "UserSecurityFactoryContainerGlobalBinding": {
-        "primitiveArgs": {
-            "scopeId": "Global",
-            "userId": null
-        },
-        "referenceArgs": {},
-        "instance": null
-    }
+    "name": "global",
+    "primitiveArgs": {
+        "scopeId": "global",
+        "userId": null
+    },
+    "referenceArgs": {},
+    "instance": null
 }

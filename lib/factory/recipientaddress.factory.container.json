@@ -1,17 +1,13 @@
 {
-    "RecipientAddressFactoryContainer": {
-        "Id": "[Id]",
-        "typeName": "RecipientAddress",
-        "typeVariableName": "recipientAddress",
-        "bindings": [
-            {
-                "name": "Global",
-                "bindingFilePath": "C://component//lib//factory//recipientaddress.container.global.binding.json"
-            },
-            {
-                "name": "Test",
-                "bindingFilePath": "C://component//lib//factory//recipientaddress.container.test.binding.json"
-            }
-        ]
-    }
+    "typeName": "RecipientAddress",
+    "bindings": [
+        {
+            "name": "global",
+            "bindingScriptPath": "C://component//lib//factory//recipientaddress.container.global.binding.json"
+        },
+        {
+            "name": "test",
+            "bindingScriptPath": "C://component//lib//factory//recipientaddress.container.test.binding.json"
+        }
+    ]
 }

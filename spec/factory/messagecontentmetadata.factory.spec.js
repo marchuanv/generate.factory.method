@@ -5,7 +5,7 @@ describe('when asking the MessageContentMetadata factory to create an instance',
     // Arrange
     const testInputArgs =
       {
-    "scopeId": "Test",
+    "scopeId": "test",
     "data": null
 }
 

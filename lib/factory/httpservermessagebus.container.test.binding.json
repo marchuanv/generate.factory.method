@@ -1,49 +1,48 @@
 {
-    "HttpServerMessageBusFactoryContainerTestBinding": {
-        "primitiveArgs": {
-            "scopeId": "Test",
-            "timeout": null,
-            "senderHost": null,
-            "senderPort": null
+    "name": "test",
+    "primitiveArgs": {
+        "scopeId": "test",
+        "timeout": null,
+        "senderHost": null,
+        "senderPort": null
+    },
+    "referenceArgs": {
+        "httpServerRequestMessageQueueBinding": {
+            "factoryMethod": "createHttpServerRequestMessageQueueBinding",
+            "factoryScript": "C://component//lib//factory//httpserverrequestmessagequeuebinding.factory.js"
         },
-        "referenceArgs": {
-            "httpServerRequestMessageQueueBinding": {
-                "factoryMethod": "createHttpServerRequestMessageQueueBinding",
-                "factoryScript": "C://component//lib//factory//httpserverrequestmessagequeuebinding.factory.js"
-            },
-            "messageQueue": {
-                "factoryMethod": "createMessageQueue",
-                "factoryScript": "C://component//lib//factory//messagequeue.factory.js"
-            },
-            "logger": {
-                "factoryMethod": "createLogger",
-                "factoryScript": "C://component//lib//factory//logger.factory.js"
-            },
-            "httpServerResponseMessageQueueBinding": {
-                "factoryMethod": "createHttpServerResponseMessageQueueBinding",
-                "factoryScript": "C://component//lib//factory//httpserverresponsemessagequeuebinding.factory.js"
-            },
-            "httpServerStartMessageQueueBinding": {
-                "factoryMethod": "createHttpServerStartMessageQueueBinding",
-                "factoryScript": "C://component//lib//factory//httpserverstartmessagequeuebinding.factory.js"
-            },
-            "httpServerStartedMessageQueueBinding": {
-                "factoryMethod": "createHttpServerStartedMessageQueueBinding",
-                "factoryScript": "C://component//lib//factory//httpserverstartedmessagequeuebinding.factory.js"
-            },
-            "httpServerStopMessageQueueBinding": {
-                "factoryMethod": "createHttpServerStopMessageQueueBinding",
-                "factoryScript": "C://component//lib//factory//httpserverstopmessagequeuebinding.factory.js"
-            },
-            "httpServerStoppedMessageQueueBinding": {
-                "factoryMethod": "createHttpServerStoppedMessageQueueBinding",
-                "factoryScript": "C://component//lib//factory//httpserverstoppedmessagequeuebinding.factory.js"
-            },
-            "senderAddress": {
-                "factoryMethod": "createSenderAddress",
-                "factoryScript": "C://component//lib//factory//senderaddress.factory.js"
-            }
+        "messageQueue": {
+            "factoryMethod": "createMessageQueue",
+            "factoryScript": "C://component//lib//factory//messagequeue.factory.js"
         },
-        "instance": null
-    }
+        "logger": {
+            "factoryMethod": "createLogger",
+            "factoryScript": "C://component//lib//factory//logger.factory.js"
+        },
+        "httpServerResponseMessageQueueBinding": {
+            "factoryMethod": "createHttpServerResponseMessageQueueBinding",
+            "factoryScript": "C://component//lib//factory//httpserverresponsemessagequeuebinding.factory.js"
+        },
+        "httpServerStartMessageQueueBinding": {
+            "factoryMethod": "createHttpServerStartMessageQueueBinding",
+            "factoryScript": "C://component//lib//factory//httpserverstartmessagequeuebinding.factory.js"
+        },
+        "httpServerStartedMessageQueueBinding": {
+            "factoryMethod": "createHttpServerStartedMessageQueueBinding",
+            "factoryScript": "C://component//lib//factory//httpserverstartedmessagequeuebinding.factory.js"
+        },
+        "httpServerStopMessageQueueBinding": {
+            "factoryMethod": "createHttpServerStopMessageQueueBinding",
+            "factoryScript": "C://component//lib//factory//httpserverstopmessagequeuebinding.factory.js"
+        },
+        "httpServerStoppedMessageQueueBinding": {
+            "factoryMethod": "createHttpServerStoppedMessageQueueBinding",
+            "factoryScript": "C://component//lib//factory//httpserverstoppedmessagequeuebinding.factory.js"
+        },
+        "senderAddress": {
+            "factoryMethod": "createSenderAddress",
+            "factoryScript": "C://component//lib//factory//senderaddress.factory.js"
+        }
+    },
+    "instance": null
 }

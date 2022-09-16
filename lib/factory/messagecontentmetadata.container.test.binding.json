@@ -1,10 +1,9 @@
 {
-    "MessageContentMetadataFactoryContainerTestBinding": {
-        "primitiveArgs": {
-            "scopeId": "Test",
-            "data": null
-        },
-        "referenceArgs": {},
-        "instance": null
-    }
+    "name": "test",
+    "primitiveArgs": {
+        "scopeId": "test",
+        "data": null
+    },
+    "referenceArgs": {},
+    "instance": null
 }

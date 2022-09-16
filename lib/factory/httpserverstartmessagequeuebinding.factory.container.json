@@ -1,17 +1,13 @@
 {
-    "HttpServerStartMessageQueueBindingFactoryContainer": {
-        "Id": "[Id]",
-        "typeName": "HttpServerStartMessageQueueBinding",
-        "typeVariableName": "httpServerStartMessageQueueBinding",
-        "bindings": [
-            {
-                "name": "Global",
-                "bindingFilePath": "C://component//lib//factory//httpserverstartmessagequeuebinding.container.global.binding.json"
-            },
-            {
-                "name": "Test",
-                "bindingFilePath": "C://component//lib//factory//httpserverstartmessagequeuebinding.container.test.binding.json"
-            }
-        ]
-    }
+    "typeName": "HttpServerStartMessageQueueBinding",
+    "bindings": [
+        {
+            "name": "global",
+            "bindingScriptPath": "C://component//lib//factory//httpserverstartmessagequeuebinding.container.global.binding.json"
+        },
+        {
+            "name": "test",
+            "bindingScriptPath": "C://component//lib//factory//httpserverstartmessagequeuebinding.container.test.binding.json"
+        }
+    ]
 }

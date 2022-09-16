@@ -1,17 +1,13 @@
 {
-    "UserSessionsFactoryContainer": {
-        "Id": "[Id]",
-        "typeName": "UserSessions",
-        "typeVariableName": "userSessions",
-        "bindings": [
-            {
-                "name": "Global",
-                "bindingFilePath": "C://component//lib//factory//usersessions.container.global.binding.json"
-            },
-            {
-                "name": "Test",
-                "bindingFilePath": "C://component//lib//factory//usersessions.container.test.binding.json"
-            }
-        ]
-    }
+    "typeName": "UserSessions",
+    "bindings": [
+        {
+            "name": "global",
+            "bindingScriptPath": "C://component//lib//factory//usersessions.container.global.binding.json"
+        },
+        {
+            "name": "test",
+            "bindingScriptPath": "C://component//lib//factory//usersessions.container.test.binding.json"
+        }
+    ]
 }

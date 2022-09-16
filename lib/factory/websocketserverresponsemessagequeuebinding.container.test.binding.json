@@ -1,18 +1,17 @@
 {
-    "WebSocketServerResponseMessageQueueBindingFactoryContainerTestBinding": {
-        "primitiveArgs": {
-            "scopeId": "Test"
+    "name": "test",
+    "primitiveArgs": {
+        "scopeId": "test"
+    },
+    "referenceArgs": {
+        "messageQueue": {
+            "factoryMethod": "createMessageQueue",
+            "factoryScript": "C://component//lib//factory//messagequeue.factory.js"
         },
-        "referenceArgs": {
-            "messageQueue": {
-                "factoryMethod": "createMessageQueue",
-                "factoryScript": "C://component//lib//factory//messagequeue.factory.js"
-            },
-            "logger": {
-                "factoryMethod": "createLogger",
-                "factoryScript": "C://component//lib//factory//logger.factory.js"
-            }
-        },
-        "instance": null
-    }
+        "logger": {
+            "factoryMethod": "createLogger",
+            "factoryScript": "C://component//lib//factory//logger.factory.js"
+        }
+    },
+    "instance": null
 }

@@ -5,7 +5,7 @@ describe('when asking the MessageQueue factory to create an instance', function(
     // Arrange
     const testInputArgs =
       {
-    "scopeId": "Test"
+    "scopeId": "test"
 }
 
     // Act

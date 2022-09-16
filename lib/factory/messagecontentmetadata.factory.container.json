@@ -1,17 +1,13 @@
 {
-    "MessageContentMetadataFactoryContainer": {
-        "Id": "[Id]",
-        "typeName": "MessageContentMetadata",
-        "typeVariableName": "messageContentMetadata",
-        "bindings": [
-            {
-                "name": "Global",
-                "bindingFilePath": "C://component//lib//factory//messagecontentmetadata.container.global.binding.json"
-            },
-            {
-                "name": "Test",
-                "bindingFilePath": "C://component//lib//factory//messagecontentmetadata.container.test.binding.json"
-            }
-        ]
-    }
+    "typeName": "MessageContentMetadata",
+    "bindings": [
+        {
+            "name": "global",
+            "bindingScriptPath": "C://component//lib//factory//messagecontentmetadata.container.global.binding.json"
+        },
+        {
+            "name": "test",
+            "bindingScriptPath": "C://component//lib//factory//messagecontentmetadata.container.test.binding.json"
+        }
+    ]
 }

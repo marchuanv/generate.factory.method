@@ -5,7 +5,7 @@ describe('when asking the MessageMetadata factory to create an instance', functi
     // Arrange
     const testInputArgs =
       {
-    "scopeId": "Test",
+    "scopeId": "test",
     "recipientHost": null,
     "recipientPort": null,
     "metadata": null,

@@ -5,7 +5,7 @@ describe('when asking the MessageConverter factory to create an instance', funct
     // Arrange
     const testInputArgs =
       {
-    "scopeId": "Test"
+    "scopeId": "test"
 }
 
     // Act

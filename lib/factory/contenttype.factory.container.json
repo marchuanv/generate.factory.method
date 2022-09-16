@@ -1,17 +1,13 @@
 {
-    "ContentTypeFactoryContainer": {
-        "Id": "[Id]",
-        "typeName": "ContentType",
-        "typeVariableName": "contentType",
-        "bindings": [
-            {
-                "name": "Global",
-                "bindingFilePath": "C://component//lib//factory//contenttype.container.global.binding.json"
-            },
-            {
-                "name": "Test",
-                "bindingFilePath": "C://component//lib//factory//contenttype.container.test.binding.json"
-            }
-        ]
-    }
+    "typeName": "ContentType",
+    "bindings": [
+        {
+            "name": "global",
+            "bindingScriptPath": "C://component//lib//factory//contenttype.container.global.binding.json"
+        },
+        {
+            "name": "test",
+            "bindingScriptPath": "C://component//lib//factory//contenttype.container.test.binding.json"
+        }
+    ]
 }

@@ -5,7 +5,7 @@ describe('when asking the WebSocketResponseMessage factory to create an instance
     // Arrange
     const testInputArgs =
       {
-    "scopeId": "Test",
+    "scopeId": "test",
     "messageStatusCode": null,
     "Id": null,
     "data": null,

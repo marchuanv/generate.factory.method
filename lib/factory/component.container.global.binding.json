@@ -1,31 +1,30 @@
 {
-    "ComponentFactoryContainerGlobalBinding": {
-        "primitiveArgs": {
-            "scopeId": "Global",
-            "packageJson": null,
-            "clientRequestMessageBus": null,
-            "clientResponseMessageBus": null,
-            "serverResponseMessageBus": null,
-            "serverRequestMessageBus": null
+    "name": "global",
+    "primitiveArgs": {
+        "scopeId": "global",
+        "packageJson": null,
+        "clientRequestMessageBus": null,
+        "clientResponseMessageBus": null,
+        "serverResponseMessageBus": null,
+        "serverRequestMessageBus": null
+    },
+    "referenceArgs": {
+        "clientMessageBus": {
+            "factoryMethod": "createClientMessageBus",
+            "factoryScript": "C://component//lib//factory//clientmessagebus.factory.js"
         },
-        "referenceArgs": {
-            "clientMessageBus": {
-                "factoryMethod": "createClientMessageBus",
-                "factoryScript": "C://component//lib//factory//clientmessagebus.factory.js"
-            },
-            "messageConverter": {
-                "factoryMethod": "createMessageConverter",
-                "factoryScript": "C://component//lib//factory//messageconverter.factory.js"
-            },
-            "serverMessageBus": {
-                "factoryMethod": "createServerMessageBus",
-                "factoryScript": "C://component//lib//factory//servermessagebus.factory.js"
-            },
-            "userSessions": {
-                "factoryMethod": "createUserSessions",
-                "factoryScript": "C://component//lib//factory//usersessions.factory.js"
-            }
+        "messageConverter": {
+            "factoryMethod": "createMessageConverter",
+            "factoryScript": "C://component//lib//factory//messageconverter.factory.js"
         },
-        "instance": null
-    }
+        "serverMessageBus": {
+            "factoryMethod": "createServerMessageBus",
+            "factoryScript": "C://component//lib//factory//servermessagebus.factory.js"
+        },
+        "userSessions": {
+            "factoryMethod": "createUserSessions",
+            "factoryScript": "C://component//lib//factory//usersessions.factory.js"
+        }
+    },
+    "instance": null
 }

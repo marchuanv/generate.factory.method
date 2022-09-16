@@ -1,14 +1,10 @@
 {
-    "[TypeName]FactoryContainer": {
-        "Id":"[Id]",
-        "typeName": "[TypeName]",
-        "typeVariableName": "[TypeVariableName]",
-        "bindings": [{
-            "name": "Global",
-            "bindingFilePath": null
-        },{
-            "name": "Test",
-            "bindingFilePath": null
-        }]
-    }
+    "typeName": "[TypeName]",
+    "bindings": [{
+        "name": "global",
+        "bindingScriptPath": null
+    },{
+        "name": "test",
+        "bindingScriptPath": null
+    }]
 }

@@ -1,17 +1,13 @@
 {
-    "MessageStatusFactoryContainer": {
-        "Id": "[Id]",
-        "typeName": "MessageStatus",
-        "typeVariableName": "messageStatus",
-        "bindings": [
-            {
-                "name": "Global",
-                "bindingFilePath": "C://component//lib//factory//messagestatus.container.global.binding.json"
-            },
-            {
-                "name": "Test",
-                "bindingFilePath": "C://component//lib//factory//messagestatus.container.test.binding.json"
-            }
-        ]
-    }
+    "typeName": "MessageStatus",
+    "bindings": [
+        {
+            "name": "global",
+            "bindingScriptPath": "C://component//lib//factory//messagestatus.container.global.binding.json"
+        },
+        {
+            "name": "test",
+            "bindingScriptPath": "C://component//lib//factory//messagestatus.container.test.binding.json"
+        }
+    ]
 }

@@ -1,11 +1,10 @@
 {
-    "SenderAddressFactoryContainerTestBinding": {
-        "primitiveArgs": {
-            "scopeId": "Test",
-            "senderHost": null,
-            "senderPort": null
-        },
-        "referenceArgs": {},
-        "instance": null
-    }
+    "name": "test",
+    "primitiveArgs": {
+        "scopeId": "test",
+        "senderHost": null,
+        "senderPort": null
+    },
+    "referenceArgs": {},
+    "instance": null
 }

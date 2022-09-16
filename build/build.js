@@ -173,33 +173,26 @@ for(const info of getDependencyTree()) {
 
     if (!existsSync(info.containerScriptPath)) {
         const factoryContainer = factoryContainerTemplate
-            .replace(/\[TypeName\]/g, info.typeName)
-            .replace(/\[TypeVariableName\]/g, info.variableName);
+            .replace(/\[TypeName\]/g, info.typeName);
         const factoryContainerJson = utils.getJSONObject(factoryContainer);
         writeFileSync(info.containerScriptPath, utils.getJSONString(factoryContainerJson), 'utf8');
     }
 
-    let container = require(info.containerScriptPath);
-    const containerRootName = Object.keys(container)[0];
-    container = container[containerRootName];
+    const container = require(info.containerScriptPath);
     const bindingNames = container.bindings.map(b => b.name);
-    const { Id } = container;
     for(const bindingName of bindingNames) {
 
         const containerBindingScriptPath = info.containerBindingScriptPath.replace('global', bindingName.toLowerCase());
         if (!existsSync(containerBindingScriptPath)) {
             const factoryContainerBinding = factoryContainerBindingTemplate
-                .replace(/\[BindingId\]/g, bindingName)
-                .replace(/\[TypeName\]/g, info.typeName)
+                .replace(/\[BindingName\]/g, bindingName)
                 .replace(/\[PrimitiveArgs\]/g, `{ ${ Object.keys(primitiveArgs).map(key => `"${key}": null` ).join(',')} }`)
                 .replace(/\[ReferenceArgs\]/g, utils.getJSONString(referenceArgs));
             const factoryContainerBindingJson = utils.getJSONObject(factoryContainerBinding);
             writeFileSync(containerBindingScriptPath, utils.getJSONString(factoryContainerBindingJson), 'utf8');
         }
 
-        let binding = require(containerBindingScriptPath);
-        const bindingRootName = Object.keys(binding)[0];
-        binding = binding[bindingRootName];
+        const binding = require(containerBindingScriptPath);
         const newPrimitiveArgs = Object.keys(primitiveArgs).filter(key1 => Object.keys(binding.primitiveArgs).find(key2 => key1 === key2) === undefined);
         binding.primitiveArgs['scopeId'] = bindingName;
         for(const argName of newPrimitiveArgs) {
@@ -219,15 +212,11 @@ for(const info of getDependencyTree()) {
             const value = referenceArgs[key];
             binding.referenceArgs[key] = value;
         };
-        const bindingRoot = {};
-        bindingRoot[bindingRootName] = binding;
-        writeFileSync(containerBindingScriptPath, utils.getJSONString(bindingRoot), 'utf8');
+        writeFileSync(containerBindingScriptPath, utils.getJSONString(binding), 'utf8');
       
         const containerBinding = container.bindings.find(b => b.name === bindingName);
-        containerBinding.bindingFilePath = containerBindingScriptPath.replace(/\\/g,'//');
-        const updatedContainer = {};
-        updatedContainer[containerRootName] = container;
-        writeFileSync(info.containerScriptPath, utils.getJSONString(updatedContainer), 'utf8');
+        containerBinding.bindingScriptPath = containerBindingScriptPath.replace(/\\/g,'//');
+        writeFileSync(info.containerScriptPath, utils.getJSONString(container), 'utf8');
         if (containerBinding.name.toLowerCase().indexOf('test') > -1) {
             factoryRequireScripts.push(factoryRequireTemplate
                 .replace(/\[TypeName\]/g, info.typeName)

@@ -1,17 +1,13 @@
 {
-    "WebSocketClientResponseMessageBusFactoryContainer": {
-        "Id": "[Id]",
-        "typeName": "WebSocketClientResponseMessageBus",
-        "typeVariableName": "webSocketClientResponseMessageBus",
-        "bindings": [
-            {
-                "name": "Global",
-                "bindingFilePath": "C://component//lib//factory//websocketclientresponsemessagebus.container.global.binding.json"
-            },
-            {
-                "name": "Test",
-                "bindingFilePath": "C://component//lib//factory//websocketclientresponsemessagebus.container.test.binding.json"
-            }
-        ]
-    }
+    "typeName": "WebSocketClientResponseMessageBus",
+    "bindings": [
+        {
+            "name": "global",
+            "bindingScriptPath": "C://component//lib//factory//websocketclientresponsemessagebus.container.global.binding.json"
+        },
+        {
+            "name": "test",
+            "bindingScriptPath": "C://component//lib//factory//websocketclientresponsemessagebus.container.test.binding.json"
+        }
+    ]
 }

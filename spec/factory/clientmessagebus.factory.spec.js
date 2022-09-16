@@ -5,7 +5,7 @@ describe('when asking the ClientMessageBus factory to create an instance', funct
     // Arrange
     const testInputArgs =
       {
-    "scopeId": "Test",
+    "scopeId": "test",
     "clientRequestMessageBus": null,
     "clientResponseMessageBus": null
 }

@@ -1,17 +1,13 @@
 {
-    "WebSocketResponseMessageFactoryContainer": {
-        "Id": "[Id]",
-        "typeName": "WebSocketResponseMessage",
-        "typeVariableName": "webSocketResponseMessage",
-        "bindings": [
-            {
-                "name": "Global",
-                "bindingFilePath": "C://component//lib//factory//websocketresponsemessage.container.global.binding.json"
-            },
-            {
-                "name": "Test",
-                "bindingFilePath": "C://component//lib//factory//websocketresponsemessage.container.test.binding.json"
-            }
-        ]
-    }
+    "typeName": "WebSocketResponseMessage",
+    "bindings": [
+        {
+            "name": "global",
+            "bindingScriptPath": "C://component//lib//factory//websocketresponsemessage.container.global.binding.json"
+        },
+        {
+            "name": "test",
+            "bindingScriptPath": "C://component//lib//factory//websocketresponsemessage.container.test.binding.json"
+        }
+    ]
 }

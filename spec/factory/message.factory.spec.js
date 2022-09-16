@@ -5,7 +5,7 @@ describe('when asking the Message factory to create an instance', function() {
     // Arrange
     const testInputArgs =
       {
-    "scopeId": "Test",
+    "scopeId": "test",
     "messageStatusCode": null,
     "Id": null,
     "data": null,

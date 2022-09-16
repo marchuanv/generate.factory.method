@@ -1,9 +1,8 @@
 {
-    "LoggerFactoryContainerGlobalBinding": {
-        "primitiveArgs": {
-            "scopeId": "Global"
-        },
-        "referenceArgs": {},
-        "instance": null
-    }
+    "name": "global",
+    "primitiveArgs": {
+        "scopeId": "global"
+    },
+    "referenceArgs": {},
+    "instance": null
 }

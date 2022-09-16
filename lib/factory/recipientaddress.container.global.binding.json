@@ -1,11 +1,10 @@
 {
-    "RecipientAddressFactoryContainerGlobalBinding": {
-        "primitiveArgs": {
-            "scopeId": "Global",
-            "recipientHost": null,
-            "recipientPort": null
-        },
-        "referenceArgs": {},
-        "instance": null
-    }
+    "name": "global",
+    "primitiveArgs": {
+        "scopeId": "global",
+        "recipientHost": null,
+        "recipientPort": null
+    },
+    "referenceArgs": {},
+    "instance": null
 }

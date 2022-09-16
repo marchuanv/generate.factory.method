@@ -5,7 +5,7 @@ describe('when asking the MessageContent factory to create an instance', functio
     // Arrange
     const testInputArgs =
       {
-    "scopeId": "Test",
+    "scopeId": "test",
     "data": null,
     "recipientHost": null,
     "recipientPort": null,

@@ -5,7 +5,7 @@ describe('when asking the HttpServerMessageBus factory to create an instance', f
     // Arrange
     const testInputArgs =
       {
-    "scopeId": "Test",
+    "scopeId": "test",
     "timeout": null,
     "senderHost": null,
     "senderPort": null

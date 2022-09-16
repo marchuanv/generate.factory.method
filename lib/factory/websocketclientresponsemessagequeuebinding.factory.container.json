@@ -1,17 +1,13 @@
 {
-    "WebSocketClientResponseMessageQueueBindingFactoryContainer": {
-        "Id": "[Id]",
-        "typeName": "WebSocketClientResponseMessageQueueBinding",
-        "typeVariableName": "websocketClientResponseMessageQueueBinding",
-        "bindings": [
-            {
-                "name": "Global",
-                "bindingFilePath": "C://component//lib//factory//websocketclientresponsemessagequeuebinding.container.global.binding.json"
-            },
-            {
-                "name": "Test",
-                "bindingFilePath": "C://component//lib//factory//websocketclientresponsemessagequeuebinding.container.test.binding.json"
-            }
-        ]
-    }
+    "typeName": "WebSocketClientResponseMessageQueueBinding",
+    "bindings": [
+        {
+            "name": "global",
+            "bindingScriptPath": "C://component//lib//factory//websocketclientresponsemessagequeuebinding.container.global.binding.json"
+        },
+        {
+            "name": "test",
+            "bindingScriptPath": "C://component//lib//factory//websocketclientresponsemessagequeuebinding.container.test.binding.json"
+        }
+    ]
 }

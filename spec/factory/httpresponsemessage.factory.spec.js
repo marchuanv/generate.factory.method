@@ -5,7 +5,7 @@ describe('when asking the HttpResponseMessage factory to create an instance', fu
     // Arrange
     const testInputArgs =
       {
-    "scopeId": "Test",
+    "scopeId": "test",
     "messageStatusCode": null,
     "Id": null,
     "data": null,

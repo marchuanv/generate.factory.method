@@ -5,7 +5,7 @@ describe('when asking the RecipientAddress factory to create an instance', funct
     // Arrange
     const testInputArgs =
       {
-    "scopeId": "Test",
+    "scopeId": "test",
     "recipientHost": null,
     "recipientPort": null
 }

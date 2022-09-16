@@ -1,10 +1,9 @@
 {
-    "UserSecurityFactoryContainerTestBinding": {
-        "primitiveArgs": {
-            "scopeId": "Test",
-            "userId": null
-        },
-        "referenceArgs": {},
-        "instance": null
-    }
+    "name": "test",
+    "primitiveArgs": {
+        "scopeId": "test",
+        "userId": null
+    },
+    "referenceArgs": {},
+    "instance": null
 }

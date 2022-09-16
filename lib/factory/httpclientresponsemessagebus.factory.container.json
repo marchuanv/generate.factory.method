@@ -1,17 +1,13 @@
 {
-    "HttpClientResponseMessageBusFactoryContainer": {
-        "Id": "[Id]",
-        "typeName": "HttpClientResponseMessageBus",
-        "typeVariableName": "httpClientResponseMessageBus",
-        "bindings": [
-            {
-                "name": "Global",
-                "bindingFilePath": "C://component//lib//factory//httpclientresponsemessagebus.container.global.binding.json"
-            },
-            {
-                "name": "Test",
-                "bindingFilePath": "C://component//lib//factory//httpclientresponsemessagebus.container.test.binding.json"
-            }
-        ]
-    }
+    "typeName": "HttpClientResponseMessageBus",
+    "bindings": [
+        {
+            "name": "global",
+            "bindingScriptPath": "C://component//lib//factory//httpclientresponsemessagebus.container.global.binding.json"
+        },
+        {
+            "name": "test",
+            "bindingScriptPath": "C://component//lib//factory//httpclientresponsemessagebus.container.test.binding.json"
+        }
+    ]
 }

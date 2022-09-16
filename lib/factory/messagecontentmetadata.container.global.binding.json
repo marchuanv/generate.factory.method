@@ -1,10 +1,9 @@
 {
-    "MessageContentMetadataFactoryContainerGlobalBinding": {
-        "primitiveArgs": {
-            "scopeId": "Global",
-            "data": null
-        },
-        "referenceArgs": {},
-        "instance": null
-    }
+    "name": "global",
+    "primitiveArgs": {
+        "scopeId": "global",
+        "data": null
+    },
+    "referenceArgs": {},
+    "instance": null
 }

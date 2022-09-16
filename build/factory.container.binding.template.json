@@ -1,7 +1,6 @@
 {
-    "[TypeName]FactoryContainer[BindingId]Binding": {
-        "primitiveArgs": [PrimitiveArgs],
-        "referenceArgs": [ReferenceArgs],
-        "instance": null
-    }
+    "name": "[BindingName]",
+    "primitiveArgs": [PrimitiveArgs],
+    "referenceArgs": [ReferenceArgs],
+    "instance": null
 }

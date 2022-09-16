@@ -1,17 +1,13 @@
 {
-    "ServerMessageBusFactoryContainer": {
-        "Id": "[Id]",
-        "typeName": "ServerMessageBus",
-        "typeVariableName": "serverMessageBus",
-        "bindings": [
-            {
-                "name": "Global",
-                "bindingFilePath": "C://component//lib//factory//servermessagebus.container.global.binding.json"
-            },
-            {
-                "name": "Test",
-                "bindingFilePath": "C://component//lib//factory//servermessagebus.container.test.binding.json"
-            }
-        ]
-    }
+    "typeName": "ServerMessageBus",
+    "bindings": [
+        {
+            "name": "global",
+            "bindingScriptPath": "C://component//lib//factory//servermessagebus.container.global.binding.json"
+        },
+        {
+            "name": "test",
+            "bindingScriptPath": "C://component//lib//factory//servermessagebus.container.test.binding.json"
+        }
+    ]
 }

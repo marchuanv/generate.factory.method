@@ -1,17 +1,13 @@
 {
-    "HttpServerMessageBusManagerFactoryContainer": {
-        "Id": "[Id]",
-        "typeName": "HttpServerMessageBusManager",
-        "typeVariableName": "httpServerMessageBusManager",
-        "bindings": [
-            {
-                "name": "Global",
-                "bindingFilePath": "C://component//lib//factory//httpservermessagebusmanager.container.global.binding.json"
-            },
-            {
-                "name": "Test",
-                "bindingFilePath": "C://component//lib//factory//httpservermessagebusmanager.container.test.binding.json"
-            }
-        ]
-    }
+    "typeName": "HttpServerMessageBusManager",
+    "bindings": [
+        {
+            "name": "global",
+            "bindingScriptPath": "C://component//lib//factory//httpservermessagebusmanager.container.global.binding.json"
+        },
+        {
+            "name": "test",
+            "bindingScriptPath": "C://component//lib//factory//httpservermessagebusmanager.container.test.binding.json"
+        }
+    ]
 }

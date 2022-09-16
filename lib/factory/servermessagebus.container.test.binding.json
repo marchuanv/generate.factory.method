@@ -1,16 +1,15 @@
 {
-    "ServerMessageBusFactoryContainerTestBinding": {
-        "primitiveArgs": {
-            "scopeId": "Test",
-            "serverResponseMessageBus": null,
-            "serverRequestMessageBus": null
-        },
-        "referenceArgs": {
-            "messageConverter": {
-                "factoryMethod": "createMessageConverter",
-                "factoryScript": "C://component//lib//factory//messageconverter.factory.js"
-            }
-        },
-        "instance": null
-    }
+    "name": "test",
+    "primitiveArgs": {
+        "scopeId": "test",
+        "serverResponseMessageBus": null,
+        "serverRequestMessageBus": null
+    },
+    "referenceArgs": {
+        "messageConverter": {
+            "factoryMethod": "createMessageConverter",
+            "factoryScript": "C://component//lib//factory//messageconverter.factory.js"
+        }
+    },
+    "instance": null
 }
