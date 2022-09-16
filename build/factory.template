@@ -1,6 +1,6 @@
 const { Factory } = require('../factory.js');
-const { [TypeName]FactoryContainer } = require('[ContainerScriptPath]');
-const factory = new Factory([TypeName]FactoryContainer);
+const container = require('[ContainerScriptPath]');
+const factory = new Factory(container);
 
 /**
 * IsSingleton: [TypeName]FactoryContainer.singleton
