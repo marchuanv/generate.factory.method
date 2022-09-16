@@ -1,5 +1,6 @@
 {
     "typeName": "HttpClientStoppedMessageQueueBinding",
+    "isSingleton": false,
     "bindings": [
         {
             "name": "global",

@@ -1,5 +1,6 @@
 {
     "typeName": "WebSocketServerRequestMessageQueueBinding",
+    "isSingleton": false,
     "bindings": [
         {
             "name": "global",

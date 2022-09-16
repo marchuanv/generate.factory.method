@@ -1,5 +1,6 @@
 {
     "typeName": "MessageQueue",
+    "isSingleton": false,
     "bindings": [
         {
             "name": "global",

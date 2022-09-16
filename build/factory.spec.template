@@ -1,6 +1,6 @@
 [FactoryRequireScripts]
-describe('when asking the [TypeName] factory to create an instance', function() {
-  it("it should succeed without any errors", function() {
+describe('when asking the [TypeName] factory to create an instance of [TypeName]', () => {
+  it("it should succeed without any errors", () => {
 
     // Arrange
     const testInputArgs =
@@ -8,7 +8,9 @@ describe('when asking the [TypeName] factory to create an instance', function() 
 
     // Act
     const {[TypeVariableName]} = create[TypeName](testInputArgs);
+
     // Assert
     expect([TypeVariableName]).not.toBeNull();
+
   });
 });

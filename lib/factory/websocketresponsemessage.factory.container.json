@@ -1,5 +1,6 @@
 {
     "typeName": "WebSocketResponseMessage",
+    "isSingleton": false,
     "bindings": [
         {
             "name": "global",

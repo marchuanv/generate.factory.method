@@ -1,5 +1,6 @@
 {
     "typeName": "Component",
+    "isSingleton": false,
     "bindings": [
         {
             "name": "global",

@@ -1,6 +1,6 @@
 const { createMessageContent } = require('C:\\component\\lib\\factory\\messagecontent.factory.js');
-describe('when asking the MessageContent factory to create an instance', function() {
-  it("it should succeed without any errors", function() {
+describe('when asking the MessageContent factory to create an instance of MessageContent', () => {
+  it("it should succeed without any errors", () => {
 
     // Arrange
     const testInputArgs =
@@ -13,11 +13,13 @@ describe('when asking the MessageContent factory to create an instance', functio
     "token": null,
     "senderHost": null,
     "senderPort": null
-}
+};
 
     // Act
     const {messageContent} = createMessageContent(testInputArgs);
+
     // Assert
     expect(messageContent).not.toBeNull();
+
   });
 });

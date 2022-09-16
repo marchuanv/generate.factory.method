@@ -1,5 +1,6 @@
 {
     "typeName": "MessageMetadata",
+    "isSingleton": false,
     "bindings": [
         {
             "name": "global",

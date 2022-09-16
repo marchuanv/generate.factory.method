@@ -1,5 +1,6 @@
 {
     "typeName": "HttpRequestMessage",
+    "isSingleton": false,
     "bindings": [
         {
             "name": "global",

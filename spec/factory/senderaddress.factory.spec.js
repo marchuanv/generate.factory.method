@@ -1,6 +1,6 @@
 const { createSenderAddress } = require('C:\\component\\lib\\factory\\senderaddress.factory.js');
-describe('when asking the SenderAddress factory to create an instance', function() {
-  it("it should succeed without any errors", function() {
+describe('when asking the SenderAddress factory to create an instance of SenderAddress', () => {
+  it("it should succeed without any errors", () => {
 
     // Arrange
     const testInputArgs =
@@ -8,11 +8,13 @@ describe('when asking the SenderAddress factory to create an instance', function
     "scopeId": "test",
     "senderHost": null,
     "senderPort": null
-}
+};
 
     // Act
     const {senderAddress} = createSenderAddress(testInputArgs);
+
     // Assert
     expect(senderAddress).not.toBeNull();
+
   });
 });

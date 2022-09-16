@@ -1,5 +1,5 @@
-const { Factory } = require('C:\\component\\lib\\factory.js');
 fdescribe('when', function() {
+  const { Factory } = require('C:\\component\\lib\\factory.js');
   
   const scopeId = 'factoryTest';
 

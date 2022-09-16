@@ -1,5 +1,6 @@
 {
     "typeName": "ClientMessageBus",
+    "isSingleton": false,
     "bindings": [
         {
             "name": "global",

@@ -1,5 +1,6 @@
 {
     "typeName": "MessageStore",
+    "isSingleton": false,
     "bindings": [
         {
             "name": "global",

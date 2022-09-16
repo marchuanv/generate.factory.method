@@ -1,6 +1,6 @@
 const { createMessageMetadata } = require('C:\\component\\lib\\factory\\messagemetadata.factory.js');
-describe('when asking the MessageMetadata factory to create an instance', function() {
-  it("it should succeed without any errors", function() {
+describe('when asking the MessageMetadata factory to create an instance of MessageMetadata', () => {
+  it("it should succeed without any errors", () => {
 
     // Arrange
     const testInputArgs =
@@ -12,11 +12,13 @@ describe('when asking the MessageMetadata factory to create an instance', functi
     "token": null,
     "senderHost": null,
     "senderPort": null
-}
+};
 
     // Act
     const {messageMetadata} = createMessageMetadata(testInputArgs);
+
     // Assert
     expect(messageMetadata).not.toBeNull();
+
   });
 });

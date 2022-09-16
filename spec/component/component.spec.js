@@ -1,4 +1,4 @@
-describe("when initialising a component given a client and server messagebus", function() {
+describe("when initialising a component given a client and server messagebus", () => {
 
   let clientScopeId = "clientcomponenttest";
   let serverScopeId = "servercomponenttest";
@@ -8,7 +8,7 @@ describe("when initialising a component given a client and server messagebus", f
     
   });
 
- it("it should provide the capability for sending and receiving messages.", function(done) {
+ it("it should provide the capability for sending and receiving messages.", (done) => {
   
   // Arrange
   let clientComponent;

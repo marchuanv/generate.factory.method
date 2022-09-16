@@ -1,5 +1,6 @@
 {
     "typeName": "HttpClientMessageBusManager",
+    "isSingleton": false,
     "bindings": [
         {
             "name": "global",

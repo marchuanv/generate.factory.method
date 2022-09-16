@@ -1,5 +1,6 @@
 {
     "typeName": "HttpServerRequestMessageQueueBinding",
+    "isSingleton": false,
     "bindings": [
         {
             "name": "global",

@@ -1,5 +1,6 @@
 {
     "typeName": "MessageContent",
+    "isSingleton": false,
     "bindings": [
         {
             "name": "global",

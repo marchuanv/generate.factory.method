@@ -1,6 +1,6 @@
 const { createHttpRequestMessage } = require('C:\\component\\lib\\factory\\httprequestmessage.factory.js');
-describe('when asking the HttpRequestMessage factory to create an instance', function() {
-  it("it should succeed without any errors", function() {
+describe('when asking the HttpRequestMessage factory to create an instance of HttpRequestMessage', () => {
+  it("it should succeed without any errors", () => {
 
     // Arrange
     const testInputArgs =
@@ -15,11 +15,13 @@ describe('when asking the HttpRequestMessage factory to create an instance', fun
     "token": null,
     "senderHost": null,
     "senderPort": null
-}
+};
 
     // Act
     const {httpRequestMessage} = createHttpRequestMessage(testInputArgs);
+
     // Assert
     expect(httpRequestMessage).not.toBeNull();
+
   });
 });

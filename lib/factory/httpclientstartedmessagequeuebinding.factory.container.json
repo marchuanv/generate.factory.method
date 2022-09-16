@@ -1,5 +1,6 @@
 {
     "typeName": "HttpClientStartedMessageQueueBinding",
+    "isSingleton": false,
     "bindings": [
         {
             "name": "global",

@@ -1,5 +1,6 @@
 {
     "typeName": "UserSessions",
+    "isSingleton": false,
     "bindings": [
         {
             "name": "global",

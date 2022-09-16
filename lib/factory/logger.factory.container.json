@@ -1,5 +1,6 @@
 {
     "typeName": "Logger",
+    "isSingleton": false,
     "bindings": [
         {
             "name": "global",
