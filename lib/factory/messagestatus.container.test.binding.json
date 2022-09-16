@@ -1,9 +1,0 @@
-{
-    "name": "test",
-    "primitiveArgs": {
-        "scopeId": "test",
-        "messageStatusCode": null
-    },
-    "referenceArgs": {},
-    "instance": null
-}
