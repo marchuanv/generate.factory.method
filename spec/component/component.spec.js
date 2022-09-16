@@ -1,56 +1,56 @@
 describe("when initialising a component given a client and server messagebus", () => {
 
-  let clientScopeId = "clientcomponenttest";
-  let serverScopeId = "servercomponenttest";
-  const { createComponent } = require('../../lib/factory/component.factory.js');
+    let clientScopeId = "clientcomponenttest";
+    let serverScopeId = "servercomponenttest";
+    let createComponent;
 
-  beforeAll(() => {
+    beforeAll(() => {
+      createComponent = require('../../lib/factory/component.factory.js');
+    });
+
+    it("it should provide the capability for sending and receiving messages.", (done) => {
     
-  });
+        // Arrange
+        let clientComponent;
+        let serverComponent;
+        {
+          const { component } = createComponent({ scopeId: serverScopeId, packageJson: {
+            userId: 'componenttest',
+            senderHost: 'localhost', senderPort: 2000,
+            recipientHost: 'localhost', recipientPort: 3000,
+            timeout: 15000,
+            isServerComponent: true
+          }});
+          serverComponent = component;
+        }
+        {
+          const { component } = createComponent({ scopeId: clientScopeId, packageJson: {
+            userId: 'componenttest',
+            senderHost: 'localhost', senderPort: 3000,
+            recipientHost: 'localhost', recipientPort: 2000,
+            timeout: 15000,
+            isServerComponent: false
+          }});
+          clientComponent = component;
+        }
 
- it("it should provide the capability for sending and receiving messages.", (done) => {
-  
-  // Arrange
-  let clientComponent;
-  let serverComponent;
-  {
-    const { component } = createComponent({ scopeId: serverScopeId, packageJson: {
-      userId: 'componenttest',
-      senderHost: 'localhost', senderPort: 2000,
-      recipientHost: 'localhost', recipientPort: 3000,
-      timeout: 15000,
-      isServerComponent: true
-    }});
-    serverComponent = component;
-  }
-  {
-    const { component } = createComponent({ scopeId: clientScopeId, packageJson: {
-      userId: 'componenttest',
-      senderHost: 'localhost', senderPort: 3000,
-      recipientHost: 'localhost', recipientPort: 2000,
-      timeout: 15000,
-      isServerComponent: false
-    }});
-    clientComponent = component;
-  }
+        // Act
+        clientComponent.initialise({ secret: 'secret1234' }).then(() => {
+          clientComponent.send('Hello From Client');
+        
+        });
+        serverComponent.initialise({ secret: 'secret1234' }).then(() => {
+          serverComponent.receive({ callback: () => {
+            serverComponent.send('Hello From Server');
+          }});
+        });
 
-  // Act
-  clientComponent.initialise({ secret: 'secret1234' }).then(() => {
-    clientComponent.send('Hello From Client');
-   
-  });
-  serverComponent.initialise({ secret: 'secret1234' }).then(() => {
-    serverComponent.receive({ callback: () => {
-      serverComponent.send('Hello From Server');
-    }});
-  });
+        // Assert
+        clientComponent.receive({ callback: ({ message }) => {
+          expect(message).not.toBeUndefined();
+          expect(message).not.toBeNull();
+          setTimeout(done,1500);
+        }});
 
-  // Assert
-  clientComponent.receive({ callback: ({ message }) => {
-    expect(message).not.toBeUndefined();
-    expect(message).not.toBeNull();
-    setTimeout(done,1500);
-  }});
-
- });
+    });
 });
