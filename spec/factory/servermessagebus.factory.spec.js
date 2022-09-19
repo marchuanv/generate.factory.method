@@ -5,7 +5,6 @@ describe('when asking the ServerMessageBus factory to create an instance of Serv
     // Arrange
     const testInputArgs =
       {
-    "scopeId": "test",
     "serverResponseMessageBus": null,
     "serverRequestMessageBus": null
 };

@@ -4,9 +4,7 @@ describe('when asking the Logger factory to create an instance of Logger', () =>
 
     // Arrange
     const testInputArgs =
-      {
-    "scopeId": "test"
-};
+      {};
 
     // Act
     const {logger} = createLogger(testInputArgs);

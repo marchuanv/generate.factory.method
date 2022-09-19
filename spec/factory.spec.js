@@ -1,7 +1,7 @@
 fdescribe('when', function() {
   const { Factory } = require('C:\\component\\lib\\factory.js');
   
-  const scopeId = 'test';
+  const factoryContainerBindingName = 'test';
 
   it("it should one", function() {
 
@@ -13,14 +13,14 @@ fdescribe('when', function() {
       "isSingleton": false,
       "bindings": [
           {
-              "name": scopeId,
+              "factoryContainerBindingName": factoryContainerBindingName,
               "bindingScriptPath": "C://component//lib//factory//clientmessagebus.container.test.binding.json"
           }
       ]
     });
 
     // Act
-    const instance = factory.getInstance({ scopeId });
+    const instance = factory.getInstance({ factoryContainerBindingName });
 
     // Assert
     expect(instance).not.toBeNull();
@@ -36,9 +36,8 @@ fdescribe('when', function() {
       "isSingleton": false,
       "bindings": [
         {
-          "name": "test",
+          "factoryContainerBindingName": `${factoryContainerBindingName}`,
           "primitiveArgs": {
-              "scopeId": "test",
               "clientRequestMessageBus": null,
               "clientResponseMessageBus": null
           },
@@ -54,7 +53,7 @@ fdescribe('when', function() {
     });
 
     // Act
-    const instance = factory.getInstance({ scopeId });
+    const instance = factory.getInstance({ factoryContainerBindingName });
 
     // Assert
     expect(instance).not.toBeNull();

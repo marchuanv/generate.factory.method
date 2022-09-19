@@ -5,12 +5,12 @@
     "typeVariableName": "httpClientMessageBusManager",
     "bindings": [
         {
-            "name": "global",
-            "bindingScriptPath": "C://component//lib//factory//httpclientmessagebusmanager.container.global.binding.json"
+            "factoryContainerBindingName": "Global",
+            "factoryContainerBindingScriptPath": "C://component//lib//factory//httpclientmessagebusmanager.container.global.binding.json"
         },
         {
-            "name": "test",
-            "bindingScriptPath": "C://component//lib//factory//httpclientmessagebusmanager.container.test.binding.json"
+            "factoryContainerBindingName": "Test",
+            "factoryContainerBindingScriptPath": "C://component//lib//factory//httpclientmessagebusmanager.container.test.binding.json"
         }
     ]
 }

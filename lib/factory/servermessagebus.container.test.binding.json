@@ -1,7 +1,6 @@
 {
-    "name": "test",
+    "factoryContainerBindingName": "Test",
     "primitiveArgs": {
-        "scopeId": "test",
         "serverResponseMessageBus": null,
         "serverRequestMessageBus": null
     },

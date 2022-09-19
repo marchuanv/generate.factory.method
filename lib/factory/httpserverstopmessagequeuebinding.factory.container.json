@@ -5,12 +5,12 @@
     "typeVariableName": "httpServerStopMessageQueueBinding",
     "bindings": [
         {
-            "name": "global",
-            "bindingScriptPath": "C://component//lib//factory//httpserverstopmessagequeuebinding.container.global.binding.json"
+            "factoryContainerBindingName": "Global",
+            "factoryContainerBindingScriptPath": "C://component//lib//factory//httpserverstopmessagequeuebinding.container.global.binding.json"
         },
         {
-            "name": "test",
-            "bindingScriptPath": "C://component//lib//factory//httpserverstopmessagequeuebinding.container.test.binding.json"
+            "factoryContainerBindingName": "Test",
+            "factoryContainerBindingScriptPath": "C://component//lib//factory//httpserverstopmessagequeuebinding.container.test.binding.json"
         }
     ]
 }

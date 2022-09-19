@@ -1,5 +1,5 @@
 {
-    "name": "[BindingName]",
+    "factoryContainerBindingName": "[FactoryContainerBindingName]",
     "primitiveArgs": [PrimitiveArgs],
     "referenceArgs": [ReferenceArgs],
     "instance": null

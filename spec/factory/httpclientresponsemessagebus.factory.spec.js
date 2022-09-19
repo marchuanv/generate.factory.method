@@ -5,7 +5,7 @@ describe('when asking the HttpClientResponseMessageBus factory to create an inst
     // Arrange
     const testInputArgs =
       {
-    "scopeId": "test"
+    "scopeId": null
 };
 
     // Act

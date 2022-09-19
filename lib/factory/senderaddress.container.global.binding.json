@@ -1,7 +1,6 @@
 {
-    "name": "global",
+    "factoryContainerBindingName": "Global",
     "primitiveArgs": {
-        "scopeId": "global",
         "senderHost": null,
         "senderPort": null
     },

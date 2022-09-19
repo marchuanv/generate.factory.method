@@ -4,9 +4,7 @@ describe('when asking the MessageStore factory to create an instance of MessageS
 
     // Arrange
     const testInputArgs =
-      {
-    "scopeId": "test"
-};
+      {};
 
     // Act
     const {messageStore} = createMessageStore(testInputArgs);

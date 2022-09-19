@@ -4,10 +4,10 @@
     "typeScriptPath": "[TypeScriptPath]",
     "typeVariableName": "[TypeVariableName]",
     "bindings": [{
-        "name": "global",
-        "bindingScriptPath": null
+        "factoryContainerBindingName": "Global",
+        "factoryContainerBindingScriptPath": null
     },{
-        "name": "test",
-        "bindingScriptPath": null
+        "factoryContainerBindingName": "Test",
+        "factoryContainerBindingScriptPath": null
     }]
 }

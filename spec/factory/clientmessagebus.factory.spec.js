@@ -5,7 +5,6 @@ describe('when asking the ClientMessageBus factory to create an instance of Clie
     // Arrange
     const testInputArgs =
       {
-    "scopeId": "test",
     "clientRequestMessageBus": null,
     "clientResponseMessageBus": null
 };

@@ -5,7 +5,6 @@ describe('when asking the UserSecurity factory to create an instance of UserSecu
     // Arrange
     const testInputArgs =
       {
-    "scopeId": "test",
     "userId": null
 };
 

@@ -5,7 +5,6 @@ describe('when asking the RecipientAddress factory to create an instance of Reci
     // Arrange
     const testInputArgs =
       {
-    "scopeId": "test",
     "recipientHost": null,
     "recipientPort": null
 };

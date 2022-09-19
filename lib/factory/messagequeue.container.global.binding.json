@@ -1,8 +1,6 @@
 {
-    "name": "global",
-    "primitiveArgs": {
-        "scopeId": "global"
-    },
+    "factoryContainerBindingName": "Global",
+    "primitiveArgs": {},
     "referenceArgs": {
         "logger": {
             "factoryContainerName": "loggerFactoryContainer",

@@ -5,8 +5,8 @@ describe('when asking the HttpRequestMessage factory to create an instance of Ht
     // Arrange
     const testInputArgs =
       {
-    "scopeId": "test",
     "messageStatusCode": null,
+    "scopeId": null,
     "Id": null,
     "data": null,
     "recipientHost": null,

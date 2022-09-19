@@ -1,7 +1,7 @@
 {
-    "name": "test",
+    "factoryContainerBindingName": "Test",
     "primitiveArgs": {
-        "scopeId": "test"
+        "scopeId": null
     },
     "referenceArgs": {
         "httpServerRequestMessageQueueBinding": {

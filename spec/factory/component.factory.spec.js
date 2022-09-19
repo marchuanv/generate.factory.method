@@ -5,8 +5,8 @@ describe('when asking the Component factory to create an instance of Component',
     // Arrange
     const testInputArgs =
       {
-    "scopeId": "test",
     "packageJson": null,
+    "scopeId": null,
     "clientRequestMessageBus": null,
     "clientResponseMessageBus": null,
     "serverResponseMessageBus": null,

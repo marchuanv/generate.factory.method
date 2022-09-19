@@ -1,8 +1,8 @@
 {
-    "name": "global",
+    "factoryContainerBindingName": "Global",
     "primitiveArgs": {
-        "scopeId": "global",
         "packageJson": null,
+        "scopeId": null,
         "clientRequestMessageBus": null,
         "clientResponseMessageBus": null,
         "serverResponseMessageBus": null,

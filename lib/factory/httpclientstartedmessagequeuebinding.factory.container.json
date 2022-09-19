@@ -5,12 +5,12 @@
     "typeVariableName": "httpClientStartedMessageQueueBinding",
     "bindings": [
         {
-            "name": "global",
-            "bindingScriptPath": "C://component//lib//factory//httpclientstartedmessagequeuebinding.container.global.binding.json"
+            "factoryContainerBindingName": "Global",
+            "factoryContainerBindingScriptPath": "C://component//lib//factory//httpclientstartedmessagequeuebinding.container.global.binding.json"
         },
         {
-            "name": "test",
-            "bindingScriptPath": "C://component//lib//factory//httpclientstartedmessagequeuebinding.container.test.binding.json"
+            "factoryContainerBindingName": "Test",
+            "factoryContainerBindingScriptPath": "C://component//lib//factory//httpclientstartedmessagequeuebinding.container.test.binding.json"
         }
     ]
 }

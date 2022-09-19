@@ -5,7 +5,6 @@ describe('when asking the SenderAddress factory to create an instance of SenderA
     // Arrange
     const testInputArgs =
       {
-    "scopeId": "test",
     "senderHost": null,
     "senderPort": null
 };

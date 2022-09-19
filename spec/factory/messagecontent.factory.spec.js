@@ -5,7 +5,7 @@ describe('when asking the MessageContent factory to create an instance of Messag
     // Arrange
     const testInputArgs =
       {
-    "scopeId": "test",
+    "scopeId": null,
     "data": null,
     "recipientHost": null,
     "recipientPort": null,

@@ -1,8 +1,8 @@
 {
-    "name": "global",
+    "factoryContainerBindingName": "Global",
     "primitiveArgs": {
-        "scopeId": "global",
         "messageStatusCode": null,
+        "scopeId": null,
         "Id": null,
         "data": null,
         "recipientHost": null,

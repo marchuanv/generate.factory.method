@@ -4,9 +4,7 @@ describe('when asking the MessageConverter factory to create an instance of Mess
 
     // Arrange
     const testInputArgs =
-      {
-    "scopeId": "test"
-};
+      {};
 
     // Act
     const {messageConverter} = createMessageConverter(testInputArgs);

@@ -4,9 +4,7 @@ describe('when asking the MessageQueue factory to create an instance of MessageQ
 
     // Arrange
     const testInputArgs =
-      {
-    "scopeId": "test"
-};
+      {};
 
     // Act
     const {messageQueue} = createMessageQueue(testInputArgs);

@@ -5,12 +5,12 @@
     "typeVariableName": "httpServerResponseMessageBus",
     "bindings": [
         {
-            "name": "global",
-            "bindingScriptPath": "C://component//lib//factory//httpserverresponsemessagebus.container.global.binding.json"
+            "factoryContainerBindingName": "Global",
+            "factoryContainerBindingScriptPath": "C://component//lib//factory//httpserverresponsemessagebus.container.global.binding.json"
         },
         {
-            "name": "test",
-            "bindingScriptPath": "C://component//lib//factory//httpserverresponsemessagebus.container.test.binding.json"
+            "factoryContainerBindingName": "Test",
+            "factoryContainerBindingScriptPath": "C://component//lib//factory//httpserverresponsemessagebus.container.test.binding.json"
         }
     ]
 }

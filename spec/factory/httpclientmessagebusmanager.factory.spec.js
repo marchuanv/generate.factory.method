@@ -5,7 +5,7 @@ describe('when asking the HttpClientMessageBusManager factory to create an insta
     // Arrange
     const testInputArgs =
       {
-    "scopeId": "test"
+    "scopeId": null
 };
 
     // Act

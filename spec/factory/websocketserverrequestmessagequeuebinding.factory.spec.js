@@ -5,7 +5,7 @@ describe('when asking the WebSocketServerRequestMessageQueueBinding factory to c
     // Arrange
     const testInputArgs =
       {
-    "scopeId": "test"
+    "scopeId": null
 };
 
     // Act
