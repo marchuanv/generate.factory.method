@@ -2,7 +2,7 @@ const utils = require('utils');
 describe("when asking a client messagebus to publish more than one request", function() {
 
   let token = null;
-  const scopeId  = 'messagebusmultiplerequests';
+  const factoryContainerBindingName  = 'messagebusmultiplerequests';
   const timeout = 15000;
   const senderHost = 'localhost';
   const senderPort = 3000;
@@ -19,40 +19,40 @@ describe("when asking a client messagebus to publish more than one request", fun
   const { createClientMessageBus } = require('../../lib/factory/clientmessagebus.factory.js');
 
   beforeAll(() => {
-    const userId = scopeId;
-    const secret = `${scopeId}1234`;
-    const { userSessions } = createUserSessions({ scopeId });
+    const userId = factoryContainerBindingName;
+    const secret = `${factoryContainerBindingName}1234`;
+    const { userSessions } = createUserSessions({ factoryContainerBindingName });
     const { userSecurity } = userSessions.ensureSession({ userId });
     userSecurity.register({ secret });
     ({ token } = userSecurity.authenticate({ secret }));
-    createHttpServerMessageBus({ scopeId, timeout, senderHost, senderPort });
-    createHttpClientMessageBus({ scopeId, timeout });
-    createHttpServerMessageBusManager({ scopeId });
-    createHttpClientMessageBusManager({ scopeId });
+    createHttpServerMessageBus({ factoryContainerBindingName, timeout, senderHost, senderPort });
+    createHttpClientMessageBus({ factoryContainerBindingName, timeout });
+    createHttpServerMessageBusManager({ factoryContainerBindingName });
+    createHttpClientMessageBusManager({ factoryContainerBindingName });
   });
 
   it("it should respond to every request", (done) => {
     
     // Arrange
-    const metadata = { path:  `/${scopeId}` };
-    let expectedDecryptedClientText1 = `${scopeId}: Hello From Client First`;
-    let expectedDecryptedClientText2 = `${scopeId}: Hello From Client Second`;
-    let expectedDecryptedServerText1 = `${scopeId}: Hello From Server First`;
-    let expectedDecryptedServerText2 = `${scopeId}: Hello From Server Second`;
+    const metadata = { path:  `/${factoryContainerBindingName}` };
+    let expectedDecryptedClientText1 = `${factoryContainerBindingName}: Hello From Client First`;
+    let expectedDecryptedClientText2 = `${factoryContainerBindingName}: Hello From Client Second`;
+    let expectedDecryptedServerText1 = `${factoryContainerBindingName}: Hello From Server First`;
+    let expectedDecryptedServerText2 = `${factoryContainerBindingName}: Hello From Server Second`;
     let requestMessage1 = null;
     let requestMessage2 = null;
 
-    const { clientMessageBus } = createClientMessageBus({ scopeId, timeout, senderHost, senderPort });
+    const { clientMessageBus } = createClientMessageBus({ factoryContainerBindingName, timeout, senderHost, senderPort });
     { 
       //Simulate a Server
-      const { serverMessageBus } = createServerMessageBus({ scopeId, timeout, senderHost, senderPort });
+      const { serverMessageBus } = createServerMessageBus({ factoryContainerBindingName, timeout, senderHost, senderPort });
       serverMessageBus.publish(createMessage({ 
-        scopeId: utils.generateGUID(),
+        factoryContainerBindingName: utils.generateGUID(),
         messageStatusCode: 0, Id: null, data: expectedDecryptedServerText1, 
         recipientHost, recipientPort, metadata, token, senderHost, senderPort 
       }));
       serverMessageBus.publish(createMessage({ 
-        scopeId: utils.generateGUID(),
+        factoryContainerBindingName: utils.generateGUID(),
         messageStatusCode: 0, Id: null, data: expectedDecryptedServerText2, 
         recipientHost, recipientPort, metadata, token, senderHost, senderPort 
       }));
@@ -67,12 +67,12 @@ describe("when asking a client messagebus to publish more than one request", fun
 
     // Act
     clientMessageBus.publish(createMessage({ 
-      scopeId: utils.generateGUID(),
+      factoryContainerBindingName: utils.generateGUID(),
       messageStatusCode: 2, Id: null, data: expectedDecryptedClientText1,
       recipientHost, recipientPort, metadata, token, senderHost, senderPort 
     }));
     clientMessageBus.publish(createMessage({ 
-      scopeId: utils.generateGUID(),
+      factoryContainerBindingName: utils.generateGUID(),
       messageStatusCode: 2, Id: null, data: expectedDecryptedClientText2,
       recipientHost, recipientPort, metadata, token, senderHost, senderPort 
     }));

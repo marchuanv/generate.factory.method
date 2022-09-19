@@ -14,7 +14,7 @@ describe("when initialising a component given a client and server messagebus", (
         let clientComponent;
         let serverComponent;
         {
-          const { component } = createComponent({ scopeId: serverScopeId, packageJson: {
+          const { component } = createComponent({ factoryContainerBindingName: serverScopeId, packageJson: {
             userId: 'componenttest',
             senderHost: 'localhost', senderPort: 2000,
             recipientHost: 'localhost', recipientPort: 3000,
@@ -24,7 +24,7 @@ describe("when initialising a component given a client and server messagebus", (
           serverComponent = component;
         }
         {
-          const { component } = createComponent({ scopeId: clientScopeId, packageJson: {
+          const { component } = createComponent({ factoryContainerBindingName: clientScopeId, packageJson: {
             userId: 'componenttest',
             senderHost: 'localhost', senderPort: 3000,
             recipientHost: 'localhost', recipientPort: 2000,

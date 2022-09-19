@@ -1,9 +1,0 @@
-{
-    "factoryContainerBindingName": "Test",
-    "primitiveArgs": {
-        "factoryContainerBindingName": null,
-        "scopeId": null
-    },
-    "referenceArgs": {},
-    "instance": null
-}
