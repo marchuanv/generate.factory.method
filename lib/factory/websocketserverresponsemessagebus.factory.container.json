@@ -1,7 +1,8 @@
 {
     "typeName": "WebSocketServerResponseMessageBus",
     "isSingleton": false,
-    "typeScriptPath": "C://component//lib//websocket//websocketserverresponsemessagebus.prototype.js",
+    "typeScriptPath": "C://component//lib//websocket//websocketserverresponsemessagebus.js",
+    "typeVariableName": "webSocketServerResponseMessageBus",
     "bindings": [
         {
             "name": "global",

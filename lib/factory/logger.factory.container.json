@@ -1,7 +1,8 @@
 {
     "typeName": "Logger",
     "isSingleton": false,
-    "typeScriptPath": "C://component//lib//logger.prototype.js",
+    "typeScriptPath": "C://component//lib//logger.js",
+    "typeVariableName": "logger",
     "bindings": [
         {
             "name": "global",

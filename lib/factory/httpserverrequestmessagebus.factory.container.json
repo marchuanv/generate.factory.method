@@ -1,7 +1,8 @@
 {
     "typeName": "HttpServerRequestMessageBus",
     "isSingleton": false,
-    "typeScriptPath": "C://component//lib//http//httpserverrequestmessagebus.prototype.js",
+    "typeScriptPath": "C://component//lib//http//httpserverrequestmessagebus.js",
+    "typeVariableName": "httpServerRequestMessageBus",
     "bindings": [
         {
             "name": "global",

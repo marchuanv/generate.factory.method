@@ -1,7 +1,8 @@
 {
     "typeName": "MessageQueue",
     "isSingleton": false,
-    "typeScriptPath": "C://component//lib//messagequeue.prototype.js",
+    "typeScriptPath": "C://component//lib//messagequeue.js",
+    "typeVariableName": "messageQueue",
     "bindings": [
         {
             "name": "global",

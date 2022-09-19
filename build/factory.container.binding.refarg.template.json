@@ -1,6 +1,4 @@
 {
-    "[TypeVariableName]": {
-        "factoryMethod": "[FactoryMethod]",
-        "factoryScriptPath": "[FactoryScriptPath]"
-    }
+    "factoryContainerName": "[FactoryContainerName]",
+    "factoryContainerFilePath": "[FactoryContainerFilePath]"
 }

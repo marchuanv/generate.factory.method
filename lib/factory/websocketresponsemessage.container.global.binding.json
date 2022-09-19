@@ -14,52 +14,36 @@
     },
     "referenceArgs": {
         "message": {
-            "webSocketResponseMessage": {
-                "factoryMethod": "createMessage",
-                "factoryScriptPath": "C://component//lib//factory//message.factory.js"
-            }
+            "factoryContainerName": "messageFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//message.factory.container.json"
         },
         "messageStatus": {
-            "webSocketResponseMessage": {
-                "factoryMethod": "createMessageStatus",
-                "factoryScriptPath": "C://component//lib//factory//messagestatus.factory.js"
-            }
+            "factoryContainerName": "messageStatusFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//messagestatus.factory.container.json"
         },
         "messageContent": {
-            "webSocketResponseMessage": {
-                "factoryMethod": "createMessageContent",
-                "factoryScriptPath": "C://component//lib//factory//messagecontent.factory.js"
-            }
+            "factoryContainerName": "messageContentFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//messagecontent.factory.container.json"
         },
         "messageContentMetadata": {
-            "webSocketResponseMessage": {
-                "factoryMethod": "createMessageContentMetadata",
-                "factoryScriptPath": "C://component//lib//factory//messagecontentmetadata.factory.js"
-            }
+            "factoryContainerName": "messageContentMetadataFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//messagecontentmetadata.factory.container.json"
         },
         "userSessions": {
-            "webSocketResponseMessage": {
-                "factoryMethod": "createUserSessions",
-                "factoryScriptPath": "C://component//lib//factory//usersessions.factory.js"
-            }
+            "factoryContainerName": "userSessionsFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//usersessions.factory.container.json"
         },
         "messageMetadata": {
-            "webSocketResponseMessage": {
-                "factoryMethod": "createMessageMetadata",
-                "factoryScriptPath": "C://component//lib//factory//messagemetadata.factory.js"
-            }
+            "factoryContainerName": "messageMetadataFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//messagemetadata.factory.container.json"
         },
         "recipientAddress": {
-            "webSocketResponseMessage": {
-                "factoryMethod": "createRecipientAddress",
-                "factoryScriptPath": "C://component//lib//factory//recipientaddress.factory.js"
-            }
+            "factoryContainerName": "recipientAddressFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//recipientaddress.factory.container.json"
         },
         "senderAddress": {
-            "webSocketResponseMessage": {
-                "factoryMethod": "createSenderAddress",
-                "factoryScriptPath": "C://component//lib//factory//senderaddress.factory.js"
-            }
+            "factoryContainerName": "senderAddressFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//senderaddress.factory.container.json"
         }
     },
     "instance": null

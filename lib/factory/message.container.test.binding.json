@@ -14,46 +14,32 @@
     },
     "referenceArgs": {
         "messageStatus": {
-            "message": {
-                "factoryMethod": "createMessageStatus",
-                "factoryScriptPath": "C://component//lib//factory//messagestatus.factory.js"
-            }
+            "factoryContainerName": "messageStatusFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//messagestatus.factory.container.json"
         },
         "messageContent": {
-            "message": {
-                "factoryMethod": "createMessageContent",
-                "factoryScriptPath": "C://component//lib//factory//messagecontent.factory.js"
-            }
+            "factoryContainerName": "messageContentFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//messagecontent.factory.container.json"
         },
         "messageContentMetadata": {
-            "message": {
-                "factoryMethod": "createMessageContentMetadata",
-                "factoryScriptPath": "C://component//lib//factory//messagecontentmetadata.factory.js"
-            }
+            "factoryContainerName": "messageContentMetadataFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//messagecontentmetadata.factory.container.json"
         },
         "userSessions": {
-            "message": {
-                "factoryMethod": "createUserSessions",
-                "factoryScriptPath": "C://component//lib//factory//usersessions.factory.js"
-            }
+            "factoryContainerName": "userSessionsFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//usersessions.factory.container.json"
         },
         "messageMetadata": {
-            "message": {
-                "factoryMethod": "createMessageMetadata",
-                "factoryScriptPath": "C://component//lib//factory//messagemetadata.factory.js"
-            }
+            "factoryContainerName": "messageMetadataFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//messagemetadata.factory.container.json"
         },
         "recipientAddress": {
-            "message": {
-                "factoryMethod": "createRecipientAddress",
-                "factoryScriptPath": "C://component//lib//factory//recipientaddress.factory.js"
-            }
+            "factoryContainerName": "recipientAddressFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//recipientaddress.factory.container.json"
         },
         "senderAddress": {
-            "message": {
-                "factoryMethod": "createSenderAddress",
-                "factoryScriptPath": "C://component//lib//factory//senderaddress.factory.js"
-            }
+            "factoryContainerName": "senderAddressFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//senderaddress.factory.container.json"
         }
     },
     "instance": null

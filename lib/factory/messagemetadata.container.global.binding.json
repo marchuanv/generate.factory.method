@@ -11,16 +11,12 @@
     },
     "referenceArgs": {
         "recipientAddress": {
-            "messageMetadata": {
-                "factoryMethod": "createRecipientAddress",
-                "factoryScriptPath": "C://component//lib//factory//recipientaddress.factory.js"
-            }
+            "factoryContainerName": "recipientAddressFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//recipientaddress.factory.container.json"
         },
         "senderAddress": {
-            "messageMetadata": {
-                "factoryMethod": "createSenderAddress",
-                "factoryScriptPath": "C://component//lib//factory//senderaddress.factory.js"
-            }
+            "factoryContainerName": "senderAddressFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//senderaddress.factory.container.json"
         }
     },
     "instance": null

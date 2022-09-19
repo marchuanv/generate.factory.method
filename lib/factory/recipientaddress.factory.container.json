@@ -1,7 +1,8 @@
 {
     "typeName": "RecipientAddress",
     "isSingleton": false,
-    "typeScriptPath": "C://component//lib//recipientaddress.prototype.js",
+    "typeScriptPath": "C://component//lib//recipientaddress.js",
+    "typeVariableName": "recipientAddress",
     "bindings": [
         {
             "name": "global",

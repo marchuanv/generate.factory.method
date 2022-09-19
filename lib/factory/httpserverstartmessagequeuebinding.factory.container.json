@@ -1,7 +1,8 @@
 {
     "typeName": "HttpServerStartMessageQueueBinding",
     "isSingleton": false,
-    "typeScriptPath": "C://component//lib//http//httpserverstartmessagequeuebinding.prototype.js",
+    "typeScriptPath": "C://component//lib//http//httpserverstartmessagequeuebinding.js",
+    "typeVariableName": "httpServerStartMessageQueueBinding",
     "bindings": [
         {
             "name": "global",

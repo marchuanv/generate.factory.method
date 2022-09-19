@@ -5,34 +5,24 @@
     },
     "referenceArgs": {
         "httpClientStopMessageQueueBinding": {
-            "httpClientMessageBusManager": {
-                "factoryMethod": "createHttpClientStopMessageQueueBinding",
-                "factoryScriptPath": "C://component//lib//factory//httpclientstopmessagequeuebinding.factory.js"
-            }
+            "factoryContainerName": "httpClientStopMessageQueueBindingFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//httpclientstopmessagequeuebinding.factory.container.json"
         },
         "messageQueue": {
-            "httpClientMessageBusManager": {
-                "factoryMethod": "createMessageQueue",
-                "factoryScriptPath": "C://component//lib//factory//messagequeue.factory.js"
-            }
+            "factoryContainerName": "messageQueueFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//messagequeue.factory.container.json"
         },
         "logger": {
-            "httpClientMessageBusManager": {
-                "factoryMethod": "createLogger",
-                "factoryScriptPath": "C://component//lib//factory//logger.factory.js"
-            }
+            "factoryContainerName": "loggerFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//logger.factory.container.json"
         },
         "httpClientStartMessageQueueBinding": {
-            "httpClientMessageBusManager": {
-                "factoryMethod": "createHttpClientStartMessageQueueBinding",
-                "factoryScriptPath": "C://component//lib//factory//httpclientstartmessagequeuebinding.factory.js"
-            }
+            "factoryContainerName": "httpClientStartMessageQueueBindingFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//httpclientstartmessagequeuebinding.factory.container.json"
         },
         "httpClientStartedMessageQueueBinding": {
-            "httpClientMessageBusManager": {
-                "factoryMethod": "createHttpClientStartedMessageQueueBinding",
-                "factoryScriptPath": "C://component//lib//factory//httpclientstartedmessagequeuebinding.factory.js"
-            }
+            "factoryContainerName": "httpClientStartedMessageQueueBindingFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//httpclientstartedmessagequeuebinding.factory.container.json"
         }
     },
     "instance": null

@@ -1,7 +1,8 @@
 {
     "typeName": "ServerMessageBus",
     "isSingleton": false,
-    "typeScriptPath": "C://component//lib//servermessagebus.prototype.js",
+    "typeScriptPath": "C://component//lib//servermessagebus.js",
+    "typeVariableName": "serverMessageBus",
     "bindings": [
         {
             "name": "global",

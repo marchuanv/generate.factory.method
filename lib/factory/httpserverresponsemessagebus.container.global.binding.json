@@ -5,22 +5,16 @@
     },
     "referenceArgs": {
         "httpServerResponseMessageQueueBinding": {
-            "httpServerResponseMessageBus": {
-                "factoryMethod": "createHttpServerResponseMessageQueueBinding",
-                "factoryScriptPath": "C://component//lib//factory//httpserverresponsemessagequeuebinding.factory.js"
-            }
+            "factoryContainerName": "httpServerResponseMessageQueueBindingFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//httpserverresponsemessagequeuebinding.factory.container.json"
         },
         "messageQueue": {
-            "httpServerResponseMessageBus": {
-                "factoryMethod": "createMessageQueue",
-                "factoryScriptPath": "C://component//lib//factory//messagequeue.factory.js"
-            }
+            "factoryContainerName": "messageQueueFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//messagequeue.factory.container.json"
         },
         "logger": {
-            "httpServerResponseMessageBus": {
-                "factoryMethod": "createLogger",
-                "factoryScriptPath": "C://component//lib//factory//logger.factory.js"
-            }
+            "factoryContainerName": "loggerFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//logger.factory.container.json"
         }
     },
     "instance": null

@@ -1,7 +1,8 @@
 {
     "typeName": "UserSecurity",
     "isSingleton": false,
-    "typeScriptPath": "C://component//lib//usersecurity.prototype.js",
+    "typeScriptPath": "C://component//lib//usersecurity.js",
+    "typeVariableName": "userSecurity",
     "bindings": [
         {
             "name": "global",

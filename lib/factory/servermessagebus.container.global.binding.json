@@ -7,10 +7,8 @@
     },
     "referenceArgs": {
         "messageConverter": {
-            "serverMessageBus": {
-                "factoryMethod": "createMessageConverter",
-                "factoryScriptPath": "C://component//lib//factory//messageconverter.factory.js"
-            }
+            "factoryContainerName": "messageConverterFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//messageconverter.factory.container.json"
         }
     },
     "instance": null

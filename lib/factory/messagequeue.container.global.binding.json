@@ -5,10 +5,8 @@
     },
     "referenceArgs": {
         "logger": {
-            "messageQueue": {
-                "factoryMethod": "createLogger",
-                "factoryScriptPath": "C://component//lib//factory//logger.factory.js"
-            }
+            "factoryContainerName": "loggerFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//logger.factory.container.json"
         }
     },
     "instance": null

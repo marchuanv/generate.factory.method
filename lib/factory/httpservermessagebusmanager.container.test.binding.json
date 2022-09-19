@@ -5,52 +5,36 @@
     },
     "referenceArgs": {
         "httpServerStoppedMessageQueueBinding": {
-            "httpServerMessageBusManager": {
-                "factoryMethod": "createHttpServerStoppedMessageQueueBinding",
-                "factoryScriptPath": "C://component//lib//factory//httpserverstoppedmessagequeuebinding.factory.js"
-            }
+            "factoryContainerName": "httpServerStoppedMessageQueueBindingFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//httpserverstoppedmessagequeuebinding.factory.container.json"
         },
         "messageQueue": {
-            "httpServerMessageBusManager": {
-                "factoryMethod": "createMessageQueue",
-                "factoryScriptPath": "C://component//lib//factory//messagequeue.factory.js"
-            }
+            "factoryContainerName": "messageQueueFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//messagequeue.factory.container.json"
         },
         "logger": {
-            "httpServerMessageBusManager": {
-                "factoryMethod": "createLogger",
-                "factoryScriptPath": "C://component//lib//factory//logger.factory.js"
-            }
+            "factoryContainerName": "loggerFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//logger.factory.container.json"
         },
         "httpServerRequestMessageQueueBinding": {
-            "httpServerMessageBusManager": {
-                "factoryMethod": "createHttpServerRequestMessageQueueBinding",
-                "factoryScriptPath": "C://component//lib//factory//httpserverrequestmessagequeuebinding.factory.js"
-            }
+            "factoryContainerName": "httpServerRequestMessageQueueBindingFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//httpserverrequestmessagequeuebinding.factory.container.json"
         },
         "httpServerResponseMessageQueueBinding": {
-            "httpServerMessageBusManager": {
-                "factoryMethod": "createHttpServerResponseMessageQueueBinding",
-                "factoryScriptPath": "C://component//lib//factory//httpserverresponsemessagequeuebinding.factory.js"
-            }
+            "factoryContainerName": "httpServerResponseMessageQueueBindingFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//httpserverresponsemessagequeuebinding.factory.container.json"
         },
         "httpServerStartMessageQueueBinding": {
-            "httpServerMessageBusManager": {
-                "factoryMethod": "createHttpServerStartMessageQueueBinding",
-                "factoryScriptPath": "C://component//lib//factory//httpserverstartmessagequeuebinding.factory.js"
-            }
+            "factoryContainerName": "httpServerStartMessageQueueBindingFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//httpserverstartmessagequeuebinding.factory.container.json"
         },
         "httpServerStartedMessageQueueBinding": {
-            "httpServerMessageBusManager": {
-                "factoryMethod": "createHttpServerStartedMessageQueueBinding",
-                "factoryScriptPath": "C://component//lib//factory//httpserverstartedmessagequeuebinding.factory.js"
-            }
+            "factoryContainerName": "httpServerStartedMessageQueueBindingFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//httpserverstartedmessagequeuebinding.factory.container.json"
         },
         "httpServerStopMessageQueueBinding": {
-            "httpServerMessageBusManager": {
-                "factoryMethod": "createHttpServerStopMessageQueueBinding",
-                "factoryScriptPath": "C://component//lib//factory//httpserverstopmessagequeuebinding.factory.js"
-            }
+            "factoryContainerName": "httpServerStopMessageQueueBindingFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//httpserverstopmessagequeuebinding.factory.container.json"
         }
     },
     "instance": null

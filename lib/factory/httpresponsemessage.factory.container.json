@@ -1,7 +1,8 @@
 {
     "typeName": "HttpResponseMessage",
     "isSingleton": false,
-    "typeScriptPath": "C://component//lib//http//httpresponsemessage.prototype.js",
+    "typeScriptPath": "C://component//lib//http//httpresponsemessage.js",
+    "typeVariableName": "httpResponseMessage",
     "bindings": [
         {
             "name": "global",

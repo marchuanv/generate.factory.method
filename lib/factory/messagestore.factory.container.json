@@ -1,7 +1,8 @@
 {
     "typeName": "MessageStore",
     "isSingleton": false,
-    "typeScriptPath": "C://component//lib//messagestore.prototype.js",
+    "typeScriptPath": "C://component//lib//messagestore.js",
+    "typeVariableName": "messageStore",
     "bindings": [
         {
             "name": "global",

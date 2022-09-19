@@ -5,16 +5,12 @@
     },
     "referenceArgs": {
         "messageQueue": {
-            "httpServerRequestMessageQueueBinding": {
-                "factoryMethod": "createMessageQueue",
-                "factoryScriptPath": "C://component//lib//factory//messagequeue.factory.js"
-            }
+            "factoryContainerName": "messageQueueFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//messagequeue.factory.container.json"
         },
         "logger": {
-            "httpServerRequestMessageQueueBinding": {
-                "factoryMethod": "createLogger",
-                "factoryScriptPath": "C://component//lib//factory//logger.factory.js"
-            }
+            "factoryContainerName": "loggerFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//logger.factory.container.json"
         }
     },
     "instance": null

@@ -5,22 +5,16 @@
     },
     "referenceArgs": {
         "webSocketServerResponseMessageQueueBinding": {
-            "webSocketServerResponseMessageBus": {
-                "factoryMethod": "createWebSocketServerResponseMessageQueueBinding",
-                "factoryScriptPath": "C://component//lib//factory//websocketserverresponsemessagequeuebinding.factory.js"
-            }
+            "factoryContainerName": "webSocketServerResponseMessageQueueBindingFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//websocketserverresponsemessagequeuebinding.factory.container.json"
         },
         "messageQueue": {
-            "webSocketServerResponseMessageBus": {
-                "factoryMethod": "createMessageQueue",
-                "factoryScriptPath": "C://component//lib//factory//messagequeue.factory.js"
-            }
+            "factoryContainerName": "messageQueueFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//messagequeue.factory.container.json"
         },
         "logger": {
-            "webSocketServerResponseMessageBus": {
-                "factoryMethod": "createLogger",
-                "factoryScriptPath": "C://component//lib//factory//logger.factory.js"
-            }
+            "factoryContainerName": "loggerFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//logger.factory.container.json"
         }
     },
     "instance": null

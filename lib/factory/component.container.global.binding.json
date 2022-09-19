@@ -10,28 +10,20 @@
     },
     "referenceArgs": {
         "clientMessageBus": {
-            "component": {
-                "factoryMethod": "createClientMessageBus",
-                "factoryScriptPath": "C://component//lib//factory//clientmessagebus.factory.js"
-            }
+            "factoryContainerName": "clientMessageBusFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//clientmessagebus.factory.container.json"
         },
         "messageConverter": {
-            "component": {
-                "factoryMethod": "createMessageConverter",
-                "factoryScriptPath": "C://component//lib//factory//messageconverter.factory.js"
-            }
+            "factoryContainerName": "messageConverterFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//messageconverter.factory.container.json"
         },
         "serverMessageBus": {
-            "component": {
-                "factoryMethod": "createServerMessageBus",
-                "factoryScriptPath": "C://component//lib//factory//servermessagebus.factory.js"
-            }
+            "factoryContainerName": "serverMessageBusFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//servermessagebus.factory.container.json"
         },
         "userSessions": {
-            "component": {
-                "factoryMethod": "createUserSessions",
-                "factoryScriptPath": "C://component//lib//factory//usersessions.factory.js"
-            }
+            "factoryContainerName": "userSessionsFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//usersessions.factory.container.json"
         }
     },
     "instance": null

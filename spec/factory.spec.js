@@ -1,20 +1,17 @@
 fdescribe('when', function() {
   const { Factory } = require('C:\\component\\lib\\factory.js');
   
-  const scopeId = 'factoryTest';
+  const scopeId = 'test';
 
   it("it should one", function() {
 
     // Arrange
     const factory = new Factory({
       "typeName": "ClientMessageBus",
-      "isSingleton": false,
+      "typeVariableName": "clientMessageBus",
       "typeScriptPath": "C://component//lib//clientmessagebus.js",
+      "isSingleton": false,
       "bindings": [
-          {
-              "name": "global",
-              "bindingScriptPath": "C://component//lib//factory//clientmessagebus.container.global.binding.json"
-          },
           {
               "name": scopeId,
               "bindingScriptPath": "C://component//lib//factory//clientmessagebus.container.test.binding.json"
@@ -34,35 +31,15 @@ fdescribe('when', function() {
     // Arrange
     const factory = new Factory({ 
       "typeName": "ClientMessageBus",
+      "typeVariableName": "clientMessageBus",
       "typeScriptPath": "C://component//lib//clientmessagebus.js",
+      "isSingleton": false,
       "bindings": [
-          {
-            "name":"global",
-            "primitiveArgs": {
-              "scopeId": "global",
-              "clientRequestMessageBus": null,
-              "clientResponseMessageBus": null
-            },
-            "referenceArgs": {
-                "messageConverter": {
-                    "factoryMethod": "createMessageConverter",
-                    "factoryScript": "C://component//lib//factory//messageconverter.factory.js"
-                }
-            },
-            "instance": null
-          },
           {
             "name": scopeId,
             "primitiveArgs": {
-              "scopeId": scopeId,
-              "clientRequestMessageBus": null,
-              "clientResponseMessageBus": null
             },
             "referenceArgs": {
-                "messageConverter": {
-                    "factoryMethod": "createMessageConverter",
-                    "factoryScript": "C://component//lib//factory//messageconverter.factory.js"
-                }
             },
             "instance": null
           }

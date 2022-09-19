@@ -1,7 +1,8 @@
 {
     "typeName": "HttpServerMessageBusManager",
     "isSingleton": false,
-    "typeScriptPath": "C://component//lib//http//httpservermessagebusmanager.prototype.js",
+    "typeScriptPath": "C://component//lib//http//httpservermessagebusmanager.js",
+    "typeVariableName": "httpServerMessageBusManager",
     "bindings": [
         {
             "name": "global",

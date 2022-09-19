@@ -1,7 +1,8 @@
 {
     "typeName": "WebSocketRequestMessage",
     "isSingleton": false,
-    "typeScriptPath": "C://component//lib//websocket//websocketrequestmessage.prototype.js",
+    "typeScriptPath": "C://component//lib//websocket//websocketrequestmessage.js",
+    "typeVariableName": "webSocketRequestMessage",
     "bindings": [
         {
             "name": "global",

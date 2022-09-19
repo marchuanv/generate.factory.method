@@ -170,7 +170,8 @@ for(const info of getDependencyTree()) {
     });
     if (!existsSync(info.containerScriptPath)) {
         const factoryContainer = factoryContainerTemplate
-            .replace(/\[TypeScriptPath\]/g, info.scriptPath.replace(/\\/g,'//'))
+            .replace(/\[TypeVariableName\]/g, info.variableName)
+            .replace(/\[TypeScriptPath\]/g, info.scriptPath.replace(/\\/g,'//').replace('prototype.',''))
             .replace(/\[TypeName\]/g, info.typeName);
         const factoryContainerJson = utils.getJSONObject(factoryContainer);
         writeFileSync(info.containerScriptPath, utils.getJSONString(factoryContainerJson), 'utf8');
@@ -185,9 +186,8 @@ for(const info of getDependencyTree()) {
             walkDependencyTree(info, (typeInfo) => {
                 if (typeInfo.scriptPath) {
                     const factoryContainerBindingRefArg = factoryContainerBindingRefArgTemplate
-                        .replace(/\[TypeVariableName\]/g,  info.variableName)
-                        .replace(/\[FactoryMethod\]/g, `create${typeInfo.typeName}`)
-                        .replace(/\[FactoryScriptPath\]/g, typeInfo.factoryScriptPath.replace(/\\/g,'//'));
+                        .replace(/\[FactoryContainerName\]/g,  `${typeInfo.variableName}FactoryContainer`)
+                        .replace(/\[FactoryContainerFilePath\]/g, typeInfo.containerScriptPath.replace(/\\/g,'//'));
                     referenceArgs[typeInfo.variableName] = utils.getJSONObject(factoryContainerBindingRefArg);
                 }
             });

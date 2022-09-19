@@ -1,7 +1,8 @@
 {
     "typeName": "ContentType",
     "isSingleton": false,
-    "typeScriptPath": "C://component//lib//contentType.prototype.js",
+    "typeScriptPath": "C://component//lib//contentType.js",
+    "typeVariableName": "contentType",
     "bindings": [
         {
             "name": "global",
