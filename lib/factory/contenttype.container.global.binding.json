@@ -1,7 +1,8 @@
 {
     "factoryContainerBindingName": "Global",
     "primitiveArgs": {
-        "name": null
+        "name": null,
+        "factoryContainerBindingName": null
     },
     "referenceArgs": {},
     "instance": null

@@ -4,7 +4,8 @@
         "timeout": null,
         "scopeId": null,
         "senderHost": null,
-        "senderPort": null
+        "senderPort": null,
+        "factoryContainerBindingName": null
     },
     "referenceArgs": {
         "httpServerRequestMessageQueueBinding": {

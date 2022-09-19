@@ -6,7 +6,8 @@
         "metadata": null,
         "token": null,
         "senderHost": null,
-        "senderPort": null
+        "senderPort": null,
+        "factoryContainerBindingName": null
     },
     "referenceArgs": {
         "recipientAddress": {

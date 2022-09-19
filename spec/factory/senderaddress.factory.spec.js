@@ -6,7 +6,8 @@ describe('when asking the SenderAddress factory to create an instance of SenderA
     const testInputArgs =
       {
     "senderHost": null,
-    "senderPort": null
+    "senderPort": null,
+    "factoryContainerBindingName": null
 };
 
     // Act

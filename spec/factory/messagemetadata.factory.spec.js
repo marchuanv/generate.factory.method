@@ -10,7 +10,8 @@ describe('when asking the MessageMetadata factory to create an instance of Messa
     "metadata": null,
     "token": null,
     "senderHost": null,
-    "senderPort": null
+    "senderPort": null,
+    "factoryContainerBindingName": null
 };
 
     // Act

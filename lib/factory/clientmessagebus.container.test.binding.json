@@ -2,7 +2,8 @@
     "factoryContainerBindingName": "Test",
     "primitiveArgs": {
         "clientRequestMessageBus": null,
-        "clientResponseMessageBus": null
+        "clientResponseMessageBus": null,
+        "factoryContainerBindingName": null
     },
     "referenceArgs": {
         "messageConverter": {

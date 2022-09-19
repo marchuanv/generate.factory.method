@@ -2,7 +2,8 @@
     "factoryContainerBindingName": "Global",
     "primitiveArgs": {
         "serverResponseMessageBus": null,
-        "serverRequestMessageBus": null
+        "serverRequestMessageBus": null,
+        "factoryContainerBindingName": null
     },
     "referenceArgs": {
         "messageConverter": {

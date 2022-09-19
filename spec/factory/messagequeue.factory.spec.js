@@ -4,7 +4,9 @@ describe('when asking the MessageQueue factory to create an instance of MessageQ
 
     // Arrange
     const testInputArgs =
-      {};
+      {
+    "factoryContainerBindingName": null
+};
 
     // Act
     const {messageQueue} = createMessageQueue(testInputArgs);

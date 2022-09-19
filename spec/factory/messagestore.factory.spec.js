@@ -4,7 +4,9 @@ describe('when asking the MessageStore factory to create an instance of MessageS
 
     // Arrange
     const testInputArgs =
-      {};
+      {
+    "factoryContainerBindingName": null
+};
 
     // Act
     const {messageStore} = createMessageStore(testInputArgs);

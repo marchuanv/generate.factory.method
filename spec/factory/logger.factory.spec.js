@@ -4,7 +4,9 @@ describe('when asking the Logger factory to create an instance of Logger', () =>
 
     // Arrange
     const testInputArgs =
-      {};
+      {
+    "factoryContainerBindingName": null
+};
 
     // Act
     const {logger} = createLogger(testInputArgs);

@@ -14,7 +14,8 @@ describe('when asking the HttpRequestMessage factory to create an instance of Ht
     "metadata": null,
     "token": null,
     "senderHost": null,
-    "senderPort": null
+    "senderPort": null,
+    "factoryContainerBindingName": null
 };
 
     // Act

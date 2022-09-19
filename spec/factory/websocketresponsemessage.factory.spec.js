@@ -14,7 +14,8 @@ describe('when asking the WebSocketResponseMessage factory to create an instance
     "metadata": null,
     "token": null,
     "senderHost": null,
-    "senderPort": null
+    "senderPort": null,
+    "factoryContainerBindingName": null
 };
 
     // Act

@@ -6,7 +6,8 @@ describe('when asking the ServerMessageBus factory to create an instance of Serv
     const testInputArgs =
       {
     "serverResponseMessageBus": null,
-    "serverRequestMessageBus": null
+    "serverRequestMessageBus": null,
+    "factoryContainerBindingName": null
 };
 
     // Act

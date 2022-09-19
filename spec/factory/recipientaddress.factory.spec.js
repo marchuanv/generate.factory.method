@@ -6,7 +6,8 @@ describe('when asking the RecipientAddress factory to create an instance of Reci
     const testInputArgs =
       {
     "recipientHost": null,
-    "recipientPort": null
+    "recipientPort": null,
+    "factoryContainerBindingName": null
 };
 
     // Act

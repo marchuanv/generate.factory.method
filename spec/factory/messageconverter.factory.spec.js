@@ -4,7 +4,9 @@ describe('when asking the MessageConverter factory to create an instance of Mess
 
     // Arrange
     const testInputArgs =
-      {};
+      {
+    "factoryContainerBindingName": null
+};
 
     // Act
     const {messageConverter} = createMessageConverter(testInputArgs);

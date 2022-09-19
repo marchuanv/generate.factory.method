@@ -1,7 +1,8 @@
 {
     "factoryContainerBindingName": "Test",
     "primitiveArgs": {
-        "userId": null
+        "userId": null,
+        "factoryContainerBindingName": null
     },
     "referenceArgs": {},
     "instance": null

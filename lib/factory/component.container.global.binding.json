@@ -6,7 +6,8 @@
         "clientRequestMessageBus": null,
         "clientResponseMessageBus": null,
         "serverResponseMessageBus": null,
-        "serverRequestMessageBus": null
+        "serverRequestMessageBus": null,
+        "factoryContainerBindingName": null
     },
     "referenceArgs": {
         "clientMessageBus": {

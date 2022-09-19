@@ -1,6 +1,8 @@
 {
     "factoryContainerBindingName": "Test",
-    "primitiveArgs": {},
+    "primitiveArgs": {
+        "factoryContainerBindingName": null
+    },
     "referenceArgs": {
         "logger": {
             "factoryContainerName": "loggerFactoryContainer",

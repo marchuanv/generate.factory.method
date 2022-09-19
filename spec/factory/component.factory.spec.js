@@ -10,7 +10,8 @@ describe('when asking the Component factory to create an instance of Component',
     "clientRequestMessageBus": null,
     "clientResponseMessageBus": null,
     "serverResponseMessageBus": null,
-    "serverRequestMessageBus": null
+    "serverRequestMessageBus": null,
+    "factoryContainerBindingName": null
 };
 
     // Act

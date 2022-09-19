@@ -6,7 +6,8 @@ describe('when asking the ClientMessageBus factory to create an instance of Clie
     const testInputArgs =
       {
     "clientRequestMessageBus": null,
-    "clientResponseMessageBus": null
+    "clientResponseMessageBus": null,
+    "factoryContainerBindingName": null
 };
 
     // Act

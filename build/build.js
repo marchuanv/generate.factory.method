@@ -150,7 +150,7 @@ for(const info of getDependencyTree()) {
         continue;
     }
     const referenceArgs = {};
-    const primitiveArgs = {};
+    const primitiveArgs = { factoryContainerBindingName: null };
     const factoryCalls = [];
     let factoryRequireScripts =[];
     walkDependencyTree(info, (typeInfo) => {

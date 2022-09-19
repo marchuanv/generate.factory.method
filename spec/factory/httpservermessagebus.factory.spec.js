@@ -8,7 +8,8 @@ describe('when asking the HttpServerMessageBus factory to create an instance of 
     "timeout": null,
     "scopeId": null,
     "senderHost": null,
-    "senderPort": null
+    "senderPort": null,
+    "factoryContainerBindingName": null
 };
 
     // Act

@@ -12,7 +12,8 @@ describe('when asking the MessageContent factory to create an instance of Messag
     "metadata": null,
     "token": null,
     "senderHost": null,
-    "senderPort": null
+    "senderPort": null,
+    "factoryContainerBindingName": null
 };
 
     // Act

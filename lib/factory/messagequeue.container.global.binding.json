@@ -1,6 +1,8 @@
 {
     "factoryContainerBindingName": "Global",
-    "primitiveArgs": {},
+    "primitiveArgs": {
+        "factoryContainerBindingName": null
+    },
     "referenceArgs": {
         "logger": {
             "factoryContainerName": "loggerFactoryContainer",

@@ -6,7 +6,8 @@ describe('when asking the MessageContentMetadata factory to create an instance o
     const testInputArgs =
       {
     "scopeId": null,
-    "data": null
+    "data": null,
+    "factoryContainerBindingName": null
 };
 
     // Act

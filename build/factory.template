@@ -9,15 +9,15 @@ const factory = new Factory(container);
 */
 function create[TypeName]({[PrimitiveArgs]}) {
     const args = {[PrimitiveArgs]};
-    const binding = [TypeName]FactoryContainer.bindings[scopeId];
+    const binding = [TypeName]FactoryContainer.bindings[factoryContainerBindingName];
     if (!binding) {
-        throw new Error(`no binding found for scope: ${scopeId}`);
+        throw new Error(`binding ${factoryContainerBindingName} not found.`);
     }
     for(const key of Object.keys(args)) {
         if (binding.primitiveArgs[key]) {
             binding.primitiveArgs[key] = args[key];
         }
     };
-    return factory.getInstance({ scopeId });
+    return factory.getInstance({ factoryContainerBindingName });
 }
 module.exports = { create[TypeName] };

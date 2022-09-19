@@ -6,7 +6,8 @@ describe('when asking the HttpClientMessageBus factory to create an instance of 
     const testInputArgs =
       {
     "timeout": null,
-    "scopeId": null
+    "scopeId": null,
+    "factoryContainerBindingName": null
 };
 
     // Act

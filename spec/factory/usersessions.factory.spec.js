@@ -5,7 +5,8 @@ describe('when asking the UserSessions factory to create an instance of UserSess
     // Arrange
     const testInputArgs =
       {
-    "scopeId": null
+    "scopeId": null,
+    "factoryContainerBindingName": null
 };
 
     // Act

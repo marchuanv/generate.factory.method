@@ -5,7 +5,8 @@ describe('when asking the UserSecurity factory to create an instance of UserSecu
     // Arrange
     const testInputArgs =
       {
-    "userId": null
+    "userId": null,
+    "factoryContainerBindingName": null
 };
 
     // Act

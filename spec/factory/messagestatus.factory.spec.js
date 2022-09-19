@@ -5,7 +5,8 @@ describe('when asking the MessageStatus factory to create an instance of Message
     // Arrange
     const testInputArgs =
       {
-    "messageStatusCode": null
+    "messageStatusCode": null,
+    "factoryContainerBindingName": null
 };
 
     // Act

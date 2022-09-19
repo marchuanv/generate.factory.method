@@ -5,7 +5,8 @@ describe('when asking the ContentType factory to create an instance of ContentTy
     // Arrange
     const testInputArgs =
       {
-    "name": null
+    "name": null,
+    "factoryContainerBindingName": null
 };
 
     // Act

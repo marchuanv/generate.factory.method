@@ -5,7 +5,8 @@ describe('when asking the HttpClientResponseMessageQueueBinding factory to creat
     // Arrange
     const testInputArgs =
       {
-    "scopeId": null
+    "scopeId": null,
+    "factoryContainerBindingName": null
 };
 
     // Act
