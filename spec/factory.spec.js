@@ -35,14 +35,21 @@ fdescribe('when', function() {
       "typeScriptPath": "C://component//lib//clientmessagebus.js",
       "isSingleton": false,
       "bindings": [
-          {
-            "name": scopeId,
-            "primitiveArgs": {
-            },
-            "referenceArgs": {
-            },
-            "instance": null
-          }
+        {
+          "name": "test",
+          "primitiveArgs": {
+              "scopeId": "test",
+              "clientRequestMessageBus": null,
+              "clientResponseMessageBus": null
+          },
+          "referenceArgs": {
+              "messageConverter": {
+                  "factoryContainerName": "messageConverterFactoryContainer",
+                  "factoryContainerFilePath": "C://component//lib//factory//messageconverter.factory.container.json"
+              }
+          },
+          "instance": null
+        }
       ]
     });
 
