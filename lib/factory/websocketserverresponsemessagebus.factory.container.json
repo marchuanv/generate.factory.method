@@ -1,0 +1,16 @@
+{
+    "typeName": "WebSocketServerResponseMessageBus",
+    "isSingleton": false,
+    "typeScriptPath": "C://component//lib//websocket//websocketserverresponsemessagebus.js",
+    "typeVariableName": "webSocketServerResponseMessageBus",
+    "bindings": [
+        {
+            "factoryContainerBindingName": "Global",
+            "factoryContainerBindingScriptPath": "C://component//lib//factory//websocketserverresponsemessagebus.container.global.binding.json"
+        },
+        {
+            "factoryContainerBindingName": "Test",
+            "factoryContainerBindingScriptPath": "C://component//lib//factory//websocketserverresponsemessagebus.container.test.binding.json"
+        }
+    ]
+}

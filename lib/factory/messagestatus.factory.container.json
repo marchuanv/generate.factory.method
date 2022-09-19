@@ -1,0 +1,16 @@
+{
+    "typeName": "MessageStatus",
+    "isSingleton": false,
+    "typeScriptPath": "C://component//lib//messagestatus.js",
+    "typeVariableName": "messageStatus",
+    "bindings": [
+        {
+            "factoryContainerBindingName": "Global",
+            "factoryContainerBindingScriptPath": "C://component//lib//factory//messagestatus.container.global.binding.json"
+        },
+        {
+            "factoryContainerBindingName": "Test",
+            "factoryContainerBindingScriptPath": "C://component//lib//factory//messagestatus.container.test.binding.json"
+        }
+    ]
+}

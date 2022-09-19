@@ -1,0 +1,16 @@
+{
+    "typeName": "HttpClientStoppedMessageQueueBinding",
+    "isSingleton": false,
+    "typeScriptPath": "C://component//lib//http//httpclientstoppedmessagequeuebinding.js",
+    "typeVariableName": "httpClientStoppedMessageQueueBinding",
+    "bindings": [
+        {
+            "factoryContainerBindingName": "Global",
+            "factoryContainerBindingScriptPath": "C://component//lib//factory//httpclientstoppedmessagequeuebinding.container.global.binding.json"
+        },
+        {
+            "factoryContainerBindingName": "Test",
+            "factoryContainerBindingScriptPath": "C://component//lib//factory//httpclientstoppedmessagequeuebinding.container.test.binding.json"
+        }
+    ]
+}

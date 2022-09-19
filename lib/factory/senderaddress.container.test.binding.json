@@ -1,0 +1,10 @@
+{
+    "factoryContainerBindingName": "Test",
+    "primitiveArgs": {
+        "factoryContainerBindingName": null,
+        "senderHost": null,
+        "senderPort": null
+    },
+    "referenceArgs": {},
+    "instance": null
+}

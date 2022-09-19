@@ -1,0 +1,16 @@
+{
+    "typeName": "RecipientAddress",
+    "isSingleton": false,
+    "typeScriptPath": "C://component//lib//recipientaddress.js",
+    "typeVariableName": "recipientAddress",
+    "bindings": [
+        {
+            "factoryContainerBindingName": "Global",
+            "factoryContainerBindingScriptPath": "C://component//lib//factory//recipientaddress.container.global.binding.json"
+        },
+        {
+            "factoryContainerBindingName": "Test",
+            "factoryContainerBindingScriptPath": "C://component//lib//factory//recipientaddress.container.test.binding.json"
+        }
+    ]
+}

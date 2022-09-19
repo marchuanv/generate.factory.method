@@ -1,0 +1,16 @@
+{
+    "typeName": "UserSessions",
+    "isSingleton": false,
+    "typeScriptPath": "C://component//lib//usersessions.js",
+    "typeVariableName": "userSessions",
+    "bindings": [
+        {
+            "factoryContainerBindingName": "Global",
+            "factoryContainerBindingScriptPath": "C://component//lib//factory//usersessions.container.global.binding.json"
+        },
+        {
+            "factoryContainerBindingName": "Test",
+            "factoryContainerBindingScriptPath": "C://component//lib//factory//usersessions.container.test.binding.json"
+        }
+    ]
+}

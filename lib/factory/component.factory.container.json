@@ -1,0 +1,16 @@
+{
+    "typeName": "Component",
+    "isSingleton": false,
+    "typeScriptPath": "C://component//lib//component.js",
+    "typeVariableName": "component",
+    "bindings": [
+        {
+            "factoryContainerBindingName": "Global",
+            "factoryContainerBindingScriptPath": "C://component//lib//factory//component.container.global.binding.json"
+        },
+        {
+            "factoryContainerBindingName": "Test",
+            "factoryContainerBindingScriptPath": "C://component//lib//factory//component.container.test.binding.json"
+        }
+    ]
+}

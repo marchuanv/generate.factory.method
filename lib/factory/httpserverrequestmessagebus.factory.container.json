@@ -1,0 +1,16 @@
+{
+    "typeName": "HttpServerRequestMessageBus",
+    "isSingleton": false,
+    "typeScriptPath": "C://component//lib//http//httpserverrequestmessagebus.js",
+    "typeVariableName": "httpServerRequestMessageBus",
+    "bindings": [
+        {
+            "factoryContainerBindingName": "Global",
+            "factoryContainerBindingScriptPath": "C://component//lib//factory//httpserverrequestmessagebus.container.global.binding.json"
+        },
+        {
+            "factoryContainerBindingName": "Test",
+            "factoryContainerBindingScriptPath": "C://component//lib//factory//httpserverrequestmessagebus.container.test.binding.json"
+        }
+    ]
+}

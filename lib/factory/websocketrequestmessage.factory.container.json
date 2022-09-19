@@ -1,0 +1,16 @@
+{
+    "typeName": "WebSocketRequestMessage",
+    "isSingleton": false,
+    "typeScriptPath": "C://component//lib//websocket//websocketrequestmessage.js",
+    "typeVariableName": "webSocketRequestMessage",
+    "bindings": [
+        {
+            "factoryContainerBindingName": "Global",
+            "factoryContainerBindingScriptPath": "C://component//lib//factory//websocketrequestmessage.container.global.binding.json"
+        },
+        {
+            "factoryContainerBindingName": "Test",
+            "factoryContainerBindingScriptPath": "C://component//lib//factory//websocketrequestmessage.container.test.binding.json"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "factoryContainerBindingName": "Test",
+    "primitiveArgs": {
+        "factoryContainerBindingName": null,
+        "clientRequestMessageBus": null,
+        "clientResponseMessageBus": null
+    },
+    "referenceArgs": {
+        "messageConverter": {
+            "factoryContainerName": "messageConverterFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//messageconverter.factory.container.json"
+        }
+    },
+    "instance": null
+}

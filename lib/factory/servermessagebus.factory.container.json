@@ -1,0 +1,16 @@
+{
+    "typeName": "ServerMessageBus",
+    "isSingleton": false,
+    "typeScriptPath": "C://component//lib//servermessagebus.js",
+    "typeVariableName": "serverMessageBus",
+    "bindings": [
+        {
+            "factoryContainerBindingName": "Global",
+            "factoryContainerBindingScriptPath": "C://component//lib//factory//servermessagebus.container.global.binding.json"
+        },
+        {
+            "factoryContainerBindingName": "Test",
+            "factoryContainerBindingScriptPath": "C://component//lib//factory//servermessagebus.container.test.binding.json"
+        }
+    ]
+}
