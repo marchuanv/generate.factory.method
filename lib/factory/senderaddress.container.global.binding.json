@@ -1,0 +1,10 @@
+{
+    "name": "global",
+    "primitiveArgs": {
+        "scopeId": "global",
+        "senderHost": null,
+        "senderPort": null
+    },
+    "referenceArgs": {},
+    "instance": null
+}

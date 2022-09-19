@@ -1,0 +1,21 @@
+{
+    "name": "test",
+    "primitiveArgs": {
+        "scopeId": "test"
+    },
+    "referenceArgs": {
+        "messageQueue": {
+            "httpClientResponseMessageQueueBinding": {
+                "factoryMethod": "createMessageQueue",
+                "factoryScriptPath": "C://component//lib//factory//messagequeue.factory.js"
+            }
+        },
+        "logger": {
+            "httpClientResponseMessageQueueBinding": {
+                "factoryMethod": "createLogger",
+                "factoryScriptPath": "C://component//lib//factory//logger.factory.js"
+            }
+        }
+    },
+    "instance": null
+}

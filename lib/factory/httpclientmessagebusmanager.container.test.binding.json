@@ -1,0 +1,39 @@
+{
+    "name": "test",
+    "primitiveArgs": {
+        "scopeId": "test"
+    },
+    "referenceArgs": {
+        "httpClientStopMessageQueueBinding": {
+            "httpClientMessageBusManager": {
+                "factoryMethod": "createHttpClientStopMessageQueueBinding",
+                "factoryScriptPath": "C://component//lib//factory//httpclientstopmessagequeuebinding.factory.js"
+            }
+        },
+        "messageQueue": {
+            "httpClientMessageBusManager": {
+                "factoryMethod": "createMessageQueue",
+                "factoryScriptPath": "C://component//lib//factory//messagequeue.factory.js"
+            }
+        },
+        "logger": {
+            "httpClientMessageBusManager": {
+                "factoryMethod": "createLogger",
+                "factoryScriptPath": "C://component//lib//factory//logger.factory.js"
+            }
+        },
+        "httpClientStartMessageQueueBinding": {
+            "httpClientMessageBusManager": {
+                "factoryMethod": "createHttpClientStartMessageQueueBinding",
+                "factoryScriptPath": "C://component//lib//factory//httpclientstartmessagequeuebinding.factory.js"
+            }
+        },
+        "httpClientStartedMessageQueueBinding": {
+            "httpClientMessageBusManager": {
+                "factoryMethod": "createHttpClientStartedMessageQueueBinding",
+                "factoryScriptPath": "C://component//lib//factory//httpclientstartedmessagequeuebinding.factory.js"
+            }
+        }
+    },
+    "instance": null
+}

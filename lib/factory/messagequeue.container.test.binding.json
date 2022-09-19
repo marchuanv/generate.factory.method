@@ -1,0 +1,15 @@
+{
+    "name": "test",
+    "primitiveArgs": {
+        "scopeId": "test"
+    },
+    "referenceArgs": {
+        "logger": {
+            "messageQueue": {
+                "factoryMethod": "createLogger",
+                "factoryScriptPath": "C://component//lib//factory//logger.factory.js"
+            }
+        }
+    },
+    "instance": null
+}

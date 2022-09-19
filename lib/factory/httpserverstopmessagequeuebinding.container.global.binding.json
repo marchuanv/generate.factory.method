@@ -1,0 +1,21 @@
+{
+    "name": "global",
+    "primitiveArgs": {
+        "scopeId": "global"
+    },
+    "referenceArgs": {
+        "messageQueue": {
+            "httpServerStopMessageQueueBinding": {
+                "factoryMethod": "createMessageQueue",
+                "factoryScriptPath": "C://component//lib//factory//messagequeue.factory.js"
+            }
+        },
+        "logger": {
+            "httpServerStopMessageQueueBinding": {
+                "factoryMethod": "createLogger",
+                "factoryScriptPath": "C://component//lib//factory//logger.factory.js"
+            }
+        }
+    },
+    "instance": null
+}

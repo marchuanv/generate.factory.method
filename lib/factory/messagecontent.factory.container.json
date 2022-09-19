@@ -1,0 +1,15 @@
+{
+    "typeName": "MessageContent",
+    "isSingleton": false,
+    "typeScriptPath": "C://component//lib//messagecontent.prototype.js",
+    "bindings": [
+        {
+            "name": "global",
+            "bindingScriptPath": "C://component//lib//factory//messagecontent.container.global.binding.json"
+        },
+        {
+            "name": "test",
+            "bindingScriptPath": "C://component//lib//factory//messagecontent.container.test.binding.json"
+        }
+    ]
+}

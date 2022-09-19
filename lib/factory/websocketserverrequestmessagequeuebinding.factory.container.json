@@ -1,0 +1,15 @@
+{
+    "typeName": "WebSocketServerRequestMessageQueueBinding",
+    "isSingleton": false,
+    "typeScriptPath": "C://component//lib//websocket//websocketserverrequestmessagequeuebinding.prototype.js",
+    "bindings": [
+        {
+            "name": "global",
+            "bindingScriptPath": "C://component//lib//factory//websocketserverrequestmessagequeuebinding.container.global.binding.json"
+        },
+        {
+            "name": "test",
+            "bindingScriptPath": "C://component//lib//factory//websocketserverrequestmessagequeuebinding.container.test.binding.json"
+        }
+    ]
+}

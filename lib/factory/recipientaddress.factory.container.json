@@ -1,0 +1,15 @@
+{
+    "typeName": "RecipientAddress",
+    "isSingleton": false,
+    "typeScriptPath": "C://component//lib//recipientaddress.prototype.js",
+    "bindings": [
+        {
+            "name": "global",
+            "bindingScriptPath": "C://component//lib//factory//recipientaddress.container.global.binding.json"
+        },
+        {
+            "name": "test",
+            "bindingScriptPath": "C://component//lib//factory//recipientaddress.container.test.binding.json"
+        }
+    ]
+}

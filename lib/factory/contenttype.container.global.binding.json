@@ -1,0 +1,9 @@
+{
+    "name": "global",
+    "primitiveArgs": {
+        "scopeId": "global",
+        "name": null
+    },
+    "referenceArgs": {},
+    "instance": null
+}

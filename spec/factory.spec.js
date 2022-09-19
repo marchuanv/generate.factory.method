@@ -9,6 +9,7 @@ fdescribe('when', function() {
     const factory = new Factory({
       "typeName": "ClientMessageBus",
       "isSingleton": false,
+      "typeScriptPath": "C://component//lib//clientmessagebus.js",
       "bindings": [
           {
               "name": "global",
@@ -33,7 +34,7 @@ fdescribe('when', function() {
     // Arrange
     const factory = new Factory({ 
       "typeName": "ClientMessageBus",
-      "typeVariableName": "clientMessageBus",
+      "typeScriptPath": "C://component//lib//clientmessagebus.js",
       "bindings": [
           {
             "name":"global",

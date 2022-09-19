@@ -1,0 +1,15 @@
+{
+    "typeName": "WebSocketClientRequestMessageBus",
+    "isSingleton": false,
+    "typeScriptPath": "C://component//lib//websocket//websocketclientrequestmessagebus.prototype.js",
+    "bindings": [
+        {
+            "name": "global",
+            "bindingScriptPath": "C://component//lib//factory//websocketclientrequestmessagebus.container.global.binding.json"
+        },
+        {
+            "name": "test",
+            "bindingScriptPath": "C://component//lib//factory//websocketclientrequestmessagebus.container.test.binding.json"
+        }
+    ]
+}

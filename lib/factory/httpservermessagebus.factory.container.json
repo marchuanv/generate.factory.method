@@ -1,0 +1,15 @@
+{
+    "typeName": "HttpServerMessageBus",
+    "isSingleton": false,
+    "typeScriptPath": "C://component//lib//http//httpservermessagebus.prototype.js",
+    "bindings": [
+        {
+            "name": "global",
+            "bindingScriptPath": "C://component//lib//factory//httpservermessagebus.container.global.binding.json"
+        },
+        {
+            "name": "test",
+            "bindingScriptPath": "C://component//lib//factory//httpservermessagebus.container.test.binding.json"
+        }
+    ]
+}

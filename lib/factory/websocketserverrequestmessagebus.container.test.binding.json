@@ -1,0 +1,27 @@
+{
+    "name": "test",
+    "primitiveArgs": {
+        "scopeId": "test"
+    },
+    "referenceArgs": {
+        "webSocketServerRequestMessageQueueBinding": {
+            "webSocketServerRequestMessageBus": {
+                "factoryMethod": "createWebSocketServerRequestMessageQueueBinding",
+                "factoryScriptPath": "C://component//lib//factory//websocketserverrequestmessagequeuebinding.factory.js"
+            }
+        },
+        "messageQueue": {
+            "webSocketServerRequestMessageBus": {
+                "factoryMethod": "createMessageQueue",
+                "factoryScriptPath": "C://component//lib//factory//messagequeue.factory.js"
+            }
+        },
+        "logger": {
+            "webSocketServerRequestMessageBus": {
+                "factoryMethod": "createLogger",
+                "factoryScriptPath": "C://component//lib//factory//logger.factory.js"
+            }
+        }
+    },
+    "instance": null
+}

@@ -1,0 +1,15 @@
+{
+    "typeName": "MessageMetadata",
+    "isSingleton": false,
+    "typeScriptPath": "C://component//lib//messagemetadata.prototype.js",
+    "bindings": [
+        {
+            "name": "global",
+            "bindingScriptPath": "C://component//lib//factory//messagemetadata.container.global.binding.json"
+        },
+        {
+            "name": "test",
+            "bindingScriptPath": "C://component//lib//factory//messagemetadata.container.test.binding.json"
+        }
+    ]
+}

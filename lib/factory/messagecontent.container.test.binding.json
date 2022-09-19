@@ -1,0 +1,46 @@
+{
+    "name": "test",
+    "primitiveArgs": {
+        "scopeId": "test",
+        "data": null,
+        "recipientHost": null,
+        "recipientPort": null,
+        "metadata": null,
+        "token": null,
+        "senderHost": null,
+        "senderPort": null
+    },
+    "referenceArgs": {
+        "messageContentMetadata": {
+            "messageContent": {
+                "factoryMethod": "createMessageContentMetadata",
+                "factoryScriptPath": "C://component//lib//factory//messagecontentmetadata.factory.js"
+            }
+        },
+        "userSessions": {
+            "messageContent": {
+                "factoryMethod": "createUserSessions",
+                "factoryScriptPath": "C://component//lib//factory//usersessions.factory.js"
+            }
+        },
+        "messageMetadata": {
+            "messageContent": {
+                "factoryMethod": "createMessageMetadata",
+                "factoryScriptPath": "C://component//lib//factory//messagemetadata.factory.js"
+            }
+        },
+        "recipientAddress": {
+            "messageContent": {
+                "factoryMethod": "createRecipientAddress",
+                "factoryScriptPath": "C://component//lib//factory//recipientaddress.factory.js"
+            }
+        },
+        "senderAddress": {
+            "messageContent": {
+                "factoryMethod": "createSenderAddress",
+                "factoryScriptPath": "C://component//lib//factory//senderaddress.factory.js"
+            }
+        }
+    },
+    "instance": null
+}

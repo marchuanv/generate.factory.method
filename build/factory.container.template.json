@@ -1,6 +1,7 @@
 {
     "typeName": "[TypeName]",
     "isSingleton": false,
+    "typeScriptPath": "[TypeScriptPath]",
     "bindings": [{
         "name": "global",
         "bindingScriptPath": null

@@ -1,0 +1,17 @@
+{
+    "name": "test",
+    "primitiveArgs": {
+        "scopeId": "test",
+        "serverResponseMessageBus": null,
+        "serverRequestMessageBus": null
+    },
+    "referenceArgs": {
+        "messageConverter": {
+            "serverMessageBus": {
+                "factoryMethod": "createMessageConverter",
+                "factoryScriptPath": "C://component//lib//factory//messageconverter.factory.js"
+            }
+        }
+    },
+    "instance": null
+}

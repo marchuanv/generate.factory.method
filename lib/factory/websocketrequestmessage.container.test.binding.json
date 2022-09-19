@@ -1,0 +1,66 @@
+{
+    "name": "test",
+    "primitiveArgs": {
+        "scopeId": "test",
+        "messageStatusCode": null,
+        "Id": null,
+        "data": null,
+        "recipientHost": null,
+        "recipientPort": null,
+        "metadata": null,
+        "token": null,
+        "senderHost": null,
+        "senderPort": null
+    },
+    "referenceArgs": {
+        "message": {
+            "webSocketRequestMessage": {
+                "factoryMethod": "createMessage",
+                "factoryScriptPath": "C://component//lib//factory//message.factory.js"
+            }
+        },
+        "messageStatus": {
+            "webSocketRequestMessage": {
+                "factoryMethod": "createMessageStatus",
+                "factoryScriptPath": "C://component//lib//factory//messagestatus.factory.js"
+            }
+        },
+        "messageContent": {
+            "webSocketRequestMessage": {
+                "factoryMethod": "createMessageContent",
+                "factoryScriptPath": "C://component//lib//factory//messagecontent.factory.js"
+            }
+        },
+        "messageContentMetadata": {
+            "webSocketRequestMessage": {
+                "factoryMethod": "createMessageContentMetadata",
+                "factoryScriptPath": "C://component//lib//factory//messagecontentmetadata.factory.js"
+            }
+        },
+        "userSessions": {
+            "webSocketRequestMessage": {
+                "factoryMethod": "createUserSessions",
+                "factoryScriptPath": "C://component//lib//factory//usersessions.factory.js"
+            }
+        },
+        "messageMetadata": {
+            "webSocketRequestMessage": {
+                "factoryMethod": "createMessageMetadata",
+                "factoryScriptPath": "C://component//lib//factory//messagemetadata.factory.js"
+            }
+        },
+        "recipientAddress": {
+            "webSocketRequestMessage": {
+                "factoryMethod": "createRecipientAddress",
+                "factoryScriptPath": "C://component//lib//factory//recipientaddress.factory.js"
+            }
+        },
+        "senderAddress": {
+            "webSocketRequestMessage": {
+                "factoryMethod": "createSenderAddress",
+                "factoryScriptPath": "C://component//lib//factory//senderaddress.factory.js"
+            }
+        }
+    },
+    "instance": null
+}

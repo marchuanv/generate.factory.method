@@ -1,0 +1,27 @@
+{
+    "name": "test",
+    "primitiveArgs": {
+        "scopeId": "test",
+        "recipientHost": null,
+        "recipientPort": null,
+        "metadata": null,
+        "token": null,
+        "senderHost": null,
+        "senderPort": null
+    },
+    "referenceArgs": {
+        "recipientAddress": {
+            "messageMetadata": {
+                "factoryMethod": "createRecipientAddress",
+                "factoryScriptPath": "C://component//lib//factory//recipientaddress.factory.js"
+            }
+        },
+        "senderAddress": {
+            "messageMetadata": {
+                "factoryMethod": "createSenderAddress",
+                "factoryScriptPath": "C://component//lib//factory//senderaddress.factory.js"
+            }
+        }
+    },
+    "instance": null
+}

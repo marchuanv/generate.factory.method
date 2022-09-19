@@ -1,0 +1,10 @@
+{
+    "name": "test",
+    "primitiveArgs": {
+        "scopeId": "test",
+        "senderHost": null,
+        "senderPort": null
+    },
+    "referenceArgs": {},
+    "instance": null
+}

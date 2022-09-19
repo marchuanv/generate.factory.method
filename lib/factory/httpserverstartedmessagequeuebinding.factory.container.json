@@ -1,0 +1,15 @@
+{
+    "typeName": "HttpServerStartedMessageQueueBinding",
+    "isSingleton": false,
+    "typeScriptPath": "C://component//lib//http//httpserverstartedmessagequeuebinding.prototype.js",
+    "bindings": [
+        {
+            "name": "global",
+            "bindingScriptPath": "C://component//lib//factory//httpserverstartedmessagequeuebinding.container.global.binding.json"
+        },
+        {
+            "name": "test",
+            "bindingScriptPath": "C://component//lib//factory//httpserverstartedmessagequeuebinding.container.test.binding.json"
+        }
+    ]
+}

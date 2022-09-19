@@ -1,0 +1,15 @@
+{
+    "typeName": "Logger",
+    "isSingleton": false,
+    "typeScriptPath": "C://component//lib//logger.prototype.js",
+    "bindings": [
+        {
+            "name": "global",
+            "bindingScriptPath": "C://component//lib//factory//logger.container.global.binding.json"
+        },
+        {
+            "name": "test",
+            "bindingScriptPath": "C://component//lib//factory//logger.container.test.binding.json"
+        }
+    ]
+}

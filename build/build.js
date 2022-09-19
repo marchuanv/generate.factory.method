@@ -168,9 +168,9 @@ for(const info of getDependencyTree()) {
             }
         }
     });
-
     if (!existsSync(info.containerScriptPath)) {
         const factoryContainer = factoryContainerTemplate
+            .replace(/\[TypeScriptPath\]/g, info.scriptPath.replace(/\\/g,'//'))
             .replace(/\[TypeName\]/g, info.typeName);
         const factoryContainerJson = utils.getJSONObject(factoryContainer);
         writeFileSync(info.containerScriptPath, utils.getJSONString(factoryContainerJson), 'utf8');

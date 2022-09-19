@@ -1,0 +1,52 @@
+{
+    "name": "global",
+    "primitiveArgs": {
+        "scopeId": "global",
+        "timeout": null
+    },
+    "referenceArgs": {
+        "httpClientRequestMessageQueueBinding": {
+            "httpClientMessageBus": {
+                "factoryMethod": "createHttpClientRequestMessageQueueBinding",
+                "factoryScriptPath": "C://component//lib//factory//httpclientrequestmessagequeuebinding.factory.js"
+            }
+        },
+        "messageQueue": {
+            "httpClientMessageBus": {
+                "factoryMethod": "createMessageQueue",
+                "factoryScriptPath": "C://component//lib//factory//messagequeue.factory.js"
+            }
+        },
+        "logger": {
+            "httpClientMessageBus": {
+                "factoryMethod": "createLogger",
+                "factoryScriptPath": "C://component//lib//factory//logger.factory.js"
+            }
+        },
+        "httpClientResponseMessageQueueBinding": {
+            "httpClientMessageBus": {
+                "factoryMethod": "createHttpClientResponseMessageQueueBinding",
+                "factoryScriptPath": "C://component//lib//factory//httpclientresponsemessagequeuebinding.factory.js"
+            }
+        },
+        "httpClientStartMessageQueueBinding": {
+            "httpClientMessageBus": {
+                "factoryMethod": "createHttpClientStartMessageQueueBinding",
+                "factoryScriptPath": "C://component//lib//factory//httpclientstartmessagequeuebinding.factory.js"
+            }
+        },
+        "httpClientStartedMessageQueueBinding": {
+            "httpClientMessageBus": {
+                "factoryMethod": "createHttpClientStartedMessageQueueBinding",
+                "factoryScriptPath": "C://component//lib//factory//httpclientstartedmessagequeuebinding.factory.js"
+            }
+        },
+        "httpClientStopMessageQueueBinding": {
+            "httpClientMessageBus": {
+                "factoryMethod": "createHttpClientStopMessageQueueBinding",
+                "factoryScriptPath": "C://component//lib//factory//httpclientstopmessagequeuebinding.factory.js"
+            }
+        }
+    },
+    "instance": null
+}

@@ -1,0 +1,38 @@
+{
+    "name": "test",
+    "primitiveArgs": {
+        "scopeId": "test",
+        "packageJson": null,
+        "clientRequestMessageBus": null,
+        "clientResponseMessageBus": null,
+        "serverResponseMessageBus": null,
+        "serverRequestMessageBus": null
+    },
+    "referenceArgs": {
+        "clientMessageBus": {
+            "component": {
+                "factoryMethod": "createClientMessageBus",
+                "factoryScriptPath": "C://component//lib//factory//clientmessagebus.factory.js"
+            }
+        },
+        "messageConverter": {
+            "component": {
+                "factoryMethod": "createMessageConverter",
+                "factoryScriptPath": "C://component//lib//factory//messageconverter.factory.js"
+            }
+        },
+        "serverMessageBus": {
+            "component": {
+                "factoryMethod": "createServerMessageBus",
+                "factoryScriptPath": "C://component//lib//factory//servermessagebus.factory.js"
+            }
+        },
+        "userSessions": {
+            "component": {
+                "factoryMethod": "createUserSessions",
+                "factoryScriptPath": "C://component//lib//factory//usersessions.factory.js"
+            }
+        }
+    },
+    "instance": null
+}

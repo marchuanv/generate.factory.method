@@ -1,0 +1,15 @@
+{
+    "typeName": "HttpClientMessageBusManager",
+    "isSingleton": false,
+    "typeScriptPath": "C://component//lib//http//httpclientmessagebusmanager.prototype.js",
+    "bindings": [
+        {
+            "name": "global",
+            "bindingScriptPath": "C://component//lib//factory//httpclientmessagebusmanager.container.global.binding.json"
+        },
+        {
+            "name": "test",
+            "bindingScriptPath": "C://component//lib//factory//httpclientmessagebusmanager.container.test.binding.json"
+        }
+    ]
+}

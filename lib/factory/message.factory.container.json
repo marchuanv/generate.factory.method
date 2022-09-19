@@ -1,0 +1,15 @@
+{
+    "typeName": "Message",
+    "isSingleton": false,
+    "typeScriptPath": "C://component//lib//message.prototype.js",
+    "bindings": [
+        {
+            "name": "global",
+            "bindingScriptPath": "C://component//lib//factory//message.container.global.binding.json"
+        },
+        {
+            "name": "test",
+            "bindingScriptPath": "C://component//lib//factory//message.container.test.binding.json"
+        }
+    ]
+}

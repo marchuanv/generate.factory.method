@@ -1,0 +1,9 @@
+{
+    "name": "global",
+    "primitiveArgs": {
+        "scopeId": "global",
+        "messageStatusCode": null
+    },
+    "referenceArgs": {},
+    "instance": null
+}
