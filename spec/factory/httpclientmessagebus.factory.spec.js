@@ -5,9 +5,9 @@ describe('when asking the HttpClientMessageBus factory to create an instance of 
     // Arrange
     const testInputArgs =
       {
+    "factoryContainerBindingName": null,
     "timeout": null,
-    "scopeId": null,
-    "factoryContainerBindingName": null
+    "scopeId": null
 };
 
     // Act

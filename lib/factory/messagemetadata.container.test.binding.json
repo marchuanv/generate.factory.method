@@ -1,13 +1,13 @@
 {
     "factoryContainerBindingName": "Test",
     "primitiveArgs": {
+        "factoryContainerBindingName": null,
         "recipientHost": null,
         "recipientPort": null,
         "metadata": null,
         "token": null,
         "senderHost": null,
-        "senderPort": null,
-        "factoryContainerBindingName": null
+        "senderPort": null
     },
     "referenceArgs": {
         "recipientAddress": {

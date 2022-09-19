@@ -5,8 +5,8 @@ describe('when asking the HttpServerRequestMessageBus factory to create an insta
     // Arrange
     const testInputArgs =
       {
-    "scopeId": null,
-    "factoryContainerBindingName": null
+    "factoryContainerBindingName": null,
+    "scopeId": null
 };
 
     // Act

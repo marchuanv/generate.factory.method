@@ -5,11 +5,11 @@ describe('when asking the HttpServerMessageBus factory to create an instance of 
     // Arrange
     const testInputArgs =
       {
+    "factoryContainerBindingName": null,
     "timeout": null,
     "scopeId": null,
     "senderHost": null,
-    "senderPort": null,
-    "factoryContainerBindingName": null
+    "senderPort": null
 };
 
     // Act

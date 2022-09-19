@@ -1,8 +1,8 @@
 {
     "factoryContainerBindingName": "Global",
     "primitiveArgs": {
-        "messageStatusCode": null,
-        "factoryContainerBindingName": null
+        "factoryContainerBindingName": null,
+        "messageStatusCode": null
     },
     "referenceArgs": {},
     "instance": null

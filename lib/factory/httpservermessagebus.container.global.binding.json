@@ -1,11 +1,11 @@
 {
     "factoryContainerBindingName": "Global",
     "primitiveArgs": {
+        "factoryContainerBindingName": null,
         "timeout": null,
         "scopeId": null,
         "senderHost": null,
-        "senderPort": null,
-        "factoryContainerBindingName": null
+        "senderPort": null
     },
     "referenceArgs": {
         "httpServerRequestMessageQueueBinding": {

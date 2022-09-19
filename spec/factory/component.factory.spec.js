@@ -5,13 +5,13 @@ describe('when asking the Component factory to create an instance of Component',
     // Arrange
     const testInputArgs =
       {
+    "factoryContainerBindingName": null,
     "packageJson": null,
     "scopeId": null,
     "clientRequestMessageBus": null,
     "clientResponseMessageBus": null,
     "serverResponseMessageBus": null,
-    "serverRequestMessageBus": null,
-    "factoryContainerBindingName": null
+    "serverRequestMessageBus": null
 };
 
     // Act

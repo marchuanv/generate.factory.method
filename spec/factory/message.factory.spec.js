@@ -5,6 +5,7 @@ describe('when asking the Message factory to create an instance of Message', () 
     // Arrange
     const testInputArgs =
       {
+    "factoryContainerBindingName": null,
     "messageStatusCode": null,
     "scopeId": null,
     "Id": null,
@@ -14,8 +15,7 @@ describe('when asking the Message factory to create an instance of Message', () 
     "metadata": null,
     "token": null,
     "senderHost": null,
-    "senderPort": null,
-    "factoryContainerBindingName": null
+    "senderPort": null
 };
 
     // Act

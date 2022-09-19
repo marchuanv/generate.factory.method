@@ -5,13 +5,13 @@ describe('when asking the MessageMetadata factory to create an instance of Messa
     // Arrange
     const testInputArgs =
       {
+    "factoryContainerBindingName": null,
     "recipientHost": null,
     "recipientPort": null,
     "metadata": null,
     "token": null,
     "senderHost": null,
-    "senderPort": null,
-    "factoryContainerBindingName": null
+    "senderPort": null
 };
 
     // Act

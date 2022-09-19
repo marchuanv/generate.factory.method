@@ -1,6 +1,7 @@
 {
     "factoryContainerBindingName": "Test",
     "primitiveArgs": {
+        "factoryContainerBindingName": null,
         "scopeId": null,
         "data": null,
         "recipientHost": null,
@@ -8,8 +9,7 @@
         "metadata": null,
         "token": null,
         "senderHost": null,
-        "senderPort": null,
-        "factoryContainerBindingName": null
+        "senderPort": null
     },
     "referenceArgs": {
         "messageContentMetadata": {

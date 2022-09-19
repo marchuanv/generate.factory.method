@@ -5,9 +5,9 @@ describe('when asking the ClientMessageBus factory to create an instance of Clie
     // Arrange
     const testInputArgs =
       {
+    "factoryContainerBindingName": null,
     "clientRequestMessageBus": null,
-    "clientResponseMessageBus": null,
-    "factoryContainerBindingName": null
+    "clientResponseMessageBus": null
 };
 
     // Act

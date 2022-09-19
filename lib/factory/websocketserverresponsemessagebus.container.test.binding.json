@@ -1,8 +1,8 @@
 {
     "factoryContainerBindingName": "Test",
     "primitiveArgs": {
-        "scopeId": null,
-        "factoryContainerBindingName": null
+        "factoryContainerBindingName": null,
+        "scopeId": null
     },
     "referenceArgs": {
         "webSocketServerResponseMessageQueueBinding": {
