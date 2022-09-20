@@ -5,7 +5,7 @@ describe("when initialising a component given a client and server messagebus", (
     let createComponent;
 
     beforeAll(() => {
-      createComponent = require('../../lib/factory/component.factory.js');
+      ({ createComponent } = require('../../lib/factory/component.factory.js'));
     });
 
     it("it should provide the capability for sending and receiving messages.", (done) => {

@@ -1,11 +1,9 @@
-fdescribe('when', function() {
-  const { Factory } = require('C:\\component\\lib\\factory.js');
-  
-  const factoryContainerBindingName = 'test';
-
-  it("it should one", function() {
+describe('when asking the factory for an instance given container binding location', function() {
+  it("it should load binding script, find binding config and return an instance of the ClientMessageBus", function() {
 
     // Arrange
+    const { Factory } = require('C:\\component\\lib\\factory.js');
+    const factoryContainerBindingName = 'test';
     const factory = new Factory({
       "typeName": "ClientMessageBus",
       "typeVariableName": "clientMessageBus",
@@ -26,9 +24,14 @@ fdescribe('when', function() {
     expect(instance).not.toBeNull();
   });
 
-  it("it should two", function() {
+});
+
+describe('when asking the factory for an instance given all container bindings', function() {
+  it("it should find binding config and return an instance of the ClientMessageBus", function() {
 
     // Arrange
+    const { Factory } = require('C:\\component\\lib\\factory.js');
+    const factoryContainerBindingName = 'test';
     const factory = new Factory({ 
       "typeName": "ClientMessageBus",
       "typeVariableName": "clientMessageBus",
@@ -57,6 +60,7 @@ fdescribe('when', function() {
 
     // Assert
     expect(instance).not.toBeNull();
+    
   });
 
 });

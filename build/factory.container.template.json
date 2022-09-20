@@ -6,8 +6,5 @@
     "bindings": [{
         "factoryContainerBindingName": "Global",
         "factoryContainerBindingScriptPath": null
-    },{
-        "factoryContainerBindingName": "Test",
-        "factoryContainerBindingScriptPath": null
     }]
 }

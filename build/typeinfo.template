@@ -1,7 +1,6 @@
 { 
     "typeName":"[TypeName]",
     "scriptPath":"[ScriptPath]",
-    "containerScriptPath":"[ContainerScriptPath]",
     "factoryScriptPath":"[FactoryScriptPath]",
     "minFactoryScriptPath":"[MinFactoryScriptPath]",
     "specScriptPath":"[SpecScriptPath]",
@@ -9,5 +8,6 @@
     "passes": [[PassesArray]],
     "variableName":"[VariableName]",
     "variableValue":"[VariableValue]",
-    "containerBindingScriptPath": "[ContainerBindingScriptPath]"
+    "factoryContainerScriptPath":"[FactoryContainerScriptPath]",
+    "factoryContainerBindingScriptPath": "[FactoryContainerBindingScriptPath]"
 }
