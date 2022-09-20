@@ -14,7 +14,7 @@ fdescribe('when', function() {
       "bindings": [
           {
               "factoryContainerBindingName": factoryContainerBindingName,
-              "bindingScriptPath": "C://component//lib//factory//clientmessagebus.container.test.binding.json"
+              "factoryContainerBindingScriptPath": "C://component//lib//factory//clientmessagebus.container.test.binding.json"
           }
       ]
     });
