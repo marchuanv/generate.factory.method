@@ -178,25 +178,12 @@ for(const info of getDependencyTree()) {
     const bindingNames = container.bindings.map(b => b.factoryContainerBindingName);
 
     const factoryContainerSpecBindingName = `${info.typeName}FactorySpec`;
-    const primitiveArgsClone = utils.getJSONObject(utils.getJSONString(primitiveArgs));
-    primitiveArgsClone.factoryContainerBindingName = factoryContainerSpecBindingName;
     bindingNames.push(factoryContainerSpecBindingName);
-    factoryRequireScripts.push(factoryRequireTemplate
-        .replace(/\[TypeName\]/g, info.typeName)
-        .replace(/\[RequireScriptPath\]/g, info.factoryScriptPath.replace(/\\/g,'\\\\'))
-    );
-    const factorySpec = factorySpecTemplate
-        .replace(/\[ScriptPath\]/g, info.factoryScriptPath.replace(/\\/g,'\\\\'))
-        .replace(/\[TypeName\]/g, info.typeName)
-        .replace(/\[TypeVariableName\]/g, info.variableName)
-        .replace(/\[Args\]/g, Object.keys(primitiveArgsClone).join(','))
-        .replace(/\[SpecArrangeVariables\]/g, `${utils.getJSONString(primitiveArgsClone)};`) 
-        .replace(/\[FactoryRequireScripts\]/g, factoryRequireScripts.join('\r\n'));
-    writeFileSync(info.specScriptPath, factorySpec, 'utf8');
 
     for(const factoryContainerBindingName of bindingNames) {
         const factoryContainerBindingFilePath = info.factoryContainerBindingFilePath.replace('global', factoryContainerBindingName.toLowerCase());
         if (!existsSync(factoryContainerBindingFilePath)) {
+            container.bindings = container.bindings.filter(b => b.factoryContainerBindingName !== factoryContainerBindingName);
             const factoryContainerBindingRefArgs = { };
             walkDependencyTree(info, (typeInfo) => {
                 if (typeInfo.scriptPath) {
@@ -237,7 +224,22 @@ for(const info of getDependencyTree()) {
         writeFileSync(info.factoryContainerFilePath, utils.getJSONString(container), 'utf8');
     };
 
-
+    
+    let binding = container.bindings.find(b => b.factoryContainerBindingName === factoryContainerSpecBindingName);
+    binding = require(binding.factoryContainerBindingFilePath);
+    const primitivseArgsSpec = utils.getJSONObject(utils.getJSONString(binding.primitiveArgs));
+    factoryRequireScripts.push(factoryRequireTemplate
+        .replace(/\[TypeName\]/g, info.typeName)
+        .replace(/\[RequireScriptPath\]/g, info.factoryScriptPath.replace(/\\/g,'\\\\'))
+    );
+    const factorySpec = factorySpecTemplate
+        .replace(/\[ScriptPath\]/g, info.factoryScriptPath.replace(/\\/g,'\\\\'))
+        .replace(/\[TypeName\]/g, info.typeName)
+        .replace(/\[TypeVariableName\]/g, info.variableName)
+        .replace(/\[Args\]/g, Object.keys(primitiveArgsSpec).join(','))
+        .replace(/\[SpecArrangeVariables\]/g, `${utils.getJSONString(primitiveArgsSpec)};`) 
+        .replace(/\[FactoryRequireScripts\]/g, factoryRequireScripts.join('\r\n'));
+    writeFileSync(info.specScriptPath, factorySpec, 'utf8');
 
     const factory = factoryTemplate
         .replace(/\[Args\]/g, info.children.map(x => x.variableName) )
