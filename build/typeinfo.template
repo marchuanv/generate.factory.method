@@ -8,6 +8,6 @@
     "passes": [[PassesArray]],
     "variableName":"[VariableName]",
     "variableValue":"[VariableValue]",
-    "factoryContainerScriptPath":"[FactoryContainerScriptPath]",
-    "factoryContainerBindingScriptPath": "[FactoryContainerBindingScriptPath]"
+    "factoryContainerFilePath":"[FactoryContainerFilePath]",
+    "factoryContainerBindingFilePath": "[FactoryContainerBindingFilePath]"
 }
