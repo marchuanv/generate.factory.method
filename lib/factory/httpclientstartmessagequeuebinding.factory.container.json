@@ -1,0 +1,16 @@
+{
+    "typeName": "HttpClientStartMessageQueueBinding",
+    "isSingleton": false,
+    "typeScriptPath": "C://component//lib//http//httpclientstartmessagequeuebinding.js",
+    "typeVariableName": "httpClientStartMessageQueueBinding",
+    "bindings": [
+        {
+            "factoryContainerBindingName": "Global",
+            "factoryContainerBindingFilePath": "C://component//lib//factory//httpclientstartmessagequeuebinding.factory.container.global.binding.json"
+        },
+        {
+            "factoryContainerBindingName": "HttpClientStartMessageQueueBindingFactorySpec",
+            "factoryContainerBindingFilePath": "C://component//lib//factory//httpclientstartmessagequeuebinding.factory.container.httpclientstartmessagequeuebindingfactoryspec.binding.json"
+        }
+    ]
+}

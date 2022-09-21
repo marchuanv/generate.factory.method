@@ -1,0 +1,16 @@
+{
+    "typeName": "SenderAddress",
+    "isSingleton": false,
+    "typeScriptPath": "C://component//lib//senderaddress.js",
+    "typeVariableName": "senderAddress",
+    "bindings": [
+        {
+            "factoryContainerBindingName": "Global",
+            "factoryContainerBindingFilePath": "C://component//lib//factory//senderaddress.factory.container.global.binding.json"
+        },
+        {
+            "factoryContainerBindingName": "SenderAddressFactorySpec",
+            "factoryContainerBindingFilePath": "C://component//lib//factory//senderaddress.factory.container.senderaddressfactoryspec.binding.json"
+        }
+    ]
+}

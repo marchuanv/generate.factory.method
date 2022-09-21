@@ -2,7 +2,7 @@ const utils = require('utils');
 fdescribe("when asking a client messagebus to publish more than one request", function() {
 
   let token = null;
-  const factoryContainerBindingName  = 'multiplerequeststest';
+  const factoryContainerBindingName  = 'MultipleRequestsSpec';
   const timeout = 15000;
   const senderHost = 'localhost';
   const senderPort = 3000;

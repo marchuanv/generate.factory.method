@@ -6,11 +6,11 @@
     "bindings": [
         {
             "factoryContainerBindingName": "Global",
-            "factoryfactoryContainerBindingFilePath": "C://component//lib//factory//clientmessagebus.factory.container.global.binding.json"
+            "factoryContainerBindingFilePath": "C://component//lib//factory//clientmessagebus.factory.container.global.binding.json"
         },
         {
             "factoryContainerBindingName": "ClientMessageBusFactorySpec",
-            "factoryfactoryContainerBindingFilePath": "C://component//lib//factory//clientmessagebus.factory.container.clientmessagebusfactoryspec.binding.json"
+            "factoryContainerBindingFilePath": "C://component//lib//factory//clientmessagebus.factory.container.clientmessagebusfactoryspec.binding.json"
         }
     ]
 }

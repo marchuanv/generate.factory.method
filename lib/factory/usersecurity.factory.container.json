@@ -1,0 +1,16 @@
+{
+    "typeName": "UserSecurity",
+    "isSingleton": false,
+    "typeScriptPath": "C://component//lib//usersecurity.js",
+    "typeVariableName": "userSecurity",
+    "bindings": [
+        {
+            "factoryContainerBindingName": "Global",
+            "factoryContainerBindingFilePath": "C://component//lib//factory//usersecurity.factory.container.global.binding.json"
+        },
+        {
+            "factoryContainerBindingName": "UserSecurityFactorySpec",
+            "factoryContainerBindingFilePath": "C://component//lib//factory//usersecurity.factory.container.usersecurityfactoryspec.binding.json"
+        }
+    ]
+}

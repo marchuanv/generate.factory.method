@@ -1,0 +1,8 @@
+{
+    "factoryContainerBindingName": "UserSessionsFactorySpec",
+    "primitiveArgs": {
+        "factoryContainerBindingName": null
+    },
+    "referenceArgs": {},
+    "instance": null
+}

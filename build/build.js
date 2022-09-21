@@ -150,7 +150,7 @@ for(const info of getDependencyTree()) {
         continue;
     }
     const referenceArgs = {};
-    const primitiveArgs = { factoryContainerBindingName: null };
+    const primitiveArgs = {};
     const factoryCalls = [];
     let factoryRequireScripts =[];
     walkDependencyTree(info, (typeInfo) => {
@@ -199,7 +199,7 @@ for(const info of getDependencyTree()) {
                 .replace(/\[ReferenceArgs\]/g, utils.getJSONString(factoryContainerBindingRefArgs));
             const factoryContainerBindingJson = utils.getJSONObject(factoryContainerBinding);
             writeFileSync(factoryContainerBindingFilePath, utils.getJSONString(factoryContainerBindingJson), 'utf8');
-            container.bindings.push({ factoryContainerBindingName, factoryfactoryContainerBindingFilePath: factoryContainerBindingFilePath.replace(/\\/g,'//')  });
+            container.bindings.push({ factoryContainerBindingName, factoryContainerBindingFilePath: factoryContainerBindingFilePath.replace(/\\/g,'//')  });
         }
         const binding = require(factoryContainerBindingFilePath);
         const newPrimitiveArgs = Object.keys(primitiveArgs).filter(key1 => Object.keys(binding.primitiveArgs).find(key2 => key1 === key2) === undefined);
@@ -224,10 +224,9 @@ for(const info of getDependencyTree()) {
         writeFileSync(info.factoryContainerFilePath, utils.getJSONString(container), 'utf8');
     };
 
-    
     let binding = container.bindings.find(b => b.factoryContainerBindingName === factoryContainerSpecBindingName);
     binding = require(binding.factoryContainerBindingFilePath);
-    const primitivseArgsSpec = utils.getJSONObject(utils.getJSONString(binding.primitiveArgs));
+    const primitiveArgsSpec = utils.getJSONObject(utils.getJSONString(binding.primitiveArgs));
     factoryRequireScripts.push(factoryRequireTemplate
         .replace(/\[TypeName\]/g, info.typeName)
         .replace(/\[RequireScriptPath\]/g, info.factoryScriptPath.replace(/\\/g,'\\\\'))
@@ -244,7 +243,7 @@ for(const info of getDependencyTree()) {
     const factory = factoryTemplate
         .replace(/\[Args\]/g, info.children.map(x => x.variableName) )
         .replace(/\[ScriptPath\]/g, info.scriptPath.replace(/\\/g,'\\\\'))
-        .replace(/\[factoryContainerFilePath\]/g, info.factoryContainerFilePath.replace(/\\/g,'\\\\'))
+        .replace(/\[FactoryContainerFilePath\]/g, info.factoryContainerFilePath.replace(/\\/g,'\\\\'))
         .replace(/\[TypeName\]/g, info.typeName)
         .replace(/\[FactoryCalls\]/g, factoryCalls.join('\r\n'))
         .replace(/\[PrimitiveArgs\]/g, Object.keys(primitiveArgs).join(','))

@@ -1,0 +1,16 @@
+{
+    "typeName": "MessageStore",
+    "isSingleton": false,
+    "typeScriptPath": "C://component//lib//messagestore.js",
+    "typeVariableName": "messageStore",
+    "bindings": [
+        {
+            "factoryContainerBindingName": "Global",
+            "factoryContainerBindingFilePath": "C://component//lib//factory//messagestore.factory.container.global.binding.json"
+        },
+        {
+            "factoryContainerBindingName": "MessageStoreFactorySpec",
+            "factoryContainerBindingFilePath": "C://component//lib//factory//messagestore.factory.container.messagestorefactoryspec.binding.json"
+        }
+    ]
+}

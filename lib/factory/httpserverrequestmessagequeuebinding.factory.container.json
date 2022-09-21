@@ -1,0 +1,16 @@
+{
+    "typeName": "HttpServerRequestMessageQueueBinding",
+    "isSingleton": false,
+    "typeScriptPath": "C://component//lib//http//httpserverrequestmessagequeuebinding.js",
+    "typeVariableName": "httpServerRequestMessageQueueBinding",
+    "bindings": [
+        {
+            "factoryContainerBindingName": "Global",
+            "factoryContainerBindingFilePath": "C://component//lib//factory//httpserverrequestmessagequeuebinding.factory.container.global.binding.json"
+        },
+        {
+            "factoryContainerBindingName": "HttpServerRequestMessageQueueBindingFactorySpec",
+            "factoryContainerBindingFilePath": "C://component//lib//factory//httpserverrequestmessagequeuebinding.factory.container.httpserverrequestmessagequeuebindingfactoryspec.binding.json"
+        }
+    ]
+}

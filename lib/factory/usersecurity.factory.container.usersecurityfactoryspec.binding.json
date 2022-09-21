@@ -1,0 +1,8 @@
+{
+    "factoryContainerBindingName": "UserSecurityFactorySpec",
+    "primitiveArgs": {
+        "userId": null
+    },
+    "referenceArgs": {},
+    "instance": null
+}

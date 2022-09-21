@@ -1,0 +1,9 @@
+{
+    "factoryContainerBindingName": "MessageContentMetadataFactorySpec",
+    "primitiveArgs": {
+        "factoryContainerBindingName": null,
+        "data": null
+    },
+    "referenceArgs": {},
+    "instance": null
+}

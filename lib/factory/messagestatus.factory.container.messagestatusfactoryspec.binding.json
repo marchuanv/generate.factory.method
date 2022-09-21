@@ -1,0 +1,8 @@
+{
+    "factoryContainerBindingName": "MessageStatusFactorySpec",
+    "primitiveArgs": {
+        "messageStatusCode": null
+    },
+    "referenceArgs": {},
+    "instance": null
+}

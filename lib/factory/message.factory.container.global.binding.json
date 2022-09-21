@@ -1,0 +1,46 @@
+{
+    "factoryContainerBindingName": "Global",
+    "primitiveArgs": {
+        "messageStatusCode": null,
+        "factoryContainerBindingName": null,
+        "Id": null,
+        "data": null,
+        "recipientHost": null,
+        "recipientPort": null,
+        "metadata": null,
+        "token": null,
+        "senderHost": null,
+        "senderPort": null
+    },
+    "referenceArgs": {
+        "messageStatus": {
+            "factoryContainerName": "messageStatusFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//messagestatus.factory.container.json"
+        },
+        "messageContent": {
+            "factoryContainerName": "messageContentFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//messagecontent.factory.container.json"
+        },
+        "messageContentMetadata": {
+            "factoryContainerName": "messageContentMetadataFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//messagecontentmetadata.factory.container.json"
+        },
+        "userSessions": {
+            "factoryContainerName": "userSessionsFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//usersessions.factory.container.json"
+        },
+        "messageMetadata": {
+            "factoryContainerName": "messageMetadataFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//messagemetadata.factory.container.json"
+        },
+        "recipientAddress": {
+            "factoryContainerName": "recipientAddressFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//recipientaddress.factory.container.json"
+        },
+        "senderAddress": {
+            "factoryContainerName": "senderAddressFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//senderaddress.factory.container.json"
+        }
+    },
+    "instance": null
+}

@@ -1,0 +1,11 @@
+{
+    "factoryContainerBindingName": "Global",
+    "primitiveArgs": {},
+    "referenceArgs": {
+        "logger": {
+            "factoryContainerName": "loggerFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//logger.factory.container.json"
+        }
+    },
+    "instance": null
+}
