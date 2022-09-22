@@ -224,7 +224,7 @@ for(const info of getDependencyTree()) {
         writeFileSync(info.factoryContainerFilePath, utils.getJSONString(container), 'utf8');
     };
 
-    let binding = container.bindings.find(b => b.factoryContainerBindingName === factoryContainerSpecBindingName);
+    let binding = container.bindings.find(b => b.factoryContainerBindingName.toLowerCase() === factoryContainerSpecBindingName.toLowerCase());
     binding = require(binding.factoryContainerBindingFilePath);
     const primitiveArgsSpec = utils.getJSONObject(utils.getJSONString(binding.primitiveArgs));
     factoryRequireScripts.push(factoryRequireTemplate
@@ -240,12 +240,17 @@ for(const info of getDependencyTree()) {
         .replace(/\[FactoryRequireScripts\]/g, factoryRequireScripts.join('\r\n'));
     writeFileSync(info.specScriptPath, factorySpec, 'utf8');
 
+    binding = container.bindings.find(b => b.factoryContainerBindingName.toLowerCase() === 'global');
+    binding = require(binding.factoryContainerBindingFilePath);
+    const primitiveArgsWithBindingName = utils.getJSONObject(utils.getJSONString(binding.primitiveArgs));
+    primitiveArgsWithBindingName.factoryContainerBindingName = binding.factoryContainerBindingName;
     const factory = factoryTemplate
         .replace(/\[Args\]/g, info.children.map(x => x.variableName) )
         .replace(/\[ScriptPath\]/g, info.scriptPath.replace(/\\/g,'\\\\'))
         .replace(/\[FactoryContainerFilePath\]/g, info.factoryContainerFilePath.replace(/\\/g,'\\\\'))
         .replace(/\[TypeName\]/g, info.typeName)
         .replace(/\[FactoryCalls\]/g, factoryCalls.join('\r\n'))
+        .replace(/\[PrimitiveArgsWithBindingName\]/g, Object.keys(primitiveArgsWithBindingName).join(','))
         .replace(/\[PrimitiveArgs\]/g, Object.keys(primitiveArgs).join(','))
         .replace(/\[FactoryRequireScripts\]/g, factoryRequireScripts.join('\r\n'));
     writeFileSync(info.factoryScriptPath, factory, 'utf8');
@@ -254,6 +259,7 @@ for(const info of getDependencyTree()) {
         .replace(/\[Args\]/g, info.children.map(x => x.variableName) )
         .replace(/\[TypeName\]/g, info.typeName)
         .replace(/\[FactoryCalls\]/g, factoryCalls.join('\r\n'))
+        .replace(/\[PrimitiveArgsWithBindingName\]/g, Object.keys(primitiveArgsWithBindingName).join(','))
         .replace(/\[PrimitiveArgs\]/g, Object.keys(primitiveArgs).join(','))
         .replace(/\[TypeVariableName\]/g, info.variableName);
     writeFileSync(info.minFactoryScriptPath, factoryMinification, 'utf8');
