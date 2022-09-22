@@ -56,15 +56,11 @@ fdescribe("when asking a client messagebus to publish more than one request", fu
     { 
       //Simulate a Server
       const { serverMessageBus } = createServerMessageBus({ factoryContainerBindingName, timeout, senderHost, senderPort });
-      serverMessageBus.publish(createMessage({ 
-        factoryContainerBindingName: utils.generateGUID(),
-        messageStatusCode: 0, Id: null, data: expectedDecryptedServerText1, 
-        recipientHost, recipientPort, metadata, token, senderHost, senderPort 
+      serverMessageBus.publish(createMessage({ factoryContainerBindingName, messageStatusCode: 0, 
+        Id: null, data: expectedDecryptedServerText1, recipientHost, recipientPort, metadata, token, senderHost, senderPort 
       }));
-      serverMessageBus.publish(createMessage({ 
-        factoryContainerBindingName: utils.generateGUID(),
-        messageStatusCode: 0, Id: null, data: expectedDecryptedServerText2, 
-        recipientHost, recipientPort, metadata, token, senderHost, senderPort 
+      serverMessageBus.publish(createMessage({ factoryContainerBindingName, messageStatusCode: 0, 
+        Id: null, data: expectedDecryptedServerText2, recipientHost, recipientPort, metadata, token, senderHost, senderPort 
       }));
       serverMessageBus.subscribe({ callback: ({ message }) => {
         if (!requestMessage1) {
@@ -77,13 +73,11 @@ fdescribe("when asking a client messagebus to publish more than one request", fu
 
     // Act
     clientMessageBus.publish(createMessage({ 
-      factoryContainerBindingName: utils.generateGUID(),
-      messageStatusCode: 2, Id: null, data: expectedDecryptedClientText1,
+      factoryContainerBindingName, messageStatusCode: 2, Id: null, data: expectedDecryptedClientText1,
       recipientHost, recipientPort, metadata, token, senderHost, senderPort 
     }));
     clientMessageBus.publish(createMessage({ 
-      factoryContainerBindingName: utils.generateGUID(),
-      messageStatusCode: 2, Id: null, data: expectedDecryptedClientText2,
+      factoryContainerBindingName, messageStatusCode: 2, Id: null, data: expectedDecryptedClientText2,
       recipientHost, recipientPort, metadata, token, senderHost, senderPort 
     }));
 
