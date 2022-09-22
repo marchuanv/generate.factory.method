@@ -11,6 +11,10 @@
         {
             "factoryContainerBindingName": "HttpClientRequestMessageBusFactorySpec",
             "factoryContainerBindingFilePath": "C://component//lib//factory//httpclientrequestmessagebus.factory.container.httpclientrequestmessagebusfactoryspec.binding.json"
+        },
+        {
+            "factoryContainerBindingName": "MultipleRequestsSpec",
+            "factoryContainerBindingFilePath": "C://component//lib//factory//httpclientrequestmessagebus.factory.container.multiplerequestsspec.binding.json"
         }
     ]
 }

@@ -1,0 +1,9 @@
+{
+    "factoryContainerBindingName": "MultipleRequestsSpec",
+    "primitiveArgs": {
+        "senderHost": null,
+        "senderPort": null
+    },
+    "referenceArgs": {},
+    "instance": null
+}

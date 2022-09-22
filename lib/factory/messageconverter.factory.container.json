@@ -11,6 +11,10 @@
         {
             "factoryContainerBindingName": "MessageConverterFactorySpec",
             "factoryContainerBindingFilePath": "C://component//lib//factory//messageconverter.factory.container.messageconverterfactoryspec.binding.json"
+        },
+        {
+            "factoryContainerBindingName": "MultipleRequestsSpec",
+            "factoryContainerBindingFilePath": "C://component//lib//factory//messageconverter.factory.container.multiplerequestsspec.binding.json"
         }
     ]
 }

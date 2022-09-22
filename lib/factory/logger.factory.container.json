@@ -11,6 +11,10 @@
         {
             "factoryContainerBindingName": "LoggerFactorySpec",
             "factoryContainerBindingFilePath": "C://component//lib//factory//logger.factory.container.loggerfactoryspec.binding.json"
+        },
+        {
+            "factoryContainerBindingName": "MultipleRequestsSpec",
+            "factoryContainerBindingFilePath": "C://component//lib//factory//logger.factory.container.multiplerequestsspec.binding.json"
         }
     ]
 }

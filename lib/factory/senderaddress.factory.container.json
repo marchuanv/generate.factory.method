@@ -11,6 +11,10 @@
         {
             "factoryContainerBindingName": "SenderAddressFactorySpec",
             "factoryContainerBindingFilePath": "C://component//lib//factory//senderaddress.factory.container.senderaddressfactoryspec.binding.json"
+        },
+        {
+            "factoryContainerBindingName": "MultipleRequestsSpec",
+            "factoryContainerBindingFilePath": "C://component//lib//factory//senderaddress.factory.container.multiplerequestsspec.binding.json"
         }
     ]
 }

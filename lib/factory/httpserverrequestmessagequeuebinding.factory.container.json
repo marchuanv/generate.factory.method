@@ -11,6 +11,10 @@
         {
             "factoryContainerBindingName": "HttpServerRequestMessageQueueBindingFactorySpec",
             "factoryContainerBindingFilePath": "C://component//lib//factory//httpserverrequestmessagequeuebinding.factory.container.httpserverrequestmessagequeuebindingfactoryspec.binding.json"
+        },
+        {
+            "factoryContainerBindingName": "MultipleRequestsSpec",
+            "factoryContainerBindingFilePath": "C://component//lib//factory//httpserverrequestmessagequeuebinding.factory.container.multiplerequestsspec.binding.json"
         }
     ]
 }

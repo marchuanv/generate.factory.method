@@ -11,6 +11,10 @@
         {
             "factoryContainerBindingName": "MessageQueueFactorySpec",
             "factoryContainerBindingFilePath": "C://component//lib//factory//messagequeue.factory.container.messagequeuefactoryspec.binding.json"
+        },
+        {
+            "factoryContainerBindingName": "MultipleRequestsSpec",
+            "factoryContainerBindingFilePath": "C://component//lib//factory//messagequeue.factory.container.multiplerequestsspec.binding.json"
         }
     ]
 }
