@@ -1,0 +1,31 @@
+{
+    "factoryContainerBindingName": "multiplerequestsspec",
+    "factoryContainerBindingFilePath": "C://component//lib//factory//generated//component//component.factory.container.multiplerequestsspec.binding.json",
+    "primitiveArgs": {
+        "packageJson": null,
+        "factoryContainerBindingName": null,
+        "clientRequestMessageBus": null,
+        "clientResponseMessageBus": null,
+        "serverResponseMessageBus": null,
+        "serverRequestMessageBus": null
+    },
+    "referenceArgs": {
+        "clientMessageBus": {
+            "factoryContainerName": "clientMessageBusFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//generated//clientmessagebus//clientmessagebus.factory.container.json"
+        },
+        "messageConverter": {
+            "factoryContainerName": "messageConverterFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.json"
+        },
+        "serverMessageBus": {
+            "factoryContainerName": "serverMessageBusFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//generated//servermessagebus//servermessagebus.factory.container.json"
+        },
+        "userSessions": {
+            "factoryContainerName": "userSessionsFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//generated//usersessions//usersessions.factory.container.json"
+        }
+    },
+    "instance": null
+}

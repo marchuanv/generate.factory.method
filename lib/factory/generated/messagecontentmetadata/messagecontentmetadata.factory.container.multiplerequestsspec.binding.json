@@ -1,0 +1,10 @@
+{
+    "factoryContainerBindingName": "multiplerequestsspec",
+    "factoryContainerBindingFilePath": "C://component//lib//factory//generated//messagecontentmetadata//messagecontentmetadata.factory.container.multiplerequestsspec.binding.json",
+    "primitiveArgs": {
+        "factoryContainerBindingName": null,
+        "data": null
+    },
+    "referenceArgs": {},
+    "instance": null
+}

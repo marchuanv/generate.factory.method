@@ -1,0 +1,22 @@
+{
+    "factoryContainerBindingName": "global",
+    "factoryContainerBindingFilePath": "C://component//lib//factory//generated//httpserverrequestmessagebus//httpserverrequestmessagebus.factory.container.global.binding.json",
+    "primitiveArgs": {
+        "factoryContainerBindingName": null
+    },
+    "referenceArgs": {
+        "httpServerRequestMessageQueueBinding": {
+            "factoryContainerName": "httpServerRequestMessageQueueBindingFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//generated//httpserverrequestmessagequeuebinding//httpserverrequestmessagequeuebinding.factory.container.json"
+        },
+        "messageQueue": {
+            "factoryContainerName": "messageQueueFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//generated//messagequeue//messagequeue.factory.container.json"
+        },
+        "logger": {
+            "factoryContainerName": "loggerFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//generated//logger//logger.factory.container.json"
+        }
+    },
+    "instance": null
+}

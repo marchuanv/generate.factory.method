@@ -1,0 +1,15 @@
+{
+    "factoryContainerBindingName": "global",
+    "factoryContainerBindingFilePath": "C://component//lib//factory//generated//servermessagebus//servermessagebus.factory.container.global.binding.json",
+    "primitiveArgs": {
+        "serverResponseMessageBus": null,
+        "serverRequestMessageBus": null
+    },
+    "referenceArgs": {
+        "messageConverter": {
+            "factoryContainerName": "messageConverterFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.json"
+        }
+    },
+    "instance": null
+}

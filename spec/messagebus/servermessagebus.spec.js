@@ -7,15 +7,23 @@ describe("when asking the server messagebus to subscribe to request messages and
   const senderHost = 'localhost';
   const senderPort = 3000;
 
-  const { createHttpServerMessageBus } = require('../../lib/factory/httpservermessagebus.factory.js');
-  const { createHttpServerMessageBusManager } = require('../../lib/factory/httpservermessagebusmanager.factory.js');
-  const { createHttpClientMessageBus } = require('../../lib/factory/httpclientmessagebus.factory.js');
-  const { createHttpClientMessageBusManager } = require('../../lib/factory/httpclientmessagebusmanager.factory.js');
-  const { createMessage } = require('../../lib/factory/message.factory');
-  const { createClientMessageBus } = require('../../lib/factory/clientmessagebus.factory.js');
-  const { createServerMessageBus } = require('../../lib/factory/servermessagebus.factory.js');
+  let createHttpServerMessageBus = null;
+  let  createHttpServerMessageBusManager = null;
+  let  createHttpClientMessageBus = null;
+  let  createHttpClientMessageBusManager = null;
+  let  createMessage = null;
+  let  createClientMessageBus = null;
+  let  createServerMessageBus = null;
 
   beforeAll(() => {
+    ({ createHttpServerMessageBus } = require('../../lib/factory/httpservermessagebus.factory.js'));
+    ({ createHttpServerMessageBusManager } = require('../../lib/factory/httpservermessagebusmanager.factory.js'));
+    ({ createHttpClientMessageBus } = require('../../lib/factory/httpclientmessagebus.factory.js'));
+    ({ createHttpClientMessageBusManager } = require('../../lib/factory/httpclientmessagebusmanager.factory.js'));
+    ({ createMessage } = require('../../lib/factory/message.factory'));
+    ({ createClientMessageBus } = require('../../lib/factory/clientmessagebus.factory.js'));
+    ({ createServerMessageBus } = require('../../lib/factory/servermessagebus.factory.js'));
+
     const userId = factoryContainerBindingName;
     const secret = `${factoryContainerBindingName}1234`;
     const { createUserSessions } = require('../../lib/factory/usersessions.factory.js');

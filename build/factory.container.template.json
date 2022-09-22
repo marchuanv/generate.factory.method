@@ -3,8 +3,5 @@
     "isSingleton": false,
     "typeScriptPath": "[TypeScriptPath]",
     "typeVariableName": "[TypeVariableName]",
-    "bindings": [{
-        "factoryContainerBindingName": "Global",
-        "factoryContainerBindingScriptPath": null
-    }]
+    "bindings": []
 }

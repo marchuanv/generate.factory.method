@@ -1,0 +1,10 @@
+{
+    "factoryContainerBindingName": "factoryspec",
+    "factoryContainerBindingFilePath": "C://component//lib//factory//generated//senderaddress//senderaddress.factory.container.factoryspec.binding.json",
+    "primitiveArgs": {
+        "senderHost": null,
+        "senderPort": null
+    },
+    "referenceArgs": {},
+    "instance": null
+}

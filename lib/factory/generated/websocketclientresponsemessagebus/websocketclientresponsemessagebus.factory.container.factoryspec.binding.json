@@ -1,0 +1,22 @@
+{
+    "factoryContainerBindingName": "factoryspec",
+    "factoryContainerBindingFilePath": "C://component//lib//factory//generated//websocketclientresponsemessagebus//websocketclientresponsemessagebus.factory.container.factoryspec.binding.json",
+    "primitiveArgs": {
+        "factoryContainerBindingName": null
+    },
+    "referenceArgs": {
+        "websocketClientResponseMessageQueueBinding": {
+            "factoryContainerName": "websocketClientResponseMessageQueueBindingFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//generated//websocketclientresponsemessagequeuebinding//websocketclientresponsemessagequeuebinding.factory.container.json"
+        },
+        "messageQueue": {
+            "factoryContainerName": "messageQueueFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//generated//messagequeue//messagequeue.factory.container.json"
+        },
+        "logger": {
+            "factoryContainerName": "loggerFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//generated//logger//logger.factory.container.json"
+        }
+    },
+    "instance": null
+}

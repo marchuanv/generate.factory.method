@@ -1,0 +1,51 @@
+{
+    "factoryContainerBindingName": "multiplerequestsspec",
+    "factoryContainerBindingFilePath": "C://component//lib//factory//generated//websocketresponsemessage//websocketresponsemessage.factory.container.multiplerequestsspec.binding.json",
+    "primitiveArgs": {
+        "messageStatusCode": null,
+        "factoryContainerBindingName": null,
+        "Id": null,
+        "data": null,
+        "recipientHost": null,
+        "recipientPort": null,
+        "metadata": null,
+        "token": null,
+        "senderHost": null,
+        "senderPort": null
+    },
+    "referenceArgs": {
+        "message": {
+            "factoryContainerName": "messageFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//generated//message//message.factory.container.json"
+        },
+        "messageStatus": {
+            "factoryContainerName": "messageStatusFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//generated//messagestatus//messagestatus.factory.container.json"
+        },
+        "messageContent": {
+            "factoryContainerName": "messageContentFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//generated//messagecontent//messagecontent.factory.container.json"
+        },
+        "messageContentMetadata": {
+            "factoryContainerName": "messageContentMetadataFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//generated//messagecontentmetadata//messagecontentmetadata.factory.container.json"
+        },
+        "userSessions": {
+            "factoryContainerName": "userSessionsFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//generated//usersessions//usersessions.factory.container.json"
+        },
+        "messageMetadata": {
+            "factoryContainerName": "messageMetadataFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.json"
+        },
+        "recipientAddress": {
+            "factoryContainerName": "recipientAddressFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//generated//recipientaddress//recipientaddress.factory.container.json"
+        },
+        "senderAddress": {
+            "factoryContainerName": "senderAddressFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//generated//senderaddress//senderaddress.factory.container.json"
+        }
+    },
+    "instance": null
+}

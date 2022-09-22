@@ -9,16 +9,26 @@ fdescribe("when asking a client messagebus to publish more than one request", fu
   const recipientHost = 'localhost';
   const recipientPort = 3000;
 
-  const { createMessage } = require('../../lib/factory/message.factory');
-  const { createHttpServerMessageBusManager } = require('../../lib/factory/httpservermessagebusmanager.factory.js');
-  const { createHttpClientMessageBusManager } = require('../../lib/factory/httpclientmessagebusmanager.factory.js');
-  const { createHttpClientMessageBus } = require('../../lib/factory/httpclientmessagebus.factory.js');
-  const { createUserSessions } = require('../../lib/factory/usersessions.factory.js');
-  const { createHttpServerMessageBus } = require('../../lib/factory/httpservermessagebus.factory.js');
-  const { createServerMessageBus } = require('../../lib/factory/servermessagebus.factory.js');
-  const { createClientMessageBus } = require('../../lib/factory/clientmessagebus.factory.js');
+  let createMessage = null;
+  let createHttpServerMessageBusManager = null;
+  let createHttpClientMessageBusManager = null;
+  let createHttpClientMessageBus = null;
+  let createUserSessions = null;
+  let createHttpServerMessageBus = null;
+  let createServerMessageBus = null;
+  let createClientMessageBus = null;
 
   beforeAll(() => {
+
+    ({ createMessage } = require('../../lib/factory/generated/message/message.factory'));
+    ({ createHttpServerMessageBusManager } = require('../../lib/factory/generated/httpservermessagebusmanager/httpservermessagebusmanager.factory.js'));
+    ({ createHttpClientMessageBusManager } = require('../../lib/factory/generated/httpclientmessagebusmanager/httpclientmessagebusmanager.factory.js'));
+    ({ createHttpClientMessageBus } = require('../../lib/factory/generated/httpclientmessagebus/httpclientmessagebus.factory.js'));
+    ({ createUserSessions } = require('../../lib/factory/generated/usersessions/usersessions.factory.js'));
+    ({ createHttpServerMessageBus } = require('../../lib/factory/generated/httpservermessagebus/httpservermessagebus.factory.js'));
+    ({ createServerMessageBus } = require('../../lib/factory/generated/servermessagebus/servermessagebus.factory.js'));
+    ({ createClientMessageBus } = require('../../lib/factory/generated/clientmessagebus/clientmessagebus.factory.js'));
+
     const userId = factoryContainerBindingName;
     const secret = `${factoryContainerBindingName}1234`;
     const { userSessions } = createUserSessions({ factoryContainerBindingName });

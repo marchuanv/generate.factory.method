@@ -1,0 +1,9 @@
+{
+    "factoryContainerBindingName": "multiplerequestsspec",
+    "factoryContainerBindingFilePath": "C://component//lib//factory//generated//usersessions//usersessions.factory.container.multiplerequestsspec.binding.json",
+    "primitiveArgs": {
+        "factoryContainerBindingName": null
+    },
+    "referenceArgs": {},
+    "instance": null
+}

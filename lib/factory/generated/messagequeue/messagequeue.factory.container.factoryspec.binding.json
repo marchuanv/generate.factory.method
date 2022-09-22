@@ -1,0 +1,12 @@
+{
+    "factoryContainerBindingName": "factoryspec",
+    "factoryContainerBindingFilePath": "C://component//lib//factory//generated//messagequeue//messagequeue.factory.container.factoryspec.binding.json",
+    "primitiveArgs": {},
+    "referenceArgs": {
+        "logger": {
+            "factoryContainerName": "loggerFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//generated//logger//logger.factory.container.json"
+        }
+    },
+    "instance": null
+}

@@ -8,16 +8,26 @@ describe("when asking a client messagebus to publish a request", function() {
   const recipientHost = 'localhost';
   const recipientPort = 3000;
 
-  const { createMessage } = require('../../lib/factory/message.factory');
-  const { createUserSessions } = require('../../lib/factory/usersessions.factory.js');
-  const { createServerMessageBus } = require('../../lib/factory/servermessagebus.factory.js');
-  const { createHttpServerMessageBus } = require('../../lib/factory/httpservermessagebus.factory.js');
-  const { createHttpClientMessageBus } = require('../../lib/factory/httpclientmessagebus.factory.js');
-  const { createHttpServerMessageBusManager } = require('../../lib/factory/httpservermessagebusmanager.factory.js');
-  const { createHttpClientMessageBusManager } = require('../../lib/factory/httpclientmessagebusmanager.factory.js');
-  const { createClientMessageBus } = require('../../lib/factory/clientmessagebus.factory.js');
+  let createMessage = null;
+  let createUserSessions = null;
+  let createServerMessageBus = null;
+  let createHttpServerMessageBus = null;
+  let createHttpClientMessageBus = null;
+  let createHttpServerMessageBusManager = null;
+  let createHttpClientMessageBusManager = null;
+  let createClientMessageBus = null;
 
   beforeAll(() => {
+
+    ({ createMessage } = require('../../lib/factory/generated/message.factory'));
+    ({ createUserSessions } = require('../../lib/factory/usersessions.factory.js'));
+    ({ createServerMessageBus } = require('../../lib/factory/servermessagebus.factory.js'));
+    ({ createHttpServerMessageBus } = require('../../lib/factory/httpservermessagebus.factory.js'));
+    ({ createHttpClientMessageBus } = require('../../lib/factory/httpclientmessagebus.factory.js'));
+    ({ createHttpServerMessageBusManager } = require('../../lib/factory/httpservermessagebusmanager.factory.js'));
+    ({ createHttpClientMessageBusManager } = require('../../lib/factory/httpclientmessagebusmanager.factory.js'));
+    ({ createClientMessageBus } = require('../../lib/factory/clientmessagebus.factory.js'));
+
     const userId = factoryContainerBindingName;
     const secret = `${factoryContainerBindingName}1234`;
     const { userSessions } = createUserSessions({ factoryContainerBindingName });

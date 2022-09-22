@@ -1,0 +1,20 @@
+{
+    "typeName": "WebSocketServerResponseMessageQueueBinding",
+    "isSingleton": false,
+    "typeScriptPath": "C://component//lib//websocket//websocketserverresponsemessagequeuebinding.js",
+    "typeVariableName": "webSocketServerResponseMessageQueueBinding",
+    "bindings": [
+        {
+            "factoryContainerBindingName": "global",
+            "factoryContainerBindingFilePath": "C://component//lib//factory//generated//websocketserverresponsemessagequeuebinding//websocketserverresponsemessagequeuebinding.factory.container.global.binding.json"
+        },
+        {
+            "factoryContainerBindingName": "factoryspec",
+            "factoryContainerBindingFilePath": "C://component//lib//factory//generated//websocketserverresponsemessagequeuebinding//websocketserverresponsemessagequeuebinding.factory.container.factoryspec.binding.json"
+        },
+        {
+            "factoryContainerBindingName": "multiplerequestsspec",
+            "factoryContainerBindingFilePath": "C://component//lib//factory//generated//websocketserverresponsemessagequeuebinding//websocketserverresponsemessagequeuebinding.factory.container.multiplerequestsspec.binding.json"
+        }
+    ]
+}

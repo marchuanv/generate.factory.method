@@ -1,0 +1,10 @@
+{
+    "factoryContainerBindingName": "global",
+    "factoryContainerBindingFilePath": "C://component//lib//factory//generated//recipientaddress//recipientaddress.factory.container.global.binding.json",
+    "primitiveArgs": {
+        "recipientHost": null,
+        "recipientPort": null
+    },
+    "referenceArgs": {},
+    "instance": null
+}

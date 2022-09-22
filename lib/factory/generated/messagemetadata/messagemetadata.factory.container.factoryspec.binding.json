@@ -1,0 +1,23 @@
+{
+    "factoryContainerBindingName": "factoryspec",
+    "factoryContainerBindingFilePath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.factoryspec.binding.json",
+    "primitiveArgs": {
+        "recipientHost": null,
+        "recipientPort": null,
+        "metadata": null,
+        "token": null,
+        "senderHost": null,
+        "senderPort": null
+    },
+    "referenceArgs": {
+        "recipientAddress": {
+            "factoryContainerName": "recipientAddressFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//generated//recipientaddress//recipientaddress.factory.container.json"
+        },
+        "senderAddress": {
+            "factoryContainerName": "senderAddressFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//generated//senderaddress//senderaddress.factory.container.json"
+        }
+    },
+    "instance": null
+}

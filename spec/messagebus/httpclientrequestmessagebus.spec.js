@@ -9,18 +9,30 @@ describe("when an http client request messagebus publishes an http request messa
     const recipientHost = 'localhost';
     const recipientPort = 3000;
 
-    const { createHttpRequestMessage } = require('../../lib/factory/httprequestmessage.factory.js');
-    const { createHttpResponseMessage } = require('../../lib/factory/httpresponsemessage.factory.js');
-    const { createUserSessions } = require('../../lib/factory/usersessions.factory.js');
-    const { createHttpClientRequestMessageBus } = require('../../lib/factory/httpclientrequestmessagebus.factory.js');
-    const { createHttpClientResponseMessageBus } = require('../../lib/factory/httpclientresponsemessagebus.factory.js');
-    const { createHttpServerResponseMessageBus } = require('../../lib/factory/httpserverresponsemessagebus.factory.js');
-    const { createHttpServerMessageBus } = require('../../lib/factory/httpservermessagebus.factory.js');
-    const { createHttpClientMessageBus } = require('../../lib/factory/httpclientmessagebus.factory.js');
-    const { createHttpServerMessageBusManager } = require('../../lib/factory/httpservermessagebusmanager.factory.js');
-    const { createHttpClientMessageBusManager } = require('../../lib/factory/httpclientmessagebusmanager.factory.js');
+    let createHttpRequestMessage = null;
+    let createHttpResponseMessage = null;
+    let createUserSessions = null;
+    let createHttpClientRequestMessageBus = null;
+    let createHttpClientResponseMessageBus = null;
+    let createHttpServerResponseMessageBus = null;
+    let createHttpServerMessageBus = null;
+    let createHttpClientMessageBus = null;
+    let createHttpServerMessageBusManager = null;
+    let createHttpClientMessageBusManager = null;
 
     beforeAll(() => {
+
+        ( { createHttpRequestMessage } = require('../../lib/factory/httprequestmessage.factory.js'));
+        ( { createHttpResponseMessage } = require('../../lib/factory/httpresponsemessage.factory.js'));
+        ( { createUserSessions } = require('../../lib/factory/usersessions.factory.js'));
+        ( { createHttpClientRequestMessageBus } = require('../../lib/factory/httpclientrequestmessagebus.factory.js'));
+        ( { createHttpClientResponseMessageBus } = require('../../lib/factory/httpclientresponsemessagebus.factory.js'));
+        ( { createHttpServerResponseMessageBus } = require('../../lib/factory/httpserverresponsemessagebus.factory.js'));
+        ( { createHttpServerMessageBus } = require('../../lib/factory/httpservermessagebus.factory.js'));
+        ( { createHttpClientMessageBus } = require('../../lib/factory/httpclientmessagebus.factory.js'));
+        ( { createHttpServerMessageBusManager } = require('../../lib/factory/httpservermessagebusmanager.factory.js'));
+        ( { createHttpClientMessageBusManager } = require('../../lib/factory/httpclientmessagebusmanager.factory.js'));
+
         const userId = factoryContainerBindingName;
         const secret = `${factoryContainerBindingName}1234`;
         const { userSessions } = createUserSessions({ factoryContainerBindingName });

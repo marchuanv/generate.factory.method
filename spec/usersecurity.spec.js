@@ -1,14 +1,14 @@
 const utils = require("utils");
-const { createUserSecurity } = require("../lib/factory/usersecurity.factory");
-
 describe("when encrypting data given a public key", function() {
     
     let userSecurity;
     let token = null;
     const userId = 'encryptiontest';
     const factoryContainerBindingName = 'usersecuritytest';
+    let createUserSecurity = null;
 
     beforeAll(() => {
+        ({ createUserSecurity } = require("../lib/factory/generated/usersecurity.factory"));
         const secret = 'encryptiontest1234';
         ({ userSecurity } = createUserSecurity({ factoryContainerBindingName, userId }));
         userSecurity.register({ secret });
