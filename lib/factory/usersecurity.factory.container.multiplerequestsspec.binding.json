@@ -1,0 +1,8 @@
+{
+    "factoryContainerBindingName": "MultipleRequestsSpec",
+    "primitiveArgs": {
+        "userId": null
+    },
+    "referenceArgs": {},
+    "instance": null
+}
