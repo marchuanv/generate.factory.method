@@ -1,9 +1,0 @@
-{
-    "factoryContainerBindingName": "Global",
-    "primitiveArgs": {
-        "senderHost": null,
-        "senderPort": null
-    },
-    "referenceArgs": {},
-    "instance": null
-}

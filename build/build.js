@@ -3,8 +3,8 @@ const { readdirSync, readFileSync, writeFileSync, mkdirSync, existsSync, appendF
 const path = require('path');
 const utils = require('utils');
 const libDir = path.join(__dirname, '../lib');
-const specsFactoryDir = path.join(__dirname, '../spec', 'factory');
-const libFactoryDir = path.join(__dirname, '../lib', 'factory');
+const generatedFactorySpecsDir = path.join(__dirname, '../spec', 'factory', 'generated');
+const generatedFactoryScriptsDir = path.join(__dirname, '../lib', 'factory', 'generated');
 const rootScripts = readdirSync(libDir, { withFileTypes: true }).filter(dirent => dirent.isFile()).map(file => path.join(libDir, file.name));
 const httpScripts = readdirSync(path.join(libDir, 'http'), { withFileTypes: true }).filter(dirent => dirent.isFile()).map(file => path.join(libDir, 'http', file.name));
 const websocketScripts = readdirSync(path.join(libDir, 'websocket'), { withFileTypes: true }).filter(dirent => dirent.isFile()).map(file => path.join(libDir, 'websocket', file.name));
@@ -20,11 +20,11 @@ const factoryMinificationTemplate = readFileSync(path.join(__dirname,'factory.mi
 const componentMinPath = path.join(__dirname, '../component.min.js');
 const factory = require(path.join(libDir,'factory.js'));
 
-if (!existsSync(specsFactoryDir)){
-    mkdirSync(specsFactoryDir);
+if (!existsSync(generatedFactorySpecsDir)){
+    mkdirSync(generatedFactorySpecsDir);
 }
-if (!existsSync(libFactoryDir)){
-    mkdirSync(libFactoryDir);
+if (!existsSync(generatedFactoryScriptsDir)){
+    mkdirSync(generatedFactoryScriptsDir);
 }
 
 function getFunctionCode(func) {
@@ -51,15 +51,15 @@ function getDependencyTree(typeInfo, pass = 'firstpass', types = []) {
                 
                 const scriptName = type.name.toLowerCase();
                 const factoryContainerScriptName = `${scriptName}.factory.container.json`;
-                const factoryContainerFilePath = path.join(libDir, 'factory', factoryContainerScriptName);
+                const factoryContainerFilePath = path.join(generatedFactoryScriptsDir, factoryContainerScriptName);
                 const factoryContainerBindingFileName = `${scriptName}.factory.container.global.binding.json`;
-                const factoryContainerBindingFilePath = path.join(libDir, 'factory', factoryContainerBindingFileName);
+                const factoryContainerBindingFilePath = path.join(generatedFactoryScriptsDir, factoryContainerBindingFileName);
                 const factoryScriptName = `${scriptName}.factory.js`;
                 const minFactoryScriptName = `${scriptName}.factory.min.js`;
                 const specScriptName = `${scriptName}.factory.spec.js`;
-                const factoryScriptPath = path.join(libDir, 'factory', factoryScriptName);
-                const minFactoryScriptPath = path.join(libDir, 'factory', minFactoryScriptName);
-                const specScriptPath = path.join(specsFactoryDir, specScriptName);
+                const factoryScriptPath = path.join(generatedFactoryScriptsDir, factoryScriptName);
+                const minFactoryScriptPath = path.join(generatedFactoryScriptsDir, minFactoryScriptName);
+                const specScriptPath = path.join(generatedFactorySpecsDir, specScriptName);
 
                 const parameters = utils.getFunctionParams(type) || [];
                 const children = parameters.map(param => utils.getJSONObject(typeInfoTemplate
