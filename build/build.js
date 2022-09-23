@@ -249,6 +249,11 @@ for(const info of allTypeInfo) {
             const value = referenceArgsCopy[key];
             binding.referenceArgs[key] = value;
         };
+        for(const argName of Object.keys(binding.primitiveArgs)) {
+            if (binding.referenceArgs[argName]) {
+                delete binding.primitiveArgs[argName];
+            }
+        };
         for(const key of Object.keys(binding.referenceArgs)) {
             const obj = binding.referenceArgs[key];
             if (!obj || typeof obj !== 'object') {

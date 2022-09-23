@@ -27,25 +27,21 @@
             "factoryContainerFilePath": "C://component//lib//factory//generated//usersessions//usersessions.factory.container.json"
         },
         "clientRequestMessageBus": {
-            "factoryContainerName": "httpClientRequestMessageBus",
             "factoryContainerFilePath": "C://component//lib//factory//generated//httpclientrequestmessagebus//httpclientrequestmessagebus.factory.container.json",
             "factoryContainerTypeVariableName": "httpClientRequestMessageBus",
             "factoryContainerTypeName": "HttpClientRequestMessageBus"
         },
         "clientResponseMessageBus": {
-            "factoryContainerName": "httpClientResponseMessageBus",
             "factoryContainerFilePath": "C://component//lib//factory//generated//httpclientresponsemessagebus//httpclientresponsemessagebus.factory.container.json",
             "factoryContainerTypeVariableName": "httpClientResponseMessageBus",
             "factoryContainerTypeName": "HttpClientResponseMessageBus"
         },
         "serverRequestMessageBus": {
-            "factoryContainerName": "httpServerRequestMessageBus",
             "factoryContainerFilePath": "C://component//lib//factory//generated//httpserverrequestmessagebus//httpserverrequestmessagebus.factory.container.json",
             "factoryContainerTypeVariableName": "httpServerRequestMessageBus",
             "factoryContainerTypeName": "HttpServerRequestMessageBus"
         },
         "serverResponseMessageBus": {
-            "factoryContainerName": "httpServerResponseMessageBus",
             "factoryContainerFilePath": "C://component//lib//factory//generated//httpserverresponsemessagebus//httpserverresponsemessagebus.factory.container.json",
             "factoryContainerTypeVariableName": "httpServerResponseMessageBus",
             "factoryContainerTypeName": "HttpServerResponseMessageBus"
