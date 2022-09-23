@@ -236,8 +236,8 @@ for(const info of getDependencyTree()) {
                 referenceArgs[key] = value;
                 delete binding.primitiveArgs[key];
             }
-            if (key === "factoryContainerBindingName") {
-               binding.primitiveArgs[key] = binding.factoryContainerBindingName;
+            if (value && binding[key]) {
+               binding.primitiveArgs[key] = binding[key];
             }
         };
         const newRefArgs = Object.keys(referenceArgs).filter(key1 => Object.keys(binding.referenceArgs).find(key2 => key2 === key1) === undefined);
