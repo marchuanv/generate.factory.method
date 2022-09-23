@@ -1,19 +1,18 @@
 {
     "factoryContainerBindingName": "multiplerequestsspec",
     "factoryContainerBindingFilePath": "C://component//lib//factory//generated//clientmessagebus//clientmessagebus.factory.container.multiplerequestsspec.binding.json",
-    "primitiveArgs": {
+    "primitiveArgs": {},
+    "referenceArgs": {
+        "messageConverter": {
+            "factoryContainerName": "messageConverterFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.json"
+        },
         "clientRequestMessageBus": {
             "factoryContainerName": "HttpClientRequestMessageBusFactoryContainer",
             "factoryContainerFilePath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.json"
         },
         "clientResponseMessageBus": {
             "factoryContainerName": "HttpClientResponseMessageBusFactoryContainer",
-            "factoryContainerFilePath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.json"
-        }
-    },
-    "referenceArgs": {
-        "messageConverter": {
-            "factoryContainerName": "messageConverterFactoryContainer",
             "factoryContainerFilePath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.json"
         }
     },

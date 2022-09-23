@@ -236,7 +236,7 @@ for(const info of getDependencyTree()) {
                 referenceArgs[key] = value;
                 delete binding.primitiveArgs[key];
             }
-            if (value && binding[key]) {
+            if (value && binding[key] !== undefined) {
                binding.primitiveArgs[key] = binding[key];
             }
         };

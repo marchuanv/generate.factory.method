@@ -9,6 +9,14 @@
         "messageConverter": {
             "factoryContainerName": "messageConverterFactoryContainer",
             "factoryContainerFilePath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.json"
+        },
+        "serverResponseMessageBus": {
+            "factoryContainerName": "HttpServerResponseMessageBusFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.json"
+        },
+        "serverRequestMessageBus": {
+            "factoryContainerName": "HttpServerRequestMessageBusFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.json"
         }
     },
     "instance": null

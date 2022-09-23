@@ -25,6 +25,22 @@
         "userSessions": {
             "factoryContainerName": "userSessionsFactoryContainer",
             "factoryContainerFilePath": "C://component//lib//factory//generated//usersessions//usersessions.factory.container.json"
+        },
+        "clientRequestMessageBus": {
+            "factoryContainerName": "HttpClientRequestMessageBusFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.json"
+        },
+        "clientResponseMessageBus": {
+            "factoryContainerName": "HttpClientResponseMessageBusFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.json"
+        },
+        "serverResponseMessageBus": {
+            "factoryContainerName": "HttpServerResponseMessageBusFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.json"
+        },
+        "serverRequestMessageBus": {
+            "factoryContainerName": "HttpServerRequestMessageBusFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.json"
         }
     },
     "instance": null
