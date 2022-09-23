@@ -2,8 +2,8 @@
     "factoryContainerBindingName": "multiplerequestsspec",
     "factoryContainerBindingFilePath": "C://component//lib//factory//generated//httpclientmessagebus//httpclientmessagebus.factory.container.multiplerequestsspec.binding.json",
     "primitiveArgs": {
-        "timeout": null,
-        "factoryContainerBindingName": null
+        "timeout": 1500,
+        "factoryContainerBindingName": "multiplerequestsspec"
     },
     "referenceArgs": {
         "httpClientRequestMessageQueueBinding": {
