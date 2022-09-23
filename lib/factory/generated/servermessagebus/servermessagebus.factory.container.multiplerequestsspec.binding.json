@@ -2,8 +2,14 @@
     "factoryContainerBindingName": "multiplerequestsspec",
     "factoryContainerBindingFilePath": "C://component//lib//factory//generated//servermessagebus//servermessagebus.factory.container.multiplerequestsspec.binding.json",
     "primitiveArgs": {
-        "serverResponseMessageBus": null,
-        "serverRequestMessageBus": null
+        "serverResponseMessageBus": {
+            "factoryContainerName": "HttpServerResponseMessageBusFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.json"
+        },
+        "serverRequestMessageBus": {
+            "factoryContainerName": "HttpServerRequestMessageBusFactoryContainer",
+            "factoryContainerFilePath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.json"
+        }
     },
     "referenceArgs": {
         "messageConverter": {
