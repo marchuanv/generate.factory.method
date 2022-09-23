@@ -206,7 +206,7 @@ for(const info of allTypeInfo) {
             walkDependencyTree(info, (typeInfo) => {
                 if (typeInfo.scriptPath) {
                     const factoryContainerBindingRefArg =  utils.getJSONObject(factoryContainerBindingRefArgTemplate
-                        .replace(/\[FactoryContainerName\]/g,  `${typeInfo.variableName}FactoryContainer`)
+                        .replace(/\[FactoryContainerTypeVariableName\]/g,  typeInfo.variableName)
                         .replace(/\[FactoryContainerTypeName\]/g,  typeInfo.typeName)
                         .replace(/\[FactoryContainerFilePath\]/g, typeInfo.factoryContainerFilePath.replace(/\\/g,'//')));
                         referenceArgsCopy[typeInfo.variableName] = factoryContainerBindingRefArg;
@@ -255,7 +255,7 @@ for(const info of allTypeInfo) {
                 throw new Error(`value can't be null for references and must be an object.`)
             }
             const emptyFactoryContainerBindingRefArgTemplate = utils.getJSONObject(factoryContainerBindingRefArgTemplate
-                .replace(/\[FactoryContainerName\]/g,  '')
+                .replace(/\[FactoryContainerTypeVariableName\]/g,  '')
                 .replace(/\[FactoryContainerTypeName\]/g,  '')
                 .replace(/\[FactoryContainerFilePath\]/g, ''));
             const emptyFactoryContainerBindingRefArgTemplateKeys = Object.keys(emptyFactoryContainerBindingRefArgTemplate);
@@ -270,6 +270,7 @@ for(const info of allTypeInfo) {
             for(const typeInfo of allTypeInfo) {
                 if (typeInfo.scriptPath) {
                     if (obj.factoryContainerTypeName === typeInfo.typeName) {
+                        obj.factoryContainerTypeVariableName = typeInfo.variableName;
                         obj.factoryContainerFilePath = typeInfo.factoryContainerFilePath.replace(/\\/g,'//');
                         found = true;
                         break;
@@ -277,6 +278,7 @@ for(const info of allTypeInfo) {
                 }
             };
             if (!found) {
+                obj.factoryContainerTypeVariableName = null;
                 obj.factoryContainerFilePath = null;
             }
             binding.referenceArgs[key] = obj;

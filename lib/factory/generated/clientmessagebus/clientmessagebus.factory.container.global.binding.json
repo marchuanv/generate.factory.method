@@ -7,7 +7,7 @@
     },
     "referenceArgs": {
         "messageConverter": {
-            "factoryContainerName": "messageConverterFactoryContainer",
+            "factoryContainerTypeVariableName": "messageConverter",
             "factoryContainerTypeName": "MessageConverter",
             "factoryContainerFilePath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.json"
         }

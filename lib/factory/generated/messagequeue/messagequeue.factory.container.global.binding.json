@@ -4,7 +4,7 @@
     "primitiveArgs": {},
     "referenceArgs": {
         "logger": {
-            "factoryContainerName": "loggerFactoryContainer",
+            "factoryContainerTypeVariableName": "logger",
             "factoryContainerTypeName": "Logger",
             "factoryContainerFilePath": "C://component//lib//factory//generated//logger//logger.factory.container.json"
         }

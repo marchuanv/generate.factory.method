@@ -6,17 +6,17 @@
     },
     "referenceArgs": {
         "httpClientResponseMessageQueueBinding": {
-            "factoryContainerName": "httpClientResponseMessageQueueBindingFactoryContainer",
+            "factoryContainerTypeVariableName": "httpClientResponseMessageQueueBinding",
             "factoryContainerTypeName": "HttpClientResponseMessageQueueBinding",
             "factoryContainerFilePath": "C://component//lib//factory//generated//httpclientresponsemessagequeuebinding//httpclientresponsemessagequeuebinding.factory.container.json"
         },
         "messageQueue": {
-            "factoryContainerName": "messageQueueFactoryContainer",
+            "factoryContainerTypeVariableName": "messageQueue",
             "factoryContainerTypeName": "MessageQueue",
             "factoryContainerFilePath": "C://component//lib//factory//generated//messagequeue//messagequeue.factory.container.json"
         },
         "logger": {
-            "factoryContainerName": "loggerFactoryContainer",
+            "factoryContainerTypeVariableName": "logger",
             "factoryContainerTypeName": "Logger",
             "factoryContainerFilePath": "C://component//lib//factory//generated//logger//logger.factory.container.json"
         }

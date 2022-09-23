@@ -15,42 +15,42 @@
     },
     "referenceArgs": {
         "message": {
-            "factoryContainerName": "messageFactoryContainer",
+            "factoryContainerTypeVariableName": "message",
             "factoryContainerTypeName": "Message",
             "factoryContainerFilePath": "C://component//lib//factory//generated//message//message.factory.container.json"
         },
         "messageStatus": {
-            "factoryContainerName": "messageStatusFactoryContainer",
+            "factoryContainerTypeVariableName": "messageStatus",
             "factoryContainerTypeName": "MessageStatus",
             "factoryContainerFilePath": "C://component//lib//factory//generated//messagestatus//messagestatus.factory.container.json"
         },
         "messageContent": {
-            "factoryContainerName": "messageContentFactoryContainer",
+            "factoryContainerTypeVariableName": "messageContent",
             "factoryContainerTypeName": "MessageContent",
             "factoryContainerFilePath": "C://component//lib//factory//generated//messagecontent//messagecontent.factory.container.json"
         },
         "messageContentMetadata": {
-            "factoryContainerName": "messageContentMetadataFactoryContainer",
+            "factoryContainerTypeVariableName": "messageContentMetadata",
             "factoryContainerTypeName": "MessageContentMetadata",
             "factoryContainerFilePath": "C://component//lib//factory//generated//messagecontentmetadata//messagecontentmetadata.factory.container.json"
         },
         "userSessions": {
-            "factoryContainerName": "userSessionsFactoryContainer",
+            "factoryContainerTypeVariableName": "userSessions",
             "factoryContainerTypeName": "UserSessions",
             "factoryContainerFilePath": "C://component//lib//factory//generated//usersessions//usersessions.factory.container.json"
         },
         "messageMetadata": {
-            "factoryContainerName": "messageMetadataFactoryContainer",
+            "factoryContainerTypeVariableName": "messageMetadata",
             "factoryContainerTypeName": "MessageMetadata",
             "factoryContainerFilePath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.json"
         },
         "recipientAddress": {
-            "factoryContainerName": "recipientAddressFactoryContainer",
+            "factoryContainerTypeVariableName": "recipientAddress",
             "factoryContainerTypeName": "RecipientAddress",
             "factoryContainerFilePath": "C://component//lib//factory//generated//recipientaddress//recipientaddress.factory.container.json"
         },
         "senderAddress": {
-            "factoryContainerName": "senderAddressFactoryContainer",
+            "factoryContainerTypeVariableName": "senderAddress",
             "factoryContainerTypeName": "SenderAddress",
             "factoryContainerFilePath": "C://component//lib//factory//generated//senderaddress//senderaddress.factory.container.json"
         }

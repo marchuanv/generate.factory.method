@@ -7,37 +7,37 @@
     },
     "referenceArgs": {
         "httpClientRequestMessageQueueBinding": {
-            "factoryContainerName": "httpClientRequestMessageQueueBindingFactoryContainer",
+            "factoryContainerTypeVariableName": "httpClientRequestMessageQueueBinding",
             "factoryContainerTypeName": "HttpClientRequestMessageQueueBinding",
             "factoryContainerFilePath": "C://component//lib//factory//generated//httpclientrequestmessagequeuebinding//httpclientrequestmessagequeuebinding.factory.container.json"
         },
         "messageQueue": {
-            "factoryContainerName": "messageQueueFactoryContainer",
+            "factoryContainerTypeVariableName": "messageQueue",
             "factoryContainerTypeName": "MessageQueue",
             "factoryContainerFilePath": "C://component//lib//factory//generated//messagequeue//messagequeue.factory.container.json"
         },
         "logger": {
-            "factoryContainerName": "loggerFactoryContainer",
+            "factoryContainerTypeVariableName": "logger",
             "factoryContainerTypeName": "Logger",
             "factoryContainerFilePath": "C://component//lib//factory//generated//logger//logger.factory.container.json"
         },
         "httpClientResponseMessageQueueBinding": {
-            "factoryContainerName": "httpClientResponseMessageQueueBindingFactoryContainer",
+            "factoryContainerTypeVariableName": "httpClientResponseMessageQueueBinding",
             "factoryContainerTypeName": "HttpClientResponseMessageQueueBinding",
             "factoryContainerFilePath": "C://component//lib//factory//generated//httpclientresponsemessagequeuebinding//httpclientresponsemessagequeuebinding.factory.container.json"
         },
         "httpClientStartMessageQueueBinding": {
-            "factoryContainerName": "httpClientStartMessageQueueBindingFactoryContainer",
+            "factoryContainerTypeVariableName": "httpClientStartMessageQueueBinding",
             "factoryContainerTypeName": "HttpClientStartMessageQueueBinding",
             "factoryContainerFilePath": "C://component//lib//factory//generated//httpclientstartmessagequeuebinding//httpclientstartmessagequeuebinding.factory.container.json"
         },
         "httpClientStartedMessageQueueBinding": {
-            "factoryContainerName": "httpClientStartedMessageQueueBindingFactoryContainer",
+            "factoryContainerTypeVariableName": "httpClientStartedMessageQueueBinding",
             "factoryContainerTypeName": "HttpClientStartedMessageQueueBinding",
             "factoryContainerFilePath": "C://component//lib//factory//generated//httpclientstartedmessagequeuebinding//httpclientstartedmessagequeuebinding.factory.container.json"
         },
         "httpClientStopMessageQueueBinding": {
-            "factoryContainerName": "httpClientStopMessageQueueBindingFactoryContainer",
+            "factoryContainerTypeVariableName": "httpClientStopMessageQueueBinding",
             "factoryContainerTypeName": "HttpClientStopMessageQueueBinding",
             "factoryContainerFilePath": "C://component//lib//factory//generated//httpclientstopmessagequeuebinding//httpclientstopmessagequeuebinding.factory.container.json"
         }
