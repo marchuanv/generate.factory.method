@@ -162,8 +162,8 @@ function walkDependencyTree(parent, callback) {
         }
     }
 }
-
-for(const info of getDependencyTree()) {
+const allTypeInfo = getDependencyTree();
+for(const info of allTypeInfo) {
     if (!info.scriptPath) {
         continue;
     }
@@ -199,23 +199,24 @@ for(const info of getDependencyTree()) {
         bindingNames.push(bindingName);
     };
     for(const factoryContainerBindingName of bindingNames) {
-
         const factoryContainerBindingFilePath = info.factoryContainerBindingFilePath.replace('global', factoryContainerBindingName.toLowerCase());
         if (!existsSync(factoryContainerBindingFilePath)) {
             container.bindings = container.bindings.filter(b => b.factoryContainerBindingName !== factoryContainerBindingName);
+            const referenceArgsCopy = utils.getJSONObject(utils.getJSONString(referenceArgs));
             walkDependencyTree(info, (typeInfo) => {
                 if (typeInfo.scriptPath) {
-                    const factoryContainerBindingRefArg = factoryContainerBindingRefArgTemplate
+                    const factoryContainerBindingRefArg =  utils.getJSONObject(factoryContainerBindingRefArgTemplate
                         .replace(/\[FactoryContainerName\]/g,  `${typeInfo.variableName}FactoryContainer`)
-                        .replace(/\[FactoryContainerFilePath\]/g, typeInfo.factoryContainerFilePath.replace(/\\/g,'//'));
-                    referenceArgs[typeInfo.variableName] = utils.getJSONObject(factoryContainerBindingRefArg);
+                        .replace(/\[FactoryContainerTypeName\]/g,  typeInfo.typeName)
+                        .replace(/\[FactoryContainerFilePath\]/g, typeInfo.factoryContainerFilePath.replace(/\\/g,'//')));
+                        referenceArgsCopy[typeInfo.variableName] = factoryContainerBindingRefArg;
                 }
             });
             const factoryContainerBinding = factoryContainerBindingTemplate
                 .replace(/\[FactoryContainerBindingName\]/g, factoryContainerBindingName)
                 .replace(/\[FactoryContainerBindingFilePath\]/g, factoryContainerBindingFilePath.replace(/\\/g,'//'))
                 .replace(/\[PrimitiveArgs\]/g, `{ ${ Object.keys(primitiveArgs).map(key => `"${key}": null` ).join(',')} }`)
-                .replace(/\[ReferenceArgs\]/g, utils.getJSONString(referenceArgs));
+                .replace(/\[ReferenceArgs\]/g, utils.getJSONString(referenceArgsCopy));
             const factoryContainerBindingJson = utils.getJSONObject(factoryContainerBinding);
             writeFileSync(factoryContainerBindingFilePath, utils.getJSONString(factoryContainerBindingJson), 'utf8');
             delete factoryContainerBindingJson['primitiveArgs'];
@@ -230,20 +231,55 @@ for(const info of getDependencyTree()) {
                 binding.primitiveArgs[argName] = null;
             }
         };
+        const referenceArgsCopy = utils.getJSONObject(utils.getJSONString(referenceArgs));
         for(const key of Object.keys(binding.primitiveArgs)) {
             const value = binding.primitiveArgs[key];
-            if (value && typeof value === 'object') {
-                referenceArgs[key] = value;
-                delete binding.primitiveArgs[key];
-            }
-            if (value && binding[key] !== undefined) {
-               binding.primitiveArgs[key] = binding[key];
+            if (value) {
+                if (typeof value === 'object') {
+                    referenceArgsCopy[key] = value;
+                    delete binding.primitiveArgs[key];
+                }
+                if (binding[key] !== undefined) {
+                   binding.primitiveArgs[key] = binding[key];
+                }
             }
         };
-        const newRefArgs = Object.keys(referenceArgs).filter(key1 => Object.keys(binding.referenceArgs).find(key2 => key2 === key1) === undefined);
+        const newRefArgs = Object.keys(referenceArgsCopy).filter(key1 => Object.keys(binding.referenceArgs).find(key2 => key2 === key1) === undefined);
         for(const key of newRefArgs) {
-            const value = referenceArgs[key];
+            const value = referenceArgsCopy[key];
             binding.referenceArgs[key] = value;
+        };
+        for(const key of Object.keys(binding.referenceArgs)) {
+            const obj = binding.referenceArgs[key];
+            if (!obj || typeof obj !== 'object') {
+                throw new Error(`value can't be null for references and must be an object.`)
+            }
+            const emptyFactoryContainerBindingRefArgTemplate = utils.getJSONObject(factoryContainerBindingRefArgTemplate
+                .replace(/\[FactoryContainerName\]/g,  '')
+                .replace(/\[FactoryContainerTypeName\]/g,  '')
+                .replace(/\[FactoryContainerFilePath\]/g, ''));
+            const emptyFactoryContainerBindingRefArgTemplateKeys = Object.keys(emptyFactoryContainerBindingRefArgTemplate);
+            const objFactoryContainerBindingRefArgTemplateKeys = Object.keys(obj);
+            const missingFields = emptyFactoryContainerBindingRefArgTemplateKeys
+                .filter(key1 => objFactoryContainerBindingRefArgTemplateKeys.find(key2 => key1 === key2) === undefined);
+            for(const fieldName of missingFields) {
+                obj[fieldName] = null;
+            };
+
+            let found = false;
+            for(const typeInfo of allTypeInfo) {
+                if (typeInfo.scriptPath) {
+                    if (obj.factoryContainerTypeName === typeInfo.typeName) {
+                        obj.factoryContainerFilePath = typeInfo.factoryContainerFilePath.replace(/\\/g,'//');
+                        found = true;
+                        break;
+                    } 
+                }
+            };
+            if (!found) {
+                obj.factoryContainerFilePath = null;
+            }
+            binding.referenceArgs[key] = obj;
         };
         writeFileSync(factoryContainerBindingFilePath, utils.getJSONString(binding), 'utf8');
         writeFileSync(info.factoryContainerFilePath, utils.getJSONString(container), 'utf8');

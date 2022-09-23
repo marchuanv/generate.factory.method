@@ -1,4 +1,5 @@
 {
     "factoryContainerName": "[FactoryContainerName]",
+    "factoryContainerTypeName":"[FactoryContainerTypeName]",
     "factoryContainerFilePath": "[FactoryContainerFilePath]"
 }

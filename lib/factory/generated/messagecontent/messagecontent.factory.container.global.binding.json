@@ -14,22 +14,27 @@
     "referenceArgs": {
         "messageContentMetadata": {
             "factoryContainerName": "messageContentMetadataFactoryContainer",
+            "factoryContainerTypeName": "MessageContentMetadata",
             "factoryContainerFilePath": "C://component//lib//factory//generated//messagecontentmetadata//messagecontentmetadata.factory.container.json"
         },
         "userSessions": {
             "factoryContainerName": "userSessionsFactoryContainer",
+            "factoryContainerTypeName": "UserSessions",
             "factoryContainerFilePath": "C://component//lib//factory//generated//usersessions//usersessions.factory.container.json"
         },
         "messageMetadata": {
             "factoryContainerName": "messageMetadataFactoryContainer",
+            "factoryContainerTypeName": "MessageMetadata",
             "factoryContainerFilePath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.json"
         },
         "recipientAddress": {
             "factoryContainerName": "recipientAddressFactoryContainer",
+            "factoryContainerTypeName": "RecipientAddress",
             "factoryContainerFilePath": "C://component//lib//factory//generated//recipientaddress//recipientaddress.factory.container.json"
         },
         "senderAddress": {
             "factoryContainerName": "senderAddressFactoryContainer",
+            "factoryContainerTypeName": "SenderAddress",
             "factoryContainerFilePath": "C://component//lib//factory//generated//senderaddress//senderaddress.factory.container.json"
         }
     },

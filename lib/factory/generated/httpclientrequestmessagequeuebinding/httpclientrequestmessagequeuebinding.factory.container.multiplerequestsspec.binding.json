@@ -2,15 +2,17 @@
     "factoryContainerBindingName": "multiplerequestsspec",
     "factoryContainerBindingFilePath": "C://component//lib//factory//generated//httpclientrequestmessagequeuebinding//httpclientrequestmessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
     "primitiveArgs": {
-        "factoryContainerBindingName": "multiplerequestsspec"
+        "factoryContainerBindingName": null
     },
     "referenceArgs": {
         "messageQueue": {
             "factoryContainerName": "messageQueueFactoryContainer",
+            "factoryContainerTypeName": "MessageQueue",
             "factoryContainerFilePath": "C://component//lib//factory//generated//messagequeue//messagequeue.factory.container.json"
         },
         "logger": {
             "factoryContainerName": "loggerFactoryContainer",
+            "factoryContainerTypeName": "Logger",
             "factoryContainerFilePath": "C://component//lib//factory//generated//logger//logger.factory.container.json"
         }
     },

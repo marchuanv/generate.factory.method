@@ -12,10 +12,12 @@
     "referenceArgs": {
         "recipientAddress": {
             "factoryContainerName": "recipientAddressFactoryContainer",
+            "factoryContainerTypeName": "RecipientAddress",
             "factoryContainerFilePath": "C://component//lib//factory//generated//recipientaddress//recipientaddress.factory.container.json"
         },
         "senderAddress": {
             "factoryContainerName": "senderAddressFactoryContainer",
+            "factoryContainerTypeName": "SenderAddress",
             "factoryContainerFilePath": "C://component//lib//factory//generated//senderaddress//senderaddress.factory.container.json"
         }
     },

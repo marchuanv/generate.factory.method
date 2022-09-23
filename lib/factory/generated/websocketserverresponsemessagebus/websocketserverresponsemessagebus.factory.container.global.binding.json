@@ -7,14 +7,17 @@
     "referenceArgs": {
         "webSocketServerResponseMessageQueueBinding": {
             "factoryContainerName": "webSocketServerResponseMessageQueueBindingFactoryContainer",
+            "factoryContainerTypeName": "WebSocketServerResponseMessageQueueBinding",
             "factoryContainerFilePath": "C://component//lib//factory//generated//websocketserverresponsemessagequeuebinding//websocketserverresponsemessagequeuebinding.factory.container.json"
         },
         "messageQueue": {
             "factoryContainerName": "messageQueueFactoryContainer",
+            "factoryContainerTypeName": "MessageQueue",
             "factoryContainerFilePath": "C://component//lib//factory//generated//messagequeue//messagequeue.factory.container.json"
         },
         "logger": {
             "factoryContainerName": "loggerFactoryContainer",
+            "factoryContainerTypeName": "Logger",
             "factoryContainerFilePath": "C://component//lib//factory//generated//logger//logger.factory.container.json"
         }
     },

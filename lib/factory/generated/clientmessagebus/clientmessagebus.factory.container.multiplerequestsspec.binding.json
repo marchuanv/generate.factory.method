@@ -5,15 +5,18 @@
     "referenceArgs": {
         "messageConverter": {
             "factoryContainerName": "messageConverterFactoryContainer",
+            "factoryContainerTypeName": "MessageConverter",
             "factoryContainerFilePath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.json"
         },
         "clientRequestMessageBus": {
-            "factoryContainerName": "HttpClientRequestMessageBusFactoryContainer",
-            "factoryContainerFilePath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.json"
+            "factoryContainerName": "httpClientRequestMessageBus",
+            "factoryContainerFilePath": null,
+            "factoryContainerTypeName": null
         },
         "clientResponseMessageBus": {
-            "factoryContainerName": "HttpClientResponseMessageBusFactoryContainer",
-            "factoryContainerFilePath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.json"
+            "factoryContainerName": "httpClientResponseMessageBus",
+            "factoryContainerFilePath": null,
+            "factoryContainerTypeName": null
         }
     },
     "instance": null

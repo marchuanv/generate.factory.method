@@ -12,35 +12,23 @@
     "referenceArgs": {
         "clientMessageBus": {
             "factoryContainerName": "clientMessageBusFactoryContainer",
+            "factoryContainerTypeName": "ClientMessageBus",
             "factoryContainerFilePath": "C://component//lib//factory//generated//clientmessagebus//clientmessagebus.factory.container.json"
         },
         "messageConverter": {
             "factoryContainerName": "messageConverterFactoryContainer",
+            "factoryContainerTypeName": "MessageConverter",
             "factoryContainerFilePath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.json"
         },
         "serverMessageBus": {
             "factoryContainerName": "serverMessageBusFactoryContainer",
+            "factoryContainerTypeName": "ServerMessageBus",
             "factoryContainerFilePath": "C://component//lib//factory//generated//servermessagebus//servermessagebus.factory.container.json"
         },
         "userSessions": {
             "factoryContainerName": "userSessionsFactoryContainer",
+            "factoryContainerTypeName": "UserSessions",
             "factoryContainerFilePath": "C://component//lib//factory//generated//usersessions//usersessions.factory.container.json"
-        },
-        "clientRequestMessageBus": {
-            "factoryContainerName": "HttpClientRequestMessageBusFactoryContainer",
-            "factoryContainerFilePath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.json"
-        },
-        "clientResponseMessageBus": {
-            "factoryContainerName": "HttpClientResponseMessageBusFactoryContainer",
-            "factoryContainerFilePath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.json"
-        },
-        "serverResponseMessageBus": {
-            "factoryContainerName": "HttpServerResponseMessageBusFactoryContainer",
-            "factoryContainerFilePath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.json"
-        },
-        "serverRequestMessageBus": {
-            "factoryContainerName": "HttpServerRequestMessageBusFactoryContainer",
-            "factoryContainerFilePath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.json"
         }
     },
     "instance": null

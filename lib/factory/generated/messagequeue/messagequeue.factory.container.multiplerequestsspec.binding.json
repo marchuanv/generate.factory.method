@@ -5,6 +5,7 @@
     "referenceArgs": {
         "logger": {
             "factoryContainerName": "loggerFactoryContainer",
+            "factoryContainerTypeName": "Logger",
             "factoryContainerFilePath": "C://component//lib//factory//generated//logger//logger.factory.container.json"
         }
     },

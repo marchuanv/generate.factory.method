@@ -8,14 +8,7 @@
     "referenceArgs": {
         "messageConverter": {
             "factoryContainerName": "messageConverterFactoryContainer",
-            "factoryContainerFilePath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.json"
-        },
-        "clientRequestMessageBus": {
-            "factoryContainerName": "HttpClientRequestMessageBusFactoryContainer",
-            "factoryContainerFilePath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.json"
-        },
-        "clientResponseMessageBus": {
-            "factoryContainerName": "HttpClientResponseMessageBusFactoryContainer",
+            "factoryContainerTypeName": "MessageConverter",
             "factoryContainerFilePath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.json"
         }
     },

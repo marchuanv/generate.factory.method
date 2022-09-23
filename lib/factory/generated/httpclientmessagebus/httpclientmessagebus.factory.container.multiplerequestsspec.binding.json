@@ -2,36 +2,43 @@
     "factoryContainerBindingName": "multiplerequestsspec",
     "factoryContainerBindingFilePath": "C://component//lib//factory//generated//httpclientmessagebus//httpclientmessagebus.factory.container.multiplerequestsspec.binding.json",
     "primitiveArgs": {
-        "timeout": 1500,
-        "factoryContainerBindingName": "multiplerequestsspec"
+        "timeout": null,
+        "factoryContainerBindingName": null
     },
     "referenceArgs": {
         "httpClientRequestMessageQueueBinding": {
             "factoryContainerName": "httpClientRequestMessageQueueBindingFactoryContainer",
+            "factoryContainerTypeName": "HttpClientRequestMessageQueueBinding",
             "factoryContainerFilePath": "C://component//lib//factory//generated//httpclientrequestmessagequeuebinding//httpclientrequestmessagequeuebinding.factory.container.json"
         },
         "messageQueue": {
             "factoryContainerName": "messageQueueFactoryContainer",
+            "factoryContainerTypeName": "MessageQueue",
             "factoryContainerFilePath": "C://component//lib//factory//generated//messagequeue//messagequeue.factory.container.json"
         },
         "logger": {
             "factoryContainerName": "loggerFactoryContainer",
+            "factoryContainerTypeName": "Logger",
             "factoryContainerFilePath": "C://component//lib//factory//generated//logger//logger.factory.container.json"
         },
         "httpClientResponseMessageQueueBinding": {
             "factoryContainerName": "httpClientResponseMessageQueueBindingFactoryContainer",
+            "factoryContainerTypeName": "HttpClientResponseMessageQueueBinding",
             "factoryContainerFilePath": "C://component//lib//factory//generated//httpclientresponsemessagequeuebinding//httpclientresponsemessagequeuebinding.factory.container.json"
         },
         "httpClientStartMessageQueueBinding": {
             "factoryContainerName": "httpClientStartMessageQueueBindingFactoryContainer",
+            "factoryContainerTypeName": "HttpClientStartMessageQueueBinding",
             "factoryContainerFilePath": "C://component//lib//factory//generated//httpclientstartmessagequeuebinding//httpclientstartmessagequeuebinding.factory.container.json"
         },
         "httpClientStartedMessageQueueBinding": {
             "factoryContainerName": "httpClientStartedMessageQueueBindingFactoryContainer",
+            "factoryContainerTypeName": "HttpClientStartedMessageQueueBinding",
             "factoryContainerFilePath": "C://component//lib//factory//generated//httpclientstartedmessagequeuebinding//httpclientstartedmessagequeuebinding.factory.container.json"
         },
         "httpClientStopMessageQueueBinding": {
             "factoryContainerName": "httpClientStopMessageQueueBindingFactoryContainer",
+            "factoryContainerTypeName": "HttpClientStopMessageQueueBinding",
             "factoryContainerFilePath": "C://component//lib//factory//generated//httpclientstopmessagequeuebinding//httpclientstopmessagequeuebinding.factory.container.json"
         }
     },

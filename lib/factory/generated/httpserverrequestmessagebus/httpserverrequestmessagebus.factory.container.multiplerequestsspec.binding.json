@@ -7,14 +7,17 @@
     "referenceArgs": {
         "httpServerRequestMessageQueueBinding": {
             "factoryContainerName": "httpServerRequestMessageQueueBindingFactoryContainer",
+            "factoryContainerTypeName": "HttpServerRequestMessageQueueBinding",
             "factoryContainerFilePath": "C://component//lib//factory//generated//httpserverrequestmessagequeuebinding//httpserverrequestmessagequeuebinding.factory.container.json"
         },
         "messageQueue": {
             "factoryContainerName": "messageQueueFactoryContainer",
+            "factoryContainerTypeName": "MessageQueue",
             "factoryContainerFilePath": "C://component//lib//factory//generated//messagequeue//messagequeue.factory.container.json"
         },
         "logger": {
             "factoryContainerName": "loggerFactoryContainer",
+            "factoryContainerTypeName": "Logger",
             "factoryContainerFilePath": "C://component//lib//factory//generated//logger//logger.factory.container.json"
         }
     },
