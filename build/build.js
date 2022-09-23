@@ -199,6 +199,7 @@ for(const info of getDependencyTree()) {
         bindingNames.push(bindingName);
     };
     for(const factoryContainerBindingName of bindingNames) {
+
         const factoryContainerBindingFilePath = info.factoryContainerBindingFilePath.replace('global', factoryContainerBindingName.toLowerCase());
         if (!existsSync(factoryContainerBindingFilePath)) {
             container.bindings = container.bindings.filter(b => b.factoryContainerBindingName !== factoryContainerBindingName);
@@ -234,6 +235,9 @@ for(const info of getDependencyTree()) {
             if (value && typeof value === 'object') {
                 referenceArgs[key] = value;
                 delete binding.primitiveArgs[key];
+            }
+            if (key === "factoryContainerBindingName") {
+               binding.primitiveArgs[key] = binding.factoryContainerBindingName;
             }
         };
         const newRefArgs = Object.keys(referenceArgs).filter(key1 => Object.keys(binding.referenceArgs).find(key2 => key2 === key1) === undefined);
