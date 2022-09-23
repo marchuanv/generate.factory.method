@@ -2,7 +2,7 @@
     "factoryContainerBindingName": "multiplerequestsspec",
     "factoryContainerBindingFilePath": "C://component//lib//factory//generated//httpclientstartmessagequeuebinding//httpclientstartmessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
     "primitiveArgs": {
-        "factoryContainerBindingName": null
+        "factoryContainerBindingName": "multiplerequestsspec"
     },
     "referenceArgs": {
         "messageQueue": {
