@@ -3,7 +3,7 @@
     "factoryContainerBindingFilePath": "C://component//lib//factory//generated//httprequestmessage//httprequestmessage.factory.container.multiplerequestsspec.binding.json",
     "primitiveArgs": {
         "messageStatusCode": null,
-        "factoryContainerBindingName": null,
+        "factoryContainerBindingName": "multiplerequestsspec",
         "Id": null,
         "data": null,
         "recipientHost": null,
