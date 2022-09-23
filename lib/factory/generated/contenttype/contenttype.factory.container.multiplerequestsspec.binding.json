@@ -2,7 +2,7 @@
     "factoryContainerBindingName": "multiplerequestsspec",
     "factoryContainerBindingFilePath": "C://component//lib//factory//generated//contenttype//contenttype.factory.container.multiplerequestsspec.binding.json",
     "primitiveArgs": {
-        "name": null
+        "name": "txt"
     },
     "referenceArgs": {},
     "instance": null
