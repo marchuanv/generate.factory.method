@@ -1,6 +1,6 @@
 {
     "typeName": "MessageStore",
-    "isSingleton": false,
+    "isSingleton": true,
     "typeScriptPath": "C://component//lib//messagestore.js",
     "typeVariableName": "messageStore",
     "bindings": [

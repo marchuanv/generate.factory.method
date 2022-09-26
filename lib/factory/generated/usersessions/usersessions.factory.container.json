@@ -1,6 +1,6 @@
 {
     "typeName": "UserSessions",
-    "isSingleton": false,
+    "isSingleton": true,
     "typeScriptPath": "C://component//lib//usersessions.js",
     "typeVariableName": "userSessions",
     "bindings": [
