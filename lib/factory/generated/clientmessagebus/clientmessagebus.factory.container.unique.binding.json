@@ -1,0 +1,23 @@
+{
+    "factoryContainerBindingName": "unique",
+    "factoryContainerBindingFilePath": "C://component//lib//factory//generated//clientmessagebus//clientmessagebus.factory.container.unique.binding.json",
+    "primitiveArgs": {},
+    "referenceArgs": {
+        "messageConverter": {
+            "factoryContainerTypeVariableName": "messageConverter",
+            "factoryContainerTypeName": "MessageConverter",
+            "factoryContainerFilePath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.json"
+        },
+        "clientRequestMessageBus": {
+            "factoryContainerTypeVariableName": "httpClientRequestMessageBus",
+            "factoryContainerFilePath": "C://component//lib//factory//generated//httpclientrequestmessagebus//httpclientrequestmessagebus.factory.container.json",
+            "factoryContainerTypeName": "HttpClientRequestMessageBus"
+        },
+        "clientResponseMessageBus": {
+            "factoryContainerTypeVariableName": "httpClientResponseMessageBus",
+            "factoryContainerFilePath": "C://component//lib//factory//generated//httpclientresponsemessagebus//httpclientresponsemessagebus.factory.container.json",
+            "factoryContainerTypeName": "HttpClientResponseMessageBus"
+        }
+    },
+    "instance": null
+}

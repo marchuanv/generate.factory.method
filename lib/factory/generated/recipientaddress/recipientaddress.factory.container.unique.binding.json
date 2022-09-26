@@ -1,0 +1,10 @@
+{
+    "factoryContainerBindingName": "unique",
+    "factoryContainerBindingFilePath": "C://component//lib//factory//generated//recipientaddress//recipientaddress.factory.container.unique.binding.json",
+    "primitiveArgs": {
+        "recipientHost": null,
+        "recipientPort": null
+    },
+    "referenceArgs": {},
+    "instance": null
+}

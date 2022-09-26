@@ -1,0 +1,7 @@
+{
+    "factoryContainerBindingName": "unique",
+    "factoryContainerBindingFilePath": "C://component//lib//factory//generated//messagestore//messagestore.factory.container.unique.binding.json",
+    "primitiveArgs": {},
+    "referenceArgs": {},
+    "instance": null
+}

@@ -1,0 +1,58 @@
+{
+    "factoryContainerBindingName": "unique",
+    "factoryContainerBindingFilePath": "C://component//lib//factory//generated//httpservermessagebus//httpservermessagebus.factory.container.unique.binding.json",
+    "primitiveArgs": {
+        "timeout": null,
+        "factoryContainerBindingName": null,
+        "senderHost": null,
+        "senderPort": null
+    },
+    "referenceArgs": {
+        "httpServerRequestMessageQueueBinding": {
+            "factoryContainerTypeVariableName": "httpServerRequestMessageQueueBinding",
+            "factoryContainerTypeName": "HttpServerRequestMessageQueueBinding",
+            "factoryContainerFilePath": "C://component//lib//factory//generated//httpserverrequestmessagequeuebinding//httpserverrequestmessagequeuebinding.factory.container.json"
+        },
+        "messageQueue": {
+            "factoryContainerTypeVariableName": "messageQueue",
+            "factoryContainerTypeName": "MessageQueue",
+            "factoryContainerFilePath": "C://component//lib//factory//generated//messagequeue//messagequeue.factory.container.json"
+        },
+        "logger": {
+            "factoryContainerTypeVariableName": "logger",
+            "factoryContainerTypeName": "Logger",
+            "factoryContainerFilePath": "C://component//lib//factory//generated//logger//logger.factory.container.json"
+        },
+        "httpServerResponseMessageQueueBinding": {
+            "factoryContainerTypeVariableName": "httpServerResponseMessageQueueBinding",
+            "factoryContainerTypeName": "HttpServerResponseMessageQueueBinding",
+            "factoryContainerFilePath": "C://component//lib//factory//generated//httpserverresponsemessagequeuebinding//httpserverresponsemessagequeuebinding.factory.container.json"
+        },
+        "httpServerStartMessageQueueBinding": {
+            "factoryContainerTypeVariableName": "httpServerStartMessageQueueBinding",
+            "factoryContainerTypeName": "HttpServerStartMessageQueueBinding",
+            "factoryContainerFilePath": "C://component//lib//factory//generated//httpserverstartmessagequeuebinding//httpserverstartmessagequeuebinding.factory.container.json"
+        },
+        "httpServerStartedMessageQueueBinding": {
+            "factoryContainerTypeVariableName": "httpServerStartedMessageQueueBinding",
+            "factoryContainerTypeName": "HttpServerStartedMessageQueueBinding",
+            "factoryContainerFilePath": "C://component//lib//factory//generated//httpserverstartedmessagequeuebinding//httpserverstartedmessagequeuebinding.factory.container.json"
+        },
+        "httpServerStopMessageQueueBinding": {
+            "factoryContainerTypeVariableName": "httpServerStopMessageQueueBinding",
+            "factoryContainerTypeName": "HttpServerStopMessageQueueBinding",
+            "factoryContainerFilePath": "C://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.container.json"
+        },
+        "httpServerStoppedMessageQueueBinding": {
+            "factoryContainerTypeVariableName": "httpServerStoppedMessageQueueBinding",
+            "factoryContainerTypeName": "HttpServerStoppedMessageQueueBinding",
+            "factoryContainerFilePath": "C://component//lib//factory//generated//httpserverstoppedmessagequeuebinding//httpserverstoppedmessagequeuebinding.factory.container.json"
+        },
+        "senderAddress": {
+            "factoryContainerTypeVariableName": "senderAddress",
+            "factoryContainerTypeName": "SenderAddress",
+            "factoryContainerFilePath": "C://component//lib//factory//generated//senderaddress//senderaddress.factory.container.json"
+        }
+    },
+    "instance": null
+}

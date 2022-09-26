@@ -1,0 +1,7 @@
+{
+    "factoryContainerBindingName": "unique",
+    "factoryContainerBindingFilePath": "C://component//lib//factory//generated//logger//logger.factory.container.unique.binding.json",
+    "primitiveArgs": {},
+    "referenceArgs": {},
+    "instance": null
+}

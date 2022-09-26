@@ -1,0 +1,9 @@
+{
+    "factoryContainerBindingName": "unique",
+    "factoryContainerBindingFilePath": "C://component//lib//factory//generated//usersecurity//usersecurity.factory.container.unique.binding.json",
+    "primitiveArgs": {
+        "userId": null
+    },
+    "referenceArgs": {},
+    "instance": null
+}

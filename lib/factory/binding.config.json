@@ -1,5 +1,6 @@
 {
     "Global": { "generateSpecs": false },
+    "Unique": { "generateSpecs": false },
     "FactorySpec": { "generateSpecs": true },
     "MultipleRequestsSpec": { "generateSpecs": false }
 }
