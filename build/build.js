@@ -206,10 +206,10 @@ for(const info of allTypeInfo) {
             walkDependencyTree(info, (typeInfo) => {
                 if (typeInfo.scriptPath) {
                     const factoryContainerBindingRefArg =  utils.getJSONObject(factoryContainerBindingRefArgTemplate
-                        .replace(/\[FactoryContainerTypeVariableName\]/g,  typeInfo.variableName)
                         .replace(/\[FactoryContainerTypeName\]/g,  typeInfo.typeName)
+                        .replace(/\[FactoryContainerTypeVariableName\]/g,  typeInfo.variableName)
                         .replace(/\[FactoryContainerFilePath\]/g, typeInfo.factoryContainerFilePath.replace(/\\/g,'//')));
-                        referenceArgsCopy[typeInfo.variableName] = factoryContainerBindingRefArg;
+                    referenceArgsCopy[typeInfo.variableName] = factoryContainerBindingRefArg;
                 }
             });
             const factoryContainerBinding = factoryContainerBindingTemplate
@@ -260,8 +260,8 @@ for(const info of allTypeInfo) {
                 throw new Error(`value can't be null for references and must be an object.`)
             }
             const emptyFactoryContainerBindingRefArgTemplate = utils.getJSONObject(factoryContainerBindingRefArgTemplate
-                .replace(/\[FactoryContainerTypeVariableName\]/g,  '')
                 .replace(/\[FactoryContainerTypeName\]/g,  '')
+                .replace(/\[FactoryContainerTypeVariableName\]/g,  '')
                 .replace(/\[FactoryContainerFilePath\]/g, ''));
             const emptyFactoryContainerBindingRefArgTemplateKeys = Object.keys(emptyFactoryContainerBindingRefArgTemplate);
             const objFactoryContainerBindingRefArgTemplateKeys = Object.keys(obj);
@@ -270,7 +270,6 @@ for(const info of allTypeInfo) {
             for(const fieldName of missingFields) {
                 obj[fieldName] = null;
             };
-
             let found = false;
             for(const typeInfo of allTypeInfo) {
                 if (typeInfo.scriptPath) {
@@ -313,7 +312,6 @@ for(const info of allTypeInfo) {
             writeFileSync(info.specScriptPath, factorySpec, 'utf8');
         }
     };
-
     binding = container.bindings.find(b => b.factoryContainerBindingName.toLowerCase() === 'global');
     binding = require(binding.factoryContainerBindingFilePath);
     const primitiveArgsWithBindingName = utils.getJSONObject(utils.getJSONString(binding.primitiveArgs));
@@ -339,7 +337,6 @@ for(const info of allTypeInfo) {
         .replace(/\[TypeVariableName\]/g, info.variableName);
     writeFileSync(info.minFactoryScriptPath, factoryMinification, 'utf8');
 
-   
 }
 
 //minification
