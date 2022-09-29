@@ -16,4 +16,5 @@
             "factoryContainerBindingName": "multiplerequestsspec",
             "factoryContainerBindingFilePath": "C://component//lib//factory//generated//httpclientresponsemessagebus//httpclientresponsemessagebus.factory.container.multiplerequestsspec.binding.json"
         }
+    ]
 }
