@@ -15,10 +15,6 @@
         {
             "factoryContainerBindingName": "multiplerequestsspec",
             "factoryContainerBindingFilePath": "C://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.container.multiplerequestsspec.binding.json"
-        },
-        {
-            "factoryContainerBindingName": "unique",
-            "factoryContainerBindingFilePath": "C://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.container.unique.binding.json"
         }
     ]
 }

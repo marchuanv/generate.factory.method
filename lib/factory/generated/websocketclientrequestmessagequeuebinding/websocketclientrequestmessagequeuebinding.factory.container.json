@@ -15,10 +15,6 @@
         {
             "factoryContainerBindingName": "multiplerequestsspec",
             "factoryContainerBindingFilePath": "C://component//lib//factory//generated//websocketclientrequestmessagequeuebinding//websocketclientrequestmessagequeuebinding.factory.container.multiplerequestsspec.binding.json"
-        },
-        {
-            "factoryContainerBindingName": "unique",
-            "factoryContainerBindingFilePath": "C://component//lib//factory//generated//websocketclientrequestmessagequeuebinding//websocketclientrequestmessagequeuebinding.factory.container.unique.binding.json"
         }
     ]
 }

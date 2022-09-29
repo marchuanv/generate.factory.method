@@ -15,10 +15,6 @@
         {
             "factoryContainerBindingName": "multiplerequestsspec",
             "factoryContainerBindingFilePath": "C://component//lib//factory//generated//usersessions//usersessions.factory.container.multiplerequestsspec.binding.json"
-        },
-        {
-            "factoryContainerBindingName": "unique",
-            "factoryContainerBindingFilePath": "C://component//lib//factory//generated//usersessions//usersessions.factory.container.unique.binding.json"
         }
     ]
 }
