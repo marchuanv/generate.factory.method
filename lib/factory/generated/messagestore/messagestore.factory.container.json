@@ -1,0 +1,17 @@
+{
+    "typeName": "MessageStore",
+    "typeVariableName": "messageStore",
+    "prototypePath": "C://component//lib//messagestore.prototype.js",
+    "factoryScriptPath": "C://component//lib//factory//generated//messagestore//messagestore.factory.js",
+    "bindings": {
+        "Global": {
+            "bindingFilePath": "C://component//lib//factory//generated//messagestore//messagestore.factory.container.global.binding.json"
+        },
+        "MultipleRequestsSpec": {
+            "bindingFilePath": "C://component//lib//factory//generated//messagestore//messagestore.factory.container.multiplerequestsspec.binding.json"
+        },
+        "FactorySpec": {
+            "bindingFilePath": "C://component//lib//factory//generated//messagestore//messagestore.factory.container.factoryspec.binding.json"
+        }
+    }
+}

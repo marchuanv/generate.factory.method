@@ -1,0 +1,17 @@
+{
+    "typeName": "UserSessions",
+    "typeVariableName": "userSessions",
+    "prototypePath": "C://component//lib//usersessions.prototype.js",
+    "factoryScriptPath": "C://component//lib//factory//generated//usersessions//usersessions.factory.js",
+    "bindings": {
+        "Global": {
+            "bindingFilePath": "C://component//lib//factory//generated//usersessions//usersessions.factory.container.global.binding.json"
+        },
+        "MultipleRequestsSpec": {
+            "bindingFilePath": "C://component//lib//factory//generated//usersessions//usersessions.factory.container.multiplerequestsspec.binding.json"
+        },
+        "FactorySpec": {
+            "bindingFilePath": "C://component//lib//factory//generated//usersessions//usersessions.factory.container.factoryspec.binding.json"
+        }
+    }
+}

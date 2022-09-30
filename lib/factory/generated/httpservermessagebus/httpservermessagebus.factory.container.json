@@ -1,0 +1,17 @@
+{
+    "typeName": "HttpServerMessageBus",
+    "typeVariableName": "httpServerMessageBus",
+    "prototypePath": "C://component//lib//http//httpservermessagebus.prototype.js",
+    "factoryScriptPath": "C://component//lib//factory//generated//httpservermessagebus//httpservermessagebus.factory.js",
+    "bindings": {
+        "Global": {
+            "bindingFilePath": "C://component//lib//factory//generated//httpservermessagebus//httpservermessagebus.factory.container.global.binding.json"
+        },
+        "MultipleRequestsSpec": {
+            "bindingFilePath": "C://component//lib//factory//generated//httpservermessagebus//httpservermessagebus.factory.container.multiplerequestsspec.binding.json"
+        },
+        "FactorySpec": {
+            "bindingFilePath": "C://component//lib//factory//generated//httpservermessagebus//httpservermessagebus.factory.container.factoryspec.binding.json"
+        }
+    }
+}

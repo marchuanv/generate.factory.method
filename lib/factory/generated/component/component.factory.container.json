@@ -1,0 +1,17 @@
+{
+    "typeName": "Component",
+    "typeVariableName": "component",
+    "prototypePath": "C://component//lib//component.prototype.js",
+    "factoryScriptPath": "C://component//lib//factory//generated//component//component.factory.js",
+    "bindings": {
+        "Global": {
+            "bindingFilePath": "C://component//lib//factory//generated//component//component.factory.container.global.binding.json"
+        },
+        "MultipleRequestsSpec": {
+            "bindingFilePath": "C://component//lib//factory//generated//component//component.factory.container.multiplerequestsspec.binding.json"
+        },
+        "FactorySpec": {
+            "bindingFilePath": "C://component//lib//factory//generated//component//component.factory.container.factoryspec.binding.json"
+        }
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "BindingName": "[FactoryContainerBindingName]",
+    "BindingFilePath": "[FactoryContainerBindingFilePath]",
+    "isSingleton": [IsSingleton],
+    "ctorArguments": [CtorArguments],
+    "instances": {}
+}

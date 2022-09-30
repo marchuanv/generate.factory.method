@@ -1,0 +1,17 @@
+{
+    "typeName": "MessageMetadata",
+    "typeVariableName": "messageMetadata",
+    "prototypePath": "C://component//lib//messagemetadata.prototype.js",
+    "factoryScriptPath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.js",
+    "bindings": {
+        "Global": {
+            "bindingFilePath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.global.binding.json"
+        },
+        "MultipleRequestsSpec": {
+            "bindingFilePath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.multiplerequestsspec.binding.json"
+        },
+        "FactorySpec": {
+            "bindingFilePath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.factoryspec.binding.json"
+        }
+    }
+}

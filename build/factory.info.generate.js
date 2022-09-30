@@ -1,7 +1,7 @@
 const { readFileSync, writeFileSync, existsSync, mkdirSync } = require('fs');
 const path = require('path');
 const utils = require('utils');
-const factoryInfoTemplate = readFileSync(path.join(__dirname,'factory.info.template'),'utf8');
+const factoryInfoTemplate = readFileSync(path.join(__dirname, 'templates', 'factory.info.template'),'utf8');
 const typeInfo = require(path.join(__dirname, 'type.info.json'));
 const factoryInfoPath = path.join(__dirname, 'factory.info.json');
 let factoryInfo = require(factoryInfoPath);
@@ -11,10 +11,6 @@ for(const typeName of Object.keys(typeInfo)) {
     const info = typeInfo[typeName];
     const scriptName = typeName.toLowerCase();
     const factoryGeneratedDir = path.join(__dirname, '../lib', 'factory', 'generated', scriptName);
-
-    if (!existsSync(factoryGeneratedDir)){
-        mkdirSync(factoryGeneratedDir);
-    }
 
     const factoryScriptFileName = `${scriptName}.factory.js`;
     const factoryMinScriptFileName = `${scriptName}.factory.min.js`;

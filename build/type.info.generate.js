@@ -6,7 +6,7 @@ const rootScripts = readdirSync(libDir, { withFileTypes: true }).filter(dirent =
 const httpScripts = readdirSync(path.join(libDir, 'http'), { withFileTypes: true }).filter(dirent => dirent.isFile()).map(file => path.join(libDir, 'http', file.name));
 const websocketScripts = readdirSync(path.join(libDir, 'websocket'), { withFileTypes: true }).filter(dirent => dirent.isFile()).map(file => path.join(libDir, 'websocket', file.name));
 const scripts = rootScripts.concat(httpScripts.concat(websocketScripts)).filter(scPath => scPath.indexOf('prototype.js') > -1);
-const typeInfoTemplate = readFileSync(path.join(__dirname,'type.info.template'),'utf8');
+const typeInfoTemplate = readFileSync(path.join(__dirname,'templates', 'type.info.template'),'utf8');
 const typeInfoPath = path.join(__dirname, 'type.info.json');
 const typeInfo = require(typeInfoPath);
 

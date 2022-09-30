@@ -1,0 +1,17 @@
+{
+    "typeName": "MessageConverter",
+    "typeVariableName": "messageConverter",
+    "prototypePath": "C://component//lib//messageconverter.prototype.js",
+    "factoryScriptPath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.js",
+    "bindings": {
+        "Global": {
+            "bindingFilePath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.global.binding.json"
+        },
+        "MultipleRequestsSpec": {
+            "bindingFilePath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.multiplerequestsspec.binding.json"
+        },
+        "FactorySpec": {
+            "bindingFilePath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.factoryspec.binding.json"
+        }
+    }
+}

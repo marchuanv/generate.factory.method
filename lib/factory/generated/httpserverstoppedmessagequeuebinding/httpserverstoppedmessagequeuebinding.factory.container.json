@@ -1,0 +1,17 @@
+{
+    "typeName": "HttpServerStoppedMessageQueueBinding",
+    "typeVariableName": "httpServerStoppedMessageQueueBinding",
+    "prototypePath": "C://component//lib//http//httpserverstoppedmessagequeuebinding.prototype.js",
+    "factoryScriptPath": "C://component//lib//factory//generated//httpserverstoppedmessagequeuebinding//httpserverstoppedmessagequeuebinding.factory.js",
+    "bindings": {
+        "Global": {
+            "bindingFilePath": "C://component//lib//factory//generated//httpserverstoppedmessagequeuebinding//httpserverstoppedmessagequeuebinding.factory.container.global.binding.json"
+        },
+        "MultipleRequestsSpec": {
+            "bindingFilePath": "C://component//lib//factory//generated//httpserverstoppedmessagequeuebinding//httpserverstoppedmessagequeuebinding.factory.container.multiplerequestsspec.binding.json"
+        },
+        "FactorySpec": {
+            "bindingFilePath": "C://component//lib//factory//generated//httpserverstoppedmessagequeuebinding//httpserverstoppedmessagequeuebinding.factory.container.factoryspec.binding.json"
+        }
+    }
+}

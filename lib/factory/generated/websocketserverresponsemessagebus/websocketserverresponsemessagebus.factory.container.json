@@ -1,0 +1,17 @@
+{
+    "typeName": "WebSocketServerResponseMessageBus",
+    "typeVariableName": "webSocketServerResponseMessageBus",
+    "prototypePath": "C://component//lib//websocket//websocketserverresponsemessagebus.prototype.js",
+    "factoryScriptPath": "C://component//lib//factory//generated//websocketserverresponsemessagebus//websocketserverresponsemessagebus.factory.js",
+    "bindings": {
+        "Global": {
+            "bindingFilePath": "C://component//lib//factory//generated//websocketserverresponsemessagebus//websocketserverresponsemessagebus.factory.container.global.binding.json"
+        },
+        "MultipleRequestsSpec": {
+            "bindingFilePath": "C://component//lib//factory//generated//websocketserverresponsemessagebus//websocketserverresponsemessagebus.factory.container.multiplerequestsspec.binding.json"
+        },
+        "FactorySpec": {
+            "bindingFilePath": "C://component//lib//factory//generated//websocketserverresponsemessagebus//websocketserverresponsemessagebus.factory.container.factoryspec.binding.json"
+        }
+    }
+}

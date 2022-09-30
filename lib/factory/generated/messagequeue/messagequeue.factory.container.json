@@ -1,0 +1,17 @@
+{
+    "typeName": "MessageQueue",
+    "typeVariableName": "messageQueue",
+    "prototypePath": "C://component//lib//messagequeue.prototype.js",
+    "factoryScriptPath": "C://component//lib//factory//generated//messagequeue//messagequeue.factory.js",
+    "bindings": {
+        "Global": {
+            "bindingFilePath": "C://component//lib//factory//generated//messagequeue//messagequeue.factory.container.global.binding.json"
+        },
+        "MultipleRequestsSpec": {
+            "bindingFilePath": "C://component//lib//factory//generated//messagequeue//messagequeue.factory.container.multiplerequestsspec.binding.json"
+        },
+        "FactorySpec": {
+            "bindingFilePath": "C://component//lib//factory//generated//messagequeue//messagequeue.factory.container.factoryspec.binding.json"
+        }
+    }
+}

@@ -8,6 +8,10 @@ let factoryInfo = require(factoryInfoPath);
 for(const factoryInfoName of Object.keys(factoryInfo)) {
     const info = factoryInfo[factoryInfoName];
     const { typeName, factoryContainerFilePath, ctorArgumentNames, ctorArgumentsWithBindingNames } = info;
+    const factoryGeneratedDir = path.join(__dirname, '../lib', 'factory', 'generated', typeName.toLowerCase());
+    if (!existsSync(factoryGeneratedDir)){
+        mkdirSync(factoryGeneratedDir);
+    }
     const factoryJson = factoryTemplate
         .replace(/\[FactoryContainerFilePath\]/g, factoryContainerFilePath )
         .replace(/\[TypeName\]/g, typeName)

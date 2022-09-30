@@ -3,6 +3,5 @@
     "typeVariableName": "[TypeVariableName]",
     "prototypePath": "[PrototypePath]",
     "factoryScriptPath": "[FactoryScriptPath]",
-    "bindings": [Bindings],
-    "ctorArgsInfo": []
+    "bindings": [Bindings]
 }

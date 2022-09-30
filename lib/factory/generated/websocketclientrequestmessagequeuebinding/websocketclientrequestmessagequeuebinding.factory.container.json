@@ -1,0 +1,17 @@
+{
+    "typeName": "WebSocketClientRequestMessageQueueBinding",
+    "typeVariableName": "websocketClientRequestMessageQueueBinding",
+    "prototypePath": "C://component//lib//websocket//websocketclientrequestmessagequeuebinding.prototype.js",
+    "factoryScriptPath": "C://component//lib//factory//generated//websocketclientrequestmessagequeuebinding//websocketclientrequestmessagequeuebinding.factory.js",
+    "bindings": {
+        "Global": {
+            "bindingFilePath": "C://component//lib//factory//generated//websocketclientrequestmessagequeuebinding//websocketclientrequestmessagequeuebinding.factory.container.global.binding.json"
+        },
+        "MultipleRequestsSpec": {
+            "bindingFilePath": "C://component//lib//factory//generated//websocketclientrequestmessagequeuebinding//websocketclientrequestmessagequeuebinding.factory.container.multiplerequestsspec.binding.json"
+        },
+        "FactorySpec": {
+            "bindingFilePath": "C://component//lib//factory//generated//websocketclientrequestmessagequeuebinding//websocketclientrequestmessagequeuebinding.factory.container.factoryspec.binding.json"
+        }
+    }
+}

@@ -11,7 +11,12 @@ if (!existsSync(generatedFactoryScriptsDir)){
 }
 
 require('./type.info.generate');
-require('./factory.info.generate');
-require('./factory.generate');
+require('./type.bindings.info.generate');
+require('./factory.container.bindings.info.generate');
+// require('./factory.info.generate');
+// require('./factory.generate');
+require('./factory.containers.generate');
+
+// require('./factory.container.bindings.generate');
+// require('./factory.container.generate');
 // require('./bindings.generate');
-// require('./container.generate');
