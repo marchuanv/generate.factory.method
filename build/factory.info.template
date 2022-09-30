@@ -3,6 +3,6 @@
     "factoryScriptPath":"[FactoryScriptPath]",
     "minFactoryScriptPath":"[MinFactoryScriptPath]",
     "factoryContainerFilePath":"[FactoryContainerFilePath]",
-    "primitiveArgsWithBindingName": "[PrimitiveArgsWithBindingName]",
-    "primitiveArgs": "[PrimitiveArgs]"
+    "ctorArgumentsWithBindingNames": [CtorArgumentsWithBindingNames],
+    "ctorArgumentNames": [CtorArgumentNames]
 }

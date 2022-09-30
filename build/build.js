@@ -12,6 +12,6 @@ if (!existsSync(generatedFactoryScriptsDir)){
 
 require('./type.info.generate');
 require('./factory.info.generate');
-// require('./factory.generate');
+require('./factory.generate');
 // require('./bindings.generate');
 // require('./container.generate');

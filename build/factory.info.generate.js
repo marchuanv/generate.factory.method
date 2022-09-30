@@ -1,4 +1,4 @@
-const { readFileSync, writeFileSync } = require('fs');
+const { readFileSync, writeFileSync, existsSync, mkdirSync } = require('fs');
 const path = require('path');
 const utils = require('utils');
 const factoryInfoTemplate = readFileSync(path.join(__dirname,'factory.info.template'),'utf8');
@@ -12,6 +12,10 @@ for(const typeName of Object.keys(typeInfo)) {
     const scriptName = typeName.toLowerCase();
     const factoryGeneratedDir = path.join(__dirname, '../lib', 'factory', 'generated', scriptName);
 
+    if (!existsSync(factoryGeneratedDir)){
+        mkdirSync(factoryGeneratedDir);
+    }
+
     const factoryScriptFileName = `${scriptName}.factory.js`;
     const factoryMinScriptFileName = `${scriptName}.factory.min.js`;
     const factoryContainerJsonFileName = `${scriptName}.factory.container.json`;
@@ -19,17 +23,23 @@ for(const typeName of Object.keys(typeInfo)) {
     const factoryScripPath = path.join(factoryGeneratedDir, factoryScriptFileName).replace(/\\/g,'//');
     const factoryMinScriptPath = path.join(factoryGeneratedDir, factoryMinScriptFileName).replace(/\\/g,'//');
     const factoryContainerFilePath = path.join(factoryGeneratedDir, factoryContainerJsonFileName).replace(/\\/g,'//');
-
-    const primitiveArgs =  utils.getJSONString(info.children.filter(child => child.variableName !== 'factoryContainerBindingName').map(child => { return { name: child.variableName } } ));
-    const primitiveArgsWithBindingName =  utils.getJSONString(info.children.map(child => { return { name: child.variableName } }));
+    
+    const ctorArgumentNames =  info.children.filter(child => child.variableName !== 'factoryContainerBindingName').reduce((params, child) => {
+        if (!child.prototypePath) {
+            params.push(child.variableName);
+        }
+        return params;
+    },[]);
+    const ctorArgumentsWithBindingNames = utils.getJSONObject(utils.getJSONString(ctorArgumentNames));
+    ctorArgumentsWithBindingNames.push('factoryContainerBindingName');
 
     const factoryInfoJson = factoryInfoTemplate
         .replace(/\[TypeName\]/g, typeName)
         .replace(/\[FactoryScriptPath\]/g, factoryScripPath)
         .replace(/\[MinFactoryScriptPath\]/g, factoryMinScriptPath)
         .replace(/\[FactoryContainerFilePath\]/g, factoryContainerFilePath)
-        .replace(/\[PrimitiveArgs\]/g, primitiveArgs)
-        .replace(/\[PrimitiveArgsWithBindingName\]/g,primitiveArgsWithBindingName);
+        .replace(/\[CtorArgumentNames\]/g, utils.getJSONString(ctorArgumentNames))
+        .replace(/\[CtorArgumentsWithBindingNames\]/g, utils.getJSONString(ctorArgumentsWithBindingNames));
     const _factoryInfo = utils.getJSONObject(factoryInfoJson);
     factoryInfo[typeName] = _factoryInfo;
 };

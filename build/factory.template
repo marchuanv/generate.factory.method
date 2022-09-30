@@ -3,9 +3,8 @@ const container = require('[FactoryContainerFilePath]');
 const factory = new Factory(container);
 
 /**
-* IsSingleton: [TypeName]FactoryContainer.singleton
 * Create [TypeName]
-* @param {[PrimitiveArgs]}
+* @param {[PrimitiveArgsWithBindingName]}
 */
 function create[TypeName]({[PrimitiveArgsWithBindingName]}) {
     return factory.getInstance({ factoryContainerBindingName, ctorArgs: {[PrimitiveArgs]} });

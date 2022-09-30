@@ -7,11 +7,11 @@ let factoryInfo = require(factoryInfoPath);
 
 for(const factoryInfoName of Object.keys(factoryInfo)) {
     const info = factoryInfo[factoryInfoName];
-    const { typeName, factoryContainerFilePath, primitiveArgs, primitiveArgsWithBindingName } = info;
+    const { typeName, factoryContainerFilePath, ctorArgumentNames, ctorArgumentsWithBindingNames } = info;
     const factoryJson = factoryTemplate
         .replace(/\[FactoryContainerFilePath\]/g, factoryContainerFilePath )
         .replace(/\[TypeName\]/g, typeName)
-        .replace(/\[PrimitiveArgs\]/g, Object.keys(primitiveArgs).join(','))
-        .replace(/\[PrimitiveArgsWithBindingName\]/g, Object.keys(primitiveArgsWithBindingName).join(','));
+        .replace(/\[PrimitiveArgs\]/g, ctorArgumentNames.join(','))
+        .replace(/\[PrimitiveArgsWithBindingName\]/g, ctorArgumentsWithBindingNames.join(','));
     writeFileSync(info.factoryScriptPath, factoryJson, 'utf8');
 };
