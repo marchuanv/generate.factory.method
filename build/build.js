@@ -20,135 +20,14 @@ const factoryMinificationTemplate = readFileSync(path.join(__dirname,'factory.mi
 const componentMinPath = path.join(__dirname, '../component.min.js');
 const factoryScriptPath = path.join(libDir, 'factory', 'factory.js');
 const factory = require(factoryScriptPath);
-const bindingConfig = require(path.join(libDir, 'factory', 'binding.config.json'));
+require('./type.config');
+const typeConfig = require(path.join(__dirname, 'type.config.json'));
 
 if (!existsSync(generatedFactorySpecsDir)){
     mkdirSync(generatedFactorySpecsDir);
 }
 if (!existsSync(generatedFactoryScriptsDir)){
     mkdirSync(generatedFactoryScriptsDir);
-}
-
-function getFunctionCode(func) {
-    let code = func.toString();
-    for(const funcName in func.prototype) {
-        let prop = func.prototype[funcName]; 
-        if (!prop) {
-            prop = "''";
-        }
-        code = `${code}\r\n${func.name}.prototype.${funcName} = ${prop.toString()};`;
-    }
-    code = `${code}\r\n`;
-    return code;
-}
-
-function getDependencyTree(typeInfo, pass = 'firstpass', types = []) {
-    if (!typeInfo || utils.isEmptyObject(typeInfo)) {
-        const scriptPath = scripts.find(scPath => types.find(ti => ti.scriptPath === scPath) === undefined);
-        if (scriptPath) {
-            try {
-                const sc = require(scriptPath);
-                const key = Object.keys(sc)[0];
-                const type = sc[key];
-                const typeName = type.name.toLowerCase();
-                const factoryContainerJsonFileDir = path.join(generatedFactoryScriptsDir, typeName);
-                const factoryContainerBindingJsonFileDir = path.join(generatedFactoryScriptsDir, typeName);
-                const factoryScriptDir = path.join(generatedFactoryScriptsDir, typeName);
-                
-                if (!existsSync(factoryContainerJsonFileDir)){
-                    mkdirSync(factoryContainerJsonFileDir);
-                }
-                if (!existsSync(factoryContainerBindingJsonFileDir)){
-                    mkdirSync(factoryContainerBindingJsonFileDir);
-                }
-                if (!existsSync(factoryScriptDir)){
-                    mkdirSync(factoryScriptDir);
-                }
-
-                const scriptName = type.name.toLowerCase();
-                const factoryContainerJsonFileName = `${scriptName}.factory.container.json`;
-                const factoryContainerBindingJsonFileName = `${scriptName}.factory.container.global.binding.json`;
-                const factoryScriptName = `${scriptName}.factory.js`;
-                const minFactoryScriptName = `${scriptName}.factory.min.js`;
-                const specScriptName = `${scriptName}.factory.spec.js`;
-
-                const factoryContainerFilePath = path.join(factoryContainerJsonFileDir, factoryContainerJsonFileName);
-                const factoryContainerBindingFilePath = path.join(factoryContainerBindingJsonFileDir, factoryContainerBindingJsonFileName);
-                const factoryScriptPath = path.join(factoryScriptDir, factoryScriptName);
-                const minFactoryScriptPath = path.join(factoryScriptDir, minFactoryScriptName);
-
-                const specScriptPath = path.join(generatedFactorySpecsDir, specScriptName);
-
-                const parameters = utils.getFunctionParams(type) || [];
-                const children = parameters.map(param => utils.getJSONObject(typeInfoTemplate
-                    .replace(/\[TypeName\]/g, param.name)
-                    .replace(/\[ScriptPath\]/g,'')
-                    .replace(/\[factoryContainerFilePath\]/g,'')
-                    .replace(/\[FactoryContainerBindingFilePath\]/g,'')
-                    .replace(/\[FactoryScriptPath\]/g,'')
-                    .replace(/\[MinFactoryScriptPath\]/g,'')
-                    .replace(/\[SpecScriptPath\]/g,'')
-                    .replace(/\[ChildrenArray\]/g,'')
-                    .replace(/\[PassesArray\]/g,'')
-                    .replace(/\[VariableName\]/g, param.name)
-                    .replace(/\[VariableValue\]/g, '')
-                ));
-                typeInfo = utils.getJSONObject(typeInfoTemplate
-                    .replace(/\[TypeName\]/g, type.name)
-                    .replace(/\[ScriptPath\]/g, scriptPath.replace(/\\/g,'\\\\') )
-                    .replace(/\[FactoryContainerFilePath\]/g, factoryContainerFilePath.replace(/\\/g,'\\\\') )
-                    .replace(/\[FactoryContainerBindingFilePath\]/g, factoryContainerBindingFilePath.replace(/\\/g,'\\\\') )
-                    .replace(/\[FactoryScriptPath\]/g, factoryScriptPath.replace(/\\/g,'\\\\'))
-                    .replace(/\[MinFactoryScriptPath\]/g, minFactoryScriptPath.replace(/\\/g,'\\\\'))
-                    .replace(/\[SpecScriptPath\]/g, specScriptPath.replace(/\\/g,'\\\\'))
-                    .replace(/\[ChildrenArray\]/g, children.map(child => utils.getJSONString(child)).join(','))
-                    .replace(/\[PassesArray\]/g, [])
-                    .replace(/\[VariableName\]/g, '')
-                    .replace(/\[VariableValue\]/g, '')
-                );
-                types = types.concat(children).concat(typeInfo);
-            } catch (err) {
-                console.log(`errors loading the ${scriptPath} script: `, err);
-            }
-        }
-        else {
-            typeInfo = types.find(inf =>  inf.passes.find(p => p === pass) === undefined);
-        }
-    }
-    if (!typeInfo || utils.isEmptyObject(typeInfo)) {
-        if (pass === 'firstpass') {
-            return getDependencyTree(null, 'secondpass', types);
-        }
-        if (pass === 'secondpass') {
-            return getDependencyTree(null, 'thirdpass', types);
-        }
-        types = types.filter(info => types.find(info2 =>
-            info2.typeName.toLowerCase() === info.typeName.toLowerCase() && 
-            info2.scriptPath &&
-            info.scriptPath
-        ));
-        for(const typeInfo of types) {
-            delete typeInfo.passes;
-            typeInfo.children = typeInfo.children.map(child => {
-                let refChild = types.filter(inf => 
-                    inf.typeName.toLowerCase() === child.typeName.toLowerCase() &&
-                    inf.scriptPath
-                )[0];
-                if (refChild) {
-                    refChild.variableName = child.variableName;
-                    return refChild
-                } else {
-                    return child;
-                }
-            });
-        }
-        for(const type of types.filter(inf => !inf.variableName)) {
-            type.variableName = `${type.typeName.split('')[0].toLowerCase()}${type.typeName.split('').splice(1,999).join('')}`;
-        }
-        return types;
-    }
-    typeInfo.passes.push(pass);
-    return getDependencyTree(null, pass, types);
 }
 
 function walkDependencyTree(parent, callback) {
@@ -162,38 +41,27 @@ function walkDependencyTree(parent, callback) {
         }
     }
 }
-const allTypeInfo = getDependencyTree();
-for(const info of allTypeInfo) {
-    if (!info.scriptPath) {
-        continue;
-    }
-    const referenceArgs = {};
-    const primitiveArgs = {};
-    const factoryCalls = [];
-    let factoryRequireScripts =[];
-    walkDependencyTree(info, (typeInfo) => {
-        if (typeInfo.scriptPath) {
-            const keys = Object.keys(referenceArgs);
-            if (!keys.find(key => key === typeInfo.variableName)) {
-                referenceArgs[typeInfo.variableName] = {};
-            }
-        } else {
-            const keys = Object.keys(primitiveArgs);
-            if (!keys.find(key => key === typeInfo.variableName)) {
-                primitiveArgs[typeInfo.variableName] = null;
-            }
-        }
-    });
+
+for(const typeName of Object.keys(typeConfig)) {
+    const info = typeConfig[typeName];
     if (!existsSync(info.factoryContainerFilePath)) {
         const factoryContainer = factoryContainerTemplate
+            .replace(/\[TypeName\]/g, info.typeName)
             .replace(/\[TypeVariableName\]/g, info.variableName)
-            .replace(/\[TypeScriptPath\]/g, info.scriptPath.replace(/\\/g,'//').replace('prototype.',''))
-            .replace(/\[TypeName\]/g, info.typeName);
+            .replace(/\[PrototypePath\]/g, info.prototypePath)
+            .replace(/\[FactoryScriptPath\]/g, info.factoryScriptPath);
         const factoryContainerJson = utils.getJSONObject(factoryContainer);
         writeFileSync(info.factoryContainerFilePath, utils.getJSONString(factoryContainerJson), 'utf8');
     }
     const container = require(info.factoryContainerFilePath);
+    walkDependencyTree(info, (typeInfo) => {
+        const isReferenceArgument = typeInfo.prototypePath ? true: false;
+        if (!container.ctorArgsInfo.find(ctorArgInfo => ctorArgInfo.name === typeInfo.variableName)) {
+            container.ctorArgsInfo.push({ name: typeInfo.variableName, isReferenceArgument });
+        };
+    });
     const bindingNames = container.bindings.map(b => b.factoryContainerBindingName);
+    const bindingConfig = typeConfig[info.typeName];
     for(const key of Object.keys(bindingConfig)) {
         const bindingName = key.replace(' ','').toLowerCase();
         bindingNames.push(bindingName);
@@ -204,11 +72,10 @@ for(const info of allTypeInfo) {
             container.bindings = container.bindings.filter(b => b.factoryContainerBindingName !== factoryContainerBindingName);
             const referenceArgsCopy = utils.getJSONObject(utils.getJSONString(referenceArgs));
             walkDependencyTree(info, (typeInfo) => {
-                if (typeInfo.scriptPath) {
+                if (typeInfo.prototypePath) {
                     const factoryContainerBindingRefArg =  utils.getJSONObject(factoryContainerBindingRefArgTemplate
                         .replace(/\[FactoryContainerTypeName\]/g,  typeInfo.typeName)
-                        .replace(/\[FactoryContainerTypeVariableName\]/g,  typeInfo.variableName)
-                        .replace(/\[FactoryContainerFilePath\]/g, typeInfo.factoryContainerFilePath.replace(/\\/g,'//')));
+                        .replace(/\[FactoryContainerTypeVariableName\]/g,  typeInfo.variableName));
                     referenceArgsCopy[typeInfo.variableName] = factoryContainerBindingRefArg;
                 }
             });
@@ -272,7 +139,7 @@ for(const info of allTypeInfo) {
             };
             let found = false;
             for(const typeInfo of allTypeInfo) {
-                if (typeInfo.scriptPath) {
+                if (typeInfo.prototypePath) {
                     if (obj.factoryContainerTypeName === typeInfo.typeName) {
                         obj.factoryContainerTypeVariableName = typeInfo.variableName;
                         obj.factoryContainerFilePath = typeInfo.factoryContainerFilePath.replace(/\\/g,'//');
@@ -319,7 +186,7 @@ for(const info of allTypeInfo) {
     const factory = factoryTemplate
         .replace(/\[FactoryScriptPath\]/g, factoryScriptPath.replace(/\\/g,'\\\\'))
         .replace(/\[Args\]/g, info.children.map(x => x.variableName) )
-        .replace(/\[ScriptPath\]/g, info.scriptPath.replace(/\\/g,'\\\\'))
+        .replace(/\[ScriptPath\]/g, info.prototypePath.replace(/\\/g,'\\\\'))
         .replace(/\[FactoryContainerFilePath\]/g, info.factoryContainerFilePath.replace(/\\/g,'\\\\'))
         .replace(/\[TypeName\]/g, info.typeName)
         .replace(/\[FactoryCalls\]/g, factoryCalls.join('\r\n'))

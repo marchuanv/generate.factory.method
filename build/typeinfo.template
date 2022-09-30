@@ -1,13 +1,12 @@
 { 
     "typeName":"[TypeName]",
-    "scriptPath":"[ScriptPath]",
+    "variableName":"[VariableName]",
+    "prototypePath":"[PrototypePath]",
     "factoryScriptPath":"[FactoryScriptPath]",
     "minFactoryScriptPath":"[MinFactoryScriptPath]",
     "specScriptPath":"[SpecScriptPath]",
-    "children":[[ChildrenArray]],
-    "passes": [[PassesArray]],
-    "variableName":"[VariableName]",
-    "variableValue":"[VariableValue]",
     "factoryContainerFilePath":"[FactoryContainerFilePath]",
-    "factoryContainerBindingFilePath": "[FactoryContainerBindingFilePath]"
+    "factoryContainerBindingFilePath": "[FactoryContainerBindingFilePath]",
+    "passes": [[PassesArray]],
+    "children":[[ChildrenArray]]
 }

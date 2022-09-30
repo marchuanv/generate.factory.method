@@ -1,7 +1,9 @@
 {
     "typeName": "[TypeName]",
-    "isSingleton": false,
-    "typeScriptPath": "[TypeScriptPath]",
     "typeVariableName": "[TypeVariableName]",
+    "isSingleton": false,
+    "prototypePath": "[PrototypePath]",
+    "factoryScriptPath": "[FactoryScriptPath]",
+    "ctorArgsInfo": [],
     "bindings": []
 }

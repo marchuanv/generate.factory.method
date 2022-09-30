@@ -1,9 +1,0 @@
-{
-    "factoryContainerBindingName": "global",
-    "factoryContainerBindingFilePath": "C://component//lib//factory//generated//usersecurity//usersecurity.factory.container.global.binding.json",
-    "primitiveArgs": {
-        "userId": null
-    },
-    "referenceArgs": {},
-    "instance": null
-}

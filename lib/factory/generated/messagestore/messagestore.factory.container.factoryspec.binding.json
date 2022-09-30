@@ -1,7 +1,0 @@
-{
-    "factoryContainerBindingName": "factoryspec",
-    "factoryContainerBindingFilePath": "C://component//lib//factory//generated//messagestore//messagestore.factory.container.factoryspec.binding.json",
-    "primitiveArgs": {},
-    "referenceArgs": {},
-    "instance": null
-}

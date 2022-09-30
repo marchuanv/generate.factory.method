@@ -1,9 +1,0 @@
-{
-    "factoryContainerBindingName": "global",
-    "factoryContainerBindingFilePath": "C://component//lib//factory//generated//messagestatus//messagestatus.factory.container.global.binding.json",
-    "primitiveArgs": {
-        "messageStatusCode": null
-    },
-    "referenceArgs": {},
-    "instance": null
-}
