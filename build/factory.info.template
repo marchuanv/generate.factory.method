@@ -1,0 +1,8 @@
+{ 
+    "typeName":"[TypeName]",
+    "factoryScriptPath":"[FactoryScriptPath]",
+    "minFactoryScriptPath":"[MinFactoryScriptPath]",
+    "factoryContainerFilePath":"[FactoryContainerFilePath]",
+    "primitiveArgsWithBindingName": "[PrimitiveArgsWithBindingName]",
+    "primitiveArgs": "[PrimitiveArgs]"
+}

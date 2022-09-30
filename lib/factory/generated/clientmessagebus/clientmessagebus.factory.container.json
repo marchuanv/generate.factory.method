@@ -1,9 +1,0 @@
-{
-    "typeName": "ClientMessageBus",
-    "typeVariableName": "clientMessageBus",
-    "isSingleton": false,
-    "prototypePath": "C://component//lib//clientmessagebus.prototype.js",
-    "factoryScriptPath": "C://component//lib//factory//generated//clientmessagebus//clientmessagebus.factory.js",
-    "ctorArgsInfo": [],
-    "bindings": []
-}

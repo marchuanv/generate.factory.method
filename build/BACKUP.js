@@ -12,12 +12,6 @@ const typeInfoTemplate = readFileSync(path.join(__dirname,'typeinfo.template'),'
 const typeConfigPath = path.join(__dirname, 'type.config.json');
 const typeConfig = require(typeConfigPath);
 
-if (!existsSync(generatedFactorySpecsDir)){
-    mkdirSync(generatedFactorySpecsDir);
-}
-if (!existsSync(generatedFactoryScriptsDir)){
-    mkdirSync(generatedFactoryScriptsDir);
-}
 function getDependencyTree(typeInfo, pass = 'firstpass', types = []) {
     if (!typeInfo || utils.isEmptyObject(typeInfo)) {
         const prototypePath = scripts.find(scPath => types.find(ti => ti.prototypePath === scPath.replace(/\\/g,'//')) === undefined);
@@ -53,6 +47,12 @@ function getDependencyTree(typeInfo, pass = 'firstpass', types = []) {
                 const factoryScriptPath = path.join(factoryScriptDir, factoryScriptName);
                 const minFactoryScriptPath = path.join(factoryScriptDir, minFactoryScriptName);
                 const specScriptPath = path.join(generatedFactorySpecsDir, specScriptName);
+
+                writeFileSync(factoryContainerFilePath,"{}");
+                writeFileSync(factoryContainerBindingFilePath,"{}");
+                writeFileSync(factoryScriptPath,"");
+                writeFileSync(minFactoryScriptPath,"");
+                writeFileSync(specScriptPath,"");
 
                 const parameters = utils.getFunctionParams(type) || [];
                 const children = parameters.map(param => utils.getJSONObject(typeInfoTemplate
@@ -136,19 +136,7 @@ function getDependencyTree(typeInfo, pass = 'firstpass', types = []) {
     typeInfo.passes.push(pass);
     return getDependencyTree(null, pass, types);
 }
-function walkDependencyTree(parent, callback) {
-    let _break = false;
-    for(const child of parent.children) {
-        callback(child, () => {
-            _break = true;
-        });
-        if (!_break) {
-            walkDependencyTree(child, callback);
-        }
-    }
-}
-const allTypeInfo = getDependencyTree();
-for(const info of allTypeInfo) {
+for(const info of getDependencyTree()) {
     if (!info.prototypePath) {
         continue;
     }

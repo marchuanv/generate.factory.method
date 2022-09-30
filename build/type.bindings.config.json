@@ -1,0 +1,541 @@
+{
+    "ClientMessageBus": {
+        "Global": {
+            "isSingleton": null
+        },
+        "MultipleRequestsSpec": {
+            "isSingleton": null
+        },
+        "FactorySpec": {
+            "isSingleton": null
+        }
+    },
+    "Component": {
+        "Global": {
+            "isSingleton": null
+        },
+        "MultipleRequestsSpec": {
+            "isSingleton": null
+        },
+        "FactorySpec": {
+            "isSingleton": null
+        }
+    },
+    "ContentType": {
+        "Global": {
+            "isSingleton": null
+        },
+        "MultipleRequestsSpec": {
+            "isSingleton": null
+        },
+        "FactorySpec": {
+            "isSingleton": null
+        }
+    },
+    "Logger": {
+        "Global": {
+            "isSingleton": null
+        },
+        "MultipleRequestsSpec": {
+            "isSingleton": null
+        },
+        "FactorySpec": {
+            "isSingleton": null
+        }
+    },
+    "Message": {
+        "Global": {
+            "isSingleton": null
+        },
+        "MultipleRequestsSpec": {
+            "isSingleton": null
+        },
+        "FactorySpec": {
+            "isSingleton": null
+        }
+    },
+    "MessageContent": {
+        "Global": {
+            "isSingleton": null
+        },
+        "MultipleRequestsSpec": {
+            "isSingleton": null
+        },
+        "FactorySpec": {
+            "isSingleton": null
+        }
+    },
+    "MessageContentMetadata": {
+        "Global": {
+            "isSingleton": null
+        },
+        "MultipleRequestsSpec": {
+            "isSingleton": null
+        },
+        "FactorySpec": {
+            "isSingleton": null
+        }
+    },
+    "MessageConverter": {
+        "Global": {
+            "isSingleton": null
+        },
+        "MultipleRequestsSpec": {
+            "isSingleton": null
+        },
+        "FactorySpec": {
+            "isSingleton": null
+        }
+    },
+    "MessageMetadata": {
+        "Global": {
+            "isSingleton": null
+        },
+        "MultipleRequestsSpec": {
+            "isSingleton": null
+        },
+        "FactorySpec": {
+            "isSingleton": null
+        }
+    },
+    "MessageQueue": {
+        "Global": {
+            "isSingleton": null
+        },
+        "MultipleRequestsSpec": {
+            "isSingleton": null
+        },
+        "FactorySpec": {
+            "isSingleton": null
+        }
+    },
+    "MessageStatus": {
+        "Global": {
+            "isSingleton": null
+        },
+        "MultipleRequestsSpec": {
+            "isSingleton": null
+        },
+        "FactorySpec": {
+            "isSingleton": null
+        }
+    },
+    "MessageStore": {
+        "Global": {
+            "isSingleton": null
+        },
+        "MultipleRequestsSpec": {
+            "isSingleton": null
+        },
+        "FactorySpec": {
+            "isSingleton": null
+        }
+    },
+    "RecipientAddress": {
+        "Global": {
+            "isSingleton": null
+        },
+        "MultipleRequestsSpec": {
+            "isSingleton": null
+        },
+        "FactorySpec": {
+            "isSingleton": null
+        }
+    },
+    "SenderAddress": {
+        "Global": {
+            "isSingleton": null
+        },
+        "MultipleRequestsSpec": {
+            "isSingleton": null
+        },
+        "FactorySpec": {
+            "isSingleton": null
+        }
+    },
+    "ServerMessageBus": {
+        "Global": {
+            "isSingleton": null
+        },
+        "MultipleRequestsSpec": {
+            "isSingleton": null
+        },
+        "FactorySpec": {
+            "isSingleton": null
+        }
+    },
+    "UserSecurity": {
+        "Global": {
+            "isSingleton": null
+        },
+        "MultipleRequestsSpec": {
+            "isSingleton": null
+        },
+        "FactorySpec": {
+            "isSingleton": null
+        }
+    },
+    "UserSessions": {
+        "Global": {
+            "isSingleton": null
+        },
+        "MultipleRequestsSpec": {
+            "isSingleton": null
+        },
+        "FactorySpec": {
+            "isSingleton": null
+        }
+    },
+    "HttpClientMessageBus": {
+        "Global": {
+            "isSingleton": null
+        },
+        "MultipleRequestsSpec": {
+            "isSingleton": null
+        },
+        "FactorySpec": {
+            "isSingleton": null
+        }
+    },
+    "HttpClientMessageBusManager": {
+        "Global": {
+            "isSingleton": null
+        },
+        "MultipleRequestsSpec": {
+            "isSingleton": null
+        },
+        "FactorySpec": {
+            "isSingleton": null
+        }
+    },
+    "HttpClientRequestMessageBus": {
+        "Global": {
+            "isSingleton": null
+        },
+        "MultipleRequestsSpec": {
+            "isSingleton": null
+        },
+        "FactorySpec": {
+            "isSingleton": null
+        }
+    },
+    "HttpClientRequestMessageQueueBinding": {
+        "Global": {
+            "isSingleton": null
+        },
+        "MultipleRequestsSpec": {
+            "isSingleton": null
+        },
+        "FactorySpec": {
+            "isSingleton": null
+        }
+    },
+    "HttpClientResponseMessageBus": {
+        "Global": {
+            "isSingleton": null
+        },
+        "MultipleRequestsSpec": {
+            "isSingleton": null
+        },
+        "FactorySpec": {
+            "isSingleton": null
+        }
+    },
+    "HttpClientResponseMessageQueueBinding": {
+        "Global": {
+            "isSingleton": null
+        },
+        "MultipleRequestsSpec": {
+            "isSingleton": null
+        },
+        "FactorySpec": {
+            "isSingleton": null
+        }
+    },
+    "HttpClientStartedMessageQueueBinding": {
+        "Global": {
+            "isSingleton": null
+        },
+        "MultipleRequestsSpec": {
+            "isSingleton": null
+        },
+        "FactorySpec": {
+            "isSingleton": null
+        }
+    },
+    "HttpClientStartMessageQueueBinding": {
+        "Global": {
+            "isSingleton": null
+        },
+        "MultipleRequestsSpec": {
+            "isSingleton": null
+        },
+        "FactorySpec": {
+            "isSingleton": null
+        }
+    },
+    "HttpClientStopMessageQueueBinding": {
+        "Global": {
+            "isSingleton": null
+        },
+        "MultipleRequestsSpec": {
+            "isSingleton": null
+        },
+        "FactorySpec": {
+            "isSingleton": null
+        }
+    },
+    "HttpClientStoppedMessageQueueBinding": {
+        "Global": {
+            "isSingleton": null
+        },
+        "MultipleRequestsSpec": {
+            "isSingleton": null
+        },
+        "FactorySpec": {
+            "isSingleton": null
+        }
+    },
+    "HttpRequestMessage": {
+        "Global": {
+            "isSingleton": null
+        },
+        "MultipleRequestsSpec": {
+            "isSingleton": null
+        },
+        "FactorySpec": {
+            "isSingleton": null
+        }
+    },
+    "HttpResponseMessage": {
+        "Global": {
+            "isSingleton": null
+        },
+        "MultipleRequestsSpec": {
+            "isSingleton": null
+        },
+        "FactorySpec": {
+            "isSingleton": null
+        }
+    },
+    "HttpServerMessageBus": {
+        "Global": {
+            "isSingleton": null
+        },
+        "MultipleRequestsSpec": {
+            "isSingleton": null
+        },
+        "FactorySpec": {
+            "isSingleton": null
+        }
+    },
+    "HttpServerMessageBusManager": {
+        "Global": {
+            "isSingleton": null
+        },
+        "MultipleRequestsSpec": {
+            "isSingleton": null
+        },
+        "FactorySpec": {
+            "isSingleton": null
+        }
+    },
+    "HttpServerRequestMessageBus": {
+        "Global": {
+            "isSingleton": null
+        },
+        "MultipleRequestsSpec": {
+            "isSingleton": null
+        },
+        "FactorySpec": {
+            "isSingleton": null
+        }
+    },
+    "HttpServerRequestMessageQueueBinding": {
+        "Global": {
+            "isSingleton": null
+        },
+        "MultipleRequestsSpec": {
+            "isSingleton": null
+        },
+        "FactorySpec": {
+            "isSingleton": null
+        }
+    },
+    "HttpServerResponseMessageBus": {
+        "Global": {
+            "isSingleton": null
+        },
+        "MultipleRequestsSpec": {
+            "isSingleton": null
+        },
+        "FactorySpec": {
+            "isSingleton": null
+        }
+    },
+    "HttpServerResponseMessageQueueBinding": {
+        "Global": {
+            "isSingleton": null
+        },
+        "MultipleRequestsSpec": {
+            "isSingleton": null
+        },
+        "FactorySpec": {
+            "isSingleton": null
+        }
+    },
+    "HttpServerStartedMessageQueueBinding": {
+        "Global": {
+            "isSingleton": null
+        },
+        "MultipleRequestsSpec": {
+            "isSingleton": null
+        },
+        "FactorySpec": {
+            "isSingleton": null
+        }
+    },
+    "HttpServerStartMessageQueueBinding": {
+        "Global": {
+            "isSingleton": null
+        },
+        "MultipleRequestsSpec": {
+            "isSingleton": null
+        },
+        "FactorySpec": {
+            "isSingleton": null
+        }
+    },
+    "HttpServerStopMessageQueueBinding": {
+        "Global": {
+            "isSingleton": null
+        },
+        "MultipleRequestsSpec": {
+            "isSingleton": null
+        },
+        "FactorySpec": {
+            "isSingleton": null
+        }
+    },
+    "HttpServerStoppedMessageQueueBinding": {
+        "Global": {
+            "isSingleton": null
+        },
+        "MultipleRequestsSpec": {
+            "isSingleton": null
+        },
+        "FactorySpec": {
+            "isSingleton": null
+        }
+    },
+    "WebSocketClientRequestMessageBus": {
+        "Global": {
+            "isSingleton": null
+        },
+        "MultipleRequestsSpec": {
+            "isSingleton": null
+        },
+        "FactorySpec": {
+            "isSingleton": null
+        }
+    },
+    "WebSocketClientRequestMessageQueueBinding": {
+        "Global": {
+            "isSingleton": null
+        },
+        "MultipleRequestsSpec": {
+            "isSingleton": null
+        },
+        "FactorySpec": {
+            "isSingleton": null
+        }
+    },
+    "WebSocketClientResponseMessageBus": {
+        "Global": {
+            "isSingleton": null
+        },
+        "MultipleRequestsSpec": {
+            "isSingleton": null
+        },
+        "FactorySpec": {
+            "isSingleton": null
+        }
+    },
+    "WebSocketClientResponseMessageQueueBinding": {
+        "Global": {
+            "isSingleton": null
+        },
+        "MultipleRequestsSpec": {
+            "isSingleton": null
+        },
+        "FactorySpec": {
+            "isSingleton": null
+        }
+    },
+    "WebSocketRequestMessage": {
+        "Global": {
+            "isSingleton": null
+        },
+        "MultipleRequestsSpec": {
+            "isSingleton": null
+        },
+        "FactorySpec": {
+            "isSingleton": null
+        }
+    },
+    "WebSocketResponseMessage": {
+        "Global": {
+            "isSingleton": null
+        },
+        "MultipleRequestsSpec": {
+            "isSingleton": null
+        },
+        "FactorySpec": {
+            "isSingleton": null
+        }
+    },
+    "WebSocketServerRequestMessageBus": {
+        "Global": {
+            "isSingleton": null
+        },
+        "MultipleRequestsSpec": {
+            "isSingleton": null
+        },
+        "FactorySpec": {
+            "isSingleton": null
+        }
+    },
+    "WebSocketServerRequestMessageQueueBinding": {
+        "Global": {
+            "isSingleton": null
+        },
+        "MultipleRequestsSpec": {
+            "isSingleton": null
+        },
+        "FactorySpec": {
+            "isSingleton": null
+        }
+    },
+    "WebSocketServerResponseMessageBus": {
+        "Global": {
+            "isSingleton": null
+        },
+        "MultipleRequestsSpec": {
+            "isSingleton": null
+        },
+        "FactorySpec": {
+            "isSingleton": null
+        }
+    },
+    "WebSocketServerResponseMessageQueueBinding": {
+        "Global": {
+            "isSingleton": null
+        },
+        "MultipleRequestsSpec": {
+            "isSingleton": null
+        },
+        "FactorySpec": {
+            "isSingleton": null
+        }
+    }
+}

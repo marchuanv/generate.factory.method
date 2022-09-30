@@ -1,6 +1,7 @@
 {
     "factoryContainerBindingName": "[FactoryContainerBindingName]",
     "factoryContainerBindingFilePath": "[FactoryContainerBindingFilePath]",
+    "isSingleton": false,
     "primitiveArgs": [PrimitiveArgs],
     "referenceArgs": [ReferenceArgs],
     "instance": null
