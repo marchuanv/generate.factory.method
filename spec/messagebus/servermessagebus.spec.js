@@ -89,7 +89,8 @@ describe("when asking the server messagebus to subscribe to request messages and
         expect(text).toEqual(expectedDecryptedClientText);
       }
       {
-        const { senderHost, senderPort } = requestMessage.getSenderAddress();
+        const { senderAddress } = message.getSenderAddress();
+        const { senderHost, senderPort } = senderAddress;
         expect(senderHost).toEqual('localhost');
         expect(senderPort).toEqual(3000);
       }

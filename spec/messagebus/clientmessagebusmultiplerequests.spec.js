@@ -100,7 +100,8 @@ fdescribe("when asking a client messagebus to publish more than one request", fu
         expect(text).toEqual(expectedDecryptedClientText1);
       }
       {
-        const { senderHost, senderPort } = requestMessage1.getSenderAddress();
+        const { senderAddress } = message.getSenderAddress();
+        const { senderHost, senderPort } = senderAddress;
         expect(senderHost).toEqual('localhost');
         expect(senderPort).toEqual(3000);
       }
@@ -124,7 +125,8 @@ fdescribe("when asking a client messagebus to publish more than one request", fu
         expect(text).toEqual(expectedDecryptedClientText2);
       }
       {
-        const { senderHost, senderPort } = requestMessage2.getSenderAddress();
+        const { senderAddress } = message.getSenderAddress();
+        const { senderHost, senderPort } = senderAddress;
         expect(senderHost).toEqual('localhost');
         expect(senderPort).toEqual(3000);
       }

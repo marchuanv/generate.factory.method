@@ -90,7 +90,8 @@ describe("when asking a client messagebus to publish a request", function() {
         expect(text).toEqual(expectedDecryptedClientText);
       }
       {
-        const { senderHost, senderPort } = requestMessage.getSenderAddress();
+        const { senderAddress } = message.getSenderAddress();
+        const { senderHost, senderPort } = senderAddress;
         expect(senderHost).toEqual('localhost');
         expect(senderPort).toEqual(3000);
       }
