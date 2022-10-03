@@ -1,7 +1,7 @@
 {
     "bindingName": "FactorySpec",
     "containerFilePath": "D://component//lib//factory//generated//websocketserverrequestmessagebus//websocketserverrequestmessagebus.factory.container.json",
-    "isSingleton": true,
+    "isSingleton": false,
     "ctorParameters": {
         "webSocketServerRequestMessageQueueBinding": {
             "containerFilePath": "D://component//lib//factory//generated//websocketserverrequestmessagequeuebinding//websocketserverrequestmessagequeuebinding.factory.container.json"

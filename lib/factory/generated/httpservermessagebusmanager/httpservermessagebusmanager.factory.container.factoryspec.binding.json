@@ -1,7 +1,7 @@
 {
     "bindingName": "FactorySpec",
     "containerFilePath": "D://component//lib//factory//generated//httpservermessagebusmanager//httpservermessagebusmanager.factory.container.json",
-    "isSingleton": true,
+    "isSingleton": false,
     "ctorParameters": {
         "httpServerStoppedMessageQueueBinding": {
             "containerFilePath": "D://component//lib//factory//generated//httpserverstoppedmessagequeuebinding//httpserverstoppedmessagequeuebinding.factory.container.json"

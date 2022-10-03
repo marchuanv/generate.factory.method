@@ -26,8 +26,7 @@ for(const typeName of Object.keys(typesInfo)) {
             .replace(/\[TypeName\]/g, typeName)
             .replace(/\[BindingNames\]/g, '[]')
             .replace(/\[IsSingleton\]/g, false)
-            .replace(/\[CtorParameterInfo\]/g, utils.getJSONString(ctorParameterInfo))
-            .replace(/\[DependantBindings\]/g, utils.getJSONString([]))));
+            .replace(/\[CtorParameterInfo\]/g, utils.getJSONString(ctorParameterInfo))));
     }
 };
 writeFileSync(typeBindingsInfoPath, utils.getJSONString(typeBindingsInfo), 'utf8');

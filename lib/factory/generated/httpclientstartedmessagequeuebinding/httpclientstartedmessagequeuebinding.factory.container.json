@@ -5,8 +5,14 @@
     "prototypeScriptPath": "D://component//lib//http//httpclientstartedmessagequeuebinding.prototype.js",
     "factoryScriptPath": "D://component//lib//factory//generated//httpclientstartedmessagequeuebinding//httpclientstartedmessagequeuebinding.factory.js",
     "bindings": {
-        "[BindingName]": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpclientstartedmessagequeuebinding//httpclientstartedmessagequeuebinding.factory.container.[bindingname].binding.json"
+        "Global": {
+            "bindingFilePath": "D://component//lib//factory//generated//httpclientstartedmessagequeuebinding//httpclientstartedmessagequeuebinding.factory.container.global.binding.json"
+        },
+        "MultipleRequestsSpec": {
+            "bindingFilePath": "D://component//lib//factory//generated//httpclientstartedmessagequeuebinding//httpclientstartedmessagequeuebinding.factory.container.multiplerequestsspec.binding.json"
+        },
+        "FactorySpec": {
+            "bindingFilePath": "D://component//lib//factory//generated//httpclientstartedmessagequeuebinding//httpclientstartedmessagequeuebinding.factory.container.factoryspec.binding.json"
         }
     }
 }

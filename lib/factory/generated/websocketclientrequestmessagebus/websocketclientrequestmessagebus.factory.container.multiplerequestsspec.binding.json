@@ -1,7 +1,7 @@
 {
     "bindingName": "MultipleRequestsSpec",
     "containerFilePath": "D://component//lib//factory//generated//websocketclientrequestmessagebus//websocketclientrequestmessagebus.factory.container.json",
-    "isSingleton": true,
+    "isSingleton": false,
     "ctorParameters": {
         "websocketClientRequestMessageQueueBinding": {
             "containerFilePath": "D://component//lib//factory//generated//websocketclientrequestmessagequeuebinding//websocketclientrequestmessagequeuebinding.factory.container.json"

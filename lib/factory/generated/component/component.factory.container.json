@@ -5,8 +5,14 @@
     "prototypeScriptPath": "D://component//lib//component.prototype.js",
     "factoryScriptPath": "D://component//lib//factory//generated//component//component.factory.js",
     "bindings": {
-        "[BindingName]": {
-            "bindingFilePath": "D://component//lib//factory//generated//component//component.factory.container.[bindingname].binding.json"
+        "Global": {
+            "bindingFilePath": "D://component//lib//factory//generated//component//component.factory.container.global.binding.json"
+        },
+        "MultipleRequestsSpec": {
+            "bindingFilePath": "D://component//lib//factory//generated//component//component.factory.container.multiplerequestsspec.binding.json"
+        },
+        "FactorySpec": {
+            "bindingFilePath": "D://component//lib//factory//generated//component//component.factory.container.factoryspec.binding.json"
         }
     }
 }

@@ -1,7 +1,7 @@
 {
     "bindingName": "FactorySpec",
     "containerFilePath": "D://component//lib//factory//generated//contenttype//contenttype.factory.container.json",
-    "isSingleton": true,
+    "isSingleton": false,
     "ctorParameters": {
         "name": null
     },

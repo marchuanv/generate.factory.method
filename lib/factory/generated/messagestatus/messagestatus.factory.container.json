@@ -5,8 +5,14 @@
     "prototypeScriptPath": "D://component//lib//messagestatus.prototype.js",
     "factoryScriptPath": "D://component//lib//factory//generated//messagestatus//messagestatus.factory.js",
     "bindings": {
-        "[BindingName]": {
-            "bindingFilePath": "D://component//lib//factory//generated//messagestatus//messagestatus.factory.container.[bindingname].binding.json"
+        "Global": {
+            "bindingFilePath": "D://component//lib//factory//generated//messagestatus//messagestatus.factory.container.global.binding.json"
+        },
+        "MultipleRequestsSpec": {
+            "bindingFilePath": "D://component//lib//factory//generated//messagestatus//messagestatus.factory.container.multiplerequestsspec.binding.json"
+        },
+        "FactorySpec": {
+            "bindingFilePath": "D://component//lib//factory//generated//messagestatus//messagestatus.factory.container.factoryspec.binding.json"
         }
     }
 }

@@ -5,8 +5,14 @@
     "prototypeScriptPath": "D://component//lib//messagestore.prototype.js",
     "factoryScriptPath": "D://component//lib//factory//generated//messagestore//messagestore.factory.js",
     "bindings": {
-        "[BindingName]": {
-            "bindingFilePath": "D://component//lib//factory//generated//messagestore//messagestore.factory.container.[bindingname].binding.json"
+        "Global": {
+            "bindingFilePath": "D://component//lib//factory//generated//messagestore//messagestore.factory.container.global.binding.json"
+        },
+        "MultipleRequestsSpec": {
+            "bindingFilePath": "D://component//lib//factory//generated//messagestore//messagestore.factory.container.multiplerequestsspec.binding.json"
+        },
+        "FactorySpec": {
+            "bindingFilePath": "D://component//lib//factory//generated//messagestore//messagestore.factory.container.factoryspec.binding.json"
         }
     }
 }

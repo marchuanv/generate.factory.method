@@ -1,7 +1,0 @@
-{
-    "bindingName": "[BindingName]",
-    "containerFilePath": "D://component//lib//factory//generated//logger//logger.factory.container.json",
-    "isSingleton": false,
-    "ctorParameters": {},
-    "instances": {}
-}

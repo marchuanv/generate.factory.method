@@ -1,7 +1,7 @@
 {
     "bindingName": "FactorySpec",
     "containerFilePath": "D://component//lib//factory//generated//httpclientmessagebus//httpclientmessagebus.factory.container.json",
-    "isSingleton": true,
+    "isSingleton": false,
     "ctorParameters": {
         "timeout": null,
         "factoryContainerBindingName": null,

@@ -1,7 +1,7 @@
 {
     "bindingName": "MultipleRequestsSpec",
     "containerFilePath": "D://component//lib//factory//generated//httpclientresponsemessagebus//httpclientresponsemessagebus.factory.container.json",
-    "isSingleton": true,
+    "isSingleton": false,
     "ctorParameters": {
         "httpClientResponseMessageQueueBinding": {
             "containerFilePath": "D://component//lib//factory//generated//httpclientresponsemessagequeuebinding//httpclientresponsemessagequeuebinding.factory.container.json"

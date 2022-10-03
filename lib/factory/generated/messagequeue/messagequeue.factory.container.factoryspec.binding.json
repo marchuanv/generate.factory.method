@@ -1,7 +1,7 @@
 {
     "bindingName": "FactorySpec",
     "containerFilePath": "D://component//lib//factory//generated//messagequeue//messagequeue.factory.container.json",
-    "isSingleton": true,
+    "isSingleton": false,
     "ctorParameters": {
         "logger": {
             "containerFilePath": "D://component//lib//factory//generated//logger//logger.factory.container.json"

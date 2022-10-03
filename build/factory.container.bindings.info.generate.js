@@ -12,12 +12,12 @@ for(const typeName of Object.keys(typesInfo)) {
     const factoryGeneratedDir = path.join(__dirname, '../lib', 'factory', 'generated', typeName.toLowerCase());
     factoryContainerBindingsInfo[typeName] = {};
     const _factoryInfo = factoryInfo[typeName];
-    const typeBindings = typeBindingsInfo.filter(bindInfo => bindInfo.typeName === typeName);
-    for(const typeBinding of typeBindings) {
-        const { isSingleton, ctorParameterInfo } = typeBinding;
-        const bindingFileName =  `${typeName.toLowerCase()}.factory.container.${typeBinding.bindingName.toLowerCase()}.binding.json`;
+    const typeBinding = typeBindingsInfo.find(bindInfo => bindInfo.typeName === typeName);
+    const { isSingleton, ctorParameterInfo } = typeBinding;
+    for(const bindingName of typeBinding.bindingNames) {
+        const bindingFileName =  `${typeName.toLowerCase()}.factory.container.${bindingName.toLowerCase()}.binding.json`;
         const bindingFilePath = path.join(factoryGeneratedDir, bindingFileName).replace(/\\/g,'//');
-        factoryContainerBindingsInfo[typeName][typeBinding.bindingName] = utils.getJSONObject(factoryContainerBindingInfoTemplate
+        factoryContainerBindingsInfo[typeName][bindingName] = utils.getJSONObject(factoryContainerBindingInfoTemplate
             .replace(/\[BindingFilePath\]/g, bindingFilePath)
             .replace(/\[ContainerFilePath\]/g, _factoryInfo.factoryContainerFilePath)
             .replace(/\[CtorParameterInfo\]/g, utils.getJSONString(ctorParameterInfo))

@@ -1,7 +1,7 @@
 {
     "bindingName": "MultipleRequestsSpec",
     "containerFilePath": "D://component//lib//factory//generated//servermessagebus//servermessagebus.factory.container.json",
-    "isSingleton": true,
+    "isSingleton": false,
     "ctorParameters": {
         "messageConverter": {
             "containerFilePath": "D://component//lib//factory//generated//messageconverter//messageconverter.factory.container.json"

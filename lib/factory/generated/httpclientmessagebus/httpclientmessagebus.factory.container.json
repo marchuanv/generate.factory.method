@@ -5,8 +5,14 @@
     "prototypeScriptPath": "D://component//lib//http//httpclientmessagebus.prototype.js",
     "factoryScriptPath": "D://component//lib//factory//generated//httpclientmessagebus//httpclientmessagebus.factory.js",
     "bindings": {
-        "[BindingName]": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpclientmessagebus//httpclientmessagebus.factory.container.[bindingname].binding.json"
+        "Global": {
+            "bindingFilePath": "D://component//lib//factory//generated//httpclientmessagebus//httpclientmessagebus.factory.container.global.binding.json"
+        },
+        "MultipleRequestsSpec": {
+            "bindingFilePath": "D://component//lib//factory//generated//httpclientmessagebus//httpclientmessagebus.factory.container.multiplerequestsspec.binding.json"
+        },
+        "FactorySpec": {
+            "bindingFilePath": "D://component//lib//factory//generated//httpclientmessagebus//httpclientmessagebus.factory.container.factoryspec.binding.json"
         }
     }
 }

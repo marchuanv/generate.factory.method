@@ -1,7 +1,7 @@
 {
     "bindingName": "MultipleRequestsSpec",
     "containerFilePath": "D://component//lib//factory//generated//recipientaddress//recipientaddress.factory.container.json",
-    "isSingleton": true,
+    "isSingleton": false,
     "ctorParameters": {
         "recipientHost": null,
         "recipientPort": null
