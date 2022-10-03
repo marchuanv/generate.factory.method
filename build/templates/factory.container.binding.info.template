@@ -1,5 +1,6 @@
 {
     "bindingFilePath": "[BindingFilePath]",
+    "containerFilePath": "[ContainerFilePath]",
     "isSingleton": [isSingleton],
     "ctorParameterInfo": [CtorParameterInfo]
 }

@@ -1,5 +1,6 @@
 {
     "bindingName": "MultipleRequestsSpec",
+    "containerFilePath": "C://component//lib//factory//generated//contenttype//contenttype.factory.container.json",
     "isSingleton": true,
     "ctorParameters": {
         "name": null

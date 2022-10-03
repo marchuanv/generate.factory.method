@@ -1,5 +1,6 @@
 {
     "bindingName": "FactorySpec",
+    "containerFilePath": "C://component//lib//factory//generated//senderaddress//senderaddress.factory.container.json",
     "isSingleton": true,
     "ctorParameters": {
         "senderHost": null,

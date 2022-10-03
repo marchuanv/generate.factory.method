@@ -1,9 +1,10 @@
 {
     "bindingName": "FactorySpec",
+    "containerFilePath": "C://component//lib//factory//generated//httpresponsemessage//httpresponsemessage.factory.container.json",
     "isSingleton": true,
     "ctorParameters": {
         "message": {
-            "bindingFilePath": "C://component//lib//factory//generated//message//message.factory.container.factoryspec.binding.json"
+            "containerFilePath": "C://component//lib//factory//generated//message//message.factory.container.json"
         }
     },
     "instances": {}

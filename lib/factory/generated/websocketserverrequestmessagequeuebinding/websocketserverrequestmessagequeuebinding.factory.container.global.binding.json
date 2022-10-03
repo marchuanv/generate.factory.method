@@ -1,10 +1,11 @@
 {
     "bindingName": "Global",
+    "containerFilePath": "C://component//lib//factory//generated//websocketserverrequestmessagequeuebinding//websocketserverrequestmessagequeuebinding.factory.container.json",
     "isSingleton": false,
     "ctorParameters": {
         "factoryContainerBindingName": null,
         "messageQueue": {
-            "bindingFilePath": "C://component//lib//factory//generated//messagequeue//messagequeue.factory.container.global.binding.json"
+            "containerFilePath": "C://component//lib//factory//generated//messagequeue//messagequeue.factory.container.json"
         }
     },
     "instances": {}

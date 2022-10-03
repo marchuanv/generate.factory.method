@@ -1,5 +1,6 @@
 {
     "bindingName": "FactorySpec",
+    "containerFilePath": "C://component//lib//factory//generated//messagestatus//messagestatus.factory.container.json",
     "isSingleton": true,
     "ctorParameters": {
         "messageStatusCode": null

@@ -1,14 +1,15 @@
 {
     "bindingName": "FactorySpec",
+    "containerFilePath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.json",
     "isSingleton": true,
     "ctorParameters": {
         "recipientAddress": {
-            "bindingFilePath": "C://component//lib//factory//generated//recipientaddress//recipientaddress.factory.container.factoryspec.binding.json"
+            "containerFilePath": "C://component//lib//factory//generated//recipientaddress//recipientaddress.factory.container.json"
         },
         "metadata": null,
         "token": null,
         "senderAddress": {
-            "bindingFilePath": "C://component//lib//factory//generated//senderaddress//senderaddress.factory.container.factoryspec.binding.json"
+            "containerFilePath": "C://component//lib//factory//generated//senderaddress//senderaddress.factory.container.json"
         }
     },
     "instances": {}

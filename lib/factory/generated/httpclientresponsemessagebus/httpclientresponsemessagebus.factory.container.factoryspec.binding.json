@@ -1,9 +1,10 @@
 {
     "bindingName": "FactorySpec",
+    "containerFilePath": "C://component//lib//factory//generated//httpclientresponsemessagebus//httpclientresponsemessagebus.factory.container.json",
     "isSingleton": true,
     "ctorParameters": {
         "httpClientResponseMessageQueueBinding": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpclientresponsemessagequeuebinding//httpclientresponsemessagequeuebinding.factory.container.factoryspec.binding.json"
+            "containerFilePath": "C://component//lib//factory//generated//httpclientresponsemessagequeuebinding//httpclientresponsemessagequeuebinding.factory.container.json"
         }
     },
     "instances": {}

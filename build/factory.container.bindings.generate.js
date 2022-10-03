@@ -8,11 +8,11 @@ const factoryContainerBindingsInfo = require('./factory.container.bindings.info.
 for(const typeName of Object.keys(typesInfo)) {
     const factoryContainerBindingInfo = factoryContainerBindingsInfo[typeName];
     for(const factoryContainerBindingName of Object.keys(factoryContainerBindingInfo)) {
-        let { bindingFilePath, isSingleton, ctorParameterInfo } = factoryContainerBindingInfo[factoryContainerBindingName];
+        let { bindingFilePath, isSingleton, ctorParameterInfo, containerFilePath } = factoryContainerBindingInfo[factoryContainerBindingName];
         ctorParameterInfo = ctorParameterInfo.reduce((params, param) => {
             if (param.typeName) {
                 const depBinding =  factoryContainerBindingsInfo[param.typeName][factoryContainerBindingName];
-                params[param.name] = { bindingFilePath: depBinding.bindingFilePath };
+                params[param.name] = { containerFilePath: depBinding.containerFilePath };
             } else {
                 params[param.name] = null;
             }
@@ -25,6 +25,7 @@ for(const typeName of Object.keys(typesInfo)) {
         const factoryContainerBindingJson = factoryContainerBindingTemplate
             .replace(/\[BindingName\]/g, factoryContainerBindingName)
             .replace(/\[IsSingleton\]/g, isSingleton)
+            .replace(/\[ContainerFilePath\]/g, containerFilePath)
             .replace(/\[CtorParameters\]/g, utils.getJSONString(ctorParameterInfo));
         const factoryContainerBinding = utils.getJSONObject(factoryContainerBindingJson);
         writeFileSync(bindingFilePath, utils.getJSONString(factoryContainerBinding), 'utf8');

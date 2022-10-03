@@ -1,9 +1,10 @@
 {
     "bindingName": "Global",
+    "containerFilePath": "C://component//lib//factory//generated//httpclientrequestmessagebus//httpclientrequestmessagebus.factory.container.json",
     "isSingleton": false,
     "ctorParameters": {
         "httpClientRequestMessageQueueBinding": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpclientrequestmessagequeuebinding//httpclientrequestmessagequeuebinding.factory.container.global.binding.json"
+            "containerFilePath": "C://component//lib//factory//generated//httpclientrequestmessagequeuebinding//httpclientrequestmessagequeuebinding.factory.container.json"
         }
     },
     "instances": {}

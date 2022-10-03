@@ -1,5 +1,6 @@
 {
     "bindingName": "MultipleRequestsSpec",
+    "containerFilePath": "C://component//lib//factory//generated//messagestore//messagestore.factory.container.json",
     "isSingleton": true,
     "ctorParameters": {},
     "instances": {}

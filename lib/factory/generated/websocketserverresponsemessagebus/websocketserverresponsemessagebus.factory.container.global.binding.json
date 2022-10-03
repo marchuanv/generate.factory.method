@@ -1,9 +1,10 @@
 {
     "bindingName": "Global",
+    "containerFilePath": "C://component//lib//factory//generated//websocketserverresponsemessagebus//websocketserverresponsemessagebus.factory.container.json",
     "isSingleton": false,
     "ctorParameters": {
         "webSocketServerResponseMessageQueueBinding": {
-            "bindingFilePath": "C://component//lib//factory//generated//websocketserverresponsemessagequeuebinding//websocketserverresponsemessagequeuebinding.factory.container.global.binding.json"
+            "containerFilePath": "C://component//lib//factory//generated//websocketserverresponsemessagequeuebinding//websocketserverresponsemessagequeuebinding.factory.container.json"
         }
     },
     "instances": {}

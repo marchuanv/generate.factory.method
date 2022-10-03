@@ -1,5 +1,6 @@
 {
     "bindingName": "FactorySpec",
+    "containerFilePath": "C://component//lib//factory//generated//usersessions//usersessions.factory.container.json",
     "isSingleton": true,
     "ctorParameters": {
         "factoryContainerBindingName": null

@@ -1,20 +1,21 @@
 {
     "bindingName": "MultipleRequestsSpec",
+    "containerFilePath": "C://component//lib//factory//generated//message//message.factory.container.json",
     "isSingleton": true,
     "ctorParameters": {
         "messageStatus": {
-            "bindingFilePath": "C://component//lib//factory//generated//messagestatus//messagestatus.factory.container.multiplerequestsspec.binding.json"
+            "containerFilePath": "C://component//lib//factory//generated//messagestatus//messagestatus.factory.container.json"
         },
         "factoryContainerBindingName": null,
         "Id": null,
         "messageContent": {
-            "bindingFilePath": "C://component//lib//factory//generated//messagecontent//messagecontent.factory.container.multiplerequestsspec.binding.json"
+            "containerFilePath": "C://component//lib//factory//generated//messagecontent//messagecontent.factory.container.json"
         },
         "messageContentMetadata": {
-            "bindingFilePath": "C://component//lib//factory//generated//messagecontentmetadata//messagecontentmetadata.factory.container.multiplerequestsspec.binding.json"
+            "containerFilePath": "C://component//lib//factory//generated//messagecontentmetadata//messagecontentmetadata.factory.container.json"
         },
         "messageMetadata": {
-            "bindingFilePath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.multiplerequestsspec.binding.json"
+            "containerFilePath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.json"
         }
     },
     "instances": {}

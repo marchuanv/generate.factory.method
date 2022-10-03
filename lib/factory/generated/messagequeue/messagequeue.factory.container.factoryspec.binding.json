@@ -1,9 +1,10 @@
 {
     "bindingName": "FactorySpec",
+    "containerFilePath": "C://component//lib//factory//generated//messagequeue//messagequeue.factory.container.json",
     "isSingleton": true,
     "ctorParameters": {
         "logger": {
-            "bindingFilePath": "C://component//lib//factory//generated//logger//logger.factory.container.factoryspec.binding.json"
+            "containerFilePath": "C://component//lib//factory//generated//logger//logger.factory.container.json"
         }
     },
     "instances": {}

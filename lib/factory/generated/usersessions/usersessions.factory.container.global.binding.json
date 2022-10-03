@@ -1,5 +1,6 @@
 {
     "bindingName": "Global",
+    "containerFilePath": "C://component//lib//factory//generated//usersessions//usersessions.factory.container.json",
     "isSingleton": false,
     "ctorParameters": {
         "factoryContainerBindingName": null

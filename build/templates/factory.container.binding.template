@@ -1,5 +1,6 @@
 {
     "bindingName": "[BindingName]",
+    "containerFilePath": "[ContainerFilePath]",
     "isSingleton": [IsSingleton],
     "ctorParameters": [CtorParameters],
     "instances": {}
