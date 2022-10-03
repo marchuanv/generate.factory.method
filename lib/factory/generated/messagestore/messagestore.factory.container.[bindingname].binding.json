@@ -1,0 +1,7 @@
+{
+    "bindingName": "[BindingName]",
+    "containerFilePath": "D://component//lib//factory//generated//messagestore//messagestore.factory.container.json",
+    "isSingleton": false,
+    "ctorParameters": {},
+    "instances": {}
+}

@@ -1,0 +1,10 @@
+{
+    "bindingName": "[BindingName]",
+    "containerFilePath": "D://component//lib//factory//generated//messagecontentmetadata//messagecontentmetadata.factory.container.json",
+    "isSingleton": false,
+    "ctorParameters": {
+        "factoryContainerBindingName": null,
+        "data": null
+    },
+    "instances": {}
+}

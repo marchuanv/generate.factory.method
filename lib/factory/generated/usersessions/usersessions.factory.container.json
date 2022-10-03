@@ -5,14 +5,8 @@
     "prototypeScriptPath": "D://component//lib//usersessions.prototype.js",
     "factoryScriptPath": "D://component//lib//factory//generated//usersessions//usersessions.factory.js",
     "bindings": {
-        "Global": {
-            "bindingFilePath": "D://component//lib//factory//generated//usersessions//usersessions.factory.container.global.binding.json"
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//usersessions//usersessions.factory.container.multiplerequestsspec.binding.json"
-        },
-        "FactorySpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//usersessions//usersessions.factory.container.factoryspec.binding.json"
+        "[BindingName]": {
+            "bindingFilePath": "D://component//lib//factory//generated//usersessions//usersessions.factory.container.[bindingname].binding.json"
         }
     }
 }

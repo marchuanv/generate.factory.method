@@ -1,0 +1,22 @@
+{
+    "bindingName": "[BindingName]",
+    "containerFilePath": "D://component//lib//factory//generated//message//message.factory.container.json",
+    "isSingleton": false,
+    "ctorParameters": {
+        "messageStatus": {
+            "containerFilePath": "D://component//lib//factory//generated//messagestatus//messagestatus.factory.container.json"
+        },
+        "factoryContainerBindingName": null,
+        "Id": null,
+        "messageContent": {
+            "containerFilePath": "D://component//lib//factory//generated//messagecontent//messagecontent.factory.container.json"
+        },
+        "messageContentMetadata": {
+            "containerFilePath": "D://component//lib//factory//generated//messagecontentmetadata//messagecontentmetadata.factory.container.json"
+        },
+        "messageMetadata": {
+            "containerFilePath": "D://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.json"
+        }
+    },
+    "instances": {}
+}

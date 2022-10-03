@@ -5,14 +5,8 @@
     "prototypeScriptPath": "D://component//lib//messageconverter.prototype.js",
     "factoryScriptPath": "D://component//lib//factory//generated//messageconverter//messageconverter.factory.js",
     "bindings": {
-        "Global": {
-            "bindingFilePath": "D://component//lib//factory//generated//messageconverter//messageconverter.factory.container.global.binding.json"
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//messageconverter//messageconverter.factory.container.multiplerequestsspec.binding.json"
-        },
-        "FactorySpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//messageconverter//messageconverter.factory.container.factoryspec.binding.json"
+        "[BindingName]": {
+            "bindingFilePath": "D://component//lib//factory//generated//messageconverter//messageconverter.factory.container.[bindingname].binding.json"
         }
     }
 }

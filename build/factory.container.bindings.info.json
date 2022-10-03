@@ -1,47 +1,9 @@
 {
     "ClientMessageBus": {
-        "Global": {
-            "bindingFilePath": "D://component//lib//factory//generated//clientmessagebus//clientmessagebus.factory.container.global.binding.json",
+        "[BindingName]": {
+            "bindingFilePath": "D://component//lib//factory//generated//clientmessagebus//clientmessagebus.factory.container.[bindingname].binding.json",
             "containerFilePath": "D://component//lib//factory//generated//clientmessagebus//clientmessagebus.factory.container.json",
             "isSingleton": false,
-            "ctorParameterInfo": [
-                {
-                    "name": "messageConverter",
-                    "typeName": "MessageConverter"
-                },
-                {
-                    "name": "clientRequestMessageBus",
-                    "typeName": "HttpClientRequestMessageBus"
-                },
-                {
-                    "name": "clientResponseMessageBus",
-                    "typeName": "HttpClientResponseMessageBus"
-                }
-            ]
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//clientmessagebus//clientmessagebus.factory.container.multiplerequestsspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//clientmessagebus//clientmessagebus.factory.container.json",
-            "isSingleton": true,
-            "ctorParameterInfo": [
-                {
-                    "name": "messageConverter",
-                    "typeName": "MessageConverter"
-                },
-                {
-                    "name": "clientRequestMessageBus",
-                    "typeName": "HttpClientRequestMessageBus"
-                },
-                {
-                    "name": "clientResponseMessageBus",
-                    "typeName": "HttpClientResponseMessageBus"
-                }
-            ]
-        },
-        "FactorySpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//clientmessagebus//clientmessagebus.factory.container.factoryspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//clientmessagebus//clientmessagebus.factory.container.json",
-            "isSingleton": true,
             "ctorParameterInfo": [
                 {
                     "name": "messageConverter",
@@ -59,64 +21,10 @@
         }
     },
     "Component": {
-        "Global": {
-            "bindingFilePath": "D://component//lib//factory//generated//component//component.factory.container.global.binding.json",
+        "[BindingName]": {
+            "bindingFilePath": "D://component//lib//factory//generated//component//component.factory.container.[bindingname].binding.json",
             "containerFilePath": "D://component//lib//factory//generated//component//component.factory.container.json",
             "isSingleton": false,
-            "ctorParameterInfo": [
-                {
-                    "name": "packageJson",
-                    "typeName": null
-                },
-                {
-                    "name": "factoryContainerBindingName",
-                    "typeName": null
-                },
-                {
-                    "name": "clientMessageBus",
-                    "typeName": "ClientMessageBus"
-                },
-                {
-                    "name": "serverMessageBus",
-                    "typeName": "ServerMessageBus"
-                },
-                {
-                    "name": "userSessions",
-                    "typeName": "UserSessions"
-                }
-            ]
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//component//component.factory.container.multiplerequestsspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//component//component.factory.container.json",
-            "isSingleton": true,
-            "ctorParameterInfo": [
-                {
-                    "name": "packageJson",
-                    "typeName": null
-                },
-                {
-                    "name": "factoryContainerBindingName",
-                    "typeName": null
-                },
-                {
-                    "name": "clientMessageBus",
-                    "typeName": "ClientMessageBus"
-                },
-                {
-                    "name": "serverMessageBus",
-                    "typeName": "ServerMessageBus"
-                },
-                {
-                    "name": "userSessions",
-                    "typeName": "UserSessions"
-                }
-            ]
-        },
-        "FactorySpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//component//component.factory.container.factoryspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//component//component.factory.container.json",
-            "isSingleton": true,
             "ctorParameterInfo": [
                 {
                     "name": "packageJson",
@@ -142,32 +50,10 @@
         }
     },
     "ContentType": {
-        "Global": {
-            "bindingFilePath": "D://component//lib//factory//generated//contenttype//contenttype.factory.container.global.binding.json",
+        "[BindingName]": {
+            "bindingFilePath": "D://component//lib//factory//generated//contenttype//contenttype.factory.container.[bindingname].binding.json",
             "containerFilePath": "D://component//lib//factory//generated//contenttype//contenttype.factory.container.json",
             "isSingleton": false,
-            "ctorParameterInfo": [
-                {
-                    "name": "name",
-                    "typeName": null
-                }
-            ]
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//contenttype//contenttype.factory.container.multiplerequestsspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//contenttype//contenttype.factory.container.json",
-            "isSingleton": true,
-            "ctorParameterInfo": [
-                {
-                    "name": "name",
-                    "typeName": null
-                }
-            ]
-        },
-        "FactorySpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//contenttype//contenttype.factory.container.factoryspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//contenttype//contenttype.factory.container.json",
-            "isSingleton": true,
             "ctorParameterInfo": [
                 {
                     "name": "name",
@@ -177,92 +63,18 @@
         }
     },
     "Logger": {
-        "Global": {
-            "bindingFilePath": "D://component//lib//factory//generated//logger//logger.factory.container.global.binding.json",
+        "[BindingName]": {
+            "bindingFilePath": "D://component//lib//factory//generated//logger//logger.factory.container.[bindingname].binding.json",
             "containerFilePath": "D://component//lib//factory//generated//logger//logger.factory.container.json",
             "isSingleton": false,
-            "ctorParameterInfo": []
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//logger//logger.factory.container.multiplerequestsspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//logger//logger.factory.container.json",
-            "isSingleton": true,
-            "ctorParameterInfo": []
-        },
-        "FactorySpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//logger//logger.factory.container.factoryspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//logger//logger.factory.container.json",
-            "isSingleton": true,
             "ctorParameterInfo": []
         }
     },
     "Message": {
-        "Global": {
-            "bindingFilePath": "D://component//lib//factory//generated//message//message.factory.container.global.binding.json",
+        "[BindingName]": {
+            "bindingFilePath": "D://component//lib//factory//generated//message//message.factory.container.[bindingname].binding.json",
             "containerFilePath": "D://component//lib//factory//generated//message//message.factory.container.json",
             "isSingleton": false,
-            "ctorParameterInfo": [
-                {
-                    "name": "messageStatus",
-                    "typeName": "MessageStatus"
-                },
-                {
-                    "name": "factoryContainerBindingName",
-                    "typeName": null
-                },
-                {
-                    "name": "Id",
-                    "typeName": null
-                },
-                {
-                    "name": "messageContent",
-                    "typeName": "MessageContent"
-                },
-                {
-                    "name": "messageContentMetadata",
-                    "typeName": "MessageContentMetadata"
-                },
-                {
-                    "name": "messageMetadata",
-                    "typeName": "MessageMetadata"
-                }
-            ]
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//message//message.factory.container.multiplerequestsspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//message//message.factory.container.json",
-            "isSingleton": true,
-            "ctorParameterInfo": [
-                {
-                    "name": "messageStatus",
-                    "typeName": "MessageStatus"
-                },
-                {
-                    "name": "factoryContainerBindingName",
-                    "typeName": null
-                },
-                {
-                    "name": "Id",
-                    "typeName": null
-                },
-                {
-                    "name": "messageContent",
-                    "typeName": "MessageContent"
-                },
-                {
-                    "name": "messageContentMetadata",
-                    "typeName": "MessageContentMetadata"
-                },
-                {
-                    "name": "messageMetadata",
-                    "typeName": "MessageMetadata"
-                }
-            ]
-        },
-        "FactorySpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//message//message.factory.container.factoryspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//message//message.factory.container.json",
-            "isSingleton": true,
             "ctorParameterInfo": [
                 {
                     "name": "messageStatus",
@@ -292,56 +104,10 @@
         }
     },
     "MessageContent": {
-        "Global": {
-            "bindingFilePath": "D://component//lib//factory//generated//messagecontent//messagecontent.factory.container.global.binding.json",
+        "[BindingName]": {
+            "bindingFilePath": "D://component//lib//factory//generated//messagecontent//messagecontent.factory.container.[bindingname].binding.json",
             "containerFilePath": "D://component//lib//factory//generated//messagecontent//messagecontent.factory.container.json",
             "isSingleton": false,
-            "ctorParameterInfo": [
-                {
-                    "name": "messageContentMetadata",
-                    "typeName": "MessageContentMetadata"
-                },
-                {
-                    "name": "data",
-                    "typeName": null
-                },
-                {
-                    "name": "userSessions",
-                    "typeName": "UserSessions"
-                },
-                {
-                    "name": "messageMetadata",
-                    "typeName": "MessageMetadata"
-                }
-            ]
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//messagecontent//messagecontent.factory.container.multiplerequestsspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//messagecontent//messagecontent.factory.container.json",
-            "isSingleton": true,
-            "ctorParameterInfo": [
-                {
-                    "name": "messageContentMetadata",
-                    "typeName": "MessageContentMetadata"
-                },
-                {
-                    "name": "data",
-                    "typeName": null
-                },
-                {
-                    "name": "userSessions",
-                    "typeName": "UserSessions"
-                },
-                {
-                    "name": "messageMetadata",
-                    "typeName": "MessageMetadata"
-                }
-            ]
-        },
-        "FactorySpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//messagecontent//messagecontent.factory.container.factoryspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//messagecontent//messagecontent.factory.container.json",
-            "isSingleton": true,
             "ctorParameterInfo": [
                 {
                     "name": "messageContentMetadata",
@@ -363,40 +129,10 @@
         }
     },
     "MessageContentMetadata": {
-        "Global": {
-            "bindingFilePath": "D://component//lib//factory//generated//messagecontentmetadata//messagecontentmetadata.factory.container.global.binding.json",
+        "[BindingName]": {
+            "bindingFilePath": "D://component//lib//factory//generated//messagecontentmetadata//messagecontentmetadata.factory.container.[bindingname].binding.json",
             "containerFilePath": "D://component//lib//factory//generated//messagecontentmetadata//messagecontentmetadata.factory.container.json",
             "isSingleton": false,
-            "ctorParameterInfo": [
-                {
-                    "name": "factoryContainerBindingName",
-                    "typeName": null
-                },
-                {
-                    "name": "data",
-                    "typeName": null
-                }
-            ]
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//messagecontentmetadata//messagecontentmetadata.factory.container.multiplerequestsspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//messagecontentmetadata//messagecontentmetadata.factory.container.json",
-            "isSingleton": true,
-            "ctorParameterInfo": [
-                {
-                    "name": "factoryContainerBindingName",
-                    "typeName": null
-                },
-                {
-                    "name": "data",
-                    "typeName": null
-                }
-            ]
-        },
-        "FactorySpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//messagecontentmetadata//messagecontentmetadata.factory.container.factoryspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//messagecontentmetadata//messagecontentmetadata.factory.container.json",
-            "isSingleton": true,
             "ctorParameterInfo": [
                 {
                     "name": "factoryContainerBindingName",
@@ -410,76 +146,18 @@
         }
     },
     "MessageConverter": {
-        "Global": {
-            "bindingFilePath": "D://component//lib//factory//generated//messageconverter//messageconverter.factory.container.global.binding.json",
+        "[BindingName]": {
+            "bindingFilePath": "D://component//lib//factory//generated//messageconverter//messageconverter.factory.container.[bindingname].binding.json",
             "containerFilePath": "D://component//lib//factory//generated//messageconverter//messageconverter.factory.container.json",
             "isSingleton": false,
-            "ctorParameterInfo": []
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//messageconverter//messageconverter.factory.container.multiplerequestsspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//messageconverter//messageconverter.factory.container.json",
-            "isSingleton": true,
-            "ctorParameterInfo": []
-        },
-        "FactorySpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//messageconverter//messageconverter.factory.container.factoryspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//messageconverter//messageconverter.factory.container.json",
-            "isSingleton": true,
             "ctorParameterInfo": []
         }
     },
     "MessageMetadata": {
-        "Global": {
-            "bindingFilePath": "D://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.global.binding.json",
+        "[BindingName]": {
+            "bindingFilePath": "D://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.[bindingname].binding.json",
             "containerFilePath": "D://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.json",
             "isSingleton": false,
-            "ctorParameterInfo": [
-                {
-                    "name": "recipientAddress",
-                    "typeName": "RecipientAddress"
-                },
-                {
-                    "name": "metadata",
-                    "typeName": null
-                },
-                {
-                    "name": "token",
-                    "typeName": null
-                },
-                {
-                    "name": "senderAddress",
-                    "typeName": "SenderAddress"
-                }
-            ]
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.multiplerequestsspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.json",
-            "isSingleton": true,
-            "ctorParameterInfo": [
-                {
-                    "name": "recipientAddress",
-                    "typeName": "RecipientAddress"
-                },
-                {
-                    "name": "metadata",
-                    "typeName": null
-                },
-                {
-                    "name": "token",
-                    "typeName": null
-                },
-                {
-                    "name": "senderAddress",
-                    "typeName": "SenderAddress"
-                }
-            ]
-        },
-        "FactorySpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.factoryspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.json",
-            "isSingleton": true,
             "ctorParameterInfo": [
                 {
                     "name": "recipientAddress",
@@ -501,32 +179,10 @@
         }
     },
     "MessageQueue": {
-        "Global": {
-            "bindingFilePath": "D://component//lib//factory//generated//messagequeue//messagequeue.factory.container.global.binding.json",
+        "[BindingName]": {
+            "bindingFilePath": "D://component//lib//factory//generated//messagequeue//messagequeue.factory.container.[bindingname].binding.json",
             "containerFilePath": "D://component//lib//factory//generated//messagequeue//messagequeue.factory.container.json",
             "isSingleton": false,
-            "ctorParameterInfo": [
-                {
-                    "name": "logger",
-                    "typeName": "Logger"
-                }
-            ]
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//messagequeue//messagequeue.factory.container.multiplerequestsspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//messagequeue//messagequeue.factory.container.json",
-            "isSingleton": true,
-            "ctorParameterInfo": [
-                {
-                    "name": "logger",
-                    "typeName": "Logger"
-                }
-            ]
-        },
-        "FactorySpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//messagequeue//messagequeue.factory.container.factoryspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//messagequeue//messagequeue.factory.container.json",
-            "isSingleton": true,
             "ctorParameterInfo": [
                 {
                     "name": "logger",
@@ -536,32 +192,10 @@
         }
     },
     "MessageStatus": {
-        "Global": {
-            "bindingFilePath": "D://component//lib//factory//generated//messagestatus//messagestatus.factory.container.global.binding.json",
+        "[BindingName]": {
+            "bindingFilePath": "D://component//lib//factory//generated//messagestatus//messagestatus.factory.container.[bindingname].binding.json",
             "containerFilePath": "D://component//lib//factory//generated//messagestatus//messagestatus.factory.container.json",
             "isSingleton": false,
-            "ctorParameterInfo": [
-                {
-                    "name": "messageStatusCode",
-                    "typeName": null
-                }
-            ]
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//messagestatus//messagestatus.factory.container.multiplerequestsspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//messagestatus//messagestatus.factory.container.json",
-            "isSingleton": true,
-            "ctorParameterInfo": [
-                {
-                    "name": "messageStatusCode",
-                    "typeName": null
-                }
-            ]
-        },
-        "FactorySpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//messagestatus//messagestatus.factory.container.factoryspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//messagestatus//messagestatus.factory.container.json",
-            "isSingleton": true,
             "ctorParameterInfo": [
                 {
                     "name": "messageStatusCode",
@@ -571,60 +205,18 @@
         }
     },
     "MessageStore": {
-        "Global": {
-            "bindingFilePath": "D://component//lib//factory//generated//messagestore//messagestore.factory.container.global.binding.json",
+        "[BindingName]": {
+            "bindingFilePath": "D://component//lib//factory//generated//messagestore//messagestore.factory.container.[bindingname].binding.json",
             "containerFilePath": "D://component//lib//factory//generated//messagestore//messagestore.factory.container.json",
             "isSingleton": false,
-            "ctorParameterInfo": []
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//messagestore//messagestore.factory.container.multiplerequestsspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//messagestore//messagestore.factory.container.json",
-            "isSingleton": true,
-            "ctorParameterInfo": []
-        },
-        "FactorySpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//messagestore//messagestore.factory.container.factoryspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//messagestore//messagestore.factory.container.json",
-            "isSingleton": true,
             "ctorParameterInfo": []
         }
     },
     "RecipientAddress": {
-        "Global": {
-            "bindingFilePath": "D://component//lib//factory//generated//recipientaddress//recipientaddress.factory.container.global.binding.json",
+        "[BindingName]": {
+            "bindingFilePath": "D://component//lib//factory//generated//recipientaddress//recipientaddress.factory.container.[bindingname].binding.json",
             "containerFilePath": "D://component//lib//factory//generated//recipientaddress//recipientaddress.factory.container.json",
             "isSingleton": false,
-            "ctorParameterInfo": [
-                {
-                    "name": "recipientHost",
-                    "typeName": null
-                },
-                {
-                    "name": "recipientPort",
-                    "typeName": null
-                }
-            ]
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//recipientaddress//recipientaddress.factory.container.multiplerequestsspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//recipientaddress//recipientaddress.factory.container.json",
-            "isSingleton": true,
-            "ctorParameterInfo": [
-                {
-                    "name": "recipientHost",
-                    "typeName": null
-                },
-                {
-                    "name": "recipientPort",
-                    "typeName": null
-                }
-            ]
-        },
-        "FactorySpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//recipientaddress//recipientaddress.factory.container.factoryspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//recipientaddress//recipientaddress.factory.container.json",
-            "isSingleton": true,
             "ctorParameterInfo": [
                 {
                     "name": "recipientHost",
@@ -638,40 +230,10 @@
         }
     },
     "SenderAddress": {
-        "Global": {
-            "bindingFilePath": "D://component//lib//factory//generated//senderaddress//senderaddress.factory.container.global.binding.json",
+        "[BindingName]": {
+            "bindingFilePath": "D://component//lib//factory//generated//senderaddress//senderaddress.factory.container.[bindingname].binding.json",
             "containerFilePath": "D://component//lib//factory//generated//senderaddress//senderaddress.factory.container.json",
             "isSingleton": false,
-            "ctorParameterInfo": [
-                {
-                    "name": "senderHost",
-                    "typeName": null
-                },
-                {
-                    "name": "senderPort",
-                    "typeName": null
-                }
-            ]
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//senderaddress//senderaddress.factory.container.multiplerequestsspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//senderaddress//senderaddress.factory.container.json",
-            "isSingleton": true,
-            "ctorParameterInfo": [
-                {
-                    "name": "senderHost",
-                    "typeName": null
-                },
-                {
-                    "name": "senderPort",
-                    "typeName": null
-                }
-            ]
-        },
-        "FactorySpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//senderaddress//senderaddress.factory.container.factoryspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//senderaddress//senderaddress.factory.container.json",
-            "isSingleton": true,
             "ctorParameterInfo": [
                 {
                     "name": "senderHost",
@@ -685,48 +247,10 @@
         }
     },
     "ServerMessageBus": {
-        "Global": {
-            "bindingFilePath": "D://component//lib//factory//generated//servermessagebus//servermessagebus.factory.container.global.binding.json",
+        "[BindingName]": {
+            "bindingFilePath": "D://component//lib//factory//generated//servermessagebus//servermessagebus.factory.container.[bindingname].binding.json",
             "containerFilePath": "D://component//lib//factory//generated//servermessagebus//servermessagebus.factory.container.json",
             "isSingleton": false,
-            "ctorParameterInfo": [
-                {
-                    "name": "messageConverter",
-                    "typeName": "MessageConverter"
-                },
-                {
-                    "name": "serverResponseMessageBus",
-                    "typeName": "HttpServerResponseMessageBus"
-                },
-                {
-                    "name": "serverRequestMessageBus",
-                    "typeName": "HttpServerRequestMessageBus"
-                }
-            ]
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//servermessagebus//servermessagebus.factory.container.multiplerequestsspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//servermessagebus//servermessagebus.factory.container.json",
-            "isSingleton": true,
-            "ctorParameterInfo": [
-                {
-                    "name": "messageConverter",
-                    "typeName": "MessageConverter"
-                },
-                {
-                    "name": "serverResponseMessageBus",
-                    "typeName": "HttpServerResponseMessageBus"
-                },
-                {
-                    "name": "serverRequestMessageBus",
-                    "typeName": "HttpServerRequestMessageBus"
-                }
-            ]
-        },
-        "FactorySpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//servermessagebus//servermessagebus.factory.container.factoryspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//servermessagebus//servermessagebus.factory.container.json",
-            "isSingleton": true,
             "ctorParameterInfo": [
                 {
                     "name": "messageConverter",
@@ -744,32 +268,10 @@
         }
     },
     "UserSecurity": {
-        "Global": {
-            "bindingFilePath": "D://component//lib//factory//generated//usersecurity//usersecurity.factory.container.global.binding.json",
+        "[BindingName]": {
+            "bindingFilePath": "D://component//lib//factory//generated//usersecurity//usersecurity.factory.container.[bindingname].binding.json",
             "containerFilePath": "D://component//lib//factory//generated//usersecurity//usersecurity.factory.container.json",
             "isSingleton": false,
-            "ctorParameterInfo": [
-                {
-                    "name": "userId",
-                    "typeName": null
-                }
-            ]
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//usersecurity//usersecurity.factory.container.multiplerequestsspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//usersecurity//usersecurity.factory.container.json",
-            "isSingleton": true,
-            "ctorParameterInfo": [
-                {
-                    "name": "userId",
-                    "typeName": null
-                }
-            ]
-        },
-        "FactorySpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//usersecurity//usersecurity.factory.container.factoryspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//usersecurity//usersecurity.factory.container.json",
-            "isSingleton": true,
             "ctorParameterInfo": [
                 {
                     "name": "userId",
@@ -779,32 +281,10 @@
         }
     },
     "UserSessions": {
-        "Global": {
-            "bindingFilePath": "D://component//lib//factory//generated//usersessions//usersessions.factory.container.global.binding.json",
+        "[BindingName]": {
+            "bindingFilePath": "D://component//lib//factory//generated//usersessions//usersessions.factory.container.[bindingname].binding.json",
             "containerFilePath": "D://component//lib//factory//generated//usersessions//usersessions.factory.container.json",
             "isSingleton": false,
-            "ctorParameterInfo": [
-                {
-                    "name": "factoryContainerBindingName",
-                    "typeName": null
-                }
-            ]
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//usersessions//usersessions.factory.container.multiplerequestsspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//usersessions//usersessions.factory.container.json",
-            "isSingleton": true,
-            "ctorParameterInfo": [
-                {
-                    "name": "factoryContainerBindingName",
-                    "typeName": null
-                }
-            ]
-        },
-        "FactorySpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//usersessions//usersessions.factory.container.factoryspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//usersessions//usersessions.factory.container.json",
-            "isSingleton": true,
             "ctorParameterInfo": [
                 {
                     "name": "factoryContainerBindingName",
@@ -814,80 +294,10 @@
         }
     },
     "HttpClientMessageBus": {
-        "Global": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpclientmessagebus//httpclientmessagebus.factory.container.global.binding.json",
+        "[BindingName]": {
+            "bindingFilePath": "D://component//lib//factory//generated//httpclientmessagebus//httpclientmessagebus.factory.container.[bindingname].binding.json",
             "containerFilePath": "D://component//lib//factory//generated//httpclientmessagebus//httpclientmessagebus.factory.container.json",
             "isSingleton": false,
-            "ctorParameterInfo": [
-                {
-                    "name": "timeout",
-                    "typeName": null
-                },
-                {
-                    "name": "factoryContainerBindingName",
-                    "typeName": null
-                },
-                {
-                    "name": "httpClientRequestMessageQueueBinding",
-                    "typeName": "HttpClientRequestMessageQueueBinding"
-                },
-                {
-                    "name": "httpClientResponseMessageQueueBinding",
-                    "typeName": "HttpClientResponseMessageQueueBinding"
-                },
-                {
-                    "name": "httpClientStartMessageQueueBinding",
-                    "typeName": "HttpClientStartMessageQueueBinding"
-                },
-                {
-                    "name": "httpClientStartedMessageQueueBinding",
-                    "typeName": "HttpClientStartedMessageQueueBinding"
-                },
-                {
-                    "name": "httpClientStopMessageQueueBinding",
-                    "typeName": "HttpClientStopMessageQueueBinding"
-                }
-            ]
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpclientmessagebus//httpclientmessagebus.factory.container.multiplerequestsspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//httpclientmessagebus//httpclientmessagebus.factory.container.json",
-            "isSingleton": true,
-            "ctorParameterInfo": [
-                {
-                    "name": "timeout",
-                    "typeName": null
-                },
-                {
-                    "name": "factoryContainerBindingName",
-                    "typeName": null
-                },
-                {
-                    "name": "httpClientRequestMessageQueueBinding",
-                    "typeName": "HttpClientRequestMessageQueueBinding"
-                },
-                {
-                    "name": "httpClientResponseMessageQueueBinding",
-                    "typeName": "HttpClientResponseMessageQueueBinding"
-                },
-                {
-                    "name": "httpClientStartMessageQueueBinding",
-                    "typeName": "HttpClientStartMessageQueueBinding"
-                },
-                {
-                    "name": "httpClientStartedMessageQueueBinding",
-                    "typeName": "HttpClientStartedMessageQueueBinding"
-                },
-                {
-                    "name": "httpClientStopMessageQueueBinding",
-                    "typeName": "HttpClientStopMessageQueueBinding"
-                }
-            ]
-        },
-        "FactorySpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpclientmessagebus//httpclientmessagebus.factory.container.factoryspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//httpclientmessagebus//httpclientmessagebus.factory.container.json",
-            "isSingleton": true,
             "ctorParameterInfo": [
                 {
                     "name": "timeout",
@@ -921,56 +331,10 @@
         }
     },
     "HttpClientMessageBusManager": {
-        "Global": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpclientmessagebusmanager//httpclientmessagebusmanager.factory.container.global.binding.json",
+        "[BindingName]": {
+            "bindingFilePath": "D://component//lib//factory//generated//httpclientmessagebusmanager//httpclientmessagebusmanager.factory.container.[bindingname].binding.json",
             "containerFilePath": "D://component//lib//factory//generated//httpclientmessagebusmanager//httpclientmessagebusmanager.factory.container.json",
             "isSingleton": false,
-            "ctorParameterInfo": [
-                {
-                    "name": "httpClientStopMessageQueueBinding",
-                    "typeName": "HttpClientStopMessageQueueBinding"
-                },
-                {
-                    "name": "factoryContainerBindingName",
-                    "typeName": null
-                },
-                {
-                    "name": "httpClientStartMessageQueueBinding",
-                    "typeName": "HttpClientStartMessageQueueBinding"
-                },
-                {
-                    "name": "httpClientStartedMessageQueueBinding",
-                    "typeName": "HttpClientStartedMessageQueueBinding"
-                }
-            ]
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpclientmessagebusmanager//httpclientmessagebusmanager.factory.container.multiplerequestsspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//httpclientmessagebusmanager//httpclientmessagebusmanager.factory.container.json",
-            "isSingleton": true,
-            "ctorParameterInfo": [
-                {
-                    "name": "httpClientStopMessageQueueBinding",
-                    "typeName": "HttpClientStopMessageQueueBinding"
-                },
-                {
-                    "name": "factoryContainerBindingName",
-                    "typeName": null
-                },
-                {
-                    "name": "httpClientStartMessageQueueBinding",
-                    "typeName": "HttpClientStartMessageQueueBinding"
-                },
-                {
-                    "name": "httpClientStartedMessageQueueBinding",
-                    "typeName": "HttpClientStartedMessageQueueBinding"
-                }
-            ]
-        },
-        "FactorySpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpclientmessagebusmanager//httpclientmessagebusmanager.factory.container.factoryspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//httpclientmessagebusmanager//httpclientmessagebusmanager.factory.container.json",
-            "isSingleton": true,
             "ctorParameterInfo": [
                 {
                     "name": "httpClientStopMessageQueueBinding",
@@ -992,32 +356,10 @@
         }
     },
     "HttpClientRequestMessageBus": {
-        "Global": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpclientrequestmessagebus//httpclientrequestmessagebus.factory.container.global.binding.json",
+        "[BindingName]": {
+            "bindingFilePath": "D://component//lib//factory//generated//httpclientrequestmessagebus//httpclientrequestmessagebus.factory.container.[bindingname].binding.json",
             "containerFilePath": "D://component//lib//factory//generated//httpclientrequestmessagebus//httpclientrequestmessagebus.factory.container.json",
             "isSingleton": false,
-            "ctorParameterInfo": [
-                {
-                    "name": "httpClientRequestMessageQueueBinding",
-                    "typeName": "HttpClientRequestMessageQueueBinding"
-                }
-            ]
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpclientrequestmessagebus//httpclientrequestmessagebus.factory.container.multiplerequestsspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//httpclientrequestmessagebus//httpclientrequestmessagebus.factory.container.json",
-            "isSingleton": true,
-            "ctorParameterInfo": [
-                {
-                    "name": "httpClientRequestMessageQueueBinding",
-                    "typeName": "HttpClientRequestMessageQueueBinding"
-                }
-            ]
-        },
-        "FactorySpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpclientrequestmessagebus//httpclientrequestmessagebus.factory.container.factoryspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//httpclientrequestmessagebus//httpclientrequestmessagebus.factory.container.json",
-            "isSingleton": true,
             "ctorParameterInfo": [
                 {
                     "name": "httpClientRequestMessageQueueBinding",
@@ -1027,40 +369,10 @@
         }
     },
     "HttpClientRequestMessageQueueBinding": {
-        "Global": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpclientrequestmessagequeuebinding//httpclientrequestmessagequeuebinding.factory.container.global.binding.json",
+        "[BindingName]": {
+            "bindingFilePath": "D://component//lib//factory//generated//httpclientrequestmessagequeuebinding//httpclientrequestmessagequeuebinding.factory.container.[bindingname].binding.json",
             "containerFilePath": "D://component//lib//factory//generated//httpclientrequestmessagequeuebinding//httpclientrequestmessagequeuebinding.factory.container.json",
             "isSingleton": false,
-            "ctorParameterInfo": [
-                {
-                    "name": "factoryContainerBindingName",
-                    "typeName": null
-                },
-                {
-                    "name": "messageQueue",
-                    "typeName": "MessageQueue"
-                }
-            ]
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpclientrequestmessagequeuebinding//httpclientrequestmessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//httpclientrequestmessagequeuebinding//httpclientrequestmessagequeuebinding.factory.container.json",
-            "isSingleton": true,
-            "ctorParameterInfo": [
-                {
-                    "name": "factoryContainerBindingName",
-                    "typeName": null
-                },
-                {
-                    "name": "messageQueue",
-                    "typeName": "MessageQueue"
-                }
-            ]
-        },
-        "FactorySpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpclientrequestmessagequeuebinding//httpclientrequestmessagequeuebinding.factory.container.factoryspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//httpclientrequestmessagequeuebinding//httpclientrequestmessagequeuebinding.factory.container.json",
-            "isSingleton": true,
             "ctorParameterInfo": [
                 {
                     "name": "factoryContainerBindingName",
@@ -1074,32 +386,10 @@
         }
     },
     "HttpClientResponseMessageBus": {
-        "Global": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpclientresponsemessagebus//httpclientresponsemessagebus.factory.container.global.binding.json",
+        "[BindingName]": {
+            "bindingFilePath": "D://component//lib//factory//generated//httpclientresponsemessagebus//httpclientresponsemessagebus.factory.container.[bindingname].binding.json",
             "containerFilePath": "D://component//lib//factory//generated//httpclientresponsemessagebus//httpclientresponsemessagebus.factory.container.json",
             "isSingleton": false,
-            "ctorParameterInfo": [
-                {
-                    "name": "httpClientResponseMessageQueueBinding",
-                    "typeName": "HttpClientResponseMessageQueueBinding"
-                }
-            ]
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpclientresponsemessagebus//httpclientresponsemessagebus.factory.container.multiplerequestsspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//httpclientresponsemessagebus//httpclientresponsemessagebus.factory.container.json",
-            "isSingleton": true,
-            "ctorParameterInfo": [
-                {
-                    "name": "httpClientResponseMessageQueueBinding",
-                    "typeName": "HttpClientResponseMessageQueueBinding"
-                }
-            ]
-        },
-        "FactorySpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpclientresponsemessagebus//httpclientresponsemessagebus.factory.container.factoryspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//httpclientresponsemessagebus//httpclientresponsemessagebus.factory.container.json",
-            "isSingleton": true,
             "ctorParameterInfo": [
                 {
                     "name": "httpClientResponseMessageQueueBinding",
@@ -1109,40 +399,10 @@
         }
     },
     "HttpClientResponseMessageQueueBinding": {
-        "Global": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpclientresponsemessagequeuebinding//httpclientresponsemessagequeuebinding.factory.container.global.binding.json",
+        "[BindingName]": {
+            "bindingFilePath": "D://component//lib//factory//generated//httpclientresponsemessagequeuebinding//httpclientresponsemessagequeuebinding.factory.container.[bindingname].binding.json",
             "containerFilePath": "D://component//lib//factory//generated//httpclientresponsemessagequeuebinding//httpclientresponsemessagequeuebinding.factory.container.json",
             "isSingleton": false,
-            "ctorParameterInfo": [
-                {
-                    "name": "factoryContainerBindingName",
-                    "typeName": null
-                },
-                {
-                    "name": "messageQueue",
-                    "typeName": "MessageQueue"
-                }
-            ]
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpclientresponsemessagequeuebinding//httpclientresponsemessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//httpclientresponsemessagequeuebinding//httpclientresponsemessagequeuebinding.factory.container.json",
-            "isSingleton": true,
-            "ctorParameterInfo": [
-                {
-                    "name": "factoryContainerBindingName",
-                    "typeName": null
-                },
-                {
-                    "name": "messageQueue",
-                    "typeName": "MessageQueue"
-                }
-            ]
-        },
-        "FactorySpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpclientresponsemessagequeuebinding//httpclientresponsemessagequeuebinding.factory.container.factoryspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//httpclientresponsemessagequeuebinding//httpclientresponsemessagequeuebinding.factory.container.json",
-            "isSingleton": true,
             "ctorParameterInfo": [
                 {
                     "name": "factoryContainerBindingName",
@@ -1156,40 +416,10 @@
         }
     },
     "HttpClientStartedMessageQueueBinding": {
-        "Global": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpclientstartedmessagequeuebinding//httpclientstartedmessagequeuebinding.factory.container.global.binding.json",
+        "[BindingName]": {
+            "bindingFilePath": "D://component//lib//factory//generated//httpclientstartedmessagequeuebinding//httpclientstartedmessagequeuebinding.factory.container.[bindingname].binding.json",
             "containerFilePath": "D://component//lib//factory//generated//httpclientstartedmessagequeuebinding//httpclientstartedmessagequeuebinding.factory.container.json",
             "isSingleton": false,
-            "ctorParameterInfo": [
-                {
-                    "name": "factoryContainerBindingName",
-                    "typeName": null
-                },
-                {
-                    "name": "messageQueue",
-                    "typeName": "MessageQueue"
-                }
-            ]
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpclientstartedmessagequeuebinding//httpclientstartedmessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//httpclientstartedmessagequeuebinding//httpclientstartedmessagequeuebinding.factory.container.json",
-            "isSingleton": true,
-            "ctorParameterInfo": [
-                {
-                    "name": "factoryContainerBindingName",
-                    "typeName": null
-                },
-                {
-                    "name": "messageQueue",
-                    "typeName": "MessageQueue"
-                }
-            ]
-        },
-        "FactorySpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpclientstartedmessagequeuebinding//httpclientstartedmessagequeuebinding.factory.container.factoryspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//httpclientstartedmessagequeuebinding//httpclientstartedmessagequeuebinding.factory.container.json",
-            "isSingleton": true,
             "ctorParameterInfo": [
                 {
                     "name": "factoryContainerBindingName",
@@ -1203,40 +433,10 @@
         }
     },
     "HttpClientStartMessageQueueBinding": {
-        "Global": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpclientstartmessagequeuebinding//httpclientstartmessagequeuebinding.factory.container.global.binding.json",
+        "[BindingName]": {
+            "bindingFilePath": "D://component//lib//factory//generated//httpclientstartmessagequeuebinding//httpclientstartmessagequeuebinding.factory.container.[bindingname].binding.json",
             "containerFilePath": "D://component//lib//factory//generated//httpclientstartmessagequeuebinding//httpclientstartmessagequeuebinding.factory.container.json",
             "isSingleton": false,
-            "ctorParameterInfo": [
-                {
-                    "name": "factoryContainerBindingName",
-                    "typeName": null
-                },
-                {
-                    "name": "messageQueue",
-                    "typeName": "MessageQueue"
-                }
-            ]
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpclientstartmessagequeuebinding//httpclientstartmessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//httpclientstartmessagequeuebinding//httpclientstartmessagequeuebinding.factory.container.json",
-            "isSingleton": true,
-            "ctorParameterInfo": [
-                {
-                    "name": "factoryContainerBindingName",
-                    "typeName": null
-                },
-                {
-                    "name": "messageQueue",
-                    "typeName": "MessageQueue"
-                }
-            ]
-        },
-        "FactorySpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpclientstartmessagequeuebinding//httpclientstartmessagequeuebinding.factory.container.factoryspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//httpclientstartmessagequeuebinding//httpclientstartmessagequeuebinding.factory.container.json",
-            "isSingleton": true,
             "ctorParameterInfo": [
                 {
                     "name": "factoryContainerBindingName",
@@ -1250,40 +450,10 @@
         }
     },
     "HttpClientStopMessageQueueBinding": {
-        "Global": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpclientstopmessagequeuebinding//httpclientstopmessagequeuebinding.factory.container.global.binding.json",
+        "[BindingName]": {
+            "bindingFilePath": "D://component//lib//factory//generated//httpclientstopmessagequeuebinding//httpclientstopmessagequeuebinding.factory.container.[bindingname].binding.json",
             "containerFilePath": "D://component//lib//factory//generated//httpclientstopmessagequeuebinding//httpclientstopmessagequeuebinding.factory.container.json",
             "isSingleton": false,
-            "ctorParameterInfo": [
-                {
-                    "name": "factoryContainerBindingName",
-                    "typeName": null
-                },
-                {
-                    "name": "messageQueue",
-                    "typeName": "MessageQueue"
-                }
-            ]
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpclientstopmessagequeuebinding//httpclientstopmessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//httpclientstopmessagequeuebinding//httpclientstopmessagequeuebinding.factory.container.json",
-            "isSingleton": true,
-            "ctorParameterInfo": [
-                {
-                    "name": "factoryContainerBindingName",
-                    "typeName": null
-                },
-                {
-                    "name": "messageQueue",
-                    "typeName": "MessageQueue"
-                }
-            ]
-        },
-        "FactorySpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpclientstopmessagequeuebinding//httpclientstopmessagequeuebinding.factory.container.factoryspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//httpclientstopmessagequeuebinding//httpclientstopmessagequeuebinding.factory.container.json",
-            "isSingleton": true,
             "ctorParameterInfo": [
                 {
                     "name": "factoryContainerBindingName",
@@ -1297,40 +467,10 @@
         }
     },
     "HttpClientStoppedMessageQueueBinding": {
-        "Global": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpclientstoppedmessagequeuebinding//httpclientstoppedmessagequeuebinding.factory.container.global.binding.json",
+        "[BindingName]": {
+            "bindingFilePath": "D://component//lib//factory//generated//httpclientstoppedmessagequeuebinding//httpclientstoppedmessagequeuebinding.factory.container.[bindingname].binding.json",
             "containerFilePath": "D://component//lib//factory//generated//httpclientstoppedmessagequeuebinding//httpclientstoppedmessagequeuebinding.factory.container.json",
             "isSingleton": false,
-            "ctorParameterInfo": [
-                {
-                    "name": "factoryContainerBindingName",
-                    "typeName": null
-                },
-                {
-                    "name": "messageQueue",
-                    "typeName": "MessageQueue"
-                }
-            ]
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpclientstoppedmessagequeuebinding//httpclientstoppedmessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//httpclientstoppedmessagequeuebinding//httpclientstoppedmessagequeuebinding.factory.container.json",
-            "isSingleton": true,
-            "ctorParameterInfo": [
-                {
-                    "name": "factoryContainerBindingName",
-                    "typeName": null
-                },
-                {
-                    "name": "messageQueue",
-                    "typeName": "MessageQueue"
-                }
-            ]
-        },
-        "FactorySpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpclientstoppedmessagequeuebinding//httpclientstoppedmessagequeuebinding.factory.container.factoryspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//httpclientstoppedmessagequeuebinding//httpclientstoppedmessagequeuebinding.factory.container.json",
-            "isSingleton": true,
             "ctorParameterInfo": [
                 {
                     "name": "factoryContainerBindingName",
@@ -1344,32 +484,10 @@
         }
     },
     "HttpRequestMessage": {
-        "Global": {
-            "bindingFilePath": "D://component//lib//factory//generated//httprequestmessage//httprequestmessage.factory.container.global.binding.json",
+        "[BindingName]": {
+            "bindingFilePath": "D://component//lib//factory//generated//httprequestmessage//httprequestmessage.factory.container.[bindingname].binding.json",
             "containerFilePath": "D://component//lib//factory//generated//httprequestmessage//httprequestmessage.factory.container.json",
             "isSingleton": false,
-            "ctorParameterInfo": [
-                {
-                    "name": "message",
-                    "typeName": "Message"
-                }
-            ]
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//httprequestmessage//httprequestmessage.factory.container.multiplerequestsspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//httprequestmessage//httprequestmessage.factory.container.json",
-            "isSingleton": true,
-            "ctorParameterInfo": [
-                {
-                    "name": "message",
-                    "typeName": "Message"
-                }
-            ]
-        },
-        "FactorySpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//httprequestmessage//httprequestmessage.factory.container.factoryspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//httprequestmessage//httprequestmessage.factory.container.json",
-            "isSingleton": true,
             "ctorParameterInfo": [
                 {
                     "name": "message",
@@ -1379,32 +497,10 @@
         }
     },
     "HttpResponseMessage": {
-        "Global": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpresponsemessage//httpresponsemessage.factory.container.global.binding.json",
+        "[BindingName]": {
+            "bindingFilePath": "D://component//lib//factory//generated//httpresponsemessage//httpresponsemessage.factory.container.[bindingname].binding.json",
             "containerFilePath": "D://component//lib//factory//generated//httpresponsemessage//httpresponsemessage.factory.container.json",
             "isSingleton": false,
-            "ctorParameterInfo": [
-                {
-                    "name": "message",
-                    "typeName": "Message"
-                }
-            ]
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpresponsemessage//httpresponsemessage.factory.container.multiplerequestsspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//httpresponsemessage//httpresponsemessage.factory.container.json",
-            "isSingleton": true,
-            "ctorParameterInfo": [
-                {
-                    "name": "message",
-                    "typeName": "Message"
-                }
-            ]
-        },
-        "FactorySpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpresponsemessage//httpresponsemessage.factory.container.factoryspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//httpresponsemessage//httpresponsemessage.factory.container.json",
-            "isSingleton": true,
             "ctorParameterInfo": [
                 {
                     "name": "message",
@@ -1414,104 +510,10 @@
         }
     },
     "HttpServerMessageBus": {
-        "Global": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpservermessagebus//httpservermessagebus.factory.container.global.binding.json",
+        "[BindingName]": {
+            "bindingFilePath": "D://component//lib//factory//generated//httpservermessagebus//httpservermessagebus.factory.container.[bindingname].binding.json",
             "containerFilePath": "D://component//lib//factory//generated//httpservermessagebus//httpservermessagebus.factory.container.json",
             "isSingleton": false,
-            "ctorParameterInfo": [
-                {
-                    "name": "timeout",
-                    "typeName": null
-                },
-                {
-                    "name": "factoryContainerBindingName",
-                    "typeName": null
-                },
-                {
-                    "name": "httpServerRequestMessageQueueBinding",
-                    "typeName": "HttpServerRequestMessageQueueBinding"
-                },
-                {
-                    "name": "httpServerResponseMessageQueueBinding",
-                    "typeName": "HttpServerResponseMessageQueueBinding"
-                },
-                {
-                    "name": "httpServerStartMessageQueueBinding",
-                    "typeName": "HttpServerStartMessageQueueBinding"
-                },
-                {
-                    "name": "httpServerStartedMessageQueueBinding",
-                    "typeName": "HttpServerStartedMessageQueueBinding"
-                },
-                {
-                    "name": "httpServerStopMessageQueueBinding",
-                    "typeName": "HttpServerStopMessageQueueBinding"
-                },
-                {
-                    "name": "httpServerStoppedMessageQueueBinding",
-                    "typeName": "HttpServerStoppedMessageQueueBinding"
-                },
-                {
-                    "name": "senderAddress",
-                    "typeName": "SenderAddress"
-                },
-                {
-                    "name": "logger",
-                    "typeName": "Logger"
-                }
-            ]
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpservermessagebus//httpservermessagebus.factory.container.multiplerequestsspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//httpservermessagebus//httpservermessagebus.factory.container.json",
-            "isSingleton": true,
-            "ctorParameterInfo": [
-                {
-                    "name": "timeout",
-                    "typeName": null
-                },
-                {
-                    "name": "factoryContainerBindingName",
-                    "typeName": null
-                },
-                {
-                    "name": "httpServerRequestMessageQueueBinding",
-                    "typeName": "HttpServerRequestMessageQueueBinding"
-                },
-                {
-                    "name": "httpServerResponseMessageQueueBinding",
-                    "typeName": "HttpServerResponseMessageQueueBinding"
-                },
-                {
-                    "name": "httpServerStartMessageQueueBinding",
-                    "typeName": "HttpServerStartMessageQueueBinding"
-                },
-                {
-                    "name": "httpServerStartedMessageQueueBinding",
-                    "typeName": "HttpServerStartedMessageQueueBinding"
-                },
-                {
-                    "name": "httpServerStopMessageQueueBinding",
-                    "typeName": "HttpServerStopMessageQueueBinding"
-                },
-                {
-                    "name": "httpServerStoppedMessageQueueBinding",
-                    "typeName": "HttpServerStoppedMessageQueueBinding"
-                },
-                {
-                    "name": "senderAddress",
-                    "typeName": "SenderAddress"
-                },
-                {
-                    "name": "logger",
-                    "typeName": "Logger"
-                }
-            ]
-        },
-        "FactorySpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpservermessagebus//httpservermessagebus.factory.container.factoryspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//httpservermessagebus//httpservermessagebus.factory.container.json",
-            "isSingleton": true,
             "ctorParameterInfo": [
                 {
                     "name": "timeout",
@@ -1557,80 +559,10 @@
         }
     },
     "HttpServerMessageBusManager": {
-        "Global": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpservermessagebusmanager//httpservermessagebusmanager.factory.container.global.binding.json",
+        "[BindingName]": {
+            "bindingFilePath": "D://component//lib//factory//generated//httpservermessagebusmanager//httpservermessagebusmanager.factory.container.[bindingname].binding.json",
             "containerFilePath": "D://component//lib//factory//generated//httpservermessagebusmanager//httpservermessagebusmanager.factory.container.json",
             "isSingleton": false,
-            "ctorParameterInfo": [
-                {
-                    "name": "httpServerStoppedMessageQueueBinding",
-                    "typeName": "HttpServerStoppedMessageQueueBinding"
-                },
-                {
-                    "name": "factoryContainerBindingName",
-                    "typeName": null
-                },
-                {
-                    "name": "httpServerRequestMessageQueueBinding",
-                    "typeName": "HttpServerRequestMessageQueueBinding"
-                },
-                {
-                    "name": "httpServerResponseMessageQueueBinding",
-                    "typeName": "HttpServerResponseMessageQueueBinding"
-                },
-                {
-                    "name": "httpServerStartMessageQueueBinding",
-                    "typeName": "HttpServerStartMessageQueueBinding"
-                },
-                {
-                    "name": "httpServerStartedMessageQueueBinding",
-                    "typeName": "HttpServerStartedMessageQueueBinding"
-                },
-                {
-                    "name": "httpServerStopMessageQueueBinding",
-                    "typeName": "HttpServerStopMessageQueueBinding"
-                }
-            ]
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpservermessagebusmanager//httpservermessagebusmanager.factory.container.multiplerequestsspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//httpservermessagebusmanager//httpservermessagebusmanager.factory.container.json",
-            "isSingleton": true,
-            "ctorParameterInfo": [
-                {
-                    "name": "httpServerStoppedMessageQueueBinding",
-                    "typeName": "HttpServerStoppedMessageQueueBinding"
-                },
-                {
-                    "name": "factoryContainerBindingName",
-                    "typeName": null
-                },
-                {
-                    "name": "httpServerRequestMessageQueueBinding",
-                    "typeName": "HttpServerRequestMessageQueueBinding"
-                },
-                {
-                    "name": "httpServerResponseMessageQueueBinding",
-                    "typeName": "HttpServerResponseMessageQueueBinding"
-                },
-                {
-                    "name": "httpServerStartMessageQueueBinding",
-                    "typeName": "HttpServerStartMessageQueueBinding"
-                },
-                {
-                    "name": "httpServerStartedMessageQueueBinding",
-                    "typeName": "HttpServerStartedMessageQueueBinding"
-                },
-                {
-                    "name": "httpServerStopMessageQueueBinding",
-                    "typeName": "HttpServerStopMessageQueueBinding"
-                }
-            ]
-        },
-        "FactorySpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpservermessagebusmanager//httpservermessagebusmanager.factory.container.factoryspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//httpservermessagebusmanager//httpservermessagebusmanager.factory.container.json",
-            "isSingleton": true,
             "ctorParameterInfo": [
                 {
                     "name": "httpServerStoppedMessageQueueBinding",
@@ -1664,32 +596,10 @@
         }
     },
     "HttpServerRequestMessageBus": {
-        "Global": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpserverrequestmessagebus//httpserverrequestmessagebus.factory.container.global.binding.json",
+        "[BindingName]": {
+            "bindingFilePath": "D://component//lib//factory//generated//httpserverrequestmessagebus//httpserverrequestmessagebus.factory.container.[bindingname].binding.json",
             "containerFilePath": "D://component//lib//factory//generated//httpserverrequestmessagebus//httpserverrequestmessagebus.factory.container.json",
             "isSingleton": false,
-            "ctorParameterInfo": [
-                {
-                    "name": "httpServerRequestMessageQueueBinding",
-                    "typeName": "HttpServerRequestMessageQueueBinding"
-                }
-            ]
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpserverrequestmessagebus//httpserverrequestmessagebus.factory.container.multiplerequestsspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//httpserverrequestmessagebus//httpserverrequestmessagebus.factory.container.json",
-            "isSingleton": true,
-            "ctorParameterInfo": [
-                {
-                    "name": "httpServerRequestMessageQueueBinding",
-                    "typeName": "HttpServerRequestMessageQueueBinding"
-                }
-            ]
-        },
-        "FactorySpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpserverrequestmessagebus//httpserverrequestmessagebus.factory.container.factoryspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//httpserverrequestmessagebus//httpserverrequestmessagebus.factory.container.json",
-            "isSingleton": true,
             "ctorParameterInfo": [
                 {
                     "name": "httpServerRequestMessageQueueBinding",
@@ -1699,40 +609,10 @@
         }
     },
     "HttpServerRequestMessageQueueBinding": {
-        "Global": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpserverrequestmessagequeuebinding//httpserverrequestmessagequeuebinding.factory.container.global.binding.json",
+        "[BindingName]": {
+            "bindingFilePath": "D://component//lib//factory//generated//httpserverrequestmessagequeuebinding//httpserverrequestmessagequeuebinding.factory.container.[bindingname].binding.json",
             "containerFilePath": "D://component//lib//factory//generated//httpserverrequestmessagequeuebinding//httpserverrequestmessagequeuebinding.factory.container.json",
             "isSingleton": false,
-            "ctorParameterInfo": [
-                {
-                    "name": "factoryContainerBindingName",
-                    "typeName": null
-                },
-                {
-                    "name": "messageQueue",
-                    "typeName": "MessageQueue"
-                }
-            ]
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpserverrequestmessagequeuebinding//httpserverrequestmessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//httpserverrequestmessagequeuebinding//httpserverrequestmessagequeuebinding.factory.container.json",
-            "isSingleton": true,
-            "ctorParameterInfo": [
-                {
-                    "name": "factoryContainerBindingName",
-                    "typeName": null
-                },
-                {
-                    "name": "messageQueue",
-                    "typeName": "MessageQueue"
-                }
-            ]
-        },
-        "FactorySpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpserverrequestmessagequeuebinding//httpserverrequestmessagequeuebinding.factory.container.factoryspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//httpserverrequestmessagequeuebinding//httpserverrequestmessagequeuebinding.factory.container.json",
-            "isSingleton": true,
             "ctorParameterInfo": [
                 {
                     "name": "factoryContainerBindingName",
@@ -1746,32 +626,10 @@
         }
     },
     "HttpServerResponseMessageBus": {
-        "Global": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpserverresponsemessagebus//httpserverresponsemessagebus.factory.container.global.binding.json",
+        "[BindingName]": {
+            "bindingFilePath": "D://component//lib//factory//generated//httpserverresponsemessagebus//httpserverresponsemessagebus.factory.container.[bindingname].binding.json",
             "containerFilePath": "D://component//lib//factory//generated//httpserverresponsemessagebus//httpserverresponsemessagebus.factory.container.json",
             "isSingleton": false,
-            "ctorParameterInfo": [
-                {
-                    "name": "httpServerResponseMessageQueueBinding",
-                    "typeName": "HttpServerResponseMessageQueueBinding"
-                }
-            ]
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpserverresponsemessagebus//httpserverresponsemessagebus.factory.container.multiplerequestsspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//httpserverresponsemessagebus//httpserverresponsemessagebus.factory.container.json",
-            "isSingleton": true,
-            "ctorParameterInfo": [
-                {
-                    "name": "httpServerResponseMessageQueueBinding",
-                    "typeName": "HttpServerResponseMessageQueueBinding"
-                }
-            ]
-        },
-        "FactorySpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpserverresponsemessagebus//httpserverresponsemessagebus.factory.container.factoryspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//httpserverresponsemessagebus//httpserverresponsemessagebus.factory.container.json",
-            "isSingleton": true,
             "ctorParameterInfo": [
                 {
                     "name": "httpServerResponseMessageQueueBinding",
@@ -1781,40 +639,10 @@
         }
     },
     "HttpServerResponseMessageQueueBinding": {
-        "Global": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpserverresponsemessagequeuebinding//httpserverresponsemessagequeuebinding.factory.container.global.binding.json",
+        "[BindingName]": {
+            "bindingFilePath": "D://component//lib//factory//generated//httpserverresponsemessagequeuebinding//httpserverresponsemessagequeuebinding.factory.container.[bindingname].binding.json",
             "containerFilePath": "D://component//lib//factory//generated//httpserverresponsemessagequeuebinding//httpserverresponsemessagequeuebinding.factory.container.json",
             "isSingleton": false,
-            "ctorParameterInfo": [
-                {
-                    "name": "factoryContainerBindingName",
-                    "typeName": null
-                },
-                {
-                    "name": "messageQueue",
-                    "typeName": "MessageQueue"
-                }
-            ]
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpserverresponsemessagequeuebinding//httpserverresponsemessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//httpserverresponsemessagequeuebinding//httpserverresponsemessagequeuebinding.factory.container.json",
-            "isSingleton": true,
-            "ctorParameterInfo": [
-                {
-                    "name": "factoryContainerBindingName",
-                    "typeName": null
-                },
-                {
-                    "name": "messageQueue",
-                    "typeName": "MessageQueue"
-                }
-            ]
-        },
-        "FactorySpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpserverresponsemessagequeuebinding//httpserverresponsemessagequeuebinding.factory.container.factoryspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//httpserverresponsemessagequeuebinding//httpserverresponsemessagequeuebinding.factory.container.json",
-            "isSingleton": true,
             "ctorParameterInfo": [
                 {
                     "name": "factoryContainerBindingName",
@@ -1828,40 +656,10 @@
         }
     },
     "HttpServerStartedMessageQueueBinding": {
-        "Global": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpserverstartedmessagequeuebinding//httpserverstartedmessagequeuebinding.factory.container.global.binding.json",
+        "[BindingName]": {
+            "bindingFilePath": "D://component//lib//factory//generated//httpserverstartedmessagequeuebinding//httpserverstartedmessagequeuebinding.factory.container.[bindingname].binding.json",
             "containerFilePath": "D://component//lib//factory//generated//httpserverstartedmessagequeuebinding//httpserverstartedmessagequeuebinding.factory.container.json",
             "isSingleton": false,
-            "ctorParameterInfo": [
-                {
-                    "name": "factoryContainerBindingName",
-                    "typeName": null
-                },
-                {
-                    "name": "messageQueue",
-                    "typeName": "MessageQueue"
-                }
-            ]
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpserverstartedmessagequeuebinding//httpserverstartedmessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//httpserverstartedmessagequeuebinding//httpserverstartedmessagequeuebinding.factory.container.json",
-            "isSingleton": true,
-            "ctorParameterInfo": [
-                {
-                    "name": "factoryContainerBindingName",
-                    "typeName": null
-                },
-                {
-                    "name": "messageQueue",
-                    "typeName": "MessageQueue"
-                }
-            ]
-        },
-        "FactorySpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpserverstartedmessagequeuebinding//httpserverstartedmessagequeuebinding.factory.container.factoryspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//httpserverstartedmessagequeuebinding//httpserverstartedmessagequeuebinding.factory.container.json",
-            "isSingleton": true,
             "ctorParameterInfo": [
                 {
                     "name": "factoryContainerBindingName",
@@ -1875,40 +673,10 @@
         }
     },
     "HttpServerStartMessageQueueBinding": {
-        "Global": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpserverstartmessagequeuebinding//httpserverstartmessagequeuebinding.factory.container.global.binding.json",
+        "[BindingName]": {
+            "bindingFilePath": "D://component//lib//factory//generated//httpserverstartmessagequeuebinding//httpserverstartmessagequeuebinding.factory.container.[bindingname].binding.json",
             "containerFilePath": "D://component//lib//factory//generated//httpserverstartmessagequeuebinding//httpserverstartmessagequeuebinding.factory.container.json",
             "isSingleton": false,
-            "ctorParameterInfo": [
-                {
-                    "name": "factoryContainerBindingName",
-                    "typeName": null
-                },
-                {
-                    "name": "messageQueue",
-                    "typeName": "MessageQueue"
-                }
-            ]
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpserverstartmessagequeuebinding//httpserverstartmessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//httpserverstartmessagequeuebinding//httpserverstartmessagequeuebinding.factory.container.json",
-            "isSingleton": true,
-            "ctorParameterInfo": [
-                {
-                    "name": "factoryContainerBindingName",
-                    "typeName": null
-                },
-                {
-                    "name": "messageQueue",
-                    "typeName": "MessageQueue"
-                }
-            ]
-        },
-        "FactorySpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpserverstartmessagequeuebinding//httpserverstartmessagequeuebinding.factory.container.factoryspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//httpserverstartmessagequeuebinding//httpserverstartmessagequeuebinding.factory.container.json",
-            "isSingleton": true,
             "ctorParameterInfo": [
                 {
                     "name": "factoryContainerBindingName",
@@ -1922,40 +690,10 @@
         }
     },
     "HttpServerStopMessageQueueBinding": {
-        "Global": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.container.global.binding.json",
+        "[BindingName]": {
+            "bindingFilePath": "D://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.container.[bindingname].binding.json",
             "containerFilePath": "D://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.container.json",
             "isSingleton": false,
-            "ctorParameterInfo": [
-                {
-                    "name": "factoryContainerBindingName",
-                    "typeName": null
-                },
-                {
-                    "name": "messageQueue",
-                    "typeName": "MessageQueue"
-                }
-            ]
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.container.json",
-            "isSingleton": true,
-            "ctorParameterInfo": [
-                {
-                    "name": "factoryContainerBindingName",
-                    "typeName": null
-                },
-                {
-                    "name": "messageQueue",
-                    "typeName": "MessageQueue"
-                }
-            ]
-        },
-        "FactorySpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.container.factoryspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.container.json",
-            "isSingleton": true,
             "ctorParameterInfo": [
                 {
                     "name": "factoryContainerBindingName",
@@ -1969,40 +707,10 @@
         }
     },
     "HttpServerStoppedMessageQueueBinding": {
-        "Global": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpserverstoppedmessagequeuebinding//httpserverstoppedmessagequeuebinding.factory.container.global.binding.json",
+        "[BindingName]": {
+            "bindingFilePath": "D://component//lib//factory//generated//httpserverstoppedmessagequeuebinding//httpserverstoppedmessagequeuebinding.factory.container.[bindingname].binding.json",
             "containerFilePath": "D://component//lib//factory//generated//httpserverstoppedmessagequeuebinding//httpserverstoppedmessagequeuebinding.factory.container.json",
             "isSingleton": false,
-            "ctorParameterInfo": [
-                {
-                    "name": "factoryContainerBindingName",
-                    "typeName": null
-                },
-                {
-                    "name": "messageQueue",
-                    "typeName": "MessageQueue"
-                }
-            ]
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpserverstoppedmessagequeuebinding//httpserverstoppedmessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//httpserverstoppedmessagequeuebinding//httpserverstoppedmessagequeuebinding.factory.container.json",
-            "isSingleton": true,
-            "ctorParameterInfo": [
-                {
-                    "name": "factoryContainerBindingName",
-                    "typeName": null
-                },
-                {
-                    "name": "messageQueue",
-                    "typeName": "MessageQueue"
-                }
-            ]
-        },
-        "FactorySpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpserverstoppedmessagequeuebinding//httpserverstoppedmessagequeuebinding.factory.container.factoryspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//httpserverstoppedmessagequeuebinding//httpserverstoppedmessagequeuebinding.factory.container.json",
-            "isSingleton": true,
             "ctorParameterInfo": [
                 {
                     "name": "factoryContainerBindingName",
@@ -2016,32 +724,10 @@
         }
     },
     "WebSocketClientRequestMessageBus": {
-        "Global": {
-            "bindingFilePath": "D://component//lib//factory//generated//websocketclientrequestmessagebus//websocketclientrequestmessagebus.factory.container.global.binding.json",
+        "[BindingName]": {
+            "bindingFilePath": "D://component//lib//factory//generated//websocketclientrequestmessagebus//websocketclientrequestmessagebus.factory.container.[bindingname].binding.json",
             "containerFilePath": "D://component//lib//factory//generated//websocketclientrequestmessagebus//websocketclientrequestmessagebus.factory.container.json",
             "isSingleton": false,
-            "ctorParameterInfo": [
-                {
-                    "name": "websocketClientRequestMessageQueueBinding",
-                    "typeName": "WebSocketClientRequestMessageQueueBinding"
-                }
-            ]
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//websocketclientrequestmessagebus//websocketclientrequestmessagebus.factory.container.multiplerequestsspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//websocketclientrequestmessagebus//websocketclientrequestmessagebus.factory.container.json",
-            "isSingleton": true,
-            "ctorParameterInfo": [
-                {
-                    "name": "websocketClientRequestMessageQueueBinding",
-                    "typeName": "WebSocketClientRequestMessageQueueBinding"
-                }
-            ]
-        },
-        "FactorySpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//websocketclientrequestmessagebus//websocketclientrequestmessagebus.factory.container.factoryspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//websocketclientrequestmessagebus//websocketclientrequestmessagebus.factory.container.json",
-            "isSingleton": true,
             "ctorParameterInfo": [
                 {
                     "name": "websocketClientRequestMessageQueueBinding",
@@ -2051,40 +737,10 @@
         }
     },
     "WebSocketClientRequestMessageQueueBinding": {
-        "Global": {
-            "bindingFilePath": "D://component//lib//factory//generated//websocketclientrequestmessagequeuebinding//websocketclientrequestmessagequeuebinding.factory.container.global.binding.json",
+        "[BindingName]": {
+            "bindingFilePath": "D://component//lib//factory//generated//websocketclientrequestmessagequeuebinding//websocketclientrequestmessagequeuebinding.factory.container.[bindingname].binding.json",
             "containerFilePath": "D://component//lib//factory//generated//websocketclientrequestmessagequeuebinding//websocketclientrequestmessagequeuebinding.factory.container.json",
             "isSingleton": false,
-            "ctorParameterInfo": [
-                {
-                    "name": "factoryContainerBindingName",
-                    "typeName": null
-                },
-                {
-                    "name": "messageQueue",
-                    "typeName": "MessageQueue"
-                }
-            ]
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//websocketclientrequestmessagequeuebinding//websocketclientrequestmessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//websocketclientrequestmessagequeuebinding//websocketclientrequestmessagequeuebinding.factory.container.json",
-            "isSingleton": true,
-            "ctorParameterInfo": [
-                {
-                    "name": "factoryContainerBindingName",
-                    "typeName": null
-                },
-                {
-                    "name": "messageQueue",
-                    "typeName": "MessageQueue"
-                }
-            ]
-        },
-        "FactorySpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//websocketclientrequestmessagequeuebinding//websocketclientrequestmessagequeuebinding.factory.container.factoryspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//websocketclientrequestmessagequeuebinding//websocketclientrequestmessagequeuebinding.factory.container.json",
-            "isSingleton": true,
             "ctorParameterInfo": [
                 {
                     "name": "factoryContainerBindingName",
@@ -2098,32 +754,10 @@
         }
     },
     "WebSocketClientResponseMessageBus": {
-        "Global": {
-            "bindingFilePath": "D://component//lib//factory//generated//websocketclientresponsemessagebus//websocketclientresponsemessagebus.factory.container.global.binding.json",
+        "[BindingName]": {
+            "bindingFilePath": "D://component//lib//factory//generated//websocketclientresponsemessagebus//websocketclientresponsemessagebus.factory.container.[bindingname].binding.json",
             "containerFilePath": "D://component//lib//factory//generated//websocketclientresponsemessagebus//websocketclientresponsemessagebus.factory.container.json",
             "isSingleton": false,
-            "ctorParameterInfo": [
-                {
-                    "name": "websocketClientResponseMessageQueueBinding",
-                    "typeName": "WebSocketClientResponseMessageQueueBinding"
-                }
-            ]
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//websocketclientresponsemessagebus//websocketclientresponsemessagebus.factory.container.multiplerequestsspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//websocketclientresponsemessagebus//websocketclientresponsemessagebus.factory.container.json",
-            "isSingleton": true,
-            "ctorParameterInfo": [
-                {
-                    "name": "websocketClientResponseMessageQueueBinding",
-                    "typeName": "WebSocketClientResponseMessageQueueBinding"
-                }
-            ]
-        },
-        "FactorySpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//websocketclientresponsemessagebus//websocketclientresponsemessagebus.factory.container.factoryspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//websocketclientresponsemessagebus//websocketclientresponsemessagebus.factory.container.json",
-            "isSingleton": true,
             "ctorParameterInfo": [
                 {
                     "name": "websocketClientResponseMessageQueueBinding",
@@ -2133,40 +767,10 @@
         }
     },
     "WebSocketClientResponseMessageQueueBinding": {
-        "Global": {
-            "bindingFilePath": "D://component//lib//factory//generated//websocketclientresponsemessagequeuebinding//websocketclientresponsemessagequeuebinding.factory.container.global.binding.json",
+        "[BindingName]": {
+            "bindingFilePath": "D://component//lib//factory//generated//websocketclientresponsemessagequeuebinding//websocketclientresponsemessagequeuebinding.factory.container.[bindingname].binding.json",
             "containerFilePath": "D://component//lib//factory//generated//websocketclientresponsemessagequeuebinding//websocketclientresponsemessagequeuebinding.factory.container.json",
             "isSingleton": false,
-            "ctorParameterInfo": [
-                {
-                    "name": "factoryContainerBindingName",
-                    "typeName": null
-                },
-                {
-                    "name": "messageQueue",
-                    "typeName": "MessageQueue"
-                }
-            ]
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//websocketclientresponsemessagequeuebinding//websocketclientresponsemessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//websocketclientresponsemessagequeuebinding//websocketclientresponsemessagequeuebinding.factory.container.json",
-            "isSingleton": true,
-            "ctorParameterInfo": [
-                {
-                    "name": "factoryContainerBindingName",
-                    "typeName": null
-                },
-                {
-                    "name": "messageQueue",
-                    "typeName": "MessageQueue"
-                }
-            ]
-        },
-        "FactorySpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//websocketclientresponsemessagequeuebinding//websocketclientresponsemessagequeuebinding.factory.container.factoryspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//websocketclientresponsemessagequeuebinding//websocketclientresponsemessagequeuebinding.factory.container.json",
-            "isSingleton": true,
             "ctorParameterInfo": [
                 {
                     "name": "factoryContainerBindingName",
@@ -2180,32 +784,10 @@
         }
     },
     "WebSocketRequestMessage": {
-        "Global": {
-            "bindingFilePath": "D://component//lib//factory//generated//websocketrequestmessage//websocketrequestmessage.factory.container.global.binding.json",
+        "[BindingName]": {
+            "bindingFilePath": "D://component//lib//factory//generated//websocketrequestmessage//websocketrequestmessage.factory.container.[bindingname].binding.json",
             "containerFilePath": "D://component//lib//factory//generated//websocketrequestmessage//websocketrequestmessage.factory.container.json",
             "isSingleton": false,
-            "ctorParameterInfo": [
-                {
-                    "name": "message",
-                    "typeName": "Message"
-                }
-            ]
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//websocketrequestmessage//websocketrequestmessage.factory.container.multiplerequestsspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//websocketrequestmessage//websocketrequestmessage.factory.container.json",
-            "isSingleton": true,
-            "ctorParameterInfo": [
-                {
-                    "name": "message",
-                    "typeName": "Message"
-                }
-            ]
-        },
-        "FactorySpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//websocketrequestmessage//websocketrequestmessage.factory.container.factoryspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//websocketrequestmessage//websocketrequestmessage.factory.container.json",
-            "isSingleton": true,
             "ctorParameterInfo": [
                 {
                     "name": "message",
@@ -2215,32 +797,10 @@
         }
     },
     "WebSocketResponseMessage": {
-        "Global": {
-            "bindingFilePath": "D://component//lib//factory//generated//websocketresponsemessage//websocketresponsemessage.factory.container.global.binding.json",
+        "[BindingName]": {
+            "bindingFilePath": "D://component//lib//factory//generated//websocketresponsemessage//websocketresponsemessage.factory.container.[bindingname].binding.json",
             "containerFilePath": "D://component//lib//factory//generated//websocketresponsemessage//websocketresponsemessage.factory.container.json",
             "isSingleton": false,
-            "ctorParameterInfo": [
-                {
-                    "name": "message",
-                    "typeName": "Message"
-                }
-            ]
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//websocketresponsemessage//websocketresponsemessage.factory.container.multiplerequestsspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//websocketresponsemessage//websocketresponsemessage.factory.container.json",
-            "isSingleton": true,
-            "ctorParameterInfo": [
-                {
-                    "name": "message",
-                    "typeName": "Message"
-                }
-            ]
-        },
-        "FactorySpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//websocketresponsemessage//websocketresponsemessage.factory.container.factoryspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//websocketresponsemessage//websocketresponsemessage.factory.container.json",
-            "isSingleton": true,
             "ctorParameterInfo": [
                 {
                     "name": "message",
@@ -2250,32 +810,10 @@
         }
     },
     "WebSocketServerRequestMessageBus": {
-        "Global": {
-            "bindingFilePath": "D://component//lib//factory//generated//websocketserverrequestmessagebus//websocketserverrequestmessagebus.factory.container.global.binding.json",
+        "[BindingName]": {
+            "bindingFilePath": "D://component//lib//factory//generated//websocketserverrequestmessagebus//websocketserverrequestmessagebus.factory.container.[bindingname].binding.json",
             "containerFilePath": "D://component//lib//factory//generated//websocketserverrequestmessagebus//websocketserverrequestmessagebus.factory.container.json",
             "isSingleton": false,
-            "ctorParameterInfo": [
-                {
-                    "name": "webSocketServerRequestMessageQueueBinding",
-                    "typeName": "WebSocketServerRequestMessageQueueBinding"
-                }
-            ]
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//websocketserverrequestmessagebus//websocketserverrequestmessagebus.factory.container.multiplerequestsspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//websocketserverrequestmessagebus//websocketserverrequestmessagebus.factory.container.json",
-            "isSingleton": true,
-            "ctorParameterInfo": [
-                {
-                    "name": "webSocketServerRequestMessageQueueBinding",
-                    "typeName": "WebSocketServerRequestMessageQueueBinding"
-                }
-            ]
-        },
-        "FactorySpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//websocketserverrequestmessagebus//websocketserverrequestmessagebus.factory.container.factoryspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//websocketserverrequestmessagebus//websocketserverrequestmessagebus.factory.container.json",
-            "isSingleton": true,
             "ctorParameterInfo": [
                 {
                     "name": "webSocketServerRequestMessageQueueBinding",
@@ -2285,40 +823,10 @@
         }
     },
     "WebSocketServerRequestMessageQueueBinding": {
-        "Global": {
-            "bindingFilePath": "D://component//lib//factory//generated//websocketserverrequestmessagequeuebinding//websocketserverrequestmessagequeuebinding.factory.container.global.binding.json",
+        "[BindingName]": {
+            "bindingFilePath": "D://component//lib//factory//generated//websocketserverrequestmessagequeuebinding//websocketserverrequestmessagequeuebinding.factory.container.[bindingname].binding.json",
             "containerFilePath": "D://component//lib//factory//generated//websocketserverrequestmessagequeuebinding//websocketserverrequestmessagequeuebinding.factory.container.json",
             "isSingleton": false,
-            "ctorParameterInfo": [
-                {
-                    "name": "factoryContainerBindingName",
-                    "typeName": null
-                },
-                {
-                    "name": "messageQueue",
-                    "typeName": "MessageQueue"
-                }
-            ]
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//websocketserverrequestmessagequeuebinding//websocketserverrequestmessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//websocketserverrequestmessagequeuebinding//websocketserverrequestmessagequeuebinding.factory.container.json",
-            "isSingleton": true,
-            "ctorParameterInfo": [
-                {
-                    "name": "factoryContainerBindingName",
-                    "typeName": null
-                },
-                {
-                    "name": "messageQueue",
-                    "typeName": "MessageQueue"
-                }
-            ]
-        },
-        "FactorySpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//websocketserverrequestmessagequeuebinding//websocketserverrequestmessagequeuebinding.factory.container.factoryspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//websocketserverrequestmessagequeuebinding//websocketserverrequestmessagequeuebinding.factory.container.json",
-            "isSingleton": true,
             "ctorParameterInfo": [
                 {
                     "name": "factoryContainerBindingName",
@@ -2332,32 +840,10 @@
         }
     },
     "WebSocketServerResponseMessageBus": {
-        "Global": {
-            "bindingFilePath": "D://component//lib//factory//generated//websocketserverresponsemessagebus//websocketserverresponsemessagebus.factory.container.global.binding.json",
+        "[BindingName]": {
+            "bindingFilePath": "D://component//lib//factory//generated//websocketserverresponsemessagebus//websocketserverresponsemessagebus.factory.container.[bindingname].binding.json",
             "containerFilePath": "D://component//lib//factory//generated//websocketserverresponsemessagebus//websocketserverresponsemessagebus.factory.container.json",
             "isSingleton": false,
-            "ctorParameterInfo": [
-                {
-                    "name": "webSocketServerResponseMessageQueueBinding",
-                    "typeName": "WebSocketServerResponseMessageQueueBinding"
-                }
-            ]
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//websocketserverresponsemessagebus//websocketserverresponsemessagebus.factory.container.multiplerequestsspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//websocketserverresponsemessagebus//websocketserverresponsemessagebus.factory.container.json",
-            "isSingleton": true,
-            "ctorParameterInfo": [
-                {
-                    "name": "webSocketServerResponseMessageQueueBinding",
-                    "typeName": "WebSocketServerResponseMessageQueueBinding"
-                }
-            ]
-        },
-        "FactorySpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//websocketserverresponsemessagebus//websocketserverresponsemessagebus.factory.container.factoryspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//websocketserverresponsemessagebus//websocketserverresponsemessagebus.factory.container.json",
-            "isSingleton": true,
             "ctorParameterInfo": [
                 {
                     "name": "webSocketServerResponseMessageQueueBinding",
@@ -2367,40 +853,10 @@
         }
     },
     "WebSocketServerResponseMessageQueueBinding": {
-        "Global": {
-            "bindingFilePath": "D://component//lib//factory//generated//websocketserverresponsemessagequeuebinding//websocketserverresponsemessagequeuebinding.factory.container.global.binding.json",
+        "[BindingName]": {
+            "bindingFilePath": "D://component//lib//factory//generated//websocketserverresponsemessagequeuebinding//websocketserverresponsemessagequeuebinding.factory.container.[bindingname].binding.json",
             "containerFilePath": "D://component//lib//factory//generated//websocketserverresponsemessagequeuebinding//websocketserverresponsemessagequeuebinding.factory.container.json",
             "isSingleton": false,
-            "ctorParameterInfo": [
-                {
-                    "name": "factoryContainerBindingName",
-                    "typeName": null
-                },
-                {
-                    "name": "messageQueue",
-                    "typeName": "MessageQueue"
-                }
-            ]
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//websocketserverresponsemessagequeuebinding//websocketserverresponsemessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//websocketserverresponsemessagequeuebinding//websocketserverresponsemessagequeuebinding.factory.container.json",
-            "isSingleton": true,
-            "ctorParameterInfo": [
-                {
-                    "name": "factoryContainerBindingName",
-                    "typeName": null
-                },
-                {
-                    "name": "messageQueue",
-                    "typeName": "MessageQueue"
-                }
-            ]
-        },
-        "FactorySpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//websocketserverresponsemessagequeuebinding//websocketserverresponsemessagequeuebinding.factory.container.factoryspec.binding.json",
-            "containerFilePath": "D://component//lib//factory//generated//websocketserverresponsemessagequeuebinding//websocketserverresponsemessagequeuebinding.factory.container.json",
-            "isSingleton": true,
             "ctorParameterInfo": [
                 {
                     "name": "factoryContainerBindingName",

@@ -1,0 +1,12 @@
+{
+    "bindingName": "[BindingName]",
+    "containerFilePath": "D://component//lib//factory//generated//httpserverresponsemessagequeuebinding//httpserverresponsemessagequeuebinding.factory.container.json",
+    "isSingleton": false,
+    "ctorParameters": {
+        "factoryContainerBindingName": null,
+        "messageQueue": {
+            "containerFilePath": "D://component//lib//factory//generated//messagequeue//messagequeue.factory.container.json"
+        }
+    },
+    "instances": {}
+}

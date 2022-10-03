@@ -1,0 +1,10 @@
+{
+    "bindingName": "[BindingName]",
+    "containerFilePath": "D://component//lib//factory//generated//senderaddress//senderaddress.factory.container.json",
+    "isSingleton": false,
+    "ctorParameters": {
+        "senderHost": null,
+        "senderPort": null
+    },
+    "instances": {}
+}

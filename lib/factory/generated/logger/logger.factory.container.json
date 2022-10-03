@@ -5,14 +5,8 @@
     "prototypeScriptPath": "D://component//lib//logger.prototype.js",
     "factoryScriptPath": "D://component//lib//factory//generated//logger//logger.factory.js",
     "bindings": {
-        "Global": {
-            "bindingFilePath": "D://component//lib//factory//generated//logger//logger.factory.container.global.binding.json"
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//logger//logger.factory.container.multiplerequestsspec.binding.json"
-        },
-        "FactorySpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//logger//logger.factory.container.factoryspec.binding.json"
+        "[BindingName]": {
+            "bindingFilePath": "D://component//lib//factory//generated//logger//logger.factory.container.[bindingname].binding.json"
         }
     }
 }

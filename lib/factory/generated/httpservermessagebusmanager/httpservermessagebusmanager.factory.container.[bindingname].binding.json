@@ -1,0 +1,27 @@
+{
+    "bindingName": "[BindingName]",
+    "containerFilePath": "D://component//lib//factory//generated//httpservermessagebusmanager//httpservermessagebusmanager.factory.container.json",
+    "isSingleton": false,
+    "ctorParameters": {
+        "httpServerStoppedMessageQueueBinding": {
+            "containerFilePath": "D://component//lib//factory//generated//httpserverstoppedmessagequeuebinding//httpserverstoppedmessagequeuebinding.factory.container.json"
+        },
+        "factoryContainerBindingName": null,
+        "httpServerRequestMessageQueueBinding": {
+            "containerFilePath": "D://component//lib//factory//generated//httpserverrequestmessagequeuebinding//httpserverrequestmessagequeuebinding.factory.container.json"
+        },
+        "httpServerResponseMessageQueueBinding": {
+            "containerFilePath": "D://component//lib//factory//generated//httpserverresponsemessagequeuebinding//httpserverresponsemessagequeuebinding.factory.container.json"
+        },
+        "httpServerStartMessageQueueBinding": {
+            "containerFilePath": "D://component//lib//factory//generated//httpserverstartmessagequeuebinding//httpserverstartmessagequeuebinding.factory.container.json"
+        },
+        "httpServerStartedMessageQueueBinding": {
+            "containerFilePath": "D://component//lib//factory//generated//httpserverstartedmessagequeuebinding//httpserverstartedmessagequeuebinding.factory.container.json"
+        },
+        "httpServerStopMessageQueueBinding": {
+            "containerFilePath": "D://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.container.json"
+        }
+    },
+    "instances": {}
+}

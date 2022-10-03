@@ -1,0 +1,18 @@
+{
+    "bindingName": "[BindingName]",
+    "containerFilePath": "D://component//lib//factory//generated//messagecontent//messagecontent.factory.container.json",
+    "isSingleton": false,
+    "ctorParameters": {
+        "messageContentMetadata": {
+            "containerFilePath": "D://component//lib//factory//generated//messagecontentmetadata//messagecontentmetadata.factory.container.json"
+        },
+        "data": null,
+        "userSessions": {
+            "containerFilePath": "D://component//lib//factory//generated//usersessions//usersessions.factory.container.json"
+        },
+        "messageMetadata": {
+            "containerFilePath": "D://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.json"
+        }
+    },
+    "instances": {}
+}

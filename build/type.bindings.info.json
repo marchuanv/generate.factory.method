@@ -1,7 +1,11 @@
 [
     {
         "typeName": "ClientMessageBus",
-        "bindingName": "Global",
+        "bindingNames": [
+            "Global",
+            "MultipleRequestsSpec",
+            "FactorySpec"
+        ],
         "isSingleton": false,
         "ctorParameterInfo": [
             {
@@ -16,52 +20,15 @@
                 "name": "clientResponseMessageBus",
                 "typeName": "HttpClientResponseMessageBus"
             }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "ClientMessageBus",
-        "bindingName": "MultipleRequestsSpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "messageConverter",
-                "typeName": "MessageConverter"
-            },
-            {
-                "name": "clientRequestMessageBus",
-                "typeName": "HttpClientRequestMessageBus"
-            },
-            {
-                "name": "clientResponseMessageBus",
-                "typeName": "HttpClientResponseMessageBus"
-            }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "ClientMessageBus",
-        "bindingName": "FactorySpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "messageConverter",
-                "typeName": "MessageConverter"
-            },
-            {
-                "name": "clientRequestMessageBus",
-                "typeName": "HttpClientRequestMessageBus"
-            },
-            {
-                "name": "clientResponseMessageBus",
-                "typeName": "HttpClientResponseMessageBus"
-            }
-        ],
-        "dependantBindings": []
+        ]
     },
     {
         "typeName": "Component",
-        "bindingName": "Global",
+        "bindingNames": [
+            "Global",
+            "MultipleRequestsSpec",
+            "FactorySpec"
+        ],
         "isSingleton": false,
         "ctorParameterInfo": [
             {
@@ -84,125 +51,40 @@
                 "name": "userSessions",
                 "typeName": "UserSessions"
             }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "Component",
-        "bindingName": "MultipleRequestsSpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "packageJson",
-                "typeName": null
-            },
-            {
-                "name": "factoryContainerBindingName",
-                "typeName": null
-            },
-            {
-                "name": "clientMessageBus",
-                "typeName": "ClientMessageBus"
-            },
-            {
-                "name": "serverMessageBus",
-                "typeName": "ServerMessageBus"
-            },
-            {
-                "name": "userSessions",
-                "typeName": "UserSessions"
-            }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "Component",
-        "bindingName": "FactorySpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "packageJson",
-                "typeName": null
-            },
-            {
-                "name": "factoryContainerBindingName",
-                "typeName": null
-            },
-            {
-                "name": "clientMessageBus",
-                "typeName": "ClientMessageBus"
-            },
-            {
-                "name": "serverMessageBus",
-                "typeName": "ServerMessageBus"
-            },
-            {
-                "name": "userSessions",
-                "typeName": "UserSessions"
-            }
-        ],
-        "dependantBindings": []
+        ]
     },
     {
         "typeName": "ContentType",
-        "bindingName": "Global",
+        "bindingNames": [
+            "Global",
+            "MultipleRequestsSpec",
+            "FactorySpec"
+        ],
         "isSingleton": false,
         "ctorParameterInfo": [
             {
                 "name": "name",
                 "typeName": null
             }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "ContentType",
-        "bindingName": "MultipleRequestsSpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "name",
-                "typeName": null
-            }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "ContentType",
-        "bindingName": "FactorySpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "name",
-                "typeName": null
-            }
-        ],
-        "dependantBindings": []
+        ]
     },
     {
         "typeName": "Logger",
-        "bindingName": "Global",
+        "bindingNames": [
+            "Global",
+            "MultipleRequestsSpec",
+            "FactorySpec"
+        ],
         "isSingleton": false,
-        "ctorParameterInfo": [],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "Logger",
-        "bindingName": "MultipleRequestsSpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "Logger",
-        "bindingName": "FactorySpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [],
-        "dependantBindings": []
+        "ctorParameterInfo": []
     },
     {
         "typeName": "Message",
-        "bindingName": "Global",
+        "bindingNames": [
+            "Global",
+            "MultipleRequestsSpec",
+            "FactorySpec"
+        ],
         "isSingleton": false,
         "ctorParameterInfo": [
             {
@@ -229,76 +111,15 @@
                 "name": "messageMetadata",
                 "typeName": "MessageMetadata"
             }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "Message",
-        "bindingName": "MultipleRequestsSpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "messageStatus",
-                "typeName": "MessageStatus"
-            },
-            {
-                "name": "factoryContainerBindingName",
-                "typeName": null
-            },
-            {
-                "name": "Id",
-                "typeName": null
-            },
-            {
-                "name": "messageContent",
-                "typeName": "MessageContent"
-            },
-            {
-                "name": "messageContentMetadata",
-                "typeName": "MessageContentMetadata"
-            },
-            {
-                "name": "messageMetadata",
-                "typeName": "MessageMetadata"
-            }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "Message",
-        "bindingName": "FactorySpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "messageStatus",
-                "typeName": "MessageStatus"
-            },
-            {
-                "name": "factoryContainerBindingName",
-                "typeName": null
-            },
-            {
-                "name": "Id",
-                "typeName": null
-            },
-            {
-                "name": "messageContent",
-                "typeName": "MessageContent"
-            },
-            {
-                "name": "messageContentMetadata",
-                "typeName": "MessageContentMetadata"
-            },
-            {
-                "name": "messageMetadata",
-                "typeName": "MessageMetadata"
-            }
-        ],
-        "dependantBindings": []
+        ]
     },
     {
         "typeName": "MessageContent",
-        "bindingName": "Global",
+        "bindingNames": [
+            "Global",
+            "MultipleRequestsSpec",
+            "FactorySpec"
+        ],
         "isSingleton": false,
         "ctorParameterInfo": [
             {
@@ -317,60 +138,15 @@
                 "name": "messageMetadata",
                 "typeName": "MessageMetadata"
             }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "MessageContent",
-        "bindingName": "MultipleRequestsSpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "messageContentMetadata",
-                "typeName": "MessageContentMetadata"
-            },
-            {
-                "name": "data",
-                "typeName": null
-            },
-            {
-                "name": "userSessions",
-                "typeName": "UserSessions"
-            },
-            {
-                "name": "messageMetadata",
-                "typeName": "MessageMetadata"
-            }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "MessageContent",
-        "bindingName": "FactorySpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "messageContentMetadata",
-                "typeName": "MessageContentMetadata"
-            },
-            {
-                "name": "data",
-                "typeName": null
-            },
-            {
-                "name": "userSessions",
-                "typeName": "UserSessions"
-            },
-            {
-                "name": "messageMetadata",
-                "typeName": "MessageMetadata"
-            }
-        ],
-        "dependantBindings": []
+        ]
     },
     {
         "typeName": "MessageContentMetadata",
-        "bindingName": "Global",
+        "bindingNames": [
+            "Global",
+            "MultipleRequestsSpec",
+            "FactorySpec"
+        ],
         "isSingleton": false,
         "ctorParameterInfo": [
             {
@@ -381,65 +157,25 @@
                 "name": "data",
                 "typeName": null
             }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "MessageContentMetadata",
-        "bindingName": "MultipleRequestsSpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "factoryContainerBindingName",
-                "typeName": null
-            },
-            {
-                "name": "data",
-                "typeName": null
-            }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "MessageContentMetadata",
-        "bindingName": "FactorySpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "factoryContainerBindingName",
-                "typeName": null
-            },
-            {
-                "name": "data",
-                "typeName": null
-            }
-        ],
-        "dependantBindings": []
+        ]
     },
     {
         "typeName": "MessageConverter",
-        "bindingName": "Global",
+        "bindingNames": [
+            "Global",
+            "MultipleRequestsSpec",
+            "FactorySpec"
+        ],
         "isSingleton": false,
-        "ctorParameterInfo": [],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "MessageConverter",
-        "bindingName": "MultipleRequestsSpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "MessageConverter",
-        "bindingName": "FactorySpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [],
-        "dependantBindings": []
+        "ctorParameterInfo": []
     },
     {
         "typeName": "MessageMetadata",
-        "bindingName": "Global",
+        "bindingNames": [
+            "Global",
+            "MultipleRequestsSpec",
+            "FactorySpec"
+        ],
         "isSingleton": false,
         "ctorParameterInfo": [
             {
@@ -458,153 +194,55 @@
                 "name": "senderAddress",
                 "typeName": "SenderAddress"
             }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "MessageMetadata",
-        "bindingName": "MultipleRequestsSpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "recipientAddress",
-                "typeName": "RecipientAddress"
-            },
-            {
-                "name": "metadata",
-                "typeName": null
-            },
-            {
-                "name": "token",
-                "typeName": null
-            },
-            {
-                "name": "senderAddress",
-                "typeName": "SenderAddress"
-            }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "MessageMetadata",
-        "bindingName": "FactorySpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "recipientAddress",
-                "typeName": "RecipientAddress"
-            },
-            {
-                "name": "metadata",
-                "typeName": null
-            },
-            {
-                "name": "token",
-                "typeName": null
-            },
-            {
-                "name": "senderAddress",
-                "typeName": "SenderAddress"
-            }
-        ],
-        "dependantBindings": []
+        ]
     },
     {
         "typeName": "MessageQueue",
-        "bindingName": "Global",
+        "bindingNames": [
+            "Global",
+            "MultipleRequestsSpec",
+            "FactorySpec"
+        ],
         "isSingleton": false,
         "ctorParameterInfo": [
             {
                 "name": "logger",
                 "typeName": "Logger"
             }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "MessageQueue",
-        "bindingName": "MultipleRequestsSpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "logger",
-                "typeName": "Logger"
-            }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "MessageQueue",
-        "bindingName": "FactorySpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "logger",
-                "typeName": "Logger"
-            }
-        ],
-        "dependantBindings": []
+        ]
     },
     {
         "typeName": "MessageStatus",
-        "bindingName": "Global",
+        "bindingNames": [
+            "Global",
+            "MultipleRequestsSpec",
+            "FactorySpec"
+        ],
         "isSingleton": false,
         "ctorParameterInfo": [
             {
                 "name": "messageStatusCode",
                 "typeName": null
             }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "MessageStatus",
-        "bindingName": "MultipleRequestsSpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "messageStatusCode",
-                "typeName": null
-            }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "MessageStatus",
-        "bindingName": "FactorySpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "messageStatusCode",
-                "typeName": null
-            }
-        ],
-        "dependantBindings": []
+        ]
     },
     {
         "typeName": "MessageStore",
-        "bindingName": "Global",
+        "bindingNames": [
+            "Global",
+            "MultipleRequestsSpec",
+            "FactorySpec"
+        ],
         "isSingleton": false,
-        "ctorParameterInfo": [],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "MessageStore",
-        "bindingName": "MultipleRequestsSpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "MessageStore",
-        "bindingName": "FactorySpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [],
-        "dependantBindings": []
+        "ctorParameterInfo": []
     },
     {
         "typeName": "RecipientAddress",
-        "bindingName": "Global",
+        "bindingNames": [
+            "Global",
+            "MultipleRequestsSpec",
+            "FactorySpec"
+        ],
         "isSingleton": false,
         "ctorParameterInfo": [
             {
@@ -615,44 +253,15 @@
                 "name": "recipientPort",
                 "typeName": null
             }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "RecipientAddress",
-        "bindingName": "MultipleRequestsSpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "recipientHost",
-                "typeName": null
-            },
-            {
-                "name": "recipientPort",
-                "typeName": null
-            }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "RecipientAddress",
-        "bindingName": "FactorySpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "recipientHost",
-                "typeName": null
-            },
-            {
-                "name": "recipientPort",
-                "typeName": null
-            }
-        ],
-        "dependantBindings": []
+        ]
     },
     {
         "typeName": "SenderAddress",
-        "bindingName": "Global",
+        "bindingNames": [
+            "Global",
+            "MultipleRequestsSpec",
+            "FactorySpec"
+        ],
         "isSingleton": false,
         "ctorParameterInfo": [
             {
@@ -663,44 +272,15 @@
                 "name": "senderPort",
                 "typeName": null
             }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "SenderAddress",
-        "bindingName": "MultipleRequestsSpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "senderHost",
-                "typeName": null
-            },
-            {
-                "name": "senderPort",
-                "typeName": null
-            }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "SenderAddress",
-        "bindingName": "FactorySpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "senderHost",
-                "typeName": null
-            },
-            {
-                "name": "senderPort",
-                "typeName": null
-            }
-        ],
-        "dependantBindings": []
+        ]
     },
     {
         "typeName": "ServerMessageBus",
-        "bindingName": "Global",
+        "bindingNames": [
+            "Global",
+            "MultipleRequestsSpec",
+            "FactorySpec"
+        ],
         "isSingleton": false,
         "ctorParameterInfo": [
             {
@@ -715,124 +295,45 @@
                 "name": "serverRequestMessageBus",
                 "typeName": "HttpServerRequestMessageBus"
             }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "ServerMessageBus",
-        "bindingName": "MultipleRequestsSpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "messageConverter",
-                "typeName": "MessageConverter"
-            },
-            {
-                "name": "serverResponseMessageBus",
-                "typeName": "HttpServerResponseMessageBus"
-            },
-            {
-                "name": "serverRequestMessageBus",
-                "typeName": "HttpServerRequestMessageBus"
-            }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "ServerMessageBus",
-        "bindingName": "FactorySpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "messageConverter",
-                "typeName": "MessageConverter"
-            },
-            {
-                "name": "serverResponseMessageBus",
-                "typeName": "HttpServerResponseMessageBus"
-            },
-            {
-                "name": "serverRequestMessageBus",
-                "typeName": "HttpServerRequestMessageBus"
-            }
-        ],
-        "dependantBindings": []
+        ]
     },
     {
         "typeName": "UserSecurity",
-        "bindingName": "Global",
+        "bindingNames": [
+            "Global",
+            "MultipleRequestsSpec",
+            "FactorySpec"
+        ],
         "isSingleton": false,
         "ctorParameterInfo": [
             {
                 "name": "userId",
                 "typeName": null
             }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "UserSecurity",
-        "bindingName": "MultipleRequestsSpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "userId",
-                "typeName": null
-            }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "UserSecurity",
-        "bindingName": "FactorySpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "userId",
-                "typeName": null
-            }
-        ],
-        "dependantBindings": []
+        ]
     },
     {
         "typeName": "UserSessions",
-        "bindingName": "Global",
+        "bindingNames": [
+            "Global",
+            "MultipleRequestsSpec",
+            "FactorySpec"
+        ],
         "isSingleton": false,
         "ctorParameterInfo": [
             {
                 "name": "factoryContainerBindingName",
                 "typeName": null
             }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "UserSessions",
-        "bindingName": "MultipleRequestsSpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "factoryContainerBindingName",
-                "typeName": null
-            }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "UserSessions",
-        "bindingName": "FactorySpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "factoryContainerBindingName",
-                "typeName": null
-            }
-        ],
-        "dependantBindings": []
+        ]
     },
     {
         "typeName": "HttpClientMessageBus",
-        "bindingName": "Global",
+        "bindingNames": [
+            "Global",
+            "MultipleRequestsSpec",
+            "FactorySpec"
+        ],
         "isSingleton": false,
         "ctorParameterInfo": [
             {
@@ -863,84 +364,15 @@
                 "name": "httpClientStopMessageQueueBinding",
                 "typeName": "HttpClientStopMessageQueueBinding"
             }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "HttpClientMessageBus",
-        "bindingName": "MultipleRequestsSpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "timeout",
-                "typeName": null
-            },
-            {
-                "name": "factoryContainerBindingName",
-                "typeName": null
-            },
-            {
-                "name": "httpClientRequestMessageQueueBinding",
-                "typeName": "HttpClientRequestMessageQueueBinding"
-            },
-            {
-                "name": "httpClientResponseMessageQueueBinding",
-                "typeName": "HttpClientResponseMessageQueueBinding"
-            },
-            {
-                "name": "httpClientStartMessageQueueBinding",
-                "typeName": "HttpClientStartMessageQueueBinding"
-            },
-            {
-                "name": "httpClientStartedMessageQueueBinding",
-                "typeName": "HttpClientStartedMessageQueueBinding"
-            },
-            {
-                "name": "httpClientStopMessageQueueBinding",
-                "typeName": "HttpClientStopMessageQueueBinding"
-            }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "HttpClientMessageBus",
-        "bindingName": "FactorySpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "timeout",
-                "typeName": null
-            },
-            {
-                "name": "factoryContainerBindingName",
-                "typeName": null
-            },
-            {
-                "name": "httpClientRequestMessageQueueBinding",
-                "typeName": "HttpClientRequestMessageQueueBinding"
-            },
-            {
-                "name": "httpClientResponseMessageQueueBinding",
-                "typeName": "HttpClientResponseMessageQueueBinding"
-            },
-            {
-                "name": "httpClientStartMessageQueueBinding",
-                "typeName": "HttpClientStartMessageQueueBinding"
-            },
-            {
-                "name": "httpClientStartedMessageQueueBinding",
-                "typeName": "HttpClientStartedMessageQueueBinding"
-            },
-            {
-                "name": "httpClientStopMessageQueueBinding",
-                "typeName": "HttpClientStopMessageQueueBinding"
-            }
-        ],
-        "dependantBindings": []
+        ]
     },
     {
         "typeName": "HttpClientMessageBusManager",
-        "bindingName": "Global",
+        "bindingNames": [
+            "Global",
+            "MultipleRequestsSpec",
+            "FactorySpec"
+        ],
         "isSingleton": false,
         "ctorParameterInfo": [
             {
@@ -959,96 +391,30 @@
                 "name": "httpClientStartedMessageQueueBinding",
                 "typeName": "HttpClientStartedMessageQueueBinding"
             }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "HttpClientMessageBusManager",
-        "bindingName": "MultipleRequestsSpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "httpClientStopMessageQueueBinding",
-                "typeName": "HttpClientStopMessageQueueBinding"
-            },
-            {
-                "name": "factoryContainerBindingName",
-                "typeName": null
-            },
-            {
-                "name": "httpClientStartMessageQueueBinding",
-                "typeName": "HttpClientStartMessageQueueBinding"
-            },
-            {
-                "name": "httpClientStartedMessageQueueBinding",
-                "typeName": "HttpClientStartedMessageQueueBinding"
-            }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "HttpClientMessageBusManager",
-        "bindingName": "FactorySpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "httpClientStopMessageQueueBinding",
-                "typeName": "HttpClientStopMessageQueueBinding"
-            },
-            {
-                "name": "factoryContainerBindingName",
-                "typeName": null
-            },
-            {
-                "name": "httpClientStartMessageQueueBinding",
-                "typeName": "HttpClientStartMessageQueueBinding"
-            },
-            {
-                "name": "httpClientStartedMessageQueueBinding",
-                "typeName": "HttpClientStartedMessageQueueBinding"
-            }
-        ],
-        "dependantBindings": []
+        ]
     },
     {
         "typeName": "HttpClientRequestMessageBus",
-        "bindingName": "Global",
+        "bindingNames": [
+            "Global",
+            "MultipleRequestsSpec",
+            "FactorySpec"
+        ],
         "isSingleton": false,
         "ctorParameterInfo": [
             {
                 "name": "httpClientRequestMessageQueueBinding",
                 "typeName": "HttpClientRequestMessageQueueBinding"
             }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "HttpClientRequestMessageBus",
-        "bindingName": "MultipleRequestsSpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "httpClientRequestMessageQueueBinding",
-                "typeName": "HttpClientRequestMessageQueueBinding"
-            }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "HttpClientRequestMessageBus",
-        "bindingName": "FactorySpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "httpClientRequestMessageQueueBinding",
-                "typeName": "HttpClientRequestMessageQueueBinding"
-            }
-        ],
-        "dependantBindings": []
+        ]
     },
     {
         "typeName": "HttpClientRequestMessageQueueBinding",
-        "bindingName": "Global",
+        "bindingNames": [
+            "Global",
+            "MultipleRequestsSpec",
+            "FactorySpec"
+        ],
         "isSingleton": false,
         "ctorParameterInfo": [
             {
@@ -1059,80 +425,30 @@
                 "name": "messageQueue",
                 "typeName": "MessageQueue"
             }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "HttpClientRequestMessageQueueBinding",
-        "bindingName": "MultipleRequestsSpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "factoryContainerBindingName",
-                "typeName": null
-            },
-            {
-                "name": "messageQueue",
-                "typeName": "MessageQueue"
-            }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "HttpClientRequestMessageQueueBinding",
-        "bindingName": "FactorySpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "factoryContainerBindingName",
-                "typeName": null
-            },
-            {
-                "name": "messageQueue",
-                "typeName": "MessageQueue"
-            }
-        ],
-        "dependantBindings": []
+        ]
     },
     {
         "typeName": "HttpClientResponseMessageBus",
-        "bindingName": "Global",
+        "bindingNames": [
+            "Global",
+            "MultipleRequestsSpec",
+            "FactorySpec"
+        ],
         "isSingleton": false,
         "ctorParameterInfo": [
             {
                 "name": "httpClientResponseMessageQueueBinding",
                 "typeName": "HttpClientResponseMessageQueueBinding"
             }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "HttpClientResponseMessageBus",
-        "bindingName": "MultipleRequestsSpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "httpClientResponseMessageQueueBinding",
-                "typeName": "HttpClientResponseMessageQueueBinding"
-            }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "HttpClientResponseMessageBus",
-        "bindingName": "FactorySpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "httpClientResponseMessageQueueBinding",
-                "typeName": "HttpClientResponseMessageQueueBinding"
-            }
-        ],
-        "dependantBindings": []
+        ]
     },
     {
         "typeName": "HttpClientResponseMessageQueueBinding",
-        "bindingName": "Global",
+        "bindingNames": [
+            "Global",
+            "MultipleRequestsSpec",
+            "FactorySpec"
+        ],
         "isSingleton": false,
         "ctorParameterInfo": [
             {
@@ -1143,44 +459,15 @@
                 "name": "messageQueue",
                 "typeName": "MessageQueue"
             }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "HttpClientResponseMessageQueueBinding",
-        "bindingName": "MultipleRequestsSpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "factoryContainerBindingName",
-                "typeName": null
-            },
-            {
-                "name": "messageQueue",
-                "typeName": "MessageQueue"
-            }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "HttpClientResponseMessageQueueBinding",
-        "bindingName": "FactorySpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "factoryContainerBindingName",
-                "typeName": null
-            },
-            {
-                "name": "messageQueue",
-                "typeName": "MessageQueue"
-            }
-        ],
-        "dependantBindings": []
+        ]
     },
     {
         "typeName": "HttpClientStartedMessageQueueBinding",
-        "bindingName": "Global",
+        "bindingNames": [
+            "Global",
+            "MultipleRequestsSpec",
+            "FactorySpec"
+        ],
         "isSingleton": false,
         "ctorParameterInfo": [
             {
@@ -1191,44 +478,15 @@
                 "name": "messageQueue",
                 "typeName": "MessageQueue"
             }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "HttpClientStartedMessageQueueBinding",
-        "bindingName": "MultipleRequestsSpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "factoryContainerBindingName",
-                "typeName": null
-            },
-            {
-                "name": "messageQueue",
-                "typeName": "MessageQueue"
-            }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "HttpClientStartedMessageQueueBinding",
-        "bindingName": "FactorySpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "factoryContainerBindingName",
-                "typeName": null
-            },
-            {
-                "name": "messageQueue",
-                "typeName": "MessageQueue"
-            }
-        ],
-        "dependantBindings": []
+        ]
     },
     {
         "typeName": "HttpClientStartMessageQueueBinding",
-        "bindingName": "Global",
+        "bindingNames": [
+            "Global",
+            "MultipleRequestsSpec",
+            "FactorySpec"
+        ],
         "isSingleton": false,
         "ctorParameterInfo": [
             {
@@ -1239,44 +497,15 @@
                 "name": "messageQueue",
                 "typeName": "MessageQueue"
             }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "HttpClientStartMessageQueueBinding",
-        "bindingName": "MultipleRequestsSpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "factoryContainerBindingName",
-                "typeName": null
-            },
-            {
-                "name": "messageQueue",
-                "typeName": "MessageQueue"
-            }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "HttpClientStartMessageQueueBinding",
-        "bindingName": "FactorySpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "factoryContainerBindingName",
-                "typeName": null
-            },
-            {
-                "name": "messageQueue",
-                "typeName": "MessageQueue"
-            }
-        ],
-        "dependantBindings": []
+        ]
     },
     {
         "typeName": "HttpClientStopMessageQueueBinding",
-        "bindingName": "Global",
+        "bindingNames": [
+            "Global",
+            "MultipleRequestsSpec",
+            "FactorySpec"
+        ],
         "isSingleton": false,
         "ctorParameterInfo": [
             {
@@ -1287,44 +516,15 @@
                 "name": "messageQueue",
                 "typeName": "MessageQueue"
             }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "HttpClientStopMessageQueueBinding",
-        "bindingName": "MultipleRequestsSpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "factoryContainerBindingName",
-                "typeName": null
-            },
-            {
-                "name": "messageQueue",
-                "typeName": "MessageQueue"
-            }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "HttpClientStopMessageQueueBinding",
-        "bindingName": "FactorySpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "factoryContainerBindingName",
-                "typeName": null
-            },
-            {
-                "name": "messageQueue",
-                "typeName": "MessageQueue"
-            }
-        ],
-        "dependantBindings": []
+        ]
     },
     {
         "typeName": "HttpClientStoppedMessageQueueBinding",
-        "bindingName": "Global",
+        "bindingNames": [
+            "Global",
+            "MultipleRequestsSpec",
+            "FactorySpec"
+        ],
         "isSingleton": false,
         "ctorParameterInfo": [
             {
@@ -1335,116 +535,45 @@
                 "name": "messageQueue",
                 "typeName": "MessageQueue"
             }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "HttpClientStoppedMessageQueueBinding",
-        "bindingName": "MultipleRequestsSpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "factoryContainerBindingName",
-                "typeName": null
-            },
-            {
-                "name": "messageQueue",
-                "typeName": "MessageQueue"
-            }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "HttpClientStoppedMessageQueueBinding",
-        "bindingName": "FactorySpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "factoryContainerBindingName",
-                "typeName": null
-            },
-            {
-                "name": "messageQueue",
-                "typeName": "MessageQueue"
-            }
-        ],
-        "dependantBindings": []
+        ]
     },
     {
         "typeName": "HttpRequestMessage",
-        "bindingName": "Global",
+        "bindingNames": [
+            "Global",
+            "MultipleRequestsSpec",
+            "FactorySpec"
+        ],
         "isSingleton": false,
         "ctorParameterInfo": [
             {
                 "name": "message",
                 "typeName": "Message"
             }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "HttpRequestMessage",
-        "bindingName": "MultipleRequestsSpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "message",
-                "typeName": "Message"
-            }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "HttpRequestMessage",
-        "bindingName": "FactorySpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "message",
-                "typeName": "Message"
-            }
-        ],
-        "dependantBindings": []
+        ]
     },
     {
         "typeName": "HttpResponseMessage",
-        "bindingName": "Global",
+        "bindingNames": [
+            "Global",
+            "MultipleRequestsSpec",
+            "FactorySpec"
+        ],
         "isSingleton": false,
         "ctorParameterInfo": [
             {
                 "name": "message",
                 "typeName": "Message"
             }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "HttpResponseMessage",
-        "bindingName": "MultipleRequestsSpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "message",
-                "typeName": "Message"
-            }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "HttpResponseMessage",
-        "bindingName": "FactorySpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "message",
-                "typeName": "Message"
-            }
-        ],
-        "dependantBindings": []
+        ]
     },
     {
         "typeName": "HttpServerMessageBus",
-        "bindingName": "Global",
+        "bindingNames": [
+            "Global",
+            "MultipleRequestsSpec",
+            "FactorySpec"
+        ],
         "isSingleton": false,
         "ctorParameterInfo": [
             {
@@ -1487,108 +616,15 @@
                 "name": "logger",
                 "typeName": "Logger"
             }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "HttpServerMessageBus",
-        "bindingName": "MultipleRequestsSpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "timeout",
-                "typeName": null
-            },
-            {
-                "name": "factoryContainerBindingName",
-                "typeName": null
-            },
-            {
-                "name": "httpServerRequestMessageQueueBinding",
-                "typeName": "HttpServerRequestMessageQueueBinding"
-            },
-            {
-                "name": "httpServerResponseMessageQueueBinding",
-                "typeName": "HttpServerResponseMessageQueueBinding"
-            },
-            {
-                "name": "httpServerStartMessageQueueBinding",
-                "typeName": "HttpServerStartMessageQueueBinding"
-            },
-            {
-                "name": "httpServerStartedMessageQueueBinding",
-                "typeName": "HttpServerStartedMessageQueueBinding"
-            },
-            {
-                "name": "httpServerStopMessageQueueBinding",
-                "typeName": "HttpServerStopMessageQueueBinding"
-            },
-            {
-                "name": "httpServerStoppedMessageQueueBinding",
-                "typeName": "HttpServerStoppedMessageQueueBinding"
-            },
-            {
-                "name": "senderAddress",
-                "typeName": "SenderAddress"
-            },
-            {
-                "name": "logger",
-                "typeName": "Logger"
-            }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "HttpServerMessageBus",
-        "bindingName": "FactorySpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "timeout",
-                "typeName": null
-            },
-            {
-                "name": "factoryContainerBindingName",
-                "typeName": null
-            },
-            {
-                "name": "httpServerRequestMessageQueueBinding",
-                "typeName": "HttpServerRequestMessageQueueBinding"
-            },
-            {
-                "name": "httpServerResponseMessageQueueBinding",
-                "typeName": "HttpServerResponseMessageQueueBinding"
-            },
-            {
-                "name": "httpServerStartMessageQueueBinding",
-                "typeName": "HttpServerStartMessageQueueBinding"
-            },
-            {
-                "name": "httpServerStartedMessageQueueBinding",
-                "typeName": "HttpServerStartedMessageQueueBinding"
-            },
-            {
-                "name": "httpServerStopMessageQueueBinding",
-                "typeName": "HttpServerStopMessageQueueBinding"
-            },
-            {
-                "name": "httpServerStoppedMessageQueueBinding",
-                "typeName": "HttpServerStoppedMessageQueueBinding"
-            },
-            {
-                "name": "senderAddress",
-                "typeName": "SenderAddress"
-            },
-            {
-                "name": "logger",
-                "typeName": "Logger"
-            }
-        ],
-        "dependantBindings": []
+        ]
     },
     {
         "typeName": "HttpServerMessageBusManager",
-        "bindingName": "Global",
+        "bindingNames": [
+            "Global",
+            "MultipleRequestsSpec",
+            "FactorySpec"
+        ],
         "isSingleton": false,
         "ctorParameterInfo": [
             {
@@ -1619,120 +655,30 @@
                 "name": "httpServerStopMessageQueueBinding",
                 "typeName": "HttpServerStopMessageQueueBinding"
             }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "HttpServerMessageBusManager",
-        "bindingName": "MultipleRequestsSpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "httpServerStoppedMessageQueueBinding",
-                "typeName": "HttpServerStoppedMessageQueueBinding"
-            },
-            {
-                "name": "factoryContainerBindingName",
-                "typeName": null
-            },
-            {
-                "name": "httpServerRequestMessageQueueBinding",
-                "typeName": "HttpServerRequestMessageQueueBinding"
-            },
-            {
-                "name": "httpServerResponseMessageQueueBinding",
-                "typeName": "HttpServerResponseMessageQueueBinding"
-            },
-            {
-                "name": "httpServerStartMessageQueueBinding",
-                "typeName": "HttpServerStartMessageQueueBinding"
-            },
-            {
-                "name": "httpServerStartedMessageQueueBinding",
-                "typeName": "HttpServerStartedMessageQueueBinding"
-            },
-            {
-                "name": "httpServerStopMessageQueueBinding",
-                "typeName": "HttpServerStopMessageQueueBinding"
-            }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "HttpServerMessageBusManager",
-        "bindingName": "FactorySpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "httpServerStoppedMessageQueueBinding",
-                "typeName": "HttpServerStoppedMessageQueueBinding"
-            },
-            {
-                "name": "factoryContainerBindingName",
-                "typeName": null
-            },
-            {
-                "name": "httpServerRequestMessageQueueBinding",
-                "typeName": "HttpServerRequestMessageQueueBinding"
-            },
-            {
-                "name": "httpServerResponseMessageQueueBinding",
-                "typeName": "HttpServerResponseMessageQueueBinding"
-            },
-            {
-                "name": "httpServerStartMessageQueueBinding",
-                "typeName": "HttpServerStartMessageQueueBinding"
-            },
-            {
-                "name": "httpServerStartedMessageQueueBinding",
-                "typeName": "HttpServerStartedMessageQueueBinding"
-            },
-            {
-                "name": "httpServerStopMessageQueueBinding",
-                "typeName": "HttpServerStopMessageQueueBinding"
-            }
-        ],
-        "dependantBindings": []
+        ]
     },
     {
         "typeName": "HttpServerRequestMessageBus",
-        "bindingName": "Global",
+        "bindingNames": [
+            "Global",
+            "MultipleRequestsSpec",
+            "FactorySpec"
+        ],
         "isSingleton": false,
         "ctorParameterInfo": [
             {
                 "name": "httpServerRequestMessageQueueBinding",
                 "typeName": "HttpServerRequestMessageQueueBinding"
             }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "HttpServerRequestMessageBus",
-        "bindingName": "MultipleRequestsSpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "httpServerRequestMessageQueueBinding",
-                "typeName": "HttpServerRequestMessageQueueBinding"
-            }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "HttpServerRequestMessageBus",
-        "bindingName": "FactorySpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "httpServerRequestMessageQueueBinding",
-                "typeName": "HttpServerRequestMessageQueueBinding"
-            }
-        ],
-        "dependantBindings": []
+        ]
     },
     {
         "typeName": "HttpServerRequestMessageQueueBinding",
-        "bindingName": "Global",
+        "bindingNames": [
+            "Global",
+            "MultipleRequestsSpec",
+            "FactorySpec"
+        ],
         "isSingleton": false,
         "ctorParameterInfo": [
             {
@@ -1743,80 +689,30 @@
                 "name": "messageQueue",
                 "typeName": "MessageQueue"
             }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "HttpServerRequestMessageQueueBinding",
-        "bindingName": "MultipleRequestsSpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "factoryContainerBindingName",
-                "typeName": null
-            },
-            {
-                "name": "messageQueue",
-                "typeName": "MessageQueue"
-            }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "HttpServerRequestMessageQueueBinding",
-        "bindingName": "FactorySpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "factoryContainerBindingName",
-                "typeName": null
-            },
-            {
-                "name": "messageQueue",
-                "typeName": "MessageQueue"
-            }
-        ],
-        "dependantBindings": []
+        ]
     },
     {
         "typeName": "HttpServerResponseMessageBus",
-        "bindingName": "Global",
+        "bindingNames": [
+            "Global",
+            "MultipleRequestsSpec",
+            "FactorySpec"
+        ],
         "isSingleton": false,
         "ctorParameterInfo": [
             {
                 "name": "httpServerResponseMessageQueueBinding",
                 "typeName": "HttpServerResponseMessageQueueBinding"
             }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "HttpServerResponseMessageBus",
-        "bindingName": "MultipleRequestsSpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "httpServerResponseMessageQueueBinding",
-                "typeName": "HttpServerResponseMessageQueueBinding"
-            }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "HttpServerResponseMessageBus",
-        "bindingName": "FactorySpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "httpServerResponseMessageQueueBinding",
-                "typeName": "HttpServerResponseMessageQueueBinding"
-            }
-        ],
-        "dependantBindings": []
+        ]
     },
     {
         "typeName": "HttpServerResponseMessageQueueBinding",
-        "bindingName": "Global",
+        "bindingNames": [
+            "Global",
+            "MultipleRequestsSpec",
+            "FactorySpec"
+        ],
         "isSingleton": false,
         "ctorParameterInfo": [
             {
@@ -1827,44 +723,15 @@
                 "name": "messageQueue",
                 "typeName": "MessageQueue"
             }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "HttpServerResponseMessageQueueBinding",
-        "bindingName": "MultipleRequestsSpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "factoryContainerBindingName",
-                "typeName": null
-            },
-            {
-                "name": "messageQueue",
-                "typeName": "MessageQueue"
-            }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "HttpServerResponseMessageQueueBinding",
-        "bindingName": "FactorySpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "factoryContainerBindingName",
-                "typeName": null
-            },
-            {
-                "name": "messageQueue",
-                "typeName": "MessageQueue"
-            }
-        ],
-        "dependantBindings": []
+        ]
     },
     {
         "typeName": "HttpServerStartedMessageQueueBinding",
-        "bindingName": "Global",
+        "bindingNames": [
+            "Global",
+            "MultipleRequestsSpec",
+            "FactorySpec"
+        ],
         "isSingleton": false,
         "ctorParameterInfo": [
             {
@@ -1875,44 +742,15 @@
                 "name": "messageQueue",
                 "typeName": "MessageQueue"
             }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "HttpServerStartedMessageQueueBinding",
-        "bindingName": "MultipleRequestsSpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "factoryContainerBindingName",
-                "typeName": null
-            },
-            {
-                "name": "messageQueue",
-                "typeName": "MessageQueue"
-            }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "HttpServerStartedMessageQueueBinding",
-        "bindingName": "FactorySpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "factoryContainerBindingName",
-                "typeName": null
-            },
-            {
-                "name": "messageQueue",
-                "typeName": "MessageQueue"
-            }
-        ],
-        "dependantBindings": []
+        ]
     },
     {
         "typeName": "HttpServerStartMessageQueueBinding",
-        "bindingName": "Global",
+        "bindingNames": [
+            "Global",
+            "MultipleRequestsSpec",
+            "FactorySpec"
+        ],
         "isSingleton": false,
         "ctorParameterInfo": [
             {
@@ -1923,44 +761,15 @@
                 "name": "messageQueue",
                 "typeName": "MessageQueue"
             }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "HttpServerStartMessageQueueBinding",
-        "bindingName": "MultipleRequestsSpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "factoryContainerBindingName",
-                "typeName": null
-            },
-            {
-                "name": "messageQueue",
-                "typeName": "MessageQueue"
-            }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "HttpServerStartMessageQueueBinding",
-        "bindingName": "FactorySpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "factoryContainerBindingName",
-                "typeName": null
-            },
-            {
-                "name": "messageQueue",
-                "typeName": "MessageQueue"
-            }
-        ],
-        "dependantBindings": []
+        ]
     },
     {
         "typeName": "HttpServerStopMessageQueueBinding",
-        "bindingName": "Global",
+        "bindingNames": [
+            "Global",
+            "MultipleRequestsSpec",
+            "FactorySpec"
+        ],
         "isSingleton": false,
         "ctorParameterInfo": [
             {
@@ -1971,44 +780,15 @@
                 "name": "messageQueue",
                 "typeName": "MessageQueue"
             }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "HttpServerStopMessageQueueBinding",
-        "bindingName": "MultipleRequestsSpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "factoryContainerBindingName",
-                "typeName": null
-            },
-            {
-                "name": "messageQueue",
-                "typeName": "MessageQueue"
-            }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "HttpServerStopMessageQueueBinding",
-        "bindingName": "FactorySpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "factoryContainerBindingName",
-                "typeName": null
-            },
-            {
-                "name": "messageQueue",
-                "typeName": "MessageQueue"
-            }
-        ],
-        "dependantBindings": []
+        ]
     },
     {
         "typeName": "HttpServerStoppedMessageQueueBinding",
-        "bindingName": "Global",
+        "bindingNames": [
+            "Global",
+            "MultipleRequestsSpec",
+            "FactorySpec"
+        ],
         "isSingleton": false,
         "ctorParameterInfo": [
             {
@@ -2019,80 +799,30 @@
                 "name": "messageQueue",
                 "typeName": "MessageQueue"
             }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "HttpServerStoppedMessageQueueBinding",
-        "bindingName": "MultipleRequestsSpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "factoryContainerBindingName",
-                "typeName": null
-            },
-            {
-                "name": "messageQueue",
-                "typeName": "MessageQueue"
-            }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "HttpServerStoppedMessageQueueBinding",
-        "bindingName": "FactorySpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "factoryContainerBindingName",
-                "typeName": null
-            },
-            {
-                "name": "messageQueue",
-                "typeName": "MessageQueue"
-            }
-        ],
-        "dependantBindings": []
+        ]
     },
     {
         "typeName": "WebSocketClientRequestMessageBus",
-        "bindingName": "Global",
+        "bindingNames": [
+            "Global",
+            "MultipleRequestsSpec",
+            "FactorySpec"
+        ],
         "isSingleton": false,
         "ctorParameterInfo": [
             {
                 "name": "websocketClientRequestMessageQueueBinding",
                 "typeName": "WebSocketClientRequestMessageQueueBinding"
             }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "WebSocketClientRequestMessageBus",
-        "bindingName": "MultipleRequestsSpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "websocketClientRequestMessageQueueBinding",
-                "typeName": "WebSocketClientRequestMessageQueueBinding"
-            }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "WebSocketClientRequestMessageBus",
-        "bindingName": "FactorySpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "websocketClientRequestMessageQueueBinding",
-                "typeName": "WebSocketClientRequestMessageQueueBinding"
-            }
-        ],
-        "dependantBindings": []
+        ]
     },
     {
         "typeName": "WebSocketClientRequestMessageQueueBinding",
-        "bindingName": "Global",
+        "bindingNames": [
+            "Global",
+            "MultipleRequestsSpec",
+            "FactorySpec"
+        ],
         "isSingleton": false,
         "ctorParameterInfo": [
             {
@@ -2103,80 +833,30 @@
                 "name": "messageQueue",
                 "typeName": "MessageQueue"
             }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "WebSocketClientRequestMessageQueueBinding",
-        "bindingName": "MultipleRequestsSpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "factoryContainerBindingName",
-                "typeName": null
-            },
-            {
-                "name": "messageQueue",
-                "typeName": "MessageQueue"
-            }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "WebSocketClientRequestMessageQueueBinding",
-        "bindingName": "FactorySpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "factoryContainerBindingName",
-                "typeName": null
-            },
-            {
-                "name": "messageQueue",
-                "typeName": "MessageQueue"
-            }
-        ],
-        "dependantBindings": []
+        ]
     },
     {
         "typeName": "WebSocketClientResponseMessageBus",
-        "bindingName": "Global",
+        "bindingNames": [
+            "Global",
+            "MultipleRequestsSpec",
+            "FactorySpec"
+        ],
         "isSingleton": false,
         "ctorParameterInfo": [
             {
                 "name": "websocketClientResponseMessageQueueBinding",
                 "typeName": "WebSocketClientResponseMessageQueueBinding"
             }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "WebSocketClientResponseMessageBus",
-        "bindingName": "MultipleRequestsSpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "websocketClientResponseMessageQueueBinding",
-                "typeName": "WebSocketClientResponseMessageQueueBinding"
-            }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "WebSocketClientResponseMessageBus",
-        "bindingName": "FactorySpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "websocketClientResponseMessageQueueBinding",
-                "typeName": "WebSocketClientResponseMessageQueueBinding"
-            }
-        ],
-        "dependantBindings": []
+        ]
     },
     {
         "typeName": "WebSocketClientResponseMessageQueueBinding",
-        "bindingName": "Global",
+        "bindingNames": [
+            "Global",
+            "MultipleRequestsSpec",
+            "FactorySpec"
+        ],
         "isSingleton": false,
         "ctorParameterInfo": [
             {
@@ -2187,152 +867,60 @@
                 "name": "messageQueue",
                 "typeName": "MessageQueue"
             }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "WebSocketClientResponseMessageQueueBinding",
-        "bindingName": "MultipleRequestsSpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "factoryContainerBindingName",
-                "typeName": null
-            },
-            {
-                "name": "messageQueue",
-                "typeName": "MessageQueue"
-            }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "WebSocketClientResponseMessageQueueBinding",
-        "bindingName": "FactorySpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "factoryContainerBindingName",
-                "typeName": null
-            },
-            {
-                "name": "messageQueue",
-                "typeName": "MessageQueue"
-            }
-        ],
-        "dependantBindings": []
+        ]
     },
     {
         "typeName": "WebSocketRequestMessage",
-        "bindingName": "Global",
+        "bindingNames": [
+            "Global",
+            "MultipleRequestsSpec",
+            "FactorySpec"
+        ],
         "isSingleton": false,
         "ctorParameterInfo": [
             {
                 "name": "message",
                 "typeName": "Message"
             }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "WebSocketRequestMessage",
-        "bindingName": "MultipleRequestsSpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "message",
-                "typeName": "Message"
-            }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "WebSocketRequestMessage",
-        "bindingName": "FactorySpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "message",
-                "typeName": "Message"
-            }
-        ],
-        "dependantBindings": []
+        ]
     },
     {
         "typeName": "WebSocketResponseMessage",
-        "bindingName": "Global",
+        "bindingNames": [
+            "Global",
+            "MultipleRequestsSpec",
+            "FactorySpec"
+        ],
         "isSingleton": false,
         "ctorParameterInfo": [
             {
                 "name": "message",
                 "typeName": "Message"
             }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "WebSocketResponseMessage",
-        "bindingName": "MultipleRequestsSpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "message",
-                "typeName": "Message"
-            }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "WebSocketResponseMessage",
-        "bindingName": "FactorySpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "message",
-                "typeName": "Message"
-            }
-        ],
-        "dependantBindings": []
+        ]
     },
     {
         "typeName": "WebSocketServerRequestMessageBus",
-        "bindingName": "Global",
+        "bindingNames": [
+            "Global",
+            "MultipleRequestsSpec",
+            "FactorySpec"
+        ],
         "isSingleton": false,
         "ctorParameterInfo": [
             {
                 "name": "webSocketServerRequestMessageQueueBinding",
                 "typeName": "WebSocketServerRequestMessageQueueBinding"
             }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "WebSocketServerRequestMessageBus",
-        "bindingName": "MultipleRequestsSpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "webSocketServerRequestMessageQueueBinding",
-                "typeName": "WebSocketServerRequestMessageQueueBinding"
-            }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "WebSocketServerRequestMessageBus",
-        "bindingName": "FactorySpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "webSocketServerRequestMessageQueueBinding",
-                "typeName": "WebSocketServerRequestMessageQueueBinding"
-            }
-        ],
-        "dependantBindings": []
+        ]
     },
     {
         "typeName": "WebSocketServerRequestMessageQueueBinding",
-        "bindingName": "Global",
+        "bindingNames": [
+            "Global",
+            "MultipleRequestsSpec",
+            "FactorySpec"
+        ],
         "isSingleton": false,
         "ctorParameterInfo": [
             {
@@ -2343,80 +931,30 @@
                 "name": "messageQueue",
                 "typeName": "MessageQueue"
             }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "WebSocketServerRequestMessageQueueBinding",
-        "bindingName": "MultipleRequestsSpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "factoryContainerBindingName",
-                "typeName": null
-            },
-            {
-                "name": "messageQueue",
-                "typeName": "MessageQueue"
-            }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "WebSocketServerRequestMessageQueueBinding",
-        "bindingName": "FactorySpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "factoryContainerBindingName",
-                "typeName": null
-            },
-            {
-                "name": "messageQueue",
-                "typeName": "MessageQueue"
-            }
-        ],
-        "dependantBindings": []
+        ]
     },
     {
         "typeName": "WebSocketServerResponseMessageBus",
-        "bindingName": "Global",
+        "bindingNames": [
+            "Global",
+            "MultipleRequestsSpec",
+            "FactorySpec"
+        ],
         "isSingleton": false,
         "ctorParameterInfo": [
             {
                 "name": "webSocketServerResponseMessageQueueBinding",
                 "typeName": "WebSocketServerResponseMessageQueueBinding"
             }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "WebSocketServerResponseMessageBus",
-        "bindingName": "MultipleRequestsSpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "webSocketServerResponseMessageQueueBinding",
-                "typeName": "WebSocketServerResponseMessageQueueBinding"
-            }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "WebSocketServerResponseMessageBus",
-        "bindingName": "FactorySpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "webSocketServerResponseMessageQueueBinding",
-                "typeName": "WebSocketServerResponseMessageQueueBinding"
-            }
-        ],
-        "dependantBindings": []
+        ]
     },
     {
         "typeName": "WebSocketServerResponseMessageQueueBinding",
-        "bindingName": "Global",
+        "bindingNames": [
+            "Global",
+            "MultipleRequestsSpec",
+            "FactorySpec"
+        ],
         "isSingleton": false,
         "ctorParameterInfo": [
             {
@@ -2427,39 +965,6 @@
                 "name": "messageQueue",
                 "typeName": "MessageQueue"
             }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "WebSocketServerResponseMessageQueueBinding",
-        "bindingName": "MultipleRequestsSpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "factoryContainerBindingName",
-                "typeName": null
-            },
-            {
-                "name": "messageQueue",
-                "typeName": "MessageQueue"
-            }
-        ],
-        "dependantBindings": []
-    },
-    {
-        "typeName": "WebSocketServerResponseMessageQueueBinding",
-        "bindingName": "FactorySpec",
-        "isSingleton": true,
-        "ctorParameterInfo": [
-            {
-                "name": "factoryContainerBindingName",
-                "typeName": null
-            },
-            {
-                "name": "messageQueue",
-                "typeName": "MessageQueue"
-            }
-        ],
-        "dependantBindings": []
+        ]
     }
 ]

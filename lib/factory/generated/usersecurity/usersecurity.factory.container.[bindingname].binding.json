@@ -1,0 +1,9 @@
+{
+    "bindingName": "[BindingName]",
+    "containerFilePath": "D://component//lib//factory//generated//usersecurity//usersecurity.factory.container.json",
+    "isSingleton": false,
+    "ctorParameters": {
+        "userId": null
+    },
+    "instances": {}
+}

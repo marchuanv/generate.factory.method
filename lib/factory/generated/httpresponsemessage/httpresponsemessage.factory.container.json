@@ -5,14 +5,8 @@
     "prototypeScriptPath": "D://component//lib//http//httpresponsemessage.prototype.js",
     "factoryScriptPath": "D://component//lib//factory//generated//httpresponsemessage//httpresponsemessage.factory.js",
     "bindings": {
-        "Global": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpresponsemessage//httpresponsemessage.factory.container.global.binding.json"
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpresponsemessage//httpresponsemessage.factory.container.multiplerequestsspec.binding.json"
-        },
-        "FactorySpec": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpresponsemessage//httpresponsemessage.factory.container.factoryspec.binding.json"
+        "[BindingName]": {
+            "bindingFilePath": "D://component//lib//factory//generated//httpresponsemessage//httpresponsemessage.factory.container.[bindingname].binding.json"
         }
     }
 }

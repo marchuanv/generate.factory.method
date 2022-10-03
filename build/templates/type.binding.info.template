@@ -1,7 +1,6 @@
 { 
     "typeName":"[TypeName]",
-    "bindingName":"[BindingName]",
+    "bindingNames":[BindingNames],
     "isSingleton": [IsSingleton],
-    "ctorParameterInfo":[CtorParameterInfo],
-    "dependantBindings":[DependantBindings]
+    "ctorParameterInfo":[CtorParameterInfo]
 }
