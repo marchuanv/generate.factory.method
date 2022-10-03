@@ -1,0 +1,6 @@
+{ 
+    "typeName":"[TypeName]",
+    "bindingName":"[BindingName]",
+    "isSingleton": [IsSingleton],
+    "dependantBindings":[DependantBindings]
+}

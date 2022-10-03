@@ -1,0 +1,6 @@
+{
+  "ClientRequestMessageBus": "HttpClientRequestMessageBus",
+  "ClientResponseMessageBus": "HttpClientResponseMessageBus",
+  "ServerRequestMessageBus": "HttpServerRequestMessageBus",
+  "ServerResponseMessageBus": "HttpServerResponseMessageBus"
+}

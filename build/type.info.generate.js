@@ -9,6 +9,7 @@ const scripts = rootScripts.concat(httpScripts.concat(websocketScripts)).filter(
 const typeInfoTemplate = readFileSync(path.join(__dirname,'templates', 'type.info.template'),'utf8');
 const typesInfoPath = path.join(__dirname, 'types.info.json');
 const typesInfo = require(typesInfoPath);
+const typesMappingInfo = require(path.join(__dirname, 'types.mapping.info.json'));
 
 function getDependencyTree(info, pass = 'firstpass', types = []) {
     if (!info || utils.isEmptyObject(info)) {
@@ -19,7 +20,6 @@ function getDependencyTree(info, pass = 'firstpass', types = []) {
                 const key = Object.keys(sc)[0];
                 const type = sc[key];
                 const scriptPath = prototypeScriptPath.replace('.prototype','');
-
                 const parameters = utils.getFunctionParams(type) || [];
                 const children = parameters.map(param => utils.getJSONObject(typeInfoTemplate
                     .replace(/\[TypeName\]/g, param.name)
@@ -67,6 +67,11 @@ function getDependencyTree(info, pass = 'firstpass', types = []) {
         ));
         for(const info of types) {
             info.children = info.children.map(child => {
+                const mappedKeyIndex = Object.keys(typesMappingInfo).map(key => key.toLowerCase()).findIndex(key => key == child.typeName.toLowerCase());
+                const mappedKey = Object.keys(typesMappingInfo)[mappedKeyIndex];
+                if (mappedKey) {
+                    child.typeName = typesMappingInfo[mappedKey];
+                }
                 let refChild = types.filter(inf => 
                     inf.typeName.toLowerCase() === child.typeName.toLowerCase() &&
                     inf.prototypeScriptPath
