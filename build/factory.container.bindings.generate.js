@@ -14,7 +14,6 @@ for(const typeName of Object.keys(typeInfo)) {
         }
         const factoryContainerBindingJson = factoryContainerBindingTemplate
             .replace(/\[BindingName\]/g, factoryContainerBindingName)
-            .replace(/\[BindingFilePath\]/g, bindingInfo.bindingFilePath)
             .replace(/\[IsSingleton\]/g, bindingInfo.isSingleton)
             .replace(/\[CtorArguments\]/g, '{}');
         writeFileSync(bindingInfo.bindingFilePath, factoryContainerBindingJson, 'utf8');

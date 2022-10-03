@@ -1,6 +1,5 @@
 {
     "BindingName": "[BindingName]",
-    "BindingFilePath": "[BindingFilePath]",
     "isSingleton": [IsSingleton],
     "ctorArguments": [CtorArguments],
     "instances": {}

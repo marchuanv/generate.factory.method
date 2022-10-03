@@ -1,6 +1,5 @@
 {
     "BindingName": "Global",
-    "BindingFilePath": "C://component//lib//factory//generated//component//component.factory.container.global.binding.json",
     "isSingleton": false,
     "ctorArguments": {},
     "instances": {}

@@ -1,6 +1,5 @@
 {
     "BindingName": "FactorySpec",
-    "BindingFilePath": "C://component//lib//factory//generated//httpclientstopmessagequeuebinding//httpclientstopmessagequeuebinding.factory.container.factoryspec.binding.json",
     "isSingleton": true,
     "ctorArguments": {},
     "instances": {}

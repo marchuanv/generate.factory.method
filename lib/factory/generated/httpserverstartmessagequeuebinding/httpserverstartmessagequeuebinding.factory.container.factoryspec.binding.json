@@ -1,6 +1,5 @@
 {
     "BindingName": "FactorySpec",
-    "BindingFilePath": "C://component//lib//factory//generated//httpserverstartmessagequeuebinding//httpserverstartmessagequeuebinding.factory.container.factoryspec.binding.json",
     "isSingleton": true,
     "ctorArguments": {},
     "instances": {}

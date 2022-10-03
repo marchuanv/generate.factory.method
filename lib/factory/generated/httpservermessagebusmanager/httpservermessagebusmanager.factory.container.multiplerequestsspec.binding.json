@@ -1,6 +1,5 @@
 {
     "BindingName": "MultipleRequestsSpec",
-    "BindingFilePath": "C://component//lib//factory//generated//httpservermessagebusmanager//httpservermessagebusmanager.factory.container.multiplerequestsspec.binding.json",
     "isSingleton": true,
     "ctorArguments": {},
     "instances": {}
