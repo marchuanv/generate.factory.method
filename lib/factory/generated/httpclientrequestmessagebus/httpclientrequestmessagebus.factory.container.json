@@ -1,6 +1,6 @@
 {
     "typeName": "HttpClientRequestMessageBus",
-    "typeVariableName": "httpClientRequestMessageBus",
+    "typeVariableName": "clientRequestMessageBus",
     "scriptPath": "C://component//lib//http//httpclientrequestmessagebus.js",
     "prototypeScriptPath": "C://component//lib//http//httpclientrequestmessagebus.prototype.js",
     "factoryScriptPath": "C://component//lib//factory//generated//httpclientrequestmessagebus//httpclientrequestmessagebus.factory.js",

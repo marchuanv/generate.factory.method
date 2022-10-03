@@ -16,8 +16,4 @@ require('./factory.container.bindings.info.generate');
 require('./factory.container.bindings.generate');
 require('./factory.info.generate');
 require('./factory.generate');
-// require('./factory.containers.generate');
-
-// require('./factory.container.bindings.generate');
-// require('./factory.container.generate');
-// require('./bindings.generate');
+require('./factory.containers.generate');
