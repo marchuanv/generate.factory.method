@@ -1,6 +1,6 @@
 {
     "BindingName": "FactorySpec",
     "isSingleton": true,
-    "ctorArguments": {},
+    "ctorParameters": {},
     "instances": {}
 }

@@ -1,6 +1,6 @@
 {
     "BindingName": "MultipleRequestsSpec",
     "isSingleton": true,
-    "ctorArguments": {},
+    "ctorParameters": {},
     "instances": {}
 }

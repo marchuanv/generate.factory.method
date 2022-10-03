@@ -1,6 +1,6 @@
 {
     "BindingName": "[BindingName]",
     "isSingleton": [IsSingleton],
-    "ctorArguments": [CtorArguments],
+    "ctorParameters": [CtorParameters],
     "instances": {}
 }

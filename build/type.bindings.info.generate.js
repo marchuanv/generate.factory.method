@@ -1,13 +1,13 @@
 const path = require('path');
 const { writeFileSync } = require('fs');
 const utils = require('utils');
-const typeConfig = require(path.join(__dirname, 'type.info.json'));
+const typesInfo = require(path.join(__dirname, 'types.info.json'));
 const typeBindingsInfoPath = path.join(__dirname, 'type.bindings.info.json');
 const typeBindingsInfo = require(typeBindingsInfoPath);
 const bindingsInfo = require(path.join(__dirname, 'bindings.info.json'));
 
+const typeNames = Object.keys(typesInfo);
 const bindingsNames = Object.keys(bindingsInfo);
-const typeNames = Object.keys(typeConfig);
 for(const typeName of typeNames) {
     if (!typeBindingsInfo[typeName]) {
         typeBindingsInfo[typeName] = {};
@@ -15,7 +15,9 @@ for(const typeName of typeNames) {
 };
 writeFileSync(typeBindingsInfoPath, utils.getJSONString(typeBindingsInfo), 'utf8');
 for(const typeName of typeNames) {
+    const typeInfo = typesInfo[typeName];
     const typeBindingInfo = typeBindingsInfo[typeName];
+    const bindingInfo = bindingsInfo[typeName];
     for(const bindingName of bindingsNames) {
         if (typeBindingInfo[bindingName]) {
             for(const bindingPropName of Object.keys(typeBindingInfo[bindingName])) {

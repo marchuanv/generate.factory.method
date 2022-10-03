@@ -1,688 +1,247 @@
 {
     "ClientMessageBus": {
-        "Global": {
-            "bindingFilePath": "C://component//lib//factory//generated//clientmessagebus//clientmessagebus.factory.container.global.binding.json",
-            "isSingleton": false
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//clientmessagebus//clientmessagebus.factory.container.multiplerequestsspec.binding.json",
-            "isSingleton": true
-        },
-        "FactorySpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//clientmessagebus//clientmessagebus.factory.container.factoryspec.binding.json",
-            "isSingleton": true
-        }
+        "Global": null,
+        "MultipleRequestsSpec": null,
+        "FactorySpec": null
     },
     "Component": {
-        "Global": {
-            "bindingFilePath": "C://component//lib//factory//generated//component//component.factory.container.global.binding.json",
-            "isSingleton": false
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//component//component.factory.container.multiplerequestsspec.binding.json",
-            "isSingleton": true
-        },
-        "FactorySpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//component//component.factory.container.factoryspec.binding.json",
-            "isSingleton": true
-        }
+        "Global": null,
+        "MultipleRequestsSpec": null,
+        "FactorySpec": null
     },
     "ContentType": {
-        "Global": {
-            "bindingFilePath": "C://component//lib//factory//generated//contenttype//contenttype.factory.container.global.binding.json",
-            "isSingleton": false
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//contenttype//contenttype.factory.container.multiplerequestsspec.binding.json",
-            "isSingleton": true
-        },
-        "FactorySpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//contenttype//contenttype.factory.container.factoryspec.binding.json",
-            "isSingleton": true
-        }
+        "Global": null,
+        "MultipleRequestsSpec": null,
+        "FactorySpec": null
     },
     "Logger": {
-        "Global": {
-            "bindingFilePath": "C://component//lib//factory//generated//logger//logger.factory.container.global.binding.json",
-            "isSingleton": false
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//logger//logger.factory.container.multiplerequestsspec.binding.json",
-            "isSingleton": true
-        },
-        "FactorySpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//logger//logger.factory.container.factoryspec.binding.json",
-            "isSingleton": true
-        }
+        "Global": null,
+        "MultipleRequestsSpec": null,
+        "FactorySpec": null
     },
     "Message": {
-        "Global": {
-            "bindingFilePath": "C://component//lib//factory//generated//message//message.factory.container.global.binding.json",
-            "isSingleton": false
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//message//message.factory.container.multiplerequestsspec.binding.json",
-            "isSingleton": true
-        },
-        "FactorySpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//message//message.factory.container.factoryspec.binding.json",
-            "isSingleton": true
-        }
+        "Global": null,
+        "MultipleRequestsSpec": null,
+        "FactorySpec": null
     },
     "MessageContent": {
-        "Global": {
-            "bindingFilePath": "C://component//lib//factory//generated//messagecontent//messagecontent.factory.container.global.binding.json",
-            "isSingleton": false
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//messagecontent//messagecontent.factory.container.multiplerequestsspec.binding.json",
-            "isSingleton": true
-        },
-        "FactorySpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//messagecontent//messagecontent.factory.container.factoryspec.binding.json",
-            "isSingleton": true
-        }
+        "Global": null,
+        "MultipleRequestsSpec": null,
+        "FactorySpec": null
     },
     "MessageContentMetadata": {
-        "Global": {
-            "bindingFilePath": "C://component//lib//factory//generated//messagecontentmetadata//messagecontentmetadata.factory.container.global.binding.json",
-            "isSingleton": false
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//messagecontentmetadata//messagecontentmetadata.factory.container.multiplerequestsspec.binding.json",
-            "isSingleton": true
-        },
-        "FactorySpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//messagecontentmetadata//messagecontentmetadata.factory.container.factoryspec.binding.json",
-            "isSingleton": true
-        }
+        "Global": null,
+        "MultipleRequestsSpec": null,
+        "FactorySpec": null
     },
     "MessageConverter": {
-        "Global": {
-            "bindingFilePath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.global.binding.json",
-            "isSingleton": false
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.multiplerequestsspec.binding.json",
-            "isSingleton": true
-        },
-        "FactorySpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.factoryspec.binding.json",
-            "isSingleton": true
-        }
+        "Global": null,
+        "MultipleRequestsSpec": null,
+        "FactorySpec": null
     },
     "MessageMetadata": {
-        "Global": {
-            "bindingFilePath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.global.binding.json",
-            "isSingleton": false
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.multiplerequestsspec.binding.json",
-            "isSingleton": true
-        },
-        "FactorySpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.factoryspec.binding.json",
-            "isSingleton": true
-        }
+        "Global": null,
+        "MultipleRequestsSpec": null,
+        "FactorySpec": null
     },
     "MessageQueue": {
-        "Global": {
-            "bindingFilePath": "C://component//lib//factory//generated//messagequeue//messagequeue.factory.container.global.binding.json",
-            "isSingleton": false
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//messagequeue//messagequeue.factory.container.multiplerequestsspec.binding.json",
-            "isSingleton": true
-        },
-        "FactorySpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//messagequeue//messagequeue.factory.container.factoryspec.binding.json",
-            "isSingleton": true
-        }
+        "Global": null,
+        "MultipleRequestsSpec": null,
+        "FactorySpec": null
     },
     "MessageStatus": {
-        "Global": {
-            "bindingFilePath": "C://component//lib//factory//generated//messagestatus//messagestatus.factory.container.global.binding.json",
-            "isSingleton": false
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//messagestatus//messagestatus.factory.container.multiplerequestsspec.binding.json",
-            "isSingleton": true
-        },
-        "FactorySpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//messagestatus//messagestatus.factory.container.factoryspec.binding.json",
-            "isSingleton": true
-        }
+        "Global": null,
+        "MultipleRequestsSpec": null,
+        "FactorySpec": null
     },
     "MessageStore": {
-        "Global": {
-            "bindingFilePath": "C://component//lib//factory//generated//messagestore//messagestore.factory.container.global.binding.json",
-            "isSingleton": false
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//messagestore//messagestore.factory.container.multiplerequestsspec.binding.json",
-            "isSingleton": true
-        },
-        "FactorySpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//messagestore//messagestore.factory.container.factoryspec.binding.json",
-            "isSingleton": true
-        }
+        "Global": null,
+        "MultipleRequestsSpec": null,
+        "FactorySpec": null
     },
     "RecipientAddress": {
-        "Global": {
-            "bindingFilePath": "C://component//lib//factory//generated//recipientaddress//recipientaddress.factory.container.global.binding.json",
-            "isSingleton": false
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//recipientaddress//recipientaddress.factory.container.multiplerequestsspec.binding.json",
-            "isSingleton": true
-        },
-        "FactorySpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//recipientaddress//recipientaddress.factory.container.factoryspec.binding.json",
-            "isSingleton": true
-        }
+        "Global": null,
+        "MultipleRequestsSpec": null,
+        "FactorySpec": null
     },
     "SenderAddress": {
-        "Global": {
-            "bindingFilePath": "C://component//lib//factory//generated//senderaddress//senderaddress.factory.container.global.binding.json",
-            "isSingleton": false
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//senderaddress//senderaddress.factory.container.multiplerequestsspec.binding.json",
-            "isSingleton": true
-        },
-        "FactorySpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//senderaddress//senderaddress.factory.container.factoryspec.binding.json",
-            "isSingleton": true
-        }
+        "Global": null,
+        "MultipleRequestsSpec": null,
+        "FactorySpec": null
     },
     "ServerMessageBus": {
-        "Global": {
-            "bindingFilePath": "C://component//lib//factory//generated//servermessagebus//servermessagebus.factory.container.global.binding.json",
-            "isSingleton": false
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//servermessagebus//servermessagebus.factory.container.multiplerequestsspec.binding.json",
-            "isSingleton": true
-        },
-        "FactorySpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//servermessagebus//servermessagebus.factory.container.factoryspec.binding.json",
-            "isSingleton": true
-        }
+        "Global": null,
+        "MultipleRequestsSpec": null,
+        "FactorySpec": null
     },
     "UserSecurity": {
-        "Global": {
-            "bindingFilePath": "C://component//lib//factory//generated//usersecurity//usersecurity.factory.container.global.binding.json",
-            "isSingleton": false
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//usersecurity//usersecurity.factory.container.multiplerequestsspec.binding.json",
-            "isSingleton": true
-        },
-        "FactorySpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//usersecurity//usersecurity.factory.container.factoryspec.binding.json",
-            "isSingleton": true
-        }
+        "Global": null,
+        "MultipleRequestsSpec": null,
+        "FactorySpec": null
     },
     "UserSessions": {
-        "Global": {
-            "bindingFilePath": "C://component//lib//factory//generated//usersessions//usersessions.factory.container.global.binding.json",
-            "isSingleton": false
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//usersessions//usersessions.factory.container.multiplerequestsspec.binding.json",
-            "isSingleton": true
-        },
-        "FactorySpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//usersessions//usersessions.factory.container.factoryspec.binding.json",
-            "isSingleton": true
-        }
+        "Global": null,
+        "MultipleRequestsSpec": null,
+        "FactorySpec": null
     },
     "HttpClientMessageBus": {
-        "Global": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpclientmessagebus//httpclientmessagebus.factory.container.global.binding.json",
-            "isSingleton": false
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpclientmessagebus//httpclientmessagebus.factory.container.multiplerequestsspec.binding.json",
-            "isSingleton": true
-        },
-        "FactorySpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpclientmessagebus//httpclientmessagebus.factory.container.factoryspec.binding.json",
-            "isSingleton": true
-        }
+        "Global": null,
+        "MultipleRequestsSpec": null,
+        "FactorySpec": null
     },
     "HttpClientMessageBusManager": {
-        "Global": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpclientmessagebusmanager//httpclientmessagebusmanager.factory.container.global.binding.json",
-            "isSingleton": false
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpclientmessagebusmanager//httpclientmessagebusmanager.factory.container.multiplerequestsspec.binding.json",
-            "isSingleton": true
-        },
-        "FactorySpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpclientmessagebusmanager//httpclientmessagebusmanager.factory.container.factoryspec.binding.json",
-            "isSingleton": true
-        }
+        "Global": null,
+        "MultipleRequestsSpec": null,
+        "FactorySpec": null
     },
     "HttpClientRequestMessageBus": {
-        "Global": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpclientrequestmessagebus//httpclientrequestmessagebus.factory.container.global.binding.json",
-            "isSingleton": false
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpclientrequestmessagebus//httpclientrequestmessagebus.factory.container.multiplerequestsspec.binding.json",
-            "isSingleton": true
-        },
-        "FactorySpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpclientrequestmessagebus//httpclientrequestmessagebus.factory.container.factoryspec.binding.json",
-            "isSingleton": true
-        }
+        "Global": null,
+        "MultipleRequestsSpec": null,
+        "FactorySpec": null
     },
     "HttpClientRequestMessageQueueBinding": {
-        "Global": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpclientrequestmessagequeuebinding//httpclientrequestmessagequeuebinding.factory.container.global.binding.json",
-            "isSingleton": false
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpclientrequestmessagequeuebinding//httpclientrequestmessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
-            "isSingleton": true
-        },
-        "FactorySpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpclientrequestmessagequeuebinding//httpclientrequestmessagequeuebinding.factory.container.factoryspec.binding.json",
-            "isSingleton": true
-        }
+        "Global": null,
+        "MultipleRequestsSpec": null,
+        "FactorySpec": null
     },
     "HttpClientResponseMessageBus": {
-        "Global": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpclientresponsemessagebus//httpclientresponsemessagebus.factory.container.global.binding.json",
-            "isSingleton": false
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpclientresponsemessagebus//httpclientresponsemessagebus.factory.container.multiplerequestsspec.binding.json",
-            "isSingleton": true
-        },
-        "FactorySpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpclientresponsemessagebus//httpclientresponsemessagebus.factory.container.factoryspec.binding.json",
-            "isSingleton": true
-        }
+        "Global": null,
+        "MultipleRequestsSpec": null,
+        "FactorySpec": null
     },
     "HttpClientResponseMessageQueueBinding": {
-        "Global": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpclientresponsemessagequeuebinding//httpclientresponsemessagequeuebinding.factory.container.global.binding.json",
-            "isSingleton": false
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpclientresponsemessagequeuebinding//httpclientresponsemessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
-            "isSingleton": true
-        },
-        "FactorySpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpclientresponsemessagequeuebinding//httpclientresponsemessagequeuebinding.factory.container.factoryspec.binding.json",
-            "isSingleton": true
-        }
+        "Global": null,
+        "MultipleRequestsSpec": null,
+        "FactorySpec": null
     },
     "HttpClientStartedMessageQueueBinding": {
-        "Global": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpclientstartedmessagequeuebinding//httpclientstartedmessagequeuebinding.factory.container.global.binding.json",
-            "isSingleton": false
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpclientstartedmessagequeuebinding//httpclientstartedmessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
-            "isSingleton": true
-        },
-        "FactorySpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpclientstartedmessagequeuebinding//httpclientstartedmessagequeuebinding.factory.container.factoryspec.binding.json",
-            "isSingleton": true
-        }
+        "Global": null,
+        "MultipleRequestsSpec": null,
+        "FactorySpec": null
     },
     "HttpClientStartMessageQueueBinding": {
-        "Global": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpclientstartmessagequeuebinding//httpclientstartmessagequeuebinding.factory.container.global.binding.json",
-            "isSingleton": false
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpclientstartmessagequeuebinding//httpclientstartmessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
-            "isSingleton": true
-        },
-        "FactorySpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpclientstartmessagequeuebinding//httpclientstartmessagequeuebinding.factory.container.factoryspec.binding.json",
-            "isSingleton": true
-        }
+        "Global": null,
+        "MultipleRequestsSpec": null,
+        "FactorySpec": null
     },
     "HttpClientStopMessageQueueBinding": {
-        "Global": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpclientstopmessagequeuebinding//httpclientstopmessagequeuebinding.factory.container.global.binding.json",
-            "isSingleton": false
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpclientstopmessagequeuebinding//httpclientstopmessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
-            "isSingleton": true
-        },
-        "FactorySpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpclientstopmessagequeuebinding//httpclientstopmessagequeuebinding.factory.container.factoryspec.binding.json",
-            "isSingleton": true
-        }
+        "Global": null,
+        "MultipleRequestsSpec": null,
+        "FactorySpec": null
     },
     "HttpClientStoppedMessageQueueBinding": {
-        "Global": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpclientstoppedmessagequeuebinding//httpclientstoppedmessagequeuebinding.factory.container.global.binding.json",
-            "isSingleton": false
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpclientstoppedmessagequeuebinding//httpclientstoppedmessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
-            "isSingleton": true
-        },
-        "FactorySpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpclientstoppedmessagequeuebinding//httpclientstoppedmessagequeuebinding.factory.container.factoryspec.binding.json",
-            "isSingleton": true
-        }
+        "Global": null,
+        "MultipleRequestsSpec": null,
+        "FactorySpec": null
     },
     "HttpRequestMessage": {
-        "Global": {
-            "bindingFilePath": "C://component//lib//factory//generated//httprequestmessage//httprequestmessage.factory.container.global.binding.json",
-            "isSingleton": false
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//httprequestmessage//httprequestmessage.factory.container.multiplerequestsspec.binding.json",
-            "isSingleton": true
-        },
-        "FactorySpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//httprequestmessage//httprequestmessage.factory.container.factoryspec.binding.json",
-            "isSingleton": true
-        }
+        "Global": null,
+        "MultipleRequestsSpec": null,
+        "FactorySpec": null
     },
     "HttpResponseMessage": {
-        "Global": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpresponsemessage//httpresponsemessage.factory.container.global.binding.json",
-            "isSingleton": false
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpresponsemessage//httpresponsemessage.factory.container.multiplerequestsspec.binding.json",
-            "isSingleton": true
-        },
-        "FactorySpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpresponsemessage//httpresponsemessage.factory.container.factoryspec.binding.json",
-            "isSingleton": true
-        }
+        "Global": null,
+        "MultipleRequestsSpec": null,
+        "FactorySpec": null
     },
     "HttpServerMessageBus": {
-        "Global": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpservermessagebus//httpservermessagebus.factory.container.global.binding.json",
-            "isSingleton": false
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpservermessagebus//httpservermessagebus.factory.container.multiplerequestsspec.binding.json",
-            "isSingleton": true
-        },
-        "FactorySpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpservermessagebus//httpservermessagebus.factory.container.factoryspec.binding.json",
-            "isSingleton": true
-        }
+        "Global": null,
+        "MultipleRequestsSpec": null,
+        "FactorySpec": null
     },
     "HttpServerMessageBusManager": {
-        "Global": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpservermessagebusmanager//httpservermessagebusmanager.factory.container.global.binding.json",
-            "isSingleton": false
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpservermessagebusmanager//httpservermessagebusmanager.factory.container.multiplerequestsspec.binding.json",
-            "isSingleton": true
-        },
-        "FactorySpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpservermessagebusmanager//httpservermessagebusmanager.factory.container.factoryspec.binding.json",
-            "isSingleton": true
-        }
+        "Global": null,
+        "MultipleRequestsSpec": null,
+        "FactorySpec": null
     },
     "HttpServerRequestMessageBus": {
-        "Global": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpserverrequestmessagebus//httpserverrequestmessagebus.factory.container.global.binding.json",
-            "isSingleton": false
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpserverrequestmessagebus//httpserverrequestmessagebus.factory.container.multiplerequestsspec.binding.json",
-            "isSingleton": true
-        },
-        "FactorySpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpserverrequestmessagebus//httpserverrequestmessagebus.factory.container.factoryspec.binding.json",
-            "isSingleton": true
-        }
+        "Global": null,
+        "MultipleRequestsSpec": null,
+        "FactorySpec": null
     },
     "HttpServerRequestMessageQueueBinding": {
-        "Global": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpserverrequestmessagequeuebinding//httpserverrequestmessagequeuebinding.factory.container.global.binding.json",
-            "isSingleton": false
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpserverrequestmessagequeuebinding//httpserverrequestmessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
-            "isSingleton": true
-        },
-        "FactorySpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpserverrequestmessagequeuebinding//httpserverrequestmessagequeuebinding.factory.container.factoryspec.binding.json",
-            "isSingleton": true
-        }
+        "Global": null,
+        "MultipleRequestsSpec": null,
+        "FactorySpec": null
     },
     "HttpServerResponseMessageBus": {
-        "Global": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpserverresponsemessagebus//httpserverresponsemessagebus.factory.container.global.binding.json",
-            "isSingleton": false
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpserverresponsemessagebus//httpserverresponsemessagebus.factory.container.multiplerequestsspec.binding.json",
-            "isSingleton": true
-        },
-        "FactorySpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpserverresponsemessagebus//httpserverresponsemessagebus.factory.container.factoryspec.binding.json",
-            "isSingleton": true
-        }
+        "Global": null,
+        "MultipleRequestsSpec": null,
+        "FactorySpec": null
     },
     "HttpServerResponseMessageQueueBinding": {
-        "Global": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpserverresponsemessagequeuebinding//httpserverresponsemessagequeuebinding.factory.container.global.binding.json",
-            "isSingleton": false
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpserverresponsemessagequeuebinding//httpserverresponsemessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
-            "isSingleton": true
-        },
-        "FactorySpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpserverresponsemessagequeuebinding//httpserverresponsemessagequeuebinding.factory.container.factoryspec.binding.json",
-            "isSingleton": true
-        }
+        "Global": null,
+        "MultipleRequestsSpec": null,
+        "FactorySpec": null
     },
     "HttpServerStartedMessageQueueBinding": {
-        "Global": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpserverstartedmessagequeuebinding//httpserverstartedmessagequeuebinding.factory.container.global.binding.json",
-            "isSingleton": false
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpserverstartedmessagequeuebinding//httpserverstartedmessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
-            "isSingleton": true
-        },
-        "FactorySpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpserverstartedmessagequeuebinding//httpserverstartedmessagequeuebinding.factory.container.factoryspec.binding.json",
-            "isSingleton": true
-        }
+        "Global": null,
+        "MultipleRequestsSpec": null,
+        "FactorySpec": null
     },
     "HttpServerStartMessageQueueBinding": {
-        "Global": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpserverstartmessagequeuebinding//httpserverstartmessagequeuebinding.factory.container.global.binding.json",
-            "isSingleton": false
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpserverstartmessagequeuebinding//httpserverstartmessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
-            "isSingleton": true
-        },
-        "FactorySpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpserverstartmessagequeuebinding//httpserverstartmessagequeuebinding.factory.container.factoryspec.binding.json",
-            "isSingleton": true
-        }
+        "Global": null,
+        "MultipleRequestsSpec": null,
+        "FactorySpec": null
     },
     "HttpServerStopMessageQueueBinding": {
-        "Global": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.container.global.binding.json",
-            "isSingleton": false
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
-            "isSingleton": true
-        },
-        "FactorySpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.container.factoryspec.binding.json",
-            "isSingleton": true
-        }
+        "Global": null,
+        "MultipleRequestsSpec": null,
+        "FactorySpec": null
     },
     "HttpServerStoppedMessageQueueBinding": {
-        "Global": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpserverstoppedmessagequeuebinding//httpserverstoppedmessagequeuebinding.factory.container.global.binding.json",
-            "isSingleton": false
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpserverstoppedmessagequeuebinding//httpserverstoppedmessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
-            "isSingleton": true
-        },
-        "FactorySpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpserverstoppedmessagequeuebinding//httpserverstoppedmessagequeuebinding.factory.container.factoryspec.binding.json",
-            "isSingleton": true
-        }
+        "Global": null,
+        "MultipleRequestsSpec": null,
+        "FactorySpec": null
     },
     "WebSocketClientRequestMessageBus": {
-        "Global": {
-            "bindingFilePath": "C://component//lib//factory//generated//websocketclientrequestmessagebus//websocketclientrequestmessagebus.factory.container.global.binding.json",
-            "isSingleton": false
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//websocketclientrequestmessagebus//websocketclientrequestmessagebus.factory.container.multiplerequestsspec.binding.json",
-            "isSingleton": true
-        },
-        "FactorySpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//websocketclientrequestmessagebus//websocketclientrequestmessagebus.factory.container.factoryspec.binding.json",
-            "isSingleton": true
-        }
+        "Global": null,
+        "MultipleRequestsSpec": null,
+        "FactorySpec": null
     },
     "WebSocketClientRequestMessageQueueBinding": {
-        "Global": {
-            "bindingFilePath": "C://component//lib//factory//generated//websocketclientrequestmessagequeuebinding//websocketclientrequestmessagequeuebinding.factory.container.global.binding.json",
-            "isSingleton": false
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//websocketclientrequestmessagequeuebinding//websocketclientrequestmessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
-            "isSingleton": true
-        },
-        "FactorySpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//websocketclientrequestmessagequeuebinding//websocketclientrequestmessagequeuebinding.factory.container.factoryspec.binding.json",
-            "isSingleton": true
-        }
+        "Global": null,
+        "MultipleRequestsSpec": null,
+        "FactorySpec": null
     },
     "WebSocketClientResponseMessageBus": {
-        "Global": {
-            "bindingFilePath": "C://component//lib//factory//generated//websocketclientresponsemessagebus//websocketclientresponsemessagebus.factory.container.global.binding.json",
-            "isSingleton": false
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//websocketclientresponsemessagebus//websocketclientresponsemessagebus.factory.container.multiplerequestsspec.binding.json",
-            "isSingleton": true
-        },
-        "FactorySpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//websocketclientresponsemessagebus//websocketclientresponsemessagebus.factory.container.factoryspec.binding.json",
-            "isSingleton": true
-        }
+        "Global": null,
+        "MultipleRequestsSpec": null,
+        "FactorySpec": null
     },
     "WebSocketClientResponseMessageQueueBinding": {
-        "Global": {
-            "bindingFilePath": "C://component//lib//factory//generated//websocketclientresponsemessagequeuebinding//websocketclientresponsemessagequeuebinding.factory.container.global.binding.json",
-            "isSingleton": false
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//websocketclientresponsemessagequeuebinding//websocketclientresponsemessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
-            "isSingleton": true
-        },
-        "FactorySpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//websocketclientresponsemessagequeuebinding//websocketclientresponsemessagequeuebinding.factory.container.factoryspec.binding.json",
-            "isSingleton": true
-        }
+        "Global": null,
+        "MultipleRequestsSpec": null,
+        "FactorySpec": null
     },
     "WebSocketRequestMessage": {
-        "Global": {
-            "bindingFilePath": "C://component//lib//factory//generated//websocketrequestmessage//websocketrequestmessage.factory.container.global.binding.json",
-            "isSingleton": false
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//websocketrequestmessage//websocketrequestmessage.factory.container.multiplerequestsspec.binding.json",
-            "isSingleton": true
-        },
-        "FactorySpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//websocketrequestmessage//websocketrequestmessage.factory.container.factoryspec.binding.json",
-            "isSingleton": true
-        }
+        "Global": null,
+        "MultipleRequestsSpec": null,
+        "FactorySpec": null
     },
     "WebSocketResponseMessage": {
-        "Global": {
-            "bindingFilePath": "C://component//lib//factory//generated//websocketresponsemessage//websocketresponsemessage.factory.container.global.binding.json",
-            "isSingleton": false
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//websocketresponsemessage//websocketresponsemessage.factory.container.multiplerequestsspec.binding.json",
-            "isSingleton": true
-        },
-        "FactorySpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//websocketresponsemessage//websocketresponsemessage.factory.container.factoryspec.binding.json",
-            "isSingleton": true
-        }
+        "Global": null,
+        "MultipleRequestsSpec": null,
+        "FactorySpec": null
     },
     "WebSocketServerRequestMessageBus": {
-        "Global": {
-            "bindingFilePath": "C://component//lib//factory//generated//websocketserverrequestmessagebus//websocketserverrequestmessagebus.factory.container.global.binding.json",
-            "isSingleton": false
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//websocketserverrequestmessagebus//websocketserverrequestmessagebus.factory.container.multiplerequestsspec.binding.json",
-            "isSingleton": true
-        },
-        "FactorySpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//websocketserverrequestmessagebus//websocketserverrequestmessagebus.factory.container.factoryspec.binding.json",
-            "isSingleton": true
-        }
+        "Global": null,
+        "MultipleRequestsSpec": null,
+        "FactorySpec": null
     },
     "WebSocketServerRequestMessageQueueBinding": {
-        "Global": {
-            "bindingFilePath": "C://component//lib//factory//generated//websocketserverrequestmessagequeuebinding//websocketserverrequestmessagequeuebinding.factory.container.global.binding.json",
-            "isSingleton": false
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//websocketserverrequestmessagequeuebinding//websocketserverrequestmessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
-            "isSingleton": true
-        },
-        "FactorySpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//websocketserverrequestmessagequeuebinding//websocketserverrequestmessagequeuebinding.factory.container.factoryspec.binding.json",
-            "isSingleton": true
-        }
+        "Global": null,
+        "MultipleRequestsSpec": null,
+        "FactorySpec": null
     },
     "WebSocketServerResponseMessageBus": {
-        "Global": {
-            "bindingFilePath": "C://component//lib//factory//generated//websocketserverresponsemessagebus//websocketserverresponsemessagebus.factory.container.global.binding.json",
-            "isSingleton": false
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//websocketserverresponsemessagebus//websocketserverresponsemessagebus.factory.container.multiplerequestsspec.binding.json",
-            "isSingleton": true
-        },
-        "FactorySpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//websocketserverresponsemessagebus//websocketserverresponsemessagebus.factory.container.factoryspec.binding.json",
-            "isSingleton": true
-        }
+        "Global": null,
+        "MultipleRequestsSpec": null,
+        "FactorySpec": null
     },
     "WebSocketServerResponseMessageQueueBinding": {
-        "Global": {
-            "bindingFilePath": "C://component//lib//factory//generated//websocketserverresponsemessagequeuebinding//websocketserverresponsemessagequeuebinding.factory.container.global.binding.json",
-            "isSingleton": false
-        },
-        "MultipleRequestsSpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//websocketserverresponsemessagequeuebinding//websocketserverresponsemessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
-            "isSingleton": true
-        },
-        "FactorySpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//websocketserverresponsemessagequeuebinding//websocketserverresponsemessagequeuebinding.factory.container.factoryspec.binding.json",
-            "isSingleton": true
-        }
+        "Global": null,
+        "MultipleRequestsSpec": null,
+        "FactorySpec": null
     }
 }

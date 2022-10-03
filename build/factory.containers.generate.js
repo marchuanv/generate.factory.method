@@ -1,12 +1,13 @@
 const { readFileSync, writeFileSync, existsSync } = require('fs');
 const path = require('path');
 const utils = require('utils');
-const typeInfo = require(path.join(__dirname, 'type.info.json'));
+const typesInfo = require(path.join(__dirname, 'types.info.json'));
 const factoryInfo = require(path.join(__dirname, 'factory.info.json'));
 const factoryContainerBindingsInfo = require(path.join(__dirname, 'factory.container.bindings.info.json'));
+const factoryContainerTemplate = readFileSync(path.join(__dirname, 'templates', 'factory.container.template'),'utf8');
 
-for(const _typeName of Object.keys(typeInfo)) {
-    const info = typeInfo[_typeName];
+for(const _typeName of Object.keys(typesInfo)) {
+    const info = typesInfo[_typeName];
     const { typeName, variableName, scriptPath, prototypeScriptPath } = info;
     const factoryContainerBindingInfo = factoryContainerBindingsInfo[typeName];
     const bindings = {};
@@ -17,7 +18,6 @@ for(const _typeName of Object.keys(typeInfo)) {
         };
     };
     const { factoryContainerFilePath, factoryScriptPath } = factoryInfo[typeName];
-    const factoryContainerTemplate = readFileSync(path.join(__dirname, 'templates', 'factory.container.template'),'utf8');
     const factoryContainerJson = factoryContainerTemplate
         .replace(/\[TypeName\]/g, typeName)
         .replace(/\[TypeVariableName\]/g, variableName)

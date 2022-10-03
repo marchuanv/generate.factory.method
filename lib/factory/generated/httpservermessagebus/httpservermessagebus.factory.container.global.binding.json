@@ -1,6 +1,6 @@
 {
     "BindingName": "Global",
     "isSingleton": false,
-    "ctorArguments": {},
+    "ctorParameters": {},
     "instances": {}
 }

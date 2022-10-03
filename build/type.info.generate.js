@@ -7,8 +7,8 @@ const httpScripts = readdirSync(path.join(libDir, 'http'), { withFileTypes: true
 const websocketScripts = readdirSync(path.join(libDir, 'websocket'), { withFileTypes: true }).filter(dirent => dirent.isFile()).map(file => path.join(libDir, 'websocket', file.name));
 const scripts = rootScripts.concat(httpScripts.concat(websocketScripts)).filter(scPath => scPath.indexOf('prototype.js') > -1);
 const typeInfoTemplate = readFileSync(path.join(__dirname,'templates', 'type.info.template'),'utf8');
-const typeInfoPath = path.join(__dirname, 'type.info.json');
-const typeInfo = require(typeInfoPath);
+const typesInfoPath = path.join(__dirname, 'types.info.json');
+const typesInfo = require(typesInfoPath);
 
 function getDependencyTree(info, pass = 'firstpass', types = []) {
     if (!info || utils.isEmptyObject(info)) {
@@ -98,7 +98,7 @@ for(const info of getDependencyTree()) {
     if (!info.prototypeScriptPath) {
         continue;
     }
-    typeInfo[info.typeName] = {};
-    typeInfo[info.typeName] = utils.getJSONObject(utils.getJSONString(info)); //Clone
+    typesInfo[info.typeName] = {};
+    typesInfo[info.typeName] = utils.getJSONObject(utils.getJSONString(info)); //Clone
 };
-writeFileSync(typeInfoPath, utils.getJSONString(typeInfo), 'utf8');
+writeFileSync(typesInfoPath, utils.getJSONString(typesInfo), 'utf8');
