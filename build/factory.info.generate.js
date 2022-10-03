@@ -6,6 +6,23 @@ const typesInfo = require(path.join(__dirname, 'types.info.json'));
 const factoryInfoPath = path.join(__dirname, 'factory.info.json');
 let factoryInfo = {};
 
+const getParameters = (info, params) => {
+    if (!params) {
+        params = [];
+    }
+    const children = info.children.filter(child => child.variableName !== 'factoryContainerBindingName');
+    for(const child of children) {
+        if (child.prototypeScriptPath) {
+            continue;
+        }
+        if (!params.find(name => name === child.variableName)) {
+            params.push(child.variableName);
+        }
+        getParameters(child, params);
+    };
+    return params;
+}
+
 for(const typeName of Object.keys(typesInfo)) {
 
     const info = typesInfo[typeName];
@@ -19,13 +36,7 @@ for(const typeName of Object.keys(typesInfo)) {
     const factoryScripPath = path.join(factoryGeneratedDir, factoryScriptFileName).replace(/\\/g,'//');
     const factoryMinScriptPath = path.join(factoryGeneratedDir, factoryMinScriptFileName).replace(/\\/g,'//');
     const factoryContainerFilePath = path.join(factoryGeneratedDir, factoryContainerJsonFileName).replace(/\\/g,'//');
-    
-    const ctorArgumentNames =  info.children.filter(child => child.variableName !== 'factoryContainerBindingName').reduce((params, child) => {
-        if (!child.prototypePath) {
-            params.push(child.variableName);
-        }
-        return params;
-    },[]);
+    const ctorArgumentNames = getParameters(info);
     const ctorArgumentsWithBindingNames = utils.getJSONObject(utils.getJSONString(ctorArgumentNames));
     ctorArgumentsWithBindingNames.push('factoryContainerBindingName');
 
