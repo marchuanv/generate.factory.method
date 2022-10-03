@@ -14,8 +14,8 @@ require('./type.info.generate');
 require('./type.bindings.info.generate');
 require('./factory.container.bindings.info.generate');
 require('./factory.container.bindings.generate');
-// require('./factory.info.generate');
-// require('./factory.generate');
+require('./factory.info.generate');
+require('./factory.generate');
 // require('./factory.containers.generate');
 
 // require('./factory.container.bindings.generate');
