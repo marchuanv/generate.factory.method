@@ -1,6 +1,9 @@
 {
-    "BindingName": "MultipleRequestsSpec",
+    "bindingName": "MultipleRequestsSpec",
     "isSingleton": true,
-    "ctorParameters": {},
+    "ctorParameters": {
+        "factoryContainerBindingName": null,
+        "data": null
+    },
     "instances": {}
 }

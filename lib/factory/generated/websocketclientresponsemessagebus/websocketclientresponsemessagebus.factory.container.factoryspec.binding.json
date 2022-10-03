@@ -1,6 +1,10 @@
 {
-    "BindingName": "FactorySpec",
+    "bindingName": "FactorySpec",
     "isSingleton": true,
-    "ctorParameters": {},
+    "ctorParameters": {
+        "websocketClientResponseMessageQueueBinding": {
+            "bindingFilePath": "C://component//lib//factory//generated//websocketclientresponsemessagequeuebinding//websocketclientresponsemessagequeuebinding.factory.container.factoryspec.binding.json"
+        }
+    },
     "instances": {}
 }

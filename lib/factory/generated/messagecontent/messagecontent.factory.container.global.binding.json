@@ -1,6 +1,17 @@
 {
-    "BindingName": "Global",
+    "bindingName": "Global",
     "isSingleton": false,
-    "ctorParameters": {},
+    "ctorParameters": {
+        "messageContentMetadata": {
+            "bindingFilePath": "C://component//lib//factory//generated//messagecontentmetadata//messagecontentmetadata.factory.container.global.binding.json"
+        },
+        "data": null,
+        "userSessions": {
+            "bindingFilePath": "C://component//lib//factory//generated//usersessions//usersessions.factory.container.global.binding.json"
+        },
+        "messageMetadata": {
+            "bindingFilePath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.global.binding.json"
+        }
+    },
     "instances": {}
 }

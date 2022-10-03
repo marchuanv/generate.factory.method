@@ -1,6 +1,16 @@
 {
-    "BindingName": "FactorySpec",
+    "bindingName": "FactorySpec",
     "isSingleton": true,
-    "ctorParameters": {},
+    "ctorParameters": {
+        "messageConverter": {
+            "bindingFilePath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.factoryspec.binding.json"
+        },
+        "clientRequestMessageBus": {
+            "bindingFilePath": "C://component//lib//factory//generated//httpclientrequestmessagebus//httpclientrequestmessagebus.factory.container.factoryspec.binding.json"
+        },
+        "clientResponseMessageBus": {
+            "bindingFilePath": "C://component//lib//factory//generated//httpclientresponsemessagebus//httpclientresponsemessagebus.factory.container.factoryspec.binding.json"
+        }
+    },
     "instances": {}
 }

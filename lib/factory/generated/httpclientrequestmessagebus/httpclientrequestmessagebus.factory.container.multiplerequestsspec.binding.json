@@ -1,6 +1,10 @@
 {
-    "BindingName": "MultipleRequestsSpec",
+    "bindingName": "MultipleRequestsSpec",
     "isSingleton": true,
-    "ctorParameters": {},
+    "ctorParameters": {
+        "httpClientRequestMessageQueueBinding": {
+            "bindingFilePath": "C://component//lib//factory//generated//httpclientrequestmessagequeuebinding//httpclientrequestmessagequeuebinding.factory.container.multiplerequestsspec.binding.json"
+        }
+    },
     "instances": {}
 }

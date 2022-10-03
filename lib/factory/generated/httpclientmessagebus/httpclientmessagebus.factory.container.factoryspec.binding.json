@@ -1,6 +1,24 @@
 {
-    "BindingName": "FactorySpec",
+    "bindingName": "FactorySpec",
     "isSingleton": true,
-    "ctorParameters": {},
+    "ctorParameters": {
+        "timeout": null,
+        "factoryContainerBindingName": null,
+        "httpClientRequestMessageQueueBinding": {
+            "bindingFilePath": "C://component//lib//factory//generated//httpclientrequestmessagequeuebinding//httpclientrequestmessagequeuebinding.factory.container.factoryspec.binding.json"
+        },
+        "httpClientResponseMessageQueueBinding": {
+            "bindingFilePath": "C://component//lib//factory//generated//httpclientresponsemessagequeuebinding//httpclientresponsemessagequeuebinding.factory.container.factoryspec.binding.json"
+        },
+        "httpClientStartMessageQueueBinding": {
+            "bindingFilePath": "C://component//lib//factory//generated//httpclientstartmessagequeuebinding//httpclientstartmessagequeuebinding.factory.container.factoryspec.binding.json"
+        },
+        "httpClientStartedMessageQueueBinding": {
+            "bindingFilePath": "C://component//lib//factory//generated//httpclientstartedmessagequeuebinding//httpclientstartedmessagequeuebinding.factory.container.factoryspec.binding.json"
+        },
+        "httpClientStopMessageQueueBinding": {
+            "bindingFilePath": "C://component//lib//factory//generated//httpclientstopmessagequeuebinding//httpclientstopmessagequeuebinding.factory.container.factoryspec.binding.json"
+        }
+    },
     "instances": {}
 }

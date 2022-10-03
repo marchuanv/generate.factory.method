@@ -1,6 +1,8 @@
 {
-    "BindingName": "FactorySpec",
+    "bindingName": "FactorySpec",
     "isSingleton": true,
-    "ctorParameters": {},
+    "ctorParameters": {
+        "factoryContainerBindingName": null
+    },
     "instances": {}
 }

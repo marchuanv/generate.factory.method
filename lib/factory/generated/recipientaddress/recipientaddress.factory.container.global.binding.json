@@ -1,6 +1,9 @@
 {
-    "BindingName": "Global",
+    "bindingName": "Global",
     "isSingleton": false,
-    "ctorParameters": {},
+    "ctorParameters": {
+        "recipientHost": null,
+        "recipientPort": null
+    },
     "instances": {}
 }

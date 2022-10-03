@@ -1,6 +1,18 @@
 {
-    "BindingName": "FactorySpec",
+    "bindingName": "FactorySpec",
     "isSingleton": true,
-    "ctorParameters": {},
+    "ctorParameters": {
+        "packageJson": null,
+        "factoryContainerBindingName": null,
+        "clientMessageBus": {
+            "bindingFilePath": "C://component//lib//factory//generated//clientmessagebus//clientmessagebus.factory.container.factoryspec.binding.json"
+        },
+        "serverMessageBus": {
+            "bindingFilePath": "C://component//lib//factory//generated//servermessagebus//servermessagebus.factory.container.factoryspec.binding.json"
+        },
+        "userSessions": {
+            "bindingFilePath": "C://component//lib//factory//generated//usersessions//usersessions.factory.container.factoryspec.binding.json"
+        }
+    },
     "instances": {}
 }

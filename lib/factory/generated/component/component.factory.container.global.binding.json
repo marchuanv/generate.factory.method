@@ -1,6 +1,18 @@
 {
-    "BindingName": "Global",
+    "bindingName": "Global",
     "isSingleton": false,
-    "ctorParameters": {},
+    "ctorParameters": {
+        "packageJson": null,
+        "factoryContainerBindingName": null,
+        "clientMessageBus": {
+            "bindingFilePath": "C://component//lib//factory//generated//clientmessagebus//clientmessagebus.factory.container.global.binding.json"
+        },
+        "serverMessageBus": {
+            "bindingFilePath": "C://component//lib//factory//generated//servermessagebus//servermessagebus.factory.container.global.binding.json"
+        },
+        "userSessions": {
+            "bindingFilePath": "C://component//lib//factory//generated//usersessions//usersessions.factory.container.global.binding.json"
+        }
+    },
     "instances": {}
 }

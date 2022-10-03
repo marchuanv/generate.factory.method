@@ -1,6 +1,15 @@
 {
-    "BindingName": "MultipleRequestsSpec",
+    "bindingName": "MultipleRequestsSpec",
     "isSingleton": true,
-    "ctorParameters": {},
+    "ctorParameters": {
+        "recipientAddress": {
+            "bindingFilePath": "C://component//lib//factory//generated//recipientaddress//recipientaddress.factory.container.multiplerequestsspec.binding.json"
+        },
+        "metadata": null,
+        "token": null,
+        "senderAddress": {
+            "bindingFilePath": "C://component//lib//factory//generated//senderaddress//senderaddress.factory.container.multiplerequestsspec.binding.json"
+        }
+    },
     "instances": {}
 }

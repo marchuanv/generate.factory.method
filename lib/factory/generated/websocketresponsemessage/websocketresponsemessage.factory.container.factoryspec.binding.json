@@ -1,6 +1,10 @@
 {
-    "BindingName": "FactorySpec",
+    "bindingName": "FactorySpec",
     "isSingleton": true,
-    "ctorParameters": {},
+    "ctorParameters": {
+        "message": {
+            "bindingFilePath": "C://component//lib//factory//generated//message//message.factory.container.factoryspec.binding.json"
+        }
+    },
     "instances": {}
 }

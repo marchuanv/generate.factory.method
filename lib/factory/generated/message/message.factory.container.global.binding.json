@@ -1,6 +1,21 @@
 {
-    "BindingName": "Global",
+    "bindingName": "Global",
     "isSingleton": false,
-    "ctorParameters": {},
+    "ctorParameters": {
+        "messageStatus": {
+            "bindingFilePath": "C://component//lib//factory//generated//messagestatus//messagestatus.factory.container.global.binding.json"
+        },
+        "factoryContainerBindingName": null,
+        "Id": null,
+        "messageContent": {
+            "bindingFilePath": "C://component//lib//factory//generated//messagecontent//messagecontent.factory.container.global.binding.json"
+        },
+        "messageContentMetadata": {
+            "bindingFilePath": "C://component//lib//factory//generated//messagecontentmetadata//messagecontentmetadata.factory.container.global.binding.json"
+        },
+        "messageMetadata": {
+            "bindingFilePath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.global.binding.json"
+        }
+    },
     "instances": {}
 }

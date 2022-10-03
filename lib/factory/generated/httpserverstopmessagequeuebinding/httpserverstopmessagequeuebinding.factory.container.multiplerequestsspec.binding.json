@@ -1,6 +1,11 @@
 {
-    "BindingName": "MultipleRequestsSpec",
+    "bindingName": "MultipleRequestsSpec",
     "isSingleton": true,
-    "ctorParameters": {},
+    "ctorParameters": {
+        "factoryContainerBindingName": null,
+        "messageQueue": {
+            "bindingFilePath": "C://component//lib//factory//generated//messagequeue//messagequeue.factory.container.multiplerequestsspec.binding.json"
+        }
+    },
     "instances": {}
 }

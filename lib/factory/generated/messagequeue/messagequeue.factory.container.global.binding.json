@@ -1,6 +1,10 @@
 {
-    "BindingName": "Global",
+    "bindingName": "Global",
     "isSingleton": false,
-    "ctorParameters": {},
+    "ctorParameters": {
+        "logger": {
+            "bindingFilePath": "C://component//lib//factory//generated//logger//logger.factory.container.global.binding.json"
+        }
+    },
     "instances": {}
 }

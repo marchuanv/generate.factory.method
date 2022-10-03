@@ -1,6 +1,10 @@
 {
-    "BindingName": "FactorySpec",
+    "bindingName": "FactorySpec",
     "isSingleton": true,
-    "ctorParameters": {},
+    "ctorParameters": {
+        "httpServerRequestMessageQueueBinding": {
+            "bindingFilePath": "C://component//lib//factory//generated//httpserverrequestmessagequeuebinding//httpserverrequestmessagequeuebinding.factory.container.factoryspec.binding.json"
+        }
+    },
     "instances": {}
 }

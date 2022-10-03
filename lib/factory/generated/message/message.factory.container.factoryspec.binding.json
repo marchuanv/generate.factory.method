@@ -1,6 +1,21 @@
 {
-    "BindingName": "FactorySpec",
+    "bindingName": "FactorySpec",
     "isSingleton": true,
-    "ctorParameters": {},
+    "ctorParameters": {
+        "messageStatus": {
+            "bindingFilePath": "C://component//lib//factory//generated//messagestatus//messagestatus.factory.container.factoryspec.binding.json"
+        },
+        "factoryContainerBindingName": null,
+        "Id": null,
+        "messageContent": {
+            "bindingFilePath": "C://component//lib//factory//generated//messagecontent//messagecontent.factory.container.factoryspec.binding.json"
+        },
+        "messageContentMetadata": {
+            "bindingFilePath": "C://component//lib//factory//generated//messagecontentmetadata//messagecontentmetadata.factory.container.factoryspec.binding.json"
+        },
+        "messageMetadata": {
+            "bindingFilePath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.factoryspec.binding.json"
+        }
+    },
     "instances": {}
 }

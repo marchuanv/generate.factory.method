@@ -1,5 +1,5 @@
 {
-    "BindingName": "Global",
+    "bindingName": "Global",
     "isSingleton": false,
     "ctorParameters": {},
     "instances": {}

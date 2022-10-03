@@ -1,6 +1,9 @@
 {
-    "BindingName": "FactorySpec",
+    "bindingName": "FactorySpec",
     "isSingleton": true,
-    "ctorParameters": {},
+    "ctorParameters": {
+        "recipientHost": null,
+        "recipientPort": null
+    },
     "instances": {}
 }

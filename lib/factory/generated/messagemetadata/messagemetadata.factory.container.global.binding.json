@@ -1,6 +1,15 @@
 {
-    "BindingName": "Global",
+    "bindingName": "Global",
     "isSingleton": false,
-    "ctorParameters": {},
+    "ctorParameters": {
+        "recipientAddress": {
+            "bindingFilePath": "C://component//lib//factory//generated//recipientaddress//recipientaddress.factory.container.global.binding.json"
+        },
+        "metadata": null,
+        "token": null,
+        "senderAddress": {
+            "bindingFilePath": "C://component//lib//factory//generated//senderaddress//senderaddress.factory.container.global.binding.json"
+        }
+    },
     "instances": {}
 }

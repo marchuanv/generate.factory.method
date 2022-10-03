@@ -1,6 +1,10 @@
 {
-    "BindingName": "Global",
+    "bindingName": "Global",
     "isSingleton": false,
-    "ctorParameters": {},
+    "ctorParameters": {
+        "httpServerResponseMessageQueueBinding": {
+            "bindingFilePath": "C://component//lib//factory//generated//httpserverresponsemessagequeuebinding//httpserverresponsemessagequeuebinding.factory.container.global.binding.json"
+        }
+    },
     "instances": {}
 }

@@ -1,6 +1,11 @@
 {
-    "BindingName": "Global",
+    "bindingName": "Global",
     "isSingleton": false,
-    "ctorParameters": {},
+    "ctorParameters": {
+        "factoryContainerBindingName": null,
+        "messageQueue": {
+            "bindingFilePath": "C://component//lib//factory//generated//messagequeue//messagequeue.factory.container.global.binding.json"
+        }
+    },
     "instances": {}
 }

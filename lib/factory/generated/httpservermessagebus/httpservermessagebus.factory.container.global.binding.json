@@ -1,6 +1,33 @@
 {
-    "BindingName": "Global",
+    "bindingName": "Global",
     "isSingleton": false,
-    "ctorParameters": {},
+    "ctorParameters": {
+        "timeout": null,
+        "factoryContainerBindingName": null,
+        "httpServerRequestMessageQueueBinding": {
+            "bindingFilePath": "C://component//lib//factory//generated//httpserverrequestmessagequeuebinding//httpserverrequestmessagequeuebinding.factory.container.global.binding.json"
+        },
+        "httpServerResponseMessageQueueBinding": {
+            "bindingFilePath": "C://component//lib//factory//generated//httpserverresponsemessagequeuebinding//httpserverresponsemessagequeuebinding.factory.container.global.binding.json"
+        },
+        "httpServerStartMessageQueueBinding": {
+            "bindingFilePath": "C://component//lib//factory//generated//httpserverstartmessagequeuebinding//httpserverstartmessagequeuebinding.factory.container.global.binding.json"
+        },
+        "httpServerStartedMessageQueueBinding": {
+            "bindingFilePath": "C://component//lib//factory//generated//httpserverstartedmessagequeuebinding//httpserverstartedmessagequeuebinding.factory.container.global.binding.json"
+        },
+        "httpServerStopMessageQueueBinding": {
+            "bindingFilePath": "C://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.container.global.binding.json"
+        },
+        "httpServerStoppedMessageQueueBinding": {
+            "bindingFilePath": "C://component//lib//factory//generated//httpserverstoppedmessagequeuebinding//httpserverstoppedmessagequeuebinding.factory.container.global.binding.json"
+        },
+        "senderAddress": {
+            "bindingFilePath": "C://component//lib//factory//generated//senderaddress//senderaddress.factory.container.global.binding.json"
+        },
+        "logger": {
+            "bindingFilePath": "C://component//lib//factory//generated//logger//logger.factory.container.global.binding.json"
+        }
+    },
     "instances": {}
 }

@@ -1,6 +1,9 @@
 {
-    "BindingName": "MultipleRequestsSpec",
+    "bindingName": "MultipleRequestsSpec",
     "isSingleton": true,
-    "ctorParameters": {},
+    "ctorParameters": {
+        "recipientHost": null,
+        "recipientPort": null
+    },
     "instances": {}
 }

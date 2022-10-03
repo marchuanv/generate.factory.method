@@ -3,8 +3,8 @@ const { writeFileSync, readFileSync } = require('fs');
 const utils = require('utils');
 const typesInfo = require(path.join(__dirname, 'types.info.json'));
 const typeBindingInfoTemplate = readFileSync(path.join(__dirname, 'templates', 'type.binding.info.template'),'utf8');
-const typeBindingInfoPath = path.join(__dirname, 'type.binding.info.json');
-const typeBindingInfo = [];
+const typeBindingsInfoPath = path.join(__dirname, 'type.bindings.info.json');
+const typeBindingsInfo = [];
 const bindingsInfo = require(path.join(__dirname, 'bindings.info.json'));
 
 for(const typeName of Object.keys(typesInfo)) {
@@ -18,7 +18,7 @@ for(const typeName of Object.keys(typesInfo)) {
             const typeName =  typesInfo[child.typeName] ? child.typeName : null;
             ctorParameterInfo.push({ name, typeName });
         });
-        typeBindingInfo.push(utils.getJSONObject(typeBindingInfoTemplate
+        typeBindingsInfo.push(utils.getJSONObject(typeBindingInfoTemplate
             .replace(/\[TypeName\]/g, typeName)
             .replace(/\[BindingName\]/g, bindingName)
             .replace(/\[IsSingleton\]/g, isSingleton)
@@ -26,19 +26,19 @@ for(const typeName of Object.keys(typesInfo)) {
             .replace(/\[DependantBindings\]/g, utils.getJSONString([]))));
     }
 };
-for(const _typeBindingInfo of typeBindingInfo) {
-    const typeInfo = typesInfo[_typeBindingInfo.typeName];
+for(const typeBindingInfo of typeBindingsInfo) {
+    const typeInfo = typesInfo[typeBindingInfo.typeName];
     const { children } = typeInfo;
     children.forEach(child => {
-        const depBinding = utils.getJSONObject(utils.getJSONString(typeBindingInfo.find(info2 => 
-            info2.typeName === child.typeName && info2.bindingName === _typeBindingInfo.bindingName
+        const depBinding = utils.getJSONObject(utils.getJSONString(typeBindingsInfo.find(info2 => 
+            info2.typeName === child.typeName && info2.bindingName === typeBindingInfo.bindingName
         )));
         if (depBinding) {
             delete depBinding.dependantBindings;
             delete depBinding.isSingleton;
             delete depBinding.ctorParameterInfo;
-            _typeBindingInfo.dependantBindings.push(depBinding);
+            typeBindingInfo.dependantBindings.push(depBinding);
         }
     });
 };
-writeFileSync(typeBindingInfoPath, utils.getJSONString(typeBindingInfo), 'utf8');
+writeFileSync(typeBindingsInfoPath, utils.getJSONString(typeBindingsInfo), 'utf8');
