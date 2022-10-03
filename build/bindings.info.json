@@ -1,23 +1,11 @@
 {
     "Global": {
-      "isSingleton": false,
-      "ctorTypeMapping": {
-        "ClientMessageBus": "HttpClientMessageBus",
-        "ServerMessageBus": "HttpServerMessageBus"
-      }
+      "isSingleton": false
     },
     "MultipleRequestsSpec": {
-      "isSingleton": true,
-      "ctorTypeMapping": {
-        "ClientMessageBus": "HttpClientMessageBus",
-        "ServerMessageBus": "HttpServerMessageBus"
-      }
+      "isSingleton": true
     },
     "FactorySpec": {
-      "isSingleton": true,
-      "ctorTypeMapping": {
-        "ClientMessageBus": "HttpClientMessageBus",
-        "ServerMessageBus": "HttpServerMessageBus"
-      }
+      "isSingleton": true
     }
   }
