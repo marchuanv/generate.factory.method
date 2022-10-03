@@ -51,11 +51,27 @@
         "minFactoryScriptPath": "C://component//lib//factory//generated//message//message.factory.min.js",
         "factoryContainerFilePath": "C://component//lib//factory//generated//message//message.factory.container.json",
         "ctorArgumentsWithBindingNames": [
+            "messageStatusCode",
             "Id",
+            "data",
+            "recipientHost",
+            "recipientPort",
+            "metadata",
+            "token",
+            "senderHost",
+            "senderPort",
             "factoryContainerBindingName"
         ],
         "ctorArgumentNames": [
-            "Id"
+            "messageStatusCode",
+            "Id",
+            "data",
+            "recipientHost",
+            "recipientPort",
+            "metadata",
+            "token",
+            "senderHost",
+            "senderPort"
         ]
     },
     "MessageContent": {
@@ -65,10 +81,22 @@
         "factoryContainerFilePath": "C://component//lib//factory//generated//messagecontent//messagecontent.factory.container.json",
         "ctorArgumentsWithBindingNames": [
             "data",
+            "recipientHost",
+            "recipientPort",
+            "metadata",
+            "token",
+            "senderHost",
+            "senderPort",
             "factoryContainerBindingName"
         ],
         "ctorArgumentNames": [
-            "data"
+            "data",
+            "recipientHost",
+            "recipientPort",
+            "metadata",
+            "token",
+            "senderHost",
+            "senderPort"
         ]
     },
     "MessageContentMetadata": {
@@ -100,13 +128,21 @@
         "minFactoryScriptPath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.min.js",
         "factoryContainerFilePath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.json",
         "ctorArgumentsWithBindingNames": [
+            "recipientHost",
+            "recipientPort",
             "metadata",
             "token",
+            "senderHost",
+            "senderPort",
             "factoryContainerBindingName"
         ],
         "ctorArgumentNames": [
+            "recipientHost",
+            "recipientPort",
             "metadata",
-            "token"
+            "token",
+            "senderHost",
+            "senderPort"
         ]
     },
     "MessageQueue": {
@@ -314,9 +350,28 @@
         "minFactoryScriptPath": "C://component//lib//factory//generated//httprequestmessage//httprequestmessage.factory.min.js",
         "factoryContainerFilePath": "C://component//lib//factory//generated//httprequestmessage//httprequestmessage.factory.container.json",
         "ctorArgumentsWithBindingNames": [
+            "messageStatusCode",
+            "Id",
+            "data",
+            "recipientHost",
+            "recipientPort",
+            "metadata",
+            "token",
+            "senderHost",
+            "senderPort",
             "factoryContainerBindingName"
         ],
-        "ctorArgumentNames": []
+        "ctorArgumentNames": [
+            "messageStatusCode",
+            "Id",
+            "data",
+            "recipientHost",
+            "recipientPort",
+            "metadata",
+            "token",
+            "senderHost",
+            "senderPort"
+        ]
     },
     "HttpResponseMessage": {
         "typeName": "HttpResponseMessage",
@@ -324,9 +379,28 @@
         "minFactoryScriptPath": "C://component//lib//factory//generated//httpresponsemessage//httpresponsemessage.factory.min.js",
         "factoryContainerFilePath": "C://component//lib//factory//generated//httpresponsemessage//httpresponsemessage.factory.container.json",
         "ctorArgumentsWithBindingNames": [
+            "messageStatusCode",
+            "Id",
+            "data",
+            "recipientHost",
+            "recipientPort",
+            "metadata",
+            "token",
+            "senderHost",
+            "senderPort",
             "factoryContainerBindingName"
         ],
-        "ctorArgumentNames": []
+        "ctorArgumentNames": [
+            "messageStatusCode",
+            "Id",
+            "data",
+            "recipientHost",
+            "recipientPort",
+            "metadata",
+            "token",
+            "senderHost",
+            "senderPort"
+        ]
     },
     "HttpServerMessageBus": {
         "typeName": "HttpServerMessageBus",
@@ -335,10 +409,14 @@
         "factoryContainerFilePath": "C://component//lib//factory//generated//httpservermessagebus//httpservermessagebus.factory.container.json",
         "ctorArgumentsWithBindingNames": [
             "timeout",
+            "senderHost",
+            "senderPort",
             "factoryContainerBindingName"
         ],
         "ctorArgumentNames": [
-            "timeout"
+            "timeout",
+            "senderHost",
+            "senderPort"
         ]
     },
     "HttpServerMessageBusManager": {
@@ -477,9 +555,28 @@
         "minFactoryScriptPath": "C://component//lib//factory//generated//websocketrequestmessage//websocketrequestmessage.factory.min.js",
         "factoryContainerFilePath": "C://component//lib//factory//generated//websocketrequestmessage//websocketrequestmessage.factory.container.json",
         "ctorArgumentsWithBindingNames": [
+            "messageStatusCode",
+            "Id",
+            "data",
+            "recipientHost",
+            "recipientPort",
+            "metadata",
+            "token",
+            "senderHost",
+            "senderPort",
             "factoryContainerBindingName"
         ],
-        "ctorArgumentNames": []
+        "ctorArgumentNames": [
+            "messageStatusCode",
+            "Id",
+            "data",
+            "recipientHost",
+            "recipientPort",
+            "metadata",
+            "token",
+            "senderHost",
+            "senderPort"
+        ]
     },
     "WebSocketResponseMessage": {
         "typeName": "WebSocketResponseMessage",
@@ -487,9 +584,28 @@
         "minFactoryScriptPath": "C://component//lib//factory//generated//websocketresponsemessage//websocketresponsemessage.factory.min.js",
         "factoryContainerFilePath": "C://component//lib//factory//generated//websocketresponsemessage//websocketresponsemessage.factory.container.json",
         "ctorArgumentsWithBindingNames": [
+            "messageStatusCode",
+            "Id",
+            "data",
+            "recipientHost",
+            "recipientPort",
+            "metadata",
+            "token",
+            "senderHost",
+            "senderPort",
             "factoryContainerBindingName"
         ],
-        "ctorArgumentNames": []
+        "ctorArgumentNames": [
+            "messageStatusCode",
+            "Id",
+            "data",
+            "recipientHost",
+            "recipientPort",
+            "metadata",
+            "token",
+            "senderHost",
+            "senderPort"
+        ]
     },
     "WebSocketServerRequestMessageBus": {
         "typeName": "WebSocketServerRequestMessageBus",
