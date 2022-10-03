@@ -1,0 +1,7 @@
+{
+    "BindingName": "FactorySpec",
+    "BindingFilePath": "C://component//lib//factory//generated//messagestore//messagestore.factory.container.factoryspec.binding.json",
+    "isSingleton": true,
+    "ctorArguments": {},
+    "instances": {}
+}

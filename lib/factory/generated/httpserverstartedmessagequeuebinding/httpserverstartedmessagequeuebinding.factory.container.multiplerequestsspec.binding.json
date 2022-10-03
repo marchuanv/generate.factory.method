@@ -1,0 +1,7 @@
+{
+    "BindingName": "MultipleRequestsSpec",
+    "BindingFilePath": "C://component//lib//factory//generated//httpserverstartedmessagequeuebinding//httpserverstartedmessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
+    "isSingleton": true,
+    "ctorArguments": {},
+    "instances": {}
+}

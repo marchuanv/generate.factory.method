@@ -1,5 +1,5 @@
 {
-    "Global": { "isSingleton": null },
-    "MultipleRequestsSpec": { "isSingleton": null },
-    "FactorySpec": { "isSingleton": null }
+    "Global": { "isSingleton": false },
+    "MultipleRequestsSpec": { "isSingleton": true },
+    "FactorySpec": { "isSingleton": true }
 }

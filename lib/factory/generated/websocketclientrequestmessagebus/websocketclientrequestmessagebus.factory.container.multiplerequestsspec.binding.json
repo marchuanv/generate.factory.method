@@ -1,0 +1,7 @@
+{
+    "BindingName": "MultipleRequestsSpec",
+    "BindingFilePath": "C://component//lib//factory//generated//websocketclientrequestmessagebus//websocketclientrequestmessagebus.factory.container.multiplerequestsspec.binding.json",
+    "isSingleton": true,
+    "ctorArguments": {},
+    "instances": {}
+}

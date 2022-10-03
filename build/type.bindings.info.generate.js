@@ -2,24 +2,30 @@ const path = require('path');
 const { writeFileSync } = require('fs');
 const utils = require('utils');
 const typeConfig = require(path.join(__dirname, 'type.info.json'));
-const typeBindingsConfigPath = path.join(__dirname, 'type.bindings.info.json');
-const typeBindingsConfig = require(typeBindingsConfigPath);
-const bindingsConfig = require(path.join(__dirname, 'bindings.info.json'));
+const typeBindingsInfoPath = path.join(__dirname, 'type.bindings.info.json');
+const typeBindingsInfo = require(typeBindingsInfoPath);
+const bindingsInfo = require(path.join(__dirname, 'bindings.info.json'));
 
-const bindingsNames = Object.keys(bindingsConfig);
+const bindingsNames = Object.keys(bindingsInfo);
 const typeNames = Object.keys(typeConfig);
 for(const typeName of typeNames) {
-    if (!typeBindingsConfig[typeName]) {
-        typeBindingsConfig[typeName] = {};
+    if (!typeBindingsInfo[typeName]) {
+        typeBindingsInfo[typeName] = {};
     }
 };
-writeFileSync(typeBindingsConfigPath, utils.getJSONString(typeBindingsConfig), 'utf8');
+writeFileSync(typeBindingsInfoPath, utils.getJSONString(typeBindingsInfo), 'utf8');
 for(const typeName of typeNames) {
-    const typeBindingConfig = typeBindingsConfig[typeName];
+    const typeBindingInfo = typeBindingsInfo[typeName];
     for(const bindingName of bindingsNames) {
-        if (!typeBindingConfig[bindingName]) {
-            typeBindingConfig[bindingName] = utils.getJSONObject(utils.getJSONString(bindingsConfig[bindingName]));
+        if (typeBindingInfo[bindingName]) {
+            for(const bindingPropName of Object.keys(typeBindingInfo[bindingName])) {
+                if (typeBindingInfo[bindingName][bindingPropName] !== bindingsInfo[bindingName][bindingPropName]) {
+                    typeBindingInfo[bindingName][bindingPropName] = bindingsInfo[bindingName][bindingPropName];
+                }
+            };
+        } else {
+            typeBindingInfo[bindingName] = utils.getJSONObject(utils.getJSONString(bindingsInfo[bindingName]));
         }
     };
 };
-writeFileSync(typeBindingsConfigPath, utils.getJSONString(typeBindingsConfig), 'utf8');
+writeFileSync(typeBindingsInfoPath, utils.getJSONString(typeBindingsInfo), 'utf8');

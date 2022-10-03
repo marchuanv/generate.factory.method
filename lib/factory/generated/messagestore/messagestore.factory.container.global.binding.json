@@ -1,0 +1,7 @@
+{
+    "BindingName": "Global",
+    "BindingFilePath": "C://component//lib//factory//generated//messagestore//messagestore.factory.container.global.binding.json",
+    "isSingleton": false,
+    "ctorArguments": {},
+    "instances": {}
+}

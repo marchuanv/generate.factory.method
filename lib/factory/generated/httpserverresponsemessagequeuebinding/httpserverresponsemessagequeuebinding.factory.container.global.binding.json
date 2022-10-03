@@ -1,0 +1,7 @@
+{
+    "BindingName": "Global",
+    "BindingFilePath": "C://component//lib//factory//generated//httpserverresponsemessagequeuebinding//httpserverresponsemessagequeuebinding.factory.container.global.binding.json",
+    "isSingleton": false,
+    "ctorArguments": {},
+    "instances": {}
+}
