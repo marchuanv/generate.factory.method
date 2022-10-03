@@ -26,19 +26,4 @@ for(const typeName of Object.keys(typesInfo)) {
             .replace(/\[DependantBindings\]/g, utils.getJSONString([]))));
     }
 };
-for(const typeBindingInfo of typeBindingsInfo) {
-    const typeInfo = typesInfo[typeBindingInfo.typeName];
-    const { children } = typeInfo;
-    children.forEach(child => {
-        const depBinding = utils.getJSONObject(utils.getJSONString(typeBindingsInfo.find(info2 => 
-            info2.typeName === child.typeName && info2.bindingName === typeBindingInfo.bindingName
-        )));
-        if (depBinding) {
-            delete depBinding.dependantBindings;
-            delete depBinding.isSingleton;
-            delete depBinding.ctorParameterInfo;
-            typeBindingInfo.dependantBindings.push(depBinding);
-        }
-    });
-};
 writeFileSync(typeBindingsInfoPath, utils.getJSONString(typeBindingsInfo), 'utf8');

@@ -1,26 +1,26 @@
 {
     "bindingName": "MultipleRequestsSpec",
-    "containerFilePath": "C://component//lib//factory//generated//httpservermessagebusmanager//httpservermessagebusmanager.factory.container.json",
+    "containerFilePath": "D://component//lib//factory//generated//httpservermessagebusmanager//httpservermessagebusmanager.factory.container.json",
     "isSingleton": true,
     "ctorParameters": {
         "httpServerStoppedMessageQueueBinding": {
-            "containerFilePath": "C://component//lib//factory//generated//httpserverstoppedmessagequeuebinding//httpserverstoppedmessagequeuebinding.factory.container.json"
+            "containerFilePath": "D://component//lib//factory//generated//httpserverstoppedmessagequeuebinding//httpserverstoppedmessagequeuebinding.factory.container.json"
         },
         "factoryContainerBindingName": null,
         "httpServerRequestMessageQueueBinding": {
-            "containerFilePath": "C://component//lib//factory//generated//httpserverrequestmessagequeuebinding//httpserverrequestmessagequeuebinding.factory.container.json"
+            "containerFilePath": "D://component//lib//factory//generated//httpserverrequestmessagequeuebinding//httpserverrequestmessagequeuebinding.factory.container.json"
         },
         "httpServerResponseMessageQueueBinding": {
-            "containerFilePath": "C://component//lib//factory//generated//httpserverresponsemessagequeuebinding//httpserverresponsemessagequeuebinding.factory.container.json"
+            "containerFilePath": "D://component//lib//factory//generated//httpserverresponsemessagequeuebinding//httpserverresponsemessagequeuebinding.factory.container.json"
         },
         "httpServerStartMessageQueueBinding": {
-            "containerFilePath": "C://component//lib//factory//generated//httpserverstartmessagequeuebinding//httpserverstartmessagequeuebinding.factory.container.json"
+            "containerFilePath": "D://component//lib//factory//generated//httpserverstartmessagequeuebinding//httpserverstartmessagequeuebinding.factory.container.json"
         },
         "httpServerStartedMessageQueueBinding": {
-            "containerFilePath": "C://component//lib//factory//generated//httpserverstartedmessagequeuebinding//httpserverstartedmessagequeuebinding.factory.container.json"
+            "containerFilePath": "D://component//lib//factory//generated//httpserverstartedmessagequeuebinding//httpserverstartedmessagequeuebinding.factory.container.json"
         },
         "httpServerStopMessageQueueBinding": {
-            "containerFilePath": "C://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.container.json"
+            "containerFilePath": "D://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.container.json"
         }
     },
     "instances": {}

@@ -17,20 +17,7 @@
                 "typeName": "HttpClientResponseMessageBus"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "MessageConverter",
-                "bindingName": "Global"
-            },
-            {
-                "typeName": "HttpClientRequestMessageBus",
-                "bindingName": "Global"
-            },
-            {
-                "typeName": "HttpClientResponseMessageBus",
-                "bindingName": "Global"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "ClientMessageBus",
@@ -50,20 +37,7 @@
                 "typeName": "HttpClientResponseMessageBus"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "MessageConverter",
-                "bindingName": "MultipleRequestsSpec"
-            },
-            {
-                "typeName": "HttpClientRequestMessageBus",
-                "bindingName": "MultipleRequestsSpec"
-            },
-            {
-                "typeName": "HttpClientResponseMessageBus",
-                "bindingName": "MultipleRequestsSpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "ClientMessageBus",
@@ -83,20 +57,7 @@
                 "typeName": "HttpClientResponseMessageBus"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "MessageConverter",
-                "bindingName": "FactorySpec"
-            },
-            {
-                "typeName": "HttpClientRequestMessageBus",
-                "bindingName": "FactorySpec"
-            },
-            {
-                "typeName": "HttpClientResponseMessageBus",
-                "bindingName": "FactorySpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "Component",
@@ -124,20 +85,7 @@
                 "typeName": "UserSessions"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "ClientMessageBus",
-                "bindingName": "Global"
-            },
-            {
-                "typeName": "ServerMessageBus",
-                "bindingName": "Global"
-            },
-            {
-                "typeName": "UserSessions",
-                "bindingName": "Global"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "Component",
@@ -165,20 +113,7 @@
                 "typeName": "UserSessions"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "ClientMessageBus",
-                "bindingName": "MultipleRequestsSpec"
-            },
-            {
-                "typeName": "ServerMessageBus",
-                "bindingName": "MultipleRequestsSpec"
-            },
-            {
-                "typeName": "UserSessions",
-                "bindingName": "MultipleRequestsSpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "Component",
@@ -206,20 +141,7 @@
                 "typeName": "UserSessions"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "ClientMessageBus",
-                "bindingName": "FactorySpec"
-            },
-            {
-                "typeName": "ServerMessageBus",
-                "bindingName": "FactorySpec"
-            },
-            {
-                "typeName": "UserSessions",
-                "bindingName": "FactorySpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "ContentType",
@@ -308,24 +230,7 @@
                 "typeName": "MessageMetadata"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "MessageStatus",
-                "bindingName": "Global"
-            },
-            {
-                "typeName": "MessageContent",
-                "bindingName": "Global"
-            },
-            {
-                "typeName": "MessageContentMetadata",
-                "bindingName": "Global"
-            },
-            {
-                "typeName": "MessageMetadata",
-                "bindingName": "Global"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "Message",
@@ -357,24 +262,7 @@
                 "typeName": "MessageMetadata"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "MessageStatus",
-                "bindingName": "MultipleRequestsSpec"
-            },
-            {
-                "typeName": "MessageContent",
-                "bindingName": "MultipleRequestsSpec"
-            },
-            {
-                "typeName": "MessageContentMetadata",
-                "bindingName": "MultipleRequestsSpec"
-            },
-            {
-                "typeName": "MessageMetadata",
-                "bindingName": "MultipleRequestsSpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "Message",
@@ -406,24 +294,7 @@
                 "typeName": "MessageMetadata"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "MessageStatus",
-                "bindingName": "FactorySpec"
-            },
-            {
-                "typeName": "MessageContent",
-                "bindingName": "FactorySpec"
-            },
-            {
-                "typeName": "MessageContentMetadata",
-                "bindingName": "FactorySpec"
-            },
-            {
-                "typeName": "MessageMetadata",
-                "bindingName": "FactorySpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "MessageContent",
@@ -447,20 +318,7 @@
                 "typeName": "MessageMetadata"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "MessageContentMetadata",
-                "bindingName": "Global"
-            },
-            {
-                "typeName": "UserSessions",
-                "bindingName": "Global"
-            },
-            {
-                "typeName": "MessageMetadata",
-                "bindingName": "Global"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "MessageContent",
@@ -484,20 +342,7 @@
                 "typeName": "MessageMetadata"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "MessageContentMetadata",
-                "bindingName": "MultipleRequestsSpec"
-            },
-            {
-                "typeName": "UserSessions",
-                "bindingName": "MultipleRequestsSpec"
-            },
-            {
-                "typeName": "MessageMetadata",
-                "bindingName": "MultipleRequestsSpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "MessageContent",
@@ -521,20 +366,7 @@
                 "typeName": "MessageMetadata"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "MessageContentMetadata",
-                "bindingName": "FactorySpec"
-            },
-            {
-                "typeName": "UserSessions",
-                "bindingName": "FactorySpec"
-            },
-            {
-                "typeName": "MessageMetadata",
-                "bindingName": "FactorySpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "MessageContentMetadata",
@@ -627,16 +459,7 @@
                 "typeName": "SenderAddress"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "RecipientAddress",
-                "bindingName": "Global"
-            },
-            {
-                "typeName": "SenderAddress",
-                "bindingName": "Global"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "MessageMetadata",
@@ -660,16 +483,7 @@
                 "typeName": "SenderAddress"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "RecipientAddress",
-                "bindingName": "MultipleRequestsSpec"
-            },
-            {
-                "typeName": "SenderAddress",
-                "bindingName": "MultipleRequestsSpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "MessageMetadata",
@@ -693,16 +507,7 @@
                 "typeName": "SenderAddress"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "RecipientAddress",
-                "bindingName": "FactorySpec"
-            },
-            {
-                "typeName": "SenderAddress",
-                "bindingName": "FactorySpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "MessageQueue",
@@ -714,12 +519,7 @@
                 "typeName": "Logger"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "Logger",
-                "bindingName": "Global"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "MessageQueue",
@@ -731,12 +531,7 @@
                 "typeName": "Logger"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "Logger",
-                "bindingName": "MultipleRequestsSpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "MessageQueue",
@@ -748,12 +543,7 @@
                 "typeName": "Logger"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "Logger",
-                "bindingName": "FactorySpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "MessageStatus",
@@ -926,20 +716,7 @@
                 "typeName": "HttpServerRequestMessageBus"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "MessageConverter",
-                "bindingName": "Global"
-            },
-            {
-                "typeName": "HttpServerResponseMessageBus",
-                "bindingName": "Global"
-            },
-            {
-                "typeName": "HttpServerRequestMessageBus",
-                "bindingName": "Global"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "ServerMessageBus",
@@ -959,20 +736,7 @@
                 "typeName": "HttpServerRequestMessageBus"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "MessageConverter",
-                "bindingName": "MultipleRequestsSpec"
-            },
-            {
-                "typeName": "HttpServerResponseMessageBus",
-                "bindingName": "MultipleRequestsSpec"
-            },
-            {
-                "typeName": "HttpServerRequestMessageBus",
-                "bindingName": "MultipleRequestsSpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "ServerMessageBus",
@@ -992,20 +756,7 @@
                 "typeName": "HttpServerRequestMessageBus"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "MessageConverter",
-                "bindingName": "FactorySpec"
-            },
-            {
-                "typeName": "HttpServerResponseMessageBus",
-                "bindingName": "FactorySpec"
-            },
-            {
-                "typeName": "HttpServerRequestMessageBus",
-                "bindingName": "FactorySpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "UserSecurity",
@@ -1113,28 +864,7 @@
                 "typeName": "HttpClientStopMessageQueueBinding"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "HttpClientRequestMessageQueueBinding",
-                "bindingName": "Global"
-            },
-            {
-                "typeName": "HttpClientResponseMessageQueueBinding",
-                "bindingName": "Global"
-            },
-            {
-                "typeName": "HttpClientStartMessageQueueBinding",
-                "bindingName": "Global"
-            },
-            {
-                "typeName": "HttpClientStartedMessageQueueBinding",
-                "bindingName": "Global"
-            },
-            {
-                "typeName": "HttpClientStopMessageQueueBinding",
-                "bindingName": "Global"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "HttpClientMessageBus",
@@ -1170,28 +900,7 @@
                 "typeName": "HttpClientStopMessageQueueBinding"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "HttpClientRequestMessageQueueBinding",
-                "bindingName": "MultipleRequestsSpec"
-            },
-            {
-                "typeName": "HttpClientResponseMessageQueueBinding",
-                "bindingName": "MultipleRequestsSpec"
-            },
-            {
-                "typeName": "HttpClientStartMessageQueueBinding",
-                "bindingName": "MultipleRequestsSpec"
-            },
-            {
-                "typeName": "HttpClientStartedMessageQueueBinding",
-                "bindingName": "MultipleRequestsSpec"
-            },
-            {
-                "typeName": "HttpClientStopMessageQueueBinding",
-                "bindingName": "MultipleRequestsSpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "HttpClientMessageBus",
@@ -1227,28 +936,7 @@
                 "typeName": "HttpClientStopMessageQueueBinding"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "HttpClientRequestMessageQueueBinding",
-                "bindingName": "FactorySpec"
-            },
-            {
-                "typeName": "HttpClientResponseMessageQueueBinding",
-                "bindingName": "FactorySpec"
-            },
-            {
-                "typeName": "HttpClientStartMessageQueueBinding",
-                "bindingName": "FactorySpec"
-            },
-            {
-                "typeName": "HttpClientStartedMessageQueueBinding",
-                "bindingName": "FactorySpec"
-            },
-            {
-                "typeName": "HttpClientStopMessageQueueBinding",
-                "bindingName": "FactorySpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "HttpClientMessageBusManager",
@@ -1272,20 +960,7 @@
                 "typeName": "HttpClientStartedMessageQueueBinding"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "HttpClientStopMessageQueueBinding",
-                "bindingName": "Global"
-            },
-            {
-                "typeName": "HttpClientStartMessageQueueBinding",
-                "bindingName": "Global"
-            },
-            {
-                "typeName": "HttpClientStartedMessageQueueBinding",
-                "bindingName": "Global"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "HttpClientMessageBusManager",
@@ -1309,20 +984,7 @@
                 "typeName": "HttpClientStartedMessageQueueBinding"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "HttpClientStopMessageQueueBinding",
-                "bindingName": "MultipleRequestsSpec"
-            },
-            {
-                "typeName": "HttpClientStartMessageQueueBinding",
-                "bindingName": "MultipleRequestsSpec"
-            },
-            {
-                "typeName": "HttpClientStartedMessageQueueBinding",
-                "bindingName": "MultipleRequestsSpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "HttpClientMessageBusManager",
@@ -1346,20 +1008,7 @@
                 "typeName": "HttpClientStartedMessageQueueBinding"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "HttpClientStopMessageQueueBinding",
-                "bindingName": "FactorySpec"
-            },
-            {
-                "typeName": "HttpClientStartMessageQueueBinding",
-                "bindingName": "FactorySpec"
-            },
-            {
-                "typeName": "HttpClientStartedMessageQueueBinding",
-                "bindingName": "FactorySpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "HttpClientRequestMessageBus",
@@ -1371,12 +1020,7 @@
                 "typeName": "HttpClientRequestMessageQueueBinding"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "HttpClientRequestMessageQueueBinding",
-                "bindingName": "Global"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "HttpClientRequestMessageBus",
@@ -1388,12 +1032,7 @@
                 "typeName": "HttpClientRequestMessageQueueBinding"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "HttpClientRequestMessageQueueBinding",
-                "bindingName": "MultipleRequestsSpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "HttpClientRequestMessageBus",
@@ -1405,12 +1044,7 @@
                 "typeName": "HttpClientRequestMessageQueueBinding"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "HttpClientRequestMessageQueueBinding",
-                "bindingName": "FactorySpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "HttpClientRequestMessageQueueBinding",
@@ -1426,12 +1060,7 @@
                 "typeName": "MessageQueue"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "MessageQueue",
-                "bindingName": "Global"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "HttpClientRequestMessageQueueBinding",
@@ -1447,12 +1076,7 @@
                 "typeName": "MessageQueue"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "MessageQueue",
-                "bindingName": "MultipleRequestsSpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "HttpClientRequestMessageQueueBinding",
@@ -1468,12 +1092,7 @@
                 "typeName": "MessageQueue"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "MessageQueue",
-                "bindingName": "FactorySpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "HttpClientResponseMessageBus",
@@ -1485,12 +1104,7 @@
                 "typeName": "HttpClientResponseMessageQueueBinding"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "HttpClientResponseMessageQueueBinding",
-                "bindingName": "Global"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "HttpClientResponseMessageBus",
@@ -1502,12 +1116,7 @@
                 "typeName": "HttpClientResponseMessageQueueBinding"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "HttpClientResponseMessageQueueBinding",
-                "bindingName": "MultipleRequestsSpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "HttpClientResponseMessageBus",
@@ -1519,12 +1128,7 @@
                 "typeName": "HttpClientResponseMessageQueueBinding"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "HttpClientResponseMessageQueueBinding",
-                "bindingName": "FactorySpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "HttpClientResponseMessageQueueBinding",
@@ -1540,12 +1144,7 @@
                 "typeName": "MessageQueue"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "MessageQueue",
-                "bindingName": "Global"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "HttpClientResponseMessageQueueBinding",
@@ -1561,12 +1160,7 @@
                 "typeName": "MessageQueue"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "MessageQueue",
-                "bindingName": "MultipleRequestsSpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "HttpClientResponseMessageQueueBinding",
@@ -1582,12 +1176,7 @@
                 "typeName": "MessageQueue"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "MessageQueue",
-                "bindingName": "FactorySpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "HttpClientStartedMessageQueueBinding",
@@ -1603,12 +1192,7 @@
                 "typeName": "MessageQueue"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "MessageQueue",
-                "bindingName": "Global"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "HttpClientStartedMessageQueueBinding",
@@ -1624,12 +1208,7 @@
                 "typeName": "MessageQueue"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "MessageQueue",
-                "bindingName": "MultipleRequestsSpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "HttpClientStartedMessageQueueBinding",
@@ -1645,12 +1224,7 @@
                 "typeName": "MessageQueue"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "MessageQueue",
-                "bindingName": "FactorySpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "HttpClientStartMessageQueueBinding",
@@ -1666,12 +1240,7 @@
                 "typeName": "MessageQueue"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "MessageQueue",
-                "bindingName": "Global"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "HttpClientStartMessageQueueBinding",
@@ -1687,12 +1256,7 @@
                 "typeName": "MessageQueue"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "MessageQueue",
-                "bindingName": "MultipleRequestsSpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "HttpClientStartMessageQueueBinding",
@@ -1708,12 +1272,7 @@
                 "typeName": "MessageQueue"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "MessageQueue",
-                "bindingName": "FactorySpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "HttpClientStopMessageQueueBinding",
@@ -1729,12 +1288,7 @@
                 "typeName": "MessageQueue"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "MessageQueue",
-                "bindingName": "Global"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "HttpClientStopMessageQueueBinding",
@@ -1750,12 +1304,7 @@
                 "typeName": "MessageQueue"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "MessageQueue",
-                "bindingName": "MultipleRequestsSpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "HttpClientStopMessageQueueBinding",
@@ -1771,12 +1320,7 @@
                 "typeName": "MessageQueue"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "MessageQueue",
-                "bindingName": "FactorySpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "HttpClientStoppedMessageQueueBinding",
@@ -1792,12 +1336,7 @@
                 "typeName": "MessageQueue"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "MessageQueue",
-                "bindingName": "Global"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "HttpClientStoppedMessageQueueBinding",
@@ -1813,12 +1352,7 @@
                 "typeName": "MessageQueue"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "MessageQueue",
-                "bindingName": "MultipleRequestsSpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "HttpClientStoppedMessageQueueBinding",
@@ -1834,12 +1368,7 @@
                 "typeName": "MessageQueue"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "MessageQueue",
-                "bindingName": "FactorySpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "HttpRequestMessage",
@@ -1851,12 +1380,7 @@
                 "typeName": "Message"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "Message",
-                "bindingName": "Global"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "HttpRequestMessage",
@@ -1868,12 +1392,7 @@
                 "typeName": "Message"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "Message",
-                "bindingName": "MultipleRequestsSpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "HttpRequestMessage",
@@ -1885,12 +1404,7 @@
                 "typeName": "Message"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "Message",
-                "bindingName": "FactorySpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "HttpResponseMessage",
@@ -1902,12 +1416,7 @@
                 "typeName": "Message"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "Message",
-                "bindingName": "Global"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "HttpResponseMessage",
@@ -1919,12 +1428,7 @@
                 "typeName": "Message"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "Message",
-                "bindingName": "MultipleRequestsSpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "HttpResponseMessage",
@@ -1936,12 +1440,7 @@
                 "typeName": "Message"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "Message",
-                "bindingName": "FactorySpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "HttpServerMessageBus",
@@ -1989,40 +1488,7 @@
                 "typeName": "Logger"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "HttpServerRequestMessageQueueBinding",
-                "bindingName": "Global"
-            },
-            {
-                "typeName": "HttpServerResponseMessageQueueBinding",
-                "bindingName": "Global"
-            },
-            {
-                "typeName": "HttpServerStartMessageQueueBinding",
-                "bindingName": "Global"
-            },
-            {
-                "typeName": "HttpServerStartedMessageQueueBinding",
-                "bindingName": "Global"
-            },
-            {
-                "typeName": "HttpServerStopMessageQueueBinding",
-                "bindingName": "Global"
-            },
-            {
-                "typeName": "HttpServerStoppedMessageQueueBinding",
-                "bindingName": "Global"
-            },
-            {
-                "typeName": "SenderAddress",
-                "bindingName": "Global"
-            },
-            {
-                "typeName": "Logger",
-                "bindingName": "Global"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "HttpServerMessageBus",
@@ -2070,40 +1536,7 @@
                 "typeName": "Logger"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "HttpServerRequestMessageQueueBinding",
-                "bindingName": "MultipleRequestsSpec"
-            },
-            {
-                "typeName": "HttpServerResponseMessageQueueBinding",
-                "bindingName": "MultipleRequestsSpec"
-            },
-            {
-                "typeName": "HttpServerStartMessageQueueBinding",
-                "bindingName": "MultipleRequestsSpec"
-            },
-            {
-                "typeName": "HttpServerStartedMessageQueueBinding",
-                "bindingName": "MultipleRequestsSpec"
-            },
-            {
-                "typeName": "HttpServerStopMessageQueueBinding",
-                "bindingName": "MultipleRequestsSpec"
-            },
-            {
-                "typeName": "HttpServerStoppedMessageQueueBinding",
-                "bindingName": "MultipleRequestsSpec"
-            },
-            {
-                "typeName": "SenderAddress",
-                "bindingName": "MultipleRequestsSpec"
-            },
-            {
-                "typeName": "Logger",
-                "bindingName": "MultipleRequestsSpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "HttpServerMessageBus",
@@ -2151,40 +1584,7 @@
                 "typeName": "Logger"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "HttpServerRequestMessageQueueBinding",
-                "bindingName": "FactorySpec"
-            },
-            {
-                "typeName": "HttpServerResponseMessageQueueBinding",
-                "bindingName": "FactorySpec"
-            },
-            {
-                "typeName": "HttpServerStartMessageQueueBinding",
-                "bindingName": "FactorySpec"
-            },
-            {
-                "typeName": "HttpServerStartedMessageQueueBinding",
-                "bindingName": "FactorySpec"
-            },
-            {
-                "typeName": "HttpServerStopMessageQueueBinding",
-                "bindingName": "FactorySpec"
-            },
-            {
-                "typeName": "HttpServerStoppedMessageQueueBinding",
-                "bindingName": "FactorySpec"
-            },
-            {
-                "typeName": "SenderAddress",
-                "bindingName": "FactorySpec"
-            },
-            {
-                "typeName": "Logger",
-                "bindingName": "FactorySpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "HttpServerMessageBusManager",
@@ -2220,32 +1620,7 @@
                 "typeName": "HttpServerStopMessageQueueBinding"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "HttpServerStoppedMessageQueueBinding",
-                "bindingName": "Global"
-            },
-            {
-                "typeName": "HttpServerRequestMessageQueueBinding",
-                "bindingName": "Global"
-            },
-            {
-                "typeName": "HttpServerResponseMessageQueueBinding",
-                "bindingName": "Global"
-            },
-            {
-                "typeName": "HttpServerStartMessageQueueBinding",
-                "bindingName": "Global"
-            },
-            {
-                "typeName": "HttpServerStartedMessageQueueBinding",
-                "bindingName": "Global"
-            },
-            {
-                "typeName": "HttpServerStopMessageQueueBinding",
-                "bindingName": "Global"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "HttpServerMessageBusManager",
@@ -2281,32 +1656,7 @@
                 "typeName": "HttpServerStopMessageQueueBinding"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "HttpServerStoppedMessageQueueBinding",
-                "bindingName": "MultipleRequestsSpec"
-            },
-            {
-                "typeName": "HttpServerRequestMessageQueueBinding",
-                "bindingName": "MultipleRequestsSpec"
-            },
-            {
-                "typeName": "HttpServerResponseMessageQueueBinding",
-                "bindingName": "MultipleRequestsSpec"
-            },
-            {
-                "typeName": "HttpServerStartMessageQueueBinding",
-                "bindingName": "MultipleRequestsSpec"
-            },
-            {
-                "typeName": "HttpServerStartedMessageQueueBinding",
-                "bindingName": "MultipleRequestsSpec"
-            },
-            {
-                "typeName": "HttpServerStopMessageQueueBinding",
-                "bindingName": "MultipleRequestsSpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "HttpServerMessageBusManager",
@@ -2342,32 +1692,7 @@
                 "typeName": "HttpServerStopMessageQueueBinding"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "HttpServerStoppedMessageQueueBinding",
-                "bindingName": "FactorySpec"
-            },
-            {
-                "typeName": "HttpServerRequestMessageQueueBinding",
-                "bindingName": "FactorySpec"
-            },
-            {
-                "typeName": "HttpServerResponseMessageQueueBinding",
-                "bindingName": "FactorySpec"
-            },
-            {
-                "typeName": "HttpServerStartMessageQueueBinding",
-                "bindingName": "FactorySpec"
-            },
-            {
-                "typeName": "HttpServerStartedMessageQueueBinding",
-                "bindingName": "FactorySpec"
-            },
-            {
-                "typeName": "HttpServerStopMessageQueueBinding",
-                "bindingName": "FactorySpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "HttpServerRequestMessageBus",
@@ -2379,12 +1704,7 @@
                 "typeName": "HttpServerRequestMessageQueueBinding"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "HttpServerRequestMessageQueueBinding",
-                "bindingName": "Global"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "HttpServerRequestMessageBus",
@@ -2396,12 +1716,7 @@
                 "typeName": "HttpServerRequestMessageQueueBinding"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "HttpServerRequestMessageQueueBinding",
-                "bindingName": "MultipleRequestsSpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "HttpServerRequestMessageBus",
@@ -2413,12 +1728,7 @@
                 "typeName": "HttpServerRequestMessageQueueBinding"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "HttpServerRequestMessageQueueBinding",
-                "bindingName": "FactorySpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "HttpServerRequestMessageQueueBinding",
@@ -2434,12 +1744,7 @@
                 "typeName": "MessageQueue"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "MessageQueue",
-                "bindingName": "Global"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "HttpServerRequestMessageQueueBinding",
@@ -2455,12 +1760,7 @@
                 "typeName": "MessageQueue"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "MessageQueue",
-                "bindingName": "MultipleRequestsSpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "HttpServerRequestMessageQueueBinding",
@@ -2476,12 +1776,7 @@
                 "typeName": "MessageQueue"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "MessageQueue",
-                "bindingName": "FactorySpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "HttpServerResponseMessageBus",
@@ -2493,12 +1788,7 @@
                 "typeName": "HttpServerResponseMessageQueueBinding"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "HttpServerResponseMessageQueueBinding",
-                "bindingName": "Global"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "HttpServerResponseMessageBus",
@@ -2510,12 +1800,7 @@
                 "typeName": "HttpServerResponseMessageQueueBinding"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "HttpServerResponseMessageQueueBinding",
-                "bindingName": "MultipleRequestsSpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "HttpServerResponseMessageBus",
@@ -2527,12 +1812,7 @@
                 "typeName": "HttpServerResponseMessageQueueBinding"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "HttpServerResponseMessageQueueBinding",
-                "bindingName": "FactorySpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "HttpServerResponseMessageQueueBinding",
@@ -2548,12 +1828,7 @@
                 "typeName": "MessageQueue"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "MessageQueue",
-                "bindingName": "Global"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "HttpServerResponseMessageQueueBinding",
@@ -2569,12 +1844,7 @@
                 "typeName": "MessageQueue"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "MessageQueue",
-                "bindingName": "MultipleRequestsSpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "HttpServerResponseMessageQueueBinding",
@@ -2590,12 +1860,7 @@
                 "typeName": "MessageQueue"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "MessageQueue",
-                "bindingName": "FactorySpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "HttpServerStartedMessageQueueBinding",
@@ -2611,12 +1876,7 @@
                 "typeName": "MessageQueue"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "MessageQueue",
-                "bindingName": "Global"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "HttpServerStartedMessageQueueBinding",
@@ -2632,12 +1892,7 @@
                 "typeName": "MessageQueue"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "MessageQueue",
-                "bindingName": "MultipleRequestsSpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "HttpServerStartedMessageQueueBinding",
@@ -2653,12 +1908,7 @@
                 "typeName": "MessageQueue"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "MessageQueue",
-                "bindingName": "FactorySpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "HttpServerStartMessageQueueBinding",
@@ -2674,12 +1924,7 @@
                 "typeName": "MessageQueue"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "MessageQueue",
-                "bindingName": "Global"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "HttpServerStartMessageQueueBinding",
@@ -2695,12 +1940,7 @@
                 "typeName": "MessageQueue"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "MessageQueue",
-                "bindingName": "MultipleRequestsSpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "HttpServerStartMessageQueueBinding",
@@ -2716,12 +1956,7 @@
                 "typeName": "MessageQueue"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "MessageQueue",
-                "bindingName": "FactorySpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "HttpServerStopMessageQueueBinding",
@@ -2737,12 +1972,7 @@
                 "typeName": "MessageQueue"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "MessageQueue",
-                "bindingName": "Global"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "HttpServerStopMessageQueueBinding",
@@ -2758,12 +1988,7 @@
                 "typeName": "MessageQueue"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "MessageQueue",
-                "bindingName": "MultipleRequestsSpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "HttpServerStopMessageQueueBinding",
@@ -2779,12 +2004,7 @@
                 "typeName": "MessageQueue"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "MessageQueue",
-                "bindingName": "FactorySpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "HttpServerStoppedMessageQueueBinding",
@@ -2800,12 +2020,7 @@
                 "typeName": "MessageQueue"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "MessageQueue",
-                "bindingName": "Global"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "HttpServerStoppedMessageQueueBinding",
@@ -2821,12 +2036,7 @@
                 "typeName": "MessageQueue"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "MessageQueue",
-                "bindingName": "MultipleRequestsSpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "HttpServerStoppedMessageQueueBinding",
@@ -2842,12 +2052,7 @@
                 "typeName": "MessageQueue"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "MessageQueue",
-                "bindingName": "FactorySpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "WebSocketClientRequestMessageBus",
@@ -2859,12 +2064,7 @@
                 "typeName": "WebSocketClientRequestMessageQueueBinding"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "WebSocketClientRequestMessageQueueBinding",
-                "bindingName": "Global"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "WebSocketClientRequestMessageBus",
@@ -2876,12 +2076,7 @@
                 "typeName": "WebSocketClientRequestMessageQueueBinding"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "WebSocketClientRequestMessageQueueBinding",
-                "bindingName": "MultipleRequestsSpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "WebSocketClientRequestMessageBus",
@@ -2893,12 +2088,7 @@
                 "typeName": "WebSocketClientRequestMessageQueueBinding"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "WebSocketClientRequestMessageQueueBinding",
-                "bindingName": "FactorySpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "WebSocketClientRequestMessageQueueBinding",
@@ -2914,12 +2104,7 @@
                 "typeName": "MessageQueue"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "MessageQueue",
-                "bindingName": "Global"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "WebSocketClientRequestMessageQueueBinding",
@@ -2935,12 +2120,7 @@
                 "typeName": "MessageQueue"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "MessageQueue",
-                "bindingName": "MultipleRequestsSpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "WebSocketClientRequestMessageQueueBinding",
@@ -2956,12 +2136,7 @@
                 "typeName": "MessageQueue"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "MessageQueue",
-                "bindingName": "FactorySpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "WebSocketClientResponseMessageBus",
@@ -2973,12 +2148,7 @@
                 "typeName": "WebSocketClientResponseMessageQueueBinding"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "WebSocketClientResponseMessageQueueBinding",
-                "bindingName": "Global"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "WebSocketClientResponseMessageBus",
@@ -2990,12 +2160,7 @@
                 "typeName": "WebSocketClientResponseMessageQueueBinding"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "WebSocketClientResponseMessageQueueBinding",
-                "bindingName": "MultipleRequestsSpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "WebSocketClientResponseMessageBus",
@@ -3007,12 +2172,7 @@
                 "typeName": "WebSocketClientResponseMessageQueueBinding"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "WebSocketClientResponseMessageQueueBinding",
-                "bindingName": "FactorySpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "WebSocketClientResponseMessageQueueBinding",
@@ -3028,12 +2188,7 @@
                 "typeName": "MessageQueue"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "MessageQueue",
-                "bindingName": "Global"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "WebSocketClientResponseMessageQueueBinding",
@@ -3049,12 +2204,7 @@
                 "typeName": "MessageQueue"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "MessageQueue",
-                "bindingName": "MultipleRequestsSpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "WebSocketClientResponseMessageQueueBinding",
@@ -3070,12 +2220,7 @@
                 "typeName": "MessageQueue"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "MessageQueue",
-                "bindingName": "FactorySpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "WebSocketRequestMessage",
@@ -3087,12 +2232,7 @@
                 "typeName": "Message"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "Message",
-                "bindingName": "Global"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "WebSocketRequestMessage",
@@ -3104,12 +2244,7 @@
                 "typeName": "Message"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "Message",
-                "bindingName": "MultipleRequestsSpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "WebSocketRequestMessage",
@@ -3121,12 +2256,7 @@
                 "typeName": "Message"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "Message",
-                "bindingName": "FactorySpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "WebSocketResponseMessage",
@@ -3138,12 +2268,7 @@
                 "typeName": "Message"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "Message",
-                "bindingName": "Global"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "WebSocketResponseMessage",
@@ -3155,12 +2280,7 @@
                 "typeName": "Message"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "Message",
-                "bindingName": "MultipleRequestsSpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "WebSocketResponseMessage",
@@ -3172,12 +2292,7 @@
                 "typeName": "Message"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "Message",
-                "bindingName": "FactorySpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "WebSocketServerRequestMessageBus",
@@ -3189,12 +2304,7 @@
                 "typeName": "WebSocketServerRequestMessageQueueBinding"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "WebSocketServerRequestMessageQueueBinding",
-                "bindingName": "Global"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "WebSocketServerRequestMessageBus",
@@ -3206,12 +2316,7 @@
                 "typeName": "WebSocketServerRequestMessageQueueBinding"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "WebSocketServerRequestMessageQueueBinding",
-                "bindingName": "MultipleRequestsSpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "WebSocketServerRequestMessageBus",
@@ -3223,12 +2328,7 @@
                 "typeName": "WebSocketServerRequestMessageQueueBinding"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "WebSocketServerRequestMessageQueueBinding",
-                "bindingName": "FactorySpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "WebSocketServerRequestMessageQueueBinding",
@@ -3244,12 +2344,7 @@
                 "typeName": "MessageQueue"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "MessageQueue",
-                "bindingName": "Global"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "WebSocketServerRequestMessageQueueBinding",
@@ -3265,12 +2360,7 @@
                 "typeName": "MessageQueue"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "MessageQueue",
-                "bindingName": "MultipleRequestsSpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "WebSocketServerRequestMessageQueueBinding",
@@ -3286,12 +2376,7 @@
                 "typeName": "MessageQueue"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "MessageQueue",
-                "bindingName": "FactorySpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "WebSocketServerResponseMessageBus",
@@ -3303,12 +2388,7 @@
                 "typeName": "WebSocketServerResponseMessageQueueBinding"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "WebSocketServerResponseMessageQueueBinding",
-                "bindingName": "Global"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "WebSocketServerResponseMessageBus",
@@ -3320,12 +2400,7 @@
                 "typeName": "WebSocketServerResponseMessageQueueBinding"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "WebSocketServerResponseMessageQueueBinding",
-                "bindingName": "MultipleRequestsSpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "WebSocketServerResponseMessageBus",
@@ -3337,12 +2412,7 @@
                 "typeName": "WebSocketServerResponseMessageQueueBinding"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "WebSocketServerResponseMessageQueueBinding",
-                "bindingName": "FactorySpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "WebSocketServerResponseMessageQueueBinding",
@@ -3358,12 +2428,7 @@
                 "typeName": "MessageQueue"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "MessageQueue",
-                "bindingName": "Global"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "WebSocketServerResponseMessageQueueBinding",
@@ -3379,12 +2444,7 @@
                 "typeName": "MessageQueue"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "MessageQueue",
-                "bindingName": "MultipleRequestsSpec"
-            }
-        ]
+        "dependantBindings": []
     },
     {
         "typeName": "WebSocketServerResponseMessageQueueBinding",
@@ -3400,11 +2460,6 @@
                 "typeName": "MessageQueue"
             }
         ],
-        "dependantBindings": [
-            {
-                "typeName": "MessageQueue",
-                "bindingName": "FactorySpec"
-            }
-        ]
+        "dependantBindings": []
     }
 ]

@@ -1,21 +1,21 @@
 {
     "bindingName": "FactorySpec",
-    "containerFilePath": "C://component//lib//factory//generated//message//message.factory.container.json",
+    "containerFilePath": "D://component//lib//factory//generated//message//message.factory.container.json",
     "isSingleton": true,
     "ctorParameters": {
         "messageStatus": {
-            "containerFilePath": "C://component//lib//factory//generated//messagestatus//messagestatus.factory.container.json"
+            "containerFilePath": "D://component//lib//factory//generated//messagestatus//messagestatus.factory.container.json"
         },
         "factoryContainerBindingName": null,
         "Id": null,
         "messageContent": {
-            "containerFilePath": "C://component//lib//factory//generated//messagecontent//messagecontent.factory.container.json"
+            "containerFilePath": "D://component//lib//factory//generated//messagecontent//messagecontent.factory.container.json"
         },
         "messageContentMetadata": {
-            "containerFilePath": "C://component//lib//factory//generated//messagecontentmetadata//messagecontentmetadata.factory.container.json"
+            "containerFilePath": "D://component//lib//factory//generated//messagecontentmetadata//messagecontentmetadata.factory.container.json"
         },
         "messageMetadata": {
-            "containerFilePath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.json"
+            "containerFilePath": "D://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.json"
         }
     },
     "instances": {}

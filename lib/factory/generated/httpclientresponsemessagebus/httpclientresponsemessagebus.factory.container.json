@@ -1,18 +1,18 @@
 {
     "typeName": "HttpClientResponseMessageBus",
     "typeVariableName": "clientResponseMessageBus",
-    "scriptPath": "C://component//lib//http//httpclientresponsemessagebus.js",
-    "prototypeScriptPath": "C://component//lib//http//httpclientresponsemessagebus.prototype.js",
-    "factoryScriptPath": "C://component//lib//factory//generated//httpclientresponsemessagebus//httpclientresponsemessagebus.factory.js",
+    "scriptPath": "D://component//lib//http//httpclientresponsemessagebus.js",
+    "prototypeScriptPath": "D://component//lib//http//httpclientresponsemessagebus.prototype.js",
+    "factoryScriptPath": "D://component//lib//factory//generated//httpclientresponsemessagebus//httpclientresponsemessagebus.factory.js",
     "bindings": {
         "Global": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpclientresponsemessagebus//httpclientresponsemessagebus.factory.container.global.binding.json"
+            "bindingFilePath": "D://component//lib//factory//generated//httpclientresponsemessagebus//httpclientresponsemessagebus.factory.container.global.binding.json"
         },
         "MultipleRequestsSpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpclientresponsemessagebus//httpclientresponsemessagebus.factory.container.multiplerequestsspec.binding.json"
+            "bindingFilePath": "D://component//lib//factory//generated//httpclientresponsemessagebus//httpclientresponsemessagebus.factory.container.multiplerequestsspec.binding.json"
         },
         "FactorySpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpclientresponsemessagebus//httpclientresponsemessagebus.factory.container.factoryspec.binding.json"
+            "bindingFilePath": "D://component//lib//factory//generated//httpclientresponsemessagebus//httpclientresponsemessagebus.factory.container.factoryspec.binding.json"
         }
     }
 }

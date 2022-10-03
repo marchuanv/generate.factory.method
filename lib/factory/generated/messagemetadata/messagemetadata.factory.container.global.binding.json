@@ -1,15 +1,15 @@
 {
     "bindingName": "Global",
-    "containerFilePath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.json",
+    "containerFilePath": "D://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.json",
     "isSingleton": false,
     "ctorParameters": {
         "recipientAddress": {
-            "containerFilePath": "C://component//lib//factory//generated//recipientaddress//recipientaddress.factory.container.json"
+            "containerFilePath": "D://component//lib//factory//generated//recipientaddress//recipientaddress.factory.container.json"
         },
         "metadata": null,
         "token": null,
         "senderAddress": {
-            "containerFilePath": "C://component//lib//factory//generated//senderaddress//senderaddress.factory.container.json"
+            "containerFilePath": "D://component//lib//factory//generated//senderaddress//senderaddress.factory.container.json"
         }
     },
     "instances": {}

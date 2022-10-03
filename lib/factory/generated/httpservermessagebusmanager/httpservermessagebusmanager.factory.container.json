@@ -1,18 +1,18 @@
 {
     "typeName": "HttpServerMessageBusManager",
     "typeVariableName": "httpServerMessageBusManager",
-    "scriptPath": "C://component//lib//http//httpservermessagebusmanager.js",
-    "prototypeScriptPath": "C://component//lib//http//httpservermessagebusmanager.prototype.js",
-    "factoryScriptPath": "C://component//lib//factory//generated//httpservermessagebusmanager//httpservermessagebusmanager.factory.js",
+    "scriptPath": "D://component//lib//http//httpservermessagebusmanager.js",
+    "prototypeScriptPath": "D://component//lib//http//httpservermessagebusmanager.prototype.js",
+    "factoryScriptPath": "D://component//lib//factory//generated//httpservermessagebusmanager//httpservermessagebusmanager.factory.js",
     "bindings": {
         "Global": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpservermessagebusmanager//httpservermessagebusmanager.factory.container.global.binding.json"
+            "bindingFilePath": "D://component//lib//factory//generated//httpservermessagebusmanager//httpservermessagebusmanager.factory.container.global.binding.json"
         },
         "MultipleRequestsSpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpservermessagebusmanager//httpservermessagebusmanager.factory.container.multiplerequestsspec.binding.json"
+            "bindingFilePath": "D://component//lib//factory//generated//httpservermessagebusmanager//httpservermessagebusmanager.factory.container.multiplerequestsspec.binding.json"
         },
         "FactorySpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpservermessagebusmanager//httpservermessagebusmanager.factory.container.factoryspec.binding.json"
+            "bindingFilePath": "D://component//lib//factory//generated//httpservermessagebusmanager//httpservermessagebusmanager.factory.container.factoryspec.binding.json"
         }
     }
 }

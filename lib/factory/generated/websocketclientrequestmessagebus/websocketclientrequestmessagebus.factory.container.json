@@ -1,18 +1,18 @@
 {
     "typeName": "WebSocketClientRequestMessageBus",
     "typeVariableName": "webSocketClientRequestMessageBus",
-    "scriptPath": "C://component//lib//websocket//websocketclientrequestmessagebus.js",
-    "prototypeScriptPath": "C://component//lib//websocket//websocketclientrequestmessagebus.prototype.js",
-    "factoryScriptPath": "C://component//lib//factory//generated//websocketclientrequestmessagebus//websocketclientrequestmessagebus.factory.js",
+    "scriptPath": "D://component//lib//websocket//websocketclientrequestmessagebus.js",
+    "prototypeScriptPath": "D://component//lib//websocket//websocketclientrequestmessagebus.prototype.js",
+    "factoryScriptPath": "D://component//lib//factory//generated//websocketclientrequestmessagebus//websocketclientrequestmessagebus.factory.js",
     "bindings": {
         "Global": {
-            "bindingFilePath": "C://component//lib//factory//generated//websocketclientrequestmessagebus//websocketclientrequestmessagebus.factory.container.global.binding.json"
+            "bindingFilePath": "D://component//lib//factory//generated//websocketclientrequestmessagebus//websocketclientrequestmessagebus.factory.container.global.binding.json"
         },
         "MultipleRequestsSpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//websocketclientrequestmessagebus//websocketclientrequestmessagebus.factory.container.multiplerequestsspec.binding.json"
+            "bindingFilePath": "D://component//lib//factory//generated//websocketclientrequestmessagebus//websocketclientrequestmessagebus.factory.container.multiplerequestsspec.binding.json"
         },
         "FactorySpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//websocketclientrequestmessagebus//websocketclientrequestmessagebus.factory.container.factoryspec.binding.json"
+            "bindingFilePath": "D://component//lib//factory//generated//websocketclientrequestmessagebus//websocketclientrequestmessagebus.factory.container.factoryspec.binding.json"
         }
     }
 }

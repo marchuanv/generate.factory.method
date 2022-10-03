@@ -1,18 +1,18 @@
 {
     "typeName": "MessageStatus",
     "typeVariableName": "messageStatus",
-    "scriptPath": "C://component//lib//messagestatus.js",
-    "prototypeScriptPath": "C://component//lib//messagestatus.prototype.js",
-    "factoryScriptPath": "C://component//lib//factory//generated//messagestatus//messagestatus.factory.js",
+    "scriptPath": "D://component//lib//messagestatus.js",
+    "prototypeScriptPath": "D://component//lib//messagestatus.prototype.js",
+    "factoryScriptPath": "D://component//lib//factory//generated//messagestatus//messagestatus.factory.js",
     "bindings": {
         "Global": {
-            "bindingFilePath": "C://component//lib//factory//generated//messagestatus//messagestatus.factory.container.global.binding.json"
+            "bindingFilePath": "D://component//lib//factory//generated//messagestatus//messagestatus.factory.container.global.binding.json"
         },
         "MultipleRequestsSpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//messagestatus//messagestatus.factory.container.multiplerequestsspec.binding.json"
+            "bindingFilePath": "D://component//lib//factory//generated//messagestatus//messagestatus.factory.container.multiplerequestsspec.binding.json"
         },
         "FactorySpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//messagestatus//messagestatus.factory.container.factoryspec.binding.json"
+            "bindingFilePath": "D://component//lib//factory//generated//messagestatus//messagestatus.factory.container.factoryspec.binding.json"
         }
     }
 }

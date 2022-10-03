@@ -1,18 +1,18 @@
 {
     "typeName": "WebSocketRequestMessage",
     "typeVariableName": "webSocketRequestMessage",
-    "scriptPath": "C://component//lib//websocket//websocketrequestmessage.js",
-    "prototypeScriptPath": "C://component//lib//websocket//websocketrequestmessage.prototype.js",
-    "factoryScriptPath": "C://component//lib//factory//generated//websocketrequestmessage//websocketrequestmessage.factory.js",
+    "scriptPath": "D://component//lib//websocket//websocketrequestmessage.js",
+    "prototypeScriptPath": "D://component//lib//websocket//websocketrequestmessage.prototype.js",
+    "factoryScriptPath": "D://component//lib//factory//generated//websocketrequestmessage//websocketrequestmessage.factory.js",
     "bindings": {
         "Global": {
-            "bindingFilePath": "C://component//lib//factory//generated//websocketrequestmessage//websocketrequestmessage.factory.container.global.binding.json"
+            "bindingFilePath": "D://component//lib//factory//generated//websocketrequestmessage//websocketrequestmessage.factory.container.global.binding.json"
         },
         "MultipleRequestsSpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//websocketrequestmessage//websocketrequestmessage.factory.container.multiplerequestsspec.binding.json"
+            "bindingFilePath": "D://component//lib//factory//generated//websocketrequestmessage//websocketrequestmessage.factory.container.multiplerequestsspec.binding.json"
         },
         "FactorySpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//websocketrequestmessage//websocketrequestmessage.factory.container.factoryspec.binding.json"
+            "bindingFilePath": "D://component//lib//factory//generated//websocketrequestmessage//websocketrequestmessage.factory.container.factoryspec.binding.json"
         }
     }
 }

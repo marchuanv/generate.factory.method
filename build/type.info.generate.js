@@ -1,4 +1,4 @@
-const { readdirSync, readFileSync, writeFileSync, mkdirSync, existsSync } = require('fs');
+const { readdirSync, readFileSync, writeFileSync } = require('fs');
 const path = require('path');
 const utils = require('utils');
 const libDir = path.join(__dirname, '../lib');

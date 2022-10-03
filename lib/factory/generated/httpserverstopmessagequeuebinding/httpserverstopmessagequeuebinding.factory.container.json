@@ -1,18 +1,18 @@
 {
     "typeName": "HttpServerStopMessageQueueBinding",
     "typeVariableName": "httpServerStopMessageQueueBinding",
-    "scriptPath": "C://component//lib//http//httpserverstopmessagequeuebinding.js",
-    "prototypeScriptPath": "C://component//lib//http//httpserverstopmessagequeuebinding.prototype.js",
-    "factoryScriptPath": "C://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.js",
+    "scriptPath": "D://component//lib//http//httpserverstopmessagequeuebinding.js",
+    "prototypeScriptPath": "D://component//lib//http//httpserverstopmessagequeuebinding.prototype.js",
+    "factoryScriptPath": "D://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.js",
     "bindings": {
         "Global": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.container.global.binding.json"
+            "bindingFilePath": "D://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.container.global.binding.json"
         },
         "MultipleRequestsSpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.container.multiplerequestsspec.binding.json"
+            "bindingFilePath": "D://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.container.multiplerequestsspec.binding.json"
         },
         "FactorySpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.container.factoryspec.binding.json"
+            "bindingFilePath": "D://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.container.factoryspec.binding.json"
         }
     }
 }

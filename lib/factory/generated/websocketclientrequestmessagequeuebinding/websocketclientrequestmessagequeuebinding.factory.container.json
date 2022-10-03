@@ -1,18 +1,18 @@
 {
     "typeName": "WebSocketClientRequestMessageQueueBinding",
     "typeVariableName": "websocketClientRequestMessageQueueBinding",
-    "scriptPath": "C://component//lib//websocket//websocketclientrequestmessagequeuebinding.js",
-    "prototypeScriptPath": "C://component//lib//websocket//websocketclientrequestmessagequeuebinding.prototype.js",
-    "factoryScriptPath": "C://component//lib//factory//generated//websocketclientrequestmessagequeuebinding//websocketclientrequestmessagequeuebinding.factory.js",
+    "scriptPath": "D://component//lib//websocket//websocketclientrequestmessagequeuebinding.js",
+    "prototypeScriptPath": "D://component//lib//websocket//websocketclientrequestmessagequeuebinding.prototype.js",
+    "factoryScriptPath": "D://component//lib//factory//generated//websocketclientrequestmessagequeuebinding//websocketclientrequestmessagequeuebinding.factory.js",
     "bindings": {
         "Global": {
-            "bindingFilePath": "C://component//lib//factory//generated//websocketclientrequestmessagequeuebinding//websocketclientrequestmessagequeuebinding.factory.container.global.binding.json"
+            "bindingFilePath": "D://component//lib//factory//generated//websocketclientrequestmessagequeuebinding//websocketclientrequestmessagequeuebinding.factory.container.global.binding.json"
         },
         "MultipleRequestsSpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//websocketclientrequestmessagequeuebinding//websocketclientrequestmessagequeuebinding.factory.container.multiplerequestsspec.binding.json"
+            "bindingFilePath": "D://component//lib//factory//generated//websocketclientrequestmessagequeuebinding//websocketclientrequestmessagequeuebinding.factory.container.multiplerequestsspec.binding.json"
         },
         "FactorySpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//websocketclientrequestmessagequeuebinding//websocketclientrequestmessagequeuebinding.factory.container.factoryspec.binding.json"
+            "bindingFilePath": "D://component//lib//factory//generated//websocketclientrequestmessagequeuebinding//websocketclientrequestmessagequeuebinding.factory.container.factoryspec.binding.json"
         }
     }
 }

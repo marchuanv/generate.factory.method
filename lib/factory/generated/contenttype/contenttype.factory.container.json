@@ -1,18 +1,18 @@
 {
     "typeName": "ContentType",
     "typeVariableName": "contentType",
-    "scriptPath": "C://component//lib//contentType.js",
-    "prototypeScriptPath": "C://component//lib//contentType.prototype.js",
-    "factoryScriptPath": "C://component//lib//factory//generated//contenttype//contenttype.factory.js",
+    "scriptPath": "D://component//lib//contentType.js",
+    "prototypeScriptPath": "D://component//lib//contentType.prototype.js",
+    "factoryScriptPath": "D://component//lib//factory//generated//contenttype//contenttype.factory.js",
     "bindings": {
         "Global": {
-            "bindingFilePath": "C://component//lib//factory//generated//contenttype//contenttype.factory.container.global.binding.json"
+            "bindingFilePath": "D://component//lib//factory//generated//contenttype//contenttype.factory.container.global.binding.json"
         },
         "MultipleRequestsSpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//contenttype//contenttype.factory.container.multiplerequestsspec.binding.json"
+            "bindingFilePath": "D://component//lib//factory//generated//contenttype//contenttype.factory.container.multiplerequestsspec.binding.json"
         },
         "FactorySpec": {
-            "bindingFilePath": "C://component//lib//factory//generated//contenttype//contenttype.factory.container.factoryspec.binding.json"
+            "bindingFilePath": "D://component//lib//factory//generated//contenttype//contenttype.factory.container.factoryspec.binding.json"
         }
     }
 }

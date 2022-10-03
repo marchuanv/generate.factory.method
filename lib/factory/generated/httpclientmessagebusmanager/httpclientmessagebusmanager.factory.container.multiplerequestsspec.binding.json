@@ -1,17 +1,17 @@
 {
     "bindingName": "MultipleRequestsSpec",
-    "containerFilePath": "C://component//lib//factory//generated//httpclientmessagebusmanager//httpclientmessagebusmanager.factory.container.json",
+    "containerFilePath": "D://component//lib//factory//generated//httpclientmessagebusmanager//httpclientmessagebusmanager.factory.container.json",
     "isSingleton": true,
     "ctorParameters": {
         "httpClientStopMessageQueueBinding": {
-            "containerFilePath": "C://component//lib//factory//generated//httpclientstopmessagequeuebinding//httpclientstopmessagequeuebinding.factory.container.json"
+            "containerFilePath": "D://component//lib//factory//generated//httpclientstopmessagequeuebinding//httpclientstopmessagequeuebinding.factory.container.json"
         },
         "factoryContainerBindingName": null,
         "httpClientStartMessageQueueBinding": {
-            "containerFilePath": "C://component//lib//factory//generated//httpclientstartmessagequeuebinding//httpclientstartmessagequeuebinding.factory.container.json"
+            "containerFilePath": "D://component//lib//factory//generated//httpclientstartmessagequeuebinding//httpclientstartmessagequeuebinding.factory.container.json"
         },
         "httpClientStartedMessageQueueBinding": {
-            "containerFilePath": "C://component//lib//factory//generated//httpclientstartedmessagequeuebinding//httpclientstartedmessagequeuebinding.factory.container.json"
+            "containerFilePath": "D://component//lib//factory//generated//httpclientstartedmessagequeuebinding//httpclientstartedmessagequeuebinding.factory.container.json"
         }
     },
     "instances": {}

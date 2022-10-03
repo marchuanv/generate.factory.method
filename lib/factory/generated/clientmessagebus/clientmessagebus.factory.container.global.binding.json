@@ -1,16 +1,16 @@
 {
     "bindingName": "Global",
-    "containerFilePath": "C://component//lib//factory//generated//clientmessagebus//clientmessagebus.factory.container.json",
+    "containerFilePath": "D://component//lib//factory//generated//clientmessagebus//clientmessagebus.factory.container.json",
     "isSingleton": false,
     "ctorParameters": {
         "messageConverter": {
-            "containerFilePath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.json"
+            "containerFilePath": "D://component//lib//factory//generated//messageconverter//messageconverter.factory.container.json"
         },
         "clientRequestMessageBus": {
-            "containerFilePath": "C://component//lib//factory//generated//httpclientrequestmessagebus//httpclientrequestmessagebus.factory.container.json"
+            "containerFilePath": "D://component//lib//factory//generated//httpclientrequestmessagebus//httpclientrequestmessagebus.factory.container.json"
         },
         "clientResponseMessageBus": {
-            "containerFilePath": "C://component//lib//factory//generated//httpclientresponsemessagebus//httpclientresponsemessagebus.factory.container.json"
+            "containerFilePath": "D://component//lib//factory//generated//httpclientresponsemessagebus//httpclientresponsemessagebus.factory.container.json"
         }
     },
     "instances": {}

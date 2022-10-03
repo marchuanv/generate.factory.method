@@ -1,8 +1,17 @@
 const { mkdirSync, existsSync } = require('fs');
 const path = require('path');
+
+const factorySpecsDir = path.join(__dirname, '../spec', 'factory');
+const factoryLibDir = path.join(__dirname, '../lib', 'factory');
+if (!existsSync(factorySpecsDir)){
+    mkdirSync(factorySpecsDir);
+}
+if (!existsSync(factoryLibDir)){
+    mkdirSync(factoryLibDir);
+}
+
 const generatedFactorySpecsDir = path.join(__dirname, '../spec', 'factory', 'generated');
 const generatedFactoryScriptsDir = path.join(__dirname, '../lib', 'factory', 'generated');
-
 if (!existsSync(generatedFactorySpecsDir)){
     mkdirSync(generatedFactorySpecsDir);
 }
