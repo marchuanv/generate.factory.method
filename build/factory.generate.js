@@ -1,7 +1,7 @@
-const { readFileSync, writeFileSync } = require('fs');
+const { readFileSync, writeFileSync, existsSync } = require('fs');
 const path = require('path');
 
-const factoryTemplate = readFileSync(path.join(__dirname,'factory.template'),'utf8');
+const factoryTemplate = readFileSync(path.join(__dirname, 'templates', 'factory.template'),'utf8');
 const factoryInfoPath = path.join(__dirname, 'factory.info.json');
 let factoryInfo = require(factoryInfoPath);
 
