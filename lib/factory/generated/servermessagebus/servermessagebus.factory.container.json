@@ -1,0 +1,18 @@
+{
+    "typeName": "ServerMessageBus",
+    "typeVariableName": "serverMessageBus",
+    "scriptPath": "C://component//lib//servermessagebus.js",
+    "prototypeScriptPath": "C://component//lib//servermessagebus.prototype.js",
+    "factoryScriptPath": "C://component//lib//factory//generated//servermessagebus//servermessagebus.factory.js",
+    "bindings": {
+        "Global": {
+            "bindingFilePath": "C://component//lib//factory//generated//servermessagebus//servermessagebus.factory.container.global.binding.json"
+        },
+        "MultipleRequestsSpec": {
+            "bindingFilePath": "C://component//lib//factory//generated//servermessagebus//servermessagebus.factory.container.multiplerequestsspec.binding.json"
+        },
+        "FactorySpec": {
+            "bindingFilePath": "C://component//lib//factory//generated//servermessagebus//servermessagebus.factory.container.factoryspec.binding.json"
+        }
+    }
+}

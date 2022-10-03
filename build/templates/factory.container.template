@@ -1,7 +1,8 @@
 {
     "typeName": "[TypeName]",
     "typeVariableName": "[TypeVariableName]",
-    "prototypePath": "[PrototypePath]",
+    "scriptPath": "[ScriptPath]",
+    "prototypeScriptPath": "[PrototypeScriptPath]",
     "factoryScriptPath": "[FactoryScriptPath]",
     "bindings": [Bindings]
 }

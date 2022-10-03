@@ -1,7 +1,8 @@
 { 
     "typeName":"[TypeName]",
     "variableName":"[VariableName]",
-    "prototypePath":"[PrototypePath]",
+    "scriptPath":"[ScriptPath]",
+    "prototypeScriptPath":"[PrototypeScriptPath]",
     "passes": [[PassesArray]],
     "children":[[ChildrenArray]]
 }

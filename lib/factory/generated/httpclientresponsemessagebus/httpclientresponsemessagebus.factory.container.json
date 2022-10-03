@@ -1,0 +1,18 @@
+{
+    "typeName": "HttpClientResponseMessageBus",
+    "typeVariableName": "httpClientResponseMessageBus",
+    "scriptPath": "C://component//lib//http//httpclientresponsemessagebus.js",
+    "prototypeScriptPath": "C://component//lib//http//httpclientresponsemessagebus.prototype.js",
+    "factoryScriptPath": "C://component//lib//factory//generated//httpclientresponsemessagebus//httpclientresponsemessagebus.factory.js",
+    "bindings": {
+        "Global": {
+            "bindingFilePath": "C://component//lib//factory//generated//httpclientresponsemessagebus//httpclientresponsemessagebus.factory.container.global.binding.json"
+        },
+        "MultipleRequestsSpec": {
+            "bindingFilePath": "C://component//lib//factory//generated//httpclientresponsemessagebus//httpclientresponsemessagebus.factory.container.multiplerequestsspec.binding.json"
+        },
+        "FactorySpec": {
+            "bindingFilePath": "C://component//lib//factory//generated//httpclientresponsemessagebus//httpclientresponsemessagebus.factory.container.factoryspec.binding.json"
+        }
+    }
+}

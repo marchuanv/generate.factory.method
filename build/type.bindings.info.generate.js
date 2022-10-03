@@ -19,7 +19,9 @@ for(const typeName of typeNames) {
     for(const bindingName of bindingsNames) {
         if (typeBindingInfo[bindingName]) {
             for(const bindingPropName of Object.keys(typeBindingInfo[bindingName])) {
-                if (typeBindingInfo[bindingName][bindingPropName] !== bindingsInfo[bindingName][bindingPropName]) {
+                if (typeof bindingsInfo[bindingName][bindingPropName] === 'object') {
+                    
+                } else if (typeBindingInfo[bindingName][bindingPropName] !== bindingsInfo[bindingName][bindingPropName]) {
                     typeBindingInfo[bindingName][bindingPropName] = bindingsInfo[bindingName][bindingPropName];
                 }
             };

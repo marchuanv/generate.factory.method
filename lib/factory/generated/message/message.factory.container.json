@@ -1,0 +1,18 @@
+{
+    "typeName": "Message",
+    "typeVariableName": "message",
+    "scriptPath": "C://component//lib//message.js",
+    "prototypeScriptPath": "C://component//lib//message.prototype.js",
+    "factoryScriptPath": "C://component//lib//factory//generated//message//message.factory.js",
+    "bindings": {
+        "Global": {
+            "bindingFilePath": "C://component//lib//factory//generated//message//message.factory.container.global.binding.json"
+        },
+        "MultipleRequestsSpec": {
+            "bindingFilePath": "C://component//lib//factory//generated//message//message.factory.container.multiplerequestsspec.binding.json"
+        },
+        "FactorySpec": {
+            "bindingFilePath": "C://component//lib//factory//generated//message//message.factory.container.factoryspec.binding.json"
+        }
+    }
+}

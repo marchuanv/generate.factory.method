@@ -12,17 +12,19 @@ const typeInfo = require(typeInfoPath);
 
 function getDependencyTree(info, pass = 'firstpass', types = []) {
     if (!info || utils.isEmptyObject(info)) {
-        const prototypePath = scripts.find(scPath => types.find(ti => ti.prototypePath === scPath.replace(/\\/g,'//')) === undefined);
-        if (prototypePath) {
+        const prototypeScriptPath = scripts.find(scPath => types.find(ti => ti.prototypeScriptPath === scPath.replace(/\\/g,'//')) === undefined);
+        if (prototypeScriptPath) {
             try {
-                const sc = require(prototypePath);
+                const sc = require(prototypeScriptPath);
                 const key = Object.keys(sc)[0];
                 const type = sc[key];
+                const scriptPath = prototypeScriptPath.replace('.prototype','');
 
                 const parameters = utils.getFunctionParams(type) || [];
                 const children = parameters.map(param => utils.getJSONObject(typeInfoTemplate
                     .replace(/\[TypeName\]/g, param.name)
-                    .replace(/\[PrototypePath\]/g,'')
+                    .replace(/\[ScriptPath\]/g, '')
+                    .replace(/\[PrototypeScriptPath\]/g,'')
                     .replace(/\[ChildrenArray\]/g,'')
                     .replace(/\[PassesArray\]/g, [])
                     .replace(/\[VariableName\]/g, param.name)
@@ -32,7 +34,8 @@ function getDependencyTree(info, pass = 'firstpass', types = []) {
                 }
                 info = utils.getJSONObject(typeInfoTemplate
                     .replace(/\[TypeName\]/g, type.name)
-                    .replace(/\[PrototypePath\]/g, prototypePath.replace(/\\/g,'//') )
+                    .replace(/\[ScriptPath\]/g, scriptPath.replace(/\\/g,'//'))
+                    .replace(/\[PrototypeScriptPath\]/g, prototypeScriptPath.replace(/\\/g,'//'))
                     .replace(/\[ChildrenArray\]/g, children.map(child => utils.getJSONString(child)).join(','))
                     .replace(/\[PassesArray\]/g, [])
                     .replace(/\[VariableName\]/g, '')
@@ -42,7 +45,7 @@ function getDependencyTree(info, pass = 'firstpass', types = []) {
                 }
                 types = types.concat(children).concat(info);
             } catch (err) {
-                console.log(`errors loading the ${prototypePath} script: `, err);
+                console.log(`errors loading the ${prototypeScriptPath} script: `, err);
             }
         }
         else {
@@ -59,14 +62,14 @@ function getDependencyTree(info, pass = 'firstpass', types = []) {
       
         types = types.filter(info => types.find(info2 =>
             info2.typeName.toLowerCase() === info.typeName.toLowerCase() && 
-            info2.prototypePath &&
-            info.prototypePath
+            info2.prototypeScriptPath &&
+            info.prototypeScriptPath
         ));
         for(const info of types) {
             info.children = info.children.map(child => {
                 let refChild = types.filter(inf => 
                     inf.typeName.toLowerCase() === child.typeName.toLowerCase() &&
-                    inf.prototypePath
+                    inf.prototypeScriptPath
                 )[0];
                 if (refChild) {
                     refChild.variableName = child.variableName;
@@ -92,7 +95,7 @@ function getDependencyTree(info, pass = 'firstpass', types = []) {
     return getDependencyTree(null, pass, types);
 }
 for(const info of getDependencyTree()) {
-    if (!info.prototypePath) {
+    if (!info.prototypeScriptPath) {
         continue;
     }
     typeInfo[info.typeName] = {};

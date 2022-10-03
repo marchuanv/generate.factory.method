@@ -2,24 +2,28 @@
     "ClientMessageBus": {
         "typeName": "ClientMessageBus",
         "variableName": "clientMessageBus",
-        "prototypePath": "C://component//lib//clientmessagebus.prototype.js",
+        "scriptPath": "C://component//lib//clientmessagebus.js",
+        "prototypeScriptPath": "C://component//lib//clientmessagebus.prototype.js",
         "children": [
             {
                 "typeName": "MessageConverter",
                 "variableName": "messageConverter",
-                "prototypePath": "C://component//lib//messageconverter.prototype.js",
+                "scriptPath": "C://component//lib//messageconverter.js",
+                "prototypeScriptPath": "C://component//lib//messageconverter.prototype.js",
                 "children": []
             },
             {
                 "typeName": "clientRequestMessageBus",
                 "variableName": "clientRequestMessageBus",
-                "prototypePath": "",
+                "scriptPath": "",
+                "prototypeScriptPath": "",
                 "children": []
             },
             {
                 "typeName": "clientResponseMessageBus",
                 "variableName": "clientResponseMessageBus",
-                "prototypePath": "",
+                "scriptPath": "",
+                "prototypeScriptPath": "",
                 "children": []
             }
         ]
@@ -27,41 +31,48 @@
     "Component": {
         "typeName": "Component",
         "variableName": "component",
-        "prototypePath": "C://component//lib//component.prototype.js",
+        "scriptPath": "C://component//lib//component.js",
+        "prototypeScriptPath": "C://component//lib//component.prototype.js",
         "children": [
             {
                 "typeName": "packageJson",
                 "variableName": "packageJson",
-                "prototypePath": "",
+                "scriptPath": "",
+                "prototypeScriptPath": "",
                 "children": []
             },
             {
                 "typeName": "factoryContainerBindingName",
                 "variableName": "factoryContainerBindingName",
-                "prototypePath": "",
+                "scriptPath": "",
+                "prototypeScriptPath": "",
                 "children": []
             },
             {
                 "typeName": "ClientMessageBus",
                 "variableName": "clientMessageBus",
-                "prototypePath": "C://component//lib//clientmessagebus.prototype.js",
+                "scriptPath": "C://component//lib//clientmessagebus.js",
+                "prototypeScriptPath": "C://component//lib//clientmessagebus.prototype.js",
                 "children": [
                     {
                         "typeName": "MessageConverter",
                         "variableName": "messageConverter",
-                        "prototypePath": "C://component//lib//messageconverter.prototype.js",
+                        "scriptPath": "C://component//lib//messageconverter.js",
+                        "prototypeScriptPath": "C://component//lib//messageconverter.prototype.js",
                         "children": []
                     },
                     {
                         "typeName": "clientRequestMessageBus",
                         "variableName": "clientRequestMessageBus",
-                        "prototypePath": "",
+                        "scriptPath": "",
+                        "prototypeScriptPath": "",
                         "children": []
                     },
                     {
                         "typeName": "clientResponseMessageBus",
                         "variableName": "clientResponseMessageBus",
-                        "prototypePath": "",
+                        "scriptPath": "",
+                        "prototypeScriptPath": "",
                         "children": []
                     }
                 ]
@@ -69,24 +80,28 @@
             {
                 "typeName": "ServerMessageBus",
                 "variableName": "serverMessageBus",
-                "prototypePath": "C://component//lib//servermessagebus.prototype.js",
+                "scriptPath": "C://component//lib//servermessagebus.js",
+                "prototypeScriptPath": "C://component//lib//servermessagebus.prototype.js",
                 "children": [
                     {
                         "typeName": "MessageConverter",
                         "variableName": "messageConverter",
-                        "prototypePath": "C://component//lib//messageconverter.prototype.js",
+                        "scriptPath": "C://component//lib//messageconverter.js",
+                        "prototypeScriptPath": "C://component//lib//messageconverter.prototype.js",
                         "children": []
                     },
                     {
                         "typeName": "serverResponseMessageBus",
                         "variableName": "serverResponseMessageBus",
-                        "prototypePath": "",
+                        "scriptPath": "",
+                        "prototypeScriptPath": "",
                         "children": []
                     },
                     {
                         "typeName": "serverRequestMessageBus",
                         "variableName": "serverRequestMessageBus",
-                        "prototypePath": "",
+                        "scriptPath": "",
+                        "prototypeScriptPath": "",
                         "children": []
                     }
                 ]
@@ -94,12 +109,14 @@
             {
                 "typeName": "UserSessions",
                 "variableName": "userSessions",
-                "prototypePath": "C://component//lib//usersessions.prototype.js",
+                "scriptPath": "C://component//lib//usersessions.js",
+                "prototypeScriptPath": "C://component//lib//usersessions.prototype.js",
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
                         "variableName": "factoryContainerBindingName",
-                        "prototypePath": "",
+                        "scriptPath": "",
+                        "prototypeScriptPath": "",
                         "children": []
                     }
                 ]
@@ -109,12 +126,14 @@
     "ContentType": {
         "typeName": "ContentType",
         "variableName": "contentType",
-        "prototypePath": "C://component//lib//contentType.prototype.js",
+        "scriptPath": "C://component//lib//contentType.js",
+        "prototypeScriptPath": "C://component//lib//contentType.prototype.js",
         "children": [
             {
                 "typeName": "name",
                 "variableName": "name",
-                "prototypePath": "",
+                "scriptPath": "",
+                "prototypeScriptPath": "",
                 "children": []
             }
         ]
@@ -122,23 +141,27 @@
     "Logger": {
         "typeName": "Logger",
         "variableName": "logger",
-        "prototypePath": "C://component//lib//logger.prototype.js",
+        "scriptPath": "C://component//lib//logger.js",
+        "prototypeScriptPath": "C://component//lib//logger.prototype.js",
         "children": []
     },
     "Message": {
         "typeName": "Message",
         "variableName": "message",
-        "prototypePath": "C://component//lib//message.prototype.js",
+        "scriptPath": "C://component//lib//message.js",
+        "prototypeScriptPath": "C://component//lib//message.prototype.js",
         "children": [
             {
                 "typeName": "MessageStatus",
                 "variableName": "messageStatus",
-                "prototypePath": "C://component//lib//messagestatus.prototype.js",
+                "scriptPath": "C://component//lib//messagestatus.js",
+                "prototypeScriptPath": "C://component//lib//messagestatus.prototype.js",
                 "children": [
                     {
                         "typeName": "messageStatusCode",
                         "variableName": "messageStatusCode",
-                        "prototypePath": "",
+                        "scriptPath": "",
+                        "prototypeScriptPath": "",
                         "children": []
                     }
                 ]
@@ -146,35 +169,41 @@
             {
                 "typeName": "factoryContainerBindingName",
                 "variableName": "factoryContainerBindingName",
-                "prototypePath": "",
+                "scriptPath": "",
+                "prototypeScriptPath": "",
                 "children": []
             },
             {
                 "typeName": "Id",
                 "variableName": "Id",
-                "prototypePath": "",
+                "scriptPath": "",
+                "prototypeScriptPath": "",
                 "children": []
             },
             {
                 "typeName": "MessageContent",
                 "variableName": "messageContent",
-                "prototypePath": "C://component//lib//messagecontent.prototype.js",
+                "scriptPath": "C://component//lib//messagecontent.js",
+                "prototypeScriptPath": "C://component//lib//messagecontent.prototype.js",
                 "children": [
                     {
                         "typeName": "MessageContentMetadata",
                         "variableName": "messageContentMetadata",
-                        "prototypePath": "C://component//lib//messagecontentmetadata.prototype.js",
+                        "scriptPath": "C://component//lib//messagecontentmetadata.js",
+                        "prototypeScriptPath": "C://component//lib//messagecontentmetadata.prototype.js",
                         "children": [
                             {
                                 "typeName": "factoryContainerBindingName",
                                 "variableName": "factoryContainerBindingName",
-                                "prototypePath": "",
+                                "scriptPath": "",
+                                "prototypeScriptPath": "",
                                 "children": []
                             },
                             {
                                 "typeName": "data",
                                 "variableName": "data",
-                                "prototypePath": "",
+                                "scriptPath": "",
+                                "prototypeScriptPath": "",
                                 "children": []
                             }
                         ]
@@ -182,18 +211,21 @@
                     {
                         "typeName": "data",
                         "variableName": "data",
-                        "prototypePath": "",
+                        "scriptPath": "",
+                        "prototypeScriptPath": "",
                         "children": []
                     },
                     {
                         "typeName": "UserSessions",
                         "variableName": "userSessions",
-                        "prototypePath": "C://component//lib//usersessions.prototype.js",
+                        "scriptPath": "C://component//lib//usersessions.js",
+                        "prototypeScriptPath": "C://component//lib//usersessions.prototype.js",
                         "children": [
                             {
                                 "typeName": "factoryContainerBindingName",
                                 "variableName": "factoryContainerBindingName",
-                                "prototypePath": "",
+                                "scriptPath": "",
+                                "prototypeScriptPath": "",
                                 "children": []
                             }
                         ]
@@ -201,23 +233,27 @@
                     {
                         "typeName": "MessageMetadata",
                         "variableName": "messageMetadata",
-                        "prototypePath": "C://component//lib//messagemetadata.prototype.js",
+                        "scriptPath": "C://component//lib//messagemetadata.js",
+                        "prototypeScriptPath": "C://component//lib//messagemetadata.prototype.js",
                         "children": [
                             {
                                 "typeName": "RecipientAddress",
                                 "variableName": "recipientAddress",
-                                "prototypePath": "C://component//lib//recipientaddress.prototype.js",
+                                "scriptPath": "C://component//lib//recipientaddress.js",
+                                "prototypeScriptPath": "C://component//lib//recipientaddress.prototype.js",
                                 "children": [
                                     {
                                         "typeName": "recipientHost",
                                         "variableName": "recipientHost",
-                                        "prototypePath": "",
+                                        "scriptPath": "",
+                                        "prototypeScriptPath": "",
                                         "children": []
                                     },
                                     {
                                         "typeName": "recipientPort",
                                         "variableName": "recipientPort",
-                                        "prototypePath": "",
+                                        "scriptPath": "",
+                                        "prototypeScriptPath": "",
                                         "children": []
                                     }
                                 ]
@@ -225,30 +261,35 @@
                             {
                                 "typeName": "metadata",
                                 "variableName": "metadata",
-                                "prototypePath": "",
+                                "scriptPath": "",
+                                "prototypeScriptPath": "",
                                 "children": []
                             },
                             {
                                 "typeName": "token",
                                 "variableName": "token",
-                                "prototypePath": "",
+                                "scriptPath": "",
+                                "prototypeScriptPath": "",
                                 "children": []
                             },
                             {
                                 "typeName": "SenderAddress",
                                 "variableName": "senderAddress",
-                                "prototypePath": "C://component//lib//senderaddress.prototype.js",
+                                "scriptPath": "C://component//lib//senderaddress.js",
+                                "prototypeScriptPath": "C://component//lib//senderaddress.prototype.js",
                                 "children": [
                                     {
                                         "typeName": "senderHost",
                                         "variableName": "senderHost",
-                                        "prototypePath": "",
+                                        "scriptPath": "",
+                                        "prototypeScriptPath": "",
                                         "children": []
                                     },
                                     {
                                         "typeName": "senderPort",
                                         "variableName": "senderPort",
-                                        "prototypePath": "",
+                                        "scriptPath": "",
+                                        "prototypeScriptPath": "",
                                         "children": []
                                     }
                                 ]
@@ -260,18 +301,21 @@
             {
                 "typeName": "MessageContentMetadata",
                 "variableName": "messageContentMetadata",
-                "prototypePath": "C://component//lib//messagecontentmetadata.prototype.js",
+                "scriptPath": "C://component//lib//messagecontentmetadata.js",
+                "prototypeScriptPath": "C://component//lib//messagecontentmetadata.prototype.js",
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
                         "variableName": "factoryContainerBindingName",
-                        "prototypePath": "",
+                        "scriptPath": "",
+                        "prototypeScriptPath": "",
                         "children": []
                     },
                     {
                         "typeName": "data",
                         "variableName": "data",
-                        "prototypePath": "",
+                        "scriptPath": "",
+                        "prototypeScriptPath": "",
                         "children": []
                     }
                 ]
@@ -279,23 +323,27 @@
             {
                 "typeName": "MessageMetadata",
                 "variableName": "messageMetadata",
-                "prototypePath": "C://component//lib//messagemetadata.prototype.js",
+                "scriptPath": "C://component//lib//messagemetadata.js",
+                "prototypeScriptPath": "C://component//lib//messagemetadata.prototype.js",
                 "children": [
                     {
                         "typeName": "RecipientAddress",
                         "variableName": "recipientAddress",
-                        "prototypePath": "C://component//lib//recipientaddress.prototype.js",
+                        "scriptPath": "C://component//lib//recipientaddress.js",
+                        "prototypeScriptPath": "C://component//lib//recipientaddress.prototype.js",
                         "children": [
                             {
                                 "typeName": "recipientHost",
                                 "variableName": "recipientHost",
-                                "prototypePath": "",
+                                "scriptPath": "",
+                                "prototypeScriptPath": "",
                                 "children": []
                             },
                             {
                                 "typeName": "recipientPort",
                                 "variableName": "recipientPort",
-                                "prototypePath": "",
+                                "scriptPath": "",
+                                "prototypeScriptPath": "",
                                 "children": []
                             }
                         ]
@@ -303,30 +351,35 @@
                     {
                         "typeName": "metadata",
                         "variableName": "metadata",
-                        "prototypePath": "",
+                        "scriptPath": "",
+                        "prototypeScriptPath": "",
                         "children": []
                     },
                     {
                         "typeName": "token",
                         "variableName": "token",
-                        "prototypePath": "",
+                        "scriptPath": "",
+                        "prototypeScriptPath": "",
                         "children": []
                     },
                     {
                         "typeName": "SenderAddress",
                         "variableName": "senderAddress",
-                        "prototypePath": "C://component//lib//senderaddress.prototype.js",
+                        "scriptPath": "C://component//lib//senderaddress.js",
+                        "prototypeScriptPath": "C://component//lib//senderaddress.prototype.js",
                         "children": [
                             {
                                 "typeName": "senderHost",
                                 "variableName": "senderHost",
-                                "prototypePath": "",
+                                "scriptPath": "",
+                                "prototypeScriptPath": "",
                                 "children": []
                             },
                             {
                                 "typeName": "senderPort",
                                 "variableName": "senderPort",
-                                "prototypePath": "",
+                                "scriptPath": "",
+                                "prototypeScriptPath": "",
                                 "children": []
                             }
                         ]
@@ -338,23 +391,27 @@
     "MessageContent": {
         "typeName": "MessageContent",
         "variableName": "messageContent",
-        "prototypePath": "C://component//lib//messagecontent.prototype.js",
+        "scriptPath": "C://component//lib//messagecontent.js",
+        "prototypeScriptPath": "C://component//lib//messagecontent.prototype.js",
         "children": [
             {
                 "typeName": "MessageContentMetadata",
                 "variableName": "messageContentMetadata",
-                "prototypePath": "C://component//lib//messagecontentmetadata.prototype.js",
+                "scriptPath": "C://component//lib//messagecontentmetadata.js",
+                "prototypeScriptPath": "C://component//lib//messagecontentmetadata.prototype.js",
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
                         "variableName": "factoryContainerBindingName",
-                        "prototypePath": "",
+                        "scriptPath": "",
+                        "prototypeScriptPath": "",
                         "children": []
                     },
                     {
                         "typeName": "data",
                         "variableName": "data",
-                        "prototypePath": "",
+                        "scriptPath": "",
+                        "prototypeScriptPath": "",
                         "children": []
                     }
                 ]
@@ -362,18 +419,21 @@
             {
                 "typeName": "data",
                 "variableName": "data",
-                "prototypePath": "",
+                "scriptPath": "",
+                "prototypeScriptPath": "",
                 "children": []
             },
             {
                 "typeName": "UserSessions",
                 "variableName": "userSessions",
-                "prototypePath": "C://component//lib//usersessions.prototype.js",
+                "scriptPath": "C://component//lib//usersessions.js",
+                "prototypeScriptPath": "C://component//lib//usersessions.prototype.js",
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
                         "variableName": "factoryContainerBindingName",
-                        "prototypePath": "",
+                        "scriptPath": "",
+                        "prototypeScriptPath": "",
                         "children": []
                     }
                 ]
@@ -381,23 +441,27 @@
             {
                 "typeName": "MessageMetadata",
                 "variableName": "messageMetadata",
-                "prototypePath": "C://component//lib//messagemetadata.prototype.js",
+                "scriptPath": "C://component//lib//messagemetadata.js",
+                "prototypeScriptPath": "C://component//lib//messagemetadata.prototype.js",
                 "children": [
                     {
                         "typeName": "RecipientAddress",
                         "variableName": "recipientAddress",
-                        "prototypePath": "C://component//lib//recipientaddress.prototype.js",
+                        "scriptPath": "C://component//lib//recipientaddress.js",
+                        "prototypeScriptPath": "C://component//lib//recipientaddress.prototype.js",
                         "children": [
                             {
                                 "typeName": "recipientHost",
                                 "variableName": "recipientHost",
-                                "prototypePath": "",
+                                "scriptPath": "",
+                                "prototypeScriptPath": "",
                                 "children": []
                             },
                             {
                                 "typeName": "recipientPort",
                                 "variableName": "recipientPort",
-                                "prototypePath": "",
+                                "scriptPath": "",
+                                "prototypeScriptPath": "",
                                 "children": []
                             }
                         ]
@@ -405,30 +469,35 @@
                     {
                         "typeName": "metadata",
                         "variableName": "metadata",
-                        "prototypePath": "",
+                        "scriptPath": "",
+                        "prototypeScriptPath": "",
                         "children": []
                     },
                     {
                         "typeName": "token",
                         "variableName": "token",
-                        "prototypePath": "",
+                        "scriptPath": "",
+                        "prototypeScriptPath": "",
                         "children": []
                     },
                     {
                         "typeName": "SenderAddress",
                         "variableName": "senderAddress",
-                        "prototypePath": "C://component//lib//senderaddress.prototype.js",
+                        "scriptPath": "C://component//lib//senderaddress.js",
+                        "prototypeScriptPath": "C://component//lib//senderaddress.prototype.js",
                         "children": [
                             {
                                 "typeName": "senderHost",
                                 "variableName": "senderHost",
-                                "prototypePath": "",
+                                "scriptPath": "",
+                                "prototypeScriptPath": "",
                                 "children": []
                             },
                             {
                                 "typeName": "senderPort",
                                 "variableName": "senderPort",
-                                "prototypePath": "",
+                                "scriptPath": "",
+                                "prototypeScriptPath": "",
                                 "children": []
                             }
                         ]
@@ -440,18 +509,21 @@
     "MessageContentMetadata": {
         "typeName": "MessageContentMetadata",
         "variableName": "messageContentMetadata",
-        "prototypePath": "C://component//lib//messagecontentmetadata.prototype.js",
+        "scriptPath": "C://component//lib//messagecontentmetadata.js",
+        "prototypeScriptPath": "C://component//lib//messagecontentmetadata.prototype.js",
         "children": [
             {
                 "typeName": "factoryContainerBindingName",
                 "variableName": "factoryContainerBindingName",
-                "prototypePath": "",
+                "scriptPath": "",
+                "prototypeScriptPath": "",
                 "children": []
             },
             {
                 "typeName": "data",
                 "variableName": "data",
-                "prototypePath": "",
+                "scriptPath": "",
+                "prototypeScriptPath": "",
                 "children": []
             }
         ]
@@ -459,29 +531,34 @@
     "MessageConverter": {
         "typeName": "MessageConverter",
         "variableName": "messageConverter",
-        "prototypePath": "C://component//lib//messageconverter.prototype.js",
+        "scriptPath": "C://component//lib//messageconverter.js",
+        "prototypeScriptPath": "C://component//lib//messageconverter.prototype.js",
         "children": []
     },
     "MessageMetadata": {
         "typeName": "MessageMetadata",
         "variableName": "messageMetadata",
-        "prototypePath": "C://component//lib//messagemetadata.prototype.js",
+        "scriptPath": "C://component//lib//messagemetadata.js",
+        "prototypeScriptPath": "C://component//lib//messagemetadata.prototype.js",
         "children": [
             {
                 "typeName": "RecipientAddress",
                 "variableName": "recipientAddress",
-                "prototypePath": "C://component//lib//recipientaddress.prototype.js",
+                "scriptPath": "C://component//lib//recipientaddress.js",
+                "prototypeScriptPath": "C://component//lib//recipientaddress.prototype.js",
                 "children": [
                     {
                         "typeName": "recipientHost",
                         "variableName": "recipientHost",
-                        "prototypePath": "",
+                        "scriptPath": "",
+                        "prototypeScriptPath": "",
                         "children": []
                     },
                     {
                         "typeName": "recipientPort",
                         "variableName": "recipientPort",
-                        "prototypePath": "",
+                        "scriptPath": "",
+                        "prototypeScriptPath": "",
                         "children": []
                     }
                 ]
@@ -489,30 +566,35 @@
             {
                 "typeName": "metadata",
                 "variableName": "metadata",
-                "prototypePath": "",
+                "scriptPath": "",
+                "prototypeScriptPath": "",
                 "children": []
             },
             {
                 "typeName": "token",
                 "variableName": "token",
-                "prototypePath": "",
+                "scriptPath": "",
+                "prototypeScriptPath": "",
                 "children": []
             },
             {
                 "typeName": "SenderAddress",
                 "variableName": "senderAddress",
-                "prototypePath": "C://component//lib//senderaddress.prototype.js",
+                "scriptPath": "C://component//lib//senderaddress.js",
+                "prototypeScriptPath": "C://component//lib//senderaddress.prototype.js",
                 "children": [
                     {
                         "typeName": "senderHost",
                         "variableName": "senderHost",
-                        "prototypePath": "",
+                        "scriptPath": "",
+                        "prototypeScriptPath": "",
                         "children": []
                     },
                     {
                         "typeName": "senderPort",
                         "variableName": "senderPort",
-                        "prototypePath": "",
+                        "scriptPath": "",
+                        "prototypeScriptPath": "",
                         "children": []
                     }
                 ]
@@ -522,12 +604,14 @@
     "MessageQueue": {
         "typeName": "MessageQueue",
         "variableName": "messageQueue",
-        "prototypePath": "C://component//lib//messagequeue.prototype.js",
+        "scriptPath": "C://component//lib//messagequeue.js",
+        "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
         "children": [
             {
                 "typeName": "Logger",
                 "variableName": "logger",
-                "prototypePath": "C://component//lib//logger.prototype.js",
+                "scriptPath": "C://component//lib//logger.js",
+                "prototypeScriptPath": "C://component//lib//logger.prototype.js",
                 "children": []
             }
         ]
@@ -535,12 +619,14 @@
     "MessageStatus": {
         "typeName": "MessageStatus",
         "variableName": "messageStatus",
-        "prototypePath": "C://component//lib//messagestatus.prototype.js",
+        "scriptPath": "C://component//lib//messagestatus.js",
+        "prototypeScriptPath": "C://component//lib//messagestatus.prototype.js",
         "children": [
             {
                 "typeName": "messageStatusCode",
                 "variableName": "messageStatusCode",
-                "prototypePath": "",
+                "scriptPath": "",
+                "prototypeScriptPath": "",
                 "children": []
             }
         ]
@@ -548,24 +634,28 @@
     "MessageStore": {
         "typeName": "MessageStore",
         "variableName": "messageStore",
-        "prototypePath": "C://component//lib//messagestore.prototype.js",
+        "scriptPath": "C://component//lib//messagestore.js",
+        "prototypeScriptPath": "C://component//lib//messagestore.prototype.js",
         "children": []
     },
     "RecipientAddress": {
         "typeName": "RecipientAddress",
         "variableName": "recipientAddress",
-        "prototypePath": "C://component//lib//recipientaddress.prototype.js",
+        "scriptPath": "C://component//lib//recipientaddress.js",
+        "prototypeScriptPath": "C://component//lib//recipientaddress.prototype.js",
         "children": [
             {
                 "typeName": "recipientHost",
                 "variableName": "recipientHost",
-                "prototypePath": "",
+                "scriptPath": "",
+                "prototypeScriptPath": "",
                 "children": []
             },
             {
                 "typeName": "recipientPort",
                 "variableName": "recipientPort",
-                "prototypePath": "",
+                "scriptPath": "",
+                "prototypeScriptPath": "",
                 "children": []
             }
         ]
@@ -573,18 +663,21 @@
     "SenderAddress": {
         "typeName": "SenderAddress",
         "variableName": "senderAddress",
-        "prototypePath": "C://component//lib//senderaddress.prototype.js",
+        "scriptPath": "C://component//lib//senderaddress.js",
+        "prototypeScriptPath": "C://component//lib//senderaddress.prototype.js",
         "children": [
             {
                 "typeName": "senderHost",
                 "variableName": "senderHost",
-                "prototypePath": "",
+                "scriptPath": "",
+                "prototypeScriptPath": "",
                 "children": []
             },
             {
                 "typeName": "senderPort",
                 "variableName": "senderPort",
-                "prototypePath": "",
+                "scriptPath": "",
+                "prototypeScriptPath": "",
                 "children": []
             }
         ]
@@ -592,24 +685,28 @@
     "ServerMessageBus": {
         "typeName": "ServerMessageBus",
         "variableName": "serverMessageBus",
-        "prototypePath": "C://component//lib//servermessagebus.prototype.js",
+        "scriptPath": "C://component//lib//servermessagebus.js",
+        "prototypeScriptPath": "C://component//lib//servermessagebus.prototype.js",
         "children": [
             {
                 "typeName": "MessageConverter",
                 "variableName": "messageConverter",
-                "prototypePath": "C://component//lib//messageconverter.prototype.js",
+                "scriptPath": "C://component//lib//messageconverter.js",
+                "prototypeScriptPath": "C://component//lib//messageconverter.prototype.js",
                 "children": []
             },
             {
                 "typeName": "serverResponseMessageBus",
                 "variableName": "serverResponseMessageBus",
-                "prototypePath": "",
+                "scriptPath": "",
+                "prototypeScriptPath": "",
                 "children": []
             },
             {
                 "typeName": "serverRequestMessageBus",
                 "variableName": "serverRequestMessageBus",
-                "prototypePath": "",
+                "scriptPath": "",
+                "prototypeScriptPath": "",
                 "children": []
             }
         ]
@@ -617,12 +714,14 @@
     "UserSecurity": {
         "typeName": "UserSecurity",
         "variableName": "userSecurity",
-        "prototypePath": "C://component//lib//usersecurity.prototype.js",
+        "scriptPath": "C://component//lib//usersecurity.js",
+        "prototypeScriptPath": "C://component//lib//usersecurity.prototype.js",
         "children": [
             {
                 "typeName": "userId",
                 "variableName": "userId",
-                "prototypePath": "",
+                "scriptPath": "",
+                "prototypeScriptPath": "",
                 "children": []
             }
         ]
@@ -630,12 +729,14 @@
     "UserSessions": {
         "typeName": "UserSessions",
         "variableName": "userSessions",
-        "prototypePath": "C://component//lib//usersessions.prototype.js",
+        "scriptPath": "C://component//lib//usersessions.js",
+        "prototypeScriptPath": "C://component//lib//usersessions.prototype.js",
         "children": [
             {
                 "typeName": "factoryContainerBindingName",
                 "variableName": "factoryContainerBindingName",
-                "prototypePath": "",
+                "scriptPath": "",
+                "prototypeScriptPath": "",
                 "children": []
             }
         ]
@@ -643,40 +744,47 @@
     "HttpClientMessageBus": {
         "typeName": "HttpClientMessageBus",
         "variableName": "httpClientMessageBus",
-        "prototypePath": "C://component//lib//http//httpclientmessagebus.prototype.js",
+        "scriptPath": "C://component//lib//http//httpclientmessagebus.js",
+        "prototypeScriptPath": "C://component//lib//http//httpclientmessagebus.prototype.js",
         "children": [
             {
                 "typeName": "timeout",
                 "variableName": "timeout",
-                "prototypePath": "",
+                "scriptPath": "",
+                "prototypeScriptPath": "",
                 "children": []
             },
             {
                 "typeName": "factoryContainerBindingName",
                 "variableName": "factoryContainerBindingName",
-                "prototypePath": "",
+                "scriptPath": "",
+                "prototypeScriptPath": "",
                 "children": []
             },
             {
                 "typeName": "HttpClientRequestMessageQueueBinding",
                 "variableName": "httpClientRequestMessageQueueBinding",
-                "prototypePath": "C://component//lib//http//httpclientrequestmessagequeuebinding.prototype.js",
+                "scriptPath": "C://component//lib//http//httpclientrequestmessagequeuebinding.js",
+                "prototypeScriptPath": "C://component//lib//http//httpclientrequestmessagequeuebinding.prototype.js",
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
                         "variableName": "factoryContainerBindingName",
-                        "prototypePath": "",
+                        "scriptPath": "",
+                        "prototypeScriptPath": "",
                         "children": []
                     },
                     {
                         "typeName": "MessageQueue",
                         "variableName": "messageQueue",
-                        "prototypePath": "C://component//lib//messagequeue.prototype.js",
+                        "scriptPath": "C://component//lib//messagequeue.js",
+                        "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
                         "children": [
                             {
                                 "typeName": "Logger",
                                 "variableName": "logger",
-                                "prototypePath": "C://component//lib//logger.prototype.js",
+                                "scriptPath": "C://component//lib//logger.js",
+                                "prototypeScriptPath": "C://component//lib//logger.prototype.js",
                                 "children": []
                             }
                         ]
@@ -686,23 +794,27 @@
             {
                 "typeName": "HttpClientResponseMessageQueueBinding",
                 "variableName": "httpClientResponseMessageQueueBinding",
-                "prototypePath": "C://component//lib//http//httpclientresponsemessagequeuebinding.prototype.js",
+                "scriptPath": "C://component//lib//http//httpclientresponsemessagequeuebinding.js",
+                "prototypeScriptPath": "C://component//lib//http//httpclientresponsemessagequeuebinding.prototype.js",
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
                         "variableName": "factoryContainerBindingName",
-                        "prototypePath": "",
+                        "scriptPath": "",
+                        "prototypeScriptPath": "",
                         "children": []
                     },
                     {
                         "typeName": "MessageQueue",
                         "variableName": "messageQueue",
-                        "prototypePath": "C://component//lib//messagequeue.prototype.js",
+                        "scriptPath": "C://component//lib//messagequeue.js",
+                        "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
                         "children": [
                             {
                                 "typeName": "Logger",
                                 "variableName": "logger",
-                                "prototypePath": "C://component//lib//logger.prototype.js",
+                                "scriptPath": "C://component//lib//logger.js",
+                                "prototypeScriptPath": "C://component//lib//logger.prototype.js",
                                 "children": []
                             }
                         ]
@@ -712,23 +824,27 @@
             {
                 "typeName": "HttpClientStartMessageQueueBinding",
                 "variableName": "httpClientStartMessageQueueBinding",
-                "prototypePath": "C://component//lib//http//httpclientstartmessagequeuebinding.prototype.js",
+                "scriptPath": "C://component//lib//http//httpclientstartmessagequeuebinding.js",
+                "prototypeScriptPath": "C://component//lib//http//httpclientstartmessagequeuebinding.prototype.js",
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
                         "variableName": "factoryContainerBindingName",
-                        "prototypePath": "",
+                        "scriptPath": "",
+                        "prototypeScriptPath": "",
                         "children": []
                     },
                     {
                         "typeName": "MessageQueue",
                         "variableName": "messageQueue",
-                        "prototypePath": "C://component//lib//messagequeue.prototype.js",
+                        "scriptPath": "C://component//lib//messagequeue.js",
+                        "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
                         "children": [
                             {
                                 "typeName": "Logger",
                                 "variableName": "logger",
-                                "prototypePath": "C://component//lib//logger.prototype.js",
+                                "scriptPath": "C://component//lib//logger.js",
+                                "prototypeScriptPath": "C://component//lib//logger.prototype.js",
                                 "children": []
                             }
                         ]
@@ -738,23 +854,27 @@
             {
                 "typeName": "HttpClientStartedMessageQueueBinding",
                 "variableName": "httpClientStartedMessageQueueBinding",
-                "prototypePath": "C://component//lib//http//httpclientstartedmessagequeuebinding.prototype.js",
+                "scriptPath": "C://component//lib//http//httpclientstartedmessagequeuebinding.js",
+                "prototypeScriptPath": "C://component//lib//http//httpclientstartedmessagequeuebinding.prototype.js",
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
                         "variableName": "factoryContainerBindingName",
-                        "prototypePath": "",
+                        "scriptPath": "",
+                        "prototypeScriptPath": "",
                         "children": []
                     },
                     {
                         "typeName": "MessageQueue",
                         "variableName": "messageQueue",
-                        "prototypePath": "C://component//lib//messagequeue.prototype.js",
+                        "scriptPath": "C://component//lib//messagequeue.js",
+                        "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
                         "children": [
                             {
                                 "typeName": "Logger",
                                 "variableName": "logger",
-                                "prototypePath": "C://component//lib//logger.prototype.js",
+                                "scriptPath": "C://component//lib//logger.js",
+                                "prototypeScriptPath": "C://component//lib//logger.prototype.js",
                                 "children": []
                             }
                         ]
@@ -764,23 +884,27 @@
             {
                 "typeName": "HttpClientStopMessageQueueBinding",
                 "variableName": "httpClientStopMessageQueueBinding",
-                "prototypePath": "C://component//lib//http//httpclientstopmessagequeuebinding.prototype.js",
+                "scriptPath": "C://component//lib//http//httpclientstopmessagequeuebinding.js",
+                "prototypeScriptPath": "C://component//lib//http//httpclientstopmessagequeuebinding.prototype.js",
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
                         "variableName": "factoryContainerBindingName",
-                        "prototypePath": "",
+                        "scriptPath": "",
+                        "prototypeScriptPath": "",
                         "children": []
                     },
                     {
                         "typeName": "MessageQueue",
                         "variableName": "messageQueue",
-                        "prototypePath": "C://component//lib//messagequeue.prototype.js",
+                        "scriptPath": "C://component//lib//messagequeue.js",
+                        "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
                         "children": [
                             {
                                 "typeName": "Logger",
                                 "variableName": "logger",
-                                "prototypePath": "C://component//lib//logger.prototype.js",
+                                "scriptPath": "C://component//lib//logger.js",
+                                "prototypeScriptPath": "C://component//lib//logger.prototype.js",
                                 "children": []
                             }
                         ]
@@ -792,28 +916,33 @@
     "HttpClientMessageBusManager": {
         "typeName": "HttpClientMessageBusManager",
         "variableName": "httpClientMessageBusManager",
-        "prototypePath": "C://component//lib//http//httpclientmessagebusmanager.prototype.js",
+        "scriptPath": "C://component//lib//http//httpclientmessagebusmanager.js",
+        "prototypeScriptPath": "C://component//lib//http//httpclientmessagebusmanager.prototype.js",
         "children": [
             {
                 "typeName": "HttpClientStopMessageQueueBinding",
                 "variableName": "httpClientStopMessageQueueBinding",
-                "prototypePath": "C://component//lib//http//httpclientstopmessagequeuebinding.prototype.js",
+                "scriptPath": "C://component//lib//http//httpclientstopmessagequeuebinding.js",
+                "prototypeScriptPath": "C://component//lib//http//httpclientstopmessagequeuebinding.prototype.js",
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
                         "variableName": "factoryContainerBindingName",
-                        "prototypePath": "",
+                        "scriptPath": "",
+                        "prototypeScriptPath": "",
                         "children": []
                     },
                     {
                         "typeName": "MessageQueue",
                         "variableName": "messageQueue",
-                        "prototypePath": "C://component//lib//messagequeue.prototype.js",
+                        "scriptPath": "C://component//lib//messagequeue.js",
+                        "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
                         "children": [
                             {
                                 "typeName": "Logger",
                                 "variableName": "logger",
-                                "prototypePath": "C://component//lib//logger.prototype.js",
+                                "scriptPath": "C://component//lib//logger.js",
+                                "prototypeScriptPath": "C://component//lib//logger.prototype.js",
                                 "children": []
                             }
                         ]
@@ -823,29 +952,34 @@
             {
                 "typeName": "factoryContainerBindingName",
                 "variableName": "factoryContainerBindingName",
-                "prototypePath": "",
+                "scriptPath": "",
+                "prototypeScriptPath": "",
                 "children": []
             },
             {
                 "typeName": "HttpClientStartMessageQueueBinding",
                 "variableName": "httpClientStartMessageQueueBinding",
-                "prototypePath": "C://component//lib//http//httpclientstartmessagequeuebinding.prototype.js",
+                "scriptPath": "C://component//lib//http//httpclientstartmessagequeuebinding.js",
+                "prototypeScriptPath": "C://component//lib//http//httpclientstartmessagequeuebinding.prototype.js",
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
                         "variableName": "factoryContainerBindingName",
-                        "prototypePath": "",
+                        "scriptPath": "",
+                        "prototypeScriptPath": "",
                         "children": []
                     },
                     {
                         "typeName": "MessageQueue",
                         "variableName": "messageQueue",
-                        "prototypePath": "C://component//lib//messagequeue.prototype.js",
+                        "scriptPath": "C://component//lib//messagequeue.js",
+                        "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
                         "children": [
                             {
                                 "typeName": "Logger",
                                 "variableName": "logger",
-                                "prototypePath": "C://component//lib//logger.prototype.js",
+                                "scriptPath": "C://component//lib//logger.js",
+                                "prototypeScriptPath": "C://component//lib//logger.prototype.js",
                                 "children": []
                             }
                         ]
@@ -855,23 +989,27 @@
             {
                 "typeName": "HttpClientStartedMessageQueueBinding",
                 "variableName": "httpClientStartedMessageQueueBinding",
-                "prototypePath": "C://component//lib//http//httpclientstartedmessagequeuebinding.prototype.js",
+                "scriptPath": "C://component//lib//http//httpclientstartedmessagequeuebinding.js",
+                "prototypeScriptPath": "C://component//lib//http//httpclientstartedmessagequeuebinding.prototype.js",
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
                         "variableName": "factoryContainerBindingName",
-                        "prototypePath": "",
+                        "scriptPath": "",
+                        "prototypeScriptPath": "",
                         "children": []
                     },
                     {
                         "typeName": "MessageQueue",
                         "variableName": "messageQueue",
-                        "prototypePath": "C://component//lib//messagequeue.prototype.js",
+                        "scriptPath": "C://component//lib//messagequeue.js",
+                        "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
                         "children": [
                             {
                                 "typeName": "Logger",
                                 "variableName": "logger",
-                                "prototypePath": "C://component//lib//logger.prototype.js",
+                                "scriptPath": "C://component//lib//logger.js",
+                                "prototypeScriptPath": "C://component//lib//logger.prototype.js",
                                 "children": []
                             }
                         ]
@@ -883,28 +1021,33 @@
     "HttpClientRequestMessageBus": {
         "typeName": "HttpClientRequestMessageBus",
         "variableName": "httpClientRequestMessageBus",
-        "prototypePath": "C://component//lib//http//httpclientrequestmessagebus.prototype.js",
+        "scriptPath": "C://component//lib//http//httpclientrequestmessagebus.js",
+        "prototypeScriptPath": "C://component//lib//http//httpclientrequestmessagebus.prototype.js",
         "children": [
             {
                 "typeName": "HttpClientRequestMessageQueueBinding",
                 "variableName": "httpClientRequestMessageQueueBinding",
-                "prototypePath": "C://component//lib//http//httpclientrequestmessagequeuebinding.prototype.js",
+                "scriptPath": "C://component//lib//http//httpclientrequestmessagequeuebinding.js",
+                "prototypeScriptPath": "C://component//lib//http//httpclientrequestmessagequeuebinding.prototype.js",
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
                         "variableName": "factoryContainerBindingName",
-                        "prototypePath": "",
+                        "scriptPath": "",
+                        "prototypeScriptPath": "",
                         "children": []
                     },
                     {
                         "typeName": "MessageQueue",
                         "variableName": "messageQueue",
-                        "prototypePath": "C://component//lib//messagequeue.prototype.js",
+                        "scriptPath": "C://component//lib//messagequeue.js",
+                        "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
                         "children": [
                             {
                                 "typeName": "Logger",
                                 "variableName": "logger",
-                                "prototypePath": "C://component//lib//logger.prototype.js",
+                                "scriptPath": "C://component//lib//logger.js",
+                                "prototypeScriptPath": "C://component//lib//logger.prototype.js",
                                 "children": []
                             }
                         ]
@@ -916,23 +1059,27 @@
     "HttpClientRequestMessageQueueBinding": {
         "typeName": "HttpClientRequestMessageQueueBinding",
         "variableName": "httpClientRequestMessageQueueBinding",
-        "prototypePath": "C://component//lib//http//httpclientrequestmessagequeuebinding.prototype.js",
+        "scriptPath": "C://component//lib//http//httpclientrequestmessagequeuebinding.js",
+        "prototypeScriptPath": "C://component//lib//http//httpclientrequestmessagequeuebinding.prototype.js",
         "children": [
             {
                 "typeName": "factoryContainerBindingName",
                 "variableName": "factoryContainerBindingName",
-                "prototypePath": "",
+                "scriptPath": "",
+                "prototypeScriptPath": "",
                 "children": []
             },
             {
                 "typeName": "MessageQueue",
                 "variableName": "messageQueue",
-                "prototypePath": "C://component//lib//messagequeue.prototype.js",
+                "scriptPath": "C://component//lib//messagequeue.js",
+                "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
                 "children": [
                     {
                         "typeName": "Logger",
                         "variableName": "logger",
-                        "prototypePath": "C://component//lib//logger.prototype.js",
+                        "scriptPath": "C://component//lib//logger.js",
+                        "prototypeScriptPath": "C://component//lib//logger.prototype.js",
                         "children": []
                     }
                 ]
@@ -942,28 +1089,33 @@
     "HttpClientResponseMessageBus": {
         "typeName": "HttpClientResponseMessageBus",
         "variableName": "httpClientResponseMessageBus",
-        "prototypePath": "C://component//lib//http//httpclientresponsemessagebus.prototype.js",
+        "scriptPath": "C://component//lib//http//httpclientresponsemessagebus.js",
+        "prototypeScriptPath": "C://component//lib//http//httpclientresponsemessagebus.prototype.js",
         "children": [
             {
                 "typeName": "HttpClientResponseMessageQueueBinding",
                 "variableName": "httpClientResponseMessageQueueBinding",
-                "prototypePath": "C://component//lib//http//httpclientresponsemessagequeuebinding.prototype.js",
+                "scriptPath": "C://component//lib//http//httpclientresponsemessagequeuebinding.js",
+                "prototypeScriptPath": "C://component//lib//http//httpclientresponsemessagequeuebinding.prototype.js",
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
                         "variableName": "factoryContainerBindingName",
-                        "prototypePath": "",
+                        "scriptPath": "",
+                        "prototypeScriptPath": "",
                         "children": []
                     },
                     {
                         "typeName": "MessageQueue",
                         "variableName": "messageQueue",
-                        "prototypePath": "C://component//lib//messagequeue.prototype.js",
+                        "scriptPath": "C://component//lib//messagequeue.js",
+                        "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
                         "children": [
                             {
                                 "typeName": "Logger",
                                 "variableName": "logger",
-                                "prototypePath": "C://component//lib//logger.prototype.js",
+                                "scriptPath": "C://component//lib//logger.js",
+                                "prototypeScriptPath": "C://component//lib//logger.prototype.js",
                                 "children": []
                             }
                         ]
@@ -975,23 +1127,27 @@
     "HttpClientResponseMessageQueueBinding": {
         "typeName": "HttpClientResponseMessageQueueBinding",
         "variableName": "httpClientResponseMessageQueueBinding",
-        "prototypePath": "C://component//lib//http//httpclientresponsemessagequeuebinding.prototype.js",
+        "scriptPath": "C://component//lib//http//httpclientresponsemessagequeuebinding.js",
+        "prototypeScriptPath": "C://component//lib//http//httpclientresponsemessagequeuebinding.prototype.js",
         "children": [
             {
                 "typeName": "factoryContainerBindingName",
                 "variableName": "factoryContainerBindingName",
-                "prototypePath": "",
+                "scriptPath": "",
+                "prototypeScriptPath": "",
                 "children": []
             },
             {
                 "typeName": "MessageQueue",
                 "variableName": "messageQueue",
-                "prototypePath": "C://component//lib//messagequeue.prototype.js",
+                "scriptPath": "C://component//lib//messagequeue.js",
+                "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
                 "children": [
                     {
                         "typeName": "Logger",
                         "variableName": "logger",
-                        "prototypePath": "C://component//lib//logger.prototype.js",
+                        "scriptPath": "C://component//lib//logger.js",
+                        "prototypeScriptPath": "C://component//lib//logger.prototype.js",
                         "children": []
                     }
                 ]
@@ -1001,23 +1157,27 @@
     "HttpClientStartedMessageQueueBinding": {
         "typeName": "HttpClientStartedMessageQueueBinding",
         "variableName": "httpClientStartedMessageQueueBinding",
-        "prototypePath": "C://component//lib//http//httpclientstartedmessagequeuebinding.prototype.js",
+        "scriptPath": "C://component//lib//http//httpclientstartedmessagequeuebinding.js",
+        "prototypeScriptPath": "C://component//lib//http//httpclientstartedmessagequeuebinding.prototype.js",
         "children": [
             {
                 "typeName": "factoryContainerBindingName",
                 "variableName": "factoryContainerBindingName",
-                "prototypePath": "",
+                "scriptPath": "",
+                "prototypeScriptPath": "",
                 "children": []
             },
             {
                 "typeName": "MessageQueue",
                 "variableName": "messageQueue",
-                "prototypePath": "C://component//lib//messagequeue.prototype.js",
+                "scriptPath": "C://component//lib//messagequeue.js",
+                "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
                 "children": [
                     {
                         "typeName": "Logger",
                         "variableName": "logger",
-                        "prototypePath": "C://component//lib//logger.prototype.js",
+                        "scriptPath": "C://component//lib//logger.js",
+                        "prototypeScriptPath": "C://component//lib//logger.prototype.js",
                         "children": []
                     }
                 ]
@@ -1027,23 +1187,27 @@
     "HttpClientStartMessageQueueBinding": {
         "typeName": "HttpClientStartMessageQueueBinding",
         "variableName": "httpClientStartMessageQueueBinding",
-        "prototypePath": "C://component//lib//http//httpclientstartmessagequeuebinding.prototype.js",
+        "scriptPath": "C://component//lib//http//httpclientstartmessagequeuebinding.js",
+        "prototypeScriptPath": "C://component//lib//http//httpclientstartmessagequeuebinding.prototype.js",
         "children": [
             {
                 "typeName": "factoryContainerBindingName",
                 "variableName": "factoryContainerBindingName",
-                "prototypePath": "",
+                "scriptPath": "",
+                "prototypeScriptPath": "",
                 "children": []
             },
             {
                 "typeName": "MessageQueue",
                 "variableName": "messageQueue",
-                "prototypePath": "C://component//lib//messagequeue.prototype.js",
+                "scriptPath": "C://component//lib//messagequeue.js",
+                "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
                 "children": [
                     {
                         "typeName": "Logger",
                         "variableName": "logger",
-                        "prototypePath": "C://component//lib//logger.prototype.js",
+                        "scriptPath": "C://component//lib//logger.js",
+                        "prototypeScriptPath": "C://component//lib//logger.prototype.js",
                         "children": []
                     }
                 ]
@@ -1053,23 +1217,27 @@
     "HttpClientStopMessageQueueBinding": {
         "typeName": "HttpClientStopMessageQueueBinding",
         "variableName": "httpClientStopMessageQueueBinding",
-        "prototypePath": "C://component//lib//http//httpclientstopmessagequeuebinding.prototype.js",
+        "scriptPath": "C://component//lib//http//httpclientstopmessagequeuebinding.js",
+        "prototypeScriptPath": "C://component//lib//http//httpclientstopmessagequeuebinding.prototype.js",
         "children": [
             {
                 "typeName": "factoryContainerBindingName",
                 "variableName": "factoryContainerBindingName",
-                "prototypePath": "",
+                "scriptPath": "",
+                "prototypeScriptPath": "",
                 "children": []
             },
             {
                 "typeName": "MessageQueue",
                 "variableName": "messageQueue",
-                "prototypePath": "C://component//lib//messagequeue.prototype.js",
+                "scriptPath": "C://component//lib//messagequeue.js",
+                "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
                 "children": [
                     {
                         "typeName": "Logger",
                         "variableName": "logger",
-                        "prototypePath": "C://component//lib//logger.prototype.js",
+                        "scriptPath": "C://component//lib//logger.js",
+                        "prototypeScriptPath": "C://component//lib//logger.prototype.js",
                         "children": []
                     }
                 ]
@@ -1079,23 +1247,27 @@
     "HttpClientStoppedMessageQueueBinding": {
         "typeName": "HttpClientStoppedMessageQueueBinding",
         "variableName": "httpClientStoppedMessageQueueBinding",
-        "prototypePath": "C://component//lib//http//httpclientstoppedmessagequeuebinding.prototype.js",
+        "scriptPath": "C://component//lib//http//httpclientstoppedmessagequeuebinding.js",
+        "prototypeScriptPath": "C://component//lib//http//httpclientstoppedmessagequeuebinding.prototype.js",
         "children": [
             {
                 "typeName": "factoryContainerBindingName",
                 "variableName": "factoryContainerBindingName",
-                "prototypePath": "",
+                "scriptPath": "",
+                "prototypeScriptPath": "",
                 "children": []
             },
             {
                 "typeName": "MessageQueue",
                 "variableName": "messageQueue",
-                "prototypePath": "C://component//lib//messagequeue.prototype.js",
+                "scriptPath": "C://component//lib//messagequeue.js",
+                "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
                 "children": [
                     {
                         "typeName": "Logger",
                         "variableName": "logger",
-                        "prototypePath": "C://component//lib//logger.prototype.js",
+                        "scriptPath": "C://component//lib//logger.js",
+                        "prototypeScriptPath": "C://component//lib//logger.prototype.js",
                         "children": []
                     }
                 ]
@@ -1105,22 +1277,26 @@
     "HttpRequestMessage": {
         "typeName": "HttpRequestMessage",
         "variableName": "httpRequestMessage",
-        "prototypePath": "C://component//lib//http//httprequestmessage.prototype.js",
+        "scriptPath": "C://component//lib//http//httprequestmessage.js",
+        "prototypeScriptPath": "C://component//lib//http//httprequestmessage.prototype.js",
         "children": [
             {
                 "typeName": "Message",
                 "variableName": "message",
-                "prototypePath": "C://component//lib//message.prototype.js",
+                "scriptPath": "C://component//lib//message.js",
+                "prototypeScriptPath": "C://component//lib//message.prototype.js",
                 "children": [
                     {
                         "typeName": "MessageStatus",
                         "variableName": "messageStatus",
-                        "prototypePath": "C://component//lib//messagestatus.prototype.js",
+                        "scriptPath": "C://component//lib//messagestatus.js",
+                        "prototypeScriptPath": "C://component//lib//messagestatus.prototype.js",
                         "children": [
                             {
                                 "typeName": "messageStatusCode",
                                 "variableName": "messageStatusCode",
-                                "prototypePath": "",
+                                "scriptPath": "",
+                                "prototypeScriptPath": "",
                                 "children": []
                             }
                         ]
@@ -1128,35 +1304,41 @@
                     {
                         "typeName": "factoryContainerBindingName",
                         "variableName": "factoryContainerBindingName",
-                        "prototypePath": "",
+                        "scriptPath": "",
+                        "prototypeScriptPath": "",
                         "children": []
                     },
                     {
                         "typeName": "Id",
                         "variableName": "Id",
-                        "prototypePath": "",
+                        "scriptPath": "",
+                        "prototypeScriptPath": "",
                         "children": []
                     },
                     {
                         "typeName": "MessageContent",
                         "variableName": "messageContent",
-                        "prototypePath": "C://component//lib//messagecontent.prototype.js",
+                        "scriptPath": "C://component//lib//messagecontent.js",
+                        "prototypeScriptPath": "C://component//lib//messagecontent.prototype.js",
                         "children": [
                             {
                                 "typeName": "MessageContentMetadata",
                                 "variableName": "messageContentMetadata",
-                                "prototypePath": "C://component//lib//messagecontentmetadata.prototype.js",
+                                "scriptPath": "C://component//lib//messagecontentmetadata.js",
+                                "prototypeScriptPath": "C://component//lib//messagecontentmetadata.prototype.js",
                                 "children": [
                                     {
                                         "typeName": "factoryContainerBindingName",
                                         "variableName": "factoryContainerBindingName",
-                                        "prototypePath": "",
+                                        "scriptPath": "",
+                                        "prototypeScriptPath": "",
                                         "children": []
                                     },
                                     {
                                         "typeName": "data",
                                         "variableName": "data",
-                                        "prototypePath": "",
+                                        "scriptPath": "",
+                                        "prototypeScriptPath": "",
                                         "children": []
                                     }
                                 ]
@@ -1164,18 +1346,21 @@
                             {
                                 "typeName": "data",
                                 "variableName": "data",
-                                "prototypePath": "",
+                                "scriptPath": "",
+                                "prototypeScriptPath": "",
                                 "children": []
                             },
                             {
                                 "typeName": "UserSessions",
                                 "variableName": "userSessions",
-                                "prototypePath": "C://component//lib//usersessions.prototype.js",
+                                "scriptPath": "C://component//lib//usersessions.js",
+                                "prototypeScriptPath": "C://component//lib//usersessions.prototype.js",
                                 "children": [
                                     {
                                         "typeName": "factoryContainerBindingName",
                                         "variableName": "factoryContainerBindingName",
-                                        "prototypePath": "",
+                                        "scriptPath": "",
+                                        "prototypeScriptPath": "",
                                         "children": []
                                     }
                                 ]
@@ -1183,23 +1368,27 @@
                             {
                                 "typeName": "MessageMetadata",
                                 "variableName": "messageMetadata",
-                                "prototypePath": "C://component//lib//messagemetadata.prototype.js",
+                                "scriptPath": "C://component//lib//messagemetadata.js",
+                                "prototypeScriptPath": "C://component//lib//messagemetadata.prototype.js",
                                 "children": [
                                     {
                                         "typeName": "RecipientAddress",
                                         "variableName": "recipientAddress",
-                                        "prototypePath": "C://component//lib//recipientaddress.prototype.js",
+                                        "scriptPath": "C://component//lib//recipientaddress.js",
+                                        "prototypeScriptPath": "C://component//lib//recipientaddress.prototype.js",
                                         "children": [
                                             {
                                                 "typeName": "recipientHost",
                                                 "variableName": "recipientHost",
-                                                "prototypePath": "",
+                                                "scriptPath": "",
+                                                "prototypeScriptPath": "",
                                                 "children": []
                                             },
                                             {
                                                 "typeName": "recipientPort",
                                                 "variableName": "recipientPort",
-                                                "prototypePath": "",
+                                                "scriptPath": "",
+                                                "prototypeScriptPath": "",
                                                 "children": []
                                             }
                                         ]
@@ -1207,30 +1396,35 @@
                                     {
                                         "typeName": "metadata",
                                         "variableName": "metadata",
-                                        "prototypePath": "",
+                                        "scriptPath": "",
+                                        "prototypeScriptPath": "",
                                         "children": []
                                     },
                                     {
                                         "typeName": "token",
                                         "variableName": "token",
-                                        "prototypePath": "",
+                                        "scriptPath": "",
+                                        "prototypeScriptPath": "",
                                         "children": []
                                     },
                                     {
                                         "typeName": "SenderAddress",
                                         "variableName": "senderAddress",
-                                        "prototypePath": "C://component//lib//senderaddress.prototype.js",
+                                        "scriptPath": "C://component//lib//senderaddress.js",
+                                        "prototypeScriptPath": "C://component//lib//senderaddress.prototype.js",
                                         "children": [
                                             {
                                                 "typeName": "senderHost",
                                                 "variableName": "senderHost",
-                                                "prototypePath": "",
+                                                "scriptPath": "",
+                                                "prototypeScriptPath": "",
                                                 "children": []
                                             },
                                             {
                                                 "typeName": "senderPort",
                                                 "variableName": "senderPort",
-                                                "prototypePath": "",
+                                                "scriptPath": "",
+                                                "prototypeScriptPath": "",
                                                 "children": []
                                             }
                                         ]
@@ -1242,18 +1436,21 @@
                     {
                         "typeName": "MessageContentMetadata",
                         "variableName": "messageContentMetadata",
-                        "prototypePath": "C://component//lib//messagecontentmetadata.prototype.js",
+                        "scriptPath": "C://component//lib//messagecontentmetadata.js",
+                        "prototypeScriptPath": "C://component//lib//messagecontentmetadata.prototype.js",
                         "children": [
                             {
                                 "typeName": "factoryContainerBindingName",
                                 "variableName": "factoryContainerBindingName",
-                                "prototypePath": "",
+                                "scriptPath": "",
+                                "prototypeScriptPath": "",
                                 "children": []
                             },
                             {
                                 "typeName": "data",
                                 "variableName": "data",
-                                "prototypePath": "",
+                                "scriptPath": "",
+                                "prototypeScriptPath": "",
                                 "children": []
                             }
                         ]
@@ -1261,23 +1458,27 @@
                     {
                         "typeName": "MessageMetadata",
                         "variableName": "messageMetadata",
-                        "prototypePath": "C://component//lib//messagemetadata.prototype.js",
+                        "scriptPath": "C://component//lib//messagemetadata.js",
+                        "prototypeScriptPath": "C://component//lib//messagemetadata.prototype.js",
                         "children": [
                             {
                                 "typeName": "RecipientAddress",
                                 "variableName": "recipientAddress",
-                                "prototypePath": "C://component//lib//recipientaddress.prototype.js",
+                                "scriptPath": "C://component//lib//recipientaddress.js",
+                                "prototypeScriptPath": "C://component//lib//recipientaddress.prototype.js",
                                 "children": [
                                     {
                                         "typeName": "recipientHost",
                                         "variableName": "recipientHost",
-                                        "prototypePath": "",
+                                        "scriptPath": "",
+                                        "prototypeScriptPath": "",
                                         "children": []
                                     },
                                     {
                                         "typeName": "recipientPort",
                                         "variableName": "recipientPort",
-                                        "prototypePath": "",
+                                        "scriptPath": "",
+                                        "prototypeScriptPath": "",
                                         "children": []
                                     }
                                 ]
@@ -1285,30 +1486,35 @@
                             {
                                 "typeName": "metadata",
                                 "variableName": "metadata",
-                                "prototypePath": "",
+                                "scriptPath": "",
+                                "prototypeScriptPath": "",
                                 "children": []
                             },
                             {
                                 "typeName": "token",
                                 "variableName": "token",
-                                "prototypePath": "",
+                                "scriptPath": "",
+                                "prototypeScriptPath": "",
                                 "children": []
                             },
                             {
                                 "typeName": "SenderAddress",
                                 "variableName": "senderAddress",
-                                "prototypePath": "C://component//lib//senderaddress.prototype.js",
+                                "scriptPath": "C://component//lib//senderaddress.js",
+                                "prototypeScriptPath": "C://component//lib//senderaddress.prototype.js",
                                 "children": [
                                     {
                                         "typeName": "senderHost",
                                         "variableName": "senderHost",
-                                        "prototypePath": "",
+                                        "scriptPath": "",
+                                        "prototypeScriptPath": "",
                                         "children": []
                                     },
                                     {
                                         "typeName": "senderPort",
                                         "variableName": "senderPort",
-                                        "prototypePath": "",
+                                        "scriptPath": "",
+                                        "prototypeScriptPath": "",
                                         "children": []
                                     }
                                 ]
@@ -1322,22 +1528,26 @@
     "HttpResponseMessage": {
         "typeName": "HttpResponseMessage",
         "variableName": "httpResponseMessage",
-        "prototypePath": "C://component//lib//http//httpresponsemessage.prototype.js",
+        "scriptPath": "C://component//lib//http//httpresponsemessage.js",
+        "prototypeScriptPath": "C://component//lib//http//httpresponsemessage.prototype.js",
         "children": [
             {
                 "typeName": "Message",
                 "variableName": "message",
-                "prototypePath": "C://component//lib//message.prototype.js",
+                "scriptPath": "C://component//lib//message.js",
+                "prototypeScriptPath": "C://component//lib//message.prototype.js",
                 "children": [
                     {
                         "typeName": "MessageStatus",
                         "variableName": "messageStatus",
-                        "prototypePath": "C://component//lib//messagestatus.prototype.js",
+                        "scriptPath": "C://component//lib//messagestatus.js",
+                        "prototypeScriptPath": "C://component//lib//messagestatus.prototype.js",
                         "children": [
                             {
                                 "typeName": "messageStatusCode",
                                 "variableName": "messageStatusCode",
-                                "prototypePath": "",
+                                "scriptPath": "",
+                                "prototypeScriptPath": "",
                                 "children": []
                             }
                         ]
@@ -1345,35 +1555,41 @@
                     {
                         "typeName": "factoryContainerBindingName",
                         "variableName": "factoryContainerBindingName",
-                        "prototypePath": "",
+                        "scriptPath": "",
+                        "prototypeScriptPath": "",
                         "children": []
                     },
                     {
                         "typeName": "Id",
                         "variableName": "Id",
-                        "prototypePath": "",
+                        "scriptPath": "",
+                        "prototypeScriptPath": "",
                         "children": []
                     },
                     {
                         "typeName": "MessageContent",
                         "variableName": "messageContent",
-                        "prototypePath": "C://component//lib//messagecontent.prototype.js",
+                        "scriptPath": "C://component//lib//messagecontent.js",
+                        "prototypeScriptPath": "C://component//lib//messagecontent.prototype.js",
                         "children": [
                             {
                                 "typeName": "MessageContentMetadata",
                                 "variableName": "messageContentMetadata",
-                                "prototypePath": "C://component//lib//messagecontentmetadata.prototype.js",
+                                "scriptPath": "C://component//lib//messagecontentmetadata.js",
+                                "prototypeScriptPath": "C://component//lib//messagecontentmetadata.prototype.js",
                                 "children": [
                                     {
                                         "typeName": "factoryContainerBindingName",
                                         "variableName": "factoryContainerBindingName",
-                                        "prototypePath": "",
+                                        "scriptPath": "",
+                                        "prototypeScriptPath": "",
                                         "children": []
                                     },
                                     {
                                         "typeName": "data",
                                         "variableName": "data",
-                                        "prototypePath": "",
+                                        "scriptPath": "",
+                                        "prototypeScriptPath": "",
                                         "children": []
                                     }
                                 ]
@@ -1381,18 +1597,21 @@
                             {
                                 "typeName": "data",
                                 "variableName": "data",
-                                "prototypePath": "",
+                                "scriptPath": "",
+                                "prototypeScriptPath": "",
                                 "children": []
                             },
                             {
                                 "typeName": "UserSessions",
                                 "variableName": "userSessions",
-                                "prototypePath": "C://component//lib//usersessions.prototype.js",
+                                "scriptPath": "C://component//lib//usersessions.js",
+                                "prototypeScriptPath": "C://component//lib//usersessions.prototype.js",
                                 "children": [
                                     {
                                         "typeName": "factoryContainerBindingName",
                                         "variableName": "factoryContainerBindingName",
-                                        "prototypePath": "",
+                                        "scriptPath": "",
+                                        "prototypeScriptPath": "",
                                         "children": []
                                     }
                                 ]
@@ -1400,23 +1619,27 @@
                             {
                                 "typeName": "MessageMetadata",
                                 "variableName": "messageMetadata",
-                                "prototypePath": "C://component//lib//messagemetadata.prototype.js",
+                                "scriptPath": "C://component//lib//messagemetadata.js",
+                                "prototypeScriptPath": "C://component//lib//messagemetadata.prototype.js",
                                 "children": [
                                     {
                                         "typeName": "RecipientAddress",
                                         "variableName": "recipientAddress",
-                                        "prototypePath": "C://component//lib//recipientaddress.prototype.js",
+                                        "scriptPath": "C://component//lib//recipientaddress.js",
+                                        "prototypeScriptPath": "C://component//lib//recipientaddress.prototype.js",
                                         "children": [
                                             {
                                                 "typeName": "recipientHost",
                                                 "variableName": "recipientHost",
-                                                "prototypePath": "",
+                                                "scriptPath": "",
+                                                "prototypeScriptPath": "",
                                                 "children": []
                                             },
                                             {
                                                 "typeName": "recipientPort",
                                                 "variableName": "recipientPort",
-                                                "prototypePath": "",
+                                                "scriptPath": "",
+                                                "prototypeScriptPath": "",
                                                 "children": []
                                             }
                                         ]
@@ -1424,30 +1647,35 @@
                                     {
                                         "typeName": "metadata",
                                         "variableName": "metadata",
-                                        "prototypePath": "",
+                                        "scriptPath": "",
+                                        "prototypeScriptPath": "",
                                         "children": []
                                     },
                                     {
                                         "typeName": "token",
                                         "variableName": "token",
-                                        "prototypePath": "",
+                                        "scriptPath": "",
+                                        "prototypeScriptPath": "",
                                         "children": []
                                     },
                                     {
                                         "typeName": "SenderAddress",
                                         "variableName": "senderAddress",
-                                        "prototypePath": "C://component//lib//senderaddress.prototype.js",
+                                        "scriptPath": "C://component//lib//senderaddress.js",
+                                        "prototypeScriptPath": "C://component//lib//senderaddress.prototype.js",
                                         "children": [
                                             {
                                                 "typeName": "senderHost",
                                                 "variableName": "senderHost",
-                                                "prototypePath": "",
+                                                "scriptPath": "",
+                                                "prototypeScriptPath": "",
                                                 "children": []
                                             },
                                             {
                                                 "typeName": "senderPort",
                                                 "variableName": "senderPort",
-                                                "prototypePath": "",
+                                                "scriptPath": "",
+                                                "prototypeScriptPath": "",
                                                 "children": []
                                             }
                                         ]
@@ -1459,18 +1687,21 @@
                     {
                         "typeName": "MessageContentMetadata",
                         "variableName": "messageContentMetadata",
-                        "prototypePath": "C://component//lib//messagecontentmetadata.prototype.js",
+                        "scriptPath": "C://component//lib//messagecontentmetadata.js",
+                        "prototypeScriptPath": "C://component//lib//messagecontentmetadata.prototype.js",
                         "children": [
                             {
                                 "typeName": "factoryContainerBindingName",
                                 "variableName": "factoryContainerBindingName",
-                                "prototypePath": "",
+                                "scriptPath": "",
+                                "prototypeScriptPath": "",
                                 "children": []
                             },
                             {
                                 "typeName": "data",
                                 "variableName": "data",
-                                "prototypePath": "",
+                                "scriptPath": "",
+                                "prototypeScriptPath": "",
                                 "children": []
                             }
                         ]
@@ -1478,23 +1709,27 @@
                     {
                         "typeName": "MessageMetadata",
                         "variableName": "messageMetadata",
-                        "prototypePath": "C://component//lib//messagemetadata.prototype.js",
+                        "scriptPath": "C://component//lib//messagemetadata.js",
+                        "prototypeScriptPath": "C://component//lib//messagemetadata.prototype.js",
                         "children": [
                             {
                                 "typeName": "RecipientAddress",
                                 "variableName": "recipientAddress",
-                                "prototypePath": "C://component//lib//recipientaddress.prototype.js",
+                                "scriptPath": "C://component//lib//recipientaddress.js",
+                                "prototypeScriptPath": "C://component//lib//recipientaddress.prototype.js",
                                 "children": [
                                     {
                                         "typeName": "recipientHost",
                                         "variableName": "recipientHost",
-                                        "prototypePath": "",
+                                        "scriptPath": "",
+                                        "prototypeScriptPath": "",
                                         "children": []
                                     },
                                     {
                                         "typeName": "recipientPort",
                                         "variableName": "recipientPort",
-                                        "prototypePath": "",
+                                        "scriptPath": "",
+                                        "prototypeScriptPath": "",
                                         "children": []
                                     }
                                 ]
@@ -1502,30 +1737,35 @@
                             {
                                 "typeName": "metadata",
                                 "variableName": "metadata",
-                                "prototypePath": "",
+                                "scriptPath": "",
+                                "prototypeScriptPath": "",
                                 "children": []
                             },
                             {
                                 "typeName": "token",
                                 "variableName": "token",
-                                "prototypePath": "",
+                                "scriptPath": "",
+                                "prototypeScriptPath": "",
                                 "children": []
                             },
                             {
                                 "typeName": "SenderAddress",
                                 "variableName": "senderAddress",
-                                "prototypePath": "C://component//lib//senderaddress.prototype.js",
+                                "scriptPath": "C://component//lib//senderaddress.js",
+                                "prototypeScriptPath": "C://component//lib//senderaddress.prototype.js",
                                 "children": [
                                     {
                                         "typeName": "senderHost",
                                         "variableName": "senderHost",
-                                        "prototypePath": "",
+                                        "scriptPath": "",
+                                        "prototypeScriptPath": "",
                                         "children": []
                                     },
                                     {
                                         "typeName": "senderPort",
                                         "variableName": "senderPort",
-                                        "prototypePath": "",
+                                        "scriptPath": "",
+                                        "prototypeScriptPath": "",
                                         "children": []
                                     }
                                 ]
@@ -1539,40 +1779,47 @@
     "HttpServerMessageBus": {
         "typeName": "HttpServerMessageBus",
         "variableName": "httpServerMessageBus",
-        "prototypePath": "C://component//lib//http//httpservermessagebus.prototype.js",
+        "scriptPath": "C://component//lib//http//httpservermessagebus.js",
+        "prototypeScriptPath": "C://component//lib//http//httpservermessagebus.prototype.js",
         "children": [
             {
                 "typeName": "timeout",
                 "variableName": "timeout",
-                "prototypePath": "",
+                "scriptPath": "",
+                "prototypeScriptPath": "",
                 "children": []
             },
             {
                 "typeName": "factoryContainerBindingName",
                 "variableName": "factoryContainerBindingName",
-                "prototypePath": "",
+                "scriptPath": "",
+                "prototypeScriptPath": "",
                 "children": []
             },
             {
                 "typeName": "HttpServerRequestMessageQueueBinding",
                 "variableName": "httpServerRequestMessageQueueBinding",
-                "prototypePath": "C://component//lib//http//httpserverrequestmessagequeuebinding.prototype.js",
+                "scriptPath": "C://component//lib//http//httpserverrequestmessagequeuebinding.js",
+                "prototypeScriptPath": "C://component//lib//http//httpserverrequestmessagequeuebinding.prototype.js",
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
                         "variableName": "factoryContainerBindingName",
-                        "prototypePath": "",
+                        "scriptPath": "",
+                        "prototypeScriptPath": "",
                         "children": []
                     },
                     {
                         "typeName": "MessageQueue",
                         "variableName": "messageQueue",
-                        "prototypePath": "C://component//lib//messagequeue.prototype.js",
+                        "scriptPath": "C://component//lib//messagequeue.js",
+                        "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
                         "children": [
                             {
                                 "typeName": "Logger",
                                 "variableName": "logger",
-                                "prototypePath": "C://component//lib//logger.prototype.js",
+                                "scriptPath": "C://component//lib//logger.js",
+                                "prototypeScriptPath": "C://component//lib//logger.prototype.js",
                                 "children": []
                             }
                         ]
@@ -1582,23 +1829,27 @@
             {
                 "typeName": "HttpServerResponseMessageQueueBinding",
                 "variableName": "httpServerResponseMessageQueueBinding",
-                "prototypePath": "C://component//lib//http//httpserverresponsemessagequeuebinding.prototype.js",
+                "scriptPath": "C://component//lib//http//httpserverresponsemessagequeuebinding.js",
+                "prototypeScriptPath": "C://component//lib//http//httpserverresponsemessagequeuebinding.prototype.js",
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
                         "variableName": "factoryContainerBindingName",
-                        "prototypePath": "",
+                        "scriptPath": "",
+                        "prototypeScriptPath": "",
                         "children": []
                     },
                     {
                         "typeName": "MessageQueue",
                         "variableName": "messageQueue",
-                        "prototypePath": "C://component//lib//messagequeue.prototype.js",
+                        "scriptPath": "C://component//lib//messagequeue.js",
+                        "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
                         "children": [
                             {
                                 "typeName": "Logger",
                                 "variableName": "logger",
-                                "prototypePath": "C://component//lib//logger.prototype.js",
+                                "scriptPath": "C://component//lib//logger.js",
+                                "prototypeScriptPath": "C://component//lib//logger.prototype.js",
                                 "children": []
                             }
                         ]
@@ -1608,23 +1859,27 @@
             {
                 "typeName": "HttpServerStartMessageQueueBinding",
                 "variableName": "httpServerStartMessageQueueBinding",
-                "prototypePath": "C://component//lib//http//httpserverstartmessagequeuebinding.prototype.js",
+                "scriptPath": "C://component//lib//http//httpserverstartmessagequeuebinding.js",
+                "prototypeScriptPath": "C://component//lib//http//httpserverstartmessagequeuebinding.prototype.js",
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
                         "variableName": "factoryContainerBindingName",
-                        "prototypePath": "",
+                        "scriptPath": "",
+                        "prototypeScriptPath": "",
                         "children": []
                     },
                     {
                         "typeName": "MessageQueue",
                         "variableName": "messageQueue",
-                        "prototypePath": "C://component//lib//messagequeue.prototype.js",
+                        "scriptPath": "C://component//lib//messagequeue.js",
+                        "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
                         "children": [
                             {
                                 "typeName": "Logger",
                                 "variableName": "logger",
-                                "prototypePath": "C://component//lib//logger.prototype.js",
+                                "scriptPath": "C://component//lib//logger.js",
+                                "prototypeScriptPath": "C://component//lib//logger.prototype.js",
                                 "children": []
                             }
                         ]
@@ -1634,23 +1889,27 @@
             {
                 "typeName": "HttpServerStartedMessageQueueBinding",
                 "variableName": "httpServerStartedMessageQueueBinding",
-                "prototypePath": "C://component//lib//http//httpserverstartedmessagequeuebinding.prototype.js",
+                "scriptPath": "C://component//lib//http//httpserverstartedmessagequeuebinding.js",
+                "prototypeScriptPath": "C://component//lib//http//httpserverstartedmessagequeuebinding.prototype.js",
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
                         "variableName": "factoryContainerBindingName",
-                        "prototypePath": "",
+                        "scriptPath": "",
+                        "prototypeScriptPath": "",
                         "children": []
                     },
                     {
                         "typeName": "MessageQueue",
                         "variableName": "messageQueue",
-                        "prototypePath": "C://component//lib//messagequeue.prototype.js",
+                        "scriptPath": "C://component//lib//messagequeue.js",
+                        "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
                         "children": [
                             {
                                 "typeName": "Logger",
                                 "variableName": "logger",
-                                "prototypePath": "C://component//lib//logger.prototype.js",
+                                "scriptPath": "C://component//lib//logger.js",
+                                "prototypeScriptPath": "C://component//lib//logger.prototype.js",
                                 "children": []
                             }
                         ]
@@ -1660,23 +1919,27 @@
             {
                 "typeName": "HttpServerStopMessageQueueBinding",
                 "variableName": "httpServerStopMessageQueueBinding",
-                "prototypePath": "C://component//lib//http//httpserverstopmessagequeuebinding.prototype.js",
+                "scriptPath": "C://component//lib//http//httpserverstopmessagequeuebinding.js",
+                "prototypeScriptPath": "C://component//lib//http//httpserverstopmessagequeuebinding.prototype.js",
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
                         "variableName": "factoryContainerBindingName",
-                        "prototypePath": "",
+                        "scriptPath": "",
+                        "prototypeScriptPath": "",
                         "children": []
                     },
                     {
                         "typeName": "MessageQueue",
                         "variableName": "messageQueue",
-                        "prototypePath": "C://component//lib//messagequeue.prototype.js",
+                        "scriptPath": "C://component//lib//messagequeue.js",
+                        "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
                         "children": [
                             {
                                 "typeName": "Logger",
                                 "variableName": "logger",
-                                "prototypePath": "C://component//lib//logger.prototype.js",
+                                "scriptPath": "C://component//lib//logger.js",
+                                "prototypeScriptPath": "C://component//lib//logger.prototype.js",
                                 "children": []
                             }
                         ]
@@ -1686,23 +1949,27 @@
             {
                 "typeName": "HttpServerStoppedMessageQueueBinding",
                 "variableName": "httpServerStoppedMessageQueueBinding",
-                "prototypePath": "C://component//lib//http//httpserverstoppedmessagequeuebinding.prototype.js",
+                "scriptPath": "C://component//lib//http//httpserverstoppedmessagequeuebinding.js",
+                "prototypeScriptPath": "C://component//lib//http//httpserverstoppedmessagequeuebinding.prototype.js",
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
                         "variableName": "factoryContainerBindingName",
-                        "prototypePath": "",
+                        "scriptPath": "",
+                        "prototypeScriptPath": "",
                         "children": []
                     },
                     {
                         "typeName": "MessageQueue",
                         "variableName": "messageQueue",
-                        "prototypePath": "C://component//lib//messagequeue.prototype.js",
+                        "scriptPath": "C://component//lib//messagequeue.js",
+                        "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
                         "children": [
                             {
                                 "typeName": "Logger",
                                 "variableName": "logger",
-                                "prototypePath": "C://component//lib//logger.prototype.js",
+                                "scriptPath": "C://component//lib//logger.js",
+                                "prototypeScriptPath": "C://component//lib//logger.prototype.js",
                                 "children": []
                             }
                         ]
@@ -1712,18 +1979,21 @@
             {
                 "typeName": "SenderAddress",
                 "variableName": "senderAddress",
-                "prototypePath": "C://component//lib//senderaddress.prototype.js",
+                "scriptPath": "C://component//lib//senderaddress.js",
+                "prototypeScriptPath": "C://component//lib//senderaddress.prototype.js",
                 "children": [
                     {
                         "typeName": "senderHost",
                         "variableName": "senderHost",
-                        "prototypePath": "",
+                        "scriptPath": "",
+                        "prototypeScriptPath": "",
                         "children": []
                     },
                     {
                         "typeName": "senderPort",
                         "variableName": "senderPort",
-                        "prototypePath": "",
+                        "scriptPath": "",
+                        "prototypeScriptPath": "",
                         "children": []
                     }
                 ]
@@ -1731,7 +2001,8 @@
             {
                 "typeName": "Logger",
                 "variableName": "logger",
-                "prototypePath": "C://component//lib//logger.prototype.js",
+                "scriptPath": "C://component//lib//logger.js",
+                "prototypeScriptPath": "C://component//lib//logger.prototype.js",
                 "children": []
             }
         ]
@@ -1739,28 +2010,33 @@
     "HttpServerMessageBusManager": {
         "typeName": "HttpServerMessageBusManager",
         "variableName": "httpServerMessageBusManager",
-        "prototypePath": "C://component//lib//http//httpservermessagebusmanager.prototype.js",
+        "scriptPath": "C://component//lib//http//httpservermessagebusmanager.js",
+        "prototypeScriptPath": "C://component//lib//http//httpservermessagebusmanager.prototype.js",
         "children": [
             {
                 "typeName": "HttpServerStoppedMessageQueueBinding",
                 "variableName": "httpServerStoppedMessageQueueBinding",
-                "prototypePath": "C://component//lib//http//httpserverstoppedmessagequeuebinding.prototype.js",
+                "scriptPath": "C://component//lib//http//httpserverstoppedmessagequeuebinding.js",
+                "prototypeScriptPath": "C://component//lib//http//httpserverstoppedmessagequeuebinding.prototype.js",
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
                         "variableName": "factoryContainerBindingName",
-                        "prototypePath": "",
+                        "scriptPath": "",
+                        "prototypeScriptPath": "",
                         "children": []
                     },
                     {
                         "typeName": "MessageQueue",
                         "variableName": "messageQueue",
-                        "prototypePath": "C://component//lib//messagequeue.prototype.js",
+                        "scriptPath": "C://component//lib//messagequeue.js",
+                        "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
                         "children": [
                             {
                                 "typeName": "Logger",
                                 "variableName": "logger",
-                                "prototypePath": "C://component//lib//logger.prototype.js",
+                                "scriptPath": "C://component//lib//logger.js",
+                                "prototypeScriptPath": "C://component//lib//logger.prototype.js",
                                 "children": []
                             }
                         ]
@@ -1770,29 +2046,34 @@
             {
                 "typeName": "factoryContainerBindingName",
                 "variableName": "factoryContainerBindingName",
-                "prototypePath": "",
+                "scriptPath": "",
+                "prototypeScriptPath": "",
                 "children": []
             },
             {
                 "typeName": "HttpServerRequestMessageQueueBinding",
                 "variableName": "httpServerRequestMessageQueueBinding",
-                "prototypePath": "C://component//lib//http//httpserverrequestmessagequeuebinding.prototype.js",
+                "scriptPath": "C://component//lib//http//httpserverrequestmessagequeuebinding.js",
+                "prototypeScriptPath": "C://component//lib//http//httpserverrequestmessagequeuebinding.prototype.js",
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
                         "variableName": "factoryContainerBindingName",
-                        "prototypePath": "",
+                        "scriptPath": "",
+                        "prototypeScriptPath": "",
                         "children": []
                     },
                     {
                         "typeName": "MessageQueue",
                         "variableName": "messageQueue",
-                        "prototypePath": "C://component//lib//messagequeue.prototype.js",
+                        "scriptPath": "C://component//lib//messagequeue.js",
+                        "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
                         "children": [
                             {
                                 "typeName": "Logger",
                                 "variableName": "logger",
-                                "prototypePath": "C://component//lib//logger.prototype.js",
+                                "scriptPath": "C://component//lib//logger.js",
+                                "prototypeScriptPath": "C://component//lib//logger.prototype.js",
                                 "children": []
                             }
                         ]
@@ -1802,23 +2083,27 @@
             {
                 "typeName": "HttpServerResponseMessageQueueBinding",
                 "variableName": "httpServerResponseMessageQueueBinding",
-                "prototypePath": "C://component//lib//http//httpserverresponsemessagequeuebinding.prototype.js",
+                "scriptPath": "C://component//lib//http//httpserverresponsemessagequeuebinding.js",
+                "prototypeScriptPath": "C://component//lib//http//httpserverresponsemessagequeuebinding.prototype.js",
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
                         "variableName": "factoryContainerBindingName",
-                        "prototypePath": "",
+                        "scriptPath": "",
+                        "prototypeScriptPath": "",
                         "children": []
                     },
                     {
                         "typeName": "MessageQueue",
                         "variableName": "messageQueue",
-                        "prototypePath": "C://component//lib//messagequeue.prototype.js",
+                        "scriptPath": "C://component//lib//messagequeue.js",
+                        "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
                         "children": [
                             {
                                 "typeName": "Logger",
                                 "variableName": "logger",
-                                "prototypePath": "C://component//lib//logger.prototype.js",
+                                "scriptPath": "C://component//lib//logger.js",
+                                "prototypeScriptPath": "C://component//lib//logger.prototype.js",
                                 "children": []
                             }
                         ]
@@ -1828,23 +2113,27 @@
             {
                 "typeName": "HttpServerStartMessageQueueBinding",
                 "variableName": "httpServerStartMessageQueueBinding",
-                "prototypePath": "C://component//lib//http//httpserverstartmessagequeuebinding.prototype.js",
+                "scriptPath": "C://component//lib//http//httpserverstartmessagequeuebinding.js",
+                "prototypeScriptPath": "C://component//lib//http//httpserverstartmessagequeuebinding.prototype.js",
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
                         "variableName": "factoryContainerBindingName",
-                        "prototypePath": "",
+                        "scriptPath": "",
+                        "prototypeScriptPath": "",
                         "children": []
                     },
                     {
                         "typeName": "MessageQueue",
                         "variableName": "messageQueue",
-                        "prototypePath": "C://component//lib//messagequeue.prototype.js",
+                        "scriptPath": "C://component//lib//messagequeue.js",
+                        "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
                         "children": [
                             {
                                 "typeName": "Logger",
                                 "variableName": "logger",
-                                "prototypePath": "C://component//lib//logger.prototype.js",
+                                "scriptPath": "C://component//lib//logger.js",
+                                "prototypeScriptPath": "C://component//lib//logger.prototype.js",
                                 "children": []
                             }
                         ]
@@ -1854,23 +2143,27 @@
             {
                 "typeName": "HttpServerStartedMessageQueueBinding",
                 "variableName": "httpServerStartedMessageQueueBinding",
-                "prototypePath": "C://component//lib//http//httpserverstartedmessagequeuebinding.prototype.js",
+                "scriptPath": "C://component//lib//http//httpserverstartedmessagequeuebinding.js",
+                "prototypeScriptPath": "C://component//lib//http//httpserverstartedmessagequeuebinding.prototype.js",
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
                         "variableName": "factoryContainerBindingName",
-                        "prototypePath": "",
+                        "scriptPath": "",
+                        "prototypeScriptPath": "",
                         "children": []
                     },
                     {
                         "typeName": "MessageQueue",
                         "variableName": "messageQueue",
-                        "prototypePath": "C://component//lib//messagequeue.prototype.js",
+                        "scriptPath": "C://component//lib//messagequeue.js",
+                        "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
                         "children": [
                             {
                                 "typeName": "Logger",
                                 "variableName": "logger",
-                                "prototypePath": "C://component//lib//logger.prototype.js",
+                                "scriptPath": "C://component//lib//logger.js",
+                                "prototypeScriptPath": "C://component//lib//logger.prototype.js",
                                 "children": []
                             }
                         ]
@@ -1880,23 +2173,27 @@
             {
                 "typeName": "HttpServerStopMessageQueueBinding",
                 "variableName": "httpServerStopMessageQueueBinding",
-                "prototypePath": "C://component//lib//http//httpserverstopmessagequeuebinding.prototype.js",
+                "scriptPath": "C://component//lib//http//httpserverstopmessagequeuebinding.js",
+                "prototypeScriptPath": "C://component//lib//http//httpserverstopmessagequeuebinding.prototype.js",
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
                         "variableName": "factoryContainerBindingName",
-                        "prototypePath": "",
+                        "scriptPath": "",
+                        "prototypeScriptPath": "",
                         "children": []
                     },
                     {
                         "typeName": "MessageQueue",
                         "variableName": "messageQueue",
-                        "prototypePath": "C://component//lib//messagequeue.prototype.js",
+                        "scriptPath": "C://component//lib//messagequeue.js",
+                        "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
                         "children": [
                             {
                                 "typeName": "Logger",
                                 "variableName": "logger",
-                                "prototypePath": "C://component//lib//logger.prototype.js",
+                                "scriptPath": "C://component//lib//logger.js",
+                                "prototypeScriptPath": "C://component//lib//logger.prototype.js",
                                 "children": []
                             }
                         ]
@@ -1908,28 +2205,33 @@
     "HttpServerRequestMessageBus": {
         "typeName": "HttpServerRequestMessageBus",
         "variableName": "httpServerRequestMessageBus",
-        "prototypePath": "C://component//lib//http//httpserverrequestmessagebus.prototype.js",
+        "scriptPath": "C://component//lib//http//httpserverrequestmessagebus.js",
+        "prototypeScriptPath": "C://component//lib//http//httpserverrequestmessagebus.prototype.js",
         "children": [
             {
                 "typeName": "HttpServerRequestMessageQueueBinding",
                 "variableName": "httpServerRequestMessageQueueBinding",
-                "prototypePath": "C://component//lib//http//httpserverrequestmessagequeuebinding.prototype.js",
+                "scriptPath": "C://component//lib//http//httpserverrequestmessagequeuebinding.js",
+                "prototypeScriptPath": "C://component//lib//http//httpserverrequestmessagequeuebinding.prototype.js",
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
                         "variableName": "factoryContainerBindingName",
-                        "prototypePath": "",
+                        "scriptPath": "",
+                        "prototypeScriptPath": "",
                         "children": []
                     },
                     {
                         "typeName": "MessageQueue",
                         "variableName": "messageQueue",
-                        "prototypePath": "C://component//lib//messagequeue.prototype.js",
+                        "scriptPath": "C://component//lib//messagequeue.js",
+                        "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
                         "children": [
                             {
                                 "typeName": "Logger",
                                 "variableName": "logger",
-                                "prototypePath": "C://component//lib//logger.prototype.js",
+                                "scriptPath": "C://component//lib//logger.js",
+                                "prototypeScriptPath": "C://component//lib//logger.prototype.js",
                                 "children": []
                             }
                         ]
@@ -1941,23 +2243,27 @@
     "HttpServerRequestMessageQueueBinding": {
         "typeName": "HttpServerRequestMessageQueueBinding",
         "variableName": "httpServerRequestMessageQueueBinding",
-        "prototypePath": "C://component//lib//http//httpserverrequestmessagequeuebinding.prototype.js",
+        "scriptPath": "C://component//lib//http//httpserverrequestmessagequeuebinding.js",
+        "prototypeScriptPath": "C://component//lib//http//httpserverrequestmessagequeuebinding.prototype.js",
         "children": [
             {
                 "typeName": "factoryContainerBindingName",
                 "variableName": "factoryContainerBindingName",
-                "prototypePath": "",
+                "scriptPath": "",
+                "prototypeScriptPath": "",
                 "children": []
             },
             {
                 "typeName": "MessageQueue",
                 "variableName": "messageQueue",
-                "prototypePath": "C://component//lib//messagequeue.prototype.js",
+                "scriptPath": "C://component//lib//messagequeue.js",
+                "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
                 "children": [
                     {
                         "typeName": "Logger",
                         "variableName": "logger",
-                        "prototypePath": "C://component//lib//logger.prototype.js",
+                        "scriptPath": "C://component//lib//logger.js",
+                        "prototypeScriptPath": "C://component//lib//logger.prototype.js",
                         "children": []
                     }
                 ]
@@ -1967,28 +2273,33 @@
     "HttpServerResponseMessageBus": {
         "typeName": "HttpServerResponseMessageBus",
         "variableName": "httpServerResponseMessageBus",
-        "prototypePath": "C://component//lib//http//httpserverresponsemessagebus.prototype.js",
+        "scriptPath": "C://component//lib//http//httpserverresponsemessagebus.js",
+        "prototypeScriptPath": "C://component//lib//http//httpserverresponsemessagebus.prototype.js",
         "children": [
             {
                 "typeName": "HttpServerResponseMessageQueueBinding",
                 "variableName": "httpServerResponseMessageQueueBinding",
-                "prototypePath": "C://component//lib//http//httpserverresponsemessagequeuebinding.prototype.js",
+                "scriptPath": "C://component//lib//http//httpserverresponsemessagequeuebinding.js",
+                "prototypeScriptPath": "C://component//lib//http//httpserverresponsemessagequeuebinding.prototype.js",
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
                         "variableName": "factoryContainerBindingName",
-                        "prototypePath": "",
+                        "scriptPath": "",
+                        "prototypeScriptPath": "",
                         "children": []
                     },
                     {
                         "typeName": "MessageQueue",
                         "variableName": "messageQueue",
-                        "prototypePath": "C://component//lib//messagequeue.prototype.js",
+                        "scriptPath": "C://component//lib//messagequeue.js",
+                        "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
                         "children": [
                             {
                                 "typeName": "Logger",
                                 "variableName": "logger",
-                                "prototypePath": "C://component//lib//logger.prototype.js",
+                                "scriptPath": "C://component//lib//logger.js",
+                                "prototypeScriptPath": "C://component//lib//logger.prototype.js",
                                 "children": []
                             }
                         ]
@@ -2000,23 +2311,27 @@
     "HttpServerResponseMessageQueueBinding": {
         "typeName": "HttpServerResponseMessageQueueBinding",
         "variableName": "httpServerResponseMessageQueueBinding",
-        "prototypePath": "C://component//lib//http//httpserverresponsemessagequeuebinding.prototype.js",
+        "scriptPath": "C://component//lib//http//httpserverresponsemessagequeuebinding.js",
+        "prototypeScriptPath": "C://component//lib//http//httpserverresponsemessagequeuebinding.prototype.js",
         "children": [
             {
                 "typeName": "factoryContainerBindingName",
                 "variableName": "factoryContainerBindingName",
-                "prototypePath": "",
+                "scriptPath": "",
+                "prototypeScriptPath": "",
                 "children": []
             },
             {
                 "typeName": "MessageQueue",
                 "variableName": "messageQueue",
-                "prototypePath": "C://component//lib//messagequeue.prototype.js",
+                "scriptPath": "C://component//lib//messagequeue.js",
+                "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
                 "children": [
                     {
                         "typeName": "Logger",
                         "variableName": "logger",
-                        "prototypePath": "C://component//lib//logger.prototype.js",
+                        "scriptPath": "C://component//lib//logger.js",
+                        "prototypeScriptPath": "C://component//lib//logger.prototype.js",
                         "children": []
                     }
                 ]
@@ -2026,23 +2341,27 @@
     "HttpServerStartedMessageQueueBinding": {
         "typeName": "HttpServerStartedMessageQueueBinding",
         "variableName": "httpServerStartedMessageQueueBinding",
-        "prototypePath": "C://component//lib//http//httpserverstartedmessagequeuebinding.prototype.js",
+        "scriptPath": "C://component//lib//http//httpserverstartedmessagequeuebinding.js",
+        "prototypeScriptPath": "C://component//lib//http//httpserverstartedmessagequeuebinding.prototype.js",
         "children": [
             {
                 "typeName": "factoryContainerBindingName",
                 "variableName": "factoryContainerBindingName",
-                "prototypePath": "",
+                "scriptPath": "",
+                "prototypeScriptPath": "",
                 "children": []
             },
             {
                 "typeName": "MessageQueue",
                 "variableName": "messageQueue",
-                "prototypePath": "C://component//lib//messagequeue.prototype.js",
+                "scriptPath": "C://component//lib//messagequeue.js",
+                "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
                 "children": [
                     {
                         "typeName": "Logger",
                         "variableName": "logger",
-                        "prototypePath": "C://component//lib//logger.prototype.js",
+                        "scriptPath": "C://component//lib//logger.js",
+                        "prototypeScriptPath": "C://component//lib//logger.prototype.js",
                         "children": []
                     }
                 ]
@@ -2052,23 +2371,27 @@
     "HttpServerStartMessageQueueBinding": {
         "typeName": "HttpServerStartMessageQueueBinding",
         "variableName": "httpServerStartMessageQueueBinding",
-        "prototypePath": "C://component//lib//http//httpserverstartmessagequeuebinding.prototype.js",
+        "scriptPath": "C://component//lib//http//httpserverstartmessagequeuebinding.js",
+        "prototypeScriptPath": "C://component//lib//http//httpserverstartmessagequeuebinding.prototype.js",
         "children": [
             {
                 "typeName": "factoryContainerBindingName",
                 "variableName": "factoryContainerBindingName",
-                "prototypePath": "",
+                "scriptPath": "",
+                "prototypeScriptPath": "",
                 "children": []
             },
             {
                 "typeName": "MessageQueue",
                 "variableName": "messageQueue",
-                "prototypePath": "C://component//lib//messagequeue.prototype.js",
+                "scriptPath": "C://component//lib//messagequeue.js",
+                "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
                 "children": [
                     {
                         "typeName": "Logger",
                         "variableName": "logger",
-                        "prototypePath": "C://component//lib//logger.prototype.js",
+                        "scriptPath": "C://component//lib//logger.js",
+                        "prototypeScriptPath": "C://component//lib//logger.prototype.js",
                         "children": []
                     }
                 ]
@@ -2078,23 +2401,27 @@
     "HttpServerStopMessageQueueBinding": {
         "typeName": "HttpServerStopMessageQueueBinding",
         "variableName": "httpServerStopMessageQueueBinding",
-        "prototypePath": "C://component//lib//http//httpserverstopmessagequeuebinding.prototype.js",
+        "scriptPath": "C://component//lib//http//httpserverstopmessagequeuebinding.js",
+        "prototypeScriptPath": "C://component//lib//http//httpserverstopmessagequeuebinding.prototype.js",
         "children": [
             {
                 "typeName": "factoryContainerBindingName",
                 "variableName": "factoryContainerBindingName",
-                "prototypePath": "",
+                "scriptPath": "",
+                "prototypeScriptPath": "",
                 "children": []
             },
             {
                 "typeName": "MessageQueue",
                 "variableName": "messageQueue",
-                "prototypePath": "C://component//lib//messagequeue.prototype.js",
+                "scriptPath": "C://component//lib//messagequeue.js",
+                "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
                 "children": [
                     {
                         "typeName": "Logger",
                         "variableName": "logger",
-                        "prototypePath": "C://component//lib//logger.prototype.js",
+                        "scriptPath": "C://component//lib//logger.js",
+                        "prototypeScriptPath": "C://component//lib//logger.prototype.js",
                         "children": []
                     }
                 ]
@@ -2104,23 +2431,27 @@
     "HttpServerStoppedMessageQueueBinding": {
         "typeName": "HttpServerStoppedMessageQueueBinding",
         "variableName": "httpServerStoppedMessageQueueBinding",
-        "prototypePath": "C://component//lib//http//httpserverstoppedmessagequeuebinding.prototype.js",
+        "scriptPath": "C://component//lib//http//httpserverstoppedmessagequeuebinding.js",
+        "prototypeScriptPath": "C://component//lib//http//httpserverstoppedmessagequeuebinding.prototype.js",
         "children": [
             {
                 "typeName": "factoryContainerBindingName",
                 "variableName": "factoryContainerBindingName",
-                "prototypePath": "",
+                "scriptPath": "",
+                "prototypeScriptPath": "",
                 "children": []
             },
             {
                 "typeName": "MessageQueue",
                 "variableName": "messageQueue",
-                "prototypePath": "C://component//lib//messagequeue.prototype.js",
+                "scriptPath": "C://component//lib//messagequeue.js",
+                "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
                 "children": [
                     {
                         "typeName": "Logger",
                         "variableName": "logger",
-                        "prototypePath": "C://component//lib//logger.prototype.js",
+                        "scriptPath": "C://component//lib//logger.js",
+                        "prototypeScriptPath": "C://component//lib//logger.prototype.js",
                         "children": []
                     }
                 ]
@@ -2130,28 +2461,33 @@
     "WebSocketClientRequestMessageBus": {
         "typeName": "WebSocketClientRequestMessageBus",
         "variableName": "webSocketClientRequestMessageBus",
-        "prototypePath": "C://component//lib//websocket//websocketclientrequestmessagebus.prototype.js",
+        "scriptPath": "C://component//lib//websocket//websocketclientrequestmessagebus.js",
+        "prototypeScriptPath": "C://component//lib//websocket//websocketclientrequestmessagebus.prototype.js",
         "children": [
             {
                 "typeName": "WebSocketClientRequestMessageQueueBinding",
                 "variableName": "websocketClientRequestMessageQueueBinding",
-                "prototypePath": "C://component//lib//websocket//websocketclientrequestmessagequeuebinding.prototype.js",
+                "scriptPath": "C://component//lib//websocket//websocketclientrequestmessagequeuebinding.js",
+                "prototypeScriptPath": "C://component//lib//websocket//websocketclientrequestmessagequeuebinding.prototype.js",
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
                         "variableName": "factoryContainerBindingName",
-                        "prototypePath": "",
+                        "scriptPath": "",
+                        "prototypeScriptPath": "",
                         "children": []
                     },
                     {
                         "typeName": "MessageQueue",
                         "variableName": "messageQueue",
-                        "prototypePath": "C://component//lib//messagequeue.prototype.js",
+                        "scriptPath": "C://component//lib//messagequeue.js",
+                        "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
                         "children": [
                             {
                                 "typeName": "Logger",
                                 "variableName": "logger",
-                                "prototypePath": "C://component//lib//logger.prototype.js",
+                                "scriptPath": "C://component//lib//logger.js",
+                                "prototypeScriptPath": "C://component//lib//logger.prototype.js",
                                 "children": []
                             }
                         ]
@@ -2163,23 +2499,27 @@
     "WebSocketClientRequestMessageQueueBinding": {
         "typeName": "WebSocketClientRequestMessageQueueBinding",
         "variableName": "websocketClientRequestMessageQueueBinding",
-        "prototypePath": "C://component//lib//websocket//websocketclientrequestmessagequeuebinding.prototype.js",
+        "scriptPath": "C://component//lib//websocket//websocketclientrequestmessagequeuebinding.js",
+        "prototypeScriptPath": "C://component//lib//websocket//websocketclientrequestmessagequeuebinding.prototype.js",
         "children": [
             {
                 "typeName": "factoryContainerBindingName",
                 "variableName": "factoryContainerBindingName",
-                "prototypePath": "",
+                "scriptPath": "",
+                "prototypeScriptPath": "",
                 "children": []
             },
             {
                 "typeName": "MessageQueue",
                 "variableName": "messageQueue",
-                "prototypePath": "C://component//lib//messagequeue.prototype.js",
+                "scriptPath": "C://component//lib//messagequeue.js",
+                "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
                 "children": [
                     {
                         "typeName": "Logger",
                         "variableName": "logger",
-                        "prototypePath": "C://component//lib//logger.prototype.js",
+                        "scriptPath": "C://component//lib//logger.js",
+                        "prototypeScriptPath": "C://component//lib//logger.prototype.js",
                         "children": []
                     }
                 ]
@@ -2189,28 +2529,33 @@
     "WebSocketClientResponseMessageBus": {
         "typeName": "WebSocketClientResponseMessageBus",
         "variableName": "webSocketClientResponseMessageBus",
-        "prototypePath": "C://component//lib//websocket//websocketclientresponsemessagebus.prototype.js",
+        "scriptPath": "C://component//lib//websocket//websocketclientresponsemessagebus.js",
+        "prototypeScriptPath": "C://component//lib//websocket//websocketclientresponsemessagebus.prototype.js",
         "children": [
             {
                 "typeName": "WebSocketClientResponseMessageQueueBinding",
                 "variableName": "websocketClientResponseMessageQueueBinding",
-                "prototypePath": "C://component//lib//websocket//websocketclientresponsemessagequeuebinding.prototype.js",
+                "scriptPath": "C://component//lib//websocket//websocketclientresponsemessagequeuebinding.js",
+                "prototypeScriptPath": "C://component//lib//websocket//websocketclientresponsemessagequeuebinding.prototype.js",
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
                         "variableName": "factoryContainerBindingName",
-                        "prototypePath": "",
+                        "scriptPath": "",
+                        "prototypeScriptPath": "",
                         "children": []
                     },
                     {
                         "typeName": "MessageQueue",
                         "variableName": "messageQueue",
-                        "prototypePath": "C://component//lib//messagequeue.prototype.js",
+                        "scriptPath": "C://component//lib//messagequeue.js",
+                        "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
                         "children": [
                             {
                                 "typeName": "Logger",
                                 "variableName": "logger",
-                                "prototypePath": "C://component//lib//logger.prototype.js",
+                                "scriptPath": "C://component//lib//logger.js",
+                                "prototypeScriptPath": "C://component//lib//logger.prototype.js",
                                 "children": []
                             }
                         ]
@@ -2222,23 +2567,27 @@
     "WebSocketClientResponseMessageQueueBinding": {
         "typeName": "WebSocketClientResponseMessageQueueBinding",
         "variableName": "websocketClientResponseMessageQueueBinding",
-        "prototypePath": "C://component//lib//websocket//websocketclientresponsemessagequeuebinding.prototype.js",
+        "scriptPath": "C://component//lib//websocket//websocketclientresponsemessagequeuebinding.js",
+        "prototypeScriptPath": "C://component//lib//websocket//websocketclientresponsemessagequeuebinding.prototype.js",
         "children": [
             {
                 "typeName": "factoryContainerBindingName",
                 "variableName": "factoryContainerBindingName",
-                "prototypePath": "",
+                "scriptPath": "",
+                "prototypeScriptPath": "",
                 "children": []
             },
             {
                 "typeName": "MessageQueue",
                 "variableName": "messageQueue",
-                "prototypePath": "C://component//lib//messagequeue.prototype.js",
+                "scriptPath": "C://component//lib//messagequeue.js",
+                "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
                 "children": [
                     {
                         "typeName": "Logger",
                         "variableName": "logger",
-                        "prototypePath": "C://component//lib//logger.prototype.js",
+                        "scriptPath": "C://component//lib//logger.js",
+                        "prototypeScriptPath": "C://component//lib//logger.prototype.js",
                         "children": []
                     }
                 ]
@@ -2248,22 +2597,26 @@
     "WebSocketRequestMessage": {
         "typeName": "WebSocketRequestMessage",
         "variableName": "webSocketRequestMessage",
-        "prototypePath": "C://component//lib//websocket//websocketrequestmessage.prototype.js",
+        "scriptPath": "C://component//lib//websocket//websocketrequestmessage.js",
+        "prototypeScriptPath": "C://component//lib//websocket//websocketrequestmessage.prototype.js",
         "children": [
             {
                 "typeName": "Message",
                 "variableName": "message",
-                "prototypePath": "C://component//lib//message.prototype.js",
+                "scriptPath": "C://component//lib//message.js",
+                "prototypeScriptPath": "C://component//lib//message.prototype.js",
                 "children": [
                     {
                         "typeName": "MessageStatus",
                         "variableName": "messageStatus",
-                        "prototypePath": "C://component//lib//messagestatus.prototype.js",
+                        "scriptPath": "C://component//lib//messagestatus.js",
+                        "prototypeScriptPath": "C://component//lib//messagestatus.prototype.js",
                         "children": [
                             {
                                 "typeName": "messageStatusCode",
                                 "variableName": "messageStatusCode",
-                                "prototypePath": "",
+                                "scriptPath": "",
+                                "prototypeScriptPath": "",
                                 "children": []
                             }
                         ]
@@ -2271,35 +2624,41 @@
                     {
                         "typeName": "factoryContainerBindingName",
                         "variableName": "factoryContainerBindingName",
-                        "prototypePath": "",
+                        "scriptPath": "",
+                        "prototypeScriptPath": "",
                         "children": []
                     },
                     {
                         "typeName": "Id",
                         "variableName": "Id",
-                        "prototypePath": "",
+                        "scriptPath": "",
+                        "prototypeScriptPath": "",
                         "children": []
                     },
                     {
                         "typeName": "MessageContent",
                         "variableName": "messageContent",
-                        "prototypePath": "C://component//lib//messagecontent.prototype.js",
+                        "scriptPath": "C://component//lib//messagecontent.js",
+                        "prototypeScriptPath": "C://component//lib//messagecontent.prototype.js",
                         "children": [
                             {
                                 "typeName": "MessageContentMetadata",
                                 "variableName": "messageContentMetadata",
-                                "prototypePath": "C://component//lib//messagecontentmetadata.prototype.js",
+                                "scriptPath": "C://component//lib//messagecontentmetadata.js",
+                                "prototypeScriptPath": "C://component//lib//messagecontentmetadata.prototype.js",
                                 "children": [
                                     {
                                         "typeName": "factoryContainerBindingName",
                                         "variableName": "factoryContainerBindingName",
-                                        "prototypePath": "",
+                                        "scriptPath": "",
+                                        "prototypeScriptPath": "",
                                         "children": []
                                     },
                                     {
                                         "typeName": "data",
                                         "variableName": "data",
-                                        "prototypePath": "",
+                                        "scriptPath": "",
+                                        "prototypeScriptPath": "",
                                         "children": []
                                     }
                                 ]
@@ -2307,18 +2666,21 @@
                             {
                                 "typeName": "data",
                                 "variableName": "data",
-                                "prototypePath": "",
+                                "scriptPath": "",
+                                "prototypeScriptPath": "",
                                 "children": []
                             },
                             {
                                 "typeName": "UserSessions",
                                 "variableName": "userSessions",
-                                "prototypePath": "C://component//lib//usersessions.prototype.js",
+                                "scriptPath": "C://component//lib//usersessions.js",
+                                "prototypeScriptPath": "C://component//lib//usersessions.prototype.js",
                                 "children": [
                                     {
                                         "typeName": "factoryContainerBindingName",
                                         "variableName": "factoryContainerBindingName",
-                                        "prototypePath": "",
+                                        "scriptPath": "",
+                                        "prototypeScriptPath": "",
                                         "children": []
                                     }
                                 ]
@@ -2326,23 +2688,27 @@
                             {
                                 "typeName": "MessageMetadata",
                                 "variableName": "messageMetadata",
-                                "prototypePath": "C://component//lib//messagemetadata.prototype.js",
+                                "scriptPath": "C://component//lib//messagemetadata.js",
+                                "prototypeScriptPath": "C://component//lib//messagemetadata.prototype.js",
                                 "children": [
                                     {
                                         "typeName": "RecipientAddress",
                                         "variableName": "recipientAddress",
-                                        "prototypePath": "C://component//lib//recipientaddress.prototype.js",
+                                        "scriptPath": "C://component//lib//recipientaddress.js",
+                                        "prototypeScriptPath": "C://component//lib//recipientaddress.prototype.js",
                                         "children": [
                                             {
                                                 "typeName": "recipientHost",
                                                 "variableName": "recipientHost",
-                                                "prototypePath": "",
+                                                "scriptPath": "",
+                                                "prototypeScriptPath": "",
                                                 "children": []
                                             },
                                             {
                                                 "typeName": "recipientPort",
                                                 "variableName": "recipientPort",
-                                                "prototypePath": "",
+                                                "scriptPath": "",
+                                                "prototypeScriptPath": "",
                                                 "children": []
                                             }
                                         ]
@@ -2350,30 +2716,35 @@
                                     {
                                         "typeName": "metadata",
                                         "variableName": "metadata",
-                                        "prototypePath": "",
+                                        "scriptPath": "",
+                                        "prototypeScriptPath": "",
                                         "children": []
                                     },
                                     {
                                         "typeName": "token",
                                         "variableName": "token",
-                                        "prototypePath": "",
+                                        "scriptPath": "",
+                                        "prototypeScriptPath": "",
                                         "children": []
                                     },
                                     {
                                         "typeName": "SenderAddress",
                                         "variableName": "senderAddress",
-                                        "prototypePath": "C://component//lib//senderaddress.prototype.js",
+                                        "scriptPath": "C://component//lib//senderaddress.js",
+                                        "prototypeScriptPath": "C://component//lib//senderaddress.prototype.js",
                                         "children": [
                                             {
                                                 "typeName": "senderHost",
                                                 "variableName": "senderHost",
-                                                "prototypePath": "",
+                                                "scriptPath": "",
+                                                "prototypeScriptPath": "",
                                                 "children": []
                                             },
                                             {
                                                 "typeName": "senderPort",
                                                 "variableName": "senderPort",
-                                                "prototypePath": "",
+                                                "scriptPath": "",
+                                                "prototypeScriptPath": "",
                                                 "children": []
                                             }
                                         ]
@@ -2385,18 +2756,21 @@
                     {
                         "typeName": "MessageContentMetadata",
                         "variableName": "messageContentMetadata",
-                        "prototypePath": "C://component//lib//messagecontentmetadata.prototype.js",
+                        "scriptPath": "C://component//lib//messagecontentmetadata.js",
+                        "prototypeScriptPath": "C://component//lib//messagecontentmetadata.prototype.js",
                         "children": [
                             {
                                 "typeName": "factoryContainerBindingName",
                                 "variableName": "factoryContainerBindingName",
-                                "prototypePath": "",
+                                "scriptPath": "",
+                                "prototypeScriptPath": "",
                                 "children": []
                             },
                             {
                                 "typeName": "data",
                                 "variableName": "data",
-                                "prototypePath": "",
+                                "scriptPath": "",
+                                "prototypeScriptPath": "",
                                 "children": []
                             }
                         ]
@@ -2404,23 +2778,27 @@
                     {
                         "typeName": "MessageMetadata",
                         "variableName": "messageMetadata",
-                        "prototypePath": "C://component//lib//messagemetadata.prototype.js",
+                        "scriptPath": "C://component//lib//messagemetadata.js",
+                        "prototypeScriptPath": "C://component//lib//messagemetadata.prototype.js",
                         "children": [
                             {
                                 "typeName": "RecipientAddress",
                                 "variableName": "recipientAddress",
-                                "prototypePath": "C://component//lib//recipientaddress.prototype.js",
+                                "scriptPath": "C://component//lib//recipientaddress.js",
+                                "prototypeScriptPath": "C://component//lib//recipientaddress.prototype.js",
                                 "children": [
                                     {
                                         "typeName": "recipientHost",
                                         "variableName": "recipientHost",
-                                        "prototypePath": "",
+                                        "scriptPath": "",
+                                        "prototypeScriptPath": "",
                                         "children": []
                                     },
                                     {
                                         "typeName": "recipientPort",
                                         "variableName": "recipientPort",
-                                        "prototypePath": "",
+                                        "scriptPath": "",
+                                        "prototypeScriptPath": "",
                                         "children": []
                                     }
                                 ]
@@ -2428,30 +2806,35 @@
                             {
                                 "typeName": "metadata",
                                 "variableName": "metadata",
-                                "prototypePath": "",
+                                "scriptPath": "",
+                                "prototypeScriptPath": "",
                                 "children": []
                             },
                             {
                                 "typeName": "token",
                                 "variableName": "token",
-                                "prototypePath": "",
+                                "scriptPath": "",
+                                "prototypeScriptPath": "",
                                 "children": []
                             },
                             {
                                 "typeName": "SenderAddress",
                                 "variableName": "senderAddress",
-                                "prototypePath": "C://component//lib//senderaddress.prototype.js",
+                                "scriptPath": "C://component//lib//senderaddress.js",
+                                "prototypeScriptPath": "C://component//lib//senderaddress.prototype.js",
                                 "children": [
                                     {
                                         "typeName": "senderHost",
                                         "variableName": "senderHost",
-                                        "prototypePath": "",
+                                        "scriptPath": "",
+                                        "prototypeScriptPath": "",
                                         "children": []
                                     },
                                     {
                                         "typeName": "senderPort",
                                         "variableName": "senderPort",
-                                        "prototypePath": "",
+                                        "scriptPath": "",
+                                        "prototypeScriptPath": "",
                                         "children": []
                                     }
                                 ]
@@ -2465,22 +2848,26 @@
     "WebSocketResponseMessage": {
         "typeName": "WebSocketResponseMessage",
         "variableName": "webSocketResponseMessage",
-        "prototypePath": "C://component//lib//websocket//websocketresponsemessage.prototype.js",
+        "scriptPath": "C://component//lib//websocket//websocketresponsemessage.js",
+        "prototypeScriptPath": "C://component//lib//websocket//websocketresponsemessage.prototype.js",
         "children": [
             {
                 "typeName": "Message",
                 "variableName": "message",
-                "prototypePath": "C://component//lib//message.prototype.js",
+                "scriptPath": "C://component//lib//message.js",
+                "prototypeScriptPath": "C://component//lib//message.prototype.js",
                 "children": [
                     {
                         "typeName": "MessageStatus",
                         "variableName": "messageStatus",
-                        "prototypePath": "C://component//lib//messagestatus.prototype.js",
+                        "scriptPath": "C://component//lib//messagestatus.js",
+                        "prototypeScriptPath": "C://component//lib//messagestatus.prototype.js",
                         "children": [
                             {
                                 "typeName": "messageStatusCode",
                                 "variableName": "messageStatusCode",
-                                "prototypePath": "",
+                                "scriptPath": "",
+                                "prototypeScriptPath": "",
                                 "children": []
                             }
                         ]
@@ -2488,35 +2875,41 @@
                     {
                         "typeName": "factoryContainerBindingName",
                         "variableName": "factoryContainerBindingName",
-                        "prototypePath": "",
+                        "scriptPath": "",
+                        "prototypeScriptPath": "",
                         "children": []
                     },
                     {
                         "typeName": "Id",
                         "variableName": "Id",
-                        "prototypePath": "",
+                        "scriptPath": "",
+                        "prototypeScriptPath": "",
                         "children": []
                     },
                     {
                         "typeName": "MessageContent",
                         "variableName": "messageContent",
-                        "prototypePath": "C://component//lib//messagecontent.prototype.js",
+                        "scriptPath": "C://component//lib//messagecontent.js",
+                        "prototypeScriptPath": "C://component//lib//messagecontent.prototype.js",
                         "children": [
                             {
                                 "typeName": "MessageContentMetadata",
                                 "variableName": "messageContentMetadata",
-                                "prototypePath": "C://component//lib//messagecontentmetadata.prototype.js",
+                                "scriptPath": "C://component//lib//messagecontentmetadata.js",
+                                "prototypeScriptPath": "C://component//lib//messagecontentmetadata.prototype.js",
                                 "children": [
                                     {
                                         "typeName": "factoryContainerBindingName",
                                         "variableName": "factoryContainerBindingName",
-                                        "prototypePath": "",
+                                        "scriptPath": "",
+                                        "prototypeScriptPath": "",
                                         "children": []
                                     },
                                     {
                                         "typeName": "data",
                                         "variableName": "data",
-                                        "prototypePath": "",
+                                        "scriptPath": "",
+                                        "prototypeScriptPath": "",
                                         "children": []
                                     }
                                 ]
@@ -2524,18 +2917,21 @@
                             {
                                 "typeName": "data",
                                 "variableName": "data",
-                                "prototypePath": "",
+                                "scriptPath": "",
+                                "prototypeScriptPath": "",
                                 "children": []
                             },
                             {
                                 "typeName": "UserSessions",
                                 "variableName": "userSessions",
-                                "prototypePath": "C://component//lib//usersessions.prototype.js",
+                                "scriptPath": "C://component//lib//usersessions.js",
+                                "prototypeScriptPath": "C://component//lib//usersessions.prototype.js",
                                 "children": [
                                     {
                                         "typeName": "factoryContainerBindingName",
                                         "variableName": "factoryContainerBindingName",
-                                        "prototypePath": "",
+                                        "scriptPath": "",
+                                        "prototypeScriptPath": "",
                                         "children": []
                                     }
                                 ]
@@ -2543,23 +2939,27 @@
                             {
                                 "typeName": "MessageMetadata",
                                 "variableName": "messageMetadata",
-                                "prototypePath": "C://component//lib//messagemetadata.prototype.js",
+                                "scriptPath": "C://component//lib//messagemetadata.js",
+                                "prototypeScriptPath": "C://component//lib//messagemetadata.prototype.js",
                                 "children": [
                                     {
                                         "typeName": "RecipientAddress",
                                         "variableName": "recipientAddress",
-                                        "prototypePath": "C://component//lib//recipientaddress.prototype.js",
+                                        "scriptPath": "C://component//lib//recipientaddress.js",
+                                        "prototypeScriptPath": "C://component//lib//recipientaddress.prototype.js",
                                         "children": [
                                             {
                                                 "typeName": "recipientHost",
                                                 "variableName": "recipientHost",
-                                                "prototypePath": "",
+                                                "scriptPath": "",
+                                                "prototypeScriptPath": "",
                                                 "children": []
                                             },
                                             {
                                                 "typeName": "recipientPort",
                                                 "variableName": "recipientPort",
-                                                "prototypePath": "",
+                                                "scriptPath": "",
+                                                "prototypeScriptPath": "",
                                                 "children": []
                                             }
                                         ]
@@ -2567,30 +2967,35 @@
                                     {
                                         "typeName": "metadata",
                                         "variableName": "metadata",
-                                        "prototypePath": "",
+                                        "scriptPath": "",
+                                        "prototypeScriptPath": "",
                                         "children": []
                                     },
                                     {
                                         "typeName": "token",
                                         "variableName": "token",
-                                        "prototypePath": "",
+                                        "scriptPath": "",
+                                        "prototypeScriptPath": "",
                                         "children": []
                                     },
                                     {
                                         "typeName": "SenderAddress",
                                         "variableName": "senderAddress",
-                                        "prototypePath": "C://component//lib//senderaddress.prototype.js",
+                                        "scriptPath": "C://component//lib//senderaddress.js",
+                                        "prototypeScriptPath": "C://component//lib//senderaddress.prototype.js",
                                         "children": [
                                             {
                                                 "typeName": "senderHost",
                                                 "variableName": "senderHost",
-                                                "prototypePath": "",
+                                                "scriptPath": "",
+                                                "prototypeScriptPath": "",
                                                 "children": []
                                             },
                                             {
                                                 "typeName": "senderPort",
                                                 "variableName": "senderPort",
-                                                "prototypePath": "",
+                                                "scriptPath": "",
+                                                "prototypeScriptPath": "",
                                                 "children": []
                                             }
                                         ]
@@ -2602,18 +3007,21 @@
                     {
                         "typeName": "MessageContentMetadata",
                         "variableName": "messageContentMetadata",
-                        "prototypePath": "C://component//lib//messagecontentmetadata.prototype.js",
+                        "scriptPath": "C://component//lib//messagecontentmetadata.js",
+                        "prototypeScriptPath": "C://component//lib//messagecontentmetadata.prototype.js",
                         "children": [
                             {
                                 "typeName": "factoryContainerBindingName",
                                 "variableName": "factoryContainerBindingName",
-                                "prototypePath": "",
+                                "scriptPath": "",
+                                "prototypeScriptPath": "",
                                 "children": []
                             },
                             {
                                 "typeName": "data",
                                 "variableName": "data",
-                                "prototypePath": "",
+                                "scriptPath": "",
+                                "prototypeScriptPath": "",
                                 "children": []
                             }
                         ]
@@ -2621,23 +3029,27 @@
                     {
                         "typeName": "MessageMetadata",
                         "variableName": "messageMetadata",
-                        "prototypePath": "C://component//lib//messagemetadata.prototype.js",
+                        "scriptPath": "C://component//lib//messagemetadata.js",
+                        "prototypeScriptPath": "C://component//lib//messagemetadata.prototype.js",
                         "children": [
                             {
                                 "typeName": "RecipientAddress",
                                 "variableName": "recipientAddress",
-                                "prototypePath": "C://component//lib//recipientaddress.prototype.js",
+                                "scriptPath": "C://component//lib//recipientaddress.js",
+                                "prototypeScriptPath": "C://component//lib//recipientaddress.prototype.js",
                                 "children": [
                                     {
                                         "typeName": "recipientHost",
                                         "variableName": "recipientHost",
-                                        "prototypePath": "",
+                                        "scriptPath": "",
+                                        "prototypeScriptPath": "",
                                         "children": []
                                     },
                                     {
                                         "typeName": "recipientPort",
                                         "variableName": "recipientPort",
-                                        "prototypePath": "",
+                                        "scriptPath": "",
+                                        "prototypeScriptPath": "",
                                         "children": []
                                     }
                                 ]
@@ -2645,30 +3057,35 @@
                             {
                                 "typeName": "metadata",
                                 "variableName": "metadata",
-                                "prototypePath": "",
+                                "scriptPath": "",
+                                "prototypeScriptPath": "",
                                 "children": []
                             },
                             {
                                 "typeName": "token",
                                 "variableName": "token",
-                                "prototypePath": "",
+                                "scriptPath": "",
+                                "prototypeScriptPath": "",
                                 "children": []
                             },
                             {
                                 "typeName": "SenderAddress",
                                 "variableName": "senderAddress",
-                                "prototypePath": "C://component//lib//senderaddress.prototype.js",
+                                "scriptPath": "C://component//lib//senderaddress.js",
+                                "prototypeScriptPath": "C://component//lib//senderaddress.prototype.js",
                                 "children": [
                                     {
                                         "typeName": "senderHost",
                                         "variableName": "senderHost",
-                                        "prototypePath": "",
+                                        "scriptPath": "",
+                                        "prototypeScriptPath": "",
                                         "children": []
                                     },
                                     {
                                         "typeName": "senderPort",
                                         "variableName": "senderPort",
-                                        "prototypePath": "",
+                                        "scriptPath": "",
+                                        "prototypeScriptPath": "",
                                         "children": []
                                     }
                                 ]
@@ -2682,28 +3099,33 @@
     "WebSocketServerRequestMessageBus": {
         "typeName": "WebSocketServerRequestMessageBus",
         "variableName": "webSocketServerRequestMessageBus",
-        "prototypePath": "C://component//lib//websocket//websocketserverrequestmessagebus.prototype.js",
+        "scriptPath": "C://component//lib//websocket//websocketserverrequestmessagebus.js",
+        "prototypeScriptPath": "C://component//lib//websocket//websocketserverrequestmessagebus.prototype.js",
         "children": [
             {
                 "typeName": "WebSocketServerRequestMessageQueueBinding",
                 "variableName": "webSocketServerRequestMessageQueueBinding",
-                "prototypePath": "C://component//lib//websocket//websocketserverrequestmessagequeuebinding.prototype.js",
+                "scriptPath": "C://component//lib//websocket//websocketserverrequestmessagequeuebinding.js",
+                "prototypeScriptPath": "C://component//lib//websocket//websocketserverrequestmessagequeuebinding.prototype.js",
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
                         "variableName": "factoryContainerBindingName",
-                        "prototypePath": "",
+                        "scriptPath": "",
+                        "prototypeScriptPath": "",
                         "children": []
                     },
                     {
                         "typeName": "MessageQueue",
                         "variableName": "messageQueue",
-                        "prototypePath": "C://component//lib//messagequeue.prototype.js",
+                        "scriptPath": "C://component//lib//messagequeue.js",
+                        "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
                         "children": [
                             {
                                 "typeName": "Logger",
                                 "variableName": "logger",
-                                "prototypePath": "C://component//lib//logger.prototype.js",
+                                "scriptPath": "C://component//lib//logger.js",
+                                "prototypeScriptPath": "C://component//lib//logger.prototype.js",
                                 "children": []
                             }
                         ]
@@ -2715,23 +3137,27 @@
     "WebSocketServerRequestMessageQueueBinding": {
         "typeName": "WebSocketServerRequestMessageQueueBinding",
         "variableName": "webSocketServerRequestMessageQueueBinding",
-        "prototypePath": "C://component//lib//websocket//websocketserverrequestmessagequeuebinding.prototype.js",
+        "scriptPath": "C://component//lib//websocket//websocketserverrequestmessagequeuebinding.js",
+        "prototypeScriptPath": "C://component//lib//websocket//websocketserverrequestmessagequeuebinding.prototype.js",
         "children": [
             {
                 "typeName": "factoryContainerBindingName",
                 "variableName": "factoryContainerBindingName",
-                "prototypePath": "",
+                "scriptPath": "",
+                "prototypeScriptPath": "",
                 "children": []
             },
             {
                 "typeName": "MessageQueue",
                 "variableName": "messageQueue",
-                "prototypePath": "C://component//lib//messagequeue.prototype.js",
+                "scriptPath": "C://component//lib//messagequeue.js",
+                "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
                 "children": [
                     {
                         "typeName": "Logger",
                         "variableName": "logger",
-                        "prototypePath": "C://component//lib//logger.prototype.js",
+                        "scriptPath": "C://component//lib//logger.js",
+                        "prototypeScriptPath": "C://component//lib//logger.prototype.js",
                         "children": []
                     }
                 ]
@@ -2741,28 +3167,33 @@
     "WebSocketServerResponseMessageBus": {
         "typeName": "WebSocketServerResponseMessageBus",
         "variableName": "webSocketServerResponseMessageBus",
-        "prototypePath": "C://component//lib//websocket//websocketserverresponsemessagebus.prototype.js",
+        "scriptPath": "C://component//lib//websocket//websocketserverresponsemessagebus.js",
+        "prototypeScriptPath": "C://component//lib//websocket//websocketserverresponsemessagebus.prototype.js",
         "children": [
             {
                 "typeName": "WebSocketServerResponseMessageQueueBinding",
                 "variableName": "webSocketServerResponseMessageQueueBinding",
-                "prototypePath": "C://component//lib//websocket//websocketserverresponsemessagequeuebinding.prototype.js",
+                "scriptPath": "C://component//lib//websocket//websocketserverresponsemessagequeuebinding.js",
+                "prototypeScriptPath": "C://component//lib//websocket//websocketserverresponsemessagequeuebinding.prototype.js",
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
                         "variableName": "factoryContainerBindingName",
-                        "prototypePath": "",
+                        "scriptPath": "",
+                        "prototypeScriptPath": "",
                         "children": []
                     },
                     {
                         "typeName": "MessageQueue",
                         "variableName": "messageQueue",
-                        "prototypePath": "C://component//lib//messagequeue.prototype.js",
+                        "scriptPath": "C://component//lib//messagequeue.js",
+                        "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
                         "children": [
                             {
                                 "typeName": "Logger",
                                 "variableName": "logger",
-                                "prototypePath": "C://component//lib//logger.prototype.js",
+                                "scriptPath": "C://component//lib//logger.js",
+                                "prototypeScriptPath": "C://component//lib//logger.prototype.js",
                                 "children": []
                             }
                         ]
@@ -2774,23 +3205,27 @@
     "WebSocketServerResponseMessageQueueBinding": {
         "typeName": "WebSocketServerResponseMessageQueueBinding",
         "variableName": "webSocketServerResponseMessageQueueBinding",
-        "prototypePath": "C://component//lib//websocket//websocketserverresponsemessagequeuebinding.prototype.js",
+        "scriptPath": "C://component//lib//websocket//websocketserverresponsemessagequeuebinding.js",
+        "prototypeScriptPath": "C://component//lib//websocket//websocketserverresponsemessagequeuebinding.prototype.js",
         "children": [
             {
                 "typeName": "factoryContainerBindingName",
                 "variableName": "factoryContainerBindingName",
-                "prototypePath": "",
+                "scriptPath": "",
+                "prototypeScriptPath": "",
                 "children": []
             },
             {
                 "typeName": "MessageQueue",
                 "variableName": "messageQueue",
-                "prototypePath": "C://component//lib//messagequeue.prototype.js",
+                "scriptPath": "C://component//lib//messagequeue.js",
+                "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
                 "children": [
                     {
                         "typeName": "Logger",
                         "variableName": "logger",
-                        "prototypePath": "C://component//lib//logger.prototype.js",
+                        "scriptPath": "C://component//lib//logger.js",
+                        "prototypeScriptPath": "C://component//lib//logger.prototype.js",
                         "children": []
                     }
                 ]

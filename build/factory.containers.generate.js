@@ -7,7 +7,7 @@ const factoryContainerBindingsInfo = require(path.join(__dirname, 'factory.conta
 
 for(const _typeName of Object.keys(typeInfo)) {
     const info = typeInfo[_typeName];
-    const { typeName, variableName, prototypePath } = info;
+    const { typeName, variableName, scriptPath, prototypeScriptPath } = info;
     const factoryContainerBindingInfo = factoryContainerBindingsInfo[typeName];
     const bindings = {};
     for(const bindingName of Object.keys(factoryContainerBindingInfo)) {
@@ -21,7 +21,8 @@ for(const _typeName of Object.keys(typeInfo)) {
     const factoryContainerJson = factoryContainerTemplate
         .replace(/\[TypeName\]/g, typeName)
         .replace(/\[TypeVariableName\]/g, variableName)
-        .replace(/\[PrototypePath\]/g, prototypePath)
+        .replace(/\[ScriptPath\]/g, scriptPath)
+        .replace(/\[PrototypeScriptPath\]/g, prototypeScriptPath)
         .replace(/\[FactoryScriptPath\]/g, factoryScriptPath)
         .replace(/\[Bindings\]/g, utils.getJSONString(bindings));
     const factoryContainer = utils.getJSONObject(factoryContainerJson);
