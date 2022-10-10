@@ -1,0 +1,20 @@
+{
+    "typeName": "MessageMetadata",
+    "typeVariableName": "messageMetadata",
+    "scriptPath": "C://component//lib//messagemetadata.js",
+    "prototypeScriptPath": "C://component//lib//messagemetadata.prototype.js",
+    "factoryScriptPath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.js",
+    "bindingName": "MultipleRequestsSpec",
+    "bindingFilePath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.multiplerequestsspec.binding.json",
+    "isSingleton": null,
+    "CtorParameters": {
+        "RecipientAddress": {
+            "bindingFilePath": "C://component//lib//factory//generated//recipientaddress//recipientaddress.factory.container.multiplerequestsspec.binding.json"
+        },
+        "metadata": null,
+        "token": null,
+        "SenderAddress": {
+            "bindingFilePath": "C://component//lib//factory//generated//senderaddress//senderaddress.factory.container.multiplerequestsspec.binding.json"
+        }
+    }
+}

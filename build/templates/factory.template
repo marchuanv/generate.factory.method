@@ -1,12 +1,13 @@
 const { Factory } = require('../../factory.js');
-const container = require('[FactoryContainerBindingFilePath]');
-const factory = new Factory(container);
 
 /**
 * Create [TypeName]
 * @param {[PrimitiveArgsWithBindingName]}
 */
 function create[TypeName]({[PrimitiveArgsWithBindingName]}) {
-    return factory.getInstance({ factoryContainerBindingName, ctorArgs: {[PrimitiveArgs]} });
+    const _factoryContainerBindingFileName = factoryContainerBindingName ? factoryContainerBindingName.toLowerCase() : 'default';
+    const containerBinding = require(`[FactoryContainerBindingFilePath]`);
+    const factory = new Factory(containerBinding);
+    return factory.getInstance({ ctorArgs: {[PrimitiveArgs]} });
 }
 module.exports = { create[TypeName] };

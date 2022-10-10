@@ -1,0 +1,16 @@
+{
+    "typeName": "WebSocketClientRequestMessageQueueBinding",
+    "typeVariableName": "websocketClientRequestMessageQueueBinding",
+    "scriptPath": "C://component//lib//websocket//websocketclientrequestmessagequeuebinding.js",
+    "prototypeScriptPath": "C://component//lib//websocket//websocketclientrequestmessagequeuebinding.prototype.js",
+    "factoryScriptPath": "C://component//lib//factory//generated//websocketclientrequestmessagequeuebinding//websocketclientrequestmessagequeuebinding.factory.js",
+    "bindingName": "MultipleRequestsSpec",
+    "bindingFilePath": "C://component//lib//factory//generated//websocketclientrequestmessagequeuebinding//websocketclientrequestmessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
+    "isSingleton": null,
+    "CtorParameters": {
+        "factoryContainerBindingName": null,
+        "MessageQueue": {
+            "bindingFilePath": "C://component//lib//factory//generated//messagequeue//messagequeue.factory.container.multiplerequestsspec.binding.json"
+        }
+    }
+}

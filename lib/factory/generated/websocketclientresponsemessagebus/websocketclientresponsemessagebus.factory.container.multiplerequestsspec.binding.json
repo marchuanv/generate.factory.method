@@ -1,0 +1,15 @@
+{
+    "typeName": "WebSocketClientResponseMessageBus",
+    "typeVariableName": "webSocketClientResponseMessageBus",
+    "scriptPath": "C://component//lib//websocket//websocketclientresponsemessagebus.js",
+    "prototypeScriptPath": "C://component//lib//websocket//websocketclientresponsemessagebus.prototype.js",
+    "factoryScriptPath": "C://component//lib//factory//generated//websocketclientresponsemessagebus//websocketclientresponsemessagebus.factory.js",
+    "bindingName": "MultipleRequestsSpec",
+    "bindingFilePath": "C://component//lib//factory//generated//websocketclientresponsemessagebus//websocketclientresponsemessagebus.factory.container.multiplerequestsspec.binding.json",
+    "isSingleton": null,
+    "CtorParameters": {
+        "WebSocketClientResponseMessageQueueBinding": {
+            "bindingFilePath": "C://component//lib//factory//generated//websocketclientresponsemessagequeuebinding//websocketclientresponsemessagequeuebinding.factory.container.multiplerequestsspec.binding.json"
+        }
+    }
+}

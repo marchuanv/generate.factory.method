@@ -21,6 +21,9 @@ if (!existsSync(generatedFactoryScriptsDir)){
 
 require('./type.info.generate');
 require('./factory.container.bindings.info.generate')({ factoryContainerBindingName: 'Default' });
+require('./factory.container.bindings.info.generate')({ factoryContainerBindingName: 'MultipleRequestsSpec' });
 require('./factory.info.generate')({ factoryContainerBindingName: 'Default' });
+require('./factory.info.generate')({ factoryContainerBindingName: 'MultipleRequestsSpec' });
 require('./factory.container.bindings.generate')({ factoryContainerBindingName: 'Default' });
+require('./factory.container.bindings.generate')({ factoryContainerBindingName: 'MultipleRequestsSpec' });
 require('./factory.generate');

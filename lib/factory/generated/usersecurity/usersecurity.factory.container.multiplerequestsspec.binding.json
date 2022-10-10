@@ -1,0 +1,13 @@
+{
+    "typeName": "UserSecurity",
+    "typeVariableName": "userSecurity",
+    "scriptPath": "C://component//lib//usersecurity.js",
+    "prototypeScriptPath": "C://component//lib//usersecurity.prototype.js",
+    "factoryScriptPath": "C://component//lib//factory//generated//usersecurity//usersecurity.factory.js",
+    "bindingName": "MultipleRequestsSpec",
+    "bindingFilePath": "C://component//lib//factory//generated//usersecurity//usersecurity.factory.container.multiplerequestsspec.binding.json",
+    "isSingleton": null,
+    "CtorParameters": {
+        "userId": null
+    }
+}

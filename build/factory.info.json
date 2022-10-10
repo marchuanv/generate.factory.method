@@ -2,7 +2,7 @@
     "ClientMessageBus": {
         "typeName": "ClientMessageBus",
         "factoryScriptPath": "C://component//lib//factory//generated//clientmessagebus//clientmessagebus.factory.js",
-        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//clientmessagebus//clientmessagebus.factory.container.default.binding.json",
+        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//clientmessagebus//clientmessagebus.factory.container.multiplerequestsspec.binding.json",
         "minFactoryScriptPath": "C://component//lib//factory//generated//clientmessagebus//clientmessagebus.factory.min.js",
         "ctorArgumentsWithBindingNames": [
             "factoryContainerBindingName"
@@ -12,7 +12,7 @@
     "Component": {
         "typeName": "Component",
         "factoryScriptPath": "C://component//lib//factory//generated//component//component.factory.js",
-        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//component//component.factory.container.default.binding.json",
+        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//component//component.factory.container.multiplerequestsspec.binding.json",
         "minFactoryScriptPath": "C://component//lib//factory//generated//component//component.factory.min.js",
         "ctorArgumentsWithBindingNames": [
             "packageJson",
@@ -25,7 +25,7 @@
     "ContentType": {
         "typeName": "ContentType",
         "factoryScriptPath": "C://component//lib//factory//generated//contenttype//contenttype.factory.js",
-        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//contenttype//contenttype.factory.container.default.binding.json",
+        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//contenttype//contenttype.factory.container.multiplerequestsspec.binding.json",
         "minFactoryScriptPath": "C://component//lib//factory//generated//contenttype//contenttype.factory.min.js",
         "ctorArgumentsWithBindingNames": [
             "name",
@@ -38,7 +38,7 @@
     "Logger": {
         "typeName": "Logger",
         "factoryScriptPath": "C://component//lib//factory//generated//logger//logger.factory.js",
-        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//logger//logger.factory.container.default.binding.json",
+        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//logger//logger.factory.container.multiplerequestsspec.binding.json",
         "minFactoryScriptPath": "C://component//lib//factory//generated//logger//logger.factory.min.js",
         "ctorArgumentsWithBindingNames": [
             "factoryContainerBindingName"
@@ -48,7 +48,7 @@
     "Message": {
         "typeName": "Message",
         "factoryScriptPath": "C://component//lib//factory//generated//message//message.factory.js",
-        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//message//message.factory.container.default.binding.json",
+        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//message//message.factory.container.multiplerequestsspec.binding.json",
         "minFactoryScriptPath": "C://component//lib//factory//generated//message//message.factory.min.js",
         "ctorArgumentsWithBindingNames": [
             "messageStatusCode",
@@ -77,7 +77,7 @@
     "MessageContent": {
         "typeName": "MessageContent",
         "factoryScriptPath": "C://component//lib//factory//generated//messagecontent//messagecontent.factory.js",
-        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//messagecontent//messagecontent.factory.container.default.binding.json",
+        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//messagecontent//messagecontent.factory.container.multiplerequestsspec.binding.json",
         "minFactoryScriptPath": "C://component//lib//factory//generated//messagecontent//messagecontent.factory.min.js",
         "ctorArgumentsWithBindingNames": [
             "data",
@@ -102,7 +102,7 @@
     "MessageContentMetadata": {
         "typeName": "MessageContentMetadata",
         "factoryScriptPath": "C://component//lib//factory//generated//messagecontentmetadata//messagecontentmetadata.factory.js",
-        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//messagecontentmetadata//messagecontentmetadata.factory.container.default.binding.json",
+        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//messagecontentmetadata//messagecontentmetadata.factory.container.multiplerequestsspec.binding.json",
         "minFactoryScriptPath": "C://component//lib//factory//generated//messagecontentmetadata//messagecontentmetadata.factory.min.js",
         "ctorArgumentsWithBindingNames": [
             "data",
@@ -115,7 +115,7 @@
     "MessageConverter": {
         "typeName": "MessageConverter",
         "factoryScriptPath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.js",
-        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.default.binding.json",
+        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.multiplerequestsspec.binding.json",
         "minFactoryScriptPath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.min.js",
         "ctorArgumentsWithBindingNames": [
             "factoryContainerBindingName"
@@ -125,7 +125,7 @@
     "MessageMetadata": {
         "typeName": "MessageMetadata",
         "factoryScriptPath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.js",
-        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.default.binding.json",
+        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.multiplerequestsspec.binding.json",
         "minFactoryScriptPath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.min.js",
         "ctorArgumentsWithBindingNames": [
             "recipientHost",
@@ -148,7 +148,7 @@
     "MessageQueue": {
         "typeName": "MessageQueue",
         "factoryScriptPath": "C://component//lib//factory//generated//messagequeue//messagequeue.factory.js",
-        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//messagequeue//messagequeue.factory.container.default.binding.json",
+        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//messagequeue//messagequeue.factory.container.multiplerequestsspec.binding.json",
         "minFactoryScriptPath": "C://component//lib//factory//generated//messagequeue//messagequeue.factory.min.js",
         "ctorArgumentsWithBindingNames": [
             "factoryContainerBindingName"
@@ -158,7 +158,7 @@
     "MessageStatus": {
         "typeName": "MessageStatus",
         "factoryScriptPath": "C://component//lib//factory//generated//messagestatus//messagestatus.factory.js",
-        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//messagestatus//messagestatus.factory.container.default.binding.json",
+        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//messagestatus//messagestatus.factory.container.multiplerequestsspec.binding.json",
         "minFactoryScriptPath": "C://component//lib//factory//generated//messagestatus//messagestatus.factory.min.js",
         "ctorArgumentsWithBindingNames": [
             "messageStatusCode",
@@ -171,7 +171,7 @@
     "MessageStore": {
         "typeName": "MessageStore",
         "factoryScriptPath": "C://component//lib//factory//generated//messagestore//messagestore.factory.js",
-        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//messagestore//messagestore.factory.container.default.binding.json",
+        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//messagestore//messagestore.factory.container.multiplerequestsspec.binding.json",
         "minFactoryScriptPath": "C://component//lib//factory//generated//messagestore//messagestore.factory.min.js",
         "ctorArgumentsWithBindingNames": [
             "factoryContainerBindingName"
@@ -181,7 +181,7 @@
     "RecipientAddress": {
         "typeName": "RecipientAddress",
         "factoryScriptPath": "C://component//lib//factory//generated//recipientaddress//recipientaddress.factory.js",
-        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//recipientaddress//recipientaddress.factory.container.default.binding.json",
+        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//recipientaddress//recipientaddress.factory.container.multiplerequestsspec.binding.json",
         "minFactoryScriptPath": "C://component//lib//factory//generated//recipientaddress//recipientaddress.factory.min.js",
         "ctorArgumentsWithBindingNames": [
             "recipientHost",
@@ -196,7 +196,7 @@
     "SenderAddress": {
         "typeName": "SenderAddress",
         "factoryScriptPath": "C://component//lib//factory//generated//senderaddress//senderaddress.factory.js",
-        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//senderaddress//senderaddress.factory.container.default.binding.json",
+        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//senderaddress//senderaddress.factory.container.multiplerequestsspec.binding.json",
         "minFactoryScriptPath": "C://component//lib//factory//generated//senderaddress//senderaddress.factory.min.js",
         "ctorArgumentsWithBindingNames": [
             "senderHost",
@@ -211,7 +211,7 @@
     "ServerMessageBus": {
         "typeName": "ServerMessageBus",
         "factoryScriptPath": "C://component//lib//factory//generated//servermessagebus//servermessagebus.factory.js",
-        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//servermessagebus//servermessagebus.factory.container.default.binding.json",
+        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//servermessagebus//servermessagebus.factory.container.multiplerequestsspec.binding.json",
         "minFactoryScriptPath": "C://component//lib//factory//generated//servermessagebus//servermessagebus.factory.min.js",
         "ctorArgumentsWithBindingNames": [
             "factoryContainerBindingName"
@@ -221,7 +221,7 @@
     "UserSecurity": {
         "typeName": "UserSecurity",
         "factoryScriptPath": "C://component//lib//factory//generated//usersecurity//usersecurity.factory.js",
-        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//usersecurity//usersecurity.factory.container.default.binding.json",
+        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//usersecurity//usersecurity.factory.container.multiplerequestsspec.binding.json",
         "minFactoryScriptPath": "C://component//lib//factory//generated//usersecurity//usersecurity.factory.min.js",
         "ctorArgumentsWithBindingNames": [
             "userId",
@@ -234,7 +234,7 @@
     "UserSessions": {
         "typeName": "UserSessions",
         "factoryScriptPath": "C://component//lib//factory//generated//usersessions//usersessions.factory.js",
-        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//usersessions//usersessions.factory.container.default.binding.json",
+        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//usersessions//usersessions.factory.container.multiplerequestsspec.binding.json",
         "minFactoryScriptPath": "C://component//lib//factory//generated//usersessions//usersessions.factory.min.js",
         "ctorArgumentsWithBindingNames": [
             "factoryContainerBindingName"
@@ -244,7 +244,7 @@
     "HttpClientMessageBus": {
         "typeName": "HttpClientMessageBus",
         "factoryScriptPath": "C://component//lib//factory//generated//httpclientmessagebus//httpclientmessagebus.factory.js",
-        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//httpclientmessagebus//httpclientmessagebus.factory.container.default.binding.json",
+        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//httpclientmessagebus//httpclientmessagebus.factory.container.multiplerequestsspec.binding.json",
         "minFactoryScriptPath": "C://component//lib//factory//generated//httpclientmessagebus//httpclientmessagebus.factory.min.js",
         "ctorArgumentsWithBindingNames": [
             "timeout",
@@ -257,7 +257,7 @@
     "HttpClientMessageBusManager": {
         "typeName": "HttpClientMessageBusManager",
         "factoryScriptPath": "C://component//lib//factory//generated//httpclientmessagebusmanager//httpclientmessagebusmanager.factory.js",
-        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//httpclientmessagebusmanager//httpclientmessagebusmanager.factory.container.default.binding.json",
+        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//httpclientmessagebusmanager//httpclientmessagebusmanager.factory.container.multiplerequestsspec.binding.json",
         "minFactoryScriptPath": "C://component//lib//factory//generated//httpclientmessagebusmanager//httpclientmessagebusmanager.factory.min.js",
         "ctorArgumentsWithBindingNames": [
             "factoryContainerBindingName"
@@ -267,7 +267,7 @@
     "HttpClientRequestMessageBus": {
         "typeName": "HttpClientRequestMessageBus",
         "factoryScriptPath": "C://component//lib//factory//generated//httpclientrequestmessagebus//httpclientrequestmessagebus.factory.js",
-        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//httpclientrequestmessagebus//httpclientrequestmessagebus.factory.container.default.binding.json",
+        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//httpclientrequestmessagebus//httpclientrequestmessagebus.factory.container.multiplerequestsspec.binding.json",
         "minFactoryScriptPath": "C://component//lib//factory//generated//httpclientrequestmessagebus//httpclientrequestmessagebus.factory.min.js",
         "ctorArgumentsWithBindingNames": [
             "factoryContainerBindingName"
@@ -277,7 +277,7 @@
     "HttpClientRequestMessageQueueBinding": {
         "typeName": "HttpClientRequestMessageQueueBinding",
         "factoryScriptPath": "C://component//lib//factory//generated//httpclientrequestmessagequeuebinding//httpclientrequestmessagequeuebinding.factory.js",
-        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//httpclientrequestmessagequeuebinding//httpclientrequestmessagequeuebinding.factory.container.default.binding.json",
+        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//httpclientrequestmessagequeuebinding//httpclientrequestmessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
         "minFactoryScriptPath": "C://component//lib//factory//generated//httpclientrequestmessagequeuebinding//httpclientrequestmessagequeuebinding.factory.min.js",
         "ctorArgumentsWithBindingNames": [
             "factoryContainerBindingName"
@@ -287,7 +287,7 @@
     "HttpClientResponseMessageBus": {
         "typeName": "HttpClientResponseMessageBus",
         "factoryScriptPath": "C://component//lib//factory//generated//httpclientresponsemessagebus//httpclientresponsemessagebus.factory.js",
-        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//httpclientresponsemessagebus//httpclientresponsemessagebus.factory.container.default.binding.json",
+        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//httpclientresponsemessagebus//httpclientresponsemessagebus.factory.container.multiplerequestsspec.binding.json",
         "minFactoryScriptPath": "C://component//lib//factory//generated//httpclientresponsemessagebus//httpclientresponsemessagebus.factory.min.js",
         "ctorArgumentsWithBindingNames": [
             "factoryContainerBindingName"
@@ -297,7 +297,7 @@
     "HttpClientResponseMessageQueueBinding": {
         "typeName": "HttpClientResponseMessageQueueBinding",
         "factoryScriptPath": "C://component//lib//factory//generated//httpclientresponsemessagequeuebinding//httpclientresponsemessagequeuebinding.factory.js",
-        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//httpclientresponsemessagequeuebinding//httpclientresponsemessagequeuebinding.factory.container.default.binding.json",
+        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//httpclientresponsemessagequeuebinding//httpclientresponsemessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
         "minFactoryScriptPath": "C://component//lib//factory//generated//httpclientresponsemessagequeuebinding//httpclientresponsemessagequeuebinding.factory.min.js",
         "ctorArgumentsWithBindingNames": [
             "factoryContainerBindingName"
@@ -307,7 +307,7 @@
     "HttpClientStartedMessageQueueBinding": {
         "typeName": "HttpClientStartedMessageQueueBinding",
         "factoryScriptPath": "C://component//lib//factory//generated//httpclientstartedmessagequeuebinding//httpclientstartedmessagequeuebinding.factory.js",
-        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//httpclientstartedmessagequeuebinding//httpclientstartedmessagequeuebinding.factory.container.default.binding.json",
+        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//httpclientstartedmessagequeuebinding//httpclientstartedmessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
         "minFactoryScriptPath": "C://component//lib//factory//generated//httpclientstartedmessagequeuebinding//httpclientstartedmessagequeuebinding.factory.min.js",
         "ctorArgumentsWithBindingNames": [
             "factoryContainerBindingName"
@@ -317,7 +317,7 @@
     "HttpClientStartMessageQueueBinding": {
         "typeName": "HttpClientStartMessageQueueBinding",
         "factoryScriptPath": "C://component//lib//factory//generated//httpclientstartmessagequeuebinding//httpclientstartmessagequeuebinding.factory.js",
-        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//httpclientstartmessagequeuebinding//httpclientstartmessagequeuebinding.factory.container.default.binding.json",
+        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//httpclientstartmessagequeuebinding//httpclientstartmessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
         "minFactoryScriptPath": "C://component//lib//factory//generated//httpclientstartmessagequeuebinding//httpclientstartmessagequeuebinding.factory.min.js",
         "ctorArgumentsWithBindingNames": [
             "factoryContainerBindingName"
@@ -327,7 +327,7 @@
     "HttpClientStopMessageQueueBinding": {
         "typeName": "HttpClientStopMessageQueueBinding",
         "factoryScriptPath": "C://component//lib//factory//generated//httpclientstopmessagequeuebinding//httpclientstopmessagequeuebinding.factory.js",
-        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//httpclientstopmessagequeuebinding//httpclientstopmessagequeuebinding.factory.container.default.binding.json",
+        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//httpclientstopmessagequeuebinding//httpclientstopmessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
         "minFactoryScriptPath": "C://component//lib//factory//generated//httpclientstopmessagequeuebinding//httpclientstopmessagequeuebinding.factory.min.js",
         "ctorArgumentsWithBindingNames": [
             "factoryContainerBindingName"
@@ -337,7 +337,7 @@
     "HttpClientStoppedMessageQueueBinding": {
         "typeName": "HttpClientStoppedMessageQueueBinding",
         "factoryScriptPath": "C://component//lib//factory//generated//httpclientstoppedmessagequeuebinding//httpclientstoppedmessagequeuebinding.factory.js",
-        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//httpclientstoppedmessagequeuebinding//httpclientstoppedmessagequeuebinding.factory.container.default.binding.json",
+        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//httpclientstoppedmessagequeuebinding//httpclientstoppedmessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
         "minFactoryScriptPath": "C://component//lib//factory//generated//httpclientstoppedmessagequeuebinding//httpclientstoppedmessagequeuebinding.factory.min.js",
         "ctorArgumentsWithBindingNames": [
             "factoryContainerBindingName"
@@ -347,7 +347,7 @@
     "HttpRequestMessage": {
         "typeName": "HttpRequestMessage",
         "factoryScriptPath": "C://component//lib//factory//generated//httprequestmessage//httprequestmessage.factory.js",
-        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//httprequestmessage//httprequestmessage.factory.container.default.binding.json",
+        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//httprequestmessage//httprequestmessage.factory.container.multiplerequestsspec.binding.json",
         "minFactoryScriptPath": "C://component//lib//factory//generated//httprequestmessage//httprequestmessage.factory.min.js",
         "ctorArgumentsWithBindingNames": [
             "messageStatusCode",
@@ -376,7 +376,7 @@
     "HttpResponseMessage": {
         "typeName": "HttpResponseMessage",
         "factoryScriptPath": "C://component//lib//factory//generated//httpresponsemessage//httpresponsemessage.factory.js",
-        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//httpresponsemessage//httpresponsemessage.factory.container.default.binding.json",
+        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//httpresponsemessage//httpresponsemessage.factory.container.multiplerequestsspec.binding.json",
         "minFactoryScriptPath": "C://component//lib//factory//generated//httpresponsemessage//httpresponsemessage.factory.min.js",
         "ctorArgumentsWithBindingNames": [
             "messageStatusCode",
@@ -405,7 +405,7 @@
     "HttpServerMessageBus": {
         "typeName": "HttpServerMessageBus",
         "factoryScriptPath": "C://component//lib//factory//generated//httpservermessagebus//httpservermessagebus.factory.js",
-        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//httpservermessagebus//httpservermessagebus.factory.container.default.binding.json",
+        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//httpservermessagebus//httpservermessagebus.factory.container.multiplerequestsspec.binding.json",
         "minFactoryScriptPath": "C://component//lib//factory//generated//httpservermessagebus//httpservermessagebus.factory.min.js",
         "ctorArgumentsWithBindingNames": [
             "timeout",
@@ -422,7 +422,7 @@
     "HttpServerMessageBusManager": {
         "typeName": "HttpServerMessageBusManager",
         "factoryScriptPath": "C://component//lib//factory//generated//httpservermessagebusmanager//httpservermessagebusmanager.factory.js",
-        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//httpservermessagebusmanager//httpservermessagebusmanager.factory.container.default.binding.json",
+        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//httpservermessagebusmanager//httpservermessagebusmanager.factory.container.multiplerequestsspec.binding.json",
         "minFactoryScriptPath": "C://component//lib//factory//generated//httpservermessagebusmanager//httpservermessagebusmanager.factory.min.js",
         "ctorArgumentsWithBindingNames": [
             "factoryContainerBindingName"
@@ -432,7 +432,7 @@
     "HttpServerRequestMessageBus": {
         "typeName": "HttpServerRequestMessageBus",
         "factoryScriptPath": "C://component//lib//factory//generated//httpserverrequestmessagebus//httpserverrequestmessagebus.factory.js",
-        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//httpserverrequestmessagebus//httpserverrequestmessagebus.factory.container.default.binding.json",
+        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//httpserverrequestmessagebus//httpserverrequestmessagebus.factory.container.multiplerequestsspec.binding.json",
         "minFactoryScriptPath": "C://component//lib//factory//generated//httpserverrequestmessagebus//httpserverrequestmessagebus.factory.min.js",
         "ctorArgumentsWithBindingNames": [
             "factoryContainerBindingName"
@@ -442,7 +442,7 @@
     "HttpServerRequestMessageQueueBinding": {
         "typeName": "HttpServerRequestMessageQueueBinding",
         "factoryScriptPath": "C://component//lib//factory//generated//httpserverrequestmessagequeuebinding//httpserverrequestmessagequeuebinding.factory.js",
-        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//httpserverrequestmessagequeuebinding//httpserverrequestmessagequeuebinding.factory.container.default.binding.json",
+        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//httpserverrequestmessagequeuebinding//httpserverrequestmessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
         "minFactoryScriptPath": "C://component//lib//factory//generated//httpserverrequestmessagequeuebinding//httpserverrequestmessagequeuebinding.factory.min.js",
         "ctorArgumentsWithBindingNames": [
             "factoryContainerBindingName"
@@ -452,7 +452,7 @@
     "HttpServerResponseMessageBus": {
         "typeName": "HttpServerResponseMessageBus",
         "factoryScriptPath": "C://component//lib//factory//generated//httpserverresponsemessagebus//httpserverresponsemessagebus.factory.js",
-        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//httpserverresponsemessagebus//httpserverresponsemessagebus.factory.container.default.binding.json",
+        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//httpserverresponsemessagebus//httpserverresponsemessagebus.factory.container.multiplerequestsspec.binding.json",
         "minFactoryScriptPath": "C://component//lib//factory//generated//httpserverresponsemessagebus//httpserverresponsemessagebus.factory.min.js",
         "ctorArgumentsWithBindingNames": [
             "factoryContainerBindingName"
@@ -462,7 +462,7 @@
     "HttpServerResponseMessageQueueBinding": {
         "typeName": "HttpServerResponseMessageQueueBinding",
         "factoryScriptPath": "C://component//lib//factory//generated//httpserverresponsemessagequeuebinding//httpserverresponsemessagequeuebinding.factory.js",
-        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//httpserverresponsemessagequeuebinding//httpserverresponsemessagequeuebinding.factory.container.default.binding.json",
+        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//httpserverresponsemessagequeuebinding//httpserverresponsemessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
         "minFactoryScriptPath": "C://component//lib//factory//generated//httpserverresponsemessagequeuebinding//httpserverresponsemessagequeuebinding.factory.min.js",
         "ctorArgumentsWithBindingNames": [
             "factoryContainerBindingName"
@@ -472,7 +472,7 @@
     "HttpServerStartedMessageQueueBinding": {
         "typeName": "HttpServerStartedMessageQueueBinding",
         "factoryScriptPath": "C://component//lib//factory//generated//httpserverstartedmessagequeuebinding//httpserverstartedmessagequeuebinding.factory.js",
-        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//httpserverstartedmessagequeuebinding//httpserverstartedmessagequeuebinding.factory.container.default.binding.json",
+        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//httpserverstartedmessagequeuebinding//httpserverstartedmessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
         "minFactoryScriptPath": "C://component//lib//factory//generated//httpserverstartedmessagequeuebinding//httpserverstartedmessagequeuebinding.factory.min.js",
         "ctorArgumentsWithBindingNames": [
             "factoryContainerBindingName"
@@ -482,7 +482,7 @@
     "HttpServerStartMessageQueueBinding": {
         "typeName": "HttpServerStartMessageQueueBinding",
         "factoryScriptPath": "C://component//lib//factory//generated//httpserverstartmessagequeuebinding//httpserverstartmessagequeuebinding.factory.js",
-        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//httpserverstartmessagequeuebinding//httpserverstartmessagequeuebinding.factory.container.default.binding.json",
+        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//httpserverstartmessagequeuebinding//httpserverstartmessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
         "minFactoryScriptPath": "C://component//lib//factory//generated//httpserverstartmessagequeuebinding//httpserverstartmessagequeuebinding.factory.min.js",
         "ctorArgumentsWithBindingNames": [
             "factoryContainerBindingName"
@@ -492,7 +492,7 @@
     "HttpServerStopMessageQueueBinding": {
         "typeName": "HttpServerStopMessageQueueBinding",
         "factoryScriptPath": "C://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.js",
-        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.container.default.binding.json",
+        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
         "minFactoryScriptPath": "C://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.min.js",
         "ctorArgumentsWithBindingNames": [
             "factoryContainerBindingName"
@@ -502,7 +502,7 @@
     "HttpServerStoppedMessageQueueBinding": {
         "typeName": "HttpServerStoppedMessageQueueBinding",
         "factoryScriptPath": "C://component//lib//factory//generated//httpserverstoppedmessagequeuebinding//httpserverstoppedmessagequeuebinding.factory.js",
-        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//httpserverstoppedmessagequeuebinding//httpserverstoppedmessagequeuebinding.factory.container.default.binding.json",
+        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//httpserverstoppedmessagequeuebinding//httpserverstoppedmessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
         "minFactoryScriptPath": "C://component//lib//factory//generated//httpserverstoppedmessagequeuebinding//httpserverstoppedmessagequeuebinding.factory.min.js",
         "ctorArgumentsWithBindingNames": [
             "factoryContainerBindingName"
@@ -512,7 +512,7 @@
     "WebSocketClientRequestMessageBus": {
         "typeName": "WebSocketClientRequestMessageBus",
         "factoryScriptPath": "C://component//lib//factory//generated//websocketclientrequestmessagebus//websocketclientrequestmessagebus.factory.js",
-        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//websocketclientrequestmessagebus//websocketclientrequestmessagebus.factory.container.default.binding.json",
+        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//websocketclientrequestmessagebus//websocketclientrequestmessagebus.factory.container.multiplerequestsspec.binding.json",
         "minFactoryScriptPath": "C://component//lib//factory//generated//websocketclientrequestmessagebus//websocketclientrequestmessagebus.factory.min.js",
         "ctorArgumentsWithBindingNames": [
             "factoryContainerBindingName"
@@ -522,7 +522,7 @@
     "WebSocketClientRequestMessageQueueBinding": {
         "typeName": "WebSocketClientRequestMessageQueueBinding",
         "factoryScriptPath": "C://component//lib//factory//generated//websocketclientrequestmessagequeuebinding//websocketclientrequestmessagequeuebinding.factory.js",
-        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//websocketclientrequestmessagequeuebinding//websocketclientrequestmessagequeuebinding.factory.container.default.binding.json",
+        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//websocketclientrequestmessagequeuebinding//websocketclientrequestmessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
         "minFactoryScriptPath": "C://component//lib//factory//generated//websocketclientrequestmessagequeuebinding//websocketclientrequestmessagequeuebinding.factory.min.js",
         "ctorArgumentsWithBindingNames": [
             "factoryContainerBindingName"
@@ -532,7 +532,7 @@
     "WebSocketClientResponseMessageBus": {
         "typeName": "WebSocketClientResponseMessageBus",
         "factoryScriptPath": "C://component//lib//factory//generated//websocketclientresponsemessagebus//websocketclientresponsemessagebus.factory.js",
-        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//websocketclientresponsemessagebus//websocketclientresponsemessagebus.factory.container.default.binding.json",
+        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//websocketclientresponsemessagebus//websocketclientresponsemessagebus.factory.container.multiplerequestsspec.binding.json",
         "minFactoryScriptPath": "C://component//lib//factory//generated//websocketclientresponsemessagebus//websocketclientresponsemessagebus.factory.min.js",
         "ctorArgumentsWithBindingNames": [
             "factoryContainerBindingName"
@@ -542,7 +542,7 @@
     "WebSocketClientResponseMessageQueueBinding": {
         "typeName": "WebSocketClientResponseMessageQueueBinding",
         "factoryScriptPath": "C://component//lib//factory//generated//websocketclientresponsemessagequeuebinding//websocketclientresponsemessagequeuebinding.factory.js",
-        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//websocketclientresponsemessagequeuebinding//websocketclientresponsemessagequeuebinding.factory.container.default.binding.json",
+        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//websocketclientresponsemessagequeuebinding//websocketclientresponsemessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
         "minFactoryScriptPath": "C://component//lib//factory//generated//websocketclientresponsemessagequeuebinding//websocketclientresponsemessagequeuebinding.factory.min.js",
         "ctorArgumentsWithBindingNames": [
             "factoryContainerBindingName"
@@ -552,7 +552,7 @@
     "WebSocketRequestMessage": {
         "typeName": "WebSocketRequestMessage",
         "factoryScriptPath": "C://component//lib//factory//generated//websocketrequestmessage//websocketrequestmessage.factory.js",
-        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//websocketrequestmessage//websocketrequestmessage.factory.container.default.binding.json",
+        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//websocketrequestmessage//websocketrequestmessage.factory.container.multiplerequestsspec.binding.json",
         "minFactoryScriptPath": "C://component//lib//factory//generated//websocketrequestmessage//websocketrequestmessage.factory.min.js",
         "ctorArgumentsWithBindingNames": [
             "messageStatusCode",
@@ -581,7 +581,7 @@
     "WebSocketResponseMessage": {
         "typeName": "WebSocketResponseMessage",
         "factoryScriptPath": "C://component//lib//factory//generated//websocketresponsemessage//websocketresponsemessage.factory.js",
-        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//websocketresponsemessage//websocketresponsemessage.factory.container.default.binding.json",
+        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//websocketresponsemessage//websocketresponsemessage.factory.container.multiplerequestsspec.binding.json",
         "minFactoryScriptPath": "C://component//lib//factory//generated//websocketresponsemessage//websocketresponsemessage.factory.min.js",
         "ctorArgumentsWithBindingNames": [
             "messageStatusCode",
@@ -610,7 +610,7 @@
     "WebSocketServerRequestMessageBus": {
         "typeName": "WebSocketServerRequestMessageBus",
         "factoryScriptPath": "C://component//lib//factory//generated//websocketserverrequestmessagebus//websocketserverrequestmessagebus.factory.js",
-        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//websocketserverrequestmessagebus//websocketserverrequestmessagebus.factory.container.default.binding.json",
+        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//websocketserverrequestmessagebus//websocketserverrequestmessagebus.factory.container.multiplerequestsspec.binding.json",
         "minFactoryScriptPath": "C://component//lib//factory//generated//websocketserverrequestmessagebus//websocketserverrequestmessagebus.factory.min.js",
         "ctorArgumentsWithBindingNames": [
             "factoryContainerBindingName"
@@ -620,7 +620,7 @@
     "WebSocketServerRequestMessageQueueBinding": {
         "typeName": "WebSocketServerRequestMessageQueueBinding",
         "factoryScriptPath": "C://component//lib//factory//generated//websocketserverrequestmessagequeuebinding//websocketserverrequestmessagequeuebinding.factory.js",
-        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//websocketserverrequestmessagequeuebinding//websocketserverrequestmessagequeuebinding.factory.container.default.binding.json",
+        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//websocketserverrequestmessagequeuebinding//websocketserverrequestmessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
         "minFactoryScriptPath": "C://component//lib//factory//generated//websocketserverrequestmessagequeuebinding//websocketserverrequestmessagequeuebinding.factory.min.js",
         "ctorArgumentsWithBindingNames": [
             "factoryContainerBindingName"
@@ -630,7 +630,7 @@
     "WebSocketServerResponseMessageBus": {
         "typeName": "WebSocketServerResponseMessageBus",
         "factoryScriptPath": "C://component//lib//factory//generated//websocketserverresponsemessagebus//websocketserverresponsemessagebus.factory.js",
-        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//websocketserverresponsemessagebus//websocketserverresponsemessagebus.factory.container.default.binding.json",
+        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//websocketserverresponsemessagebus//websocketserverresponsemessagebus.factory.container.multiplerequestsspec.binding.json",
         "minFactoryScriptPath": "C://component//lib//factory//generated//websocketserverresponsemessagebus//websocketserverresponsemessagebus.factory.min.js",
         "ctorArgumentsWithBindingNames": [
             "factoryContainerBindingName"
@@ -640,7 +640,7 @@
     "WebSocketServerResponseMessageQueueBinding": {
         "typeName": "WebSocketServerResponseMessageQueueBinding",
         "factoryScriptPath": "C://component//lib//factory//generated//websocketserverresponsemessagequeuebinding//websocketserverresponsemessagequeuebinding.factory.js",
-        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//websocketserverresponsemessagequeuebinding//websocketserverresponsemessagequeuebinding.factory.container.default.binding.json",
+        "factoryContainerBindingFilePath": "C://component//lib//factory//generated//websocketserverresponsemessagequeuebinding//websocketserverresponsemessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
         "minFactoryScriptPath": "C://component//lib//factory//generated//websocketserverresponsemessagequeuebinding//websocketserverresponsemessagequeuebinding.factory.min.js",
         "ctorArgumentsWithBindingNames": [
             "factoryContainerBindingName"

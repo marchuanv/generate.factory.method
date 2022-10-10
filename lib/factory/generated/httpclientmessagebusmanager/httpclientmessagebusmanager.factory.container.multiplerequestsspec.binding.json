@@ -1,0 +1,22 @@
+{
+    "typeName": "HttpClientMessageBusManager",
+    "typeVariableName": "httpClientMessageBusManager",
+    "scriptPath": "C://component//lib//http//httpclientmessagebusmanager.js",
+    "prototypeScriptPath": "C://component//lib//http//httpclientmessagebusmanager.prototype.js",
+    "factoryScriptPath": "C://component//lib//factory//generated//httpclientmessagebusmanager//httpclientmessagebusmanager.factory.js",
+    "bindingName": "MultipleRequestsSpec",
+    "bindingFilePath": "C://component//lib//factory//generated//httpclientmessagebusmanager//httpclientmessagebusmanager.factory.container.multiplerequestsspec.binding.json",
+    "isSingleton": null,
+    "CtorParameters": {
+        "HttpClientStopMessageQueueBinding": {
+            "bindingFilePath": "C://component//lib//factory//generated//httpclientstopmessagequeuebinding//httpclientstopmessagequeuebinding.factory.container.multiplerequestsspec.binding.json"
+        },
+        "factoryContainerBindingName": null,
+        "HttpClientStartMessageQueueBinding": {
+            "bindingFilePath": "C://component//lib//factory//generated//httpclientstartmessagequeuebinding//httpclientstartmessagequeuebinding.factory.container.multiplerequestsspec.binding.json"
+        },
+        "HttpClientStartedMessageQueueBinding": {
+            "bindingFilePath": "C://component//lib//factory//generated//httpclientstartedmessagequeuebinding//httpclientstartedmessagequeuebinding.factory.container.multiplerequestsspec.binding.json"
+        }
+    }
+}

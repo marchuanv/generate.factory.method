@@ -1,0 +1,11 @@
+{
+    "typeName": "Logger",
+    "typeVariableName": "logger",
+    "scriptPath": "C://component//lib//logger.js",
+    "prototypeScriptPath": "C://component//lib//logger.prototype.js",
+    "factoryScriptPath": "C://component//lib//factory//generated//logger//logger.factory.js",
+    "bindingName": "MultipleRequestsSpec",
+    "bindingFilePath": "C://component//lib//factory//generated//logger//logger.factory.container.multiplerequestsspec.binding.json",
+    "isSingleton": null,
+    "CtorParameters": {}
+}

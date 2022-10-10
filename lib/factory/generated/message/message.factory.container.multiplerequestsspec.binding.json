@@ -1,0 +1,26 @@
+{
+    "typeName": "Message",
+    "typeVariableName": "message",
+    "scriptPath": "C://component//lib//message.js",
+    "prototypeScriptPath": "C://component//lib//message.prototype.js",
+    "factoryScriptPath": "C://component//lib//factory//generated//message//message.factory.js",
+    "bindingName": "MultipleRequestsSpec",
+    "bindingFilePath": "C://component//lib//factory//generated//message//message.factory.container.multiplerequestsspec.binding.json",
+    "isSingleton": null,
+    "CtorParameters": {
+        "MessageStatus": {
+            "bindingFilePath": "C://component//lib//factory//generated//messagestatus//messagestatus.factory.container.multiplerequestsspec.binding.json"
+        },
+        "factoryContainerBindingName": null,
+        "Id": null,
+        "MessageContent": {
+            "bindingFilePath": "C://component//lib//factory//generated//messagecontent//messagecontent.factory.container.multiplerequestsspec.binding.json"
+        },
+        "MessageContentMetadata": {
+            "bindingFilePath": "C://component//lib//factory//generated//messagecontentmetadata//messagecontentmetadata.factory.container.multiplerequestsspec.binding.json"
+        },
+        "MessageMetadata": {
+            "bindingFilePath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.multiplerequestsspec.binding.json"
+        }
+    }
+}
