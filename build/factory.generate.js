@@ -1,4 +1,4 @@
-const { readFileSync, writeFileSync, existsSync } = require('fs');
+const { readFileSync, writeFileSync, existsSync, mkdirSync } = require('fs');
 const path = require('path');
 
 const factoryTemplate = readFileSync(path.join(__dirname, 'templates', 'factory.template'),'utf8');
@@ -7,13 +7,13 @@ let factoryInfo = require(factoryInfoPath);
 
 for(const factoryInfoName of Object.keys(factoryInfo)) {
     const info = factoryInfo[factoryInfoName];
-    const { typeName, factoryContainerFilePath, ctorArgumentNames, ctorArgumentsWithBindingNames } = info;
+    const { typeName, factoryContainerBindingFilePath, ctorArgumentNames, ctorArgumentsWithBindingNames } = info;
     const factoryGeneratedDir = path.join(__dirname, '../lib', 'factory', 'generated', typeName.toLowerCase());
     if (!existsSync(factoryGeneratedDir)){
         mkdirSync(factoryGeneratedDir);
     }
     const factoryJson = factoryTemplate
-        .replace(/\[FactoryContainerFilePath\]/g, factoryContainerFilePath )
+        .replace(/\[FactoryContainerBindingFilePath\]/g, factoryContainerBindingFilePath )
         .replace(/\[TypeName\]/g, typeName)
         .replace(/\[PrimitiveArgs\]/g, ctorArgumentNames.join(','))
         .replace(/\[PrimitiveArgsWithBindingName\]/g, ctorArgumentsWithBindingNames.join(','));

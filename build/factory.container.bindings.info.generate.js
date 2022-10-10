@@ -1,27 +1,39 @@
-const { readFileSync, writeFileSync, existsSync } = require('fs');
+const { readFileSync, writeFileSync } = require('fs');
 const path = require('path');
 const utils = require('utils');
 const typesInfo = require(path.join(__dirname, 'types.info.json'));
-const factoryInfo = require(path.join(__dirname, 'factory.info.json'));
-const typeBindingsInfo = require(path.join(__dirname, 'type.bindings.info.json'));
 const factoryContainerBindingInfoTemplate = readFileSync(path.join(__dirname, 'templates', 'factory.container.binding.info.template'),'utf8');
 const factoryContainerBindingsInfoPath = path.join(__dirname, 'factory.container.bindings.info.json');
-const factoryContainerBindingsInfo = {};
 
-for(const typeName of Object.keys(typesInfo)) {
-    const factoryGeneratedDir = path.join(__dirname, '../lib', 'factory', 'generated', typeName.toLowerCase());
-    factoryContainerBindingsInfo[typeName] = {};
-    const _factoryInfo = factoryInfo[typeName];
-    const typeBinding = typeBindingsInfo.find(bindInfo => bindInfo.typeName === typeName);
-    const { isSingleton, ctorParameterInfo } = typeBinding;
-    for(const bindingName of typeBinding.bindingNames) {
-        const bindingFileName =  `${typeName.toLowerCase()}.factory.container.${bindingName.toLowerCase()}.binding.json`;
+module.exports = function({ factoryContainerBindingName }) {
+    const factoryContainerBindingsInfo = {};
+    for(const typeName of Object.keys(typesInfo)) {
+        const factoryGeneratedDir = path.join(__dirname, '../lib', 'factory', 'generated', typeName.toLowerCase());
+        const factoryScriptFileName = `${typeName.toLowerCase()}.factory.js`;
+        const factoryScriptPath = path.join(factoryGeneratedDir, factoryScriptFileName).replace(/\\/g,'//');
+        const { variableName, scriptPath, prototypeScriptPath } = typesInfo[typeName];
+        const { children } = typesInfo[typeName];
+        const ctorParametersInfo  = children.reduce((newParamInfo, child) => {
+            if (child.typeName) {
+                newParamInfo[child.typeName] = {}
+            } else {
+                newParamInfo[child.typeName] = null;
+            }
+            return newParamInfo;
+        },{});
+        const bindingFileName =  `${typeName.toLowerCase()}.factory.container.${factoryContainerBindingName.toLowerCase()}.binding.json`;
         const bindingFilePath = path.join(factoryGeneratedDir, bindingFileName).replace(/\\/g,'//');
-        factoryContainerBindingsInfo[typeName][bindingName] = utils.getJSONObject(factoryContainerBindingInfoTemplate
+        const binding = utils.getJSONObject(factoryContainerBindingInfoTemplate
+            .replace(/\[TypeName\]/g, typeName)
+            .replace(/\[TypeVariableName\]/g, variableName)
+            .replace(/\[ScriptPath\]/g, scriptPath)
+            .replace(/\[PrototypeScriptPath\]/g, prototypeScriptPath)
+            .replace(/\[FactoryScriptPath\]/g, factoryScriptPath)
+            .replace(/\[BindingName\]/g, factoryContainerBindingName)
+            .replace(/\[CtorParametersInfo\]/g, utils.getJSONString(ctorParametersInfo))
             .replace(/\[BindingFilePath\]/g, bindingFilePath)
-            .replace(/\[ContainerFilePath\]/g, _factoryInfo.factoryContainerFilePath)
-            .replace(/\[CtorParameterInfo\]/g, utils.getJSONString(ctorParameterInfo))
-            .replace(/\[isSingleton\]/g, isSingleton));
-    }
-};
-writeFileSync(factoryContainerBindingsInfoPath, utils.getJSONString(factoryContainerBindingsInfo), 'utf8');
+            .replace(/\[isSingleton\]/g, null));
+        factoryContainerBindingsInfo[typeName] = binding;
+    };
+    writeFileSync(factoryContainerBindingsInfoPath, utils.getJSONString(factoryContainerBindingsInfo), 'utf8');
+}

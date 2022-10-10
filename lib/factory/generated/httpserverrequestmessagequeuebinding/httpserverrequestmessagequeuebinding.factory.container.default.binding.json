@@ -1,0 +1,16 @@
+{
+    "typeName": "HttpServerRequestMessageQueueBinding",
+    "typeVariableName": "httpServerRequestMessageQueueBinding",
+    "scriptPath": "C://component//lib//http//httpserverrequestmessagequeuebinding.js",
+    "prototypeScriptPath": "C://component//lib//http//httpserverrequestmessagequeuebinding.prototype.js",
+    "factoryScriptPath": "C://component//lib//factory//generated//httpserverrequestmessagequeuebinding//httpserverrequestmessagequeuebinding.factory.js",
+    "bindingName": "Default",
+    "bindingFilePath": "C://component//lib//factory//generated//httpserverrequestmessagequeuebinding//httpserverrequestmessagequeuebinding.factory.container.default.binding.json",
+    "isSingleton": null,
+    "CtorParameters": {
+        "factoryContainerBindingName": null,
+        "MessageQueue": {
+            "bindingFilePath": "C://component//lib//factory//generated//messagequeue//messagequeue.factory.container.default.binding.json"
+        }
+    }
+}

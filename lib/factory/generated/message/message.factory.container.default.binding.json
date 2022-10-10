@@ -1,0 +1,26 @@
+{
+    "typeName": "Message",
+    "typeVariableName": "message",
+    "scriptPath": "C://component//lib//message.js",
+    "prototypeScriptPath": "C://component//lib//message.prototype.js",
+    "factoryScriptPath": "C://component//lib//factory//generated//message//message.factory.js",
+    "bindingName": "Default",
+    "bindingFilePath": "C://component//lib//factory//generated//message//message.factory.container.default.binding.json",
+    "isSingleton": null,
+    "CtorParameters": {
+        "MessageStatus": {
+            "bindingFilePath": "C://component//lib//factory//generated//messagestatus//messagestatus.factory.container.default.binding.json"
+        },
+        "factoryContainerBindingName": null,
+        "Id": null,
+        "MessageContent": {
+            "bindingFilePath": "C://component//lib//factory//generated//messagecontent//messagecontent.factory.container.default.binding.json"
+        },
+        "MessageContentMetadata": {
+            "bindingFilePath": "C://component//lib//factory//generated//messagecontentmetadata//messagecontentmetadata.factory.container.default.binding.json"
+        },
+        "MessageMetadata": {
+            "bindingFilePath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.default.binding.json"
+        }
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "typeName": "RecipientAddress",
+    "typeVariableName": "recipientAddress",
+    "scriptPath": "C://component//lib//recipientaddress.js",
+    "prototypeScriptPath": "C://component//lib//recipientaddress.prototype.js",
+    "factoryScriptPath": "C://component//lib//factory//generated//recipientaddress//recipientaddress.factory.js",
+    "bindingName": "Default",
+    "bindingFilePath": "C://component//lib//factory//generated//recipientaddress//recipientaddress.factory.container.default.binding.json",
+    "isSingleton": null,
+    "CtorParameters": {
+        "recipientHost": null,
+        "recipientPort": null
+    }
+}

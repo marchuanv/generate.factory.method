@@ -20,9 +20,7 @@ if (!existsSync(generatedFactoryScriptsDir)){
 }
 
 require('./type.info.generate');
-require('./type.bindings.info.generate');
-require('./factory.info.generate');
-require('./factory.container.bindings.info.generate');
-require('./factory.container.bindings.generate');
+require('./factory.container.bindings.info.generate')({ factoryContainerBindingName: 'Default' });
+require('./factory.info.generate')({ factoryContainerBindingName: 'Default' });
+require('./factory.container.bindings.generate')({ factoryContainerBindingName: 'Default' });
 require('./factory.generate');
-require('./factory.containers.generate');

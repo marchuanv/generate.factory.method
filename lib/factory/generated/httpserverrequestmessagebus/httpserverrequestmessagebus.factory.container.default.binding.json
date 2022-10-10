@@ -1,0 +1,15 @@
+{
+    "typeName": "HttpServerRequestMessageBus",
+    "typeVariableName": "serverRequestMessageBus",
+    "scriptPath": "C://component//lib//http//httpserverrequestmessagebus.js",
+    "prototypeScriptPath": "C://component//lib//http//httpserverrequestmessagebus.prototype.js",
+    "factoryScriptPath": "C://component//lib//factory//generated//httpserverrequestmessagebus//httpserverrequestmessagebus.factory.js",
+    "bindingName": "Default",
+    "bindingFilePath": "C://component//lib//factory//generated//httpserverrequestmessagebus//httpserverrequestmessagebus.factory.container.default.binding.json",
+    "isSingleton": null,
+    "CtorParameters": {
+        "HttpServerRequestMessageQueueBinding": {
+            "bindingFilePath": "C://component//lib//factory//generated//httpserverrequestmessagequeuebinding//httpserverrequestmessagequeuebinding.factory.container.default.binding.json"
+        }
+    }
+}

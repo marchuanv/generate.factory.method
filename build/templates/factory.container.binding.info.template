@@ -1,6 +1,11 @@
 {
+    "typeName": "[TypeName]",
+    "typeVariableName": "[TypeVariableName]",
+    "scriptPath": "[ScriptPath]",
+    "prototypeScriptPath": "[PrototypeScriptPath]",
+    "factoryScriptPath": "[FactoryScriptPath]",
+    "bindingName": "[BindingName]",
     "bindingFilePath": "[BindingFilePath]",
-    "containerFilePath": "[ContainerFilePath]",
     "isSingleton": [isSingleton],
-    "ctorParameterInfo": [CtorParameterInfo]
+    "ctorParametersInfo":  [CtorParametersInfo]
 }

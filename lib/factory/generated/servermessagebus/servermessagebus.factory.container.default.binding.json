@@ -1,0 +1,21 @@
+{
+    "typeName": "ServerMessageBus",
+    "typeVariableName": "serverMessageBus",
+    "scriptPath": "C://component//lib//servermessagebus.js",
+    "prototypeScriptPath": "C://component//lib//servermessagebus.prototype.js",
+    "factoryScriptPath": "C://component//lib//factory//generated//servermessagebus//servermessagebus.factory.js",
+    "bindingName": "Default",
+    "bindingFilePath": "C://component//lib//factory//generated//servermessagebus//servermessagebus.factory.container.default.binding.json",
+    "isSingleton": null,
+    "CtorParameters": {
+        "MessageConverter": {
+            "bindingFilePath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.default.binding.json"
+        },
+        "HttpServerResponseMessageBus": {
+            "bindingFilePath": "C://component//lib//factory//generated//httpserverresponsemessagebus//httpserverresponsemessagebus.factory.container.default.binding.json"
+        },
+        "HttpServerRequestMessageBus": {
+            "bindingFilePath": "C://component//lib//factory//generated//httpserverrequestmessagebus//httpserverrequestmessagebus.factory.container.default.binding.json"
+        }
+    }
+}

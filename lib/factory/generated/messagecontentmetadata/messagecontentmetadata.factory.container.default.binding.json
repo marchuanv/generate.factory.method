@@ -1,0 +1,14 @@
+{
+    "typeName": "MessageContentMetadata",
+    "typeVariableName": "messageContentMetadata",
+    "scriptPath": "C://component//lib//messagecontentmetadata.js",
+    "prototypeScriptPath": "C://component//lib//messagecontentmetadata.prototype.js",
+    "factoryScriptPath": "C://component//lib//factory//generated//messagecontentmetadata//messagecontentmetadata.factory.js",
+    "bindingName": "Default",
+    "bindingFilePath": "C://component//lib//factory//generated//messagecontentmetadata//messagecontentmetadata.factory.container.default.binding.json",
+    "isSingleton": null,
+    "CtorParameters": {
+        "factoryContainerBindingName": null,
+        "data": null
+    }
+}

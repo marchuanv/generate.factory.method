@@ -1,0 +1,14 @@
+{
+    "typeName": "SenderAddress",
+    "typeVariableName": "senderAddress",
+    "scriptPath": "C://component//lib//senderaddress.js",
+    "prototypeScriptPath": "C://component//lib//senderaddress.prototype.js",
+    "factoryScriptPath": "C://component//lib//factory//generated//senderaddress//senderaddress.factory.js",
+    "bindingName": "Default",
+    "bindingFilePath": "C://component//lib//factory//generated//senderaddress//senderaddress.factory.container.default.binding.json",
+    "isSingleton": null,
+    "CtorParameters": {
+        "senderHost": null,
+        "senderPort": null
+    }
+}

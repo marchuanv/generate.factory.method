@@ -1,5 +1,5 @@
 const { Factory } = require('../../factory.js');
-const container = require('[FactoryContainerFilePath]');
+const container = require('[FactoryContainerBindingFilePath]');
 const factory = new Factory(container);
 
 /**

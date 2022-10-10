@@ -1,9 +1,0 @@
-{
-    "bindingName": "MultipleRequestsSpec",
-    "containerFilePath": "D://component//lib//factory//generated//messagestatus//messagestatus.factory.container.json",
-    "isSingleton": false,
-    "ctorParameters": {
-        "messageStatusCode": null
-    },
-    "instances": {}
-}

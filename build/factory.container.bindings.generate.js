@@ -5,29 +5,58 @@ const typesInfo = require(path.join(__dirname, 'types.info.json'));
 const factoryContainerBindingTemplate = readFileSync(path.join(__dirname, 'templates', 'factory.container.binding.template'),'utf8');
 const factoryContainerBindingsInfo = require('./factory.container.bindings.info.json');
 
-for(const typeName of Object.keys(typesInfo)) {
-    const factoryContainerBindingInfo = factoryContainerBindingsInfo[typeName];
-    for(const factoryContainerBindingName of Object.keys(factoryContainerBindingInfo)) {
-        let { bindingFilePath, isSingleton, ctorParameterInfo, containerFilePath } = factoryContainerBindingInfo[factoryContainerBindingName];
-        ctorParameterInfo = ctorParameterInfo.reduce((params, param) => {
-            if (param.typeName) {
-                const depBinding =  factoryContainerBindingsInfo[param.typeName][factoryContainerBindingName];
-                params[param.name] = { containerFilePath: depBinding.containerFilePath };
-            } else {
-                params[param.name] = null;
+
+const enumberateBindings = ({ factoryContainerBindingName, typeName }, callback) => {
+    for(const _typeName of Object.keys(typesInfo)) {
+        if (typeName && typeName !== _typeName) {
+            continue;
+        }
+        const binding = factoryContainerBindingsInfo[_typeName];
+        if (binding.bindingName === factoryContainerBindingName) {
+            callback(binding);
+        }
+    };
+};
+
+module.exports = function({ factoryContainerBindingName }) {
+   enumberateBindings({ factoryContainerBindingName, typeName: null }, ({
+        ctorParametersInfo,
+        isSingleton,
+        scriptPath,
+        prototypeScriptPath,
+        typeVariableName,
+        bindingFilePath,
+        bindingName,
+        typeName,
+        factoryScriptPath
+   }) => {
+        for(const ctorParamName of Object.keys(ctorParametersInfo)) {
+            const param = ctorParametersInfo[ctorParamName];
+            if (param) {
+                if (factoryContainerBindingsInfo[ctorParamName]) {
+                    enumberateBindings({ factoryContainerBindingName, typeName: ctorParamName }, ({ bindingFilePath }) => {
+                        ctorParametersInfo[ctorParamName] = { bindingFilePath };
+                    });
+                } else {
+                    ctorParametersInfo[ctorParamName] = null;
+                }
             }
-            return params;
-        },{});
+        };
         const factoryGeneratedDir = path.join(__dirname, '../lib', 'factory', 'generated', typeName.toLowerCase());
         if (!existsSync(factoryGeneratedDir)){
             mkdirSync(factoryGeneratedDir);
         }
         const factoryContainerBindingJson = factoryContainerBindingTemplate
-            .replace(/\[BindingName\]/g, factoryContainerBindingName)
+            .replace(/\[TypeName\]/g, typeName)
+            .replace(/\[TypeVariableName\]/g, typeVariableName)
+            .replace(/\[ScriptPath\]/g, scriptPath)
+            .replace(/\[PrototypeScriptPath\]/g, prototypeScriptPath)
+            .replace(/\[FactoryScriptPath\]/g, factoryScriptPath)
+            .replace(/\[BindingName\]/g, bindingName)
+            .replace(/\[BindingFilePath\]/g, bindingFilePath)
             .replace(/\[IsSingleton\]/g, isSingleton)
-            .replace(/\[ContainerFilePath\]/g, containerFilePath)
-            .replace(/\[CtorParameters\]/g, utils.getJSONString(ctorParameterInfo));
+            .replace(/\[CtorParameters\]/g, utils.getJSONString(ctorParametersInfo));
         const factoryContainerBinding = utils.getJSONObject(factoryContainerBindingJson);
         writeFileSync(bindingFilePath, utils.getJSONString(factoryContainerBinding), 'utf8');
-    };
-};
+    });
+}
