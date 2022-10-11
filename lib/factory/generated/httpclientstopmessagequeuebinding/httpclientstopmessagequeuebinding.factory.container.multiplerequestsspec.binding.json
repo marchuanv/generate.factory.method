@@ -2,12 +2,10 @@
     "typeName": "HttpClientStopMessageQueueBinding",
     "typeVariableName": "httpClientStopMessageQueueBinding",
     "scriptPath": "C://component//lib//http//httpclientstopmessagequeuebinding.js",
-    "prototypeScriptPath": "C://component//lib//http//httpclientstopmessagequeuebinding.prototype.js",
-    "factoryScriptPath": "C://component//lib//factory//generated//httpclientstopmessagequeuebinding//httpclientstopmessagequeuebinding.factory.js",
     "bindingName": "MultipleRequestsSpec",
     "bindingFilePath": "C://component//lib//factory//generated//httpclientstopmessagequeuebinding//httpclientstopmessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
     "isSingleton": null,
-    "CtorParameters": {
+    "ctorParameters": {
         "factoryContainerBindingName": null,
         "MessageQueue": null
     }

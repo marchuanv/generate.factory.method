@@ -2,12 +2,10 @@
     "typeName": "WebSocketServerRequestMessageBus",
     "typeVariableName": "webSocketServerRequestMessageBus",
     "scriptPath": "C://component//lib//websocket//websocketserverrequestmessagebus.js",
-    "prototypeScriptPath": "C://component//lib//websocket//websocketserverrequestmessagebus.prototype.js",
-    "factoryScriptPath": "C://component//lib//factory//generated//websocketserverrequestmessagebus//websocketserverrequestmessagebus.factory.js",
     "bindingName": "MultipleRequestsSpec",
     "bindingFilePath": "C://component//lib//factory//generated//websocketserverrequestmessagebus//websocketserverrequestmessagebus.factory.container.multiplerequestsspec.binding.json",
     "isSingleton": null,
-    "CtorParameters": {
+    "ctorParameters": {
         "WebSocketServerRequestMessageQueueBinding": null
     }
 }

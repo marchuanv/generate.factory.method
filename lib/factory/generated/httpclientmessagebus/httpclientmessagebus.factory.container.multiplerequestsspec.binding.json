@@ -2,12 +2,10 @@
     "typeName": "HttpClientMessageBus",
     "typeVariableName": "httpClientMessageBus",
     "scriptPath": "C://component//lib//http//httpclientmessagebus.js",
-    "prototypeScriptPath": "C://component//lib//http//httpclientmessagebus.prototype.js",
-    "factoryScriptPath": "C://component//lib//factory//generated//httpclientmessagebus//httpclientmessagebus.factory.js",
     "bindingName": "MultipleRequestsSpec",
     "bindingFilePath": "C://component//lib//factory//generated//httpclientmessagebus//httpclientmessagebus.factory.container.multiplerequestsspec.binding.json",
     "isSingleton": null,
-    "CtorParameters": {
+    "ctorParameters": {
         "timeout": null,
         "factoryContainerBindingName": null,
         "HttpClientRequestMessageQueueBinding": null,

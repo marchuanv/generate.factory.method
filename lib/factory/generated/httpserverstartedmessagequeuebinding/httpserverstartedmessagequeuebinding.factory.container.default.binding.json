@@ -2,12 +2,10 @@
     "typeName": "HttpServerStartedMessageQueueBinding",
     "typeVariableName": "httpServerStartedMessageQueueBinding",
     "scriptPath": "C://component//lib//http//httpserverstartedmessagequeuebinding.js",
-    "prototypeScriptPath": "C://component//lib//http//httpserverstartedmessagequeuebinding.prototype.js",
-    "factoryScriptPath": "C://component//lib//factory//generated//httpserverstartedmessagequeuebinding//httpserverstartedmessagequeuebinding.factory.js",
     "bindingName": "Default",
     "bindingFilePath": "C://component//lib//factory//generated//httpserverstartedmessagequeuebinding//httpserverstartedmessagequeuebinding.factory.container.default.binding.json",
     "isSingleton": null,
-    "CtorParameters": {
+    "ctorParameters": {
         "factoryContainerBindingName": null,
         "MessageQueue": null
     }

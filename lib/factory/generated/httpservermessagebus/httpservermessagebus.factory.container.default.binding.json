@@ -2,12 +2,10 @@
     "typeName": "HttpServerMessageBus",
     "typeVariableName": "httpServerMessageBus",
     "scriptPath": "C://component//lib//http//httpservermessagebus.js",
-    "prototypeScriptPath": "C://component//lib//http//httpservermessagebus.prototype.js",
-    "factoryScriptPath": "C://component//lib//factory//generated//httpservermessagebus//httpservermessagebus.factory.js",
     "bindingName": "Default",
     "bindingFilePath": "C://component//lib//factory//generated//httpservermessagebus//httpservermessagebus.factory.container.default.binding.json",
     "isSingleton": null,
-    "CtorParameters": {
+    "ctorParameters": {
         "timeout": null,
         "factoryContainerBindingName": null,
         "HttpServerRequestMessageQueueBinding": null,

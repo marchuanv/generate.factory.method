@@ -2,12 +2,10 @@
     "typeName": "MessageQueue",
     "typeVariableName": "messageQueue",
     "scriptPath": "C://component//lib//messagequeue.js",
-    "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
-    "factoryScriptPath": "C://component//lib//factory//generated//messagequeue//messagequeue.factory.js",
     "bindingName": "MultipleRequestsSpec",
     "bindingFilePath": "C://component//lib//factory//generated//messagequeue//messagequeue.factory.container.multiplerequestsspec.binding.json",
     "isSingleton": null,
-    "CtorParameters": {
+    "ctorParameters": {
         "Logger": null
     }
 }

@@ -2,12 +2,10 @@
     "typeName": "HttpClientStartMessageQueueBinding",
     "typeVariableName": "httpClientStartMessageQueueBinding",
     "scriptPath": "C://component//lib//http//httpclientstartmessagequeuebinding.js",
-    "prototypeScriptPath": "C://component//lib//http//httpclientstartmessagequeuebinding.prototype.js",
-    "factoryScriptPath": "C://component//lib//factory//generated//httpclientstartmessagequeuebinding//httpclientstartmessagequeuebinding.factory.js",
     "bindingName": "Default",
     "bindingFilePath": "C://component//lib//factory//generated//httpclientstartmessagequeuebinding//httpclientstartmessagequeuebinding.factory.container.default.binding.json",
     "isSingleton": null,
-    "CtorParameters": {
+    "ctorParameters": {
         "factoryContainerBindingName": null,
         "MessageQueue": null
     }

@@ -2,12 +2,10 @@
     "typeName": "RecipientAddress",
     "typeVariableName": "recipientAddress",
     "scriptPath": "C://component//lib//recipientaddress.js",
-    "prototypeScriptPath": "C://component//lib//recipientaddress.prototype.js",
-    "factoryScriptPath": "C://component//lib//factory//generated//recipientaddress//recipientaddress.factory.js",
     "bindingName": "MultipleRequestsSpec",
     "bindingFilePath": "C://component//lib//factory//generated//recipientaddress//recipientaddress.factory.container.multiplerequestsspec.binding.json",
     "isSingleton": null,
-    "CtorParameters": {
+    "ctorParameters": {
         "recipientHost": null,
         "recipientPort": null
     }

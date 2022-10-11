@@ -2,12 +2,10 @@
     "typeName": "MessageContent",
     "typeVariableName": "messageContent",
     "scriptPath": "C://component//lib//messagecontent.js",
-    "prototypeScriptPath": "C://component//lib//messagecontent.prototype.js",
-    "factoryScriptPath": "C://component//lib//factory//generated//messagecontent//messagecontent.factory.js",
     "bindingName": "MultipleRequestsSpec",
     "bindingFilePath": "C://component//lib//factory//generated//messagecontent//messagecontent.factory.container.multiplerequestsspec.binding.json",
     "isSingleton": null,
-    "CtorParameters": {
+    "ctorParameters": {
         "MessageContentMetadata": null,
         "data": null,
         "UserSessions": null,

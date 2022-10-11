@@ -2,12 +2,10 @@
     "typeName": "HttpRequestMessage",
     "typeVariableName": "httpRequestMessage",
     "scriptPath": "C://component//lib//http//httprequestmessage.js",
-    "prototypeScriptPath": "C://component//lib//http//httprequestmessage.prototype.js",
-    "factoryScriptPath": "C://component//lib//factory//generated//httprequestmessage//httprequestmessage.factory.js",
     "bindingName": "Default",
     "bindingFilePath": "C://component//lib//factory//generated//httprequestmessage//httprequestmessage.factory.container.default.binding.json",
     "isSingleton": null,
-    "CtorParameters": {
+    "ctorParameters": {
         "Message": null
     }
 }

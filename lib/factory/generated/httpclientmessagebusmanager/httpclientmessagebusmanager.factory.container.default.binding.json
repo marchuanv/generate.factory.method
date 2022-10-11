@@ -2,12 +2,10 @@
     "typeName": "HttpClientMessageBusManager",
     "typeVariableName": "httpClientMessageBusManager",
     "scriptPath": "C://component//lib//http//httpclientmessagebusmanager.js",
-    "prototypeScriptPath": "C://component//lib//http//httpclientmessagebusmanager.prototype.js",
-    "factoryScriptPath": "C://component//lib//factory//generated//httpclientmessagebusmanager//httpclientmessagebusmanager.factory.js",
     "bindingName": "Default",
     "bindingFilePath": "C://component//lib//factory//generated//httpclientmessagebusmanager//httpclientmessagebusmanager.factory.container.default.binding.json",
     "isSingleton": null,
-    "CtorParameters": {
+    "ctorParameters": {
         "HttpClientStopMessageQueueBinding": null,
         "factoryContainerBindingName": null,
         "HttpClientStartMessageQueueBinding": null,

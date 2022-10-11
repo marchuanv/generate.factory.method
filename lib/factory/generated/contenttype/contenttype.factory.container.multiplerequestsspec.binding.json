@@ -2,12 +2,10 @@
     "typeName": "ContentType",
     "typeVariableName": "contentType",
     "scriptPath": "C://component//lib//contentType.js",
-    "prototypeScriptPath": "C://component//lib//contentType.prototype.js",
-    "factoryScriptPath": "C://component//lib//factory//generated//contenttype//contenttype.factory.js",
     "bindingName": "MultipleRequestsSpec",
     "bindingFilePath": "C://component//lib//factory//generated//contenttype//contenttype.factory.container.multiplerequestsspec.binding.json",
     "isSingleton": null,
-    "CtorParameters": {
+    "ctorParameters": {
         "name": null
     }
 }

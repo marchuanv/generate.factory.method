@@ -2,10 +2,8 @@
     "typeName": "MessageStore",
     "typeVariableName": "messageStore",
     "scriptPath": "C://component//lib//messagestore.js",
-    "prototypeScriptPath": "C://component//lib//messagestore.prototype.js",
-    "factoryScriptPath": "C://component//lib//factory//generated//messagestore//messagestore.factory.js",
     "bindingName": "Default",
     "bindingFilePath": "C://component//lib//factory//generated//messagestore//messagestore.factory.container.default.binding.json",
     "isSingleton": null,
-    "CtorParameters": {}
+    "ctorParameters": {}
 }

@@ -2,10 +2,8 @@
     "typeName": "MessageConverter",
     "typeVariableName": "messageConverter",
     "scriptPath": "C://component//lib//messageconverter.js",
-    "prototypeScriptPath": "C://component//lib//messageconverter.prototype.js",
-    "factoryScriptPath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.js",
     "bindingName": "Default",
     "bindingFilePath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.default.binding.json",
     "isSingleton": null,
-    "CtorParameters": {}
+    "ctorParameters": {}
 }

@@ -2,12 +2,10 @@
     "typeName": "WebSocketServerResponseMessageBus",
     "typeVariableName": "webSocketServerResponseMessageBus",
     "scriptPath": "C://component//lib//websocket//websocketserverresponsemessagebus.js",
-    "prototypeScriptPath": "C://component//lib//websocket//websocketserverresponsemessagebus.prototype.js",
-    "factoryScriptPath": "C://component//lib//factory//generated//websocketserverresponsemessagebus//websocketserverresponsemessagebus.factory.js",
     "bindingName": "Default",
     "bindingFilePath": "C://component//lib//factory//generated//websocketserverresponsemessagebus//websocketserverresponsemessagebus.factory.container.default.binding.json",
     "isSingleton": null,
-    "CtorParameters": {
+    "ctorParameters": {
         "WebSocketServerResponseMessageQueueBinding": null
     }
 }

@@ -10,6 +10,7 @@
     "stopSpecOnExpectationFailure": false,
     "stopOnSpecFailure": false,
     "random": false,
-    "color": true
+    "color": true,
+    "captureExceptions": true
   }
 }

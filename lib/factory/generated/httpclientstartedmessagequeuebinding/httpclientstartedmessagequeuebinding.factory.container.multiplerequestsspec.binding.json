@@ -2,12 +2,10 @@
     "typeName": "HttpClientStartedMessageQueueBinding",
     "typeVariableName": "httpClientStartedMessageQueueBinding",
     "scriptPath": "C://component//lib//http//httpclientstartedmessagequeuebinding.js",
-    "prototypeScriptPath": "C://component//lib//http//httpclientstartedmessagequeuebinding.prototype.js",
-    "factoryScriptPath": "C://component//lib//factory//generated//httpclientstartedmessagequeuebinding//httpclientstartedmessagequeuebinding.factory.js",
     "bindingName": "MultipleRequestsSpec",
     "bindingFilePath": "C://component//lib//factory//generated//httpclientstartedmessagequeuebinding//httpclientstartedmessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
     "isSingleton": null,
-    "CtorParameters": {
+    "ctorParameters": {
         "factoryContainerBindingName": null,
         "MessageQueue": null
     }

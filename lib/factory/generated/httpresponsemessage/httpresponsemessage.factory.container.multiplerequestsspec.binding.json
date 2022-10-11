@@ -2,12 +2,10 @@
     "typeName": "HttpResponseMessage",
     "typeVariableName": "httpResponseMessage",
     "scriptPath": "C://component//lib//http//httpresponsemessage.js",
-    "prototypeScriptPath": "C://component//lib//http//httpresponsemessage.prototype.js",
-    "factoryScriptPath": "C://component//lib//factory//generated//httpresponsemessage//httpresponsemessage.factory.js",
     "bindingName": "MultipleRequestsSpec",
     "bindingFilePath": "C://component//lib//factory//generated//httpresponsemessage//httpresponsemessage.factory.container.multiplerequestsspec.binding.json",
     "isSingleton": null,
-    "CtorParameters": {
+    "ctorParameters": {
         "Message": null
     }
 }

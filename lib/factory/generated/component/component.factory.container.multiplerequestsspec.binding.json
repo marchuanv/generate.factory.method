@@ -2,12 +2,10 @@
     "typeName": "Component",
     "typeVariableName": "component",
     "scriptPath": "C://component//lib//component.js",
-    "prototypeScriptPath": "C://component//lib//component.prototype.js",
-    "factoryScriptPath": "C://component//lib//factory//generated//component//component.factory.js",
     "bindingName": "MultipleRequestsSpec",
     "bindingFilePath": "C://component//lib//factory//generated//component//component.factory.container.multiplerequestsspec.binding.json",
     "isSingleton": null,
-    "CtorParameters": {
+    "ctorParameters": {
         "packageJson": null,
         "factoryContainerBindingName": null,
         "ClientMessageBus": null,

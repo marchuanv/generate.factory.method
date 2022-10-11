@@ -2,12 +2,10 @@
     "typeName": "Message",
     "typeVariableName": "message",
     "scriptPath": "C://component//lib//message.js",
-    "prototypeScriptPath": "C://component//lib//message.prototype.js",
-    "factoryScriptPath": "C://component//lib//factory//generated//message//message.factory.js",
     "bindingName": "MultipleRequestsSpec",
     "bindingFilePath": "C://component//lib//factory//generated//message//message.factory.container.multiplerequestsspec.binding.json",
     "isSingleton": null,
-    "CtorParameters": {
+    "ctorParameters": {
         "MessageStatus": null,
         "factoryContainerBindingName": null,
         "Id": null,

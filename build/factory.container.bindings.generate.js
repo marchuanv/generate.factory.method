@@ -50,8 +50,6 @@ module.exports = function({ factoryContainerBindingName }) {
             .replace(/\[TypeName\]/g, typeName)
             .replace(/\[TypeVariableName\]/g, typeVariableName)
             .replace(/\[ScriptPath\]/g, scriptPath)
-            .replace(/\[PrototypeScriptPath\]/g, prototypeScriptPath)
-            .replace(/\[FactoryScriptPath\]/g, factoryScriptPath)
             .replace(/\[BindingName\]/g, bindingName)
             .replace(/\[BindingFilePath\]/g, bindingFilePath)
             .replace(/\[IsSingleton\]/g, isSingleton)

@@ -2,12 +2,10 @@
     "typeName": "HttpServerResponseMessageBus",
     "typeVariableName": "serverResponseMessageBus",
     "scriptPath": "C://component//lib//http//httpserverresponsemessagebus.js",
-    "prototypeScriptPath": "C://component//lib//http//httpserverresponsemessagebus.prototype.js",
-    "factoryScriptPath": "C://component//lib//factory//generated//httpserverresponsemessagebus//httpserverresponsemessagebus.factory.js",
     "bindingName": "MultipleRequestsSpec",
     "bindingFilePath": "C://component//lib//factory//generated//httpserverresponsemessagebus//httpserverresponsemessagebus.factory.container.multiplerequestsspec.binding.json",
     "isSingleton": null,
-    "CtorParameters": {
+    "ctorParameters": {
         "HttpServerResponseMessageQueueBinding": null
     }
 }

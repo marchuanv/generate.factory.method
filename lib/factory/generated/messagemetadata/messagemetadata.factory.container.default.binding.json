@@ -2,12 +2,10 @@
     "typeName": "MessageMetadata",
     "typeVariableName": "messageMetadata",
     "scriptPath": "C://component//lib//messagemetadata.js",
-    "prototypeScriptPath": "C://component//lib//messagemetadata.prototype.js",
-    "factoryScriptPath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.js",
     "bindingName": "Default",
     "bindingFilePath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.default.binding.json",
     "isSingleton": null,
-    "CtorParameters": {
+    "ctorParameters": {
         "RecipientAddress": null,
         "metadata": null,
         "token": null,
