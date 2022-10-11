@@ -16,10 +16,10 @@ module.exports = function({ factoryContainerBindingName }) {
         const { variableName, scriptPath, prototypeScriptPath } = typesInfo[typeName];
         const { children } = typesInfo[typeName];
         const ctorParametersInfo  = children.reduce((newParamInfo, child) => {
-            if (child.typeName) {
-                newParamInfo[child.typeName] = {}
+            if (child.scriptPath) {
+                newParamInfo[child.variableName] = child.typeName;
             } else {
-                newParamInfo[child.typeName] = null;
+                newParamInfo[child.variableName] = null;
             }
             return newParamInfo;
         },{});

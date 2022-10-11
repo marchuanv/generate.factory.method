@@ -8,11 +8,6 @@
     "ctorParameters": {
         "timeout": null,
         "factoryContainerBindingName": null,
-        "HttpClientRequestMessageQueueBinding": null,
-        "HttpClientResponseMessageQueueBinding": null,
-        "HttpClientStartMessageQueueBinding": null,
-        "HttpClientStartedMessageQueueBinding": null,
-        "HttpClientStopMessageQueueBinding": null,
         "httpClientRequestMessageQueueBinding": {
             "bindingFilePath": "C://component//lib//factory//generated//httpclientrequestmessagequeuebinding//httpclientrequestmessagequeuebinding.factory.container.default.binding.json"
         },

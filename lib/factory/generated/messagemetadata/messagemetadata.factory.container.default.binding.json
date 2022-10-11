@@ -6,13 +6,11 @@
     "bindingFilePath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.default.binding.json",
     "isSingleton": null,
     "ctorParameters": {
-        "RecipientAddress": null,
-        "metadata": null,
-        "token": null,
-        "SenderAddress": null,
         "recipientAddress": {
             "bindingFilePath": "C://component//lib//factory//generated//recipientaddress//recipientaddress.factory.container.default.binding.json"
         },
+        "metadata": null,
+        "token": null,
         "senderAddress": {
             "bindingFilePath": "C://component//lib//factory//generated//senderaddress//senderaddress.factory.container.default.binding.json"
         }

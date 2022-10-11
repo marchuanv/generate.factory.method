@@ -18,20 +18,19 @@ module.exports = function({ factoryContainerBindingName }) {
         ctorParametersInfo,
         isSingleton,
         scriptPath,
-        prototypeScriptPath,
         typeVariableName,
         bindingFilePath,
         bindingName,
-        typeName,
-        factoryScriptPath
+        typeName
    }) => {
         for(const ctorParamName of Object.keys(ctorParametersInfo)) {
-            const param = ctorParametersInfo[ctorParamName];
-            if (param) {
-                ctorParametersInfo[ctorParamName] = null;
-                enumerateBindings({ factoryContainerBindingName, typeName: ctorParamName }, ({ bindingFilePath, typeVariableName}) => {
-                    ctorParametersInfo[typeVariableName] = { bindingFilePath };
+            const typeName = ctorParametersInfo[ctorParamName];
+            if (typeName) {
+                enumerateBindings({ factoryContainerBindingName, typeName }, ({ bindingFilePath }) => {
+                    ctorParametersInfo[ctorParamName] = { bindingFilePath };
                 });
+            } else {
+                ctorParametersInfo[ctorParamName] = null;
             }
         };
         const factoryGeneratedDir = path.join(__dirname, '../lib', 'factory', 'generated', typeName.toLowerCase());

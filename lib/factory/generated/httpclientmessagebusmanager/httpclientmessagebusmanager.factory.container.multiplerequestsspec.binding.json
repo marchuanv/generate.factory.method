@@ -6,13 +6,10 @@
     "bindingFilePath": "C://component//lib//factory//generated//httpclientmessagebusmanager//httpclientmessagebusmanager.factory.container.multiplerequestsspec.binding.json",
     "isSingleton": null,
     "ctorParameters": {
-        "HttpClientStopMessageQueueBinding": null,
-        "factoryContainerBindingName": null,
-        "HttpClientStartMessageQueueBinding": null,
-        "HttpClientStartedMessageQueueBinding": null,
         "httpClientStopMessageQueueBinding": {
             "bindingFilePath": "C://component//lib//factory//generated//httpclientstopmessagequeuebinding//httpclientstopmessagequeuebinding.factory.container.multiplerequestsspec.binding.json"
         },
+        "factoryContainerBindingName": null,
         "httpClientStartMessageQueueBinding": {
             "bindingFilePath": "C://component//lib//factory//generated//httpclientstartmessagequeuebinding//httpclientstartmessagequeuebinding.factory.container.multiplerequestsspec.binding.json"
         },

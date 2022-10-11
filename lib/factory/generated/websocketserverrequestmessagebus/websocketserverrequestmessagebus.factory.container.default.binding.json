@@ -6,7 +6,6 @@
     "bindingFilePath": "C://component//lib//factory//generated//websocketserverrequestmessagebus//websocketserverrequestmessagebus.factory.container.default.binding.json",
     "isSingleton": null,
     "ctorParameters": {
-        "WebSocketServerRequestMessageQueueBinding": null,
         "webSocketServerRequestMessageQueueBinding": {
             "bindingFilePath": "C://component//lib//factory//generated//websocketserverrequestmessagequeuebinding//websocketserverrequestmessagequeuebinding.factory.container.default.binding.json"
         }

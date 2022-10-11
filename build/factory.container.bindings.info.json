@@ -9,9 +9,9 @@
         "bindingFilePath": "C://component//lib//factory//generated//clientmessagebus//clientmessagebus.factory.container.default.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "MessageConverter": {},
-            "HttpClientRequestMessageBus": {},
-            "HttpClientResponseMessageBus": {}
+            "messageConverter": "MessageConverter",
+            "clientRequestMessageBus": "HttpClientRequestMessageBus",
+            "clientResponseMessageBus": "HttpClientResponseMessageBus"
         }
     },
     {
@@ -24,11 +24,11 @@
         "bindingFilePath": "C://component//lib//factory//generated//component//component.factory.container.default.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "packageJson": {},
-            "factoryContainerBindingName": {},
-            "ClientMessageBus": {},
-            "ServerMessageBus": {},
-            "UserSessions": {}
+            "packageJson": null,
+            "factoryContainerBindingName": null,
+            "clientMessageBus": "ClientMessageBus",
+            "serverMessageBus": "ServerMessageBus",
+            "userSessions": "UserSessions"
         }
     },
     {
@@ -41,7 +41,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//contenttype//contenttype.factory.container.default.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "name": {}
+            "name": null
         }
     },
     {
@@ -65,12 +65,12 @@
         "bindingFilePath": "C://component//lib//factory//generated//message//message.factory.container.default.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "MessageStatus": {},
-            "factoryContainerBindingName": {},
-            "Id": {},
-            "MessageContent": {},
-            "MessageContentMetadata": {},
-            "MessageMetadata": {}
+            "messageStatus": "MessageStatus",
+            "factoryContainerBindingName": null,
+            "Id": null,
+            "messageContent": "MessageContent",
+            "messageContentMetadata": "MessageContentMetadata",
+            "messageMetadata": "MessageMetadata"
         }
     },
     {
@@ -83,10 +83,10 @@
         "bindingFilePath": "C://component//lib//factory//generated//messagecontent//messagecontent.factory.container.default.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "MessageContentMetadata": {},
-            "data": {},
-            "UserSessions": {},
-            "MessageMetadata": {}
+            "messageContentMetadata": "MessageContentMetadata",
+            "data": null,
+            "userSessions": "UserSessions",
+            "messageMetadata": "MessageMetadata"
         }
     },
     {
@@ -99,8 +99,8 @@
         "bindingFilePath": "C://component//lib//factory//generated//messagecontentmetadata//messagecontentmetadata.factory.container.default.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "factoryContainerBindingName": {},
-            "data": {}
+            "factoryContainerBindingName": null,
+            "data": null
         }
     },
     {
@@ -124,10 +124,10 @@
         "bindingFilePath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.default.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "RecipientAddress": {},
-            "metadata": {},
-            "token": {},
-            "SenderAddress": {}
+            "recipientAddress": "RecipientAddress",
+            "metadata": null,
+            "token": null,
+            "senderAddress": "SenderAddress"
         }
     },
     {
@@ -140,7 +140,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//messagequeue//messagequeue.factory.container.default.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "Logger": {}
+            "logger": "Logger"
         }
     },
     {
@@ -153,7 +153,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//messagestatus//messagestatus.factory.container.default.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "messageStatusCode": {}
+            "messageStatusCode": null
         }
     },
     {
@@ -177,8 +177,8 @@
         "bindingFilePath": "C://component//lib//factory//generated//recipientaddress//recipientaddress.factory.container.default.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "recipientHost": {},
-            "recipientPort": {}
+            "recipientHost": null,
+            "recipientPort": null
         }
     },
     {
@@ -191,8 +191,8 @@
         "bindingFilePath": "C://component//lib//factory//generated//senderaddress//senderaddress.factory.container.default.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "senderHost": {},
-            "senderPort": {}
+            "senderHost": null,
+            "senderPort": null
         }
     },
     {
@@ -205,9 +205,9 @@
         "bindingFilePath": "C://component//lib//factory//generated//servermessagebus//servermessagebus.factory.container.default.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "MessageConverter": {},
-            "HttpServerResponseMessageBus": {},
-            "HttpServerRequestMessageBus": {}
+            "messageConverter": "MessageConverter",
+            "serverResponseMessageBus": "HttpServerResponseMessageBus",
+            "serverRequestMessageBus": "HttpServerRequestMessageBus"
         }
     },
     {
@@ -220,7 +220,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//usersecurity//usersecurity.factory.container.default.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "userId": {}
+            "userId": null
         }
     },
     {
@@ -233,7 +233,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//usersessions//usersessions.factory.container.default.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "factoryContainerBindingName": {}
+            "factoryContainerBindingName": null
         }
     },
     {
@@ -246,13 +246,13 @@
         "bindingFilePath": "C://component//lib//factory//generated//httpclientmessagebus//httpclientmessagebus.factory.container.default.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "timeout": {},
-            "factoryContainerBindingName": {},
-            "HttpClientRequestMessageQueueBinding": {},
-            "HttpClientResponseMessageQueueBinding": {},
-            "HttpClientStartMessageQueueBinding": {},
-            "HttpClientStartedMessageQueueBinding": {},
-            "HttpClientStopMessageQueueBinding": {}
+            "timeout": null,
+            "factoryContainerBindingName": null,
+            "httpClientRequestMessageQueueBinding": "HttpClientRequestMessageQueueBinding",
+            "httpClientResponseMessageQueueBinding": "HttpClientResponseMessageQueueBinding",
+            "httpClientStartMessageQueueBinding": "HttpClientStartMessageQueueBinding",
+            "httpClientStartedMessageQueueBinding": "HttpClientStartedMessageQueueBinding",
+            "httpClientStopMessageQueueBinding": "HttpClientStopMessageQueueBinding"
         }
     },
     {
@@ -265,10 +265,10 @@
         "bindingFilePath": "C://component//lib//factory//generated//httpclientmessagebusmanager//httpclientmessagebusmanager.factory.container.default.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "HttpClientStopMessageQueueBinding": {},
-            "factoryContainerBindingName": {},
-            "HttpClientStartMessageQueueBinding": {},
-            "HttpClientStartedMessageQueueBinding": {}
+            "httpClientStopMessageQueueBinding": "HttpClientStopMessageQueueBinding",
+            "factoryContainerBindingName": null,
+            "httpClientStartMessageQueueBinding": "HttpClientStartMessageQueueBinding",
+            "httpClientStartedMessageQueueBinding": "HttpClientStartedMessageQueueBinding"
         }
     },
     {
@@ -281,7 +281,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//httpclientrequestmessagebus//httpclientrequestmessagebus.factory.container.default.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "HttpClientRequestMessageQueueBinding": {}
+            "httpClientRequestMessageQueueBinding": "HttpClientRequestMessageQueueBinding"
         }
     },
     {
@@ -294,8 +294,8 @@
         "bindingFilePath": "C://component//lib//factory//generated//httpclientrequestmessagequeuebinding//httpclientrequestmessagequeuebinding.factory.container.default.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "factoryContainerBindingName": {},
-            "MessageQueue": {}
+            "factoryContainerBindingName": null,
+            "messageQueue": "MessageQueue"
         }
     },
     {
@@ -308,7 +308,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//httpclientresponsemessagebus//httpclientresponsemessagebus.factory.container.default.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "HttpClientResponseMessageQueueBinding": {}
+            "httpClientResponseMessageQueueBinding": "HttpClientResponseMessageQueueBinding"
         }
     },
     {
@@ -321,8 +321,8 @@
         "bindingFilePath": "C://component//lib//factory//generated//httpclientresponsemessagequeuebinding//httpclientresponsemessagequeuebinding.factory.container.default.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "factoryContainerBindingName": {},
-            "MessageQueue": {}
+            "factoryContainerBindingName": null,
+            "messageQueue": "MessageQueue"
         }
     },
     {
@@ -335,8 +335,8 @@
         "bindingFilePath": "C://component//lib//factory//generated//httpclientstartedmessagequeuebinding//httpclientstartedmessagequeuebinding.factory.container.default.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "factoryContainerBindingName": {},
-            "MessageQueue": {}
+            "factoryContainerBindingName": null,
+            "messageQueue": "MessageQueue"
         }
     },
     {
@@ -349,8 +349,8 @@
         "bindingFilePath": "C://component//lib//factory//generated//httpclientstartmessagequeuebinding//httpclientstartmessagequeuebinding.factory.container.default.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "factoryContainerBindingName": {},
-            "MessageQueue": {}
+            "factoryContainerBindingName": null,
+            "messageQueue": "MessageQueue"
         }
     },
     {
@@ -363,8 +363,8 @@
         "bindingFilePath": "C://component//lib//factory//generated//httpclientstopmessagequeuebinding//httpclientstopmessagequeuebinding.factory.container.default.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "factoryContainerBindingName": {},
-            "MessageQueue": {}
+            "factoryContainerBindingName": null,
+            "messageQueue": "MessageQueue"
         }
     },
     {
@@ -377,8 +377,8 @@
         "bindingFilePath": "C://component//lib//factory//generated//httpclientstoppedmessagequeuebinding//httpclientstoppedmessagequeuebinding.factory.container.default.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "factoryContainerBindingName": {},
-            "MessageQueue": {}
+            "factoryContainerBindingName": null,
+            "messageQueue": "MessageQueue"
         }
     },
     {
@@ -391,7 +391,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//httprequestmessage//httprequestmessage.factory.container.default.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "Message": {}
+            "message": "Message"
         }
     },
     {
@@ -404,7 +404,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//httpresponsemessage//httpresponsemessage.factory.container.default.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "Message": {}
+            "message": "Message"
         }
     },
     {
@@ -417,16 +417,16 @@
         "bindingFilePath": "C://component//lib//factory//generated//httpservermessagebus//httpservermessagebus.factory.container.default.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "timeout": {},
-            "factoryContainerBindingName": {},
-            "HttpServerRequestMessageQueueBinding": {},
-            "HttpServerResponseMessageQueueBinding": {},
-            "HttpServerStartMessageQueueBinding": {},
-            "HttpServerStartedMessageQueueBinding": {},
-            "HttpServerStopMessageQueueBinding": {},
-            "HttpServerStoppedMessageQueueBinding": {},
-            "SenderAddress": {},
-            "Logger": {}
+            "timeout": null,
+            "factoryContainerBindingName": null,
+            "httpServerRequestMessageQueueBinding": "HttpServerRequestMessageQueueBinding",
+            "httpServerResponseMessageQueueBinding": "HttpServerResponseMessageQueueBinding",
+            "httpServerStartMessageQueueBinding": "HttpServerStartMessageQueueBinding",
+            "httpServerStartedMessageQueueBinding": "HttpServerStartedMessageQueueBinding",
+            "httpServerStopMessageQueueBinding": "HttpServerStopMessageQueueBinding",
+            "httpServerStoppedMessageQueueBinding": "HttpServerStoppedMessageQueueBinding",
+            "senderAddress": "SenderAddress",
+            "logger": "Logger"
         }
     },
     {
@@ -439,13 +439,13 @@
         "bindingFilePath": "C://component//lib//factory//generated//httpservermessagebusmanager//httpservermessagebusmanager.factory.container.default.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "HttpServerStoppedMessageQueueBinding": {},
-            "factoryContainerBindingName": {},
-            "HttpServerRequestMessageQueueBinding": {},
-            "HttpServerResponseMessageQueueBinding": {},
-            "HttpServerStartMessageQueueBinding": {},
-            "HttpServerStartedMessageQueueBinding": {},
-            "HttpServerStopMessageQueueBinding": {}
+            "httpServerStoppedMessageQueueBinding": "HttpServerStoppedMessageQueueBinding",
+            "factoryContainerBindingName": null,
+            "httpServerRequestMessageQueueBinding": "HttpServerRequestMessageQueueBinding",
+            "httpServerResponseMessageQueueBinding": "HttpServerResponseMessageQueueBinding",
+            "httpServerStartMessageQueueBinding": "HttpServerStartMessageQueueBinding",
+            "httpServerStartedMessageQueueBinding": "HttpServerStartedMessageQueueBinding",
+            "httpServerStopMessageQueueBinding": "HttpServerStopMessageQueueBinding"
         }
     },
     {
@@ -458,7 +458,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//httpserverrequestmessagebus//httpserverrequestmessagebus.factory.container.default.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "HttpServerRequestMessageQueueBinding": {}
+            "httpServerRequestMessageQueueBinding": "HttpServerRequestMessageQueueBinding"
         }
     },
     {
@@ -471,8 +471,8 @@
         "bindingFilePath": "C://component//lib//factory//generated//httpserverrequestmessagequeuebinding//httpserverrequestmessagequeuebinding.factory.container.default.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "factoryContainerBindingName": {},
-            "MessageQueue": {}
+            "factoryContainerBindingName": null,
+            "messageQueue": "MessageQueue"
         }
     },
     {
@@ -485,7 +485,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//httpserverresponsemessagebus//httpserverresponsemessagebus.factory.container.default.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "HttpServerResponseMessageQueueBinding": {}
+            "httpServerResponseMessageQueueBinding": "HttpServerResponseMessageQueueBinding"
         }
     },
     {
@@ -498,8 +498,8 @@
         "bindingFilePath": "C://component//lib//factory//generated//httpserverresponsemessagequeuebinding//httpserverresponsemessagequeuebinding.factory.container.default.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "factoryContainerBindingName": {},
-            "MessageQueue": {}
+            "factoryContainerBindingName": null,
+            "messageQueue": "MessageQueue"
         }
     },
     {
@@ -512,8 +512,8 @@
         "bindingFilePath": "C://component//lib//factory//generated//httpserverstartedmessagequeuebinding//httpserverstartedmessagequeuebinding.factory.container.default.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "factoryContainerBindingName": {},
-            "MessageQueue": {}
+            "factoryContainerBindingName": null,
+            "messageQueue": "MessageQueue"
         }
     },
     {
@@ -526,8 +526,8 @@
         "bindingFilePath": "C://component//lib//factory//generated//httpserverstartmessagequeuebinding//httpserverstartmessagequeuebinding.factory.container.default.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "factoryContainerBindingName": {},
-            "MessageQueue": {}
+            "factoryContainerBindingName": null,
+            "messageQueue": "MessageQueue"
         }
     },
     {
@@ -540,8 +540,8 @@
         "bindingFilePath": "C://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.container.default.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "factoryContainerBindingName": {},
-            "MessageQueue": {}
+            "factoryContainerBindingName": null,
+            "messageQueue": "MessageQueue"
         }
     },
     {
@@ -554,8 +554,8 @@
         "bindingFilePath": "C://component//lib//factory//generated//httpserverstoppedmessagequeuebinding//httpserverstoppedmessagequeuebinding.factory.container.default.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "factoryContainerBindingName": {},
-            "MessageQueue": {}
+            "factoryContainerBindingName": null,
+            "messageQueue": "MessageQueue"
         }
     },
     {
@@ -568,7 +568,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//websocketclientrequestmessagebus//websocketclientrequestmessagebus.factory.container.default.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "WebSocketClientRequestMessageQueueBinding": {}
+            "websocketClientRequestMessageQueueBinding": "WebSocketClientRequestMessageQueueBinding"
         }
     },
     {
@@ -581,8 +581,8 @@
         "bindingFilePath": "C://component//lib//factory//generated//websocketclientrequestmessagequeuebinding//websocketclientrequestmessagequeuebinding.factory.container.default.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "factoryContainerBindingName": {},
-            "MessageQueue": {}
+            "factoryContainerBindingName": null,
+            "messageQueue": "MessageQueue"
         }
     },
     {
@@ -595,7 +595,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//websocketclientresponsemessagebus//websocketclientresponsemessagebus.factory.container.default.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "WebSocketClientResponseMessageQueueBinding": {}
+            "websocketClientResponseMessageQueueBinding": "WebSocketClientResponseMessageQueueBinding"
         }
     },
     {
@@ -608,8 +608,8 @@
         "bindingFilePath": "C://component//lib//factory//generated//websocketclientresponsemessagequeuebinding//websocketclientresponsemessagequeuebinding.factory.container.default.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "factoryContainerBindingName": {},
-            "MessageQueue": {}
+            "factoryContainerBindingName": null,
+            "messageQueue": "MessageQueue"
         }
     },
     {
@@ -622,7 +622,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//websocketrequestmessage//websocketrequestmessage.factory.container.default.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "Message": {}
+            "message": "Message"
         }
     },
     {
@@ -635,7 +635,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//websocketresponsemessage//websocketresponsemessage.factory.container.default.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "Message": {}
+            "message": "Message"
         }
     },
     {
@@ -648,7 +648,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//websocketserverrequestmessagebus//websocketserverrequestmessagebus.factory.container.default.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "WebSocketServerRequestMessageQueueBinding": {}
+            "webSocketServerRequestMessageQueueBinding": "WebSocketServerRequestMessageQueueBinding"
         }
     },
     {
@@ -661,8 +661,8 @@
         "bindingFilePath": "C://component//lib//factory//generated//websocketserverrequestmessagequeuebinding//websocketserverrequestmessagequeuebinding.factory.container.default.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "factoryContainerBindingName": {},
-            "MessageQueue": {}
+            "factoryContainerBindingName": null,
+            "messageQueue": "MessageQueue"
         }
     },
     {
@@ -675,7 +675,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//websocketserverresponsemessagebus//websocketserverresponsemessagebus.factory.container.default.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "WebSocketServerResponseMessageQueueBinding": {}
+            "webSocketServerResponseMessageQueueBinding": "WebSocketServerResponseMessageQueueBinding"
         }
     },
     {
@@ -688,8 +688,8 @@
         "bindingFilePath": "C://component//lib//factory//generated//websocketserverresponsemessagequeuebinding//websocketserverresponsemessagequeuebinding.factory.container.default.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "factoryContainerBindingName": {},
-            "MessageQueue": {}
+            "factoryContainerBindingName": null,
+            "messageQueue": "MessageQueue"
         }
     },
     {
@@ -702,9 +702,9 @@
         "bindingFilePath": "C://component//lib//factory//generated//clientmessagebus//clientmessagebus.factory.container.multiplerequestsspec.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "MessageConverter": {},
-            "HttpClientRequestMessageBus": {},
-            "HttpClientResponseMessageBus": {}
+            "messageConverter": "MessageConverter",
+            "clientRequestMessageBus": "HttpClientRequestMessageBus",
+            "clientResponseMessageBus": "HttpClientResponseMessageBus"
         }
     },
     {
@@ -717,11 +717,11 @@
         "bindingFilePath": "C://component//lib//factory//generated//component//component.factory.container.multiplerequestsspec.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "packageJson": {},
-            "factoryContainerBindingName": {},
-            "ClientMessageBus": {},
-            "ServerMessageBus": {},
-            "UserSessions": {}
+            "packageJson": null,
+            "factoryContainerBindingName": null,
+            "clientMessageBus": "ClientMessageBus",
+            "serverMessageBus": "ServerMessageBus",
+            "userSessions": "UserSessions"
         }
     },
     {
@@ -734,7 +734,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//contenttype//contenttype.factory.container.multiplerequestsspec.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "name": {}
+            "name": null
         }
     },
     {
@@ -758,12 +758,12 @@
         "bindingFilePath": "C://component//lib//factory//generated//message//message.factory.container.multiplerequestsspec.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "MessageStatus": {},
-            "factoryContainerBindingName": {},
-            "Id": {},
-            "MessageContent": {},
-            "MessageContentMetadata": {},
-            "MessageMetadata": {}
+            "messageStatus": "MessageStatus",
+            "factoryContainerBindingName": null,
+            "Id": null,
+            "messageContent": "MessageContent",
+            "messageContentMetadata": "MessageContentMetadata",
+            "messageMetadata": "MessageMetadata"
         }
     },
     {
@@ -776,10 +776,10 @@
         "bindingFilePath": "C://component//lib//factory//generated//messagecontent//messagecontent.factory.container.multiplerequestsspec.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "MessageContentMetadata": {},
-            "data": {},
-            "UserSessions": {},
-            "MessageMetadata": {}
+            "messageContentMetadata": "MessageContentMetadata",
+            "data": null,
+            "userSessions": "UserSessions",
+            "messageMetadata": "MessageMetadata"
         }
     },
     {
@@ -792,8 +792,8 @@
         "bindingFilePath": "C://component//lib//factory//generated//messagecontentmetadata//messagecontentmetadata.factory.container.multiplerequestsspec.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "factoryContainerBindingName": {},
-            "data": {}
+            "factoryContainerBindingName": null,
+            "data": null
         }
     },
     {
@@ -817,10 +817,10 @@
         "bindingFilePath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.multiplerequestsspec.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "RecipientAddress": {},
-            "metadata": {},
-            "token": {},
-            "SenderAddress": {}
+            "recipientAddress": "RecipientAddress",
+            "metadata": null,
+            "token": null,
+            "senderAddress": "SenderAddress"
         }
     },
     {
@@ -833,7 +833,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//messagequeue//messagequeue.factory.container.multiplerequestsspec.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "Logger": {}
+            "logger": "Logger"
         }
     },
     {
@@ -846,7 +846,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//messagestatus//messagestatus.factory.container.multiplerequestsspec.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "messageStatusCode": {}
+            "messageStatusCode": null
         }
     },
     {
@@ -870,8 +870,8 @@
         "bindingFilePath": "C://component//lib//factory//generated//recipientaddress//recipientaddress.factory.container.multiplerequestsspec.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "recipientHost": {},
-            "recipientPort": {}
+            "recipientHost": null,
+            "recipientPort": null
         }
     },
     {
@@ -884,8 +884,8 @@
         "bindingFilePath": "C://component//lib//factory//generated//senderaddress//senderaddress.factory.container.multiplerequestsspec.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "senderHost": {},
-            "senderPort": {}
+            "senderHost": null,
+            "senderPort": null
         }
     },
     {
@@ -898,9 +898,9 @@
         "bindingFilePath": "C://component//lib//factory//generated//servermessagebus//servermessagebus.factory.container.multiplerequestsspec.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "MessageConverter": {},
-            "HttpServerResponseMessageBus": {},
-            "HttpServerRequestMessageBus": {}
+            "messageConverter": "MessageConverter",
+            "serverResponseMessageBus": "HttpServerResponseMessageBus",
+            "serverRequestMessageBus": "HttpServerRequestMessageBus"
         }
     },
     {
@@ -913,7 +913,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//usersecurity//usersecurity.factory.container.multiplerequestsspec.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "userId": {}
+            "userId": null
         }
     },
     {
@@ -926,7 +926,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//usersessions//usersessions.factory.container.multiplerequestsspec.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "factoryContainerBindingName": {}
+            "factoryContainerBindingName": null
         }
     },
     {
@@ -939,13 +939,13 @@
         "bindingFilePath": "C://component//lib//factory//generated//httpclientmessagebus//httpclientmessagebus.factory.container.multiplerequestsspec.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "timeout": {},
-            "factoryContainerBindingName": {},
-            "HttpClientRequestMessageQueueBinding": {},
-            "HttpClientResponseMessageQueueBinding": {},
-            "HttpClientStartMessageQueueBinding": {},
-            "HttpClientStartedMessageQueueBinding": {},
-            "HttpClientStopMessageQueueBinding": {}
+            "timeout": null,
+            "factoryContainerBindingName": null,
+            "httpClientRequestMessageQueueBinding": "HttpClientRequestMessageQueueBinding",
+            "httpClientResponseMessageQueueBinding": "HttpClientResponseMessageQueueBinding",
+            "httpClientStartMessageQueueBinding": "HttpClientStartMessageQueueBinding",
+            "httpClientStartedMessageQueueBinding": "HttpClientStartedMessageQueueBinding",
+            "httpClientStopMessageQueueBinding": "HttpClientStopMessageQueueBinding"
         }
     },
     {
@@ -958,10 +958,10 @@
         "bindingFilePath": "C://component//lib//factory//generated//httpclientmessagebusmanager//httpclientmessagebusmanager.factory.container.multiplerequestsspec.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "HttpClientStopMessageQueueBinding": {},
-            "factoryContainerBindingName": {},
-            "HttpClientStartMessageQueueBinding": {},
-            "HttpClientStartedMessageQueueBinding": {}
+            "httpClientStopMessageQueueBinding": "HttpClientStopMessageQueueBinding",
+            "factoryContainerBindingName": null,
+            "httpClientStartMessageQueueBinding": "HttpClientStartMessageQueueBinding",
+            "httpClientStartedMessageQueueBinding": "HttpClientStartedMessageQueueBinding"
         }
     },
     {
@@ -974,7 +974,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//httpclientrequestmessagebus//httpclientrequestmessagebus.factory.container.multiplerequestsspec.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "HttpClientRequestMessageQueueBinding": {}
+            "httpClientRequestMessageQueueBinding": "HttpClientRequestMessageQueueBinding"
         }
     },
     {
@@ -987,8 +987,8 @@
         "bindingFilePath": "C://component//lib//factory//generated//httpclientrequestmessagequeuebinding//httpclientrequestmessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "factoryContainerBindingName": {},
-            "MessageQueue": {}
+            "factoryContainerBindingName": null,
+            "messageQueue": "MessageQueue"
         }
     },
     {
@@ -1001,7 +1001,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//httpclientresponsemessagebus//httpclientresponsemessagebus.factory.container.multiplerequestsspec.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "HttpClientResponseMessageQueueBinding": {}
+            "httpClientResponseMessageQueueBinding": "HttpClientResponseMessageQueueBinding"
         }
     },
     {
@@ -1014,8 +1014,8 @@
         "bindingFilePath": "C://component//lib//factory//generated//httpclientresponsemessagequeuebinding//httpclientresponsemessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "factoryContainerBindingName": {},
-            "MessageQueue": {}
+            "factoryContainerBindingName": null,
+            "messageQueue": "MessageQueue"
         }
     },
     {
@@ -1028,8 +1028,8 @@
         "bindingFilePath": "C://component//lib//factory//generated//httpclientstartedmessagequeuebinding//httpclientstartedmessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "factoryContainerBindingName": {},
-            "MessageQueue": {}
+            "factoryContainerBindingName": null,
+            "messageQueue": "MessageQueue"
         }
     },
     {
@@ -1042,8 +1042,8 @@
         "bindingFilePath": "C://component//lib//factory//generated//httpclientstartmessagequeuebinding//httpclientstartmessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "factoryContainerBindingName": {},
-            "MessageQueue": {}
+            "factoryContainerBindingName": null,
+            "messageQueue": "MessageQueue"
         }
     },
     {
@@ -1056,8 +1056,8 @@
         "bindingFilePath": "C://component//lib//factory//generated//httpclientstopmessagequeuebinding//httpclientstopmessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "factoryContainerBindingName": {},
-            "MessageQueue": {}
+            "factoryContainerBindingName": null,
+            "messageQueue": "MessageQueue"
         }
     },
     {
@@ -1070,8 +1070,8 @@
         "bindingFilePath": "C://component//lib//factory//generated//httpclientstoppedmessagequeuebinding//httpclientstoppedmessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "factoryContainerBindingName": {},
-            "MessageQueue": {}
+            "factoryContainerBindingName": null,
+            "messageQueue": "MessageQueue"
         }
     },
     {
@@ -1084,7 +1084,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//httprequestmessage//httprequestmessage.factory.container.multiplerequestsspec.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "Message": {}
+            "message": "Message"
         }
     },
     {
@@ -1097,7 +1097,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//httpresponsemessage//httpresponsemessage.factory.container.multiplerequestsspec.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "Message": {}
+            "message": "Message"
         }
     },
     {
@@ -1110,16 +1110,16 @@
         "bindingFilePath": "C://component//lib//factory//generated//httpservermessagebus//httpservermessagebus.factory.container.multiplerequestsspec.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "timeout": {},
-            "factoryContainerBindingName": {},
-            "HttpServerRequestMessageQueueBinding": {},
-            "HttpServerResponseMessageQueueBinding": {},
-            "HttpServerStartMessageQueueBinding": {},
-            "HttpServerStartedMessageQueueBinding": {},
-            "HttpServerStopMessageQueueBinding": {},
-            "HttpServerStoppedMessageQueueBinding": {},
-            "SenderAddress": {},
-            "Logger": {}
+            "timeout": null,
+            "factoryContainerBindingName": null,
+            "httpServerRequestMessageQueueBinding": "HttpServerRequestMessageQueueBinding",
+            "httpServerResponseMessageQueueBinding": "HttpServerResponseMessageQueueBinding",
+            "httpServerStartMessageQueueBinding": "HttpServerStartMessageQueueBinding",
+            "httpServerStartedMessageQueueBinding": "HttpServerStartedMessageQueueBinding",
+            "httpServerStopMessageQueueBinding": "HttpServerStopMessageQueueBinding",
+            "httpServerStoppedMessageQueueBinding": "HttpServerStoppedMessageQueueBinding",
+            "senderAddress": "SenderAddress",
+            "logger": "Logger"
         }
     },
     {
@@ -1132,13 +1132,13 @@
         "bindingFilePath": "C://component//lib//factory//generated//httpservermessagebusmanager//httpservermessagebusmanager.factory.container.multiplerequestsspec.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "HttpServerStoppedMessageQueueBinding": {},
-            "factoryContainerBindingName": {},
-            "HttpServerRequestMessageQueueBinding": {},
-            "HttpServerResponseMessageQueueBinding": {},
-            "HttpServerStartMessageQueueBinding": {},
-            "HttpServerStartedMessageQueueBinding": {},
-            "HttpServerStopMessageQueueBinding": {}
+            "httpServerStoppedMessageQueueBinding": "HttpServerStoppedMessageQueueBinding",
+            "factoryContainerBindingName": null,
+            "httpServerRequestMessageQueueBinding": "HttpServerRequestMessageQueueBinding",
+            "httpServerResponseMessageQueueBinding": "HttpServerResponseMessageQueueBinding",
+            "httpServerStartMessageQueueBinding": "HttpServerStartMessageQueueBinding",
+            "httpServerStartedMessageQueueBinding": "HttpServerStartedMessageQueueBinding",
+            "httpServerStopMessageQueueBinding": "HttpServerStopMessageQueueBinding"
         }
     },
     {
@@ -1151,7 +1151,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//httpserverrequestmessagebus//httpserverrequestmessagebus.factory.container.multiplerequestsspec.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "HttpServerRequestMessageQueueBinding": {}
+            "httpServerRequestMessageQueueBinding": "HttpServerRequestMessageQueueBinding"
         }
     },
     {
@@ -1164,8 +1164,8 @@
         "bindingFilePath": "C://component//lib//factory//generated//httpserverrequestmessagequeuebinding//httpserverrequestmessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "factoryContainerBindingName": {},
-            "MessageQueue": {}
+            "factoryContainerBindingName": null,
+            "messageQueue": "MessageQueue"
         }
     },
     {
@@ -1178,7 +1178,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//httpserverresponsemessagebus//httpserverresponsemessagebus.factory.container.multiplerequestsspec.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "HttpServerResponseMessageQueueBinding": {}
+            "httpServerResponseMessageQueueBinding": "HttpServerResponseMessageQueueBinding"
         }
     },
     {
@@ -1191,8 +1191,8 @@
         "bindingFilePath": "C://component//lib//factory//generated//httpserverresponsemessagequeuebinding//httpserverresponsemessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "factoryContainerBindingName": {},
-            "MessageQueue": {}
+            "factoryContainerBindingName": null,
+            "messageQueue": "MessageQueue"
         }
     },
     {
@@ -1205,8 +1205,8 @@
         "bindingFilePath": "C://component//lib//factory//generated//httpserverstartedmessagequeuebinding//httpserverstartedmessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "factoryContainerBindingName": {},
-            "MessageQueue": {}
+            "factoryContainerBindingName": null,
+            "messageQueue": "MessageQueue"
         }
     },
     {
@@ -1219,8 +1219,8 @@
         "bindingFilePath": "C://component//lib//factory//generated//httpserverstartmessagequeuebinding//httpserverstartmessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "factoryContainerBindingName": {},
-            "MessageQueue": {}
+            "factoryContainerBindingName": null,
+            "messageQueue": "MessageQueue"
         }
     },
     {
@@ -1233,8 +1233,8 @@
         "bindingFilePath": "C://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "factoryContainerBindingName": {},
-            "MessageQueue": {}
+            "factoryContainerBindingName": null,
+            "messageQueue": "MessageQueue"
         }
     },
     {
@@ -1247,8 +1247,8 @@
         "bindingFilePath": "C://component//lib//factory//generated//httpserverstoppedmessagequeuebinding//httpserverstoppedmessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "factoryContainerBindingName": {},
-            "MessageQueue": {}
+            "factoryContainerBindingName": null,
+            "messageQueue": "MessageQueue"
         }
     },
     {
@@ -1261,7 +1261,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//websocketclientrequestmessagebus//websocketclientrequestmessagebus.factory.container.multiplerequestsspec.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "WebSocketClientRequestMessageQueueBinding": {}
+            "websocketClientRequestMessageQueueBinding": "WebSocketClientRequestMessageQueueBinding"
         }
     },
     {
@@ -1274,8 +1274,8 @@
         "bindingFilePath": "C://component//lib//factory//generated//websocketclientrequestmessagequeuebinding//websocketclientrequestmessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "factoryContainerBindingName": {},
-            "MessageQueue": {}
+            "factoryContainerBindingName": null,
+            "messageQueue": "MessageQueue"
         }
     },
     {
@@ -1288,7 +1288,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//websocketclientresponsemessagebus//websocketclientresponsemessagebus.factory.container.multiplerequestsspec.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "WebSocketClientResponseMessageQueueBinding": {}
+            "websocketClientResponseMessageQueueBinding": "WebSocketClientResponseMessageQueueBinding"
         }
     },
     {
@@ -1301,8 +1301,8 @@
         "bindingFilePath": "C://component//lib//factory//generated//websocketclientresponsemessagequeuebinding//websocketclientresponsemessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "factoryContainerBindingName": {},
-            "MessageQueue": {}
+            "factoryContainerBindingName": null,
+            "messageQueue": "MessageQueue"
         }
     },
     {
@@ -1315,7 +1315,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//websocketrequestmessage//websocketrequestmessage.factory.container.multiplerequestsspec.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "Message": {}
+            "message": "Message"
         }
     },
     {
@@ -1328,7 +1328,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//websocketresponsemessage//websocketresponsemessage.factory.container.multiplerequestsspec.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "Message": {}
+            "message": "Message"
         }
     },
     {
@@ -1341,7 +1341,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//websocketserverrequestmessagebus//websocketserverrequestmessagebus.factory.container.multiplerequestsspec.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "WebSocketServerRequestMessageQueueBinding": {}
+            "webSocketServerRequestMessageQueueBinding": "WebSocketServerRequestMessageQueueBinding"
         }
     },
     {
@@ -1354,8 +1354,8 @@
         "bindingFilePath": "C://component//lib//factory//generated//websocketserverrequestmessagequeuebinding//websocketserverrequestmessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "factoryContainerBindingName": {},
-            "MessageQueue": {}
+            "factoryContainerBindingName": null,
+            "messageQueue": "MessageQueue"
         }
     },
     {
@@ -1368,7 +1368,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//websocketserverresponsemessagebus//websocketserverresponsemessagebus.factory.container.multiplerequestsspec.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "WebSocketServerResponseMessageQueueBinding": {}
+            "webSocketServerResponseMessageQueueBinding": "WebSocketServerResponseMessageQueueBinding"
         }
     },
     {
@@ -1381,8 +1381,8 @@
         "bindingFilePath": "C://component//lib//factory//generated//websocketserverresponsemessagequeuebinding//websocketserverresponsemessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
         "isSingleton": null,
         "ctorParametersInfo": {
-            "factoryContainerBindingName": {},
-            "MessageQueue": {}
+            "factoryContainerBindingName": null,
+            "messageQueue": "MessageQueue"
         }
     }
 ]

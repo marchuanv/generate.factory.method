@@ -6,7 +6,6 @@
     "bindingFilePath": "C://component//lib//factory//generated//httpclientresponsemessagebus//httpclientresponsemessagebus.factory.container.default.binding.json",
     "isSingleton": null,
     "ctorParameters": {
-        "HttpClientResponseMessageQueueBinding": null,
         "httpClientResponseMessageQueueBinding": {
             "bindingFilePath": "C://component//lib//factory//generated//httpclientresponsemessagequeuebinding//httpclientresponsemessagequeuebinding.factory.container.default.binding.json"
         }

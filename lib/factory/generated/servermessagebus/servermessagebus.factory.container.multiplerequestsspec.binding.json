@@ -6,9 +6,6 @@
     "bindingFilePath": "C://component//lib//factory//generated//servermessagebus//servermessagebus.factory.container.multiplerequestsspec.binding.json",
     "isSingleton": null,
     "ctorParameters": {
-        "MessageConverter": null,
-        "HttpServerResponseMessageBus": null,
-        "HttpServerRequestMessageBus": null,
         "messageConverter": {
             "bindingFilePath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.multiplerequestsspec.binding.json"
         },

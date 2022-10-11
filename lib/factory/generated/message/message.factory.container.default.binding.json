@@ -6,15 +6,11 @@
     "bindingFilePath": "C://component//lib//factory//generated//message//message.factory.container.default.binding.json",
     "isSingleton": null,
     "ctorParameters": {
-        "MessageStatus": null,
-        "factoryContainerBindingName": null,
-        "Id": null,
-        "MessageContent": null,
-        "MessageContentMetadata": null,
-        "MessageMetadata": null,
         "messageStatus": {
             "bindingFilePath": "C://component//lib//factory//generated//messagestatus//messagestatus.factory.container.default.binding.json"
         },
+        "factoryContainerBindingName": null,
+        "Id": null,
         "messageContent": {
             "bindingFilePath": "C://component//lib//factory//generated//messagecontent//messagecontent.factory.container.default.binding.json"
         },

@@ -8,9 +8,6 @@
     "ctorParameters": {
         "packageJson": null,
         "factoryContainerBindingName": null,
-        "ClientMessageBus": null,
-        "ServerMessageBus": null,
-        "UserSessions": null,
         "clientMessageBus": {
             "bindingFilePath": "C://component//lib//factory//generated//clientmessagebus//clientmessagebus.factory.container.multiplerequestsspec.binding.json"
         },
