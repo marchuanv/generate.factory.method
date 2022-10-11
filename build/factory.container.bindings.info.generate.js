@@ -6,7 +6,7 @@ const factoryContainerBindingInfoTemplate = readFileSync(path.join(__dirname, 't
 const factoryContainerBindingsInfoPath = path.join(__dirname, 'factory.container.bindings.info.json');
 
 writeFileSync(factoryContainerBindingsInfoPath, utils.getJSONString([]), 'utf8');
-const factoryContainerBindingsInfo = [];
+let factoryContainerBindingsInfo = [];
 
 module.exports = function({ factoryContainerBindingName }) {
     for(const typeName of Object.keys(typesInfo)) {
@@ -35,7 +35,14 @@ module.exports = function({ factoryContainerBindingName }) {
             .replace(/\[CtorParametersInfo\]/g, utils.getJSONString(ctorParametersInfo))
             .replace(/\[BindingFilePath\]/g, bindingFilePath)
             .replace(/\[isSingleton\]/g, isSingleton));
+        binding.Id = utils.generateGUID();
         factoryContainerBindingsInfo.push(binding);
+        if (isSingleton) {
+            const nonDefaultBindings = factoryContainerBindingsInfo.filter(cb =>  cb.typeName === typeName && cb.bindingName !== 'Default');
+            if (nonDefaultBindings.length > 0) {
+                factoryContainerBindingsInfo = factoryContainerBindingsInfo.filter(cb => nonDefaultBindings.find(cb2 => cb.Id === cb2.Id) === undefined );
+            }
+        }
     };
     writeFileSync(factoryContainerBindingsInfoPath, utils.getJSONString(factoryContainerBindingsInfo), 'utf8');
 }

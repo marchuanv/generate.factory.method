@@ -1,0 +1,17 @@
+{
+    "typeName": "ClientMessageBus",
+    "typeVariableName": "clientMessageBus",
+    "scriptPath": "C://component//lib//clientmessagebus.js",
+    "bindingName": "ClientComponentSpec",
+    "bindingFilePath": "C://component//lib//factory//generated//clientmessagebus//clientmessagebus.factory.container.clientcomponentspec.binding.json",
+    "isSingleton": false,
+    "ctorParameters": {
+        "messageConverter": "MessageConverter",
+        "clientRequestMessageBus": {
+            "bindingFilePath": "C://component//lib//factory//generated//httpclientrequestmessagebus//httpclientrequestmessagebus.factory.container.clientcomponentspec.binding.json"
+        },
+        "clientResponseMessageBus": {
+            "bindingFilePath": "C://component//lib//factory//generated//httpclientresponsemessagebus//httpclientresponsemessagebus.factory.container.clientcomponentspec.binding.json"
+        }
+    }
+}

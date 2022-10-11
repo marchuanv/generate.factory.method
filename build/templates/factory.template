@@ -5,9 +5,8 @@ const { factory } = require('../../factory.js');
 * @param {[PrimitiveArgsWithBindingName]}
 */
 function create[TypeName]({[PrimitiveArgsWithBindingName]}) {
-    const _factoryContainerBindingFileName = factoryContainerBindingName ? factoryContainerBindingName.toLowerCase() : 'default';
-    const containerBinding = require(`[FactoryContainerBindingFilePath]`);
-    const container = factory.getContainer({ binding: containerBinding });
+    const bindings = [FactoryContainerBindingFilePaths];
+    const container = factory.getContainer({ bindingFilePath: bindings[factoryContainerBindingName], defaultBindingFilePath: bindings['Default'] });
     return container.getInstance({ ctorArgs: {[PrimitiveArgs]} });
 }
 module.exports = { create[TypeName] };

@@ -1,0 +1,12 @@
+const { factory } = require('../../factory.js');
+
+/**
+* Create WebSocketServerResponseMessageQueueBinding
+* @param {factoryContainerBindingName}
+*/
+function createWebSocketServerResponseMessageQueueBinding({factoryContainerBindingName}) {
+    const bindings = {};
+    const container = factory.getContainer({ bindingFilePath: bindings[factoryContainerBindingName], defaultBindingFilePath: bindings['Default'] });
+    return container.getInstance({ ctorArgs: {} });
+}
+module.exports = { createWebSocketServerResponseMessageQueueBinding };

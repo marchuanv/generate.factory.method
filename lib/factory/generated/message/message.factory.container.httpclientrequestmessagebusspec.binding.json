@@ -1,0 +1,24 @@
+{
+    "typeName": "Message",
+    "typeVariableName": "message",
+    "scriptPath": "C://component//lib//message.js",
+    "bindingName": "HttpClientRequestMessageBusSpec",
+    "bindingFilePath": "C://component//lib//factory//generated//message//message.factory.container.httpclientrequestmessagebusspec.binding.json",
+    "isSingleton": false,
+    "ctorParameters": {
+        "messageStatus": {
+            "bindingFilePath": "C://component//lib//factory//generated//messagestatus//messagestatus.factory.container.httpclientrequestmessagebusspec.binding.json"
+        },
+        "factoryContainerBindingName": null,
+        "Id": null,
+        "messageContent": {
+            "bindingFilePath": "C://component//lib//factory//generated//messagecontent//messagecontent.factory.container.httpclientrequestmessagebusspec.binding.json"
+        },
+        "messageContentMetadata": {
+            "bindingFilePath": "C://component//lib//factory//generated//messagecontentmetadata//messagecontentmetadata.factory.container.httpclientrequestmessagebusspec.binding.json"
+        },
+        "messageMetadata": {
+            "bindingFilePath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.httpclientrequestmessagebusspec.binding.json"
+        }
+    }
+}

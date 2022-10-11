@@ -1,9 +1,0 @@
-{
-    "typeName": "MessageStore",
-    "typeVariableName": "messageStore",
-    "scriptPath": "C://component//lib//messagestore.js",
-    "bindingName": "MultipleRequestsSpec",
-    "bindingFilePath": "C://component//lib//factory//generated//messagestore//messagestore.factory.container.multiplerequestsspec.binding.json",
-    "isSingleton": true,
-    "ctorParameters": {}
-}

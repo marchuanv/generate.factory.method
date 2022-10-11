@@ -1,0 +1,13 @@
+{
+    "typeName": "HttpResponseMessage",
+    "typeVariableName": "httpResponseMessage",
+    "scriptPath": "C://component//lib//http//httpresponsemessage.js",
+    "bindingName": "HttpServerResponseMessageBusSpec",
+    "bindingFilePath": "C://component//lib//factory//generated//httpresponsemessage//httpresponsemessage.factory.container.httpserverresponsemessagebusspec.binding.json",
+    "isSingleton": false,
+    "ctorParameters": {
+        "message": {
+            "bindingFilePath": "C://component//lib//factory//generated//message//message.factory.container.httpserverresponsemessagebusspec.binding.json"
+        }
+    }
+}

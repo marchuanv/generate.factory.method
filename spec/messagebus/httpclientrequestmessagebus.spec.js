@@ -2,7 +2,7 @@ const utils = require('utils');
 describe("when an http client request messagebus publishes an http request message", function() {
     
     let token = null;
-    const factoryContainerBindingName = "httpclientrequestmessagebustest";
+    const factoryContainerBindingName = "HttpClientRequestMessageBusSpec";
     const timeout = 15000;
     const senderHost = 'localhost';
     const senderPort = 3000;
@@ -22,16 +22,16 @@ describe("when an http client request messagebus publishes an http request messa
 
     beforeAll(() => {
 
-        ( { createHttpRequestMessage } = require('../../lib/factory/httprequestmessage.factory.js'));
-        ( { createHttpResponseMessage } = require('../../lib/factory/httpresponsemessage.factory.js'));
-        ( { createUserSessions } = require('../../lib/factory/usersessions.factory.js'));
-        ( { createHttpClientRequestMessageBus } = require('../../lib/factory/httpclientrequestmessagebus.factory.js'));
-        ( { createHttpClientResponseMessageBus } = require('../../lib/factory/httpclientresponsemessagebus.factory.js'));
-        ( { createHttpServerResponseMessageBus } = require('../../lib/factory/httpserverresponsemessagebus.factory.js'));
-        ( { createHttpServerMessageBus } = require('../../lib/factory/httpservermessagebus.factory.js'));
-        ( { createHttpClientMessageBus } = require('../../lib/factory/httpclientmessagebus.factory.js'));
-        ( { createHttpServerMessageBusManager } = require('../../lib/factory/httpservermessagebusmanager.factory.js'));
-        ( { createHttpClientMessageBusManager } = require('../../lib/factory/httpclientmessagebusmanager.factory.js'));
+        ( { createHttpRequestMessage } = require('../../lib/factory/generated/httprequestmessage/httprequestmessage.factory.js'));
+        ( { createHttpResponseMessage } = require('../../lib/factory/generated/httpresponsemessage/httpresponsemessage.factory.js'));
+        ( { createUserSessions } = require('../../lib/factory/generated/usersessions/usersessions.factory.js'));
+        ( { createHttpClientRequestMessageBus } = require('../../lib/factory/generated/httpclientrequestmessagebus/httpclientrequestmessagebus.factory.js'));
+        ( { createHttpClientResponseMessageBus } = require('../../lib/factory/generated/httpclientresponsemessagebus/httpclientresponsemessagebus.factory.js'));
+        ( { createHttpServerResponseMessageBus } = require('../../lib/factory/generated/httpserverresponsemessagebus/httpserverresponsemessagebus.factory.js'));
+        ( { createHttpServerMessageBus } = require('../../lib/factory/generated/httpservermessagebus/httpservermessagebus.factory.js'));
+        ( { createHttpClientMessageBus } = require('../../lib/factory/generated/httpclientmessagebus/httpclientmessagebus.factory.js'));
+        ( { createHttpServerMessageBusManager } = require('../../lib/factory/generated/httpservermessagebusmanager/httpservermessagebusmanager.factory.js'));
+        ( { createHttpClientMessageBusManager } = require('../../lib/factory/generated/httpclientmessagebusmanager/httpclientmessagebusmanager.factory.js'));
 
         const userId = factoryContainerBindingName;
         const secret = `${factoryContainerBindingName}1234`;

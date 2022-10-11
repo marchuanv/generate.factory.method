@@ -1,0 +1,12 @@
+{
+    "typeName": "MessageContentMetadata",
+    "typeVariableName": "messageContentMetadata",
+    "scriptPath": "C://component//lib//messagecontentmetadata.js",
+    "bindingName": "ClientMessageBusSpec",
+    "bindingFilePath": "C://component//lib//factory//generated//messagecontentmetadata//messagecontentmetadata.factory.container.clientmessagebusspec.binding.json",
+    "isSingleton": false,
+    "ctorParameters": {
+        "factoryContainerBindingName": null,
+        "data": null
+    }
+}

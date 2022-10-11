@@ -1,4 +1,4 @@
-describe('when asking the factory for an instance given container binding location', function() {
+xdescribe('when asking the factory for an instance given container binding location', function() {
   it("it should load binding script, find binding config and return an instance of the ClientMessageBus", function() {
 
     // Arrange
@@ -26,7 +26,7 @@ describe('when asking the factory for an instance given container binding locati
 
 });
 
-describe('when asking the factory for an instance given all container bindings', function() {
+xdescribe('when asking the factory for an instance given all container bindings', function() {
   it("it should find binding config and return an instance of the ClientMessageBus", function() {
 
     // Arrange

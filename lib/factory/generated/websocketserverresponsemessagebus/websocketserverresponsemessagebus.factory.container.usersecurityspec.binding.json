@@ -1,0 +1,13 @@
+{
+    "typeName": "WebSocketServerResponseMessageBus",
+    "typeVariableName": "webSocketServerResponseMessageBus",
+    "scriptPath": "C://component//lib//websocket//websocketserverresponsemessagebus.js",
+    "bindingName": "UserSecuritySpec",
+    "bindingFilePath": "C://component//lib//factory//generated//websocketserverresponsemessagebus//websocketserverresponsemessagebus.factory.container.usersecurityspec.binding.json",
+    "isSingleton": false,
+    "ctorParameters": {
+        "webSocketServerResponseMessageQueueBinding": {
+            "bindingFilePath": "C://component//lib//factory//generated//websocketserverresponsemessagequeuebinding//websocketserverresponsemessagequeuebinding.factory.container.usersecurityspec.binding.json"
+        }
+    }
+}

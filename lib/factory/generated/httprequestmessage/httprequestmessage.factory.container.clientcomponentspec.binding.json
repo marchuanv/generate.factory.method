@@ -1,0 +1,13 @@
+{
+    "typeName": "HttpRequestMessage",
+    "typeVariableName": "httpRequestMessage",
+    "scriptPath": "C://component//lib//http//httprequestmessage.js",
+    "bindingName": "ClientComponentSpec",
+    "bindingFilePath": "C://component//lib//factory//generated//httprequestmessage//httprequestmessage.factory.container.clientcomponentspec.binding.json",
+    "isSingleton": false,
+    "ctorParameters": {
+        "message": {
+            "bindingFilePath": "C://component//lib//factory//generated//message//message.factory.container.clientcomponentspec.binding.json"
+        }
+    }
+}

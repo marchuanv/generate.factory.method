@@ -1,0 +1,13 @@
+{
+    "typeName": "HttpServerRequestMessageBus",
+    "typeVariableName": "serverRequestMessageBus",
+    "scriptPath": "C://component//lib//http//httpserverrequestmessagebus.js",
+    "bindingName": "ClientComponentSpec",
+    "bindingFilePath": "C://component//lib//factory//generated//httpserverrequestmessagebus//httpserverrequestmessagebus.factory.container.clientcomponentspec.binding.json",
+    "isSingleton": false,
+    "ctorParameters": {
+        "httpServerRequestMessageQueueBinding": {
+            "bindingFilePath": "C://component//lib//factory//generated//httpserverrequestmessagequeuebinding//httpserverrequestmessagequeuebinding.factory.container.clientcomponentspec.binding.json"
+        }
+    }
+}

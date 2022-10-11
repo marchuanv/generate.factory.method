@@ -1,0 +1,11 @@
+{
+    "typeName": "ContentType",
+    "typeVariableName": "contentType",
+    "scriptPath": "C://component//lib//contentType.js",
+    "bindingName": "HttpServerResponseMessageBusSpec",
+    "bindingFilePath": "C://component//lib//factory//generated//contenttype//contenttype.factory.container.httpserverresponsemessagebusspec.binding.json",
+    "isSingleton": false,
+    "ctorParameters": {
+        "name": null
+    }
+}

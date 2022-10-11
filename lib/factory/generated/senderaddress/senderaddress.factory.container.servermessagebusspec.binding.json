@@ -1,0 +1,12 @@
+{
+    "typeName": "SenderAddress",
+    "typeVariableName": "senderAddress",
+    "scriptPath": "C://component//lib//senderaddress.js",
+    "bindingName": "ServerMessageBusSpec",
+    "bindingFilePath": "C://component//lib//factory//generated//senderaddress//senderaddress.factory.container.servermessagebusspec.binding.json",
+    "isSingleton": false,
+    "ctorParameters": {
+        "senderHost": null,
+        "senderPort": null
+    }
+}

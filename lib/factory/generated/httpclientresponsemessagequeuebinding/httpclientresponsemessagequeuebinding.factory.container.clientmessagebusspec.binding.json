@@ -1,0 +1,12 @@
+{
+    "typeName": "HttpClientResponseMessageQueueBinding",
+    "typeVariableName": "httpClientResponseMessageQueueBinding",
+    "scriptPath": "C://component//lib//http//httpclientresponsemessagequeuebinding.js",
+    "bindingName": "ClientMessageBusSpec",
+    "bindingFilePath": "C://component//lib//factory//generated//httpclientresponsemessagequeuebinding//httpclientresponsemessagequeuebinding.factory.container.clientmessagebusspec.binding.json",
+    "isSingleton": false,
+    "ctorParameters": {
+        "factoryContainerBindingName": null,
+        "messageQueue": "MessageQueue"
+    }
+}

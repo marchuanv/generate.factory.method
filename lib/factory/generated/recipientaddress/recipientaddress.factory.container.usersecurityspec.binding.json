@@ -1,0 +1,12 @@
+{
+    "typeName": "RecipientAddress",
+    "typeVariableName": "recipientAddress",
+    "scriptPath": "C://component//lib//recipientaddress.js",
+    "bindingName": "UserSecuritySpec",
+    "bindingFilePath": "C://component//lib//factory//generated//recipientaddress//recipientaddress.factory.container.usersecurityspec.binding.json",
+    "isSingleton": false,
+    "ctorParameters": {
+        "recipientHost": null,
+        "recipientPort": null
+    }
+}

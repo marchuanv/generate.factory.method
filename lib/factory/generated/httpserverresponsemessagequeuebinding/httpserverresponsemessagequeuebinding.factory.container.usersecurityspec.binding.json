@@ -1,0 +1,12 @@
+{
+    "typeName": "HttpServerResponseMessageQueueBinding",
+    "typeVariableName": "httpServerResponseMessageQueueBinding",
+    "scriptPath": "C://component//lib//http//httpserverresponsemessagequeuebinding.js",
+    "bindingName": "UserSecuritySpec",
+    "bindingFilePath": "C://component//lib//factory//generated//httpserverresponsemessagequeuebinding//httpserverresponsemessagequeuebinding.factory.container.usersecurityspec.binding.json",
+    "isSingleton": false,
+    "ctorParameters": {
+        "factoryContainerBindingName": null,
+        "messageQueue": "MessageQueue"
+    }
+}

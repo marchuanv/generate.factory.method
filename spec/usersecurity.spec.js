@@ -4,11 +4,11 @@ describe("when encrypting data given a public key", function() {
     let userSecurity;
     let token = null;
     const userId = 'encryptiontest';
-    const factoryContainerBindingName = 'usersecuritytest';
+    const factoryContainerBindingName = 'UserSecuritySpec';
     let createUserSecurity = null;
 
     beforeAll(() => {
-        ({ createUserSecurity } = require("../lib/factory/generated/usersecurity.factory"));
+        ({ createUserSecurity } = require("../lib/factory/generated/usersecurity/usersecurity.factory"));
         const secret = 'encryptiontest1234';
         ({ userSecurity } = createUserSecurity({ factoryContainerBindingName, userId }));
         userSecurity.register({ secret });

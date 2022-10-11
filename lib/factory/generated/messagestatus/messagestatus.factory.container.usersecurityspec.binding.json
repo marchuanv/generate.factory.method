@@ -1,0 +1,11 @@
+{
+    "typeName": "MessageStatus",
+    "typeVariableName": "messageStatus",
+    "scriptPath": "C://component//lib//messagestatus.js",
+    "bindingName": "UserSecuritySpec",
+    "bindingFilePath": "C://component//lib//factory//generated//messagestatus//messagestatus.factory.container.usersecurityspec.binding.json",
+    "isSingleton": false,
+    "ctorParameters": {
+        "messageStatusCode": null
+    }
+}

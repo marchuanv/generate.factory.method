@@ -1,0 +1,21 @@
+{
+    "typeName": "HttpClientMessageBus",
+    "typeVariableName": "httpClientMessageBus",
+    "scriptPath": "C://component//lib//http//httpclientmessagebus.js",
+    "bindingName": "HttpClientRequestMessageBusSpec",
+    "bindingFilePath": "C://component//lib//factory//generated//httpclientmessagebus//httpclientmessagebus.factory.container.httpclientrequestmessagebusspec.binding.json",
+    "isSingleton": false,
+    "ctorParameters": {
+        "timeout": null,
+        "factoryContainerBindingName": null,
+        "httpClientRequestMessageQueueBinding": {
+            "bindingFilePath": "C://component//lib//factory//generated//httpclientrequestmessagequeuebinding//httpclientrequestmessagequeuebinding.factory.container.httpclientrequestmessagebusspec.binding.json"
+        },
+        "httpClientResponseMessageQueueBinding": {
+            "bindingFilePath": "C://component//lib//factory//generated//httpclientresponsemessagequeuebinding//httpclientresponsemessagequeuebinding.factory.container.httpclientrequestmessagebusspec.binding.json"
+        },
+        "httpClientStartMessageQueueBinding": "HttpClientStartMessageQueueBinding",
+        "httpClientStartedMessageQueueBinding": "HttpClientStartedMessageQueueBinding",
+        "httpClientStopMessageQueueBinding": "HttpClientStopMessageQueueBinding"
+    }
+}

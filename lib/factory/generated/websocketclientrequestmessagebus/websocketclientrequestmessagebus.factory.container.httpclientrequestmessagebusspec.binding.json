@@ -1,0 +1,13 @@
+{
+    "typeName": "WebSocketClientRequestMessageBus",
+    "typeVariableName": "webSocketClientRequestMessageBus",
+    "scriptPath": "C://component//lib//websocket//websocketclientrequestmessagebus.js",
+    "bindingName": "HttpClientRequestMessageBusSpec",
+    "bindingFilePath": "C://component//lib//factory//generated//websocketclientrequestmessagebus//websocketclientrequestmessagebus.factory.container.httpclientrequestmessagebusspec.binding.json",
+    "isSingleton": false,
+    "ctorParameters": {
+        "websocketClientRequestMessageQueueBinding": {
+            "bindingFilePath": "C://component//lib//factory//generated//websocketclientrequestmessagequeuebinding//websocketclientrequestmessagequeuebinding.factory.container.httpclientrequestmessagebusspec.binding.json"
+        }
+    }
+}

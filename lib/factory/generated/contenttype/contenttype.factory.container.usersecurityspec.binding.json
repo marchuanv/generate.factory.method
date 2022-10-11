@@ -1,0 +1,11 @@
+{
+    "typeName": "ContentType",
+    "typeVariableName": "contentType",
+    "scriptPath": "C://component//lib//contentType.js",
+    "bindingName": "UserSecuritySpec",
+    "bindingFilePath": "C://component//lib//factory//generated//contenttype//contenttype.factory.container.usersecurityspec.binding.json",
+    "isSingleton": false,
+    "ctorParameters": {
+        "name": null
+    }
+}

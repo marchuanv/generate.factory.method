@@ -1,0 +1,13 @@
+{
+    "typeName": "WebSocketRequestMessage",
+    "typeVariableName": "webSocketRequestMessage",
+    "scriptPath": "C://component//lib//websocket//websocketrequestmessage.js",
+    "bindingName": "ClientMessageBusSpec",
+    "bindingFilePath": "C://component//lib//factory//generated//websocketrequestmessage//websocketrequestmessage.factory.container.clientmessagebusspec.binding.json",
+    "isSingleton": false,
+    "ctorParameters": {
+        "message": {
+            "bindingFilePath": "C://component//lib//factory//generated//message//message.factory.container.clientmessagebusspec.binding.json"
+        }
+    }
+}

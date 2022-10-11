@@ -1,11 +1,11 @@
 describe("when initialising a component given a client and server messagebus", () => {
 
-    let clientScopeId = "clientcomponenttest";
-    let serverScopeId = "servercomponenttest";
+    let clientScopeId = "ClientComponentSpec";
+    let serverScopeId = "ServerComponentSpec";
     let createComponent;
 
     beforeAll(() => {
-      ({ createComponent } = require('../../lib/factory/component.factory.js'));
+      ({ createComponent } = require('../../lib/factory/generated/component/component.factory.js'));
     });
 
     it("it should provide the capability for sending and receiving messages.", (done) => {

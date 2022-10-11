@@ -1,4 +1,4 @@
-fdescribe("when asking a client messagebus to publish more than one request", function() {
+describe("when asking a client messagebus to publish more than one request", function() {
 
   let token = null;
   const factoryContainerBindingName  = 'MultipleRequestsSpec';

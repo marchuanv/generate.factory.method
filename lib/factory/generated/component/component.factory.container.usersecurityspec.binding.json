@@ -1,0 +1,19 @@
+{
+    "typeName": "Component",
+    "typeVariableName": "component",
+    "scriptPath": "C://component//lib//component.js",
+    "bindingName": "UserSecuritySpec",
+    "bindingFilePath": "C://component//lib//factory//generated//component//component.factory.container.usersecurityspec.binding.json",
+    "isSingleton": false,
+    "ctorParameters": {
+        "packageJson": null,
+        "factoryContainerBindingName": null,
+        "clientMessageBus": {
+            "bindingFilePath": "C://component//lib//factory//generated//clientmessagebus//clientmessagebus.factory.container.usersecurityspec.binding.json"
+        },
+        "serverMessageBus": {
+            "bindingFilePath": "C://component//lib//factory//generated//servermessagebus//servermessagebus.factory.container.usersecurityspec.binding.json"
+        },
+        "userSessions": "UserSessions"
+    }
+}

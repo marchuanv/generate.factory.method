@@ -1,0 +1,12 @@
+{
+    "typeName": "WebSocketServerRequestMessageQueueBinding",
+    "typeVariableName": "webSocketServerRequestMessageQueueBinding",
+    "scriptPath": "C://component//lib//websocket//websocketserverrequestmessagequeuebinding.js",
+    "bindingName": "HttpServerResponseMessageBusSpec",
+    "bindingFilePath": "C://component//lib//factory//generated//websocketserverrequestmessagequeuebinding//websocketserverrequestmessagequeuebinding.factory.container.httpserverresponsemessagebusspec.binding.json",
+    "isSingleton": false,
+    "ctorParameters": {
+        "factoryContainerBindingName": null,
+        "messageQueue": "MessageQueue"
+    }
+}

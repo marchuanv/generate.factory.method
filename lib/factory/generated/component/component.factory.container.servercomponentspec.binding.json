@@ -1,0 +1,19 @@
+{
+    "typeName": "Component",
+    "typeVariableName": "component",
+    "scriptPath": "C://component//lib//component.js",
+    "bindingName": "ServerComponentSpec",
+    "bindingFilePath": "C://component//lib//factory//generated//component//component.factory.container.servercomponentspec.binding.json",
+    "isSingleton": false,
+    "ctorParameters": {
+        "packageJson": null,
+        "factoryContainerBindingName": null,
+        "clientMessageBus": {
+            "bindingFilePath": "C://component//lib//factory//generated//clientmessagebus//clientmessagebus.factory.container.servercomponentspec.binding.json"
+        },
+        "serverMessageBus": {
+            "bindingFilePath": "C://component//lib//factory//generated//servermessagebus//servermessagebus.factory.container.servercomponentspec.binding.json"
+        },
+        "userSessions": "UserSessions"
+    }
+}
