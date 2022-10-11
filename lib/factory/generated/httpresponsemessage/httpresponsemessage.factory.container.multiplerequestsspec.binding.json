@@ -4,7 +4,7 @@
     "scriptPath": "C://component//lib//http//httpresponsemessage.js",
     "bindingName": "MultipleRequestsSpec",
     "bindingFilePath": "C://component//lib//factory//generated//httpresponsemessage//httpresponsemessage.factory.container.multiplerequestsspec.binding.json",
-    "isSingleton": null,
+    "isSingleton": false,
     "ctorParameters": {
         "message": {
             "bindingFilePath": "C://component//lib//factory//generated//message//message.factory.container.multiplerequestsspec.binding.json"

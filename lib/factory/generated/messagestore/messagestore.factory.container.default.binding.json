@@ -4,6 +4,6 @@
     "scriptPath": "C://component//lib//messagestore.js",
     "bindingName": "Default",
     "bindingFilePath": "C://component//lib//factory//generated//messagestore//messagestore.factory.container.default.binding.json",
-    "isSingleton": null,
+    "isSingleton": false,
     "ctorParameters": {}
 }

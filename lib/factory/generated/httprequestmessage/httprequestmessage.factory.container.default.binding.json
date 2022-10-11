@@ -4,7 +4,7 @@
     "scriptPath": "C://component//lib//http//httprequestmessage.js",
     "bindingName": "Default",
     "bindingFilePath": "C://component//lib//factory//generated//httprequestmessage//httprequestmessage.factory.container.default.binding.json",
-    "isSingleton": null,
+    "isSingleton": false,
     "ctorParameters": {
         "message": {
             "bindingFilePath": "C://component//lib//factory//generated//message//message.factory.container.default.binding.json"

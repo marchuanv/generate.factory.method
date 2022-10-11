@@ -4,7 +4,7 @@
     "scriptPath": "C://component//lib//websocket//websocketserverresponsemessagebus.js",
     "bindingName": "MultipleRequestsSpec",
     "bindingFilePath": "C://component//lib//factory//generated//websocketserverresponsemessagebus//websocketserverresponsemessagebus.factory.container.multiplerequestsspec.binding.json",
-    "isSingleton": null,
+    "isSingleton": false,
     "ctorParameters": {
         "webSocketServerResponseMessageQueueBinding": {
             "bindingFilePath": "C://component//lib//factory//generated//websocketserverresponsemessagequeuebinding//websocketserverresponsemessagequeuebinding.factory.container.multiplerequestsspec.binding.json"

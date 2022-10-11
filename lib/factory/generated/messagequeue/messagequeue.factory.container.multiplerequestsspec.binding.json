@@ -4,7 +4,7 @@
     "scriptPath": "C://component//lib//messagequeue.js",
     "bindingName": "MultipleRequestsSpec",
     "bindingFilePath": "C://component//lib//factory//generated//messagequeue//messagequeue.factory.container.multiplerequestsspec.binding.json",
-    "isSingleton": null,
+    "isSingleton": true,
     "ctorParameters": {
         "logger": {
             "bindingFilePath": "C://component//lib//factory//generated//logger//logger.factory.container.multiplerequestsspec.binding.json"

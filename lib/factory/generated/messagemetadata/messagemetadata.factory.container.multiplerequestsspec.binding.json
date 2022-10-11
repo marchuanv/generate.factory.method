@@ -4,7 +4,7 @@
     "scriptPath": "C://component//lib//messagemetadata.js",
     "bindingName": "MultipleRequestsSpec",
     "bindingFilePath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.multiplerequestsspec.binding.json",
-    "isSingleton": null,
+    "isSingleton": false,
     "ctorParameters": {
         "recipientAddress": {
             "bindingFilePath": "C://component//lib//factory//generated//recipientaddress//recipientaddress.factory.container.multiplerequestsspec.binding.json"

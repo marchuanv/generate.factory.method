@@ -4,7 +4,7 @@
     "scriptPath": "C://component//lib//http//httpclientresponsemessagequeuebinding.js",
     "bindingName": "MultipleRequestsSpec",
     "bindingFilePath": "C://component//lib//factory//generated//httpclientresponsemessagequeuebinding//httpclientresponsemessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
-    "isSingleton": null,
+    "isSingleton": false,
     "ctorParameters": {
         "factoryContainerBindingName": null,
         "messageQueue": {

@@ -4,7 +4,7 @@
     "scriptPath": "C://component//lib//http//httpservermessagebus.js",
     "bindingName": "Default",
     "bindingFilePath": "C://component//lib//factory//generated//httpservermessagebus//httpservermessagebus.factory.container.default.binding.json",
-    "isSingleton": null,
+    "isSingleton": false,
     "ctorParameters": {
         "timeout": null,
         "factoryContainerBindingName": null,

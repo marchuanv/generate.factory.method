@@ -4,7 +4,7 @@
     "scriptPath": "C://component//lib//websocket//websocketclientresponsemessagebus.js",
     "bindingName": "Default",
     "bindingFilePath": "C://component//lib//factory//generated//websocketclientresponsemessagebus//websocketclientresponsemessagebus.factory.container.default.binding.json",
-    "isSingleton": null,
+    "isSingleton": false,
     "ctorParameters": {
         "websocketClientResponseMessageQueueBinding": {
             "bindingFilePath": "C://component//lib//factory//generated//websocketclientresponsemessagequeuebinding//websocketclientresponsemessagequeuebinding.factory.container.default.binding.json"

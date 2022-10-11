@@ -4,7 +4,7 @@
     "scriptPath": "C://component//lib//usersessions.js",
     "bindingName": "Default",
     "bindingFilePath": "C://component//lib//factory//generated//usersessions//usersessions.factory.container.default.binding.json",
-    "isSingleton": null,
+    "isSingleton": true,
     "ctorParameters": {
         "factoryContainerBindingName": null
     }

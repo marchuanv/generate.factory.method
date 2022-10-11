@@ -4,7 +4,7 @@
     "scriptPath": "C://component//lib//clientmessagebus.js",
     "bindingName": "Default",
     "bindingFilePath": "C://component//lib//factory//generated//clientmessagebus//clientmessagebus.factory.container.default.binding.json",
-    "isSingleton": null,
+    "isSingleton": false,
     "ctorParameters": {
         "messageConverter": {
             "bindingFilePath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.default.binding.json"

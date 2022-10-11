@@ -4,7 +4,7 @@
     "scriptPath": "C://component//lib//http//httpserverstopmessagequeuebinding.js",
     "bindingName": "Default",
     "bindingFilePath": "C://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.container.default.binding.json",
-    "isSingleton": null,
+    "isSingleton": false,
     "ctorParameters": {
         "factoryContainerBindingName": null,
         "messageQueue": {
