@@ -4,6 +4,8 @@
     "scriptPath": "C://component//lib//http//httpclientrequestmessagequeuebinding.js",
     "bindingName": "Default",
     "bindingFilePath": "C://component//lib//factory//generated//httpclientrequestmessagequeuebinding//httpclientrequestmessagequeuebinding.factory.container.default.binding.json",
+    "defaultBindingName": "Default",
+    "defaultBindingFilePath": "C://component//lib//factory//generated//httpclientrequestmessagequeuebinding//httpclientrequestmessagequeuebinding.factory.container.default.binding.json",
     "isSingleton": false,
     "ctorParameters": {
         "factoryContainerBindingName": null,

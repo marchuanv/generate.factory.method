@@ -2,8 +2,10 @@
     "typeName": "HttpClientStartedMessageQueueBinding",
     "typeVariableName": "httpClientStartedMessageQueueBinding",
     "scriptPath": "C://component//lib//http//httpclientstartedmessagequeuebinding.js",
-    "bindingName": "HttpClientRequestMessageBusSpec",
+    "bindingName": "Default",
     "bindingFilePath": "C://component//lib//factory//generated//httpclientstartedmessagequeuebinding//httpclientstartedmessagequeuebinding.factory.container.default.binding.json",
+    "defaultBindingName": "Default",
+    "defaultBindingFilePath": "C://component//lib//factory//generated//httpclientstartedmessagequeuebinding//httpclientstartedmessagequeuebinding.factory.container.default.binding.json",
     "isSingleton": true,
     "ctorParameters": {
         "factoryContainerBindingName": null,

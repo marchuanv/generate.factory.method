@@ -4,6 +4,8 @@
     "scriptPath": "C://component//lib//websocket//websocketserverrequestmessagebus.js",
     "bindingName": "ServerMessageBusSpec",
     "bindingFilePath": "C://component//lib//factory//generated//websocketserverrequestmessagebus//websocketserverrequestmessagebus.factory.container.servermessagebusspec.binding.json",
+    "defaultBindingName": "Default",
+    "defaultBindingFilePath": "C://component//lib//factory//generated//websocketserverrequestmessagebus//websocketserverrequestmessagebus.factory.container.default.binding.json",
     "isSingleton": false,
     "ctorParameters": {
         "webSocketServerRequestMessageQueueBinding": {

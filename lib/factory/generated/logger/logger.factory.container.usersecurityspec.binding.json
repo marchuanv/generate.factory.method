@@ -1,0 +1,11 @@
+{
+    "typeName": "Logger",
+    "typeVariableName": "logger",
+    "scriptPath": "C://component//lib//logger.js",
+    "bindingName": "UserSecuritySpec",
+    "bindingFilePath": "C://component//lib//factory//generated//logger//logger.factory.container.usersecurityspec.binding.json",
+    "defaultBindingName": "Default",
+    "defaultBindingFilePath": "C://component//lib//factory//generated//logger//logger.factory.container.default.binding.json",
+    "isSingleton": true,
+    "ctorParameters": {}
+}

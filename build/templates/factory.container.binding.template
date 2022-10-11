@@ -4,6 +4,8 @@
     "scriptPath": "[ScriptPath]",
     "bindingName": "[BindingName]",
     "bindingFilePath": "[BindingFilePath]",
+    "defaultBindingName": "[DefaultBindingName]",
+    "defaultBindingFilePath": "[DefaultBindingFilePath]",
     "isSingleton": [IsSingleton],
     "ctorParameters":  [CtorParameters]
 }

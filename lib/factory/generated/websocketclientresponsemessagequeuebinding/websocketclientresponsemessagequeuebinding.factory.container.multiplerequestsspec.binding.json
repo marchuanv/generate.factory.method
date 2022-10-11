@@ -4,11 +4,13 @@
     "scriptPath": "C://component//lib//websocket//websocketclientresponsemessagequeuebinding.js",
     "bindingName": "MultipleRequestsSpec",
     "bindingFilePath": "C://component//lib//factory//generated//websocketclientresponsemessagequeuebinding//websocketclientresponsemessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
+    "defaultBindingName": "Default",
+    "defaultBindingFilePath": "C://component//lib//factory//generated//websocketclientresponsemessagequeuebinding//websocketclientresponsemessagequeuebinding.factory.container.default.binding.json",
     "isSingleton": false,
     "ctorParameters": {
         "factoryContainerBindingName": null,
         "messageQueue": {
-            "bindingFilePath": "C://component//lib//factory//generated//messagequeue//messagequeue.factory.container.default.binding.json"
+            "bindingFilePath": "C://component//lib//factory//generated//messagequeue//messagequeue.factory.container.multiplerequestsspec.binding.json"
         }
     }
 }

@@ -1,0 +1,13 @@
+{
+    "typeName": "UserSessions",
+    "typeVariableName": "userSessions",
+    "scriptPath": "C://component//lib//usersessions.js",
+    "bindingName": "ClientComponentSpec",
+    "bindingFilePath": "C://component//lib//factory//generated//usersessions//usersessions.factory.container.clientcomponentspec.binding.json",
+    "defaultBindingName": "Default",
+    "defaultBindingFilePath": "C://component//lib//factory//generated//usersessions//usersessions.factory.container.default.binding.json",
+    "isSingleton": true,
+    "ctorParameters": {
+        "factoryContainerBindingName": null
+    }
+}

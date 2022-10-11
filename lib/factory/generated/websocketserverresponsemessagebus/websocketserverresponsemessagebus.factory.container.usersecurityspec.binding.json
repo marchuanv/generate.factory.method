@@ -4,6 +4,8 @@
     "scriptPath": "C://component//lib//websocket//websocketserverresponsemessagebus.js",
     "bindingName": "UserSecuritySpec",
     "bindingFilePath": "C://component//lib//factory//generated//websocketserverresponsemessagebus//websocketserverresponsemessagebus.factory.container.usersecurityspec.binding.json",
+    "defaultBindingName": "Default",
+    "defaultBindingFilePath": "C://component//lib//factory//generated//websocketserverresponsemessagebus//websocketserverresponsemessagebus.factory.container.default.binding.json",
     "isSingleton": false,
     "ctorParameters": {
         "webSocketServerResponseMessageQueueBinding": {

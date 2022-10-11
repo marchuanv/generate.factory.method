@@ -4,6 +4,8 @@
     "scriptPath": "C://component//lib//messagecontent.js",
     "bindingName": "UserSecuritySpec",
     "bindingFilePath": "C://component//lib//factory//generated//messagecontent//messagecontent.factory.container.usersecurityspec.binding.json",
+    "defaultBindingName": "Default",
+    "defaultBindingFilePath": "C://component//lib//factory//generated//messagecontent//messagecontent.factory.container.default.binding.json",
     "isSingleton": false,
     "ctorParameters": {
         "messageContentMetadata": {
@@ -11,7 +13,7 @@
         },
         "data": null,
         "userSessions": {
-            "bindingFilePath": "C://component//lib//factory//generated//usersessions//usersessions.factory.container.default.binding.json"
+            "bindingFilePath": "C://component//lib//factory//generated//usersessions//usersessions.factory.container.usersecurityspec.binding.json"
         },
         "messageMetadata": {
             "bindingFilePath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.usersecurityspec.binding.json"

@@ -4,10 +4,12 @@
     "scriptPath": "C://component//lib//clientmessagebus.js",
     "bindingName": "ClientComponentSpec",
     "bindingFilePath": "C://component//lib//factory//generated//clientmessagebus//clientmessagebus.factory.container.clientcomponentspec.binding.json",
+    "defaultBindingName": "Default",
+    "defaultBindingFilePath": "C://component//lib//factory//generated//clientmessagebus//clientmessagebus.factory.container.default.binding.json",
     "isSingleton": false,
     "ctorParameters": {
         "messageConverter": {
-            "bindingFilePath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.default.binding.json"
+            "bindingFilePath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.clientcomponentspec.binding.json"
         },
         "clientRequestMessageBus": {
             "bindingFilePath": "C://component//lib//factory//generated//httpclientrequestmessagebus//httpclientrequestmessagebus.factory.container.clientcomponentspec.binding.json"

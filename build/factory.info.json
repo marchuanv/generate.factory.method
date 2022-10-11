@@ -70,14 +70,14 @@
         "factoryScriptPath": "C://component//lib//factory//generated//logger//logger.factory.js",
         "factoryContainerBindingFilePaths": {
             "Default": "C://component//lib//factory//generated//logger//logger.factory.container.default.binding.json",
-            "MultipleRequestsSpec": "C://component//lib//factory//generated//logger//logger.factory.container.default.binding.json",
-            "UserSecuritySpec": "C://component//lib//factory//generated//logger//logger.factory.container.default.binding.json",
-            "ClientComponentSpec": "C://component//lib//factory//generated//logger//logger.factory.container.default.binding.json",
-            "ServerComponentSpec": "C://component//lib//factory//generated//logger//logger.factory.container.default.binding.json",
-            "ClientMessageBusSpec": "C://component//lib//factory//generated//logger//logger.factory.container.default.binding.json",
-            "ServerMessageBusSpec": "C://component//lib//factory//generated//logger//logger.factory.container.default.binding.json",
-            "HttpServerResponseMessageBusSpec": "C://component//lib//factory//generated//logger//logger.factory.container.default.binding.json",
-            "HttpClientRequestMessageBusSpec": "C://component//lib//factory//generated//logger//logger.factory.container.default.binding.json"
+            "MultipleRequestsSpec": "C://component//lib//factory//generated//logger//logger.factory.container.multiplerequestsspec.binding.json",
+            "UserSecuritySpec": "C://component//lib//factory//generated//logger//logger.factory.container.usersecurityspec.binding.json",
+            "ClientComponentSpec": "C://component//lib//factory//generated//logger//logger.factory.container.clientcomponentspec.binding.json",
+            "ServerComponentSpec": "C://component//lib//factory//generated//logger//logger.factory.container.servercomponentspec.binding.json",
+            "ClientMessageBusSpec": "C://component//lib//factory//generated//logger//logger.factory.container.clientmessagebusspec.binding.json",
+            "ServerMessageBusSpec": "C://component//lib//factory//generated//logger//logger.factory.container.servermessagebusspec.binding.json",
+            "HttpServerResponseMessageBusSpec": "C://component//lib//factory//generated//logger//logger.factory.container.httpserverresponsemessagebusspec.binding.json",
+            "HttpClientRequestMessageBusSpec": "C://component//lib//factory//generated//logger//logger.factory.container.httpclientrequestmessagebusspec.binding.json"
         },
         "minFactoryScriptPath": "C://component//lib//factory//generated//logger//logger.factory.min.js",
         "ctorArgumentsWithBindingNames": [
@@ -187,14 +187,14 @@
         "factoryScriptPath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.js",
         "factoryContainerBindingFilePaths": {
             "Default": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.default.binding.json",
-            "MultipleRequestsSpec": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.default.binding.json",
-            "UserSecuritySpec": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.default.binding.json",
-            "ClientComponentSpec": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.default.binding.json",
-            "ServerComponentSpec": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.default.binding.json",
-            "ClientMessageBusSpec": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.default.binding.json",
-            "ServerMessageBusSpec": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.default.binding.json",
-            "HttpServerResponseMessageBusSpec": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.default.binding.json",
-            "HttpClientRequestMessageBusSpec": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.default.binding.json"
+            "MultipleRequestsSpec": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.multiplerequestsspec.binding.json",
+            "UserSecuritySpec": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.usersecurityspec.binding.json",
+            "ClientComponentSpec": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.clientcomponentspec.binding.json",
+            "ServerComponentSpec": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.servercomponentspec.binding.json",
+            "ClientMessageBusSpec": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.clientmessagebusspec.binding.json",
+            "ServerMessageBusSpec": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.servermessagebusspec.binding.json",
+            "HttpServerResponseMessageBusSpec": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.httpserverresponsemessagebusspec.binding.json",
+            "HttpClientRequestMessageBusSpec": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.httpclientrequestmessagebusspec.binding.json"
         },
         "minFactoryScriptPath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.min.js",
         "ctorArgumentsWithBindingNames": [
@@ -240,14 +240,14 @@
         "factoryScriptPath": "C://component//lib//factory//generated//messagequeue//messagequeue.factory.js",
         "factoryContainerBindingFilePaths": {
             "Default": "C://component//lib//factory//generated//messagequeue//messagequeue.factory.container.default.binding.json",
-            "MultipleRequestsSpec": "C://component//lib//factory//generated//messagequeue//messagequeue.factory.container.default.binding.json",
-            "UserSecuritySpec": "C://component//lib//factory//generated//messagequeue//messagequeue.factory.container.default.binding.json",
-            "ClientComponentSpec": "C://component//lib//factory//generated//messagequeue//messagequeue.factory.container.default.binding.json",
-            "ServerComponentSpec": "C://component//lib//factory//generated//messagequeue//messagequeue.factory.container.default.binding.json",
-            "ClientMessageBusSpec": "C://component//lib//factory//generated//messagequeue//messagequeue.factory.container.default.binding.json",
-            "ServerMessageBusSpec": "C://component//lib//factory//generated//messagequeue//messagequeue.factory.container.default.binding.json",
-            "HttpServerResponseMessageBusSpec": "C://component//lib//factory//generated//messagequeue//messagequeue.factory.container.default.binding.json",
-            "HttpClientRequestMessageBusSpec": "C://component//lib//factory//generated//messagequeue//messagequeue.factory.container.default.binding.json"
+            "MultipleRequestsSpec": "C://component//lib//factory//generated//messagequeue//messagequeue.factory.container.multiplerequestsspec.binding.json",
+            "UserSecuritySpec": "C://component//lib//factory//generated//messagequeue//messagequeue.factory.container.usersecurityspec.binding.json",
+            "ClientComponentSpec": "C://component//lib//factory//generated//messagequeue//messagequeue.factory.container.clientcomponentspec.binding.json",
+            "ServerComponentSpec": "C://component//lib//factory//generated//messagequeue//messagequeue.factory.container.servercomponentspec.binding.json",
+            "ClientMessageBusSpec": "C://component//lib//factory//generated//messagequeue//messagequeue.factory.container.clientmessagebusspec.binding.json",
+            "ServerMessageBusSpec": "C://component//lib//factory//generated//messagequeue//messagequeue.factory.container.servermessagebusspec.binding.json",
+            "HttpServerResponseMessageBusSpec": "C://component//lib//factory//generated//messagequeue//messagequeue.factory.container.httpserverresponsemessagebusspec.binding.json",
+            "HttpClientRequestMessageBusSpec": "C://component//lib//factory//generated//messagequeue//messagequeue.factory.container.httpclientrequestmessagebusspec.binding.json"
         },
         "minFactoryScriptPath": "C://component//lib//factory//generated//messagequeue//messagequeue.factory.min.js",
         "ctorArgumentsWithBindingNames": [
@@ -283,14 +283,14 @@
         "factoryScriptPath": "C://component//lib//factory//generated//messagestore//messagestore.factory.js",
         "factoryContainerBindingFilePaths": {
             "Default": "C://component//lib//factory//generated//messagestore//messagestore.factory.container.default.binding.json",
-            "MultipleRequestsSpec": "C://component//lib//factory//generated//messagestore//messagestore.factory.container.default.binding.json",
-            "UserSecuritySpec": "C://component//lib//factory//generated//messagestore//messagestore.factory.container.default.binding.json",
-            "ClientComponentSpec": "C://component//lib//factory//generated//messagestore//messagestore.factory.container.default.binding.json",
-            "ServerComponentSpec": "C://component//lib//factory//generated//messagestore//messagestore.factory.container.default.binding.json",
-            "ClientMessageBusSpec": "C://component//lib//factory//generated//messagestore//messagestore.factory.container.default.binding.json",
-            "ServerMessageBusSpec": "C://component//lib//factory//generated//messagestore//messagestore.factory.container.default.binding.json",
-            "HttpServerResponseMessageBusSpec": "C://component//lib//factory//generated//messagestore//messagestore.factory.container.default.binding.json",
-            "HttpClientRequestMessageBusSpec": "C://component//lib//factory//generated//messagestore//messagestore.factory.container.default.binding.json"
+            "MultipleRequestsSpec": "C://component//lib//factory//generated//messagestore//messagestore.factory.container.multiplerequestsspec.binding.json",
+            "UserSecuritySpec": "C://component//lib//factory//generated//messagestore//messagestore.factory.container.usersecurityspec.binding.json",
+            "ClientComponentSpec": "C://component//lib//factory//generated//messagestore//messagestore.factory.container.clientcomponentspec.binding.json",
+            "ServerComponentSpec": "C://component//lib//factory//generated//messagestore//messagestore.factory.container.servercomponentspec.binding.json",
+            "ClientMessageBusSpec": "C://component//lib//factory//generated//messagestore//messagestore.factory.container.clientmessagebusspec.binding.json",
+            "ServerMessageBusSpec": "C://component//lib//factory//generated//messagestore//messagestore.factory.container.servermessagebusspec.binding.json",
+            "HttpServerResponseMessageBusSpec": "C://component//lib//factory//generated//messagestore//messagestore.factory.container.httpserverresponsemessagebusspec.binding.json",
+            "HttpClientRequestMessageBusSpec": "C://component//lib//factory//generated//messagestore//messagestore.factory.container.httpclientrequestmessagebusspec.binding.json"
         },
         "minFactoryScriptPath": "C://component//lib//factory//generated//messagestore//messagestore.factory.min.js",
         "ctorArgumentsWithBindingNames": [
@@ -396,14 +396,14 @@
         "factoryScriptPath": "C://component//lib//factory//generated//usersessions//usersessions.factory.js",
         "factoryContainerBindingFilePaths": {
             "Default": "C://component//lib//factory//generated//usersessions//usersessions.factory.container.default.binding.json",
-            "MultipleRequestsSpec": "C://component//lib//factory//generated//usersessions//usersessions.factory.container.default.binding.json",
-            "UserSecuritySpec": "C://component//lib//factory//generated//usersessions//usersessions.factory.container.default.binding.json",
-            "ClientComponentSpec": "C://component//lib//factory//generated//usersessions//usersessions.factory.container.default.binding.json",
-            "ServerComponentSpec": "C://component//lib//factory//generated//usersessions//usersessions.factory.container.default.binding.json",
-            "ClientMessageBusSpec": "C://component//lib//factory//generated//usersessions//usersessions.factory.container.default.binding.json",
-            "ServerMessageBusSpec": "C://component//lib//factory//generated//usersessions//usersessions.factory.container.default.binding.json",
-            "HttpServerResponseMessageBusSpec": "C://component//lib//factory//generated//usersessions//usersessions.factory.container.default.binding.json",
-            "HttpClientRequestMessageBusSpec": "C://component//lib//factory//generated//usersessions//usersessions.factory.container.default.binding.json"
+            "MultipleRequestsSpec": "C://component//lib//factory//generated//usersessions//usersessions.factory.container.multiplerequestsspec.binding.json",
+            "UserSecuritySpec": "C://component//lib//factory//generated//usersessions//usersessions.factory.container.usersecurityspec.binding.json",
+            "ClientComponentSpec": "C://component//lib//factory//generated//usersessions//usersessions.factory.container.clientcomponentspec.binding.json",
+            "ServerComponentSpec": "C://component//lib//factory//generated//usersessions//usersessions.factory.container.servercomponentspec.binding.json",
+            "ClientMessageBusSpec": "C://component//lib//factory//generated//usersessions//usersessions.factory.container.clientmessagebusspec.binding.json",
+            "ServerMessageBusSpec": "C://component//lib//factory//generated//usersessions//usersessions.factory.container.servermessagebusspec.binding.json",
+            "HttpServerResponseMessageBusSpec": "C://component//lib//factory//generated//usersessions//usersessions.factory.container.httpserverresponsemessagebusspec.binding.json",
+            "HttpClientRequestMessageBusSpec": "C://component//lib//factory//generated//usersessions//usersessions.factory.container.httpclientrequestmessagebusspec.binding.json"
         },
         "minFactoryScriptPath": "C://component//lib//factory//generated//usersessions//usersessions.factory.min.js",
         "ctorArgumentsWithBindingNames": [
@@ -439,14 +439,14 @@
         "factoryScriptPath": "C://component//lib//factory//generated//httpclientmessagebusmanager//httpclientmessagebusmanager.factory.js",
         "factoryContainerBindingFilePaths": {
             "Default": "C://component//lib//factory//generated//httpclientmessagebusmanager//httpclientmessagebusmanager.factory.container.default.binding.json",
-            "MultipleRequestsSpec": "C://component//lib//factory//generated//httpclientmessagebusmanager//httpclientmessagebusmanager.factory.container.default.binding.json",
-            "UserSecuritySpec": "C://component//lib//factory//generated//httpclientmessagebusmanager//httpclientmessagebusmanager.factory.container.default.binding.json",
-            "ClientComponentSpec": "C://component//lib//factory//generated//httpclientmessagebusmanager//httpclientmessagebusmanager.factory.container.default.binding.json",
-            "ServerComponentSpec": "C://component//lib//factory//generated//httpclientmessagebusmanager//httpclientmessagebusmanager.factory.container.default.binding.json",
-            "ClientMessageBusSpec": "C://component//lib//factory//generated//httpclientmessagebusmanager//httpclientmessagebusmanager.factory.container.default.binding.json",
-            "ServerMessageBusSpec": "C://component//lib//factory//generated//httpclientmessagebusmanager//httpclientmessagebusmanager.factory.container.default.binding.json",
-            "HttpServerResponseMessageBusSpec": "C://component//lib//factory//generated//httpclientmessagebusmanager//httpclientmessagebusmanager.factory.container.default.binding.json",
-            "HttpClientRequestMessageBusSpec": "C://component//lib//factory//generated//httpclientmessagebusmanager//httpclientmessagebusmanager.factory.container.default.binding.json"
+            "MultipleRequestsSpec": "C://component//lib//factory//generated//httpclientmessagebusmanager//httpclientmessagebusmanager.factory.container.multiplerequestsspec.binding.json",
+            "UserSecuritySpec": "C://component//lib//factory//generated//httpclientmessagebusmanager//httpclientmessagebusmanager.factory.container.usersecurityspec.binding.json",
+            "ClientComponentSpec": "C://component//lib//factory//generated//httpclientmessagebusmanager//httpclientmessagebusmanager.factory.container.clientcomponentspec.binding.json",
+            "ServerComponentSpec": "C://component//lib//factory//generated//httpclientmessagebusmanager//httpclientmessagebusmanager.factory.container.servercomponentspec.binding.json",
+            "ClientMessageBusSpec": "C://component//lib//factory//generated//httpclientmessagebusmanager//httpclientmessagebusmanager.factory.container.clientmessagebusspec.binding.json",
+            "ServerMessageBusSpec": "C://component//lib//factory//generated//httpclientmessagebusmanager//httpclientmessagebusmanager.factory.container.servermessagebusspec.binding.json",
+            "HttpServerResponseMessageBusSpec": "C://component//lib//factory//generated//httpclientmessagebusmanager//httpclientmessagebusmanager.factory.container.httpserverresponsemessagebusspec.binding.json",
+            "HttpClientRequestMessageBusSpec": "C://component//lib//factory//generated//httpclientmessagebusmanager//httpclientmessagebusmanager.factory.container.httpclientrequestmessagebusspec.binding.json"
         },
         "minFactoryScriptPath": "C://component//lib//factory//generated//httpclientmessagebusmanager//httpclientmessagebusmanager.factory.min.js",
         "ctorArgumentsWithBindingNames": [
@@ -539,14 +539,14 @@
         "factoryScriptPath": "C://component//lib//factory//generated//httpclientstartedmessagequeuebinding//httpclientstartedmessagequeuebinding.factory.js",
         "factoryContainerBindingFilePaths": {
             "Default": "C://component//lib//factory//generated//httpclientstartedmessagequeuebinding//httpclientstartedmessagequeuebinding.factory.container.default.binding.json",
-            "MultipleRequestsSpec": "C://component//lib//factory//generated//httpclientstartedmessagequeuebinding//httpclientstartedmessagequeuebinding.factory.container.default.binding.json",
-            "UserSecuritySpec": "C://component//lib//factory//generated//httpclientstartedmessagequeuebinding//httpclientstartedmessagequeuebinding.factory.container.default.binding.json",
-            "ClientComponentSpec": "C://component//lib//factory//generated//httpclientstartedmessagequeuebinding//httpclientstartedmessagequeuebinding.factory.container.default.binding.json",
-            "ServerComponentSpec": "C://component//lib//factory//generated//httpclientstartedmessagequeuebinding//httpclientstartedmessagequeuebinding.factory.container.default.binding.json",
-            "ClientMessageBusSpec": "C://component//lib//factory//generated//httpclientstartedmessagequeuebinding//httpclientstartedmessagequeuebinding.factory.container.default.binding.json",
-            "ServerMessageBusSpec": "C://component//lib//factory//generated//httpclientstartedmessagequeuebinding//httpclientstartedmessagequeuebinding.factory.container.default.binding.json",
-            "HttpServerResponseMessageBusSpec": "C://component//lib//factory//generated//httpclientstartedmessagequeuebinding//httpclientstartedmessagequeuebinding.factory.container.default.binding.json",
-            "HttpClientRequestMessageBusSpec": "C://component//lib//factory//generated//httpclientstartedmessagequeuebinding//httpclientstartedmessagequeuebinding.factory.container.default.binding.json"
+            "MultipleRequestsSpec": "C://component//lib//factory//generated//httpclientstartedmessagequeuebinding//httpclientstartedmessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
+            "UserSecuritySpec": "C://component//lib//factory//generated//httpclientstartedmessagequeuebinding//httpclientstartedmessagequeuebinding.factory.container.usersecurityspec.binding.json",
+            "ClientComponentSpec": "C://component//lib//factory//generated//httpclientstartedmessagequeuebinding//httpclientstartedmessagequeuebinding.factory.container.clientcomponentspec.binding.json",
+            "ServerComponentSpec": "C://component//lib//factory//generated//httpclientstartedmessagequeuebinding//httpclientstartedmessagequeuebinding.factory.container.servercomponentspec.binding.json",
+            "ClientMessageBusSpec": "C://component//lib//factory//generated//httpclientstartedmessagequeuebinding//httpclientstartedmessagequeuebinding.factory.container.clientmessagebusspec.binding.json",
+            "ServerMessageBusSpec": "C://component//lib//factory//generated//httpclientstartedmessagequeuebinding//httpclientstartedmessagequeuebinding.factory.container.servermessagebusspec.binding.json",
+            "HttpServerResponseMessageBusSpec": "C://component//lib//factory//generated//httpclientstartedmessagequeuebinding//httpclientstartedmessagequeuebinding.factory.container.httpserverresponsemessagebusspec.binding.json",
+            "HttpClientRequestMessageBusSpec": "C://component//lib//factory//generated//httpclientstartedmessagequeuebinding//httpclientstartedmessagequeuebinding.factory.container.httpclientrequestmessagebusspec.binding.json"
         },
         "minFactoryScriptPath": "C://component//lib//factory//generated//httpclientstartedmessagequeuebinding//httpclientstartedmessagequeuebinding.factory.min.js",
         "ctorArgumentsWithBindingNames": [
@@ -559,14 +559,14 @@
         "factoryScriptPath": "C://component//lib//factory//generated//httpclientstartmessagequeuebinding//httpclientstartmessagequeuebinding.factory.js",
         "factoryContainerBindingFilePaths": {
             "Default": "C://component//lib//factory//generated//httpclientstartmessagequeuebinding//httpclientstartmessagequeuebinding.factory.container.default.binding.json",
-            "MultipleRequestsSpec": "C://component//lib//factory//generated//httpclientstartmessagequeuebinding//httpclientstartmessagequeuebinding.factory.container.default.binding.json",
-            "UserSecuritySpec": "C://component//lib//factory//generated//httpclientstartmessagequeuebinding//httpclientstartmessagequeuebinding.factory.container.default.binding.json",
-            "ClientComponentSpec": "C://component//lib//factory//generated//httpclientstartmessagequeuebinding//httpclientstartmessagequeuebinding.factory.container.default.binding.json",
-            "ServerComponentSpec": "C://component//lib//factory//generated//httpclientstartmessagequeuebinding//httpclientstartmessagequeuebinding.factory.container.default.binding.json",
-            "ClientMessageBusSpec": "C://component//lib//factory//generated//httpclientstartmessagequeuebinding//httpclientstartmessagequeuebinding.factory.container.default.binding.json",
-            "ServerMessageBusSpec": "C://component//lib//factory//generated//httpclientstartmessagequeuebinding//httpclientstartmessagequeuebinding.factory.container.default.binding.json",
-            "HttpServerResponseMessageBusSpec": "C://component//lib//factory//generated//httpclientstartmessagequeuebinding//httpclientstartmessagequeuebinding.factory.container.default.binding.json",
-            "HttpClientRequestMessageBusSpec": "C://component//lib//factory//generated//httpclientstartmessagequeuebinding//httpclientstartmessagequeuebinding.factory.container.default.binding.json"
+            "MultipleRequestsSpec": "C://component//lib//factory//generated//httpclientstartmessagequeuebinding//httpclientstartmessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
+            "UserSecuritySpec": "C://component//lib//factory//generated//httpclientstartmessagequeuebinding//httpclientstartmessagequeuebinding.factory.container.usersecurityspec.binding.json",
+            "ClientComponentSpec": "C://component//lib//factory//generated//httpclientstartmessagequeuebinding//httpclientstartmessagequeuebinding.factory.container.clientcomponentspec.binding.json",
+            "ServerComponentSpec": "C://component//lib//factory//generated//httpclientstartmessagequeuebinding//httpclientstartmessagequeuebinding.factory.container.servercomponentspec.binding.json",
+            "ClientMessageBusSpec": "C://component//lib//factory//generated//httpclientstartmessagequeuebinding//httpclientstartmessagequeuebinding.factory.container.clientmessagebusspec.binding.json",
+            "ServerMessageBusSpec": "C://component//lib//factory//generated//httpclientstartmessagequeuebinding//httpclientstartmessagequeuebinding.factory.container.servermessagebusspec.binding.json",
+            "HttpServerResponseMessageBusSpec": "C://component//lib//factory//generated//httpclientstartmessagequeuebinding//httpclientstartmessagequeuebinding.factory.container.httpserverresponsemessagebusspec.binding.json",
+            "HttpClientRequestMessageBusSpec": "C://component//lib//factory//generated//httpclientstartmessagequeuebinding//httpclientstartmessagequeuebinding.factory.container.httpclientrequestmessagebusspec.binding.json"
         },
         "minFactoryScriptPath": "C://component//lib//factory//generated//httpclientstartmessagequeuebinding//httpclientstartmessagequeuebinding.factory.min.js",
         "ctorArgumentsWithBindingNames": [
@@ -579,14 +579,14 @@
         "factoryScriptPath": "C://component//lib//factory//generated//httpclientstopmessagequeuebinding//httpclientstopmessagequeuebinding.factory.js",
         "factoryContainerBindingFilePaths": {
             "Default": "C://component//lib//factory//generated//httpclientstopmessagequeuebinding//httpclientstopmessagequeuebinding.factory.container.default.binding.json",
-            "MultipleRequestsSpec": "C://component//lib//factory//generated//httpclientstopmessagequeuebinding//httpclientstopmessagequeuebinding.factory.container.default.binding.json",
-            "UserSecuritySpec": "C://component//lib//factory//generated//httpclientstopmessagequeuebinding//httpclientstopmessagequeuebinding.factory.container.default.binding.json",
-            "ClientComponentSpec": "C://component//lib//factory//generated//httpclientstopmessagequeuebinding//httpclientstopmessagequeuebinding.factory.container.default.binding.json",
-            "ServerComponentSpec": "C://component//lib//factory//generated//httpclientstopmessagequeuebinding//httpclientstopmessagequeuebinding.factory.container.default.binding.json",
-            "ClientMessageBusSpec": "C://component//lib//factory//generated//httpclientstopmessagequeuebinding//httpclientstopmessagequeuebinding.factory.container.default.binding.json",
-            "ServerMessageBusSpec": "C://component//lib//factory//generated//httpclientstopmessagequeuebinding//httpclientstopmessagequeuebinding.factory.container.default.binding.json",
-            "HttpServerResponseMessageBusSpec": "C://component//lib//factory//generated//httpclientstopmessagequeuebinding//httpclientstopmessagequeuebinding.factory.container.default.binding.json",
-            "HttpClientRequestMessageBusSpec": "C://component//lib//factory//generated//httpclientstopmessagequeuebinding//httpclientstopmessagequeuebinding.factory.container.default.binding.json"
+            "MultipleRequestsSpec": "C://component//lib//factory//generated//httpclientstopmessagequeuebinding//httpclientstopmessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
+            "UserSecuritySpec": "C://component//lib//factory//generated//httpclientstopmessagequeuebinding//httpclientstopmessagequeuebinding.factory.container.usersecurityspec.binding.json",
+            "ClientComponentSpec": "C://component//lib//factory//generated//httpclientstopmessagequeuebinding//httpclientstopmessagequeuebinding.factory.container.clientcomponentspec.binding.json",
+            "ServerComponentSpec": "C://component//lib//factory//generated//httpclientstopmessagequeuebinding//httpclientstopmessagequeuebinding.factory.container.servercomponentspec.binding.json",
+            "ClientMessageBusSpec": "C://component//lib//factory//generated//httpclientstopmessagequeuebinding//httpclientstopmessagequeuebinding.factory.container.clientmessagebusspec.binding.json",
+            "ServerMessageBusSpec": "C://component//lib//factory//generated//httpclientstopmessagequeuebinding//httpclientstopmessagequeuebinding.factory.container.servermessagebusspec.binding.json",
+            "HttpServerResponseMessageBusSpec": "C://component//lib//factory//generated//httpclientstopmessagequeuebinding//httpclientstopmessagequeuebinding.factory.container.httpserverresponsemessagebusspec.binding.json",
+            "HttpClientRequestMessageBusSpec": "C://component//lib//factory//generated//httpclientstopmessagequeuebinding//httpclientstopmessagequeuebinding.factory.container.httpclientrequestmessagebusspec.binding.json"
         },
         "minFactoryScriptPath": "C://component//lib//factory//generated//httpclientstopmessagequeuebinding//httpclientstopmessagequeuebinding.factory.min.js",
         "ctorArgumentsWithBindingNames": [
@@ -599,14 +599,14 @@
         "factoryScriptPath": "C://component//lib//factory//generated//httpclientstoppedmessagequeuebinding//httpclientstoppedmessagequeuebinding.factory.js",
         "factoryContainerBindingFilePaths": {
             "Default": "C://component//lib//factory//generated//httpclientstoppedmessagequeuebinding//httpclientstoppedmessagequeuebinding.factory.container.default.binding.json",
-            "MultipleRequestsSpec": "C://component//lib//factory//generated//httpclientstoppedmessagequeuebinding//httpclientstoppedmessagequeuebinding.factory.container.default.binding.json",
-            "UserSecuritySpec": "C://component//lib//factory//generated//httpclientstoppedmessagequeuebinding//httpclientstoppedmessagequeuebinding.factory.container.default.binding.json",
-            "ClientComponentSpec": "C://component//lib//factory//generated//httpclientstoppedmessagequeuebinding//httpclientstoppedmessagequeuebinding.factory.container.default.binding.json",
-            "ServerComponentSpec": "C://component//lib//factory//generated//httpclientstoppedmessagequeuebinding//httpclientstoppedmessagequeuebinding.factory.container.default.binding.json",
-            "ClientMessageBusSpec": "C://component//lib//factory//generated//httpclientstoppedmessagequeuebinding//httpclientstoppedmessagequeuebinding.factory.container.default.binding.json",
-            "ServerMessageBusSpec": "C://component//lib//factory//generated//httpclientstoppedmessagequeuebinding//httpclientstoppedmessagequeuebinding.factory.container.default.binding.json",
-            "HttpServerResponseMessageBusSpec": "C://component//lib//factory//generated//httpclientstoppedmessagequeuebinding//httpclientstoppedmessagequeuebinding.factory.container.default.binding.json",
-            "HttpClientRequestMessageBusSpec": "C://component//lib//factory//generated//httpclientstoppedmessagequeuebinding//httpclientstoppedmessagequeuebinding.factory.container.default.binding.json"
+            "MultipleRequestsSpec": "C://component//lib//factory//generated//httpclientstoppedmessagequeuebinding//httpclientstoppedmessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
+            "UserSecuritySpec": "C://component//lib//factory//generated//httpclientstoppedmessagequeuebinding//httpclientstoppedmessagequeuebinding.factory.container.usersecurityspec.binding.json",
+            "ClientComponentSpec": "C://component//lib//factory//generated//httpclientstoppedmessagequeuebinding//httpclientstoppedmessagequeuebinding.factory.container.clientcomponentspec.binding.json",
+            "ServerComponentSpec": "C://component//lib//factory//generated//httpclientstoppedmessagequeuebinding//httpclientstoppedmessagequeuebinding.factory.container.servercomponentspec.binding.json",
+            "ClientMessageBusSpec": "C://component//lib//factory//generated//httpclientstoppedmessagequeuebinding//httpclientstoppedmessagequeuebinding.factory.container.clientmessagebusspec.binding.json",
+            "ServerMessageBusSpec": "C://component//lib//factory//generated//httpclientstoppedmessagequeuebinding//httpclientstoppedmessagequeuebinding.factory.container.servermessagebusspec.binding.json",
+            "HttpServerResponseMessageBusSpec": "C://component//lib//factory//generated//httpclientstoppedmessagequeuebinding//httpclientstoppedmessagequeuebinding.factory.container.httpserverresponsemessagebusspec.binding.json",
+            "HttpClientRequestMessageBusSpec": "C://component//lib//factory//generated//httpclientstoppedmessagequeuebinding//httpclientstoppedmessagequeuebinding.factory.container.httpclientrequestmessagebusspec.binding.json"
         },
         "minFactoryScriptPath": "C://component//lib//factory//generated//httpclientstoppedmessagequeuebinding//httpclientstoppedmessagequeuebinding.factory.min.js",
         "ctorArgumentsWithBindingNames": [
@@ -724,14 +724,14 @@
         "factoryScriptPath": "C://component//lib//factory//generated//httpservermessagebusmanager//httpservermessagebusmanager.factory.js",
         "factoryContainerBindingFilePaths": {
             "Default": "C://component//lib//factory//generated//httpservermessagebusmanager//httpservermessagebusmanager.factory.container.default.binding.json",
-            "MultipleRequestsSpec": "C://component//lib//factory//generated//httpservermessagebusmanager//httpservermessagebusmanager.factory.container.default.binding.json",
-            "UserSecuritySpec": "C://component//lib//factory//generated//httpservermessagebusmanager//httpservermessagebusmanager.factory.container.default.binding.json",
-            "ClientComponentSpec": "C://component//lib//factory//generated//httpservermessagebusmanager//httpservermessagebusmanager.factory.container.default.binding.json",
-            "ServerComponentSpec": "C://component//lib//factory//generated//httpservermessagebusmanager//httpservermessagebusmanager.factory.container.default.binding.json",
-            "ClientMessageBusSpec": "C://component//lib//factory//generated//httpservermessagebusmanager//httpservermessagebusmanager.factory.container.default.binding.json",
-            "ServerMessageBusSpec": "C://component//lib//factory//generated//httpservermessagebusmanager//httpservermessagebusmanager.factory.container.default.binding.json",
-            "HttpServerResponseMessageBusSpec": "C://component//lib//factory//generated//httpservermessagebusmanager//httpservermessagebusmanager.factory.container.default.binding.json",
-            "HttpClientRequestMessageBusSpec": "C://component//lib//factory//generated//httpservermessagebusmanager//httpservermessagebusmanager.factory.container.default.binding.json"
+            "MultipleRequestsSpec": "C://component//lib//factory//generated//httpservermessagebusmanager//httpservermessagebusmanager.factory.container.multiplerequestsspec.binding.json",
+            "UserSecuritySpec": "C://component//lib//factory//generated//httpservermessagebusmanager//httpservermessagebusmanager.factory.container.usersecurityspec.binding.json",
+            "ClientComponentSpec": "C://component//lib//factory//generated//httpservermessagebusmanager//httpservermessagebusmanager.factory.container.clientcomponentspec.binding.json",
+            "ServerComponentSpec": "C://component//lib//factory//generated//httpservermessagebusmanager//httpservermessagebusmanager.factory.container.servercomponentspec.binding.json",
+            "ClientMessageBusSpec": "C://component//lib//factory//generated//httpservermessagebusmanager//httpservermessagebusmanager.factory.container.clientmessagebusspec.binding.json",
+            "ServerMessageBusSpec": "C://component//lib//factory//generated//httpservermessagebusmanager//httpservermessagebusmanager.factory.container.servermessagebusspec.binding.json",
+            "HttpServerResponseMessageBusSpec": "C://component//lib//factory//generated//httpservermessagebusmanager//httpservermessagebusmanager.factory.container.httpserverresponsemessagebusspec.binding.json",
+            "HttpClientRequestMessageBusSpec": "C://component//lib//factory//generated//httpservermessagebusmanager//httpservermessagebusmanager.factory.container.httpclientrequestmessagebusspec.binding.json"
         },
         "minFactoryScriptPath": "C://component//lib//factory//generated//httpservermessagebusmanager//httpservermessagebusmanager.factory.min.js",
         "ctorArgumentsWithBindingNames": [
@@ -824,14 +824,14 @@
         "factoryScriptPath": "C://component//lib//factory//generated//httpserverstartedmessagequeuebinding//httpserverstartedmessagequeuebinding.factory.js",
         "factoryContainerBindingFilePaths": {
             "Default": "C://component//lib//factory//generated//httpserverstartedmessagequeuebinding//httpserverstartedmessagequeuebinding.factory.container.default.binding.json",
-            "MultipleRequestsSpec": "C://component//lib//factory//generated//httpserverstartedmessagequeuebinding//httpserverstartedmessagequeuebinding.factory.container.default.binding.json",
-            "UserSecuritySpec": "C://component//lib//factory//generated//httpserverstartedmessagequeuebinding//httpserverstartedmessagequeuebinding.factory.container.default.binding.json",
-            "ClientComponentSpec": "C://component//lib//factory//generated//httpserverstartedmessagequeuebinding//httpserverstartedmessagequeuebinding.factory.container.default.binding.json",
-            "ServerComponentSpec": "C://component//lib//factory//generated//httpserverstartedmessagequeuebinding//httpserverstartedmessagequeuebinding.factory.container.default.binding.json",
-            "ClientMessageBusSpec": "C://component//lib//factory//generated//httpserverstartedmessagequeuebinding//httpserverstartedmessagequeuebinding.factory.container.default.binding.json",
-            "ServerMessageBusSpec": "C://component//lib//factory//generated//httpserverstartedmessagequeuebinding//httpserverstartedmessagequeuebinding.factory.container.default.binding.json",
-            "HttpServerResponseMessageBusSpec": "C://component//lib//factory//generated//httpserverstartedmessagequeuebinding//httpserverstartedmessagequeuebinding.factory.container.default.binding.json",
-            "HttpClientRequestMessageBusSpec": "C://component//lib//factory//generated//httpserverstartedmessagequeuebinding//httpserverstartedmessagequeuebinding.factory.container.default.binding.json"
+            "MultipleRequestsSpec": "C://component//lib//factory//generated//httpserverstartedmessagequeuebinding//httpserverstartedmessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
+            "UserSecuritySpec": "C://component//lib//factory//generated//httpserverstartedmessagequeuebinding//httpserverstartedmessagequeuebinding.factory.container.usersecurityspec.binding.json",
+            "ClientComponentSpec": "C://component//lib//factory//generated//httpserverstartedmessagequeuebinding//httpserverstartedmessagequeuebinding.factory.container.clientcomponentspec.binding.json",
+            "ServerComponentSpec": "C://component//lib//factory//generated//httpserverstartedmessagequeuebinding//httpserverstartedmessagequeuebinding.factory.container.servercomponentspec.binding.json",
+            "ClientMessageBusSpec": "C://component//lib//factory//generated//httpserverstartedmessagequeuebinding//httpserverstartedmessagequeuebinding.factory.container.clientmessagebusspec.binding.json",
+            "ServerMessageBusSpec": "C://component//lib//factory//generated//httpserverstartedmessagequeuebinding//httpserverstartedmessagequeuebinding.factory.container.servermessagebusspec.binding.json",
+            "HttpServerResponseMessageBusSpec": "C://component//lib//factory//generated//httpserverstartedmessagequeuebinding//httpserverstartedmessagequeuebinding.factory.container.httpserverresponsemessagebusspec.binding.json",
+            "HttpClientRequestMessageBusSpec": "C://component//lib//factory//generated//httpserverstartedmessagequeuebinding//httpserverstartedmessagequeuebinding.factory.container.httpclientrequestmessagebusspec.binding.json"
         },
         "minFactoryScriptPath": "C://component//lib//factory//generated//httpserverstartedmessagequeuebinding//httpserverstartedmessagequeuebinding.factory.min.js",
         "ctorArgumentsWithBindingNames": [
@@ -844,14 +844,14 @@
         "factoryScriptPath": "C://component//lib//factory//generated//httpserverstartmessagequeuebinding//httpserverstartmessagequeuebinding.factory.js",
         "factoryContainerBindingFilePaths": {
             "Default": "C://component//lib//factory//generated//httpserverstartmessagequeuebinding//httpserverstartmessagequeuebinding.factory.container.default.binding.json",
-            "MultipleRequestsSpec": "C://component//lib//factory//generated//httpserverstartmessagequeuebinding//httpserverstartmessagequeuebinding.factory.container.default.binding.json",
-            "UserSecuritySpec": "C://component//lib//factory//generated//httpserverstartmessagequeuebinding//httpserverstartmessagequeuebinding.factory.container.default.binding.json",
-            "ClientComponentSpec": "C://component//lib//factory//generated//httpserverstartmessagequeuebinding//httpserverstartmessagequeuebinding.factory.container.default.binding.json",
-            "ServerComponentSpec": "C://component//lib//factory//generated//httpserverstartmessagequeuebinding//httpserverstartmessagequeuebinding.factory.container.default.binding.json",
-            "ClientMessageBusSpec": "C://component//lib//factory//generated//httpserverstartmessagequeuebinding//httpserverstartmessagequeuebinding.factory.container.default.binding.json",
-            "ServerMessageBusSpec": "C://component//lib//factory//generated//httpserverstartmessagequeuebinding//httpserverstartmessagequeuebinding.factory.container.default.binding.json",
-            "HttpServerResponseMessageBusSpec": "C://component//lib//factory//generated//httpserverstartmessagequeuebinding//httpserverstartmessagequeuebinding.factory.container.default.binding.json",
-            "HttpClientRequestMessageBusSpec": "C://component//lib//factory//generated//httpserverstartmessagequeuebinding//httpserverstartmessagequeuebinding.factory.container.default.binding.json"
+            "MultipleRequestsSpec": "C://component//lib//factory//generated//httpserverstartmessagequeuebinding//httpserverstartmessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
+            "UserSecuritySpec": "C://component//lib//factory//generated//httpserverstartmessagequeuebinding//httpserverstartmessagequeuebinding.factory.container.usersecurityspec.binding.json",
+            "ClientComponentSpec": "C://component//lib//factory//generated//httpserverstartmessagequeuebinding//httpserverstartmessagequeuebinding.factory.container.clientcomponentspec.binding.json",
+            "ServerComponentSpec": "C://component//lib//factory//generated//httpserverstartmessagequeuebinding//httpserverstartmessagequeuebinding.factory.container.servercomponentspec.binding.json",
+            "ClientMessageBusSpec": "C://component//lib//factory//generated//httpserverstartmessagequeuebinding//httpserverstartmessagequeuebinding.factory.container.clientmessagebusspec.binding.json",
+            "ServerMessageBusSpec": "C://component//lib//factory//generated//httpserverstartmessagequeuebinding//httpserverstartmessagequeuebinding.factory.container.servermessagebusspec.binding.json",
+            "HttpServerResponseMessageBusSpec": "C://component//lib//factory//generated//httpserverstartmessagequeuebinding//httpserverstartmessagequeuebinding.factory.container.httpserverresponsemessagebusspec.binding.json",
+            "HttpClientRequestMessageBusSpec": "C://component//lib//factory//generated//httpserverstartmessagequeuebinding//httpserverstartmessagequeuebinding.factory.container.httpclientrequestmessagebusspec.binding.json"
         },
         "minFactoryScriptPath": "C://component//lib//factory//generated//httpserverstartmessagequeuebinding//httpserverstartmessagequeuebinding.factory.min.js",
         "ctorArgumentsWithBindingNames": [
@@ -864,14 +864,14 @@
         "factoryScriptPath": "C://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.js",
         "factoryContainerBindingFilePaths": {
             "Default": "C://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.container.default.binding.json",
-            "MultipleRequestsSpec": "C://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.container.default.binding.json",
-            "UserSecuritySpec": "C://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.container.default.binding.json",
-            "ClientComponentSpec": "C://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.container.default.binding.json",
-            "ServerComponentSpec": "C://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.container.default.binding.json",
-            "ClientMessageBusSpec": "C://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.container.default.binding.json",
-            "ServerMessageBusSpec": "C://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.container.default.binding.json",
-            "HttpServerResponseMessageBusSpec": "C://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.container.default.binding.json",
-            "HttpClientRequestMessageBusSpec": "C://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.container.default.binding.json"
+            "MultipleRequestsSpec": "C://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
+            "UserSecuritySpec": "C://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.container.usersecurityspec.binding.json",
+            "ClientComponentSpec": "C://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.container.clientcomponentspec.binding.json",
+            "ServerComponentSpec": "C://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.container.servercomponentspec.binding.json",
+            "ClientMessageBusSpec": "C://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.container.clientmessagebusspec.binding.json",
+            "ServerMessageBusSpec": "C://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.container.servermessagebusspec.binding.json",
+            "HttpServerResponseMessageBusSpec": "C://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.container.httpserverresponsemessagebusspec.binding.json",
+            "HttpClientRequestMessageBusSpec": "C://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.container.httpclientrequestmessagebusspec.binding.json"
         },
         "minFactoryScriptPath": "C://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.min.js",
         "ctorArgumentsWithBindingNames": [
@@ -884,14 +884,14 @@
         "factoryScriptPath": "C://component//lib//factory//generated//httpserverstoppedmessagequeuebinding//httpserverstoppedmessagequeuebinding.factory.js",
         "factoryContainerBindingFilePaths": {
             "Default": "C://component//lib//factory//generated//httpserverstoppedmessagequeuebinding//httpserverstoppedmessagequeuebinding.factory.container.default.binding.json",
-            "MultipleRequestsSpec": "C://component//lib//factory//generated//httpserverstoppedmessagequeuebinding//httpserverstoppedmessagequeuebinding.factory.container.default.binding.json",
-            "UserSecuritySpec": "C://component//lib//factory//generated//httpserverstoppedmessagequeuebinding//httpserverstoppedmessagequeuebinding.factory.container.default.binding.json",
-            "ClientComponentSpec": "C://component//lib//factory//generated//httpserverstoppedmessagequeuebinding//httpserverstoppedmessagequeuebinding.factory.container.default.binding.json",
-            "ServerComponentSpec": "C://component//lib//factory//generated//httpserverstoppedmessagequeuebinding//httpserverstoppedmessagequeuebinding.factory.container.default.binding.json",
-            "ClientMessageBusSpec": "C://component//lib//factory//generated//httpserverstoppedmessagequeuebinding//httpserverstoppedmessagequeuebinding.factory.container.default.binding.json",
-            "ServerMessageBusSpec": "C://component//lib//factory//generated//httpserverstoppedmessagequeuebinding//httpserverstoppedmessagequeuebinding.factory.container.default.binding.json",
-            "HttpServerResponseMessageBusSpec": "C://component//lib//factory//generated//httpserverstoppedmessagequeuebinding//httpserverstoppedmessagequeuebinding.factory.container.default.binding.json",
-            "HttpClientRequestMessageBusSpec": "C://component//lib//factory//generated//httpserverstoppedmessagequeuebinding//httpserverstoppedmessagequeuebinding.factory.container.default.binding.json"
+            "MultipleRequestsSpec": "C://component//lib//factory//generated//httpserverstoppedmessagequeuebinding//httpserverstoppedmessagequeuebinding.factory.container.multiplerequestsspec.binding.json",
+            "UserSecuritySpec": "C://component//lib//factory//generated//httpserverstoppedmessagequeuebinding//httpserverstoppedmessagequeuebinding.factory.container.usersecurityspec.binding.json",
+            "ClientComponentSpec": "C://component//lib//factory//generated//httpserverstoppedmessagequeuebinding//httpserverstoppedmessagequeuebinding.factory.container.clientcomponentspec.binding.json",
+            "ServerComponentSpec": "C://component//lib//factory//generated//httpserverstoppedmessagequeuebinding//httpserverstoppedmessagequeuebinding.factory.container.servercomponentspec.binding.json",
+            "ClientMessageBusSpec": "C://component//lib//factory//generated//httpserverstoppedmessagequeuebinding//httpserverstoppedmessagequeuebinding.factory.container.clientmessagebusspec.binding.json",
+            "ServerMessageBusSpec": "C://component//lib//factory//generated//httpserverstoppedmessagequeuebinding//httpserverstoppedmessagequeuebinding.factory.container.servermessagebusspec.binding.json",
+            "HttpServerResponseMessageBusSpec": "C://component//lib//factory//generated//httpserverstoppedmessagequeuebinding//httpserverstoppedmessagequeuebinding.factory.container.httpserverresponsemessagebusspec.binding.json",
+            "HttpClientRequestMessageBusSpec": "C://component//lib//factory//generated//httpserverstoppedmessagequeuebinding//httpserverstoppedmessagequeuebinding.factory.container.httpclientrequestmessagebusspec.binding.json"
         },
         "minFactoryScriptPath": "C://component//lib//factory//generated//httpserverstoppedmessagequeuebinding//httpserverstoppedmessagequeuebinding.factory.min.js",
         "ctorArgumentsWithBindingNames": [

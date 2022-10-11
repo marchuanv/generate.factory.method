@@ -4,6 +4,8 @@
     "scriptPath": "C://component//lib//messagemetadata.js",
     "bindingName": "ClientComponentSpec",
     "bindingFilePath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.clientcomponentspec.binding.json",
+    "defaultBindingName": "Default",
+    "defaultBindingFilePath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.default.binding.json",
     "isSingleton": false,
     "ctorParameters": {
         "recipientAddress": {

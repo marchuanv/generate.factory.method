@@ -4,6 +4,8 @@
     "scriptPath": "C://component//lib//messagecontentmetadata.js",
     "bindingName": "UserSecuritySpec",
     "bindingFilePath": "C://component//lib//factory//generated//messagecontentmetadata//messagecontentmetadata.factory.container.usersecurityspec.binding.json",
+    "defaultBindingName": "Default",
+    "defaultBindingFilePath": "C://component//lib//factory//generated//messagecontentmetadata//messagecontentmetadata.factory.container.default.binding.json",
     "isSingleton": false,
     "ctorParameters": {
         "factoryContainerBindingName": null,

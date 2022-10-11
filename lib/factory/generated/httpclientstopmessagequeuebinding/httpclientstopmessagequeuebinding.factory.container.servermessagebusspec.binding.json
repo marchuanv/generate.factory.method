@@ -1,0 +1,16 @@
+{
+    "typeName": "HttpClientStopMessageQueueBinding",
+    "typeVariableName": "httpClientStopMessageQueueBinding",
+    "scriptPath": "C://component//lib//http//httpclientstopmessagequeuebinding.js",
+    "bindingName": "ServerMessageBusSpec",
+    "bindingFilePath": "C://component//lib//factory//generated//httpclientstopmessagequeuebinding//httpclientstopmessagequeuebinding.factory.container.servermessagebusspec.binding.json",
+    "defaultBindingName": "Default",
+    "defaultBindingFilePath": "C://component//lib//factory//generated//httpclientstopmessagequeuebinding//httpclientstopmessagequeuebinding.factory.container.default.binding.json",
+    "isSingleton": true,
+    "ctorParameters": {
+        "factoryContainerBindingName": null,
+        "messageQueue": {
+            "bindingFilePath": "C://component//lib//factory//generated//messagequeue//messagequeue.factory.container.servermessagebusspec.binding.json"
+        }
+    }
+}

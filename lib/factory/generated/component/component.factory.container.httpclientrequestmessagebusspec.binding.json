@@ -4,6 +4,8 @@
     "scriptPath": "C://component//lib//component.js",
     "bindingName": "HttpClientRequestMessageBusSpec",
     "bindingFilePath": "C://component//lib//factory//generated//component//component.factory.container.httpclientrequestmessagebusspec.binding.json",
+    "defaultBindingName": "Default",
+    "defaultBindingFilePath": "C://component//lib//factory//generated//component//component.factory.container.default.binding.json",
     "isSingleton": false,
     "ctorParameters": {
         "packageJson": null,
@@ -15,7 +17,7 @@
             "bindingFilePath": "C://component//lib//factory//generated//servermessagebus//servermessagebus.factory.container.httpclientrequestmessagebusspec.binding.json"
         },
         "userSessions": {
-            "bindingFilePath": "C://component//lib//factory//generated//usersessions//usersessions.factory.container.default.binding.json"
+            "bindingFilePath": "C://component//lib//factory//generated//usersessions//usersessions.factory.container.httpclientrequestmessagebusspec.binding.json"
         }
     }
 }

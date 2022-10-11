@@ -6,6 +6,8 @@
     "factoryScriptPath": "[FactoryScriptPath]",
     "bindingName": "[BindingName]",
     "bindingFilePath": "[BindingFilePath]",
+    "defaultBindingName": "[DefaultBindingName]",
+    "defaultBindingFilePath": "[DefaultBindingFilePath]",
     "isSingleton": [isSingleton],
     "ctorParametersInfo":  [CtorParametersInfo]
 }

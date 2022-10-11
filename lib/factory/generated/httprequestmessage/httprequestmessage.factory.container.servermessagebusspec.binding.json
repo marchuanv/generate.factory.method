@@ -4,6 +4,8 @@
     "scriptPath": "C://component//lib//http//httprequestmessage.js",
     "bindingName": "ServerMessageBusSpec",
     "bindingFilePath": "C://component//lib//factory//generated//httprequestmessage//httprequestmessage.factory.container.servermessagebusspec.binding.json",
+    "defaultBindingName": "Default",
+    "defaultBindingFilePath": "C://component//lib//factory//generated//httprequestmessage//httprequestmessage.factory.container.default.binding.json",
     "isSingleton": false,
     "ctorParameters": {
         "message": {

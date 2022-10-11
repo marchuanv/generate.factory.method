@@ -4,6 +4,8 @@
     "scriptPath": "C://component//lib//http//httpresponsemessage.js",
     "bindingName": "ClientComponentSpec",
     "bindingFilePath": "C://component//lib//factory//generated//httpresponsemessage//httpresponsemessage.factory.container.clientcomponentspec.binding.json",
+    "defaultBindingName": "Default",
+    "defaultBindingFilePath": "C://component//lib//factory//generated//httpresponsemessage//httpresponsemessage.factory.container.default.binding.json",
     "isSingleton": false,
     "ctorParameters": {
         "message": {

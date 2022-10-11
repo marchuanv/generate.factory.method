@@ -1,0 +1,11 @@
+{
+    "typeName": "MessageStore",
+    "typeVariableName": "messageStore",
+    "scriptPath": "C://component//lib//messagestore.js",
+    "bindingName": "ClientMessageBusSpec",
+    "bindingFilePath": "C://component//lib//factory//generated//messagestore//messagestore.factory.container.clientmessagebusspec.binding.json",
+    "defaultBindingName": "Default",
+    "defaultBindingFilePath": "C://component//lib//factory//generated//messagestore//messagestore.factory.container.default.binding.json",
+    "isSingleton": true,
+    "ctorParameters": {}
+}

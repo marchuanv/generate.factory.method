@@ -21,7 +21,6 @@ if (!existsSync(generatedFactoryScriptsDir)){
 
 require('./type.info.generate');
 
-require('./factory.container.bindings.info.generate')({ factoryContainerBindingName: 'Default' });
 require('./factory.container.bindings.info.generate')({ factoryContainerBindingName: 'MultipleRequestsSpec' });
 require('./factory.container.bindings.info.generate')({ factoryContainerBindingName: 'UserSecuritySpec' });
 require('./factory.container.bindings.info.generate')({ factoryContainerBindingName: 'ClientComponentSpec' });
@@ -31,7 +30,6 @@ require('./factory.container.bindings.info.generate')({ factoryContainerBindingN
 require('./factory.container.bindings.info.generate')({ factoryContainerBindingName: 'HttpServerResponseMessageBusSpec' });
 require('./factory.container.bindings.info.generate')({ factoryContainerBindingName: 'HttpClientRequestMessageBusSpec' });
 
-require('./factory.info.generate')({ factoryContainerBindingName: 'Default' });
 require('./factory.info.generate')({ factoryContainerBindingName: 'MultipleRequestsSpec' });
 require('./factory.info.generate')({ factoryContainerBindingName: 'UserSecuritySpec' });
 require('./factory.info.generate')({ factoryContainerBindingName: 'ClientComponentSpec' });
@@ -41,7 +39,6 @@ require('./factory.info.generate')({ factoryContainerBindingName: 'ServerMessage
 require('./factory.info.generate')({ factoryContainerBindingName: 'HttpServerResponseMessageBusSpec' });
 require('./factory.info.generate')({ factoryContainerBindingName: 'HttpClientRequestMessageBusSpec' });
 
-require('./factory.container.bindings.generate')({ factoryContainerBindingName: 'Default' });
 require('./factory.container.bindings.generate')({ factoryContainerBindingName: 'MultipleRequestsSpec' });
 require('./factory.container.bindings.generate')({ factoryContainerBindingName: 'UserSecuritySpec' });
 require('./factory.container.bindings.generate')({ factoryContainerBindingName: 'ClientComponentSpec' });

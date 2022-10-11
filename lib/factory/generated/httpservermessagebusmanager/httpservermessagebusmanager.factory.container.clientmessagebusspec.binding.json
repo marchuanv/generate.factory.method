@@ -1,0 +1,31 @@
+{
+    "typeName": "HttpServerMessageBusManager",
+    "typeVariableName": "httpServerMessageBusManager",
+    "scriptPath": "C://component//lib//http//httpservermessagebusmanager.js",
+    "bindingName": "ClientMessageBusSpec",
+    "bindingFilePath": "C://component//lib//factory//generated//httpservermessagebusmanager//httpservermessagebusmanager.factory.container.clientmessagebusspec.binding.json",
+    "defaultBindingName": "Default",
+    "defaultBindingFilePath": "C://component//lib//factory//generated//httpservermessagebusmanager//httpservermessagebusmanager.factory.container.default.binding.json",
+    "isSingleton": true,
+    "ctorParameters": {
+        "httpServerStoppedMessageQueueBinding": {
+            "bindingFilePath": "C://component//lib//factory//generated//httpserverstoppedmessagequeuebinding//httpserverstoppedmessagequeuebinding.factory.container.clientmessagebusspec.binding.json"
+        },
+        "factoryContainerBindingName": null,
+        "httpServerRequestMessageQueueBinding": {
+            "bindingFilePath": "C://component//lib//factory//generated//httpserverrequestmessagequeuebinding//httpserverrequestmessagequeuebinding.factory.container.clientmessagebusspec.binding.json"
+        },
+        "httpServerResponseMessageQueueBinding": {
+            "bindingFilePath": "C://component//lib//factory//generated//httpserverresponsemessagequeuebinding//httpserverresponsemessagequeuebinding.factory.container.clientmessagebusspec.binding.json"
+        },
+        "httpServerStartMessageQueueBinding": {
+            "bindingFilePath": "C://component//lib//factory//generated//httpserverstartmessagequeuebinding//httpserverstartmessagequeuebinding.factory.container.clientmessagebusspec.binding.json"
+        },
+        "httpServerStartedMessageQueueBinding": {
+            "bindingFilePath": "C://component//lib//factory//generated//httpserverstartedmessagequeuebinding//httpserverstartedmessagequeuebinding.factory.container.clientmessagebusspec.binding.json"
+        },
+        "httpServerStopMessageQueueBinding": {
+            "bindingFilePath": "C://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.container.clientmessagebusspec.binding.json"
+        }
+    }
+}

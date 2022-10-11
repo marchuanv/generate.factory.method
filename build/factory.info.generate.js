@@ -28,7 +28,8 @@ const populateParameters = (info, params) => {
         }
     };
 }
-module.exports = function({ factoryContainerBindingName }) {
+
+function factoryInfoGenerate({ factoryContainerBindingName }) {
     for(const typeName of Object.keys(typesInfo)) {
         const bindingFilePaths = {};
         const info = typesInfo[typeName];
@@ -57,3 +58,5 @@ module.exports = function({ factoryContainerBindingName }) {
     };
     writeFileSync(factoryInfoPath, utils.getJSONString(factoryInfo), 'utf8');
 }
+factoryInfoGenerate({ factoryContainerBindingName: 'Default' });
+module.exports = factoryInfoGenerate;

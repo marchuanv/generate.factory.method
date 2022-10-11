@@ -4,11 +4,12 @@ const utils = require('utils');
 const typesInfo = require(path.join(__dirname, 'types.info.json'));
 const factoryContainerBindingInfoTemplate = readFileSync(path.join(__dirname, 'templates', 'factory.container.binding.info.template'),'utf8');
 const factoryContainerBindingsInfoPath = path.join(__dirname, 'factory.container.bindings.info.json');
+const defaultBindingName = 'Default';
 
 writeFileSync(factoryContainerBindingsInfoPath, utils.getJSONString([]), 'utf8');
 let factoryContainerBindingsInfo = [];
 
-module.exports = function({ factoryContainerBindingName }) {
+function factoryContainerBindingsInfoGenerate({ factoryContainerBindingName }) {
     for(const typeName of Object.keys(typesInfo)) {
         const factoryGeneratedDir = path.join(__dirname, '../lib', 'factory', 'generated', typeName.toLowerCase());
         const factoryScriptFileName = `${typeName.toLowerCase()}.factory.js`;
@@ -25,6 +26,8 @@ module.exports = function({ factoryContainerBindingName }) {
         },{});
         const bindingFileName =  `${typeName.toLowerCase()}.factory.container.${factoryContainerBindingName.toLowerCase()}.binding.json`;
         const bindingFilePath = path.join(factoryGeneratedDir, bindingFileName).replace(/\\/g,'//');
+        const defaultBindingFileName =  `${typeName.toLowerCase()}.factory.container.default.binding.json`;
+        const defaultBindingFilePath = path.join(factoryGeneratedDir, defaultBindingFileName).replace(/\\/g,'//');
         const binding = utils.getJSONObject(factoryContainerBindingInfoTemplate
             .replace(/\[TypeName\]/g, typeName)
             .replace(/\[TypeVariableName\]/g, variableName)
@@ -32,19 +35,14 @@ module.exports = function({ factoryContainerBindingName }) {
             .replace(/\[PrototypeScriptPath\]/g, prototypeScriptPath)
             .replace(/\[FactoryScriptPath\]/g, factoryScriptPath)
             .replace(/\[BindingName\]/g, factoryContainerBindingName)
-            .replace(/\[CtorParametersInfo\]/g, utils.getJSONString(ctorParametersInfo))
             .replace(/\[BindingFilePath\]/g, bindingFilePath)
+            .replace(/\[DefaultBindingName\]/g, 'Default')
+            .replace(/\[DefaultBindingFilePath\]/g, defaultBindingFilePath)
+            .replace(/\[CtorParametersInfo\]/g, utils.getJSONString(ctorParametersInfo))
             .replace(/\[isSingleton\]/g, isSingleton));
-        binding.Id = utils.generateGUID();
         factoryContainerBindingsInfo.push(binding);
-        if (isSingleton) {
-            const defaultBinding = factoryContainerBindingsInfo.find(cb =>  cb.typeName === typeName && cb.bindingName === 'Default');
-            for(const nonDefaultBinding of factoryContainerBindingsInfo.filter(cb =>  cb.typeName === typeName && cb.bindingName !== 'Default')) {
-                nonDefaultBinding.bindingFilePath = defaultBinding.bindingFilePath;
-                factoryContainerBindingsInfo = factoryContainerBindingsInfo.filter(cb => cb.Id !== nonDefaultBinding.Id);
-                factoryContainerBindingsInfo.push(nonDefaultBinding);
-            };
-        }
     };
     writeFileSync(factoryContainerBindingsInfoPath, utils.getJSONString(factoryContainerBindingsInfo), 'utf8');
 }
+factoryContainerBindingsInfoGenerate({ factoryContainerBindingName: defaultBindingName });
+module.exports = factoryContainerBindingsInfoGenerate;

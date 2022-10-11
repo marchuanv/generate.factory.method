@@ -4,11 +4,13 @@
     "scriptPath": "C://component//lib//websocket//websocketclientrequestmessagequeuebinding.js",
     "bindingName": "ClientMessageBusSpec",
     "bindingFilePath": "C://component//lib//factory//generated//websocketclientrequestmessagequeuebinding//websocketclientrequestmessagequeuebinding.factory.container.clientmessagebusspec.binding.json",
+    "defaultBindingName": "Default",
+    "defaultBindingFilePath": "C://component//lib//factory//generated//websocketclientrequestmessagequeuebinding//websocketclientrequestmessagequeuebinding.factory.container.default.binding.json",
     "isSingleton": false,
     "ctorParameters": {
         "factoryContainerBindingName": null,
         "messageQueue": {
-            "bindingFilePath": "C://component//lib//factory//generated//messagequeue//messagequeue.factory.container.default.binding.json"
+            "bindingFilePath": "C://component//lib//factory//generated//messagequeue//messagequeue.factory.container.clientmessagebusspec.binding.json"
         }
     }
 }

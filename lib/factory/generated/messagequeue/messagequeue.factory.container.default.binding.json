@@ -2,8 +2,10 @@
     "typeName": "MessageQueue",
     "typeVariableName": "messageQueue",
     "scriptPath": "C://component//lib//messagequeue.js",
-    "bindingName": "HttpClientRequestMessageBusSpec",
+    "bindingName": "Default",
     "bindingFilePath": "C://component//lib//factory//generated//messagequeue//messagequeue.factory.container.default.binding.json",
+    "defaultBindingName": "Default",
+    "defaultBindingFilePath": "C://component//lib//factory//generated//messagequeue//messagequeue.factory.container.default.binding.json",
     "isSingleton": true,
     "ctorParameters": {
         "logger": {

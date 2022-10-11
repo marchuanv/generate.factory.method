@@ -12,18 +12,20 @@ const enumerateBindings = ({ factoryContainerBindingName, typeName }, callback) 
     };
 };
 
-module.exports = function({ factoryContainerBindingName }) {
+function factoryContainerBindingsGenerate({ factoryContainerBindingName }) {
     enumerateBindings({ factoryContainerBindingName, typeName: null }, ({
         ctorParametersInfo,
         scriptPath,
         isSingleton,
         typeVariableName,
-        bindingFilePath,
         bindingName,
+        bindingFilePath,
+        defaultBindingName,
+        defaultBindingFilePath,
         typeName
    }) => {
         
-    const factoryGeneratedDir = path.join(__dirname, '../lib', 'factory', 'generated', typeName.toLowerCase());
+        const factoryGeneratedDir = path.join(__dirname, '../lib', 'factory', 'generated', typeName.toLowerCase());
         if (!existsSync(factoryGeneratedDir)){
             mkdirSync(factoryGeneratedDir);
         }
@@ -45,6 +47,8 @@ module.exports = function({ factoryContainerBindingName }) {
             .replace(/\[ScriptPath\]/g, scriptPath)
             .replace(/\[BindingName\]/g, bindingName)
             .replace(/\[BindingFilePath\]/g, bindingFilePath)
+            .replace(/\[DefaultBindingName\]/g, defaultBindingName)
+            .replace(/\[DefaultBindingFilePath\]/g, defaultBindingFilePath)
             .replace(/\[IsSingleton\]/g, isSingleton)
             .replace(/\[CtorParameters\]/g, utils.getJSONString(ctorParametersInfo));
         const newFactoryContainerBinding = utils.getJSONObject(factoryContainerBindingJson);
@@ -55,6 +59,8 @@ module.exports = function({ factoryContainerBindingName }) {
             existingFactoryContainerBinding.scriptPath = newFactoryContainerBinding.scriptPath;
             existingFactoryContainerBinding.bindingName = newFactoryContainerBinding.bindingName;
             existingFactoryContainerBinding.bindingFilePath = newFactoryContainerBinding.bindingFilePath;
+            existingFactoryContainerBinding.defaultBindingName = newFactoryContainerBinding.defaultBindingName;
+            existingFactoryContainerBinding.defaultBindingFilePath = newFactoryContainerBinding.defaultBindingFilePath;
             existingFactoryContainerBinding.isSingleton = newFactoryContainerBinding.isSingleton;
             if (!existingFactoryContainerBinding.ctorParameters) {
                 existingFactoryContainerBinding.ctorParameters = newFactoryContainerBinding.ctorParameters;
@@ -70,3 +76,5 @@ module.exports = function({ factoryContainerBindingName }) {
         }
     });
 }
+factoryContainerBindingsGenerate({ factoryContainerBindingName: 'Default' });
+module.exports = factoryContainerBindingsGenerate;

@@ -4,6 +4,8 @@
     "scriptPath": "C://component//lib//websocket//websocketrequestmessage.js",
     "bindingName": "Default",
     "bindingFilePath": "C://component//lib//factory//generated//websocketrequestmessage//websocketrequestmessage.factory.container.default.binding.json",
+    "defaultBindingName": "Default",
+    "defaultBindingFilePath": "C://component//lib//factory//generated//websocketrequestmessage//websocketrequestmessage.factory.container.default.binding.json",
     "isSingleton": false,
     "ctorParameters": {
         "message": {

@@ -4,6 +4,8 @@
     "scriptPath": "C://component//lib//http//httpclientrequestmessagebus.js",
     "bindingName": "HttpServerResponseMessageBusSpec",
     "bindingFilePath": "C://component//lib//factory//generated//httpclientrequestmessagebus//httpclientrequestmessagebus.factory.container.httpserverresponsemessagebusspec.binding.json",
+    "defaultBindingName": "Default",
+    "defaultBindingFilePath": "C://component//lib//factory//generated//httpclientrequestmessagebus//httpclientrequestmessagebus.factory.container.default.binding.json",
     "isSingleton": false,
     "ctorParameters": {
         "httpClientRequestMessageQueueBinding": {

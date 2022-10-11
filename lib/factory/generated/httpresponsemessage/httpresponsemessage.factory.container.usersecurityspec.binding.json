@@ -4,6 +4,8 @@
     "scriptPath": "C://component//lib//http//httpresponsemessage.js",
     "bindingName": "UserSecuritySpec",
     "bindingFilePath": "C://component//lib//factory//generated//httpresponsemessage//httpresponsemessage.factory.container.usersecurityspec.binding.json",
+    "defaultBindingName": "Default",
+    "defaultBindingFilePath": "C://component//lib//factory//generated//httpresponsemessage//httpresponsemessage.factory.container.default.binding.json",
     "isSingleton": false,
     "ctorParameters": {
         "message": {

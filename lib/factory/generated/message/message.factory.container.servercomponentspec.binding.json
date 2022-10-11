@@ -4,6 +4,8 @@
     "scriptPath": "C://component//lib//message.js",
     "bindingName": "ServerComponentSpec",
     "bindingFilePath": "C://component//lib//factory//generated//message//message.factory.container.servercomponentspec.binding.json",
+    "defaultBindingName": "Default",
+    "defaultBindingFilePath": "C://component//lib//factory//generated//message//message.factory.container.default.binding.json",
     "isSingleton": false,
     "ctorParameters": {
         "messageStatus": {
