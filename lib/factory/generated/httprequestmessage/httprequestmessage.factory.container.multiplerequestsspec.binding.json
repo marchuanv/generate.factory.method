@@ -6,6 +6,9 @@
     "bindingFilePath": "C://component//lib//factory//generated//httprequestmessage//httprequestmessage.factory.container.multiplerequestsspec.binding.json",
     "isSingleton": null,
     "ctorParameters": {
-        "Message": null
+        "Message": null,
+        "message": {
+            "bindingFilePath": "C://component//lib//factory//generated//message//message.factory.container.multiplerequestsspec.binding.json"
+        }
     }
 }

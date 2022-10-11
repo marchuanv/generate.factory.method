@@ -11,6 +11,18 @@
         "Id": null,
         "MessageContent": null,
         "MessageContentMetadata": null,
-        "MessageMetadata": null
+        "MessageMetadata": null,
+        "messageStatus": {
+            "bindingFilePath": "C://component//lib//factory//generated//messagestatus//messagestatus.factory.container.multiplerequestsspec.binding.json"
+        },
+        "messageContent": {
+            "bindingFilePath": "C://component//lib//factory//generated//messagecontent//messagecontent.factory.container.multiplerequestsspec.binding.json"
+        },
+        "messageContentMetadata": {
+            "bindingFilePath": "C://component//lib//factory//generated//messagecontentmetadata//messagecontentmetadata.factory.container.multiplerequestsspec.binding.json"
+        },
+        "messageMetadata": {
+            "bindingFilePath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.multiplerequestsspec.binding.json"
+        }
     }
 }

@@ -9,6 +9,12 @@
         "RecipientAddress": null,
         "metadata": null,
         "token": null,
-        "SenderAddress": null
+        "SenderAddress": null,
+        "recipientAddress": {
+            "bindingFilePath": "C://component//lib//factory//generated//recipientaddress//recipientaddress.factory.container.multiplerequestsspec.binding.json"
+        },
+        "senderAddress": {
+            "bindingFilePath": "C://component//lib//factory//generated//senderaddress//senderaddress.factory.container.multiplerequestsspec.binding.json"
+        }
     }
 }

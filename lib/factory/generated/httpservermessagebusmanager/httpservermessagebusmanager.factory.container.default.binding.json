@@ -12,6 +12,24 @@
         "HttpServerResponseMessageQueueBinding": null,
         "HttpServerStartMessageQueueBinding": null,
         "HttpServerStartedMessageQueueBinding": null,
-        "HttpServerStopMessageQueueBinding": null
+        "HttpServerStopMessageQueueBinding": null,
+        "httpServerStoppedMessageQueueBinding": {
+            "bindingFilePath": "C://component//lib//factory//generated//httpserverstoppedmessagequeuebinding//httpserverstoppedmessagequeuebinding.factory.container.default.binding.json"
+        },
+        "httpServerRequestMessageQueueBinding": {
+            "bindingFilePath": "C://component//lib//factory//generated//httpserverrequestmessagequeuebinding//httpserverrequestmessagequeuebinding.factory.container.default.binding.json"
+        },
+        "httpServerResponseMessageQueueBinding": {
+            "bindingFilePath": "C://component//lib//factory//generated//httpserverresponsemessagequeuebinding//httpserverresponsemessagequeuebinding.factory.container.default.binding.json"
+        },
+        "httpServerStartMessageQueueBinding": {
+            "bindingFilePath": "C://component//lib//factory//generated//httpserverstartmessagequeuebinding//httpserverstartmessagequeuebinding.factory.container.default.binding.json"
+        },
+        "httpServerStartedMessageQueueBinding": {
+            "bindingFilePath": "C://component//lib//factory//generated//httpserverstartedmessagequeuebinding//httpserverstartedmessagequeuebinding.factory.container.default.binding.json"
+        },
+        "httpServerStopMessageQueueBinding": {
+            "bindingFilePath": "C://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.container.default.binding.json"
+        }
     }
 }

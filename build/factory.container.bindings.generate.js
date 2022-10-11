@@ -6,15 +6,10 @@ const factoryContainerBindingTemplate = readFileSync(path.join(__dirname, 'templ
 const factoryContainerBindingsInfo = require('./factory.container.bindings.info.json');
 
 const enumerateBindings = ({ factoryContainerBindingName, typeName }, callback) => {
-    for(const _typeName of Object.keys(typesInfo)) {
-        if (typeName && typeName !== _typeName) {
-            continue;
+    for(const binding of factoryContainerBindingsInfo) {
+        if (binding.bindingName === factoryContainerBindingName && ( (typeName && binding.typeName === typeName) || !typeName ) ) {
+            callback(binding);
         }
-        for(const binding of factoryContainerBindingsInfo) {
-            if (binding.bindingName === factoryContainerBindingName) {
-                callback(binding);
-            }
-        };
     };
 };
 
@@ -33,13 +28,10 @@ module.exports = function({ factoryContainerBindingName }) {
         for(const ctorParamName of Object.keys(ctorParametersInfo)) {
             const param = ctorParametersInfo[ctorParamName];
             if (param) {
-                if (factoryContainerBindingsInfo[ctorParamName]) {
-                    enumberateBindings({ factoryContainerBindingName, typeName: ctorParamName }, ({ bindingFilePath }) => {
-                        ctorParametersInfo[ctorParamName] = { bindingFilePath };
-                    });
-                } else {
-                    ctorParametersInfo[ctorParamName] = null;
-                }
+                ctorParametersInfo[ctorParamName] = null;
+                enumerateBindings({ factoryContainerBindingName, typeName: ctorParamName }, ({ bindingFilePath, typeVariableName}) => {
+                    ctorParametersInfo[typeVariableName] = { bindingFilePath };
+                });
             }
         };
         const factoryGeneratedDir = path.join(__dirname, '../lib', 'factory', 'generated', typeName.toLowerCase());

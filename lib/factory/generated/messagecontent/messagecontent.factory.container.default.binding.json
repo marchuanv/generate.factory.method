@@ -9,6 +9,15 @@
         "MessageContentMetadata": null,
         "data": null,
         "UserSessions": null,
-        "MessageMetadata": null
+        "MessageMetadata": null,
+        "messageContentMetadata": {
+            "bindingFilePath": "C://component//lib//factory//generated//messagecontentmetadata//messagecontentmetadata.factory.container.default.binding.json"
+        },
+        "userSessions": {
+            "bindingFilePath": "C://component//lib//factory//generated//usersessions//usersessions.factory.container.default.binding.json"
+        },
+        "messageMetadata": {
+            "bindingFilePath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.default.binding.json"
+        }
     }
 }

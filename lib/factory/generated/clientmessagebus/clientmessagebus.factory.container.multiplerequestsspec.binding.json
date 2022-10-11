@@ -8,6 +8,15 @@
     "ctorParameters": {
         "MessageConverter": null,
         "HttpClientRequestMessageBus": null,
-        "HttpClientResponseMessageBus": null
+        "HttpClientResponseMessageBus": null,
+        "messageConverter": {
+            "bindingFilePath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.multiplerequestsspec.binding.json"
+        },
+        "clientRequestMessageBus": {
+            "bindingFilePath": "C://component//lib//factory//generated//httpclientrequestmessagebus//httpclientrequestmessagebus.factory.container.multiplerequestsspec.binding.json"
+        },
+        "clientResponseMessageBus": {
+            "bindingFilePath": "C://component//lib//factory//generated//httpclientresponsemessagebus//httpclientresponsemessagebus.factory.container.multiplerequestsspec.binding.json"
+        }
     }
 }

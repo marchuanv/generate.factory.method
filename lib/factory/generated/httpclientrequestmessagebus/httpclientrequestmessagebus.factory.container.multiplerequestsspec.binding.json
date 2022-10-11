@@ -6,6 +6,9 @@
     "bindingFilePath": "C://component//lib//factory//generated//httpclientrequestmessagebus//httpclientrequestmessagebus.factory.container.multiplerequestsspec.binding.json",
     "isSingleton": null,
     "ctorParameters": {
-        "HttpClientRequestMessageQueueBinding": null
+        "HttpClientRequestMessageQueueBinding": null,
+        "httpClientRequestMessageQueueBinding": {
+            "bindingFilePath": "C://component//lib//factory//generated//httpclientrequestmessagequeuebinding//httpclientrequestmessagequeuebinding.factory.container.multiplerequestsspec.binding.json"
+        }
     }
 }

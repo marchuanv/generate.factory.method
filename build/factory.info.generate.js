@@ -10,15 +10,10 @@ let factoryInfo = {};
 writeFileSync(factoryInfoPath, utils.getJSONString({}), 'utf8');   
 
 const enumerateBindings = ({ factoryContainerBindingName, typeName }, callback) => {
-    for(const _typeName of Object.keys(typesInfo)) {
-        if (typeName && typeName !== _typeName) {
-            continue;
+    for(const binding of factoryContainerBindingsInfo) {
+        if (binding.bindingName === factoryContainerBindingName && ( (typeName && binding.typeName === typeName) || !typeName ) ) {
+            callback(binding);
         }
-        for(const binding of factoryContainerBindingsInfo) {
-            if (binding.bindingName === factoryContainerBindingName) {
-                callback(binding);
-            }
-        };
     };
 };
 

@@ -6,6 +6,9 @@
     "bindingFilePath": "C://component//lib//factory//generated//messagequeue//messagequeue.factory.container.default.binding.json",
     "isSingleton": null,
     "ctorParameters": {
-        "Logger": null
+        "Logger": null,
+        "logger": {
+            "bindingFilePath": "C://component//lib//factory//generated//logger//logger.factory.container.default.binding.json"
+        }
     }
 }

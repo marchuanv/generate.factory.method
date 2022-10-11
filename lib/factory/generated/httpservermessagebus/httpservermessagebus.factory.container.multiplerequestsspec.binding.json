@@ -15,6 +15,30 @@
         "HttpServerStopMessageQueueBinding": null,
         "HttpServerStoppedMessageQueueBinding": null,
         "SenderAddress": null,
-        "Logger": null
+        "Logger": null,
+        "httpServerRequestMessageQueueBinding": {
+            "bindingFilePath": "C://component//lib//factory//generated//httpserverrequestmessagequeuebinding//httpserverrequestmessagequeuebinding.factory.container.multiplerequestsspec.binding.json"
+        },
+        "httpServerResponseMessageQueueBinding": {
+            "bindingFilePath": "C://component//lib//factory//generated//httpserverresponsemessagequeuebinding//httpserverresponsemessagequeuebinding.factory.container.multiplerequestsspec.binding.json"
+        },
+        "httpServerStartMessageQueueBinding": {
+            "bindingFilePath": "C://component//lib//factory//generated//httpserverstartmessagequeuebinding//httpserverstartmessagequeuebinding.factory.container.multiplerequestsspec.binding.json"
+        },
+        "httpServerStartedMessageQueueBinding": {
+            "bindingFilePath": "C://component//lib//factory//generated//httpserverstartedmessagequeuebinding//httpserverstartedmessagequeuebinding.factory.container.multiplerequestsspec.binding.json"
+        },
+        "httpServerStopMessageQueueBinding": {
+            "bindingFilePath": "C://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.container.multiplerequestsspec.binding.json"
+        },
+        "httpServerStoppedMessageQueueBinding": {
+            "bindingFilePath": "C://component//lib//factory//generated//httpserverstoppedmessagequeuebinding//httpserverstoppedmessagequeuebinding.factory.container.multiplerequestsspec.binding.json"
+        },
+        "senderAddress": {
+            "bindingFilePath": "C://component//lib//factory//generated//senderaddress//senderaddress.factory.container.multiplerequestsspec.binding.json"
+        },
+        "logger": {
+            "bindingFilePath": "C://component//lib//factory//generated//logger//logger.factory.container.multiplerequestsspec.binding.json"
+        }
     }
 }
