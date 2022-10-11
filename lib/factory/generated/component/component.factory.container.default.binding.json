@@ -10,14 +10,8 @@
     "CtorParameters": {
         "packageJson": null,
         "factoryContainerBindingName": null,
-        "ClientMessageBus": {
-            "bindingFilePath": "C://component//lib//factory//generated//clientmessagebus//clientmessagebus.factory.container.default.binding.json"
-        },
-        "ServerMessageBus": {
-            "bindingFilePath": "C://component//lib//factory//generated//servermessagebus//servermessagebus.factory.container.default.binding.json"
-        },
-        "UserSessions": {
-            "bindingFilePath": "C://component//lib//factory//generated//usersessions//usersessions.factory.container.default.binding.json"
-        }
+        "ClientMessageBus": null,
+        "ServerMessageBus": null,
+        "UserSessions": null
     }
 }

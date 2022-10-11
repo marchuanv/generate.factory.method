@@ -8,8 +8,6 @@
     "bindingFilePath": "C://component//lib//factory//generated//websocketclientresponsemessagebus//websocketclientresponsemessagebus.factory.container.multiplerequestsspec.binding.json",
     "isSingleton": null,
     "CtorParameters": {
-        "WebSocketClientResponseMessageQueueBinding": {
-            "bindingFilePath": "C://component//lib//factory//generated//websocketclientresponsemessagequeuebinding//websocketclientresponsemessagequeuebinding.factory.container.multiplerequestsspec.binding.json"
-        }
+        "WebSocketClientResponseMessageQueueBinding": null
     }
 }

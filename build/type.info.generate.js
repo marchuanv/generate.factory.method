@@ -11,6 +11,8 @@ const typesInfoPath = path.join(__dirname, 'types.info.json');
 const typesInfo = require(typesInfoPath);
 const typesMappingInfo = require(path.join(__dirname, 'types.mapping.info.json'));
 
+writeFileSync(typesInfoPath, utils.getJSONString({}), 'utf8');
+
 function getDependencyTree(info, pass = 'firstpass', types = []) {
     if (!info || utils.isEmptyObject(info)) {
         const prototypeScriptPath = scripts.find(scPath => types.find(ti => ti.prototypeScriptPath === scPath.replace(/\\/g,'//')) === undefined);

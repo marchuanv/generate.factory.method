@@ -8,8 +8,6 @@
     "bindingFilePath": "C://component//lib//factory//generated//httpresponsemessage//httpresponsemessage.factory.container.multiplerequestsspec.binding.json",
     "isSingleton": null,
     "CtorParameters": {
-        "Message": {
-            "bindingFilePath": "C://component//lib//factory//generated//message//message.factory.container.multiplerequestsspec.binding.json"
-        }
+        "Message": null
     }
 }

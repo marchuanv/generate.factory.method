@@ -9,8 +9,6 @@
     "isSingleton": null,
     "CtorParameters": {
         "factoryContainerBindingName": null,
-        "MessageQueue": {
-            "bindingFilePath": "C://component//lib//factory//generated//messagequeue//messagequeue.factory.container.multiplerequestsspec.binding.json"
-        }
+        "MessageQueue": null
     }
 }

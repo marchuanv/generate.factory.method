@@ -8,24 +8,12 @@
     "bindingFilePath": "C://component//lib//factory//generated//httpservermessagebusmanager//httpservermessagebusmanager.factory.container.default.binding.json",
     "isSingleton": null,
     "CtorParameters": {
-        "HttpServerStoppedMessageQueueBinding": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpserverstoppedmessagequeuebinding//httpserverstoppedmessagequeuebinding.factory.container.default.binding.json"
-        },
+        "HttpServerStoppedMessageQueueBinding": null,
         "factoryContainerBindingName": null,
-        "HttpServerRequestMessageQueueBinding": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpserverrequestmessagequeuebinding//httpserverrequestmessagequeuebinding.factory.container.default.binding.json"
-        },
-        "HttpServerResponseMessageQueueBinding": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpserverresponsemessagequeuebinding//httpserverresponsemessagequeuebinding.factory.container.default.binding.json"
-        },
-        "HttpServerStartMessageQueueBinding": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpserverstartmessagequeuebinding//httpserverstartmessagequeuebinding.factory.container.default.binding.json"
-        },
-        "HttpServerStartedMessageQueueBinding": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpserverstartedmessagequeuebinding//httpserverstartedmessagequeuebinding.factory.container.default.binding.json"
-        },
-        "HttpServerStopMessageQueueBinding": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.container.default.binding.json"
-        }
+        "HttpServerRequestMessageQueueBinding": null,
+        "HttpServerResponseMessageQueueBinding": null,
+        "HttpServerStartMessageQueueBinding": null,
+        "HttpServerStartedMessageQueueBinding": null,
+        "HttpServerStopMessageQueueBinding": null
     }
 }

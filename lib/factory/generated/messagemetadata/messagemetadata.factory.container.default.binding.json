@@ -8,13 +8,9 @@
     "bindingFilePath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.default.binding.json",
     "isSingleton": null,
     "CtorParameters": {
-        "RecipientAddress": {
-            "bindingFilePath": "C://component//lib//factory//generated//recipientaddress//recipientaddress.factory.container.default.binding.json"
-        },
+        "RecipientAddress": null,
         "metadata": null,
         "token": null,
-        "SenderAddress": {
-            "bindingFilePath": "C://component//lib//factory//generated//senderaddress//senderaddress.factory.container.default.binding.json"
-        }
+        "SenderAddress": null
     }
 }

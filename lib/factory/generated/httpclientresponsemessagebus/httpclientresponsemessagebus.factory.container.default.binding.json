@@ -8,8 +8,6 @@
     "bindingFilePath": "C://component//lib//factory//generated//httpclientresponsemessagebus//httpclientresponsemessagebus.factory.container.default.binding.json",
     "isSingleton": null,
     "CtorParameters": {
-        "HttpClientResponseMessageQueueBinding": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpclientresponsemessagequeuebinding//httpclientresponsemessagequeuebinding.factory.container.default.binding.json"
-        }
+        "HttpClientResponseMessageQueueBinding": null
     }
 }

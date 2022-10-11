@@ -5,21 +5,21 @@ const typesInfo = require(path.join(__dirname, 'types.info.json'));
 const factoryContainerBindingTemplate = readFileSync(path.join(__dirname, 'templates', 'factory.container.binding.template'),'utf8');
 const factoryContainerBindingsInfo = require('./factory.container.bindings.info.json');
 
-
-const enumberateBindings = ({ factoryContainerBindingName, typeName }, callback) => {
+const enumerateBindings = ({ factoryContainerBindingName, typeName }, callback) => {
     for(const _typeName of Object.keys(typesInfo)) {
         if (typeName && typeName !== _typeName) {
             continue;
         }
-        const binding = factoryContainerBindingsInfo[_typeName];
-        if (binding.bindingName === factoryContainerBindingName) {
-            callback(binding);
-        }
+        for(const binding of factoryContainerBindingsInfo) {
+            if (binding.bindingName === factoryContainerBindingName) {
+                callback(binding);
+            }
+        };
     };
 };
 
 module.exports = function({ factoryContainerBindingName }) {
-   enumberateBindings({ factoryContainerBindingName, typeName: null }, ({
+    enumerateBindings({ factoryContainerBindingName, typeName: null }, ({
         ctorParametersInfo,
         isSingleton,
         scriptPath,

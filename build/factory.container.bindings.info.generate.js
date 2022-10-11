@@ -5,8 +5,10 @@ const typesInfo = require(path.join(__dirname, 'types.info.json'));
 const factoryContainerBindingInfoTemplate = readFileSync(path.join(__dirname, 'templates', 'factory.container.binding.info.template'),'utf8');
 const factoryContainerBindingsInfoPath = path.join(__dirname, 'factory.container.bindings.info.json');
 
+writeFileSync(factoryContainerBindingsInfoPath, utils.getJSONString([]), 'utf8');
+const factoryContainerBindingsInfo = [];
+
 module.exports = function({ factoryContainerBindingName }) {
-    const factoryContainerBindingsInfo = {};
     for(const typeName of Object.keys(typesInfo)) {
         const factoryGeneratedDir = path.join(__dirname, '../lib', 'factory', 'generated', typeName.toLowerCase());
         const factoryScriptFileName = `${typeName.toLowerCase()}.factory.js`;
@@ -33,7 +35,7 @@ module.exports = function({ factoryContainerBindingName }) {
             .replace(/\[CtorParametersInfo\]/g, utils.getJSONString(ctorParametersInfo))
             .replace(/\[BindingFilePath\]/g, bindingFilePath)
             .replace(/\[isSingleton\]/g, null));
-        factoryContainerBindingsInfo[typeName] = binding;
+        factoryContainerBindingsInfo.push(binding);
     };
     writeFileSync(factoryContainerBindingsInfoPath, utils.getJSONString(factoryContainerBindingsInfo), 'utf8');
 }

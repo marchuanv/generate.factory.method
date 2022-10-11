@@ -8,14 +8,8 @@
     "bindingFilePath": "C://component//lib//factory//generated//servermessagebus//servermessagebus.factory.container.default.binding.json",
     "isSingleton": null,
     "CtorParameters": {
-        "MessageConverter": {
-            "bindingFilePath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.default.binding.json"
-        },
-        "HttpServerResponseMessageBus": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpserverresponsemessagebus//httpserverresponsemessagebus.factory.container.default.binding.json"
-        },
-        "HttpServerRequestMessageBus": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpserverrequestmessagebus//httpserverrequestmessagebus.factory.container.default.binding.json"
-        }
+        "MessageConverter": null,
+        "HttpServerResponseMessageBus": null,
+        "HttpServerRequestMessageBus": null
     }
 }
