@@ -14,6 +14,8 @@
         "serverMessageBus": {
             "bindingFilePath": "C://component//lib//factory//generated//servermessagebus//servermessagebus.factory.container.clientmessagebusspec.binding.json"
         },
-        "userSessions": "UserSessions"
+        "userSessions": {
+            "bindingFilePath": "C://component//lib//factory//generated//usersessions//usersessions.factory.container.default.binding.json"
+        }
     }
 }

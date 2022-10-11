@@ -2,7 +2,7 @@
     "typeName": "HttpServerStopMessageQueueBinding",
     "typeVariableName": "httpServerStopMessageQueueBinding",
     "scriptPath": "C://component//lib//http//httpserverstopmessagequeuebinding.js",
-    "bindingName": "Default",
+    "bindingName": "HttpClientRequestMessageBusSpec",
     "bindingFilePath": "C://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.container.default.binding.json",
     "isSingleton": true,
     "ctorParameters": {

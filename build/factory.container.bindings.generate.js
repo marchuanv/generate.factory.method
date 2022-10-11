@@ -31,8 +31,9 @@ module.exports = function({ factoryContainerBindingName }) {
         for(const ctorParamName of Object.keys(ctorParametersInfo)) {
             const typeName = ctorParametersInfo[ctorParamName];
             if (typeName) {
+                ctorParametersInfo[ctorParamName] = { bindingFilePath: null };
                 enumerateBindings({ factoryContainerBindingName, typeName }, ({ bindingFilePath }) => {
-                    ctorParametersInfo[ctorParamName] = { bindingFilePath };
+                    ctorParametersInfo[ctorParamName].bindingFilePath = bindingFilePath;
                 });
             } else {
                 ctorParametersInfo[ctorParamName] = null;

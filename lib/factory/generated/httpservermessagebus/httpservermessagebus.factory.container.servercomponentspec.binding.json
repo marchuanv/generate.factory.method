@@ -14,13 +14,23 @@
         "httpServerResponseMessageQueueBinding": {
             "bindingFilePath": "C://component//lib//factory//generated//httpserverresponsemessagequeuebinding//httpserverresponsemessagequeuebinding.factory.container.servercomponentspec.binding.json"
         },
-        "httpServerStartMessageQueueBinding": "HttpServerStartMessageQueueBinding",
-        "httpServerStartedMessageQueueBinding": "HttpServerStartedMessageQueueBinding",
-        "httpServerStopMessageQueueBinding": "HttpServerStopMessageQueueBinding",
-        "httpServerStoppedMessageQueueBinding": "HttpServerStoppedMessageQueueBinding",
+        "httpServerStartMessageQueueBinding": {
+            "bindingFilePath": "C://component//lib//factory//generated//httpserverstartmessagequeuebinding//httpserverstartmessagequeuebinding.factory.container.default.binding.json"
+        },
+        "httpServerStartedMessageQueueBinding": {
+            "bindingFilePath": "C://component//lib//factory//generated//httpserverstartedmessagequeuebinding//httpserverstartedmessagequeuebinding.factory.container.default.binding.json"
+        },
+        "httpServerStopMessageQueueBinding": {
+            "bindingFilePath": "C://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.container.default.binding.json"
+        },
+        "httpServerStoppedMessageQueueBinding": {
+            "bindingFilePath": "C://component//lib//factory//generated//httpserverstoppedmessagequeuebinding//httpserverstoppedmessagequeuebinding.factory.container.default.binding.json"
+        },
         "senderAddress": {
             "bindingFilePath": "C://component//lib//factory//generated//senderaddress//senderaddress.factory.container.servercomponentspec.binding.json"
         },
-        "logger": "Logger"
+        "logger": {
+            "bindingFilePath": "C://component//lib//factory//generated//logger//logger.factory.container.default.binding.json"
+        }
     }
 }

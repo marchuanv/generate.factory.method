@@ -38,10 +38,12 @@ module.exports = function({ factoryContainerBindingName }) {
         binding.Id = utils.generateGUID();
         factoryContainerBindingsInfo.push(binding);
         if (isSingleton) {
-            const nonDefaultBindings = factoryContainerBindingsInfo.filter(cb =>  cb.typeName === typeName && cb.bindingName !== 'Default');
-            if (nonDefaultBindings.length > 0) {
-                factoryContainerBindingsInfo = factoryContainerBindingsInfo.filter(cb => nonDefaultBindings.find(cb2 => cb.Id === cb2.Id) === undefined );
-            }
+            const defaultBinding = factoryContainerBindingsInfo.find(cb =>  cb.typeName === typeName && cb.bindingName === 'Default');
+            for(const nonDefaultBinding of factoryContainerBindingsInfo.filter(cb =>  cb.typeName === typeName && cb.bindingName !== 'Default')) {
+                nonDefaultBinding.bindingFilePath = defaultBinding.bindingFilePath;
+                factoryContainerBindingsInfo = factoryContainerBindingsInfo.filter(cb => cb.Id !== nonDefaultBinding.Id);
+                factoryContainerBindingsInfo.push(nonDefaultBinding);
+            };
         }
     };
     writeFileSync(factoryContainerBindingsInfoPath, utils.getJSONString(factoryContainerBindingsInfo), 'utf8');

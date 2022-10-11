@@ -2,7 +2,7 @@
     "typeName": "HttpClientMessageBusManager",
     "typeVariableName": "httpClientMessageBusManager",
     "scriptPath": "C://component//lib//http//httpclientmessagebusmanager.js",
-    "bindingName": "Default",
+    "bindingName": "HttpClientRequestMessageBusSpec",
     "bindingFilePath": "C://component//lib//factory//generated//httpclientmessagebusmanager//httpclientmessagebusmanager.factory.container.default.binding.json",
     "isSingleton": true,
     "ctorParameters": {

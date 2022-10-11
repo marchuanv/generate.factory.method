@@ -10,7 +10,9 @@
             "bindingFilePath": "C://component//lib//factory//generated//messagecontentmetadata//messagecontentmetadata.factory.container.servermessagebusspec.binding.json"
         },
         "data": null,
-        "userSessions": "UserSessions",
+        "userSessions": {
+            "bindingFilePath": "C://component//lib//factory//generated//usersessions//usersessions.factory.container.default.binding.json"
+        },
         "messageMetadata": {
             "bindingFilePath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.servermessagebusspec.binding.json"
         }

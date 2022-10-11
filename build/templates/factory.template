@@ -6,7 +6,7 @@ const { factory } = require('../../factory.js');
 */
 function create[TypeName]({[PrimitiveArgsWithBindingName]}) {
     const bindings = [FactoryContainerBindingFilePaths];
-    const container = factory.getContainer({ bindingFilePath: bindings[factoryContainerBindingName], defaultBindingFilePath: bindings['Default'] });
+    const container = factory.getContainer({ bindingFilePath: bindings[factoryContainerBindingName] || bindings['Default'] });
     return container.getInstance({ ctorArgs: {[PrimitiveArgs]} });
 }
 module.exports = { create[TypeName] };
