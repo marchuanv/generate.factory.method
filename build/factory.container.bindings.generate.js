@@ -16,6 +16,7 @@ module.exports = function({ factoryContainerBindingName }) {
     enumerateBindings({ factoryContainerBindingName, typeName: null }, ({
         ctorParametersInfo,
         scriptPath,
+        isSingleton,
         typeVariableName,
         bindingFilePath,
         bindingName,
@@ -43,7 +44,7 @@ module.exports = function({ factoryContainerBindingName }) {
             .replace(/\[ScriptPath\]/g, scriptPath)
             .replace(/\[BindingName\]/g, bindingName)
             .replace(/\[BindingFilePath\]/g, bindingFilePath)
-            .replace(/\[IsSingleton\]/g, false)
+            .replace(/\[IsSingleton\]/g, isSingleton)
             .replace(/\[CtorParameters\]/g, utils.getJSONString(ctorParametersInfo));
         const newFactoryContainerBinding = utils.getJSONObject(factoryContainerBindingJson);
         if (existsSync(bindingFilePath)) {
@@ -53,9 +54,7 @@ module.exports = function({ factoryContainerBindingName }) {
             existingFactoryContainerBinding.scriptPath = newFactoryContainerBinding.scriptPath;
             existingFactoryContainerBinding.bindingName = newFactoryContainerBinding.bindingName;
             existingFactoryContainerBinding.bindingFilePath = newFactoryContainerBinding.bindingFilePath;
-            if (!existingFactoryContainerBinding.isSingleton) {
-                existingFactoryContainerBinding.isSingleton = newFactoryContainerBinding.isSingleton;
-            }
+            existingFactoryContainerBinding.isSingleton = newFactoryContainerBinding.isSingleton;
             if (!existingFactoryContainerBinding.ctorParameters) {
                 existingFactoryContainerBinding.ctorParameters = newFactoryContainerBinding.ctorParameters;
             }

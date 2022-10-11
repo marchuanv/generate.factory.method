@@ -10,6 +10,7 @@ const typeInfoTemplate = readFileSync(path.join(__dirname,'templates', 'type.inf
 const typesInfoPath = path.join(__dirname, 'types.info.json');
 const typesInfo = require(typesInfoPath);
 const typesMappingInfo = require(path.join(__dirname, 'types.mapping.info.json'));
+const typesSingletonInfo = require(path.join(__dirname, 'types.singleton.info.json'));
 
 writeFileSync(typesInfoPath, utils.getJSONString({}), 'utf8');
 
@@ -23,9 +24,11 @@ function getDependencyTree(info, pass = 'firstpass', types = []) {
                 const type = sc[key];
                 const scriptPath = prototypeScriptPath.replace('.prototype','');
                 const parameters = utils.getFunctionParams(type) || [];
+                const isSingleton = typesSingletonInfo[type.name];
                 const children = parameters.map(param => utils.getJSONObject(typeInfoTemplate
                     .replace(/\[TypeName\]/g, param.name)
                     .replace(/\[ScriptPath\]/g, '')
+                    .replace(/\[IsSingleton\]/g, false)
                     .replace(/\[PrototypeScriptPath\]/g,'')
                     .replace(/\[ChildrenArray\]/g,'')
                     .replace(/\[PassesArray\]/g, [])
@@ -37,6 +40,7 @@ function getDependencyTree(info, pass = 'firstpass', types = []) {
                 info = utils.getJSONObject(typeInfoTemplate
                     .replace(/\[TypeName\]/g, type.name)
                     .replace(/\[ScriptPath\]/g, scriptPath.replace(/\\/g,'//'))
+                    .replace(/\[IsSingleton\]/g, isSingleton ? isSingleton: false)
                     .replace(/\[PrototypeScriptPath\]/g, prototypeScriptPath.replace(/\\/g,'//'))
                     .replace(/\[ChildrenArray\]/g, children.map(child => utils.getJSONString(child)).join(','))
                     .replace(/\[PassesArray\]/g, [])
@@ -74,6 +78,8 @@ function getDependencyTree(info, pass = 'firstpass', types = []) {
                 if (mappedKey) {
                     child.typeName = typesMappingInfo[mappedKey];
                 }
+                const isSingleton = typesSingletonInfo[child.typeName];
+                child.isSingleton = isSingleton;
                 let refChild = types.filter(inf => 
                     inf.typeName.toLowerCase() === child.typeName.toLowerCase() &&
                     inf.prototypeScriptPath

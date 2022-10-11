@@ -14,7 +14,7 @@ module.exports = function({ factoryContainerBindingName }) {
         const factoryScriptFileName = `${typeName.toLowerCase()}.factory.js`;
         const factoryScriptPath = path.join(factoryGeneratedDir, factoryScriptFileName).replace(/\\/g,'//');
         const { variableName, scriptPath, prototypeScriptPath } = typesInfo[typeName];
-        const { children } = typesInfo[typeName];
+        const { children, isSingleton } = typesInfo[typeName];
         const ctorParametersInfo  = children.reduce((newParamInfo, child) => {
             if (child.scriptPath) {
                 newParamInfo[child.variableName] = child.typeName;
@@ -34,7 +34,7 @@ module.exports = function({ factoryContainerBindingName }) {
             .replace(/\[BindingName\]/g, factoryContainerBindingName)
             .replace(/\[CtorParametersInfo\]/g, utils.getJSONString(ctorParametersInfo))
             .replace(/\[BindingFilePath\]/g, bindingFilePath)
-            .replace(/\[isSingleton\]/g, null));
+            .replace(/\[isSingleton\]/g, isSingleton));
         factoryContainerBindingsInfo.push(binding);
     };
     writeFileSync(factoryContainerBindingsInfoPath, utils.getJSONString(factoryContainerBindingsInfo), 'utf8');

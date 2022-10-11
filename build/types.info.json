@@ -4,12 +4,14 @@
         "variableName": "clientMessageBus",
         "scriptPath": "C://component//lib//clientmessagebus.js",
         "prototypeScriptPath": "C://component//lib//clientmessagebus.prototype.js",
+        "isSingleton": false,
         "children": [
             {
                 "typeName": "MessageConverter",
                 "variableName": "messageConverter",
                 "scriptPath": "C://component//lib//messageconverter.js",
                 "prototypeScriptPath": "C://component//lib//messageconverter.prototype.js",
+                "isSingleton": true,
                 "children": []
             },
             {
@@ -17,12 +19,14 @@
                 "variableName": "clientRequestMessageBus",
                 "scriptPath": "C://component//lib//http//httpclientrequestmessagebus.js",
                 "prototypeScriptPath": "C://component//lib//http//httpclientrequestmessagebus.prototype.js",
+                "isSingleton": false,
                 "children": [
                     {
                         "typeName": "HttpClientRequestMessageQueueBinding",
                         "variableName": "httpClientRequestMessageQueueBinding",
                         "scriptPath": "C://component//lib//http//httpclientrequestmessagequeuebinding.js",
                         "prototypeScriptPath": "C://component//lib//http//httpclientrequestmessagequeuebinding.prototype.js",
+                        "isSingleton": false,
                         "children": [
                             {
                                 "typeName": "factoryContainerBindingName",
@@ -36,12 +40,14 @@
                                 "variableName": "messageQueue",
                                 "scriptPath": "C://component//lib//messagequeue.js",
                                 "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
+                                "isSingleton": true,
                                 "children": [
                                     {
                                         "typeName": "Logger",
                                         "variableName": "logger",
                                         "scriptPath": "C://component//lib//logger.js",
                                         "prototypeScriptPath": "C://component//lib//logger.prototype.js",
+                                        "isSingleton": true,
                                         "children": []
                                     }
                                 ]
@@ -55,12 +61,14 @@
                 "variableName": "clientResponseMessageBus",
                 "scriptPath": "C://component//lib//http//httpclientresponsemessagebus.js",
                 "prototypeScriptPath": "C://component//lib//http//httpclientresponsemessagebus.prototype.js",
+                "isSingleton": false,
                 "children": [
                     {
                         "typeName": "HttpClientResponseMessageQueueBinding",
                         "variableName": "httpClientResponseMessageQueueBinding",
                         "scriptPath": "C://component//lib//http//httpclientresponsemessagequeuebinding.js",
                         "prototypeScriptPath": "C://component//lib//http//httpclientresponsemessagequeuebinding.prototype.js",
+                        "isSingleton": false,
                         "children": [
                             {
                                 "typeName": "factoryContainerBindingName",
@@ -74,12 +82,14 @@
                                 "variableName": "messageQueue",
                                 "scriptPath": "C://component//lib//messagequeue.js",
                                 "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
+                                "isSingleton": true,
                                 "children": [
                                     {
                                         "typeName": "Logger",
                                         "variableName": "logger",
                                         "scriptPath": "C://component//lib//logger.js",
                                         "prototypeScriptPath": "C://component//lib//logger.prototype.js",
+                                        "isSingleton": true,
                                         "children": []
                                     }
                                 ]
@@ -95,6 +105,7 @@
         "variableName": "component",
         "scriptPath": "C://component//lib//component.js",
         "prototypeScriptPath": "C://component//lib//component.prototype.js",
+        "isSingleton": false,
         "children": [
             {
                 "typeName": "packageJson",
@@ -115,12 +126,14 @@
                 "variableName": "clientMessageBus",
                 "scriptPath": "C://component//lib//clientmessagebus.js",
                 "prototypeScriptPath": "C://component//lib//clientmessagebus.prototype.js",
+                "isSingleton": false,
                 "children": [
                     {
                         "typeName": "MessageConverter",
                         "variableName": "messageConverter",
                         "scriptPath": "C://component//lib//messageconverter.js",
                         "prototypeScriptPath": "C://component//lib//messageconverter.prototype.js",
+                        "isSingleton": true,
                         "children": []
                     },
                     {
@@ -128,12 +141,14 @@
                         "variableName": "clientRequestMessageBus",
                         "scriptPath": "C://component//lib//http//httpclientrequestmessagebus.js",
                         "prototypeScriptPath": "C://component//lib//http//httpclientrequestmessagebus.prototype.js",
+                        "isSingleton": false,
                         "children": [
                             {
                                 "typeName": "HttpClientRequestMessageQueueBinding",
                                 "variableName": "httpClientRequestMessageQueueBinding",
                                 "scriptPath": "C://component//lib//http//httpclientrequestmessagequeuebinding.js",
                                 "prototypeScriptPath": "C://component//lib//http//httpclientrequestmessagequeuebinding.prototype.js",
+                                "isSingleton": false,
                                 "children": [
                                     {
                                         "typeName": "factoryContainerBindingName",
@@ -147,12 +162,14 @@
                                         "variableName": "messageQueue",
                                         "scriptPath": "C://component//lib//messagequeue.js",
                                         "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
+                                        "isSingleton": true,
                                         "children": [
                                             {
                                                 "typeName": "Logger",
                                                 "variableName": "logger",
                                                 "scriptPath": "C://component//lib//logger.js",
                                                 "prototypeScriptPath": "C://component//lib//logger.prototype.js",
+                                                "isSingleton": true,
                                                 "children": []
                                             }
                                         ]
@@ -166,12 +183,14 @@
                         "variableName": "clientResponseMessageBus",
                         "scriptPath": "C://component//lib//http//httpclientresponsemessagebus.js",
                         "prototypeScriptPath": "C://component//lib//http//httpclientresponsemessagebus.prototype.js",
+                        "isSingleton": false,
                         "children": [
                             {
                                 "typeName": "HttpClientResponseMessageQueueBinding",
                                 "variableName": "httpClientResponseMessageQueueBinding",
                                 "scriptPath": "C://component//lib//http//httpclientresponsemessagequeuebinding.js",
                                 "prototypeScriptPath": "C://component//lib//http//httpclientresponsemessagequeuebinding.prototype.js",
+                                "isSingleton": false,
                                 "children": [
                                     {
                                         "typeName": "factoryContainerBindingName",
@@ -185,12 +204,14 @@
                                         "variableName": "messageQueue",
                                         "scriptPath": "C://component//lib//messagequeue.js",
                                         "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
+                                        "isSingleton": true,
                                         "children": [
                                             {
                                                 "typeName": "Logger",
                                                 "variableName": "logger",
                                                 "scriptPath": "C://component//lib//logger.js",
                                                 "prototypeScriptPath": "C://component//lib//logger.prototype.js",
+                                                "isSingleton": true,
                                                 "children": []
                                             }
                                         ]
@@ -206,12 +227,14 @@
                 "variableName": "serverMessageBus",
                 "scriptPath": "C://component//lib//servermessagebus.js",
                 "prototypeScriptPath": "C://component//lib//servermessagebus.prototype.js",
+                "isSingleton": false,
                 "children": [
                     {
                         "typeName": "MessageConverter",
                         "variableName": "messageConverter",
                         "scriptPath": "C://component//lib//messageconverter.js",
                         "prototypeScriptPath": "C://component//lib//messageconverter.prototype.js",
+                        "isSingleton": true,
                         "children": []
                     },
                     {
@@ -219,12 +242,14 @@
                         "variableName": "serverResponseMessageBus",
                         "scriptPath": "C://component//lib//http//httpserverresponsemessagebus.js",
                         "prototypeScriptPath": "C://component//lib//http//httpserverresponsemessagebus.prototype.js",
+                        "isSingleton": false,
                         "children": [
                             {
                                 "typeName": "HttpServerResponseMessageQueueBinding",
                                 "variableName": "httpServerResponseMessageQueueBinding",
                                 "scriptPath": "C://component//lib//http//httpserverresponsemessagequeuebinding.js",
                                 "prototypeScriptPath": "C://component//lib//http//httpserverresponsemessagequeuebinding.prototype.js",
+                                "isSingleton": false,
                                 "children": [
                                     {
                                         "typeName": "factoryContainerBindingName",
@@ -238,12 +263,14 @@
                                         "variableName": "messageQueue",
                                         "scriptPath": "C://component//lib//messagequeue.js",
                                         "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
+                                        "isSingleton": true,
                                         "children": [
                                             {
                                                 "typeName": "Logger",
                                                 "variableName": "logger",
                                                 "scriptPath": "C://component//lib//logger.js",
                                                 "prototypeScriptPath": "C://component//lib//logger.prototype.js",
+                                                "isSingleton": true,
                                                 "children": []
                                             }
                                         ]
@@ -257,12 +284,14 @@
                         "variableName": "serverRequestMessageBus",
                         "scriptPath": "C://component//lib//http//httpserverrequestmessagebus.js",
                         "prototypeScriptPath": "C://component//lib//http//httpserverrequestmessagebus.prototype.js",
+                        "isSingleton": false,
                         "children": [
                             {
                                 "typeName": "HttpServerRequestMessageQueueBinding",
                                 "variableName": "httpServerRequestMessageQueueBinding",
                                 "scriptPath": "C://component//lib//http//httpserverrequestmessagequeuebinding.js",
                                 "prototypeScriptPath": "C://component//lib//http//httpserverrequestmessagequeuebinding.prototype.js",
+                                "isSingleton": false,
                                 "children": [
                                     {
                                         "typeName": "factoryContainerBindingName",
@@ -276,12 +305,14 @@
                                         "variableName": "messageQueue",
                                         "scriptPath": "C://component//lib//messagequeue.js",
                                         "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
+                                        "isSingleton": true,
                                         "children": [
                                             {
                                                 "typeName": "Logger",
                                                 "variableName": "logger",
                                                 "scriptPath": "C://component//lib//logger.js",
                                                 "prototypeScriptPath": "C://component//lib//logger.prototype.js",
+                                                "isSingleton": true,
                                                 "children": []
                                             }
                                         ]
@@ -297,6 +328,7 @@
                 "variableName": "userSessions",
                 "scriptPath": "C://component//lib//usersessions.js",
                 "prototypeScriptPath": "C://component//lib//usersessions.prototype.js",
+                "isSingleton": true,
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
@@ -314,6 +346,7 @@
         "variableName": "contentType",
         "scriptPath": "C://component//lib//contentType.js",
         "prototypeScriptPath": "C://component//lib//contentType.prototype.js",
+        "isSingleton": false,
         "children": [
             {
                 "typeName": "name",
@@ -329,6 +362,7 @@
         "variableName": "logger",
         "scriptPath": "C://component//lib//logger.js",
         "prototypeScriptPath": "C://component//lib//logger.prototype.js",
+        "isSingleton": true,
         "children": []
     },
     "Message": {
@@ -336,12 +370,14 @@
         "variableName": "message",
         "scriptPath": "C://component//lib//message.js",
         "prototypeScriptPath": "C://component//lib//message.prototype.js",
+        "isSingleton": false,
         "children": [
             {
                 "typeName": "MessageStatus",
                 "variableName": "messageStatus",
                 "scriptPath": "C://component//lib//messagestatus.js",
                 "prototypeScriptPath": "C://component//lib//messagestatus.prototype.js",
+                "isSingleton": false,
                 "children": [
                     {
                         "typeName": "messageStatusCode",
@@ -371,12 +407,14 @@
                 "variableName": "messageContent",
                 "scriptPath": "C://component//lib//messagecontent.js",
                 "prototypeScriptPath": "C://component//lib//messagecontent.prototype.js",
+                "isSingleton": false,
                 "children": [
                     {
                         "typeName": "MessageContentMetadata",
                         "variableName": "messageContentMetadata",
                         "scriptPath": "C://component//lib//messagecontentmetadata.js",
                         "prototypeScriptPath": "C://component//lib//messagecontentmetadata.prototype.js",
+                        "isSingleton": false,
                         "children": [
                             {
                                 "typeName": "factoryContainerBindingName",
@@ -406,6 +444,7 @@
                         "variableName": "userSessions",
                         "scriptPath": "C://component//lib//usersessions.js",
                         "prototypeScriptPath": "C://component//lib//usersessions.prototype.js",
+                        "isSingleton": true,
                         "children": [
                             {
                                 "typeName": "factoryContainerBindingName",
@@ -421,12 +460,14 @@
                         "variableName": "messageMetadata",
                         "scriptPath": "C://component//lib//messagemetadata.js",
                         "prototypeScriptPath": "C://component//lib//messagemetadata.prototype.js",
+                        "isSingleton": false,
                         "children": [
                             {
                                 "typeName": "RecipientAddress",
                                 "variableName": "recipientAddress",
                                 "scriptPath": "C://component//lib//recipientaddress.js",
                                 "prototypeScriptPath": "C://component//lib//recipientaddress.prototype.js",
+                                "isSingleton": false,
                                 "children": [
                                     {
                                         "typeName": "recipientHost",
@@ -463,6 +504,7 @@
                                 "variableName": "senderAddress",
                                 "scriptPath": "C://component//lib//senderaddress.js",
                                 "prototypeScriptPath": "C://component//lib//senderaddress.prototype.js",
+                                "isSingleton": false,
                                 "children": [
                                     {
                                         "typeName": "senderHost",
@@ -489,6 +531,7 @@
                 "variableName": "messageContentMetadata",
                 "scriptPath": "C://component//lib//messagecontentmetadata.js",
                 "prototypeScriptPath": "C://component//lib//messagecontentmetadata.prototype.js",
+                "isSingleton": false,
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
@@ -511,12 +554,14 @@
                 "variableName": "messageMetadata",
                 "scriptPath": "C://component//lib//messagemetadata.js",
                 "prototypeScriptPath": "C://component//lib//messagemetadata.prototype.js",
+                "isSingleton": false,
                 "children": [
                     {
                         "typeName": "RecipientAddress",
                         "variableName": "recipientAddress",
                         "scriptPath": "C://component//lib//recipientaddress.js",
                         "prototypeScriptPath": "C://component//lib//recipientaddress.prototype.js",
+                        "isSingleton": false,
                         "children": [
                             {
                                 "typeName": "recipientHost",
@@ -553,6 +598,7 @@
                         "variableName": "senderAddress",
                         "scriptPath": "C://component//lib//senderaddress.js",
                         "prototypeScriptPath": "C://component//lib//senderaddress.prototype.js",
+                        "isSingleton": false,
                         "children": [
                             {
                                 "typeName": "senderHost",
@@ -579,12 +625,14 @@
         "variableName": "messageContent",
         "scriptPath": "C://component//lib//messagecontent.js",
         "prototypeScriptPath": "C://component//lib//messagecontent.prototype.js",
+        "isSingleton": false,
         "children": [
             {
                 "typeName": "MessageContentMetadata",
                 "variableName": "messageContentMetadata",
                 "scriptPath": "C://component//lib//messagecontentmetadata.js",
                 "prototypeScriptPath": "C://component//lib//messagecontentmetadata.prototype.js",
+                "isSingleton": false,
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
@@ -614,6 +662,7 @@
                 "variableName": "userSessions",
                 "scriptPath": "C://component//lib//usersessions.js",
                 "prototypeScriptPath": "C://component//lib//usersessions.prototype.js",
+                "isSingleton": true,
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
@@ -629,12 +678,14 @@
                 "variableName": "messageMetadata",
                 "scriptPath": "C://component//lib//messagemetadata.js",
                 "prototypeScriptPath": "C://component//lib//messagemetadata.prototype.js",
+                "isSingleton": false,
                 "children": [
                     {
                         "typeName": "RecipientAddress",
                         "variableName": "recipientAddress",
                         "scriptPath": "C://component//lib//recipientaddress.js",
                         "prototypeScriptPath": "C://component//lib//recipientaddress.prototype.js",
+                        "isSingleton": false,
                         "children": [
                             {
                                 "typeName": "recipientHost",
@@ -671,6 +722,7 @@
                         "variableName": "senderAddress",
                         "scriptPath": "C://component//lib//senderaddress.js",
                         "prototypeScriptPath": "C://component//lib//senderaddress.prototype.js",
+                        "isSingleton": false,
                         "children": [
                             {
                                 "typeName": "senderHost",
@@ -697,6 +749,7 @@
         "variableName": "messageContentMetadata",
         "scriptPath": "C://component//lib//messagecontentmetadata.js",
         "prototypeScriptPath": "C://component//lib//messagecontentmetadata.prototype.js",
+        "isSingleton": false,
         "children": [
             {
                 "typeName": "factoryContainerBindingName",
@@ -719,6 +772,7 @@
         "variableName": "messageConverter",
         "scriptPath": "C://component//lib//messageconverter.js",
         "prototypeScriptPath": "C://component//lib//messageconverter.prototype.js",
+        "isSingleton": true,
         "children": []
     },
     "MessageMetadata": {
@@ -726,12 +780,14 @@
         "variableName": "messageMetadata",
         "scriptPath": "C://component//lib//messagemetadata.js",
         "prototypeScriptPath": "C://component//lib//messagemetadata.prototype.js",
+        "isSingleton": false,
         "children": [
             {
                 "typeName": "RecipientAddress",
                 "variableName": "recipientAddress",
                 "scriptPath": "C://component//lib//recipientaddress.js",
                 "prototypeScriptPath": "C://component//lib//recipientaddress.prototype.js",
+                "isSingleton": false,
                 "children": [
                     {
                         "typeName": "recipientHost",
@@ -768,6 +824,7 @@
                 "variableName": "senderAddress",
                 "scriptPath": "C://component//lib//senderaddress.js",
                 "prototypeScriptPath": "C://component//lib//senderaddress.prototype.js",
+                "isSingleton": false,
                 "children": [
                     {
                         "typeName": "senderHost",
@@ -792,12 +849,14 @@
         "variableName": "messageQueue",
         "scriptPath": "C://component//lib//messagequeue.js",
         "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
+        "isSingleton": true,
         "children": [
             {
                 "typeName": "Logger",
                 "variableName": "logger",
                 "scriptPath": "C://component//lib//logger.js",
                 "prototypeScriptPath": "C://component//lib//logger.prototype.js",
+                "isSingleton": true,
                 "children": []
             }
         ]
@@ -807,6 +866,7 @@
         "variableName": "messageStatus",
         "scriptPath": "C://component//lib//messagestatus.js",
         "prototypeScriptPath": "C://component//lib//messagestatus.prototype.js",
+        "isSingleton": false,
         "children": [
             {
                 "typeName": "messageStatusCode",
@@ -822,6 +882,7 @@
         "variableName": "messageStore",
         "scriptPath": "C://component//lib//messagestore.js",
         "prototypeScriptPath": "C://component//lib//messagestore.prototype.js",
+        "isSingleton": true,
         "children": []
     },
     "RecipientAddress": {
@@ -829,6 +890,7 @@
         "variableName": "recipientAddress",
         "scriptPath": "C://component//lib//recipientaddress.js",
         "prototypeScriptPath": "C://component//lib//recipientaddress.prototype.js",
+        "isSingleton": false,
         "children": [
             {
                 "typeName": "recipientHost",
@@ -851,6 +913,7 @@
         "variableName": "senderAddress",
         "scriptPath": "C://component//lib//senderaddress.js",
         "prototypeScriptPath": "C://component//lib//senderaddress.prototype.js",
+        "isSingleton": false,
         "children": [
             {
                 "typeName": "senderHost",
@@ -873,12 +936,14 @@
         "variableName": "serverMessageBus",
         "scriptPath": "C://component//lib//servermessagebus.js",
         "prototypeScriptPath": "C://component//lib//servermessagebus.prototype.js",
+        "isSingleton": false,
         "children": [
             {
                 "typeName": "MessageConverter",
                 "variableName": "messageConverter",
                 "scriptPath": "C://component//lib//messageconverter.js",
                 "prototypeScriptPath": "C://component//lib//messageconverter.prototype.js",
+                "isSingleton": true,
                 "children": []
             },
             {
@@ -886,12 +951,14 @@
                 "variableName": "serverResponseMessageBus",
                 "scriptPath": "C://component//lib//http//httpserverresponsemessagebus.js",
                 "prototypeScriptPath": "C://component//lib//http//httpserverresponsemessagebus.prototype.js",
+                "isSingleton": false,
                 "children": [
                     {
                         "typeName": "HttpServerResponseMessageQueueBinding",
                         "variableName": "httpServerResponseMessageQueueBinding",
                         "scriptPath": "C://component//lib//http//httpserverresponsemessagequeuebinding.js",
                         "prototypeScriptPath": "C://component//lib//http//httpserverresponsemessagequeuebinding.prototype.js",
+                        "isSingleton": false,
                         "children": [
                             {
                                 "typeName": "factoryContainerBindingName",
@@ -905,12 +972,14 @@
                                 "variableName": "messageQueue",
                                 "scriptPath": "C://component//lib//messagequeue.js",
                                 "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
+                                "isSingleton": true,
                                 "children": [
                                     {
                                         "typeName": "Logger",
                                         "variableName": "logger",
                                         "scriptPath": "C://component//lib//logger.js",
                                         "prototypeScriptPath": "C://component//lib//logger.prototype.js",
+                                        "isSingleton": true,
                                         "children": []
                                     }
                                 ]
@@ -924,12 +993,14 @@
                 "variableName": "serverRequestMessageBus",
                 "scriptPath": "C://component//lib//http//httpserverrequestmessagebus.js",
                 "prototypeScriptPath": "C://component//lib//http//httpserverrequestmessagebus.prototype.js",
+                "isSingleton": false,
                 "children": [
                     {
                         "typeName": "HttpServerRequestMessageQueueBinding",
                         "variableName": "httpServerRequestMessageQueueBinding",
                         "scriptPath": "C://component//lib//http//httpserverrequestmessagequeuebinding.js",
                         "prototypeScriptPath": "C://component//lib//http//httpserverrequestmessagequeuebinding.prototype.js",
+                        "isSingleton": false,
                         "children": [
                             {
                                 "typeName": "factoryContainerBindingName",
@@ -943,12 +1014,14 @@
                                 "variableName": "messageQueue",
                                 "scriptPath": "C://component//lib//messagequeue.js",
                                 "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
+                                "isSingleton": true,
                                 "children": [
                                     {
                                         "typeName": "Logger",
                                         "variableName": "logger",
                                         "scriptPath": "C://component//lib//logger.js",
                                         "prototypeScriptPath": "C://component//lib//logger.prototype.js",
+                                        "isSingleton": true,
                                         "children": []
                                     }
                                 ]
@@ -964,6 +1037,7 @@
         "variableName": "userSecurity",
         "scriptPath": "C://component//lib//usersecurity.js",
         "prototypeScriptPath": "C://component//lib//usersecurity.prototype.js",
+        "isSingleton": false,
         "children": [
             {
                 "typeName": "userId",
@@ -979,6 +1053,7 @@
         "variableName": "userSessions",
         "scriptPath": "C://component//lib//usersessions.js",
         "prototypeScriptPath": "C://component//lib//usersessions.prototype.js",
+        "isSingleton": true,
         "children": [
             {
                 "typeName": "factoryContainerBindingName",
@@ -994,6 +1069,7 @@
         "variableName": "httpClientMessageBus",
         "scriptPath": "C://component//lib//http//httpclientmessagebus.js",
         "prototypeScriptPath": "C://component//lib//http//httpclientmessagebus.prototype.js",
+        "isSingleton": false,
         "children": [
             {
                 "typeName": "timeout",
@@ -1014,6 +1090,7 @@
                 "variableName": "httpClientRequestMessageQueueBinding",
                 "scriptPath": "C://component//lib//http//httpclientrequestmessagequeuebinding.js",
                 "prototypeScriptPath": "C://component//lib//http//httpclientrequestmessagequeuebinding.prototype.js",
+                "isSingleton": false,
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
@@ -1027,12 +1104,14 @@
                         "variableName": "messageQueue",
                         "scriptPath": "C://component//lib//messagequeue.js",
                         "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
+                        "isSingleton": true,
                         "children": [
                             {
                                 "typeName": "Logger",
                                 "variableName": "logger",
                                 "scriptPath": "C://component//lib//logger.js",
                                 "prototypeScriptPath": "C://component//lib//logger.prototype.js",
+                                "isSingleton": true,
                                 "children": []
                             }
                         ]
@@ -1044,6 +1123,7 @@
                 "variableName": "httpClientResponseMessageQueueBinding",
                 "scriptPath": "C://component//lib//http//httpclientresponsemessagequeuebinding.js",
                 "prototypeScriptPath": "C://component//lib//http//httpclientresponsemessagequeuebinding.prototype.js",
+                "isSingleton": false,
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
@@ -1057,12 +1137,14 @@
                         "variableName": "messageQueue",
                         "scriptPath": "C://component//lib//messagequeue.js",
                         "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
+                        "isSingleton": true,
                         "children": [
                             {
                                 "typeName": "Logger",
                                 "variableName": "logger",
                                 "scriptPath": "C://component//lib//logger.js",
                                 "prototypeScriptPath": "C://component//lib//logger.prototype.js",
+                                "isSingleton": true,
                                 "children": []
                             }
                         ]
@@ -1074,6 +1156,7 @@
                 "variableName": "httpClientStartMessageQueueBinding",
                 "scriptPath": "C://component//lib//http//httpclientstartmessagequeuebinding.js",
                 "prototypeScriptPath": "C://component//lib//http//httpclientstartmessagequeuebinding.prototype.js",
+                "isSingleton": true,
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
@@ -1087,12 +1170,14 @@
                         "variableName": "messageQueue",
                         "scriptPath": "C://component//lib//messagequeue.js",
                         "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
+                        "isSingleton": true,
                         "children": [
                             {
                                 "typeName": "Logger",
                                 "variableName": "logger",
                                 "scriptPath": "C://component//lib//logger.js",
                                 "prototypeScriptPath": "C://component//lib//logger.prototype.js",
+                                "isSingleton": true,
                                 "children": []
                             }
                         ]
@@ -1104,6 +1189,7 @@
                 "variableName": "httpClientStartedMessageQueueBinding",
                 "scriptPath": "C://component//lib//http//httpclientstartedmessagequeuebinding.js",
                 "prototypeScriptPath": "C://component//lib//http//httpclientstartedmessagequeuebinding.prototype.js",
+                "isSingleton": true,
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
@@ -1117,12 +1203,14 @@
                         "variableName": "messageQueue",
                         "scriptPath": "C://component//lib//messagequeue.js",
                         "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
+                        "isSingleton": true,
                         "children": [
                             {
                                 "typeName": "Logger",
                                 "variableName": "logger",
                                 "scriptPath": "C://component//lib//logger.js",
                                 "prototypeScriptPath": "C://component//lib//logger.prototype.js",
+                                "isSingleton": true,
                                 "children": []
                             }
                         ]
@@ -1134,6 +1222,7 @@
                 "variableName": "httpClientStopMessageQueueBinding",
                 "scriptPath": "C://component//lib//http//httpclientstopmessagequeuebinding.js",
                 "prototypeScriptPath": "C://component//lib//http//httpclientstopmessagequeuebinding.prototype.js",
+                "isSingleton": true,
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
@@ -1147,12 +1236,14 @@
                         "variableName": "messageQueue",
                         "scriptPath": "C://component//lib//messagequeue.js",
                         "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
+                        "isSingleton": true,
                         "children": [
                             {
                                 "typeName": "Logger",
                                 "variableName": "logger",
                                 "scriptPath": "C://component//lib//logger.js",
                                 "prototypeScriptPath": "C://component//lib//logger.prototype.js",
+                                "isSingleton": true,
                                 "children": []
                             }
                         ]
@@ -1166,12 +1257,14 @@
         "variableName": "httpClientMessageBusManager",
         "scriptPath": "C://component//lib//http//httpclientmessagebusmanager.js",
         "prototypeScriptPath": "C://component//lib//http//httpclientmessagebusmanager.prototype.js",
+        "isSingleton": true,
         "children": [
             {
                 "typeName": "HttpClientStopMessageQueueBinding",
                 "variableName": "httpClientStopMessageQueueBinding",
                 "scriptPath": "C://component//lib//http//httpclientstopmessagequeuebinding.js",
                 "prototypeScriptPath": "C://component//lib//http//httpclientstopmessagequeuebinding.prototype.js",
+                "isSingleton": true,
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
@@ -1185,12 +1278,14 @@
                         "variableName": "messageQueue",
                         "scriptPath": "C://component//lib//messagequeue.js",
                         "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
+                        "isSingleton": true,
                         "children": [
                             {
                                 "typeName": "Logger",
                                 "variableName": "logger",
                                 "scriptPath": "C://component//lib//logger.js",
                                 "prototypeScriptPath": "C://component//lib//logger.prototype.js",
+                                "isSingleton": true,
                                 "children": []
                             }
                         ]
@@ -1209,6 +1304,7 @@
                 "variableName": "httpClientStartMessageQueueBinding",
                 "scriptPath": "C://component//lib//http//httpclientstartmessagequeuebinding.js",
                 "prototypeScriptPath": "C://component//lib//http//httpclientstartmessagequeuebinding.prototype.js",
+                "isSingleton": true,
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
@@ -1222,12 +1318,14 @@
                         "variableName": "messageQueue",
                         "scriptPath": "C://component//lib//messagequeue.js",
                         "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
+                        "isSingleton": true,
                         "children": [
                             {
                                 "typeName": "Logger",
                                 "variableName": "logger",
                                 "scriptPath": "C://component//lib//logger.js",
                                 "prototypeScriptPath": "C://component//lib//logger.prototype.js",
+                                "isSingleton": true,
                                 "children": []
                             }
                         ]
@@ -1239,6 +1337,7 @@
                 "variableName": "httpClientStartedMessageQueueBinding",
                 "scriptPath": "C://component//lib//http//httpclientstartedmessagequeuebinding.js",
                 "prototypeScriptPath": "C://component//lib//http//httpclientstartedmessagequeuebinding.prototype.js",
+                "isSingleton": true,
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
@@ -1252,12 +1351,14 @@
                         "variableName": "messageQueue",
                         "scriptPath": "C://component//lib//messagequeue.js",
                         "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
+                        "isSingleton": true,
                         "children": [
                             {
                                 "typeName": "Logger",
                                 "variableName": "logger",
                                 "scriptPath": "C://component//lib//logger.js",
                                 "prototypeScriptPath": "C://component//lib//logger.prototype.js",
+                                "isSingleton": true,
                                 "children": []
                             }
                         ]
@@ -1271,12 +1372,14 @@
         "variableName": "clientRequestMessageBus",
         "scriptPath": "C://component//lib//http//httpclientrequestmessagebus.js",
         "prototypeScriptPath": "C://component//lib//http//httpclientrequestmessagebus.prototype.js",
+        "isSingleton": false,
         "children": [
             {
                 "typeName": "HttpClientRequestMessageQueueBinding",
                 "variableName": "httpClientRequestMessageQueueBinding",
                 "scriptPath": "C://component//lib//http//httpclientrequestmessagequeuebinding.js",
                 "prototypeScriptPath": "C://component//lib//http//httpclientrequestmessagequeuebinding.prototype.js",
+                "isSingleton": false,
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
@@ -1290,12 +1393,14 @@
                         "variableName": "messageQueue",
                         "scriptPath": "C://component//lib//messagequeue.js",
                         "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
+                        "isSingleton": true,
                         "children": [
                             {
                                 "typeName": "Logger",
                                 "variableName": "logger",
                                 "scriptPath": "C://component//lib//logger.js",
                                 "prototypeScriptPath": "C://component//lib//logger.prototype.js",
+                                "isSingleton": true,
                                 "children": []
                             }
                         ]
@@ -1309,6 +1414,7 @@
         "variableName": "httpClientRequestMessageQueueBinding",
         "scriptPath": "C://component//lib//http//httpclientrequestmessagequeuebinding.js",
         "prototypeScriptPath": "C://component//lib//http//httpclientrequestmessagequeuebinding.prototype.js",
+        "isSingleton": false,
         "children": [
             {
                 "typeName": "factoryContainerBindingName",
@@ -1322,12 +1428,14 @@
                 "variableName": "messageQueue",
                 "scriptPath": "C://component//lib//messagequeue.js",
                 "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
+                "isSingleton": true,
                 "children": [
                     {
                         "typeName": "Logger",
                         "variableName": "logger",
                         "scriptPath": "C://component//lib//logger.js",
                         "prototypeScriptPath": "C://component//lib//logger.prototype.js",
+                        "isSingleton": true,
                         "children": []
                     }
                 ]
@@ -1339,12 +1447,14 @@
         "variableName": "clientResponseMessageBus",
         "scriptPath": "C://component//lib//http//httpclientresponsemessagebus.js",
         "prototypeScriptPath": "C://component//lib//http//httpclientresponsemessagebus.prototype.js",
+        "isSingleton": false,
         "children": [
             {
                 "typeName": "HttpClientResponseMessageQueueBinding",
                 "variableName": "httpClientResponseMessageQueueBinding",
                 "scriptPath": "C://component//lib//http//httpclientresponsemessagequeuebinding.js",
                 "prototypeScriptPath": "C://component//lib//http//httpclientresponsemessagequeuebinding.prototype.js",
+                "isSingleton": false,
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
@@ -1358,12 +1468,14 @@
                         "variableName": "messageQueue",
                         "scriptPath": "C://component//lib//messagequeue.js",
                         "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
+                        "isSingleton": true,
                         "children": [
                             {
                                 "typeName": "Logger",
                                 "variableName": "logger",
                                 "scriptPath": "C://component//lib//logger.js",
                                 "prototypeScriptPath": "C://component//lib//logger.prototype.js",
+                                "isSingleton": true,
                                 "children": []
                             }
                         ]
@@ -1377,6 +1489,7 @@
         "variableName": "httpClientResponseMessageQueueBinding",
         "scriptPath": "C://component//lib//http//httpclientresponsemessagequeuebinding.js",
         "prototypeScriptPath": "C://component//lib//http//httpclientresponsemessagequeuebinding.prototype.js",
+        "isSingleton": false,
         "children": [
             {
                 "typeName": "factoryContainerBindingName",
@@ -1390,12 +1503,14 @@
                 "variableName": "messageQueue",
                 "scriptPath": "C://component//lib//messagequeue.js",
                 "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
+                "isSingleton": true,
                 "children": [
                     {
                         "typeName": "Logger",
                         "variableName": "logger",
                         "scriptPath": "C://component//lib//logger.js",
                         "prototypeScriptPath": "C://component//lib//logger.prototype.js",
+                        "isSingleton": true,
                         "children": []
                     }
                 ]
@@ -1407,6 +1522,7 @@
         "variableName": "httpClientStartedMessageQueueBinding",
         "scriptPath": "C://component//lib//http//httpclientstartedmessagequeuebinding.js",
         "prototypeScriptPath": "C://component//lib//http//httpclientstartedmessagequeuebinding.prototype.js",
+        "isSingleton": true,
         "children": [
             {
                 "typeName": "factoryContainerBindingName",
@@ -1420,12 +1536,14 @@
                 "variableName": "messageQueue",
                 "scriptPath": "C://component//lib//messagequeue.js",
                 "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
+                "isSingleton": true,
                 "children": [
                     {
                         "typeName": "Logger",
                         "variableName": "logger",
                         "scriptPath": "C://component//lib//logger.js",
                         "prototypeScriptPath": "C://component//lib//logger.prototype.js",
+                        "isSingleton": true,
                         "children": []
                     }
                 ]
@@ -1437,6 +1555,7 @@
         "variableName": "httpClientStartMessageQueueBinding",
         "scriptPath": "C://component//lib//http//httpclientstartmessagequeuebinding.js",
         "prototypeScriptPath": "C://component//lib//http//httpclientstartmessagequeuebinding.prototype.js",
+        "isSingleton": true,
         "children": [
             {
                 "typeName": "factoryContainerBindingName",
@@ -1450,12 +1569,14 @@
                 "variableName": "messageQueue",
                 "scriptPath": "C://component//lib//messagequeue.js",
                 "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
+                "isSingleton": true,
                 "children": [
                     {
                         "typeName": "Logger",
                         "variableName": "logger",
                         "scriptPath": "C://component//lib//logger.js",
                         "prototypeScriptPath": "C://component//lib//logger.prototype.js",
+                        "isSingleton": true,
                         "children": []
                     }
                 ]
@@ -1467,6 +1588,7 @@
         "variableName": "httpClientStopMessageQueueBinding",
         "scriptPath": "C://component//lib//http//httpclientstopmessagequeuebinding.js",
         "prototypeScriptPath": "C://component//lib//http//httpclientstopmessagequeuebinding.prototype.js",
+        "isSingleton": true,
         "children": [
             {
                 "typeName": "factoryContainerBindingName",
@@ -1480,12 +1602,14 @@
                 "variableName": "messageQueue",
                 "scriptPath": "C://component//lib//messagequeue.js",
                 "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
+                "isSingleton": true,
                 "children": [
                     {
                         "typeName": "Logger",
                         "variableName": "logger",
                         "scriptPath": "C://component//lib//logger.js",
                         "prototypeScriptPath": "C://component//lib//logger.prototype.js",
+                        "isSingleton": true,
                         "children": []
                     }
                 ]
@@ -1497,6 +1621,7 @@
         "variableName": "httpClientStoppedMessageQueueBinding",
         "scriptPath": "C://component//lib//http//httpclientstoppedmessagequeuebinding.js",
         "prototypeScriptPath": "C://component//lib//http//httpclientstoppedmessagequeuebinding.prototype.js",
+        "isSingleton": true,
         "children": [
             {
                 "typeName": "factoryContainerBindingName",
@@ -1510,12 +1635,14 @@
                 "variableName": "messageQueue",
                 "scriptPath": "C://component//lib//messagequeue.js",
                 "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
+                "isSingleton": true,
                 "children": [
                     {
                         "typeName": "Logger",
                         "variableName": "logger",
                         "scriptPath": "C://component//lib//logger.js",
                         "prototypeScriptPath": "C://component//lib//logger.prototype.js",
+                        "isSingleton": true,
                         "children": []
                     }
                 ]
@@ -1527,18 +1654,21 @@
         "variableName": "httpRequestMessage",
         "scriptPath": "C://component//lib//http//httprequestmessage.js",
         "prototypeScriptPath": "C://component//lib//http//httprequestmessage.prototype.js",
+        "isSingleton": false,
         "children": [
             {
                 "typeName": "Message",
                 "variableName": "message",
                 "scriptPath": "C://component//lib//message.js",
                 "prototypeScriptPath": "C://component//lib//message.prototype.js",
+                "isSingleton": false,
                 "children": [
                     {
                         "typeName": "MessageStatus",
                         "variableName": "messageStatus",
                         "scriptPath": "C://component//lib//messagestatus.js",
                         "prototypeScriptPath": "C://component//lib//messagestatus.prototype.js",
+                        "isSingleton": false,
                         "children": [
                             {
                                 "typeName": "messageStatusCode",
@@ -1568,12 +1698,14 @@
                         "variableName": "messageContent",
                         "scriptPath": "C://component//lib//messagecontent.js",
                         "prototypeScriptPath": "C://component//lib//messagecontent.prototype.js",
+                        "isSingleton": false,
                         "children": [
                             {
                                 "typeName": "MessageContentMetadata",
                                 "variableName": "messageContentMetadata",
                                 "scriptPath": "C://component//lib//messagecontentmetadata.js",
                                 "prototypeScriptPath": "C://component//lib//messagecontentmetadata.prototype.js",
+                                "isSingleton": false,
                                 "children": [
                                     {
                                         "typeName": "factoryContainerBindingName",
@@ -1603,6 +1735,7 @@
                                 "variableName": "userSessions",
                                 "scriptPath": "C://component//lib//usersessions.js",
                                 "prototypeScriptPath": "C://component//lib//usersessions.prototype.js",
+                                "isSingleton": true,
                                 "children": [
                                     {
                                         "typeName": "factoryContainerBindingName",
@@ -1618,12 +1751,14 @@
                                 "variableName": "messageMetadata",
                                 "scriptPath": "C://component//lib//messagemetadata.js",
                                 "prototypeScriptPath": "C://component//lib//messagemetadata.prototype.js",
+                                "isSingleton": false,
                                 "children": [
                                     {
                                         "typeName": "RecipientAddress",
                                         "variableName": "recipientAddress",
                                         "scriptPath": "C://component//lib//recipientaddress.js",
                                         "prototypeScriptPath": "C://component//lib//recipientaddress.prototype.js",
+                                        "isSingleton": false,
                                         "children": [
                                             {
                                                 "typeName": "recipientHost",
@@ -1660,6 +1795,7 @@
                                         "variableName": "senderAddress",
                                         "scriptPath": "C://component//lib//senderaddress.js",
                                         "prototypeScriptPath": "C://component//lib//senderaddress.prototype.js",
+                                        "isSingleton": false,
                                         "children": [
                                             {
                                                 "typeName": "senderHost",
@@ -1686,6 +1822,7 @@
                         "variableName": "messageContentMetadata",
                         "scriptPath": "C://component//lib//messagecontentmetadata.js",
                         "prototypeScriptPath": "C://component//lib//messagecontentmetadata.prototype.js",
+                        "isSingleton": false,
                         "children": [
                             {
                                 "typeName": "factoryContainerBindingName",
@@ -1708,12 +1845,14 @@
                         "variableName": "messageMetadata",
                         "scriptPath": "C://component//lib//messagemetadata.js",
                         "prototypeScriptPath": "C://component//lib//messagemetadata.prototype.js",
+                        "isSingleton": false,
                         "children": [
                             {
                                 "typeName": "RecipientAddress",
                                 "variableName": "recipientAddress",
                                 "scriptPath": "C://component//lib//recipientaddress.js",
                                 "prototypeScriptPath": "C://component//lib//recipientaddress.prototype.js",
+                                "isSingleton": false,
                                 "children": [
                                     {
                                         "typeName": "recipientHost",
@@ -1750,6 +1889,7 @@
                                 "variableName": "senderAddress",
                                 "scriptPath": "C://component//lib//senderaddress.js",
                                 "prototypeScriptPath": "C://component//lib//senderaddress.prototype.js",
+                                "isSingleton": false,
                                 "children": [
                                     {
                                         "typeName": "senderHost",
@@ -1778,18 +1918,21 @@
         "variableName": "httpResponseMessage",
         "scriptPath": "C://component//lib//http//httpresponsemessage.js",
         "prototypeScriptPath": "C://component//lib//http//httpresponsemessage.prototype.js",
+        "isSingleton": false,
         "children": [
             {
                 "typeName": "Message",
                 "variableName": "message",
                 "scriptPath": "C://component//lib//message.js",
                 "prototypeScriptPath": "C://component//lib//message.prototype.js",
+                "isSingleton": false,
                 "children": [
                     {
                         "typeName": "MessageStatus",
                         "variableName": "messageStatus",
                         "scriptPath": "C://component//lib//messagestatus.js",
                         "prototypeScriptPath": "C://component//lib//messagestatus.prototype.js",
+                        "isSingleton": false,
                         "children": [
                             {
                                 "typeName": "messageStatusCode",
@@ -1819,12 +1962,14 @@
                         "variableName": "messageContent",
                         "scriptPath": "C://component//lib//messagecontent.js",
                         "prototypeScriptPath": "C://component//lib//messagecontent.prototype.js",
+                        "isSingleton": false,
                         "children": [
                             {
                                 "typeName": "MessageContentMetadata",
                                 "variableName": "messageContentMetadata",
                                 "scriptPath": "C://component//lib//messagecontentmetadata.js",
                                 "prototypeScriptPath": "C://component//lib//messagecontentmetadata.prototype.js",
+                                "isSingleton": false,
                                 "children": [
                                     {
                                         "typeName": "factoryContainerBindingName",
@@ -1854,6 +1999,7 @@
                                 "variableName": "userSessions",
                                 "scriptPath": "C://component//lib//usersessions.js",
                                 "prototypeScriptPath": "C://component//lib//usersessions.prototype.js",
+                                "isSingleton": true,
                                 "children": [
                                     {
                                         "typeName": "factoryContainerBindingName",
@@ -1869,12 +2015,14 @@
                                 "variableName": "messageMetadata",
                                 "scriptPath": "C://component//lib//messagemetadata.js",
                                 "prototypeScriptPath": "C://component//lib//messagemetadata.prototype.js",
+                                "isSingleton": false,
                                 "children": [
                                     {
                                         "typeName": "RecipientAddress",
                                         "variableName": "recipientAddress",
                                         "scriptPath": "C://component//lib//recipientaddress.js",
                                         "prototypeScriptPath": "C://component//lib//recipientaddress.prototype.js",
+                                        "isSingleton": false,
                                         "children": [
                                             {
                                                 "typeName": "recipientHost",
@@ -1911,6 +2059,7 @@
                                         "variableName": "senderAddress",
                                         "scriptPath": "C://component//lib//senderaddress.js",
                                         "prototypeScriptPath": "C://component//lib//senderaddress.prototype.js",
+                                        "isSingleton": false,
                                         "children": [
                                             {
                                                 "typeName": "senderHost",
@@ -1937,6 +2086,7 @@
                         "variableName": "messageContentMetadata",
                         "scriptPath": "C://component//lib//messagecontentmetadata.js",
                         "prototypeScriptPath": "C://component//lib//messagecontentmetadata.prototype.js",
+                        "isSingleton": false,
                         "children": [
                             {
                                 "typeName": "factoryContainerBindingName",
@@ -1959,12 +2109,14 @@
                         "variableName": "messageMetadata",
                         "scriptPath": "C://component//lib//messagemetadata.js",
                         "prototypeScriptPath": "C://component//lib//messagemetadata.prototype.js",
+                        "isSingleton": false,
                         "children": [
                             {
                                 "typeName": "RecipientAddress",
                                 "variableName": "recipientAddress",
                                 "scriptPath": "C://component//lib//recipientaddress.js",
                                 "prototypeScriptPath": "C://component//lib//recipientaddress.prototype.js",
+                                "isSingleton": false,
                                 "children": [
                                     {
                                         "typeName": "recipientHost",
@@ -2001,6 +2153,7 @@
                                 "variableName": "senderAddress",
                                 "scriptPath": "C://component//lib//senderaddress.js",
                                 "prototypeScriptPath": "C://component//lib//senderaddress.prototype.js",
+                                "isSingleton": false,
                                 "children": [
                                     {
                                         "typeName": "senderHost",
@@ -2029,6 +2182,7 @@
         "variableName": "httpServerMessageBus",
         "scriptPath": "C://component//lib//http//httpservermessagebus.js",
         "prototypeScriptPath": "C://component//lib//http//httpservermessagebus.prototype.js",
+        "isSingleton": false,
         "children": [
             {
                 "typeName": "timeout",
@@ -2049,6 +2203,7 @@
                 "variableName": "httpServerRequestMessageQueueBinding",
                 "scriptPath": "C://component//lib//http//httpserverrequestmessagequeuebinding.js",
                 "prototypeScriptPath": "C://component//lib//http//httpserverrequestmessagequeuebinding.prototype.js",
+                "isSingleton": false,
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
@@ -2062,12 +2217,14 @@
                         "variableName": "messageQueue",
                         "scriptPath": "C://component//lib//messagequeue.js",
                         "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
+                        "isSingleton": true,
                         "children": [
                             {
                                 "typeName": "Logger",
                                 "variableName": "logger",
                                 "scriptPath": "C://component//lib//logger.js",
                                 "prototypeScriptPath": "C://component//lib//logger.prototype.js",
+                                "isSingleton": true,
                                 "children": []
                             }
                         ]
@@ -2079,6 +2236,7 @@
                 "variableName": "httpServerResponseMessageQueueBinding",
                 "scriptPath": "C://component//lib//http//httpserverresponsemessagequeuebinding.js",
                 "prototypeScriptPath": "C://component//lib//http//httpserverresponsemessagequeuebinding.prototype.js",
+                "isSingleton": false,
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
@@ -2092,12 +2250,14 @@
                         "variableName": "messageQueue",
                         "scriptPath": "C://component//lib//messagequeue.js",
                         "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
+                        "isSingleton": true,
                         "children": [
                             {
                                 "typeName": "Logger",
                                 "variableName": "logger",
                                 "scriptPath": "C://component//lib//logger.js",
                                 "prototypeScriptPath": "C://component//lib//logger.prototype.js",
+                                "isSingleton": true,
                                 "children": []
                             }
                         ]
@@ -2109,6 +2269,7 @@
                 "variableName": "httpServerStartMessageQueueBinding",
                 "scriptPath": "C://component//lib//http//httpserverstartmessagequeuebinding.js",
                 "prototypeScriptPath": "C://component//lib//http//httpserverstartmessagequeuebinding.prototype.js",
+                "isSingleton": true,
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
@@ -2122,12 +2283,14 @@
                         "variableName": "messageQueue",
                         "scriptPath": "C://component//lib//messagequeue.js",
                         "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
+                        "isSingleton": true,
                         "children": [
                             {
                                 "typeName": "Logger",
                                 "variableName": "logger",
                                 "scriptPath": "C://component//lib//logger.js",
                                 "prototypeScriptPath": "C://component//lib//logger.prototype.js",
+                                "isSingleton": true,
                                 "children": []
                             }
                         ]
@@ -2139,6 +2302,7 @@
                 "variableName": "httpServerStartedMessageQueueBinding",
                 "scriptPath": "C://component//lib//http//httpserverstartedmessagequeuebinding.js",
                 "prototypeScriptPath": "C://component//lib//http//httpserverstartedmessagequeuebinding.prototype.js",
+                "isSingleton": true,
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
@@ -2152,12 +2316,14 @@
                         "variableName": "messageQueue",
                         "scriptPath": "C://component//lib//messagequeue.js",
                         "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
+                        "isSingleton": true,
                         "children": [
                             {
                                 "typeName": "Logger",
                                 "variableName": "logger",
                                 "scriptPath": "C://component//lib//logger.js",
                                 "prototypeScriptPath": "C://component//lib//logger.prototype.js",
+                                "isSingleton": true,
                                 "children": []
                             }
                         ]
@@ -2169,6 +2335,7 @@
                 "variableName": "httpServerStopMessageQueueBinding",
                 "scriptPath": "C://component//lib//http//httpserverstopmessagequeuebinding.js",
                 "prototypeScriptPath": "C://component//lib//http//httpserverstopmessagequeuebinding.prototype.js",
+                "isSingleton": true,
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
@@ -2182,12 +2349,14 @@
                         "variableName": "messageQueue",
                         "scriptPath": "C://component//lib//messagequeue.js",
                         "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
+                        "isSingleton": true,
                         "children": [
                             {
                                 "typeName": "Logger",
                                 "variableName": "logger",
                                 "scriptPath": "C://component//lib//logger.js",
                                 "prototypeScriptPath": "C://component//lib//logger.prototype.js",
+                                "isSingleton": true,
                                 "children": []
                             }
                         ]
@@ -2199,6 +2368,7 @@
                 "variableName": "httpServerStoppedMessageQueueBinding",
                 "scriptPath": "C://component//lib//http//httpserverstoppedmessagequeuebinding.js",
                 "prototypeScriptPath": "C://component//lib//http//httpserverstoppedmessagequeuebinding.prototype.js",
+                "isSingleton": true,
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
@@ -2212,12 +2382,14 @@
                         "variableName": "messageQueue",
                         "scriptPath": "C://component//lib//messagequeue.js",
                         "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
+                        "isSingleton": true,
                         "children": [
                             {
                                 "typeName": "Logger",
                                 "variableName": "logger",
                                 "scriptPath": "C://component//lib//logger.js",
                                 "prototypeScriptPath": "C://component//lib//logger.prototype.js",
+                                "isSingleton": true,
                                 "children": []
                             }
                         ]
@@ -2229,6 +2401,7 @@
                 "variableName": "senderAddress",
                 "scriptPath": "C://component//lib//senderaddress.js",
                 "prototypeScriptPath": "C://component//lib//senderaddress.prototype.js",
+                "isSingleton": false,
                 "children": [
                     {
                         "typeName": "senderHost",
@@ -2251,6 +2424,7 @@
                 "variableName": "logger",
                 "scriptPath": "C://component//lib//logger.js",
                 "prototypeScriptPath": "C://component//lib//logger.prototype.js",
+                "isSingleton": true,
                 "children": []
             }
         ]
@@ -2260,12 +2434,14 @@
         "variableName": "httpServerMessageBusManager",
         "scriptPath": "C://component//lib//http//httpservermessagebusmanager.js",
         "prototypeScriptPath": "C://component//lib//http//httpservermessagebusmanager.prototype.js",
+        "isSingleton": true,
         "children": [
             {
                 "typeName": "HttpServerStoppedMessageQueueBinding",
                 "variableName": "httpServerStoppedMessageQueueBinding",
                 "scriptPath": "C://component//lib//http//httpserverstoppedmessagequeuebinding.js",
                 "prototypeScriptPath": "C://component//lib//http//httpserverstoppedmessagequeuebinding.prototype.js",
+                "isSingleton": true,
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
@@ -2279,12 +2455,14 @@
                         "variableName": "messageQueue",
                         "scriptPath": "C://component//lib//messagequeue.js",
                         "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
+                        "isSingleton": true,
                         "children": [
                             {
                                 "typeName": "Logger",
                                 "variableName": "logger",
                                 "scriptPath": "C://component//lib//logger.js",
                                 "prototypeScriptPath": "C://component//lib//logger.prototype.js",
+                                "isSingleton": true,
                                 "children": []
                             }
                         ]
@@ -2303,6 +2481,7 @@
                 "variableName": "httpServerRequestMessageQueueBinding",
                 "scriptPath": "C://component//lib//http//httpserverrequestmessagequeuebinding.js",
                 "prototypeScriptPath": "C://component//lib//http//httpserverrequestmessagequeuebinding.prototype.js",
+                "isSingleton": false,
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
@@ -2316,12 +2495,14 @@
                         "variableName": "messageQueue",
                         "scriptPath": "C://component//lib//messagequeue.js",
                         "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
+                        "isSingleton": true,
                         "children": [
                             {
                                 "typeName": "Logger",
                                 "variableName": "logger",
                                 "scriptPath": "C://component//lib//logger.js",
                                 "prototypeScriptPath": "C://component//lib//logger.prototype.js",
+                                "isSingleton": true,
                                 "children": []
                             }
                         ]
@@ -2333,6 +2514,7 @@
                 "variableName": "httpServerResponseMessageQueueBinding",
                 "scriptPath": "C://component//lib//http//httpserverresponsemessagequeuebinding.js",
                 "prototypeScriptPath": "C://component//lib//http//httpserverresponsemessagequeuebinding.prototype.js",
+                "isSingleton": false,
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
@@ -2346,12 +2528,14 @@
                         "variableName": "messageQueue",
                         "scriptPath": "C://component//lib//messagequeue.js",
                         "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
+                        "isSingleton": true,
                         "children": [
                             {
                                 "typeName": "Logger",
                                 "variableName": "logger",
                                 "scriptPath": "C://component//lib//logger.js",
                                 "prototypeScriptPath": "C://component//lib//logger.prototype.js",
+                                "isSingleton": true,
                                 "children": []
                             }
                         ]
@@ -2363,6 +2547,7 @@
                 "variableName": "httpServerStartMessageQueueBinding",
                 "scriptPath": "C://component//lib//http//httpserverstartmessagequeuebinding.js",
                 "prototypeScriptPath": "C://component//lib//http//httpserverstartmessagequeuebinding.prototype.js",
+                "isSingleton": true,
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
@@ -2376,12 +2561,14 @@
                         "variableName": "messageQueue",
                         "scriptPath": "C://component//lib//messagequeue.js",
                         "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
+                        "isSingleton": true,
                         "children": [
                             {
                                 "typeName": "Logger",
                                 "variableName": "logger",
                                 "scriptPath": "C://component//lib//logger.js",
                                 "prototypeScriptPath": "C://component//lib//logger.prototype.js",
+                                "isSingleton": true,
                                 "children": []
                             }
                         ]
@@ -2393,6 +2580,7 @@
                 "variableName": "httpServerStartedMessageQueueBinding",
                 "scriptPath": "C://component//lib//http//httpserverstartedmessagequeuebinding.js",
                 "prototypeScriptPath": "C://component//lib//http//httpserverstartedmessagequeuebinding.prototype.js",
+                "isSingleton": true,
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
@@ -2406,12 +2594,14 @@
                         "variableName": "messageQueue",
                         "scriptPath": "C://component//lib//messagequeue.js",
                         "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
+                        "isSingleton": true,
                         "children": [
                             {
                                 "typeName": "Logger",
                                 "variableName": "logger",
                                 "scriptPath": "C://component//lib//logger.js",
                                 "prototypeScriptPath": "C://component//lib//logger.prototype.js",
+                                "isSingleton": true,
                                 "children": []
                             }
                         ]
@@ -2423,6 +2613,7 @@
                 "variableName": "httpServerStopMessageQueueBinding",
                 "scriptPath": "C://component//lib//http//httpserverstopmessagequeuebinding.js",
                 "prototypeScriptPath": "C://component//lib//http//httpserverstopmessagequeuebinding.prototype.js",
+                "isSingleton": true,
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
@@ -2436,12 +2627,14 @@
                         "variableName": "messageQueue",
                         "scriptPath": "C://component//lib//messagequeue.js",
                         "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
+                        "isSingleton": true,
                         "children": [
                             {
                                 "typeName": "Logger",
                                 "variableName": "logger",
                                 "scriptPath": "C://component//lib//logger.js",
                                 "prototypeScriptPath": "C://component//lib//logger.prototype.js",
+                                "isSingleton": true,
                                 "children": []
                             }
                         ]
@@ -2455,12 +2648,14 @@
         "variableName": "serverRequestMessageBus",
         "scriptPath": "C://component//lib//http//httpserverrequestmessagebus.js",
         "prototypeScriptPath": "C://component//lib//http//httpserverrequestmessagebus.prototype.js",
+        "isSingleton": false,
         "children": [
             {
                 "typeName": "HttpServerRequestMessageQueueBinding",
                 "variableName": "httpServerRequestMessageQueueBinding",
                 "scriptPath": "C://component//lib//http//httpserverrequestmessagequeuebinding.js",
                 "prototypeScriptPath": "C://component//lib//http//httpserverrequestmessagequeuebinding.prototype.js",
+                "isSingleton": false,
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
@@ -2474,12 +2669,14 @@
                         "variableName": "messageQueue",
                         "scriptPath": "C://component//lib//messagequeue.js",
                         "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
+                        "isSingleton": true,
                         "children": [
                             {
                                 "typeName": "Logger",
                                 "variableName": "logger",
                                 "scriptPath": "C://component//lib//logger.js",
                                 "prototypeScriptPath": "C://component//lib//logger.prototype.js",
+                                "isSingleton": true,
                                 "children": []
                             }
                         ]
@@ -2493,6 +2690,7 @@
         "variableName": "httpServerRequestMessageQueueBinding",
         "scriptPath": "C://component//lib//http//httpserverrequestmessagequeuebinding.js",
         "prototypeScriptPath": "C://component//lib//http//httpserverrequestmessagequeuebinding.prototype.js",
+        "isSingleton": false,
         "children": [
             {
                 "typeName": "factoryContainerBindingName",
@@ -2506,12 +2704,14 @@
                 "variableName": "messageQueue",
                 "scriptPath": "C://component//lib//messagequeue.js",
                 "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
+                "isSingleton": true,
                 "children": [
                     {
                         "typeName": "Logger",
                         "variableName": "logger",
                         "scriptPath": "C://component//lib//logger.js",
                         "prototypeScriptPath": "C://component//lib//logger.prototype.js",
+                        "isSingleton": true,
                         "children": []
                     }
                 ]
@@ -2523,12 +2723,14 @@
         "variableName": "serverResponseMessageBus",
         "scriptPath": "C://component//lib//http//httpserverresponsemessagebus.js",
         "prototypeScriptPath": "C://component//lib//http//httpserverresponsemessagebus.prototype.js",
+        "isSingleton": false,
         "children": [
             {
                 "typeName": "HttpServerResponseMessageQueueBinding",
                 "variableName": "httpServerResponseMessageQueueBinding",
                 "scriptPath": "C://component//lib//http//httpserverresponsemessagequeuebinding.js",
                 "prototypeScriptPath": "C://component//lib//http//httpserverresponsemessagequeuebinding.prototype.js",
+                "isSingleton": false,
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
@@ -2542,12 +2744,14 @@
                         "variableName": "messageQueue",
                         "scriptPath": "C://component//lib//messagequeue.js",
                         "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
+                        "isSingleton": true,
                         "children": [
                             {
                                 "typeName": "Logger",
                                 "variableName": "logger",
                                 "scriptPath": "C://component//lib//logger.js",
                                 "prototypeScriptPath": "C://component//lib//logger.prototype.js",
+                                "isSingleton": true,
                                 "children": []
                             }
                         ]
@@ -2561,6 +2765,7 @@
         "variableName": "httpServerResponseMessageQueueBinding",
         "scriptPath": "C://component//lib//http//httpserverresponsemessagequeuebinding.js",
         "prototypeScriptPath": "C://component//lib//http//httpserverresponsemessagequeuebinding.prototype.js",
+        "isSingleton": false,
         "children": [
             {
                 "typeName": "factoryContainerBindingName",
@@ -2574,12 +2779,14 @@
                 "variableName": "messageQueue",
                 "scriptPath": "C://component//lib//messagequeue.js",
                 "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
+                "isSingleton": true,
                 "children": [
                     {
                         "typeName": "Logger",
                         "variableName": "logger",
                         "scriptPath": "C://component//lib//logger.js",
                         "prototypeScriptPath": "C://component//lib//logger.prototype.js",
+                        "isSingleton": true,
                         "children": []
                     }
                 ]
@@ -2591,6 +2798,7 @@
         "variableName": "httpServerStartedMessageQueueBinding",
         "scriptPath": "C://component//lib//http//httpserverstartedmessagequeuebinding.js",
         "prototypeScriptPath": "C://component//lib//http//httpserverstartedmessagequeuebinding.prototype.js",
+        "isSingleton": true,
         "children": [
             {
                 "typeName": "factoryContainerBindingName",
@@ -2604,12 +2812,14 @@
                 "variableName": "messageQueue",
                 "scriptPath": "C://component//lib//messagequeue.js",
                 "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
+                "isSingleton": true,
                 "children": [
                     {
                         "typeName": "Logger",
                         "variableName": "logger",
                         "scriptPath": "C://component//lib//logger.js",
                         "prototypeScriptPath": "C://component//lib//logger.prototype.js",
+                        "isSingleton": true,
                         "children": []
                     }
                 ]
@@ -2621,6 +2831,7 @@
         "variableName": "httpServerStartMessageQueueBinding",
         "scriptPath": "C://component//lib//http//httpserverstartmessagequeuebinding.js",
         "prototypeScriptPath": "C://component//lib//http//httpserverstartmessagequeuebinding.prototype.js",
+        "isSingleton": true,
         "children": [
             {
                 "typeName": "factoryContainerBindingName",
@@ -2634,12 +2845,14 @@
                 "variableName": "messageQueue",
                 "scriptPath": "C://component//lib//messagequeue.js",
                 "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
+                "isSingleton": true,
                 "children": [
                     {
                         "typeName": "Logger",
                         "variableName": "logger",
                         "scriptPath": "C://component//lib//logger.js",
                         "prototypeScriptPath": "C://component//lib//logger.prototype.js",
+                        "isSingleton": true,
                         "children": []
                     }
                 ]
@@ -2651,6 +2864,7 @@
         "variableName": "httpServerStopMessageQueueBinding",
         "scriptPath": "C://component//lib//http//httpserverstopmessagequeuebinding.js",
         "prototypeScriptPath": "C://component//lib//http//httpserverstopmessagequeuebinding.prototype.js",
+        "isSingleton": true,
         "children": [
             {
                 "typeName": "factoryContainerBindingName",
@@ -2664,12 +2878,14 @@
                 "variableName": "messageQueue",
                 "scriptPath": "C://component//lib//messagequeue.js",
                 "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
+                "isSingleton": true,
                 "children": [
                     {
                         "typeName": "Logger",
                         "variableName": "logger",
                         "scriptPath": "C://component//lib//logger.js",
                         "prototypeScriptPath": "C://component//lib//logger.prototype.js",
+                        "isSingleton": true,
                         "children": []
                     }
                 ]
@@ -2681,6 +2897,7 @@
         "variableName": "httpServerStoppedMessageQueueBinding",
         "scriptPath": "C://component//lib//http//httpserverstoppedmessagequeuebinding.js",
         "prototypeScriptPath": "C://component//lib//http//httpserverstoppedmessagequeuebinding.prototype.js",
+        "isSingleton": true,
         "children": [
             {
                 "typeName": "factoryContainerBindingName",
@@ -2694,12 +2911,14 @@
                 "variableName": "messageQueue",
                 "scriptPath": "C://component//lib//messagequeue.js",
                 "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
+                "isSingleton": true,
                 "children": [
                     {
                         "typeName": "Logger",
                         "variableName": "logger",
                         "scriptPath": "C://component//lib//logger.js",
                         "prototypeScriptPath": "C://component//lib//logger.prototype.js",
+                        "isSingleton": true,
                         "children": []
                     }
                 ]
@@ -2711,12 +2930,14 @@
         "variableName": "webSocketClientRequestMessageBus",
         "scriptPath": "C://component//lib//websocket//websocketclientrequestmessagebus.js",
         "prototypeScriptPath": "C://component//lib//websocket//websocketclientrequestmessagebus.prototype.js",
+        "isSingleton": false,
         "children": [
             {
                 "typeName": "WebSocketClientRequestMessageQueueBinding",
                 "variableName": "websocketClientRequestMessageQueueBinding",
                 "scriptPath": "C://component//lib//websocket//websocketclientrequestmessagequeuebinding.js",
                 "prototypeScriptPath": "C://component//lib//websocket//websocketclientrequestmessagequeuebinding.prototype.js",
+                "isSingleton": false,
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
@@ -2730,12 +2951,14 @@
                         "variableName": "messageQueue",
                         "scriptPath": "C://component//lib//messagequeue.js",
                         "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
+                        "isSingleton": true,
                         "children": [
                             {
                                 "typeName": "Logger",
                                 "variableName": "logger",
                                 "scriptPath": "C://component//lib//logger.js",
                                 "prototypeScriptPath": "C://component//lib//logger.prototype.js",
+                                "isSingleton": true,
                                 "children": []
                             }
                         ]
@@ -2749,6 +2972,7 @@
         "variableName": "websocketClientRequestMessageQueueBinding",
         "scriptPath": "C://component//lib//websocket//websocketclientrequestmessagequeuebinding.js",
         "prototypeScriptPath": "C://component//lib//websocket//websocketclientrequestmessagequeuebinding.prototype.js",
+        "isSingleton": false,
         "children": [
             {
                 "typeName": "factoryContainerBindingName",
@@ -2762,12 +2986,14 @@
                 "variableName": "messageQueue",
                 "scriptPath": "C://component//lib//messagequeue.js",
                 "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
+                "isSingleton": true,
                 "children": [
                     {
                         "typeName": "Logger",
                         "variableName": "logger",
                         "scriptPath": "C://component//lib//logger.js",
                         "prototypeScriptPath": "C://component//lib//logger.prototype.js",
+                        "isSingleton": true,
                         "children": []
                     }
                 ]
@@ -2779,12 +3005,14 @@
         "variableName": "webSocketClientResponseMessageBus",
         "scriptPath": "C://component//lib//websocket//websocketclientresponsemessagebus.js",
         "prototypeScriptPath": "C://component//lib//websocket//websocketclientresponsemessagebus.prototype.js",
+        "isSingleton": false,
         "children": [
             {
                 "typeName": "WebSocketClientResponseMessageQueueBinding",
                 "variableName": "websocketClientResponseMessageQueueBinding",
                 "scriptPath": "C://component//lib//websocket//websocketclientresponsemessagequeuebinding.js",
                 "prototypeScriptPath": "C://component//lib//websocket//websocketclientresponsemessagequeuebinding.prototype.js",
+                "isSingleton": false,
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
@@ -2798,12 +3026,14 @@
                         "variableName": "messageQueue",
                         "scriptPath": "C://component//lib//messagequeue.js",
                         "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
+                        "isSingleton": true,
                         "children": [
                             {
                                 "typeName": "Logger",
                                 "variableName": "logger",
                                 "scriptPath": "C://component//lib//logger.js",
                                 "prototypeScriptPath": "C://component//lib//logger.prototype.js",
+                                "isSingleton": true,
                                 "children": []
                             }
                         ]
@@ -2817,6 +3047,7 @@
         "variableName": "websocketClientResponseMessageQueueBinding",
         "scriptPath": "C://component//lib//websocket//websocketclientresponsemessagequeuebinding.js",
         "prototypeScriptPath": "C://component//lib//websocket//websocketclientresponsemessagequeuebinding.prototype.js",
+        "isSingleton": false,
         "children": [
             {
                 "typeName": "factoryContainerBindingName",
@@ -2830,12 +3061,14 @@
                 "variableName": "messageQueue",
                 "scriptPath": "C://component//lib//messagequeue.js",
                 "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
+                "isSingleton": true,
                 "children": [
                     {
                         "typeName": "Logger",
                         "variableName": "logger",
                         "scriptPath": "C://component//lib//logger.js",
                         "prototypeScriptPath": "C://component//lib//logger.prototype.js",
+                        "isSingleton": true,
                         "children": []
                     }
                 ]
@@ -2847,18 +3080,21 @@
         "variableName": "webSocketRequestMessage",
         "scriptPath": "C://component//lib//websocket//websocketrequestmessage.js",
         "prototypeScriptPath": "C://component//lib//websocket//websocketrequestmessage.prototype.js",
+        "isSingleton": false,
         "children": [
             {
                 "typeName": "Message",
                 "variableName": "message",
                 "scriptPath": "C://component//lib//message.js",
                 "prototypeScriptPath": "C://component//lib//message.prototype.js",
+                "isSingleton": false,
                 "children": [
                     {
                         "typeName": "MessageStatus",
                         "variableName": "messageStatus",
                         "scriptPath": "C://component//lib//messagestatus.js",
                         "prototypeScriptPath": "C://component//lib//messagestatus.prototype.js",
+                        "isSingleton": false,
                         "children": [
                             {
                                 "typeName": "messageStatusCode",
@@ -2888,12 +3124,14 @@
                         "variableName": "messageContent",
                         "scriptPath": "C://component//lib//messagecontent.js",
                         "prototypeScriptPath": "C://component//lib//messagecontent.prototype.js",
+                        "isSingleton": false,
                         "children": [
                             {
                                 "typeName": "MessageContentMetadata",
                                 "variableName": "messageContentMetadata",
                                 "scriptPath": "C://component//lib//messagecontentmetadata.js",
                                 "prototypeScriptPath": "C://component//lib//messagecontentmetadata.prototype.js",
+                                "isSingleton": false,
                                 "children": [
                                     {
                                         "typeName": "factoryContainerBindingName",
@@ -2923,6 +3161,7 @@
                                 "variableName": "userSessions",
                                 "scriptPath": "C://component//lib//usersessions.js",
                                 "prototypeScriptPath": "C://component//lib//usersessions.prototype.js",
+                                "isSingleton": true,
                                 "children": [
                                     {
                                         "typeName": "factoryContainerBindingName",
@@ -2938,12 +3177,14 @@
                                 "variableName": "messageMetadata",
                                 "scriptPath": "C://component//lib//messagemetadata.js",
                                 "prototypeScriptPath": "C://component//lib//messagemetadata.prototype.js",
+                                "isSingleton": false,
                                 "children": [
                                     {
                                         "typeName": "RecipientAddress",
                                         "variableName": "recipientAddress",
                                         "scriptPath": "C://component//lib//recipientaddress.js",
                                         "prototypeScriptPath": "C://component//lib//recipientaddress.prototype.js",
+                                        "isSingleton": false,
                                         "children": [
                                             {
                                                 "typeName": "recipientHost",
@@ -2980,6 +3221,7 @@
                                         "variableName": "senderAddress",
                                         "scriptPath": "C://component//lib//senderaddress.js",
                                         "prototypeScriptPath": "C://component//lib//senderaddress.prototype.js",
+                                        "isSingleton": false,
                                         "children": [
                                             {
                                                 "typeName": "senderHost",
@@ -3006,6 +3248,7 @@
                         "variableName": "messageContentMetadata",
                         "scriptPath": "C://component//lib//messagecontentmetadata.js",
                         "prototypeScriptPath": "C://component//lib//messagecontentmetadata.prototype.js",
+                        "isSingleton": false,
                         "children": [
                             {
                                 "typeName": "factoryContainerBindingName",
@@ -3028,12 +3271,14 @@
                         "variableName": "messageMetadata",
                         "scriptPath": "C://component//lib//messagemetadata.js",
                         "prototypeScriptPath": "C://component//lib//messagemetadata.prototype.js",
+                        "isSingleton": false,
                         "children": [
                             {
                                 "typeName": "RecipientAddress",
                                 "variableName": "recipientAddress",
                                 "scriptPath": "C://component//lib//recipientaddress.js",
                                 "prototypeScriptPath": "C://component//lib//recipientaddress.prototype.js",
+                                "isSingleton": false,
                                 "children": [
                                     {
                                         "typeName": "recipientHost",
@@ -3070,6 +3315,7 @@
                                 "variableName": "senderAddress",
                                 "scriptPath": "C://component//lib//senderaddress.js",
                                 "prototypeScriptPath": "C://component//lib//senderaddress.prototype.js",
+                                "isSingleton": false,
                                 "children": [
                                     {
                                         "typeName": "senderHost",
@@ -3098,18 +3344,21 @@
         "variableName": "webSocketResponseMessage",
         "scriptPath": "C://component//lib//websocket//websocketresponsemessage.js",
         "prototypeScriptPath": "C://component//lib//websocket//websocketresponsemessage.prototype.js",
+        "isSingleton": false,
         "children": [
             {
                 "typeName": "Message",
                 "variableName": "message",
                 "scriptPath": "C://component//lib//message.js",
                 "prototypeScriptPath": "C://component//lib//message.prototype.js",
+                "isSingleton": false,
                 "children": [
                     {
                         "typeName": "MessageStatus",
                         "variableName": "messageStatus",
                         "scriptPath": "C://component//lib//messagestatus.js",
                         "prototypeScriptPath": "C://component//lib//messagestatus.prototype.js",
+                        "isSingleton": false,
                         "children": [
                             {
                                 "typeName": "messageStatusCode",
@@ -3139,12 +3388,14 @@
                         "variableName": "messageContent",
                         "scriptPath": "C://component//lib//messagecontent.js",
                         "prototypeScriptPath": "C://component//lib//messagecontent.prototype.js",
+                        "isSingleton": false,
                         "children": [
                             {
                                 "typeName": "MessageContentMetadata",
                                 "variableName": "messageContentMetadata",
                                 "scriptPath": "C://component//lib//messagecontentmetadata.js",
                                 "prototypeScriptPath": "C://component//lib//messagecontentmetadata.prototype.js",
+                                "isSingleton": false,
                                 "children": [
                                     {
                                         "typeName": "factoryContainerBindingName",
@@ -3174,6 +3425,7 @@
                                 "variableName": "userSessions",
                                 "scriptPath": "C://component//lib//usersessions.js",
                                 "prototypeScriptPath": "C://component//lib//usersessions.prototype.js",
+                                "isSingleton": true,
                                 "children": [
                                     {
                                         "typeName": "factoryContainerBindingName",
@@ -3189,12 +3441,14 @@
                                 "variableName": "messageMetadata",
                                 "scriptPath": "C://component//lib//messagemetadata.js",
                                 "prototypeScriptPath": "C://component//lib//messagemetadata.prototype.js",
+                                "isSingleton": false,
                                 "children": [
                                     {
                                         "typeName": "RecipientAddress",
                                         "variableName": "recipientAddress",
                                         "scriptPath": "C://component//lib//recipientaddress.js",
                                         "prototypeScriptPath": "C://component//lib//recipientaddress.prototype.js",
+                                        "isSingleton": false,
                                         "children": [
                                             {
                                                 "typeName": "recipientHost",
@@ -3231,6 +3485,7 @@
                                         "variableName": "senderAddress",
                                         "scriptPath": "C://component//lib//senderaddress.js",
                                         "prototypeScriptPath": "C://component//lib//senderaddress.prototype.js",
+                                        "isSingleton": false,
                                         "children": [
                                             {
                                                 "typeName": "senderHost",
@@ -3257,6 +3512,7 @@
                         "variableName": "messageContentMetadata",
                         "scriptPath": "C://component//lib//messagecontentmetadata.js",
                         "prototypeScriptPath": "C://component//lib//messagecontentmetadata.prototype.js",
+                        "isSingleton": false,
                         "children": [
                             {
                                 "typeName": "factoryContainerBindingName",
@@ -3279,12 +3535,14 @@
                         "variableName": "messageMetadata",
                         "scriptPath": "C://component//lib//messagemetadata.js",
                         "prototypeScriptPath": "C://component//lib//messagemetadata.prototype.js",
+                        "isSingleton": false,
                         "children": [
                             {
                                 "typeName": "RecipientAddress",
                                 "variableName": "recipientAddress",
                                 "scriptPath": "C://component//lib//recipientaddress.js",
                                 "prototypeScriptPath": "C://component//lib//recipientaddress.prototype.js",
+                                "isSingleton": false,
                                 "children": [
                                     {
                                         "typeName": "recipientHost",
@@ -3321,6 +3579,7 @@
                                 "variableName": "senderAddress",
                                 "scriptPath": "C://component//lib//senderaddress.js",
                                 "prototypeScriptPath": "C://component//lib//senderaddress.prototype.js",
+                                "isSingleton": false,
                                 "children": [
                                     {
                                         "typeName": "senderHost",
@@ -3349,12 +3608,14 @@
         "variableName": "webSocketServerRequestMessageBus",
         "scriptPath": "C://component//lib//websocket//websocketserverrequestmessagebus.js",
         "prototypeScriptPath": "C://component//lib//websocket//websocketserverrequestmessagebus.prototype.js",
+        "isSingleton": false,
         "children": [
             {
                 "typeName": "WebSocketServerRequestMessageQueueBinding",
                 "variableName": "webSocketServerRequestMessageQueueBinding",
                 "scriptPath": "C://component//lib//websocket//websocketserverrequestmessagequeuebinding.js",
                 "prototypeScriptPath": "C://component//lib//websocket//websocketserverrequestmessagequeuebinding.prototype.js",
+                "isSingleton": false,
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
@@ -3368,12 +3629,14 @@
                         "variableName": "messageQueue",
                         "scriptPath": "C://component//lib//messagequeue.js",
                         "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
+                        "isSingleton": true,
                         "children": [
                             {
                                 "typeName": "Logger",
                                 "variableName": "logger",
                                 "scriptPath": "C://component//lib//logger.js",
                                 "prototypeScriptPath": "C://component//lib//logger.prototype.js",
+                                "isSingleton": true,
                                 "children": []
                             }
                         ]
@@ -3387,6 +3650,7 @@
         "variableName": "webSocketServerRequestMessageQueueBinding",
         "scriptPath": "C://component//lib//websocket//websocketserverrequestmessagequeuebinding.js",
         "prototypeScriptPath": "C://component//lib//websocket//websocketserverrequestmessagequeuebinding.prototype.js",
+        "isSingleton": false,
         "children": [
             {
                 "typeName": "factoryContainerBindingName",
@@ -3400,12 +3664,14 @@
                 "variableName": "messageQueue",
                 "scriptPath": "C://component//lib//messagequeue.js",
                 "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
+                "isSingleton": true,
                 "children": [
                     {
                         "typeName": "Logger",
                         "variableName": "logger",
                         "scriptPath": "C://component//lib//logger.js",
                         "prototypeScriptPath": "C://component//lib//logger.prototype.js",
+                        "isSingleton": true,
                         "children": []
                     }
                 ]
@@ -3417,12 +3683,14 @@
         "variableName": "webSocketServerResponseMessageBus",
         "scriptPath": "C://component//lib//websocket//websocketserverresponsemessagebus.js",
         "prototypeScriptPath": "C://component//lib//websocket//websocketserverresponsemessagebus.prototype.js",
+        "isSingleton": false,
         "children": [
             {
                 "typeName": "WebSocketServerResponseMessageQueueBinding",
                 "variableName": "webSocketServerResponseMessageQueueBinding",
                 "scriptPath": "C://component//lib//websocket//websocketserverresponsemessagequeuebinding.js",
                 "prototypeScriptPath": "C://component//lib//websocket//websocketserverresponsemessagequeuebinding.prototype.js",
+                "isSingleton": false,
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
@@ -3436,12 +3704,14 @@
                         "variableName": "messageQueue",
                         "scriptPath": "C://component//lib//messagequeue.js",
                         "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
+                        "isSingleton": true,
                         "children": [
                             {
                                 "typeName": "Logger",
                                 "variableName": "logger",
                                 "scriptPath": "C://component//lib//logger.js",
                                 "prototypeScriptPath": "C://component//lib//logger.prototype.js",
+                                "isSingleton": true,
                                 "children": []
                             }
                         ]
@@ -3455,6 +3725,7 @@
         "variableName": "webSocketServerResponseMessageQueueBinding",
         "scriptPath": "C://component//lib//websocket//websocketserverresponsemessagequeuebinding.js",
         "prototypeScriptPath": "C://component//lib//websocket//websocketserverresponsemessagequeuebinding.prototype.js",
+        "isSingleton": false,
         "children": [
             {
                 "typeName": "factoryContainerBindingName",
@@ -3468,12 +3739,14 @@
                 "variableName": "messageQueue",
                 "scriptPath": "C://component//lib//messagequeue.js",
                 "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
+                "isSingleton": true,
                 "children": [
                     {
                         "typeName": "Logger",
                         "variableName": "logger",
                         "scriptPath": "C://component//lib//logger.js",
                         "prototypeScriptPath": "C://component//lib//logger.prototype.js",
+                        "isSingleton": true,
                         "children": []
                     }
                 ]

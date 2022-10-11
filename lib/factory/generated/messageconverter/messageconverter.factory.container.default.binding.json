@@ -4,6 +4,6 @@
     "scriptPath": "C://component//lib//messageconverter.js",
     "bindingName": "Default",
     "bindingFilePath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.default.binding.json",
-    "isSingleton": false,
+    "isSingleton": true,
     "ctorParameters": {}
 }

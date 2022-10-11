@@ -4,6 +4,6 @@
     "scriptPath": "C://component//lib//logger.js",
     "bindingName": "MultipleRequestsSpec",
     "bindingFilePath": "C://component//lib//factory//generated//logger//logger.factory.container.multiplerequestsspec.binding.json",
-    "isSingleton": false,
+    "isSingleton": true,
     "ctorParameters": {}
 }
