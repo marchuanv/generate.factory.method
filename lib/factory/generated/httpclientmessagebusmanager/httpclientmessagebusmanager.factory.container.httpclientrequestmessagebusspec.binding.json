@@ -18,6 +18,9 @@
         },
         "httpClientStartedMessageQueueBinding": {
             "bindingFilePath": "C://component//lib//factory//generated//httpclientstartedmessagequeuebinding//httpclientstartedmessagequeuebinding.factory.container.httpclientrequestmessagebusspec.binding.json"
+        },
+        "httpClientStoppedMessageQueueBinding": {
+            "bindingFilePath": "C://component//lib//factory//generated//httpclientstoppedmessagequeuebinding//httpclientstoppedmessagequeuebinding.factory.container.httpclientrequestmessagebusspec.binding.json"
         }
     }
 }

@@ -308,7 +308,8 @@
             "httpClientResponseMessageQueueBinding": "HttpClientResponseMessageQueueBinding",
             "httpClientStartMessageQueueBinding": "HttpClientStartMessageQueueBinding",
             "httpClientStartedMessageQueueBinding": "HttpClientStartedMessageQueueBinding",
-            "httpClientStopMessageQueueBinding": "HttpClientStopMessageQueueBinding"
+            "httpClientStopMessageQueueBinding": "HttpClientStopMessageQueueBinding",
+            "httpClientStoppedMessageQueueBinding": "HttpClientStoppedMessageQueueBinding"
         }
     },
     {
@@ -324,10 +325,11 @@
         "isBindingSingleton": true,
         "isSingleton": false,
         "ctorParametersInfo": {
-            "httpClientStopMessageQueueBinding": "HttpClientStopMessageQueueBinding",
+            "httpClientStoppedMessageQueueBinding": "HttpClientStoppedMessageQueueBinding",
             "factoryContainerBindingName": null,
             "httpClientStartMessageQueueBinding": "HttpClientStartMessageQueueBinding",
-            "httpClientStartedMessageQueueBinding": "HttpClientStartedMessageQueueBinding"
+            "httpClientStartedMessageQueueBinding": "HttpClientStartedMessageQueueBinding",
+            "httpClientStopMessageQueueBinding": "HttpClientStopMessageQueueBinding"
         }
     },
     {
@@ -408,7 +410,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpclientstartedmessagequeuebinding//httpclientstartedmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -425,7 +427,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpclientstartmessagequeuebinding//httpclientstartmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -442,7 +444,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpclientstopmessagequeuebinding//httpclientstopmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -459,7 +461,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpclientstoppedmessagequeuebinding//httpclientstoppedmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -622,7 +624,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpserverstartedmessagequeuebinding//httpserverstartedmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -639,7 +641,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpserverstartmessagequeuebinding//httpserverstartmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -656,7 +658,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -673,7 +675,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpserverstoppedmessagequeuebinding//httpserverstoppedmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -725,7 +727,8 @@
         "isBindingSingleton": true,
         "isSingleton": false,
         "ctorParametersInfo": {
-            "websocketClientResponseMessageQueueBinding": "WebSocketClientResponseMessageQueueBinding"
+            "websocketClientResponseMessageQueueBinding": "WebSocketClientResponseMessageQueueBinding",
+            "factoryContainerBindingName": null
         }
     },
     {
@@ -1152,7 +1155,8 @@
             "httpClientResponseMessageQueueBinding": "HttpClientResponseMessageQueueBinding",
             "httpClientStartMessageQueueBinding": "HttpClientStartMessageQueueBinding",
             "httpClientStartedMessageQueueBinding": "HttpClientStartedMessageQueueBinding",
-            "httpClientStopMessageQueueBinding": "HttpClientStopMessageQueueBinding"
+            "httpClientStopMessageQueueBinding": "HttpClientStopMessageQueueBinding",
+            "httpClientStoppedMessageQueueBinding": "HttpClientStoppedMessageQueueBinding"
         }
     },
     {
@@ -1168,10 +1172,11 @@
         "isBindingSingleton": true,
         "isSingleton": false,
         "ctorParametersInfo": {
-            "httpClientStopMessageQueueBinding": "HttpClientStopMessageQueueBinding",
+            "httpClientStoppedMessageQueueBinding": "HttpClientStoppedMessageQueueBinding",
             "factoryContainerBindingName": null,
             "httpClientStartMessageQueueBinding": "HttpClientStartMessageQueueBinding",
-            "httpClientStartedMessageQueueBinding": "HttpClientStartedMessageQueueBinding"
+            "httpClientStartedMessageQueueBinding": "HttpClientStartedMessageQueueBinding",
+            "httpClientStopMessageQueueBinding": "HttpClientStopMessageQueueBinding"
         }
     },
     {
@@ -1252,7 +1257,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpclientstartedmessagequeuebinding//httpclientstartedmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -1269,7 +1274,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpclientstartmessagequeuebinding//httpclientstartmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -1286,7 +1291,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpclientstopmessagequeuebinding//httpclientstopmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -1303,7 +1308,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpclientstoppedmessagequeuebinding//httpclientstoppedmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -1466,7 +1471,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpserverstartedmessagequeuebinding//httpserverstartedmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -1483,7 +1488,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpserverstartmessagequeuebinding//httpserverstartmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -1500,7 +1505,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -1517,7 +1522,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpserverstoppedmessagequeuebinding//httpserverstoppedmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -1569,7 +1574,8 @@
         "isBindingSingleton": true,
         "isSingleton": false,
         "ctorParametersInfo": {
-            "websocketClientResponseMessageQueueBinding": "WebSocketClientResponseMessageQueueBinding"
+            "websocketClientResponseMessageQueueBinding": "WebSocketClientResponseMessageQueueBinding",
+            "factoryContainerBindingName": null
         }
     },
     {
@@ -1996,7 +2002,8 @@
             "httpClientResponseMessageQueueBinding": "HttpClientResponseMessageQueueBinding",
             "httpClientStartMessageQueueBinding": "HttpClientStartMessageQueueBinding",
             "httpClientStartedMessageQueueBinding": "HttpClientStartedMessageQueueBinding",
-            "httpClientStopMessageQueueBinding": "HttpClientStopMessageQueueBinding"
+            "httpClientStopMessageQueueBinding": "HttpClientStopMessageQueueBinding",
+            "httpClientStoppedMessageQueueBinding": "HttpClientStoppedMessageQueueBinding"
         }
     },
     {
@@ -2012,10 +2019,11 @@
         "isBindingSingleton": true,
         "isSingleton": false,
         "ctorParametersInfo": {
-            "httpClientStopMessageQueueBinding": "HttpClientStopMessageQueueBinding",
+            "httpClientStoppedMessageQueueBinding": "HttpClientStoppedMessageQueueBinding",
             "factoryContainerBindingName": null,
             "httpClientStartMessageQueueBinding": "HttpClientStartMessageQueueBinding",
-            "httpClientStartedMessageQueueBinding": "HttpClientStartedMessageQueueBinding"
+            "httpClientStartedMessageQueueBinding": "HttpClientStartedMessageQueueBinding",
+            "httpClientStopMessageQueueBinding": "HttpClientStopMessageQueueBinding"
         }
     },
     {
@@ -2096,7 +2104,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpclientstartedmessagequeuebinding//httpclientstartedmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -2113,7 +2121,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpclientstartmessagequeuebinding//httpclientstartmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -2130,7 +2138,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpclientstopmessagequeuebinding//httpclientstopmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -2147,7 +2155,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpclientstoppedmessagequeuebinding//httpclientstoppedmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -2310,7 +2318,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpserverstartedmessagequeuebinding//httpserverstartedmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -2327,7 +2335,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpserverstartmessagequeuebinding//httpserverstartmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -2344,7 +2352,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -2361,7 +2369,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpserverstoppedmessagequeuebinding//httpserverstoppedmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -2413,7 +2421,8 @@
         "isBindingSingleton": true,
         "isSingleton": false,
         "ctorParametersInfo": {
-            "websocketClientResponseMessageQueueBinding": "WebSocketClientResponseMessageQueueBinding"
+            "websocketClientResponseMessageQueueBinding": "WebSocketClientResponseMessageQueueBinding",
+            "factoryContainerBindingName": null
         }
     },
     {
@@ -2840,7 +2849,8 @@
             "httpClientResponseMessageQueueBinding": "HttpClientResponseMessageQueueBinding",
             "httpClientStartMessageQueueBinding": "HttpClientStartMessageQueueBinding",
             "httpClientStartedMessageQueueBinding": "HttpClientStartedMessageQueueBinding",
-            "httpClientStopMessageQueueBinding": "HttpClientStopMessageQueueBinding"
+            "httpClientStopMessageQueueBinding": "HttpClientStopMessageQueueBinding",
+            "httpClientStoppedMessageQueueBinding": "HttpClientStoppedMessageQueueBinding"
         }
     },
     {
@@ -2856,10 +2866,11 @@
         "isBindingSingleton": true,
         "isSingleton": false,
         "ctorParametersInfo": {
-            "httpClientStopMessageQueueBinding": "HttpClientStopMessageQueueBinding",
+            "httpClientStoppedMessageQueueBinding": "HttpClientStoppedMessageQueueBinding",
             "factoryContainerBindingName": null,
             "httpClientStartMessageQueueBinding": "HttpClientStartMessageQueueBinding",
-            "httpClientStartedMessageQueueBinding": "HttpClientStartedMessageQueueBinding"
+            "httpClientStartedMessageQueueBinding": "HttpClientStartedMessageQueueBinding",
+            "httpClientStopMessageQueueBinding": "HttpClientStopMessageQueueBinding"
         }
     },
     {
@@ -2940,7 +2951,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpclientstartedmessagequeuebinding//httpclientstartedmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -2957,7 +2968,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpclientstartmessagequeuebinding//httpclientstartmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -2974,7 +2985,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpclientstopmessagequeuebinding//httpclientstopmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -2991,7 +3002,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpclientstoppedmessagequeuebinding//httpclientstoppedmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -3154,7 +3165,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpserverstartedmessagequeuebinding//httpserverstartedmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -3171,7 +3182,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpserverstartmessagequeuebinding//httpserverstartmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -3188,7 +3199,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -3205,7 +3216,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpserverstoppedmessagequeuebinding//httpserverstoppedmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -3257,7 +3268,8 @@
         "isBindingSingleton": true,
         "isSingleton": false,
         "ctorParametersInfo": {
-            "websocketClientResponseMessageQueueBinding": "WebSocketClientResponseMessageQueueBinding"
+            "websocketClientResponseMessageQueueBinding": "WebSocketClientResponseMessageQueueBinding",
+            "factoryContainerBindingName": null
         }
     },
     {
@@ -3684,7 +3696,8 @@
             "httpClientResponseMessageQueueBinding": "HttpClientResponseMessageQueueBinding",
             "httpClientStartMessageQueueBinding": "HttpClientStartMessageQueueBinding",
             "httpClientStartedMessageQueueBinding": "HttpClientStartedMessageQueueBinding",
-            "httpClientStopMessageQueueBinding": "HttpClientStopMessageQueueBinding"
+            "httpClientStopMessageQueueBinding": "HttpClientStopMessageQueueBinding",
+            "httpClientStoppedMessageQueueBinding": "HttpClientStoppedMessageQueueBinding"
         }
     },
     {
@@ -3700,10 +3713,11 @@
         "isBindingSingleton": true,
         "isSingleton": false,
         "ctorParametersInfo": {
-            "httpClientStopMessageQueueBinding": "HttpClientStopMessageQueueBinding",
+            "httpClientStoppedMessageQueueBinding": "HttpClientStoppedMessageQueueBinding",
             "factoryContainerBindingName": null,
             "httpClientStartMessageQueueBinding": "HttpClientStartMessageQueueBinding",
-            "httpClientStartedMessageQueueBinding": "HttpClientStartedMessageQueueBinding"
+            "httpClientStartedMessageQueueBinding": "HttpClientStartedMessageQueueBinding",
+            "httpClientStopMessageQueueBinding": "HttpClientStopMessageQueueBinding"
         }
     },
     {
@@ -3784,7 +3798,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpclientstartedmessagequeuebinding//httpclientstartedmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -3801,7 +3815,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpclientstartmessagequeuebinding//httpclientstartmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -3818,7 +3832,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpclientstopmessagequeuebinding//httpclientstopmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -3835,7 +3849,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpclientstoppedmessagequeuebinding//httpclientstoppedmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -3998,7 +4012,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpserverstartedmessagequeuebinding//httpserverstartedmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -4015,7 +4029,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpserverstartmessagequeuebinding//httpserverstartmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -4032,7 +4046,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -4049,7 +4063,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpserverstoppedmessagequeuebinding//httpserverstoppedmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -4101,7 +4115,8 @@
         "isBindingSingleton": true,
         "isSingleton": false,
         "ctorParametersInfo": {
-            "websocketClientResponseMessageQueueBinding": "WebSocketClientResponseMessageQueueBinding"
+            "websocketClientResponseMessageQueueBinding": "WebSocketClientResponseMessageQueueBinding",
+            "factoryContainerBindingName": null
         }
     },
     {
@@ -4528,7 +4543,8 @@
             "httpClientResponseMessageQueueBinding": "HttpClientResponseMessageQueueBinding",
             "httpClientStartMessageQueueBinding": "HttpClientStartMessageQueueBinding",
             "httpClientStartedMessageQueueBinding": "HttpClientStartedMessageQueueBinding",
-            "httpClientStopMessageQueueBinding": "HttpClientStopMessageQueueBinding"
+            "httpClientStopMessageQueueBinding": "HttpClientStopMessageQueueBinding",
+            "httpClientStoppedMessageQueueBinding": "HttpClientStoppedMessageQueueBinding"
         }
     },
     {
@@ -4544,10 +4560,11 @@
         "isBindingSingleton": true,
         "isSingleton": false,
         "ctorParametersInfo": {
-            "httpClientStopMessageQueueBinding": "HttpClientStopMessageQueueBinding",
+            "httpClientStoppedMessageQueueBinding": "HttpClientStoppedMessageQueueBinding",
             "factoryContainerBindingName": null,
             "httpClientStartMessageQueueBinding": "HttpClientStartMessageQueueBinding",
-            "httpClientStartedMessageQueueBinding": "HttpClientStartedMessageQueueBinding"
+            "httpClientStartedMessageQueueBinding": "HttpClientStartedMessageQueueBinding",
+            "httpClientStopMessageQueueBinding": "HttpClientStopMessageQueueBinding"
         }
     },
     {
@@ -4628,7 +4645,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpclientstartedmessagequeuebinding//httpclientstartedmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -4645,7 +4662,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpclientstartmessagequeuebinding//httpclientstartmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -4662,7 +4679,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpclientstopmessagequeuebinding//httpclientstopmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -4679,7 +4696,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpclientstoppedmessagequeuebinding//httpclientstoppedmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -4842,7 +4859,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpserverstartedmessagequeuebinding//httpserverstartedmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -4859,7 +4876,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpserverstartmessagequeuebinding//httpserverstartmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -4876,7 +4893,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -4893,7 +4910,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpserverstoppedmessagequeuebinding//httpserverstoppedmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -4945,7 +4962,8 @@
         "isBindingSingleton": true,
         "isSingleton": false,
         "ctorParametersInfo": {
-            "websocketClientResponseMessageQueueBinding": "WebSocketClientResponseMessageQueueBinding"
+            "websocketClientResponseMessageQueueBinding": "WebSocketClientResponseMessageQueueBinding",
+            "factoryContainerBindingName": null
         }
     },
     {
@@ -5372,7 +5390,8 @@
             "httpClientResponseMessageQueueBinding": "HttpClientResponseMessageQueueBinding",
             "httpClientStartMessageQueueBinding": "HttpClientStartMessageQueueBinding",
             "httpClientStartedMessageQueueBinding": "HttpClientStartedMessageQueueBinding",
-            "httpClientStopMessageQueueBinding": "HttpClientStopMessageQueueBinding"
+            "httpClientStopMessageQueueBinding": "HttpClientStopMessageQueueBinding",
+            "httpClientStoppedMessageQueueBinding": "HttpClientStoppedMessageQueueBinding"
         }
     },
     {
@@ -5388,10 +5407,11 @@
         "isBindingSingleton": true,
         "isSingleton": false,
         "ctorParametersInfo": {
-            "httpClientStopMessageQueueBinding": "HttpClientStopMessageQueueBinding",
+            "httpClientStoppedMessageQueueBinding": "HttpClientStoppedMessageQueueBinding",
             "factoryContainerBindingName": null,
             "httpClientStartMessageQueueBinding": "HttpClientStartMessageQueueBinding",
-            "httpClientStartedMessageQueueBinding": "HttpClientStartedMessageQueueBinding"
+            "httpClientStartedMessageQueueBinding": "HttpClientStartedMessageQueueBinding",
+            "httpClientStopMessageQueueBinding": "HttpClientStopMessageQueueBinding"
         }
     },
     {
@@ -5472,7 +5492,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpclientstartedmessagequeuebinding//httpclientstartedmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -5489,7 +5509,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpclientstartmessagequeuebinding//httpclientstartmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -5506,7 +5526,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpclientstopmessagequeuebinding//httpclientstopmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -5523,7 +5543,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpclientstoppedmessagequeuebinding//httpclientstoppedmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -5686,7 +5706,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpserverstartedmessagequeuebinding//httpserverstartedmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -5703,7 +5723,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpserverstartmessagequeuebinding//httpserverstartmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -5720,7 +5740,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -5737,7 +5757,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpserverstoppedmessagequeuebinding//httpserverstoppedmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -5789,7 +5809,8 @@
         "isBindingSingleton": true,
         "isSingleton": false,
         "ctorParametersInfo": {
-            "websocketClientResponseMessageQueueBinding": "WebSocketClientResponseMessageQueueBinding"
+            "websocketClientResponseMessageQueueBinding": "WebSocketClientResponseMessageQueueBinding",
+            "factoryContainerBindingName": null
         }
     },
     {
@@ -6216,7 +6237,8 @@
             "httpClientResponseMessageQueueBinding": "HttpClientResponseMessageQueueBinding",
             "httpClientStartMessageQueueBinding": "HttpClientStartMessageQueueBinding",
             "httpClientStartedMessageQueueBinding": "HttpClientStartedMessageQueueBinding",
-            "httpClientStopMessageQueueBinding": "HttpClientStopMessageQueueBinding"
+            "httpClientStopMessageQueueBinding": "HttpClientStopMessageQueueBinding",
+            "httpClientStoppedMessageQueueBinding": "HttpClientStoppedMessageQueueBinding"
         }
     },
     {
@@ -6232,10 +6254,11 @@
         "isBindingSingleton": true,
         "isSingleton": false,
         "ctorParametersInfo": {
-            "httpClientStopMessageQueueBinding": "HttpClientStopMessageQueueBinding",
+            "httpClientStoppedMessageQueueBinding": "HttpClientStoppedMessageQueueBinding",
             "factoryContainerBindingName": null,
             "httpClientStartMessageQueueBinding": "HttpClientStartMessageQueueBinding",
-            "httpClientStartedMessageQueueBinding": "HttpClientStartedMessageQueueBinding"
+            "httpClientStartedMessageQueueBinding": "HttpClientStartedMessageQueueBinding",
+            "httpClientStopMessageQueueBinding": "HttpClientStopMessageQueueBinding"
         }
     },
     {
@@ -6316,7 +6339,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpclientstartedmessagequeuebinding//httpclientstartedmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -6333,7 +6356,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpclientstartmessagequeuebinding//httpclientstartmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -6350,7 +6373,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpclientstopmessagequeuebinding//httpclientstopmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -6367,7 +6390,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpclientstoppedmessagequeuebinding//httpclientstoppedmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -6530,7 +6553,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpserverstartedmessagequeuebinding//httpserverstartedmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -6547,7 +6570,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpserverstartmessagequeuebinding//httpserverstartmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -6564,7 +6587,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -6581,7 +6604,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpserverstoppedmessagequeuebinding//httpserverstoppedmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -6633,7 +6656,8 @@
         "isBindingSingleton": true,
         "isSingleton": false,
         "ctorParametersInfo": {
-            "websocketClientResponseMessageQueueBinding": "WebSocketClientResponseMessageQueueBinding"
+            "websocketClientResponseMessageQueueBinding": "WebSocketClientResponseMessageQueueBinding",
+            "factoryContainerBindingName": null
         }
     },
     {
@@ -7060,7 +7084,8 @@
             "httpClientResponseMessageQueueBinding": "HttpClientResponseMessageQueueBinding",
             "httpClientStartMessageQueueBinding": "HttpClientStartMessageQueueBinding",
             "httpClientStartedMessageQueueBinding": "HttpClientStartedMessageQueueBinding",
-            "httpClientStopMessageQueueBinding": "HttpClientStopMessageQueueBinding"
+            "httpClientStopMessageQueueBinding": "HttpClientStopMessageQueueBinding",
+            "httpClientStoppedMessageQueueBinding": "HttpClientStoppedMessageQueueBinding"
         }
     },
     {
@@ -7076,10 +7101,11 @@
         "isBindingSingleton": true,
         "isSingleton": false,
         "ctorParametersInfo": {
-            "httpClientStopMessageQueueBinding": "HttpClientStopMessageQueueBinding",
+            "httpClientStoppedMessageQueueBinding": "HttpClientStoppedMessageQueueBinding",
             "factoryContainerBindingName": null,
             "httpClientStartMessageQueueBinding": "HttpClientStartMessageQueueBinding",
-            "httpClientStartedMessageQueueBinding": "HttpClientStartedMessageQueueBinding"
+            "httpClientStartedMessageQueueBinding": "HttpClientStartedMessageQueueBinding",
+            "httpClientStopMessageQueueBinding": "HttpClientStopMessageQueueBinding"
         }
     },
     {
@@ -7160,7 +7186,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpclientstartedmessagequeuebinding//httpclientstartedmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -7177,7 +7203,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpclientstartmessagequeuebinding//httpclientstartmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -7194,7 +7220,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpclientstopmessagequeuebinding//httpclientstopmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -7211,7 +7237,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpclientstoppedmessagequeuebinding//httpclientstoppedmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -7374,7 +7400,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpserverstartedmessagequeuebinding//httpserverstartedmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -7391,7 +7417,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpserverstartmessagequeuebinding//httpserverstartmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -7408,7 +7434,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -7425,7 +7451,7 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpserverstoppedmessagequeuebinding//httpserverstoppedmessagequeuebinding.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": false,
+        "isSingleton": true,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
             "messageQueue": "MessageQueue"
@@ -7477,7 +7503,8 @@
         "isBindingSingleton": true,
         "isSingleton": false,
         "ctorParametersInfo": {
-            "websocketClientResponseMessageQueueBinding": "WebSocketClientResponseMessageQueueBinding"
+            "websocketClientResponseMessageQueueBinding": "WebSocketClientResponseMessageQueueBinding",
+            "factoryContainerBindingName": null
         }
     },
     {

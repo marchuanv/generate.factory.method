@@ -7,7 +7,7 @@
     "defaultBindingName": "Default",
     "defaultBindingFilePath": "C://component//lib//factory//generated//httpclientstartmessagequeuebinding//httpclientstartmessagequeuebinding.factory.container.default.binding.json",
     "isBindingSingleton": true,
-    "isSingleton": false,
+    "isSingleton": true,
     "ctorParameters": {
         "factoryContainerBindingName": null,
         "messageQueue": {

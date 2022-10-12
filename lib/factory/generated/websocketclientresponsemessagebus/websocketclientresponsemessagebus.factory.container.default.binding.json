@@ -11,6 +11,7 @@
     "ctorParameters": {
         "websocketClientResponseMessageQueueBinding": {
             "bindingFilePath": "C://component//lib//factory//generated//websocketclientresponsemessagequeuebinding//websocketclientresponsemessagequeuebinding.factory.container.default.binding.json"
-        }
+        },
+        "factoryContainerBindingName": null
     }
 }

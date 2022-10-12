@@ -25,6 +25,9 @@
         },
         "httpClientStopMessageQueueBinding": {
             "bindingFilePath": "C://component//lib//factory//generated//httpclientstopmessagequeuebinding//httpclientstopmessagequeuebinding.factory.container.multiplerequestsspec.binding.json"
+        },
+        "httpClientStoppedMessageQueueBinding": {
+            "bindingFilePath": "C://component//lib//factory//generated//httpclientstoppedmessagequeuebinding//httpclientstoppedmessagequeuebinding.factory.container.multiplerequestsspec.binding.json"
         }
     }
 }

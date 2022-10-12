@@ -1295,7 +1295,7 @@
                 "variableName": "httpClientStartMessageQueueBinding",
                 "scriptPath": "C://component//lib//http//httpclientstartmessagequeuebinding.js",
                 "prototypeScriptPath": "C://component//lib//http//httpclientstartmessagequeuebinding.prototype.js",
-                "isSingleton": false,
+                "isSingleton": true,
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
@@ -1329,7 +1329,7 @@
                 "variableName": "httpClientStartedMessageQueueBinding",
                 "scriptPath": "C://component//lib//http//httpclientstartedmessagequeuebinding.js",
                 "prototypeScriptPath": "C://component//lib//http//httpclientstartedmessagequeuebinding.prototype.js",
-                "isSingleton": false,
+                "isSingleton": true,
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
@@ -1363,7 +1363,41 @@
                 "variableName": "httpClientStopMessageQueueBinding",
                 "scriptPath": "C://component//lib//http//httpclientstopmessagequeuebinding.js",
                 "prototypeScriptPath": "C://component//lib//http//httpclientstopmessagequeuebinding.prototype.js",
-                "isSingleton": false,
+                "isSingleton": true,
+                "children": [
+                    {
+                        "typeName": "factoryContainerBindingName",
+                        "variableName": "factoryContainerBindingName",
+                        "scriptPath": "",
+                        "prototypeScriptPath": "",
+                        "isSingleton": null,
+                        "children": []
+                    },
+                    {
+                        "typeName": "MessageQueue",
+                        "variableName": "messageQueue",
+                        "scriptPath": "C://component//lib//messagequeue.js",
+                        "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
+                        "isSingleton": true,
+                        "children": [
+                            {
+                                "typeName": "Logger",
+                                "variableName": "logger",
+                                "scriptPath": "C://component//lib//logger.js",
+                                "prototypeScriptPath": "C://component//lib//logger.prototype.js",
+                                "isSingleton": true,
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "typeName": "HttpClientStoppedMessageQueueBinding",
+                "variableName": "httpClientStoppedMessageQueueBinding",
+                "scriptPath": "C://component//lib//http//httpclientstoppedmessagequeuebinding.js",
+                "prototypeScriptPath": "C://component//lib//http//httpclientstoppedmessagequeuebinding.prototype.js",
+                "isSingleton": true,
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
@@ -1402,11 +1436,11 @@
         "isSingleton": false,
         "children": [
             {
-                "typeName": "HttpClientStopMessageQueueBinding",
-                "variableName": "httpClientStopMessageQueueBinding",
-                "scriptPath": "C://component//lib//http//httpclientstopmessagequeuebinding.js",
-                "prototypeScriptPath": "C://component//lib//http//httpclientstopmessagequeuebinding.prototype.js",
-                "isSingleton": false,
+                "typeName": "HttpClientStoppedMessageQueueBinding",
+                "variableName": "httpClientStoppedMessageQueueBinding",
+                "scriptPath": "C://component//lib//http//httpclientstoppedmessagequeuebinding.js",
+                "prototypeScriptPath": "C://component//lib//http//httpclientstoppedmessagequeuebinding.prototype.js",
+                "isSingleton": true,
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
@@ -1448,7 +1482,7 @@
                 "variableName": "httpClientStartMessageQueueBinding",
                 "scriptPath": "C://component//lib//http//httpclientstartmessagequeuebinding.js",
                 "prototypeScriptPath": "C://component//lib//http//httpclientstartmessagequeuebinding.prototype.js",
-                "isSingleton": false,
+                "isSingleton": true,
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
@@ -1482,7 +1516,41 @@
                 "variableName": "httpClientStartedMessageQueueBinding",
                 "scriptPath": "C://component//lib//http//httpclientstartedmessagequeuebinding.js",
                 "prototypeScriptPath": "C://component//lib//http//httpclientstartedmessagequeuebinding.prototype.js",
-                "isSingleton": false,
+                "isSingleton": true,
+                "children": [
+                    {
+                        "typeName": "factoryContainerBindingName",
+                        "variableName": "factoryContainerBindingName",
+                        "scriptPath": "",
+                        "prototypeScriptPath": "",
+                        "isSingleton": null,
+                        "children": []
+                    },
+                    {
+                        "typeName": "MessageQueue",
+                        "variableName": "messageQueue",
+                        "scriptPath": "C://component//lib//messagequeue.js",
+                        "prototypeScriptPath": "C://component//lib//messagequeue.prototype.js",
+                        "isSingleton": true,
+                        "children": [
+                            {
+                                "typeName": "Logger",
+                                "variableName": "logger",
+                                "scriptPath": "C://component//lib//logger.js",
+                                "prototypeScriptPath": "C://component//lib//logger.prototype.js",
+                                "isSingleton": true,
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "typeName": "HttpClientStopMessageQueueBinding",
+                "variableName": "httpClientStopMessageQueueBinding",
+                "scriptPath": "C://component//lib//http//httpclientstopmessagequeuebinding.js",
+                "prototypeScriptPath": "C://component//lib//http//httpclientstopmessagequeuebinding.prototype.js",
+                "isSingleton": true,
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
@@ -1680,7 +1748,7 @@
         "variableName": "httpClientStartedMessageQueueBinding",
         "scriptPath": "C://component//lib//http//httpclientstartedmessagequeuebinding.js",
         "prototypeScriptPath": "C://component//lib//http//httpclientstartedmessagequeuebinding.prototype.js",
-        "isSingleton": false,
+        "isSingleton": true,
         "children": [
             {
                 "typeName": "factoryContainerBindingName",
@@ -1714,7 +1782,7 @@
         "variableName": "httpClientStartMessageQueueBinding",
         "scriptPath": "C://component//lib//http//httpclientstartmessagequeuebinding.js",
         "prototypeScriptPath": "C://component//lib//http//httpclientstartmessagequeuebinding.prototype.js",
-        "isSingleton": false,
+        "isSingleton": true,
         "children": [
             {
                 "typeName": "factoryContainerBindingName",
@@ -1748,7 +1816,7 @@
         "variableName": "httpClientStopMessageQueueBinding",
         "scriptPath": "C://component//lib//http//httpclientstopmessagequeuebinding.js",
         "prototypeScriptPath": "C://component//lib//http//httpclientstopmessagequeuebinding.prototype.js",
-        "isSingleton": false,
+        "isSingleton": true,
         "children": [
             {
                 "typeName": "factoryContainerBindingName",
@@ -1782,7 +1850,7 @@
         "variableName": "httpClientStoppedMessageQueueBinding",
         "scriptPath": "C://component//lib//http//httpclientstoppedmessagequeuebinding.js",
         "prototypeScriptPath": "C://component//lib//http//httpclientstoppedmessagequeuebinding.prototype.js",
-        "isSingleton": false,
+        "isSingleton": true,
         "children": [
             {
                 "typeName": "factoryContainerBindingName",
@@ -2477,7 +2545,7 @@
                 "variableName": "httpServerStartMessageQueueBinding",
                 "scriptPath": "C://component//lib//http//httpserverstartmessagequeuebinding.js",
                 "prototypeScriptPath": "C://component//lib//http//httpserverstartmessagequeuebinding.prototype.js",
-                "isSingleton": false,
+                "isSingleton": true,
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
@@ -2511,7 +2579,7 @@
                 "variableName": "httpServerStartedMessageQueueBinding",
                 "scriptPath": "C://component//lib//http//httpserverstartedmessagequeuebinding.js",
                 "prototypeScriptPath": "C://component//lib//http//httpserverstartedmessagequeuebinding.prototype.js",
-                "isSingleton": false,
+                "isSingleton": true,
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
@@ -2545,7 +2613,7 @@
                 "variableName": "httpServerStopMessageQueueBinding",
                 "scriptPath": "C://component//lib//http//httpserverstopmessagequeuebinding.js",
                 "prototypeScriptPath": "C://component//lib//http//httpserverstopmessagequeuebinding.prototype.js",
-                "isSingleton": false,
+                "isSingleton": true,
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
@@ -2579,7 +2647,7 @@
                 "variableName": "httpServerStoppedMessageQueueBinding",
                 "scriptPath": "C://component//lib//http//httpserverstoppedmessagequeuebinding.js",
                 "prototypeScriptPath": "C://component//lib//http//httpserverstoppedmessagequeuebinding.prototype.js",
-                "isSingleton": false,
+                "isSingleton": true,
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
@@ -2655,7 +2723,7 @@
                 "variableName": "httpServerStoppedMessageQueueBinding",
                 "scriptPath": "C://component//lib//http//httpserverstoppedmessagequeuebinding.js",
                 "prototypeScriptPath": "C://component//lib//http//httpserverstoppedmessagequeuebinding.prototype.js",
-                "isSingleton": false,
+                "isSingleton": true,
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
@@ -2765,7 +2833,7 @@
                 "variableName": "httpServerStartMessageQueueBinding",
                 "scriptPath": "C://component//lib//http//httpserverstartmessagequeuebinding.js",
                 "prototypeScriptPath": "C://component//lib//http//httpserverstartmessagequeuebinding.prototype.js",
-                "isSingleton": false,
+                "isSingleton": true,
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
@@ -2799,7 +2867,7 @@
                 "variableName": "httpServerStartedMessageQueueBinding",
                 "scriptPath": "C://component//lib//http//httpserverstartedmessagequeuebinding.js",
                 "prototypeScriptPath": "C://component//lib//http//httpserverstartedmessagequeuebinding.prototype.js",
-                "isSingleton": false,
+                "isSingleton": true,
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
@@ -2833,7 +2901,7 @@
                 "variableName": "httpServerStopMessageQueueBinding",
                 "scriptPath": "C://component//lib//http//httpserverstopmessagequeuebinding.js",
                 "prototypeScriptPath": "C://component//lib//http//httpserverstopmessagequeuebinding.prototype.js",
-                "isSingleton": false,
+                "isSingleton": true,
                 "children": [
                     {
                         "typeName": "factoryContainerBindingName",
@@ -3031,7 +3099,7 @@
         "variableName": "httpServerStartedMessageQueueBinding",
         "scriptPath": "C://component//lib//http//httpserverstartedmessagequeuebinding.js",
         "prototypeScriptPath": "C://component//lib//http//httpserverstartedmessagequeuebinding.prototype.js",
-        "isSingleton": false,
+        "isSingleton": true,
         "children": [
             {
                 "typeName": "factoryContainerBindingName",
@@ -3065,7 +3133,7 @@
         "variableName": "httpServerStartMessageQueueBinding",
         "scriptPath": "C://component//lib//http//httpserverstartmessagequeuebinding.js",
         "prototypeScriptPath": "C://component//lib//http//httpserverstartmessagequeuebinding.prototype.js",
-        "isSingleton": false,
+        "isSingleton": true,
         "children": [
             {
                 "typeName": "factoryContainerBindingName",
@@ -3099,7 +3167,7 @@
         "variableName": "httpServerStopMessageQueueBinding",
         "scriptPath": "C://component//lib//http//httpserverstopmessagequeuebinding.js",
         "prototypeScriptPath": "C://component//lib//http//httpserverstopmessagequeuebinding.prototype.js",
-        "isSingleton": false,
+        "isSingleton": true,
         "children": [
             {
                 "typeName": "factoryContainerBindingName",
@@ -3133,7 +3201,7 @@
         "variableName": "httpServerStoppedMessageQueueBinding",
         "scriptPath": "C://component//lib//http//httpserverstoppedmessagequeuebinding.js",
         "prototypeScriptPath": "C://component//lib//http//httpserverstoppedmessagequeuebinding.prototype.js",
-        "isSingleton": false,
+        "isSingleton": true,
         "children": [
             {
                 "typeName": "factoryContainerBindingName",
@@ -3279,6 +3347,14 @@
                         ]
                     }
                 ]
+            },
+            {
+                "typeName": "factoryContainerBindingName",
+                "variableName": "factoryContainerBindingName",
+                "scriptPath": "",
+                "prototypeScriptPath": "",
+                "isSingleton": null,
+                "children": []
             }
         ]
     },

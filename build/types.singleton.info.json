@@ -104,15 +104,15 @@
         "isBindingSingleton": true
     },
     "HttpClientStartMessageQueueBinding": {
-        "isSingleton": false,
+        "isSingleton": true,
         "isBindingSingleton": true
     },
     "HttpClientStartedMessageQueueBinding": {
-        "isSingleton": false,
+        "isSingleton": true,
         "isBindingSingleton": true
     },
     "HttpClientStopMessageQueueBinding": {
-        "isSingleton": false,
+        "isSingleton": true,
         "isBindingSingleton": true
     },
     "HttpClientMessageBusManager": {
@@ -120,7 +120,7 @@
         "isBindingSingleton": true
     },
     "HttpClientStoppedMessageQueueBinding": {
-        "isSingleton": false,
+        "isSingleton": true,
         "isBindingSingleton": true
     },
     "HttpRequestMessage": {
@@ -136,19 +136,19 @@
         "isBindingSingleton": true
     },
     "HttpServerStartMessageQueueBinding": {
-        "isSingleton": false,
+        "isSingleton": true,
         "isBindingSingleton": true
     },
     "HttpServerStartedMessageQueueBinding": {
-        "isSingleton": false,
+        "isSingleton": true,
         "isBindingSingleton": true
     },
     "HttpServerStopMessageQueueBinding": {
-        "isSingleton": false,
+        "isSingleton": true,
         "isBindingSingleton": true
     },
     "HttpServerStoppedMessageQueueBinding": {
-        "isSingleton": false,
+        "isSingleton": true,
         "isBindingSingleton": true
     },
     "HttpServerMessageBusManager": {
