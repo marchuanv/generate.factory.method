@@ -29,7 +29,7 @@ function factoryContainerBindingsInfoGenerate({ factoryContainerBindingName }) {
         const bindingFilePath = path.join(factoryGeneratedDir, bindingFileName).replace(/\\/g,'//');
         const defaultBindingFileName =  `${typeName.toLowerCase()}.factory.container.default.binding.json`;
         const defaultBindingFilePath = path.join(factoryGeneratedDir, defaultBindingFileName).replace(/\\/g,'//');
-        const isBindingSingleton = typesSingletonInfo[`${typeName}Binding`] === undefined ? true: typesSingletonInfo[`${typeName}Binding`];
+        const isBindingSingleton = typesSingletonInfo[typeName] === undefined ? true: typesSingletonInfo[typeName];
         const binding = utils.getJSONObject(factoryContainerBindingInfoTemplate
             .replace(/\[TypeName\]/g, typeName)
             .replace(/\[TypeVariableName\]/g, variableName)

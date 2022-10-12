@@ -6,6 +6,7 @@
     "bindingFilePath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.clientmessagebusspec.binding.json",
     "defaultBindingName": "Default",
     "defaultBindingFilePath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.default.binding.json",
+    "isBindingSingleton": true,
     "isSingleton": false,
     "ctorParameters": {
         "recipientAddress": {
@@ -16,6 +17,5 @@
         "senderAddress": {
             "bindingFilePath": "C://component//lib//factory//generated//senderaddress//senderaddress.factory.container.clientmessagebusspec.binding.json"
         }
-    },
-    "isBindingSingleton": true
+    }
 }

@@ -6,12 +6,12 @@
     "bindingFilePath": "C://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.container.usersecurityspec.binding.json",
     "defaultBindingName": "Default",
     "defaultBindingFilePath": "C://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.container.default.binding.json",
-    "isSingleton": true,
+    "isBindingSingleton": true,
+    "isSingleton": false,
     "ctorParameters": {
         "factoryContainerBindingName": null,
         "messageQueue": {
             "bindingFilePath": "C://component//lib//factory//generated//messagequeue//messagequeue.factory.container.usersecurityspec.binding.json"
         }
-    },
-    "isBindingSingleton": true
+    }
 }

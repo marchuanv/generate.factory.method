@@ -6,6 +6,7 @@
     "bindingFilePath": "C://component//lib//factory//generated//component//component.factory.container.clientmessagebusspec.binding.json",
     "defaultBindingName": "Default",
     "defaultBindingFilePath": "C://component//lib//factory//generated//component//component.factory.container.default.binding.json",
+    "isBindingSingleton": true,
     "isSingleton": false,
     "ctorParameters": {
         "packageJson": null,
@@ -19,6 +20,5 @@
         "userSessions": {
             "bindingFilePath": "C://component//lib//factory//generated//usersessions//usersessions.factory.container.clientmessagebusspec.binding.json"
         }
-    },
-    "isBindingSingleton": true
+    }
 }

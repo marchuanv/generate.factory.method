@@ -6,6 +6,7 @@
     "bindingFilePath": "C://component//lib//factory//generated//servermessagebus//servermessagebus.factory.container.clientmessagebusspec.binding.json",
     "defaultBindingName": "Default",
     "defaultBindingFilePath": "C://component//lib//factory//generated//servermessagebus//servermessagebus.factory.container.default.binding.json",
+    "isBindingSingleton": true,
     "isSingleton": false,
     "ctorParameters": {
         "messageConverter": {
@@ -17,6 +18,5 @@
         "serverRequestMessageBus": {
             "bindingFilePath": "C://component//lib//factory//generated//httpserverrequestmessagebus//httpserverrequestmessagebus.factory.container.clientmessagebusspec.binding.json"
         }
-    },
-    "isBindingSingleton": true
+    }
 }

@@ -6,7 +6,8 @@
     "bindingFilePath": "C://component//lib//factory//generated//httpservermessagebusmanager//httpservermessagebusmanager.factory.container.default.binding.json",
     "defaultBindingName": "Default",
     "defaultBindingFilePath": "C://component//lib//factory//generated//httpservermessagebusmanager//httpservermessagebusmanager.factory.container.default.binding.json",
-    "isSingleton": true,
+    "isBindingSingleton": true,
+    "isSingleton": false,
     "ctorParameters": {
         "httpServerStoppedMessageQueueBinding": {
             "bindingFilePath": "C://component//lib//factory//generated//httpserverstoppedmessagequeuebinding//httpserverstoppedmessagequeuebinding.factory.container.default.binding.json"
@@ -27,6 +28,5 @@
         "httpServerStopMessageQueueBinding": {
             "bindingFilePath": "C://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.container.default.binding.json"
         }
-    },
-    "isBindingSingleton": true
+    }
 }

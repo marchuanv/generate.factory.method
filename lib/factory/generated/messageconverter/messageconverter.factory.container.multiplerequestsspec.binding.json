@@ -6,7 +6,7 @@
     "bindingFilePath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.multiplerequestsspec.binding.json",
     "defaultBindingName": "Default",
     "defaultBindingFilePath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.default.binding.json",
+    "isBindingSingleton": true,
     "isSingleton": true,
-    "ctorParameters": {},
-    "isBindingSingleton": true
+    "ctorParameters": {}
 }

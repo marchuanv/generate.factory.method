@@ -6,7 +6,7 @@
     "bindingFilePath": "C://component//lib//factory//generated//logger//logger.factory.container.usersecurityspec.binding.json",
     "defaultBindingName": "Default",
     "defaultBindingFilePath": "C://component//lib//factory//generated//logger//logger.factory.container.default.binding.json",
+    "isBindingSingleton": true,
     "isSingleton": true,
-    "ctorParameters": {},
-    "isBindingSingleton": true
+    "ctorParameters": {}
 }

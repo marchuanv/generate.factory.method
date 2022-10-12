@@ -6,6 +6,7 @@
     "bindingFilePath": "C://component//lib//factory//generated//httpservermessagebus//httpservermessagebus.factory.container.servermessagebusspec.binding.json",
     "defaultBindingName": "Default",
     "defaultBindingFilePath": "C://component//lib//factory//generated//httpservermessagebus//httpservermessagebus.factory.container.default.binding.json",
+    "isBindingSingleton": true,
     "isSingleton": false,
     "ctorParameters": {
         "timeout": null,
@@ -34,6 +35,5 @@
         "logger": {
             "bindingFilePath": "C://component//lib//factory//generated//logger//logger.factory.container.servermessagebusspec.binding.json"
         }
-    },
-    "isBindingSingleton": true
+    }
 }

@@ -4,15 +4,5 @@
   "MessageStore": true,
   "MessageConverter": true,
   "Logger": true,
-  "HttpClientMessageBusManager": true,
-  "HttpServerMessageBusManager": true,
-  "HttpClientStartedMessageQueueBinding": true,
-  "HttpClientStartMessageQueueBinding": true,
-  "HttpClientStopMessageQueueBinding": true,
-  "HttpClientStoppedMessageQueueBinding": true,
-  "HttpServerStartedMessageQueueBinding": true,
-  "HttpServerStartMessageQueueBinding": true,
-  "HttpServerStopMessageQueueBinding": true,
-  "HttpServerStoppedMessageQueueBinding": true,
-  "MessageBinding": false
+  "Message": false
 }

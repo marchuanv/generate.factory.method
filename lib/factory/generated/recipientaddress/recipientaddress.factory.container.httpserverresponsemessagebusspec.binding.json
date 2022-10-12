@@ -6,10 +6,10 @@
     "bindingFilePath": "C://component//lib//factory//generated//recipientaddress//recipientaddress.factory.container.httpserverresponsemessagebusspec.binding.json",
     "defaultBindingName": "Default",
     "defaultBindingFilePath": "C://component//lib//factory//generated//recipientaddress//recipientaddress.factory.container.default.binding.json",
+    "isBindingSingleton": true,
     "isSingleton": false,
     "ctorParameters": {
         "recipientHost": null,
         "recipientPort": null
-    },
-    "isBindingSingleton": true
+    }
 }

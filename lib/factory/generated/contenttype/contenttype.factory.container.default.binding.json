@@ -6,9 +6,9 @@
     "bindingFilePath": "C://component//lib//factory//generated//contenttype//contenttype.factory.container.default.binding.json",
     "defaultBindingName": "Default",
     "defaultBindingFilePath": "C://component//lib//factory//generated//contenttype//contenttype.factory.container.default.binding.json",
+    "isBindingSingleton": true,
     "isSingleton": false,
     "ctorParameters": {
         "name": null
-    },
-    "isBindingSingleton": true
+    }
 }
