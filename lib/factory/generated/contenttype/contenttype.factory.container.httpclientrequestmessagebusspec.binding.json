@@ -6,7 +6,7 @@
     "bindingFilePath": "C://component//lib//factory//generated//contenttype//contenttype.factory.container.httpclientrequestmessagebusspec.binding.json",
     "defaultBindingName": "Default",
     "defaultBindingFilePath": "C://component//lib//factory//generated//contenttype//contenttype.factory.container.default.binding.json",
-    "isBindingSingleton": true,
+    "isBindingSingleton": false,
     "isSingleton": false,
     "ctorParameters": {
         "name": null

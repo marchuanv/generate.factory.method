@@ -47,7 +47,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//contenttype//contenttype.factory.container.default.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//contenttype//contenttype.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "name": null
@@ -77,7 +77,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//message//message.factory.container.default.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//message//message.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "messageStatus": "MessageStatus",
@@ -98,7 +98,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//messagecontent//messagecontent.factory.container.default.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//messagecontent//messagecontent.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "messageContentMetadata": "MessageContentMetadata",
@@ -117,7 +117,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//messagecontentmetadata//messagecontentmetadata.factory.container.default.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//messagecontentmetadata//messagecontentmetadata.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
@@ -148,7 +148,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.default.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "recipientAddress": "RecipientAddress",
@@ -183,7 +183,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//messagestatus//messagestatus.factory.container.default.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//messagestatus//messagestatus.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "messageStatusCode": null
@@ -213,7 +213,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//recipientaddress//recipientaddress.factory.container.default.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//recipientaddress//recipientaddress.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "recipientHost": null,
@@ -230,7 +230,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//senderaddress//senderaddress.factory.container.default.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//senderaddress//senderaddress.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "senderHost": null,
@@ -472,7 +472,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//httprequestmessage//httprequestmessage.factory.container.default.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httprequestmessage//httprequestmessage.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "message": "Message"
@@ -488,7 +488,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//httpresponsemessage//httpresponsemessage.factory.container.default.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpresponsemessage//httpresponsemessage.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "message": "Message"
@@ -751,7 +751,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//websocketrequestmessage//websocketrequestmessage.factory.container.default.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//websocketrequestmessage//websocketrequestmessage.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "message": "Message"
@@ -767,7 +767,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//websocketresponsemessage//websocketresponsemessage.factory.container.default.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//websocketresponsemessage//websocketresponsemessage.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "message": "Message"
@@ -887,7 +887,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//contenttype//contenttype.factory.container.multiplerequestsspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//contenttype//contenttype.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "name": null
@@ -917,7 +917,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//message//message.factory.container.multiplerequestsspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//message//message.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "messageStatus": "MessageStatus",
@@ -938,7 +938,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//messagecontent//messagecontent.factory.container.multiplerequestsspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//messagecontent//messagecontent.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "messageContentMetadata": "MessageContentMetadata",
@@ -957,7 +957,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//messagecontentmetadata//messagecontentmetadata.factory.container.multiplerequestsspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//messagecontentmetadata//messagecontentmetadata.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
@@ -988,7 +988,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.multiplerequestsspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "recipientAddress": "RecipientAddress",
@@ -1023,7 +1023,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//messagestatus//messagestatus.factory.container.multiplerequestsspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//messagestatus//messagestatus.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "messageStatusCode": null
@@ -1053,7 +1053,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//recipientaddress//recipientaddress.factory.container.multiplerequestsspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//recipientaddress//recipientaddress.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "recipientHost": null,
@@ -1070,7 +1070,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//senderaddress//senderaddress.factory.container.multiplerequestsspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//senderaddress//senderaddress.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "senderHost": null,
@@ -1312,7 +1312,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//httprequestmessage//httprequestmessage.factory.container.multiplerequestsspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httprequestmessage//httprequestmessage.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "message": "Message"
@@ -1328,7 +1328,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//httpresponsemessage//httpresponsemessage.factory.container.multiplerequestsspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpresponsemessage//httpresponsemessage.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "message": "Message"
@@ -1591,7 +1591,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//websocketrequestmessage//websocketrequestmessage.factory.container.multiplerequestsspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//websocketrequestmessage//websocketrequestmessage.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "message": "Message"
@@ -1607,7 +1607,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//websocketresponsemessage//websocketresponsemessage.factory.container.multiplerequestsspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//websocketresponsemessage//websocketresponsemessage.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "message": "Message"
@@ -1727,7 +1727,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//contenttype//contenttype.factory.container.usersecurityspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//contenttype//contenttype.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "name": null
@@ -1757,7 +1757,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//message//message.factory.container.usersecurityspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//message//message.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "messageStatus": "MessageStatus",
@@ -1778,7 +1778,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//messagecontent//messagecontent.factory.container.usersecurityspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//messagecontent//messagecontent.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "messageContentMetadata": "MessageContentMetadata",
@@ -1797,7 +1797,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//messagecontentmetadata//messagecontentmetadata.factory.container.usersecurityspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//messagecontentmetadata//messagecontentmetadata.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
@@ -1828,7 +1828,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.usersecurityspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "recipientAddress": "RecipientAddress",
@@ -1863,7 +1863,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//messagestatus//messagestatus.factory.container.usersecurityspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//messagestatus//messagestatus.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "messageStatusCode": null
@@ -1893,7 +1893,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//recipientaddress//recipientaddress.factory.container.usersecurityspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//recipientaddress//recipientaddress.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "recipientHost": null,
@@ -1910,7 +1910,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//senderaddress//senderaddress.factory.container.usersecurityspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//senderaddress//senderaddress.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "senderHost": null,
@@ -2152,7 +2152,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//httprequestmessage//httprequestmessage.factory.container.usersecurityspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httprequestmessage//httprequestmessage.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "message": "Message"
@@ -2168,7 +2168,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//httpresponsemessage//httpresponsemessage.factory.container.usersecurityspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpresponsemessage//httpresponsemessage.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "message": "Message"
@@ -2431,7 +2431,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//websocketrequestmessage//websocketrequestmessage.factory.container.usersecurityspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//websocketrequestmessage//websocketrequestmessage.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "message": "Message"
@@ -2447,7 +2447,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//websocketresponsemessage//websocketresponsemessage.factory.container.usersecurityspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//websocketresponsemessage//websocketresponsemessage.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "message": "Message"
@@ -2567,7 +2567,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//contenttype//contenttype.factory.container.clientcomponentspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//contenttype//contenttype.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "name": null
@@ -2597,7 +2597,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//message//message.factory.container.clientcomponentspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//message//message.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "messageStatus": "MessageStatus",
@@ -2618,7 +2618,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//messagecontent//messagecontent.factory.container.clientcomponentspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//messagecontent//messagecontent.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "messageContentMetadata": "MessageContentMetadata",
@@ -2637,7 +2637,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//messagecontentmetadata//messagecontentmetadata.factory.container.clientcomponentspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//messagecontentmetadata//messagecontentmetadata.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
@@ -2668,7 +2668,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.clientcomponentspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "recipientAddress": "RecipientAddress",
@@ -2703,7 +2703,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//messagestatus//messagestatus.factory.container.clientcomponentspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//messagestatus//messagestatus.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "messageStatusCode": null
@@ -2733,7 +2733,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//recipientaddress//recipientaddress.factory.container.clientcomponentspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//recipientaddress//recipientaddress.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "recipientHost": null,
@@ -2750,7 +2750,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//senderaddress//senderaddress.factory.container.clientcomponentspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//senderaddress//senderaddress.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "senderHost": null,
@@ -2992,7 +2992,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//httprequestmessage//httprequestmessage.factory.container.clientcomponentspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httprequestmessage//httprequestmessage.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "message": "Message"
@@ -3008,7 +3008,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//httpresponsemessage//httpresponsemessage.factory.container.clientcomponentspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpresponsemessage//httpresponsemessage.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "message": "Message"
@@ -3271,7 +3271,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//websocketrequestmessage//websocketrequestmessage.factory.container.clientcomponentspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//websocketrequestmessage//websocketrequestmessage.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "message": "Message"
@@ -3287,7 +3287,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//websocketresponsemessage//websocketresponsemessage.factory.container.clientcomponentspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//websocketresponsemessage//websocketresponsemessage.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "message": "Message"
@@ -3407,7 +3407,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//contenttype//contenttype.factory.container.servercomponentspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//contenttype//contenttype.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "name": null
@@ -3437,7 +3437,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//message//message.factory.container.servercomponentspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//message//message.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "messageStatus": "MessageStatus",
@@ -3458,7 +3458,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//messagecontent//messagecontent.factory.container.servercomponentspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//messagecontent//messagecontent.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "messageContentMetadata": "MessageContentMetadata",
@@ -3477,7 +3477,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//messagecontentmetadata//messagecontentmetadata.factory.container.servercomponentspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//messagecontentmetadata//messagecontentmetadata.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
@@ -3508,7 +3508,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.servercomponentspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "recipientAddress": "RecipientAddress",
@@ -3543,7 +3543,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//messagestatus//messagestatus.factory.container.servercomponentspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//messagestatus//messagestatus.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "messageStatusCode": null
@@ -3573,7 +3573,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//recipientaddress//recipientaddress.factory.container.servercomponentspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//recipientaddress//recipientaddress.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "recipientHost": null,
@@ -3590,7 +3590,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//senderaddress//senderaddress.factory.container.servercomponentspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//senderaddress//senderaddress.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "senderHost": null,
@@ -3832,7 +3832,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//httprequestmessage//httprequestmessage.factory.container.servercomponentspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httprequestmessage//httprequestmessage.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "message": "Message"
@@ -3848,7 +3848,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//httpresponsemessage//httpresponsemessage.factory.container.servercomponentspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpresponsemessage//httpresponsemessage.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "message": "Message"
@@ -4111,7 +4111,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//websocketrequestmessage//websocketrequestmessage.factory.container.servercomponentspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//websocketrequestmessage//websocketrequestmessage.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "message": "Message"
@@ -4127,7 +4127,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//websocketresponsemessage//websocketresponsemessage.factory.container.servercomponentspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//websocketresponsemessage//websocketresponsemessage.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "message": "Message"
@@ -4247,7 +4247,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//contenttype//contenttype.factory.container.clientmessagebusspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//contenttype//contenttype.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "name": null
@@ -4277,7 +4277,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//message//message.factory.container.clientmessagebusspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//message//message.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "messageStatus": "MessageStatus",
@@ -4298,7 +4298,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//messagecontent//messagecontent.factory.container.clientmessagebusspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//messagecontent//messagecontent.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "messageContentMetadata": "MessageContentMetadata",
@@ -4317,7 +4317,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//messagecontentmetadata//messagecontentmetadata.factory.container.clientmessagebusspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//messagecontentmetadata//messagecontentmetadata.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
@@ -4348,7 +4348,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.clientmessagebusspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "recipientAddress": "RecipientAddress",
@@ -4383,7 +4383,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//messagestatus//messagestatus.factory.container.clientmessagebusspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//messagestatus//messagestatus.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "messageStatusCode": null
@@ -4413,7 +4413,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//recipientaddress//recipientaddress.factory.container.clientmessagebusspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//recipientaddress//recipientaddress.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "recipientHost": null,
@@ -4430,7 +4430,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//senderaddress//senderaddress.factory.container.clientmessagebusspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//senderaddress//senderaddress.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "senderHost": null,
@@ -4672,7 +4672,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//httprequestmessage//httprequestmessage.factory.container.clientmessagebusspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httprequestmessage//httprequestmessage.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "message": "Message"
@@ -4688,7 +4688,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//httpresponsemessage//httpresponsemessage.factory.container.clientmessagebusspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpresponsemessage//httpresponsemessage.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "message": "Message"
@@ -4951,7 +4951,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//websocketrequestmessage//websocketrequestmessage.factory.container.clientmessagebusspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//websocketrequestmessage//websocketrequestmessage.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "message": "Message"
@@ -4967,7 +4967,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//websocketresponsemessage//websocketresponsemessage.factory.container.clientmessagebusspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//websocketresponsemessage//websocketresponsemessage.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "message": "Message"
@@ -5087,7 +5087,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//contenttype//contenttype.factory.container.servermessagebusspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//contenttype//contenttype.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "name": null
@@ -5117,7 +5117,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//message//message.factory.container.servermessagebusspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//message//message.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "messageStatus": "MessageStatus",
@@ -5138,7 +5138,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//messagecontent//messagecontent.factory.container.servermessagebusspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//messagecontent//messagecontent.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "messageContentMetadata": "MessageContentMetadata",
@@ -5157,7 +5157,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//messagecontentmetadata//messagecontentmetadata.factory.container.servermessagebusspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//messagecontentmetadata//messagecontentmetadata.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
@@ -5188,7 +5188,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.servermessagebusspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "recipientAddress": "RecipientAddress",
@@ -5223,7 +5223,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//messagestatus//messagestatus.factory.container.servermessagebusspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//messagestatus//messagestatus.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "messageStatusCode": null
@@ -5253,7 +5253,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//recipientaddress//recipientaddress.factory.container.servermessagebusspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//recipientaddress//recipientaddress.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "recipientHost": null,
@@ -5270,7 +5270,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//senderaddress//senderaddress.factory.container.servermessagebusspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//senderaddress//senderaddress.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "senderHost": null,
@@ -5512,7 +5512,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//httprequestmessage//httprequestmessage.factory.container.servermessagebusspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httprequestmessage//httprequestmessage.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "message": "Message"
@@ -5528,7 +5528,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//httpresponsemessage//httpresponsemessage.factory.container.servermessagebusspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpresponsemessage//httpresponsemessage.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "message": "Message"
@@ -5791,7 +5791,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//websocketrequestmessage//websocketrequestmessage.factory.container.servermessagebusspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//websocketrequestmessage//websocketrequestmessage.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "message": "Message"
@@ -5807,7 +5807,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//websocketresponsemessage//websocketresponsemessage.factory.container.servermessagebusspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//websocketresponsemessage//websocketresponsemessage.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "message": "Message"
@@ -5927,7 +5927,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//contenttype//contenttype.factory.container.httpserverresponsemessagebusspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//contenttype//contenttype.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "name": null
@@ -5957,7 +5957,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//message//message.factory.container.httpserverresponsemessagebusspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//message//message.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "messageStatus": "MessageStatus",
@@ -5978,7 +5978,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//messagecontent//messagecontent.factory.container.httpserverresponsemessagebusspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//messagecontent//messagecontent.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "messageContentMetadata": "MessageContentMetadata",
@@ -5997,7 +5997,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//messagecontentmetadata//messagecontentmetadata.factory.container.httpserverresponsemessagebusspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//messagecontentmetadata//messagecontentmetadata.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
@@ -6028,7 +6028,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.httpserverresponsemessagebusspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "recipientAddress": "RecipientAddress",
@@ -6063,7 +6063,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//messagestatus//messagestatus.factory.container.httpserverresponsemessagebusspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//messagestatus//messagestatus.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "messageStatusCode": null
@@ -6093,7 +6093,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//recipientaddress//recipientaddress.factory.container.httpserverresponsemessagebusspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//recipientaddress//recipientaddress.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "recipientHost": null,
@@ -6110,7 +6110,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//senderaddress//senderaddress.factory.container.httpserverresponsemessagebusspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//senderaddress//senderaddress.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "senderHost": null,
@@ -6352,7 +6352,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//httprequestmessage//httprequestmessage.factory.container.httpserverresponsemessagebusspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httprequestmessage//httprequestmessage.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "message": "Message"
@@ -6368,7 +6368,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//httpresponsemessage//httpresponsemessage.factory.container.httpserverresponsemessagebusspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpresponsemessage//httpresponsemessage.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "message": "Message"
@@ -6631,7 +6631,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//websocketrequestmessage//websocketrequestmessage.factory.container.httpserverresponsemessagebusspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//websocketrequestmessage//websocketrequestmessage.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "message": "Message"
@@ -6647,7 +6647,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//websocketresponsemessage//websocketresponsemessage.factory.container.httpserverresponsemessagebusspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//websocketresponsemessage//websocketresponsemessage.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "message": "Message"
@@ -6767,7 +6767,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//contenttype//contenttype.factory.container.httpclientrequestmessagebusspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//contenttype//contenttype.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "name": null
@@ -6797,7 +6797,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//message//message.factory.container.httpclientrequestmessagebusspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//message//message.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "messageStatus": "MessageStatus",
@@ -6818,7 +6818,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//messagecontent//messagecontent.factory.container.httpclientrequestmessagebusspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//messagecontent//messagecontent.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "messageContentMetadata": "MessageContentMetadata",
@@ -6837,7 +6837,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//messagecontentmetadata//messagecontentmetadata.factory.container.httpclientrequestmessagebusspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//messagecontentmetadata//messagecontentmetadata.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "factoryContainerBindingName": null,
@@ -6868,7 +6868,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.httpclientrequestmessagebusspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "recipientAddress": "RecipientAddress",
@@ -6903,7 +6903,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//messagestatus//messagestatus.factory.container.httpclientrequestmessagebusspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//messagestatus//messagestatus.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "messageStatusCode": null
@@ -6933,7 +6933,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//recipientaddress//recipientaddress.factory.container.httpclientrequestmessagebusspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//recipientaddress//recipientaddress.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "recipientHost": null,
@@ -6950,7 +6950,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//senderaddress//senderaddress.factory.container.httpclientrequestmessagebusspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//senderaddress//senderaddress.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "senderHost": null,
@@ -7192,7 +7192,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//httprequestmessage//httprequestmessage.factory.container.httpclientrequestmessagebusspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httprequestmessage//httprequestmessage.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "message": "Message"
@@ -7208,7 +7208,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//httpresponsemessage//httpresponsemessage.factory.container.httpclientrequestmessagebusspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//httpresponsemessage//httpresponsemessage.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "message": "Message"
@@ -7471,7 +7471,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//websocketrequestmessage//websocketrequestmessage.factory.container.httpclientrequestmessagebusspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//websocketrequestmessage//websocketrequestmessage.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "message": "Message"
@@ -7487,7 +7487,7 @@
         "bindingFilePath": "C://component//lib//factory//generated//websocketresponsemessage//websocketresponsemessage.factory.container.httpclientrequestmessagebusspec.binding.json",
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//websocketresponsemessage//websocketresponsemessage.factory.container.default.binding.json",
-        "isBindingSingleton": true,
+        "isBindingSingleton": false,
         "isSingleton": false,
         "ctorParametersInfo": {
             "message": "Message"
