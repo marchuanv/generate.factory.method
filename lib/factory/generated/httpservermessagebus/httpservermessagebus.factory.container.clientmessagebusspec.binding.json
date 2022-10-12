@@ -34,5 +34,6 @@
         "logger": {
             "bindingFilePath": "C://component//lib//factory//generated//logger//logger.factory.container.clientmessagebusspec.binding.json"
         }
-    }
+    },
+    "isBindingSingleton": true
 }

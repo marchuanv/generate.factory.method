@@ -16,5 +16,6 @@
         "senderAddress": {
             "bindingFilePath": "C://component//lib//factory//generated//senderaddress//senderaddress.factory.container.httpclientrequestmessagebusspec.binding.json"
         }
-    }
+    },
+    "isBindingSingleton": true
 }

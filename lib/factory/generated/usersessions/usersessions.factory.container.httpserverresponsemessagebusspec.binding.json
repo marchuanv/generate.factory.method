@@ -9,5 +9,6 @@
     "isSingleton": true,
     "ctorParameters": {
         "factoryContainerBindingName": null
-    }
+    },
+    "isBindingSingleton": true
 }

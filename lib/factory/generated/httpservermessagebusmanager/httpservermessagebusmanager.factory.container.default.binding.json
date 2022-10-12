@@ -27,5 +27,6 @@
         "httpServerStopMessageQueueBinding": {
             "bindingFilePath": "C://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.container.default.binding.json"
         }
-    }
+    },
+    "isBindingSingleton": true
 }

@@ -11,5 +11,6 @@
         "webSocketServerResponseMessageQueueBinding": {
             "bindingFilePath": "C://component//lib//factory//generated//websocketserverresponsemessagequeuebinding//websocketserverresponsemessagequeuebinding.factory.container.clientcomponentspec.binding.json"
         }
-    }
+    },
+    "isBindingSingleton": true
 }

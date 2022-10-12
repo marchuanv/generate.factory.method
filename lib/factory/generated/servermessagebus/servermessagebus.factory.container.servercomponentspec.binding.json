@@ -17,5 +17,6 @@
         "serverRequestMessageBus": {
             "bindingFilePath": "C://component//lib//factory//generated//httpserverrequestmessagebus//httpserverrequestmessagebus.factory.container.servercomponentspec.binding.json"
         }
-    }
+    },
+    "isBindingSingleton": true
 }

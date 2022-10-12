@@ -9,5 +9,6 @@
     "isSingleton": false,
     "ctorParameters": {
         "userId": null
-    }
+    },
+    "isBindingSingleton": true
 }

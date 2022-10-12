@@ -11,5 +11,6 @@
         "httpClientRequestMessageQueueBinding": {
             "bindingFilePath": "C://component//lib//factory//generated//httpclientrequestmessagequeuebinding//httpclientrequestmessagequeuebinding.factory.container.clientcomponentspec.binding.json"
         }
-    }
+    },
+    "isBindingSingleton": true
 }

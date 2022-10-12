@@ -13,5 +13,6 @@
   "HttpServerStartedMessageQueueBinding": true,
   "HttpServerStartMessageQueueBinding": true,
   "HttpServerStopMessageQueueBinding": true,
-  "HttpServerStoppedMessageQueueBinding": true
+  "HttpServerStoppedMessageQueueBinding": true,
+  "MessageBinding": false
 }

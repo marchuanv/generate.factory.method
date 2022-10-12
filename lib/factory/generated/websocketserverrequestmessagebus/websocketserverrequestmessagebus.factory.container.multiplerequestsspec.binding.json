@@ -11,5 +11,6 @@
         "webSocketServerRequestMessageQueueBinding": {
             "bindingFilePath": "C://component//lib//factory//generated//websocketserverrequestmessagequeuebinding//websocketserverrequestmessagequeuebinding.factory.container.multiplerequestsspec.binding.json"
         }
-    }
+    },
+    "isBindingSingleton": true
 }

@@ -18,5 +18,6 @@
         "httpClientStartedMessageQueueBinding": {
             "bindingFilePath": "C://component//lib//factory//generated//httpclientstartedmessagequeuebinding//httpclientstartedmessagequeuebinding.factory.container.clientcomponentspec.binding.json"
         }
-    }
+    },
+    "isBindingSingleton": true
 }

@@ -19,5 +19,6 @@
         "userSessions": {
             "bindingFilePath": "C://component//lib//factory//generated//usersessions//usersessions.factory.container.clientcomponentspec.binding.json"
         }
-    }
+    },
+    "isBindingSingleton": true
 }

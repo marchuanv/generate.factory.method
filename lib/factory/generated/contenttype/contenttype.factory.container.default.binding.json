@@ -9,5 +9,6 @@
     "isSingleton": false,
     "ctorParameters": {
         "name": null
-    }
+    },
+    "isBindingSingleton": true
 }

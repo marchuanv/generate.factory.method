@@ -17,6 +17,7 @@ function factoryContainerBindingsGenerate({ factoryContainerBindingName }) {
         ctorParametersInfo,
         scriptPath,
         isSingleton,
+        isBindingSingleton,
         typeVariableName,
         bindingName,
         bindingFilePath,
@@ -49,6 +50,7 @@ function factoryContainerBindingsGenerate({ factoryContainerBindingName }) {
             .replace(/\[BindingFilePath\]/g, bindingFilePath)
             .replace(/\[DefaultBindingName\]/g, defaultBindingName)
             .replace(/\[DefaultBindingFilePath\]/g, defaultBindingFilePath)
+            .replace(/\[IsBindingSingleton\]/g, isBindingSingleton)
             .replace(/\[IsSingleton\]/g, isSingleton)
             .replace(/\[CtorParameters\]/g, utils.getJSONString(ctorParametersInfo));
         const newFactoryContainerBinding = utils.getJSONObject(factoryContainerBindingJson);
@@ -62,6 +64,7 @@ function factoryContainerBindingsGenerate({ factoryContainerBindingName }) {
             existingFactoryContainerBinding.defaultBindingName = newFactoryContainerBinding.defaultBindingName;
             existingFactoryContainerBinding.defaultBindingFilePath = newFactoryContainerBinding.defaultBindingFilePath;
             existingFactoryContainerBinding.isSingleton = newFactoryContainerBinding.isSingleton;
+            existingFactoryContainerBinding.isBindingSingleton = newFactoryContainerBinding.isBindingSingleton;
             if (!existingFactoryContainerBinding.ctorParameters) {
                 existingFactoryContainerBinding.ctorParameters = newFactoryContainerBinding.ctorParameters;
             }

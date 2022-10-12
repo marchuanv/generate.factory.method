@@ -25,5 +25,6 @@
         "httpClientStopMessageQueueBinding": {
             "bindingFilePath": "C://component//lib//factory//generated//httpclientstopmessagequeuebinding//httpclientstopmessagequeuebinding.factory.container.clientcomponentspec.binding.json"
         }
-    }
+    },
+    "isBindingSingleton": true
 }

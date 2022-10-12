@@ -22,5 +22,6 @@
         "messageMetadata": {
             "bindingFilePath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.default.binding.json"
         }
-    }
+    },
+    "isBindingSingleton": false
 }

@@ -11,5 +11,6 @@
         "message": {
             "bindingFilePath": "C://component//lib//factory//generated//message//message.factory.container.multiplerequestsspec.binding.json"
         }
-    }
+    },
+    "isBindingSingleton": true
 }

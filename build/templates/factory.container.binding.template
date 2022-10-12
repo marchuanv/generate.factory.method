@@ -6,6 +6,7 @@
     "bindingFilePath": "[BindingFilePath]",
     "defaultBindingName": "[DefaultBindingName]",
     "defaultBindingFilePath": "[DefaultBindingFilePath]",
+    "isBindingSingleton": [IsBindingSingleton],
     "isSingleton": [IsSingleton],
     "ctorParameters":  [CtorParameters]
 }

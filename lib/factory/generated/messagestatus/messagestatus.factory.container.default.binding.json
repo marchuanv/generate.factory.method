@@ -9,5 +9,6 @@
     "isSingleton": false,
     "ctorParameters": {
         "messageStatusCode": null
-    }
+    },
+    "isBindingSingleton": true
 }

@@ -2,6 +2,7 @@ const { readFileSync, writeFileSync } = require('fs');
 const path = require('path');
 const utils = require('utils');
 const typesInfo = require(path.join(__dirname, 'types.info.json'));
+const typesSingletonInfo = require(path.join(__dirname, 'types.singleton.info.json'));
 const factoryContainerBindingInfoTemplate = readFileSync(path.join(__dirname, 'templates', 'factory.container.binding.info.template'),'utf8');
 const factoryContainerBindingsInfoPath = path.join(__dirname, 'factory.container.bindings.info.json');
 const defaultBindingName = 'Default';
@@ -28,6 +29,7 @@ function factoryContainerBindingsInfoGenerate({ factoryContainerBindingName }) {
         const bindingFilePath = path.join(factoryGeneratedDir, bindingFileName).replace(/\\/g,'//');
         const defaultBindingFileName =  `${typeName.toLowerCase()}.factory.container.default.binding.json`;
         const defaultBindingFilePath = path.join(factoryGeneratedDir, defaultBindingFileName).replace(/\\/g,'//');
+        const isBindingSingleton = typesSingletonInfo[`${typeName}Binding`] === undefined ? true: typesSingletonInfo[`${typeName}Binding`];
         const binding = utils.getJSONObject(factoryContainerBindingInfoTemplate
             .replace(/\[TypeName\]/g, typeName)
             .replace(/\[TypeVariableName\]/g, variableName)
@@ -39,6 +41,7 @@ function factoryContainerBindingsInfoGenerate({ factoryContainerBindingName }) {
             .replace(/\[DefaultBindingName\]/g, 'Default')
             .replace(/\[DefaultBindingFilePath\]/g, defaultBindingFilePath)
             .replace(/\[CtorParametersInfo\]/g, utils.getJSONString(ctorParametersInfo))
+            .replace(/\[IsBindingSingleton\]/g, isBindingSingleton)
             .replace(/\[isSingleton\]/g, isSingleton));
         factoryContainerBindingsInfo.push(binding);
     };

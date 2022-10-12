@@ -10,5 +10,6 @@
     "ctorParameters": {
         "senderHost": null,
         "senderPort": null
-    }
+    },
+    "isBindingSingleton": true
 }
