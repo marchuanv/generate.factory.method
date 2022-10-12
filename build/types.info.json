@@ -33,6 +33,7 @@
                                 "variableName": "factoryContainerBindingName",
                                 "scriptPath": "",
                                 "prototypeScriptPath": "",
+                                "isSingleton": null,
                                 "children": []
                             },
                             {
@@ -75,6 +76,7 @@
                                 "variableName": "factoryContainerBindingName",
                                 "scriptPath": "",
                                 "prototypeScriptPath": "",
+                                "isSingleton": null,
                                 "children": []
                             },
                             {
@@ -112,6 +114,7 @@
                 "variableName": "packageJson",
                 "scriptPath": "",
                 "prototypeScriptPath": "",
+                "isSingleton": null,
                 "children": []
             },
             {
@@ -119,6 +122,7 @@
                 "variableName": "factoryContainerBindingName",
                 "scriptPath": "",
                 "prototypeScriptPath": "",
+                "isSingleton": null,
                 "children": []
             },
             {
@@ -155,6 +159,7 @@
                                         "variableName": "factoryContainerBindingName",
                                         "scriptPath": "",
                                         "prototypeScriptPath": "",
+                                        "isSingleton": null,
                                         "children": []
                                     },
                                     {
@@ -197,6 +202,7 @@
                                         "variableName": "factoryContainerBindingName",
                                         "scriptPath": "",
                                         "prototypeScriptPath": "",
+                                        "isSingleton": null,
                                         "children": []
                                     },
                                     {
@@ -256,6 +262,7 @@
                                         "variableName": "factoryContainerBindingName",
                                         "scriptPath": "",
                                         "prototypeScriptPath": "",
+                                        "isSingleton": null,
                                         "children": []
                                     },
                                     {
@@ -298,6 +305,7 @@
                                         "variableName": "factoryContainerBindingName",
                                         "scriptPath": "",
                                         "prototypeScriptPath": "",
+                                        "isSingleton": null,
                                         "children": []
                                     },
                                     {
@@ -335,6 +343,7 @@
                         "variableName": "factoryContainerBindingName",
                         "scriptPath": "",
                         "prototypeScriptPath": "",
+                        "isSingleton": null,
                         "children": []
                     }
                 ]
@@ -353,6 +362,7 @@
                 "variableName": "name",
                 "scriptPath": "",
                 "prototypeScriptPath": "",
+                "isSingleton": null,
                 "children": []
             }
         ]
@@ -384,6 +394,7 @@
                         "variableName": "messageStatusCode",
                         "scriptPath": "",
                         "prototypeScriptPath": "",
+                        "isSingleton": null,
                         "children": []
                     }
                 ]
@@ -393,6 +404,7 @@
                 "variableName": "factoryContainerBindingName",
                 "scriptPath": "",
                 "prototypeScriptPath": "",
+                "isSingleton": null,
                 "children": []
             },
             {
@@ -400,6 +412,7 @@
                 "variableName": "Id",
                 "scriptPath": "",
                 "prototypeScriptPath": "",
+                "isSingleton": null,
                 "children": []
             },
             {
@@ -421,6 +434,7 @@
                                 "variableName": "factoryContainerBindingName",
                                 "scriptPath": "",
                                 "prototypeScriptPath": "",
+                                "isSingleton": null,
                                 "children": []
                             },
                             {
@@ -428,6 +442,7 @@
                                 "variableName": "data",
                                 "scriptPath": "",
                                 "prototypeScriptPath": "",
+                                "isSingleton": null,
                                 "children": []
                             }
                         ]
@@ -437,6 +452,7 @@
                         "variableName": "data",
                         "scriptPath": "",
                         "prototypeScriptPath": "",
+                        "isSingleton": null,
                         "children": []
                     },
                     {
@@ -451,6 +467,7 @@
                                 "variableName": "factoryContainerBindingName",
                                 "scriptPath": "",
                                 "prototypeScriptPath": "",
+                                "isSingleton": null,
                                 "children": []
                             }
                         ]
@@ -474,6 +491,7 @@
                                         "variableName": "recipientHost",
                                         "scriptPath": "",
                                         "prototypeScriptPath": "",
+                                        "isSingleton": null,
                                         "children": []
                                     },
                                     {
@@ -481,6 +499,7 @@
                                         "variableName": "recipientPort",
                                         "scriptPath": "",
                                         "prototypeScriptPath": "",
+                                        "isSingleton": null,
                                         "children": []
                                     }
                                 ]
@@ -490,6 +509,7 @@
                                 "variableName": "metadata",
                                 "scriptPath": "",
                                 "prototypeScriptPath": "",
+                                "isSingleton": null,
                                 "children": []
                             },
                             {
@@ -497,6 +517,7 @@
                                 "variableName": "token",
                                 "scriptPath": "",
                                 "prototypeScriptPath": "",
+                                "isSingleton": null,
                                 "children": []
                             },
                             {
@@ -511,6 +532,7 @@
                                         "variableName": "senderHost",
                                         "scriptPath": "",
                                         "prototypeScriptPath": "",
+                                        "isSingleton": null,
                                         "children": []
                                     },
                                     {
@@ -518,6 +540,7 @@
                                         "variableName": "senderPort",
                                         "scriptPath": "",
                                         "prototypeScriptPath": "",
+                                        "isSingleton": null,
                                         "children": []
                                     }
                                 ]
@@ -538,6 +561,7 @@
                         "variableName": "factoryContainerBindingName",
                         "scriptPath": "",
                         "prototypeScriptPath": "",
+                        "isSingleton": null,
                         "children": []
                     },
                     {
@@ -545,6 +569,7 @@
                         "variableName": "data",
                         "scriptPath": "",
                         "prototypeScriptPath": "",
+                        "isSingleton": null,
                         "children": []
                     }
                 ]
@@ -568,6 +593,7 @@
                                 "variableName": "recipientHost",
                                 "scriptPath": "",
                                 "prototypeScriptPath": "",
+                                "isSingleton": null,
                                 "children": []
                             },
                             {
@@ -575,6 +601,7 @@
                                 "variableName": "recipientPort",
                                 "scriptPath": "",
                                 "prototypeScriptPath": "",
+                                "isSingleton": null,
                                 "children": []
                             }
                         ]
@@ -584,6 +611,7 @@
                         "variableName": "metadata",
                         "scriptPath": "",
                         "prototypeScriptPath": "",
+                        "isSingleton": null,
                         "children": []
                     },
                     {
@@ -591,6 +619,7 @@
                         "variableName": "token",
                         "scriptPath": "",
                         "prototypeScriptPath": "",
+                        "isSingleton": null,
                         "children": []
                     },
                     {
@@ -605,6 +634,7 @@
                                 "variableName": "senderHost",
                                 "scriptPath": "",
                                 "prototypeScriptPath": "",
+                                "isSingleton": null,
                                 "children": []
                             },
                             {
@@ -612,6 +642,7 @@
                                 "variableName": "senderPort",
                                 "scriptPath": "",
                                 "prototypeScriptPath": "",
+                                "isSingleton": null,
                                 "children": []
                             }
                         ]
@@ -639,6 +670,7 @@
                         "variableName": "factoryContainerBindingName",
                         "scriptPath": "",
                         "prototypeScriptPath": "",
+                        "isSingleton": null,
                         "children": []
                     },
                     {
@@ -646,6 +678,7 @@
                         "variableName": "data",
                         "scriptPath": "",
                         "prototypeScriptPath": "",
+                        "isSingleton": null,
                         "children": []
                     }
                 ]
@@ -655,6 +688,7 @@
                 "variableName": "data",
                 "scriptPath": "",
                 "prototypeScriptPath": "",
+                "isSingleton": null,
                 "children": []
             },
             {
@@ -669,6 +703,7 @@
                         "variableName": "factoryContainerBindingName",
                         "scriptPath": "",
                         "prototypeScriptPath": "",
+                        "isSingleton": null,
                         "children": []
                     }
                 ]
@@ -692,6 +727,7 @@
                                 "variableName": "recipientHost",
                                 "scriptPath": "",
                                 "prototypeScriptPath": "",
+                                "isSingleton": null,
                                 "children": []
                             },
                             {
@@ -699,6 +735,7 @@
                                 "variableName": "recipientPort",
                                 "scriptPath": "",
                                 "prototypeScriptPath": "",
+                                "isSingleton": null,
                                 "children": []
                             }
                         ]
@@ -708,6 +745,7 @@
                         "variableName": "metadata",
                         "scriptPath": "",
                         "prototypeScriptPath": "",
+                        "isSingleton": null,
                         "children": []
                     },
                     {
@@ -715,6 +753,7 @@
                         "variableName": "token",
                         "scriptPath": "",
                         "prototypeScriptPath": "",
+                        "isSingleton": null,
                         "children": []
                     },
                     {
@@ -729,6 +768,7 @@
                                 "variableName": "senderHost",
                                 "scriptPath": "",
                                 "prototypeScriptPath": "",
+                                "isSingleton": null,
                                 "children": []
                             },
                             {
@@ -736,6 +776,7 @@
                                 "variableName": "senderPort",
                                 "scriptPath": "",
                                 "prototypeScriptPath": "",
+                                "isSingleton": null,
                                 "children": []
                             }
                         ]
@@ -756,6 +797,7 @@
                 "variableName": "factoryContainerBindingName",
                 "scriptPath": "",
                 "prototypeScriptPath": "",
+                "isSingleton": null,
                 "children": []
             },
             {
@@ -763,6 +805,7 @@
                 "variableName": "data",
                 "scriptPath": "",
                 "prototypeScriptPath": "",
+                "isSingleton": null,
                 "children": []
             }
         ]
@@ -794,6 +837,7 @@
                         "variableName": "recipientHost",
                         "scriptPath": "",
                         "prototypeScriptPath": "",
+                        "isSingleton": null,
                         "children": []
                     },
                     {
@@ -801,6 +845,7 @@
                         "variableName": "recipientPort",
                         "scriptPath": "",
                         "prototypeScriptPath": "",
+                        "isSingleton": null,
                         "children": []
                     }
                 ]
@@ -810,6 +855,7 @@
                 "variableName": "metadata",
                 "scriptPath": "",
                 "prototypeScriptPath": "",
+                "isSingleton": null,
                 "children": []
             },
             {
@@ -817,6 +863,7 @@
                 "variableName": "token",
                 "scriptPath": "",
                 "prototypeScriptPath": "",
+                "isSingleton": null,
                 "children": []
             },
             {
@@ -831,6 +878,7 @@
                         "variableName": "senderHost",
                         "scriptPath": "",
                         "prototypeScriptPath": "",
+                        "isSingleton": null,
                         "children": []
                     },
                     {
@@ -838,6 +886,7 @@
                         "variableName": "senderPort",
                         "scriptPath": "",
                         "prototypeScriptPath": "",
+                        "isSingleton": null,
                         "children": []
                     }
                 ]
@@ -873,6 +922,7 @@
                 "variableName": "messageStatusCode",
                 "scriptPath": "",
                 "prototypeScriptPath": "",
+                "isSingleton": null,
                 "children": []
             }
         ]
@@ -897,6 +947,7 @@
                 "variableName": "recipientHost",
                 "scriptPath": "",
                 "prototypeScriptPath": "",
+                "isSingleton": null,
                 "children": []
             },
             {
@@ -904,6 +955,7 @@
                 "variableName": "recipientPort",
                 "scriptPath": "",
                 "prototypeScriptPath": "",
+                "isSingleton": null,
                 "children": []
             }
         ]
@@ -920,6 +972,7 @@
                 "variableName": "senderHost",
                 "scriptPath": "",
                 "prototypeScriptPath": "",
+                "isSingleton": null,
                 "children": []
             },
             {
@@ -927,6 +980,7 @@
                 "variableName": "senderPort",
                 "scriptPath": "",
                 "prototypeScriptPath": "",
+                "isSingleton": null,
                 "children": []
             }
         ]
@@ -965,6 +1019,7 @@
                                 "variableName": "factoryContainerBindingName",
                                 "scriptPath": "",
                                 "prototypeScriptPath": "",
+                                "isSingleton": null,
                                 "children": []
                             },
                             {
@@ -1007,6 +1062,7 @@
                                 "variableName": "factoryContainerBindingName",
                                 "scriptPath": "",
                                 "prototypeScriptPath": "",
+                                "isSingleton": null,
                                 "children": []
                             },
                             {
@@ -1044,6 +1100,7 @@
                 "variableName": "userId",
                 "scriptPath": "",
                 "prototypeScriptPath": "",
+                "isSingleton": null,
                 "children": []
             }
         ]
@@ -1060,6 +1117,7 @@
                 "variableName": "factoryContainerBindingName",
                 "scriptPath": "",
                 "prototypeScriptPath": "",
+                "isSingleton": null,
                 "children": []
             }
         ]
@@ -1076,6 +1134,7 @@
                 "variableName": "timeout",
                 "scriptPath": "",
                 "prototypeScriptPath": "",
+                "isSingleton": null,
                 "children": []
             },
             {
@@ -1083,6 +1142,7 @@
                 "variableName": "factoryContainerBindingName",
                 "scriptPath": "",
                 "prototypeScriptPath": "",
+                "isSingleton": null,
                 "children": []
             },
             {
@@ -1097,6 +1157,7 @@
                         "variableName": "factoryContainerBindingName",
                         "scriptPath": "",
                         "prototypeScriptPath": "",
+                        "isSingleton": null,
                         "children": []
                     },
                     {
@@ -1130,6 +1191,7 @@
                         "variableName": "factoryContainerBindingName",
                         "scriptPath": "",
                         "prototypeScriptPath": "",
+                        "isSingleton": null,
                         "children": []
                     },
                     {
@@ -1163,6 +1225,7 @@
                         "variableName": "factoryContainerBindingName",
                         "scriptPath": "",
                         "prototypeScriptPath": "",
+                        "isSingleton": null,
                         "children": []
                     },
                     {
@@ -1196,6 +1259,7 @@
                         "variableName": "factoryContainerBindingName",
                         "scriptPath": "",
                         "prototypeScriptPath": "",
+                        "isSingleton": null,
                         "children": []
                     },
                     {
@@ -1229,6 +1293,7 @@
                         "variableName": "factoryContainerBindingName",
                         "scriptPath": "",
                         "prototypeScriptPath": "",
+                        "isSingleton": null,
                         "children": []
                     },
                     {
@@ -1271,6 +1336,7 @@
                         "variableName": "factoryContainerBindingName",
                         "scriptPath": "",
                         "prototypeScriptPath": "",
+                        "isSingleton": null,
                         "children": []
                     },
                     {
@@ -1297,6 +1363,7 @@
                 "variableName": "factoryContainerBindingName",
                 "scriptPath": "",
                 "prototypeScriptPath": "",
+                "isSingleton": null,
                 "children": []
             },
             {
@@ -1311,6 +1378,7 @@
                         "variableName": "factoryContainerBindingName",
                         "scriptPath": "",
                         "prototypeScriptPath": "",
+                        "isSingleton": null,
                         "children": []
                     },
                     {
@@ -1344,6 +1412,7 @@
                         "variableName": "factoryContainerBindingName",
                         "scriptPath": "",
                         "prototypeScriptPath": "",
+                        "isSingleton": null,
                         "children": []
                     },
                     {
@@ -1386,6 +1455,7 @@
                         "variableName": "factoryContainerBindingName",
                         "scriptPath": "",
                         "prototypeScriptPath": "",
+                        "isSingleton": null,
                         "children": []
                     },
                     {
@@ -1421,6 +1491,7 @@
                 "variableName": "factoryContainerBindingName",
                 "scriptPath": "",
                 "prototypeScriptPath": "",
+                "isSingleton": null,
                 "children": []
             },
             {
@@ -1461,6 +1532,7 @@
                         "variableName": "factoryContainerBindingName",
                         "scriptPath": "",
                         "prototypeScriptPath": "",
+                        "isSingleton": null,
                         "children": []
                     },
                     {
@@ -1496,6 +1568,7 @@
                 "variableName": "factoryContainerBindingName",
                 "scriptPath": "",
                 "prototypeScriptPath": "",
+                "isSingleton": null,
                 "children": []
             },
             {
@@ -1529,6 +1602,7 @@
                 "variableName": "factoryContainerBindingName",
                 "scriptPath": "",
                 "prototypeScriptPath": "",
+                "isSingleton": null,
                 "children": []
             },
             {
@@ -1562,6 +1636,7 @@
                 "variableName": "factoryContainerBindingName",
                 "scriptPath": "",
                 "prototypeScriptPath": "",
+                "isSingleton": null,
                 "children": []
             },
             {
@@ -1595,6 +1670,7 @@
                 "variableName": "factoryContainerBindingName",
                 "scriptPath": "",
                 "prototypeScriptPath": "",
+                "isSingleton": null,
                 "children": []
             },
             {
@@ -1628,6 +1704,7 @@
                 "variableName": "factoryContainerBindingName",
                 "scriptPath": "",
                 "prototypeScriptPath": "",
+                "isSingleton": null,
                 "children": []
             },
             {
@@ -1675,6 +1752,7 @@
                                 "variableName": "messageStatusCode",
                                 "scriptPath": "",
                                 "prototypeScriptPath": "",
+                                "isSingleton": null,
                                 "children": []
                             }
                         ]
@@ -1684,6 +1762,7 @@
                         "variableName": "factoryContainerBindingName",
                         "scriptPath": "",
                         "prototypeScriptPath": "",
+                        "isSingleton": null,
                         "children": []
                     },
                     {
@@ -1691,6 +1770,7 @@
                         "variableName": "Id",
                         "scriptPath": "",
                         "prototypeScriptPath": "",
+                        "isSingleton": null,
                         "children": []
                     },
                     {
@@ -1712,6 +1792,7 @@
                                         "variableName": "factoryContainerBindingName",
                                         "scriptPath": "",
                                         "prototypeScriptPath": "",
+                                        "isSingleton": null,
                                         "children": []
                                     },
                                     {
@@ -1719,6 +1800,7 @@
                                         "variableName": "data",
                                         "scriptPath": "",
                                         "prototypeScriptPath": "",
+                                        "isSingleton": null,
                                         "children": []
                                     }
                                 ]
@@ -1728,6 +1810,7 @@
                                 "variableName": "data",
                                 "scriptPath": "",
                                 "prototypeScriptPath": "",
+                                "isSingleton": null,
                                 "children": []
                             },
                             {
@@ -1742,6 +1825,7 @@
                                         "variableName": "factoryContainerBindingName",
                                         "scriptPath": "",
                                         "prototypeScriptPath": "",
+                                        "isSingleton": null,
                                         "children": []
                                     }
                                 ]
@@ -1765,6 +1849,7 @@
                                                 "variableName": "recipientHost",
                                                 "scriptPath": "",
                                                 "prototypeScriptPath": "",
+                                                "isSingleton": null,
                                                 "children": []
                                             },
                                             {
@@ -1772,6 +1857,7 @@
                                                 "variableName": "recipientPort",
                                                 "scriptPath": "",
                                                 "prototypeScriptPath": "",
+                                                "isSingleton": null,
                                                 "children": []
                                             }
                                         ]
@@ -1781,6 +1867,7 @@
                                         "variableName": "metadata",
                                         "scriptPath": "",
                                         "prototypeScriptPath": "",
+                                        "isSingleton": null,
                                         "children": []
                                     },
                                     {
@@ -1788,6 +1875,7 @@
                                         "variableName": "token",
                                         "scriptPath": "",
                                         "prototypeScriptPath": "",
+                                        "isSingleton": null,
                                         "children": []
                                     },
                                     {
@@ -1802,6 +1890,7 @@
                                                 "variableName": "senderHost",
                                                 "scriptPath": "",
                                                 "prototypeScriptPath": "",
+                                                "isSingleton": null,
                                                 "children": []
                                             },
                                             {
@@ -1809,6 +1898,7 @@
                                                 "variableName": "senderPort",
                                                 "scriptPath": "",
                                                 "prototypeScriptPath": "",
+                                                "isSingleton": null,
                                                 "children": []
                                             }
                                         ]
@@ -1829,6 +1919,7 @@
                                 "variableName": "factoryContainerBindingName",
                                 "scriptPath": "",
                                 "prototypeScriptPath": "",
+                                "isSingleton": null,
                                 "children": []
                             },
                             {
@@ -1836,6 +1927,7 @@
                                 "variableName": "data",
                                 "scriptPath": "",
                                 "prototypeScriptPath": "",
+                                "isSingleton": null,
                                 "children": []
                             }
                         ]
@@ -1859,6 +1951,7 @@
                                         "variableName": "recipientHost",
                                         "scriptPath": "",
                                         "prototypeScriptPath": "",
+                                        "isSingleton": null,
                                         "children": []
                                     },
                                     {
@@ -1866,6 +1959,7 @@
                                         "variableName": "recipientPort",
                                         "scriptPath": "",
                                         "prototypeScriptPath": "",
+                                        "isSingleton": null,
                                         "children": []
                                     }
                                 ]
@@ -1875,6 +1969,7 @@
                                 "variableName": "metadata",
                                 "scriptPath": "",
                                 "prototypeScriptPath": "",
+                                "isSingleton": null,
                                 "children": []
                             },
                             {
@@ -1882,6 +1977,7 @@
                                 "variableName": "token",
                                 "scriptPath": "",
                                 "prototypeScriptPath": "",
+                                "isSingleton": null,
                                 "children": []
                             },
                             {
@@ -1896,6 +1992,7 @@
                                         "variableName": "senderHost",
                                         "scriptPath": "",
                                         "prototypeScriptPath": "",
+                                        "isSingleton": null,
                                         "children": []
                                     },
                                     {
@@ -1903,6 +2000,7 @@
                                         "variableName": "senderPort",
                                         "scriptPath": "",
                                         "prototypeScriptPath": "",
+                                        "isSingleton": null,
                                         "children": []
                                     }
                                 ]
@@ -1939,6 +2037,7 @@
                                 "variableName": "messageStatusCode",
                                 "scriptPath": "",
                                 "prototypeScriptPath": "",
+                                "isSingleton": null,
                                 "children": []
                             }
                         ]
@@ -1948,6 +2047,7 @@
                         "variableName": "factoryContainerBindingName",
                         "scriptPath": "",
                         "prototypeScriptPath": "",
+                        "isSingleton": null,
                         "children": []
                     },
                     {
@@ -1955,6 +2055,7 @@
                         "variableName": "Id",
                         "scriptPath": "",
                         "prototypeScriptPath": "",
+                        "isSingleton": null,
                         "children": []
                     },
                     {
@@ -1976,6 +2077,7 @@
                                         "variableName": "factoryContainerBindingName",
                                         "scriptPath": "",
                                         "prototypeScriptPath": "",
+                                        "isSingleton": null,
                                         "children": []
                                     },
                                     {
@@ -1983,6 +2085,7 @@
                                         "variableName": "data",
                                         "scriptPath": "",
                                         "prototypeScriptPath": "",
+                                        "isSingleton": null,
                                         "children": []
                                     }
                                 ]
@@ -1992,6 +2095,7 @@
                                 "variableName": "data",
                                 "scriptPath": "",
                                 "prototypeScriptPath": "",
+                                "isSingleton": null,
                                 "children": []
                             },
                             {
@@ -2006,6 +2110,7 @@
                                         "variableName": "factoryContainerBindingName",
                                         "scriptPath": "",
                                         "prototypeScriptPath": "",
+                                        "isSingleton": null,
                                         "children": []
                                     }
                                 ]
@@ -2029,6 +2134,7 @@
                                                 "variableName": "recipientHost",
                                                 "scriptPath": "",
                                                 "prototypeScriptPath": "",
+                                                "isSingleton": null,
                                                 "children": []
                                             },
                                             {
@@ -2036,6 +2142,7 @@
                                                 "variableName": "recipientPort",
                                                 "scriptPath": "",
                                                 "prototypeScriptPath": "",
+                                                "isSingleton": null,
                                                 "children": []
                                             }
                                         ]
@@ -2045,6 +2152,7 @@
                                         "variableName": "metadata",
                                         "scriptPath": "",
                                         "prototypeScriptPath": "",
+                                        "isSingleton": null,
                                         "children": []
                                     },
                                     {
@@ -2052,6 +2160,7 @@
                                         "variableName": "token",
                                         "scriptPath": "",
                                         "prototypeScriptPath": "",
+                                        "isSingleton": null,
                                         "children": []
                                     },
                                     {
@@ -2066,6 +2175,7 @@
                                                 "variableName": "senderHost",
                                                 "scriptPath": "",
                                                 "prototypeScriptPath": "",
+                                                "isSingleton": null,
                                                 "children": []
                                             },
                                             {
@@ -2073,6 +2183,7 @@
                                                 "variableName": "senderPort",
                                                 "scriptPath": "",
                                                 "prototypeScriptPath": "",
+                                                "isSingleton": null,
                                                 "children": []
                                             }
                                         ]
@@ -2093,6 +2204,7 @@
                                 "variableName": "factoryContainerBindingName",
                                 "scriptPath": "",
                                 "prototypeScriptPath": "",
+                                "isSingleton": null,
                                 "children": []
                             },
                             {
@@ -2100,6 +2212,7 @@
                                 "variableName": "data",
                                 "scriptPath": "",
                                 "prototypeScriptPath": "",
+                                "isSingleton": null,
                                 "children": []
                             }
                         ]
@@ -2123,6 +2236,7 @@
                                         "variableName": "recipientHost",
                                         "scriptPath": "",
                                         "prototypeScriptPath": "",
+                                        "isSingleton": null,
                                         "children": []
                                     },
                                     {
@@ -2130,6 +2244,7 @@
                                         "variableName": "recipientPort",
                                         "scriptPath": "",
                                         "prototypeScriptPath": "",
+                                        "isSingleton": null,
                                         "children": []
                                     }
                                 ]
@@ -2139,6 +2254,7 @@
                                 "variableName": "metadata",
                                 "scriptPath": "",
                                 "prototypeScriptPath": "",
+                                "isSingleton": null,
                                 "children": []
                             },
                             {
@@ -2146,6 +2262,7 @@
                                 "variableName": "token",
                                 "scriptPath": "",
                                 "prototypeScriptPath": "",
+                                "isSingleton": null,
                                 "children": []
                             },
                             {
@@ -2160,6 +2277,7 @@
                                         "variableName": "senderHost",
                                         "scriptPath": "",
                                         "prototypeScriptPath": "",
+                                        "isSingleton": null,
                                         "children": []
                                     },
                                     {
@@ -2167,6 +2285,7 @@
                                         "variableName": "senderPort",
                                         "scriptPath": "",
                                         "prototypeScriptPath": "",
+                                        "isSingleton": null,
                                         "children": []
                                     }
                                 ]
@@ -2189,6 +2308,7 @@
                 "variableName": "timeout",
                 "scriptPath": "",
                 "prototypeScriptPath": "",
+                "isSingleton": null,
                 "children": []
             },
             {
@@ -2196,6 +2316,7 @@
                 "variableName": "factoryContainerBindingName",
                 "scriptPath": "",
                 "prototypeScriptPath": "",
+                "isSingleton": null,
                 "children": []
             },
             {
@@ -2210,6 +2331,7 @@
                         "variableName": "factoryContainerBindingName",
                         "scriptPath": "",
                         "prototypeScriptPath": "",
+                        "isSingleton": null,
                         "children": []
                     },
                     {
@@ -2243,6 +2365,7 @@
                         "variableName": "factoryContainerBindingName",
                         "scriptPath": "",
                         "prototypeScriptPath": "",
+                        "isSingleton": null,
                         "children": []
                     },
                     {
@@ -2276,6 +2399,7 @@
                         "variableName": "factoryContainerBindingName",
                         "scriptPath": "",
                         "prototypeScriptPath": "",
+                        "isSingleton": null,
                         "children": []
                     },
                     {
@@ -2309,6 +2433,7 @@
                         "variableName": "factoryContainerBindingName",
                         "scriptPath": "",
                         "prototypeScriptPath": "",
+                        "isSingleton": null,
                         "children": []
                     },
                     {
@@ -2342,6 +2467,7 @@
                         "variableName": "factoryContainerBindingName",
                         "scriptPath": "",
                         "prototypeScriptPath": "",
+                        "isSingleton": null,
                         "children": []
                     },
                     {
@@ -2375,6 +2501,7 @@
                         "variableName": "factoryContainerBindingName",
                         "scriptPath": "",
                         "prototypeScriptPath": "",
+                        "isSingleton": null,
                         "children": []
                     },
                     {
@@ -2408,6 +2535,7 @@
                         "variableName": "senderHost",
                         "scriptPath": "",
                         "prototypeScriptPath": "",
+                        "isSingleton": null,
                         "children": []
                     },
                     {
@@ -2415,6 +2543,7 @@
                         "variableName": "senderPort",
                         "scriptPath": "",
                         "prototypeScriptPath": "",
+                        "isSingleton": null,
                         "children": []
                     }
                 ]
@@ -2448,6 +2577,7 @@
                         "variableName": "factoryContainerBindingName",
                         "scriptPath": "",
                         "prototypeScriptPath": "",
+                        "isSingleton": null,
                         "children": []
                     },
                     {
@@ -2474,6 +2604,7 @@
                 "variableName": "factoryContainerBindingName",
                 "scriptPath": "",
                 "prototypeScriptPath": "",
+                "isSingleton": null,
                 "children": []
             },
             {
@@ -2488,6 +2619,7 @@
                         "variableName": "factoryContainerBindingName",
                         "scriptPath": "",
                         "prototypeScriptPath": "",
+                        "isSingleton": null,
                         "children": []
                     },
                     {
@@ -2521,6 +2653,7 @@
                         "variableName": "factoryContainerBindingName",
                         "scriptPath": "",
                         "prototypeScriptPath": "",
+                        "isSingleton": null,
                         "children": []
                     },
                     {
@@ -2554,6 +2687,7 @@
                         "variableName": "factoryContainerBindingName",
                         "scriptPath": "",
                         "prototypeScriptPath": "",
+                        "isSingleton": null,
                         "children": []
                     },
                     {
@@ -2587,6 +2721,7 @@
                         "variableName": "factoryContainerBindingName",
                         "scriptPath": "",
                         "prototypeScriptPath": "",
+                        "isSingleton": null,
                         "children": []
                     },
                     {
@@ -2620,6 +2755,7 @@
                         "variableName": "factoryContainerBindingName",
                         "scriptPath": "",
                         "prototypeScriptPath": "",
+                        "isSingleton": null,
                         "children": []
                     },
                     {
@@ -2662,6 +2798,7 @@
                         "variableName": "factoryContainerBindingName",
                         "scriptPath": "",
                         "prototypeScriptPath": "",
+                        "isSingleton": null,
                         "children": []
                     },
                     {
@@ -2697,6 +2834,7 @@
                 "variableName": "factoryContainerBindingName",
                 "scriptPath": "",
                 "prototypeScriptPath": "",
+                "isSingleton": null,
                 "children": []
             },
             {
@@ -2737,6 +2875,7 @@
                         "variableName": "factoryContainerBindingName",
                         "scriptPath": "",
                         "prototypeScriptPath": "",
+                        "isSingleton": null,
                         "children": []
                     },
                     {
@@ -2772,6 +2911,7 @@
                 "variableName": "factoryContainerBindingName",
                 "scriptPath": "",
                 "prototypeScriptPath": "",
+                "isSingleton": null,
                 "children": []
             },
             {
@@ -2805,6 +2945,7 @@
                 "variableName": "factoryContainerBindingName",
                 "scriptPath": "",
                 "prototypeScriptPath": "",
+                "isSingleton": null,
                 "children": []
             },
             {
@@ -2838,6 +2979,7 @@
                 "variableName": "factoryContainerBindingName",
                 "scriptPath": "",
                 "prototypeScriptPath": "",
+                "isSingleton": null,
                 "children": []
             },
             {
@@ -2871,6 +3013,7 @@
                 "variableName": "factoryContainerBindingName",
                 "scriptPath": "",
                 "prototypeScriptPath": "",
+                "isSingleton": null,
                 "children": []
             },
             {
@@ -2904,6 +3047,7 @@
                 "variableName": "factoryContainerBindingName",
                 "scriptPath": "",
                 "prototypeScriptPath": "",
+                "isSingleton": null,
                 "children": []
             },
             {
@@ -2944,6 +3088,7 @@
                         "variableName": "factoryContainerBindingName",
                         "scriptPath": "",
                         "prototypeScriptPath": "",
+                        "isSingleton": null,
                         "children": []
                     },
                     {
@@ -2979,6 +3124,7 @@
                 "variableName": "factoryContainerBindingName",
                 "scriptPath": "",
                 "prototypeScriptPath": "",
+                "isSingleton": null,
                 "children": []
             },
             {
@@ -3019,6 +3165,7 @@
                         "variableName": "factoryContainerBindingName",
                         "scriptPath": "",
                         "prototypeScriptPath": "",
+                        "isSingleton": null,
                         "children": []
                     },
                     {
@@ -3054,6 +3201,7 @@
                 "variableName": "factoryContainerBindingName",
                 "scriptPath": "",
                 "prototypeScriptPath": "",
+                "isSingleton": null,
                 "children": []
             },
             {
@@ -3101,6 +3249,7 @@
                                 "variableName": "messageStatusCode",
                                 "scriptPath": "",
                                 "prototypeScriptPath": "",
+                                "isSingleton": null,
                                 "children": []
                             }
                         ]
@@ -3110,6 +3259,7 @@
                         "variableName": "factoryContainerBindingName",
                         "scriptPath": "",
                         "prototypeScriptPath": "",
+                        "isSingleton": null,
                         "children": []
                     },
                     {
@@ -3117,6 +3267,7 @@
                         "variableName": "Id",
                         "scriptPath": "",
                         "prototypeScriptPath": "",
+                        "isSingleton": null,
                         "children": []
                     },
                     {
@@ -3138,6 +3289,7 @@
                                         "variableName": "factoryContainerBindingName",
                                         "scriptPath": "",
                                         "prototypeScriptPath": "",
+                                        "isSingleton": null,
                                         "children": []
                                     },
                                     {
@@ -3145,6 +3297,7 @@
                                         "variableName": "data",
                                         "scriptPath": "",
                                         "prototypeScriptPath": "",
+                                        "isSingleton": null,
                                         "children": []
                                     }
                                 ]
@@ -3154,6 +3307,7 @@
                                 "variableName": "data",
                                 "scriptPath": "",
                                 "prototypeScriptPath": "",
+                                "isSingleton": null,
                                 "children": []
                             },
                             {
@@ -3168,6 +3322,7 @@
                                         "variableName": "factoryContainerBindingName",
                                         "scriptPath": "",
                                         "prototypeScriptPath": "",
+                                        "isSingleton": null,
                                         "children": []
                                     }
                                 ]
@@ -3191,6 +3346,7 @@
                                                 "variableName": "recipientHost",
                                                 "scriptPath": "",
                                                 "prototypeScriptPath": "",
+                                                "isSingleton": null,
                                                 "children": []
                                             },
                                             {
@@ -3198,6 +3354,7 @@
                                                 "variableName": "recipientPort",
                                                 "scriptPath": "",
                                                 "prototypeScriptPath": "",
+                                                "isSingleton": null,
                                                 "children": []
                                             }
                                         ]
@@ -3207,6 +3364,7 @@
                                         "variableName": "metadata",
                                         "scriptPath": "",
                                         "prototypeScriptPath": "",
+                                        "isSingleton": null,
                                         "children": []
                                     },
                                     {
@@ -3214,6 +3372,7 @@
                                         "variableName": "token",
                                         "scriptPath": "",
                                         "prototypeScriptPath": "",
+                                        "isSingleton": null,
                                         "children": []
                                     },
                                     {
@@ -3228,6 +3387,7 @@
                                                 "variableName": "senderHost",
                                                 "scriptPath": "",
                                                 "prototypeScriptPath": "",
+                                                "isSingleton": null,
                                                 "children": []
                                             },
                                             {
@@ -3235,6 +3395,7 @@
                                                 "variableName": "senderPort",
                                                 "scriptPath": "",
                                                 "prototypeScriptPath": "",
+                                                "isSingleton": null,
                                                 "children": []
                                             }
                                         ]
@@ -3255,6 +3416,7 @@
                                 "variableName": "factoryContainerBindingName",
                                 "scriptPath": "",
                                 "prototypeScriptPath": "",
+                                "isSingleton": null,
                                 "children": []
                             },
                             {
@@ -3262,6 +3424,7 @@
                                 "variableName": "data",
                                 "scriptPath": "",
                                 "prototypeScriptPath": "",
+                                "isSingleton": null,
                                 "children": []
                             }
                         ]
@@ -3285,6 +3448,7 @@
                                         "variableName": "recipientHost",
                                         "scriptPath": "",
                                         "prototypeScriptPath": "",
+                                        "isSingleton": null,
                                         "children": []
                                     },
                                     {
@@ -3292,6 +3456,7 @@
                                         "variableName": "recipientPort",
                                         "scriptPath": "",
                                         "prototypeScriptPath": "",
+                                        "isSingleton": null,
                                         "children": []
                                     }
                                 ]
@@ -3301,6 +3466,7 @@
                                 "variableName": "metadata",
                                 "scriptPath": "",
                                 "prototypeScriptPath": "",
+                                "isSingleton": null,
                                 "children": []
                             },
                             {
@@ -3308,6 +3474,7 @@
                                 "variableName": "token",
                                 "scriptPath": "",
                                 "prototypeScriptPath": "",
+                                "isSingleton": null,
                                 "children": []
                             },
                             {
@@ -3322,6 +3489,7 @@
                                         "variableName": "senderHost",
                                         "scriptPath": "",
                                         "prototypeScriptPath": "",
+                                        "isSingleton": null,
                                         "children": []
                                     },
                                     {
@@ -3329,6 +3497,7 @@
                                         "variableName": "senderPort",
                                         "scriptPath": "",
                                         "prototypeScriptPath": "",
+                                        "isSingleton": null,
                                         "children": []
                                     }
                                 ]
@@ -3365,6 +3534,7 @@
                                 "variableName": "messageStatusCode",
                                 "scriptPath": "",
                                 "prototypeScriptPath": "",
+                                "isSingleton": null,
                                 "children": []
                             }
                         ]
@@ -3374,6 +3544,7 @@
                         "variableName": "factoryContainerBindingName",
                         "scriptPath": "",
                         "prototypeScriptPath": "",
+                        "isSingleton": null,
                         "children": []
                     },
                     {
@@ -3381,6 +3552,7 @@
                         "variableName": "Id",
                         "scriptPath": "",
                         "prototypeScriptPath": "",
+                        "isSingleton": null,
                         "children": []
                     },
                     {
@@ -3402,6 +3574,7 @@
                                         "variableName": "factoryContainerBindingName",
                                         "scriptPath": "",
                                         "prototypeScriptPath": "",
+                                        "isSingleton": null,
                                         "children": []
                                     },
                                     {
@@ -3409,6 +3582,7 @@
                                         "variableName": "data",
                                         "scriptPath": "",
                                         "prototypeScriptPath": "",
+                                        "isSingleton": null,
                                         "children": []
                                     }
                                 ]
@@ -3418,6 +3592,7 @@
                                 "variableName": "data",
                                 "scriptPath": "",
                                 "prototypeScriptPath": "",
+                                "isSingleton": null,
                                 "children": []
                             },
                             {
@@ -3432,6 +3607,7 @@
                                         "variableName": "factoryContainerBindingName",
                                         "scriptPath": "",
                                         "prototypeScriptPath": "",
+                                        "isSingleton": null,
                                         "children": []
                                     }
                                 ]
@@ -3455,6 +3631,7 @@
                                                 "variableName": "recipientHost",
                                                 "scriptPath": "",
                                                 "prototypeScriptPath": "",
+                                                "isSingleton": null,
                                                 "children": []
                                             },
                                             {
@@ -3462,6 +3639,7 @@
                                                 "variableName": "recipientPort",
                                                 "scriptPath": "",
                                                 "prototypeScriptPath": "",
+                                                "isSingleton": null,
                                                 "children": []
                                             }
                                         ]
@@ -3471,6 +3649,7 @@
                                         "variableName": "metadata",
                                         "scriptPath": "",
                                         "prototypeScriptPath": "",
+                                        "isSingleton": null,
                                         "children": []
                                     },
                                     {
@@ -3478,6 +3657,7 @@
                                         "variableName": "token",
                                         "scriptPath": "",
                                         "prototypeScriptPath": "",
+                                        "isSingleton": null,
                                         "children": []
                                     },
                                     {
@@ -3492,6 +3672,7 @@
                                                 "variableName": "senderHost",
                                                 "scriptPath": "",
                                                 "prototypeScriptPath": "",
+                                                "isSingleton": null,
                                                 "children": []
                                             },
                                             {
@@ -3499,6 +3680,7 @@
                                                 "variableName": "senderPort",
                                                 "scriptPath": "",
                                                 "prototypeScriptPath": "",
+                                                "isSingleton": null,
                                                 "children": []
                                             }
                                         ]
@@ -3519,6 +3701,7 @@
                                 "variableName": "factoryContainerBindingName",
                                 "scriptPath": "",
                                 "prototypeScriptPath": "",
+                                "isSingleton": null,
                                 "children": []
                             },
                             {
@@ -3526,6 +3709,7 @@
                                 "variableName": "data",
                                 "scriptPath": "",
                                 "prototypeScriptPath": "",
+                                "isSingleton": null,
                                 "children": []
                             }
                         ]
@@ -3549,6 +3733,7 @@
                                         "variableName": "recipientHost",
                                         "scriptPath": "",
                                         "prototypeScriptPath": "",
+                                        "isSingleton": null,
                                         "children": []
                                     },
                                     {
@@ -3556,6 +3741,7 @@
                                         "variableName": "recipientPort",
                                         "scriptPath": "",
                                         "prototypeScriptPath": "",
+                                        "isSingleton": null,
                                         "children": []
                                     }
                                 ]
@@ -3565,6 +3751,7 @@
                                 "variableName": "metadata",
                                 "scriptPath": "",
                                 "prototypeScriptPath": "",
+                                "isSingleton": null,
                                 "children": []
                             },
                             {
@@ -3572,6 +3759,7 @@
                                 "variableName": "token",
                                 "scriptPath": "",
                                 "prototypeScriptPath": "",
+                                "isSingleton": null,
                                 "children": []
                             },
                             {
@@ -3586,6 +3774,7 @@
                                         "variableName": "senderHost",
                                         "scriptPath": "",
                                         "prototypeScriptPath": "",
+                                        "isSingleton": null,
                                         "children": []
                                     },
                                     {
@@ -3593,6 +3782,7 @@
                                         "variableName": "senderPort",
                                         "scriptPath": "",
                                         "prototypeScriptPath": "",
+                                        "isSingleton": null,
                                         "children": []
                                     }
                                 ]
@@ -3622,6 +3812,7 @@
                         "variableName": "factoryContainerBindingName",
                         "scriptPath": "",
                         "prototypeScriptPath": "",
+                        "isSingleton": null,
                         "children": []
                     },
                     {
@@ -3657,6 +3848,7 @@
                 "variableName": "factoryContainerBindingName",
                 "scriptPath": "",
                 "prototypeScriptPath": "",
+                "isSingleton": null,
                 "children": []
             },
             {
@@ -3697,6 +3889,7 @@
                         "variableName": "factoryContainerBindingName",
                         "scriptPath": "",
                         "prototypeScriptPath": "",
+                        "isSingleton": null,
                         "children": []
                     },
                     {
@@ -3732,6 +3925,7 @@
                 "variableName": "factoryContainerBindingName",
                 "scriptPath": "",
                 "prototypeScriptPath": "",
+                "isSingleton": null,
                 "children": []
             },
             {

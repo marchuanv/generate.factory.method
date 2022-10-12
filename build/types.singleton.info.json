@@ -1,12 +1,198 @@
 {
-  "MessageQueue": true,
-  "UserSessions": true,
-  "MessageStore": true,
-  "MessageConverter": true,
-  "Logger": true,
-  "Message": false,
-  "HttpRequestMessage": false,
-  "HttpResponseMessage": false,
-  "WebSocketRequestMessage": false,
-  "WebSocketResponseMessage": false
+    "ClientMessageBus": {
+        "isSingleton": false,
+        "isBindingSingleton": true
+    },
+    "MessageConverter": {
+        "isSingleton": true,
+        "isBindingSingleton": true
+    },
+    "HttpClientRequestMessageBus": {
+        "isSingleton": false,
+        "isBindingSingleton": true
+    },
+    "HttpClientRequestMessageQueueBinding": {
+        "isSingleton": false,
+        "isBindingSingleton": true
+    },
+    "MessageQueue": {
+        "isSingleton": true,
+        "isBindingSingleton": true
+    },
+    "Logger": {
+        "isSingleton": true,
+        "isBindingSingleton": true
+    },
+    "HttpClientResponseMessageBus": {
+        "isSingleton": false,
+        "isBindingSingleton": true
+    },
+    "HttpClientResponseMessageQueueBinding": {
+        "isSingleton": false,
+        "isBindingSingleton": true
+    },
+    "Component": {
+        "isSingleton": false,
+        "isBindingSingleton": true
+    },
+    "ServerMessageBus": {
+        "isSingleton": false,
+        "isBindingSingleton": true
+    },
+    "HttpServerResponseMessageBus": {
+        "isSingleton": false,
+        "isBindingSingleton": true
+    },
+    "HttpServerResponseMessageQueueBinding": {
+        "isSingleton": false,
+        "isBindingSingleton": true
+    },
+    "HttpServerRequestMessageBus": {
+        "isSingleton": false,
+        "isBindingSingleton": true
+    },
+    "HttpServerRequestMessageQueueBinding": {
+        "isSingleton": false,
+        "isBindingSingleton": true
+    },
+    "UserSessions": {
+        "isSingleton": true,
+        "isBindingSingleton": true
+    },
+    "ContentType": {
+        "isSingleton": false,
+        "isBindingSingleton": false
+    },
+    "Message": {
+        "isSingleton": false,
+        "isBindingSingleton": false
+    },
+    "MessageStatus": {
+        "isSingleton": false,
+        "isBindingSingleton": false
+    },
+    "MessageContent": {
+        "isSingleton": false,
+        "isBindingSingleton": false
+    },
+    "MessageContentMetadata": {
+        "isSingleton": false,
+        "isBindingSingleton": false
+    },
+    "MessageMetadata": {
+        "isSingleton": false,
+        "isBindingSingleton": false
+    },
+    "RecipientAddress": {
+        "isSingleton": false,
+        "isBindingSingleton": false
+    },
+    "SenderAddress": {
+        "isSingleton": false,
+        "isBindingSingleton": false
+    },
+    "MessageStore": {
+        "isSingleton": true,
+        "isBindingSingleton": true
+    },
+    "UserSecurity": {
+        "isSingleton": false,
+        "isBindingSingleton": true
+    },
+    "HttpClientMessageBus": {
+        "isSingleton": false,
+        "isBindingSingleton": true
+    },
+    "HttpClientStartMessageQueueBinding": {
+        "isSingleton": false,
+        "isBindingSingleton": true
+    },
+    "HttpClientStartedMessageQueueBinding": {
+        "isSingleton": false,
+        "isBindingSingleton": true
+    },
+    "HttpClientStopMessageQueueBinding": {
+        "isSingleton": false,
+        "isBindingSingleton": true
+    },
+    "HttpClientMessageBusManager": {
+        "isSingleton": false,
+        "isBindingSingleton": true
+    },
+    "HttpClientStoppedMessageQueueBinding": {
+        "isSingleton": false,
+        "isBindingSingleton": true
+    },
+    "HttpRequestMessage": {
+        "isSingleton": false,
+        "isBindingSingleton": false
+    },
+    "HttpResponseMessage": {
+        "isSingleton": false,
+        "isBindingSingleton": false
+    },
+    "HttpServerMessageBus": {
+        "isSingleton": false,
+        "isBindingSingleton": true
+    },
+    "HttpServerStartMessageQueueBinding": {
+        "isSingleton": false,
+        "isBindingSingleton": true
+    },
+    "HttpServerStartedMessageQueueBinding": {
+        "isSingleton": false,
+        "isBindingSingleton": true
+    },
+    "HttpServerStopMessageQueueBinding": {
+        "isSingleton": false,
+        "isBindingSingleton": true
+    },
+    "HttpServerStoppedMessageQueueBinding": {
+        "isSingleton": false,
+        "isBindingSingleton": true
+    },
+    "HttpServerMessageBusManager": {
+        "isSingleton": false,
+        "isBindingSingleton": true
+    },
+    "WebSocketClientRequestMessageBus": {
+        "isSingleton": false,
+        "isBindingSingleton": true
+    },
+    "WebSocketClientRequestMessageQueueBinding": {
+        "isSingleton": false,
+        "isBindingSingleton": true
+    },
+    "WebSocketClientResponseMessageBus": {
+        "isSingleton": false,
+        "isBindingSingleton": true
+    },
+    "WebSocketClientResponseMessageQueueBinding": {
+        "isSingleton": false,
+        "isBindingSingleton": true
+    },
+    "WebSocketRequestMessage": {
+        "isSingleton": false,
+        "isBindingSingleton": false
+    },
+    "WebSocketResponseMessage": {
+        "isSingleton": false,
+        "isBindingSingleton": false
+    },
+    "WebSocketServerRequestMessageBus": {
+        "isSingleton": false,
+        "isBindingSingleton": true
+    },
+    "WebSocketServerRequestMessageQueueBinding": {
+        "isSingleton": false,
+        "isBindingSingleton": true
+    },
+    "WebSocketServerResponseMessageBus": {
+        "isSingleton": false,
+        "isBindingSingleton": true
+    },
+    "WebSocketServerResponseMessageQueueBinding": {
+        "isSingleton": false,
+        "isBindingSingleton": true
+    }
 }

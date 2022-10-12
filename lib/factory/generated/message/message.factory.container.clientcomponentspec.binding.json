@@ -6,7 +6,7 @@
     "bindingFilePath": "C://component//lib//factory//generated//message//message.factory.container.clientcomponentspec.binding.json",
     "defaultBindingName": "Default",
     "defaultBindingFilePath": "C://component//lib//factory//generated//message//message.factory.container.default.binding.json",
-    "isBindingSingleton": false,
+    "isBindingSingleton": true,
     "isSingleton": false,
     "ctorParameters": {
         "messageStatus": {

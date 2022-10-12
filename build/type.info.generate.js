@@ -10,9 +10,21 @@ const typeInfoTemplate = readFileSync(path.join(__dirname,'templates', 'type.inf
 const typesInfoPath = path.join(__dirname, 'types.info.json');
 const typesInfo = require(typesInfoPath);
 const typesMappingInfo = require(path.join(__dirname, 'types.mapping.info.json'));
-const typesSingletonInfo = require(path.join(__dirname, 'types.singleton.info.json'));
+const typesSingletonInfoFilePath = path.join(__dirname, 'types.singleton.info.json');
+const typesSingletonInfo = require(typesSingletonInfoFilePath);
 
 writeFileSync(typesInfoPath, utils.getJSONString({}), 'utf8');
+
+function isSingleton({ typeName }) {
+    return typesSingletonInfo[typeName] === undefined ? null : typesSingletonInfo[typeName].isSingleton === undefined ? null : typesSingletonInfo[typeName].isSingleton;
+}
+
+function walkDependencyTree(children, callback) {
+    for(const child of children) {
+        callback(child);
+        walkDependencyTree(child.children, callback);
+    };
+}
 
 function getDependencyTree(info, pass = 'firstpass', types = []) {
     if (!info || utils.isEmptyObject(info)) {
@@ -24,7 +36,6 @@ function getDependencyTree(info, pass = 'firstpass', types = []) {
                 const type = sc[key];
                 const scriptPath = prototypeScriptPath.replace('.prototype','');
                 const parameters = utils.getFunctionParams(type) || [];
-                const isSingleton = typesSingletonInfo[type.name];
                 const children = parameters.map(param => utils.getJSONObject(typeInfoTemplate
                     .replace(/\[TypeName\]/g, param.name)
                     .replace(/\[ScriptPath\]/g, '')
@@ -37,10 +48,11 @@ function getDependencyTree(info, pass = 'firstpass', types = []) {
                 if (!children || utils.isEmptyObject(children)) {
                     throw new Error('something went wrong with creating type information dependencies.');
                 }
+                const _isSingleton = isSingleton({ typeName: type.name });
                 info = utils.getJSONObject(typeInfoTemplate
                     .replace(/\[TypeName\]/g, type.name)
                     .replace(/\[ScriptPath\]/g, scriptPath.replace(/\\/g,'//'))
-                    .replace(/\[IsSingleton\]/g, isSingleton ? isSingleton: false)
+                    .replace(/\[IsSingleton\]/g, _isSingleton)
                     .replace(/\[PrototypeScriptPath\]/g, prototypeScriptPath.replace(/\\/g,'//'))
                     .replace(/\[ChildrenArray\]/g, children.map(child => utils.getJSONString(child)).join(','))
                     .replace(/\[PassesArray\]/g, [])
@@ -78,8 +90,7 @@ function getDependencyTree(info, pass = 'firstpass', types = []) {
                 if (mappedKey) {
                     child.typeName = typesMappingInfo[mappedKey];
                 }
-                const isSingleton = typesSingletonInfo[child.typeName];
-                child.isSingleton = isSingleton;
+                child.isSingleton = isSingleton({ typeName: child.typeName });
                 let refChild = types.filter(inf => 
                     inf.typeName.toLowerCase() === child.typeName.toLowerCase() &&
                     inf.prototypeScriptPath
@@ -107,6 +118,19 @@ function getDependencyTree(info, pass = 'firstpass', types = []) {
     info.passes.push(pass);
     return getDependencyTree(null, pass, types);
 }
+
+const depTree = getDependencyTree();
+walkDependencyTree(depTree, (info) => {
+    if (info.scriptPath) {
+        if (typesSingletonInfo[info.typeName] === undefined) {
+            typesSingletonInfo[info.typeName] = {
+                isSingleton: false,
+                isBindingSingleton: true
+            };
+        }
+    }
+});
+
 for(const info of getDependencyTree()) {
     if (!info.prototypeScriptPath) {
         continue;
@@ -114,4 +138,6 @@ for(const info of getDependencyTree()) {
     typesInfo[info.typeName] = {};
     typesInfo[info.typeName] = utils.getJSONObject(utils.getJSONString(info)); //Clone
 };
+
+writeFileSync(typesSingletonInfoFilePath, utils.getJSONString(typesSingletonInfo), 'utf8');
 writeFileSync(typesInfoPath, utils.getJSONString(typesInfo), 'utf8');
