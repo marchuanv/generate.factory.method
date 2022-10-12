@@ -11,6 +11,7 @@
     "ctorParameters": {
         "httpServerRequestMessageQueueBinding": {
             "bindingFilePath": "C://component//lib//factory//generated//httpserverrequestmessagequeuebinding//httpserverrequestmessagequeuebinding.factory.container.default.binding.json"
-        }
+        },
+        "factoryContainerBindingName": null
     }
 }

@@ -557,7 +557,8 @@
         "isBindingSingleton": true,
         "isSingleton": false,
         "ctorParametersInfo": {
-            "httpServerRequestMessageQueueBinding": "HttpServerRequestMessageQueueBinding"
+            "httpServerRequestMessageQueueBinding": "HttpServerRequestMessageQueueBinding",
+            "factoryContainerBindingName": null
         }
     },
     {
@@ -1400,7 +1401,8 @@
         "isBindingSingleton": true,
         "isSingleton": false,
         "ctorParametersInfo": {
-            "httpServerRequestMessageQueueBinding": "HttpServerRequestMessageQueueBinding"
+            "httpServerRequestMessageQueueBinding": "HttpServerRequestMessageQueueBinding",
+            "factoryContainerBindingName": null
         }
     },
     {
@@ -2243,7 +2245,8 @@
         "isBindingSingleton": true,
         "isSingleton": false,
         "ctorParametersInfo": {
-            "httpServerRequestMessageQueueBinding": "HttpServerRequestMessageQueueBinding"
+            "httpServerRequestMessageQueueBinding": "HttpServerRequestMessageQueueBinding",
+            "factoryContainerBindingName": null
         }
     },
     {
@@ -3086,7 +3089,8 @@
         "isBindingSingleton": true,
         "isSingleton": false,
         "ctorParametersInfo": {
-            "httpServerRequestMessageQueueBinding": "HttpServerRequestMessageQueueBinding"
+            "httpServerRequestMessageQueueBinding": "HttpServerRequestMessageQueueBinding",
+            "factoryContainerBindingName": null
         }
     },
     {
@@ -3929,7 +3933,8 @@
         "isBindingSingleton": true,
         "isSingleton": false,
         "ctorParametersInfo": {
-            "httpServerRequestMessageQueueBinding": "HttpServerRequestMessageQueueBinding"
+            "httpServerRequestMessageQueueBinding": "HttpServerRequestMessageQueueBinding",
+            "factoryContainerBindingName": null
         }
     },
     {
@@ -4772,7 +4777,8 @@
         "isBindingSingleton": true,
         "isSingleton": false,
         "ctorParametersInfo": {
-            "httpServerRequestMessageQueueBinding": "HttpServerRequestMessageQueueBinding"
+            "httpServerRequestMessageQueueBinding": "HttpServerRequestMessageQueueBinding",
+            "factoryContainerBindingName": null
         }
     },
     {
@@ -5615,7 +5621,8 @@
         "isBindingSingleton": true,
         "isSingleton": false,
         "ctorParametersInfo": {
-            "httpServerRequestMessageQueueBinding": "HttpServerRequestMessageQueueBinding"
+            "httpServerRequestMessageQueueBinding": "HttpServerRequestMessageQueueBinding",
+            "factoryContainerBindingName": null
         }
     },
     {
@@ -6458,7 +6465,8 @@
         "isBindingSingleton": true,
         "isSingleton": false,
         "ctorParametersInfo": {
-            "httpServerRequestMessageQueueBinding": "HttpServerRequestMessageQueueBinding"
+            "httpServerRequestMessageQueueBinding": "HttpServerRequestMessageQueueBinding",
+            "factoryContainerBindingName": null
         }
     },
     {
@@ -7301,7 +7309,8 @@
         "isBindingSingleton": true,
         "isSingleton": false,
         "ctorParametersInfo": {
-            "httpServerRequestMessageQueueBinding": "HttpServerRequestMessageQueueBinding"
+            "httpServerRequestMessageQueueBinding": "HttpServerRequestMessageQueueBinding",
+            "factoryContainerBindingName": null
         }
     },
     {

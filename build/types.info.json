@@ -369,6 +369,14 @@
                                         ]
                                     }
                                 ]
+                            },
+                            {
+                                "typeName": "factoryContainerBindingName",
+                                "variableName": "factoryContainerBindingName",
+                                "scriptPath": "",
+                                "prototypeScriptPath": "",
+                                "isSingleton": null,
+                                "children": []
                             }
                         ]
                     }
@@ -1144,6 +1152,14 @@
                                 ]
                             }
                         ]
+                    },
+                    {
+                        "typeName": "factoryContainerBindingName",
+                        "variableName": "factoryContainerBindingName",
+                        "scriptPath": "",
+                        "prototypeScriptPath": "",
+                        "isSingleton": null,
+                        "children": []
                     }
                 ]
             }
@@ -2888,6 +2904,14 @@
                         ]
                     }
                 ]
+            },
+            {
+                "typeName": "factoryContainerBindingName",
+                "variableName": "factoryContainerBindingName",
+                "scriptPath": "",
+                "prototypeScriptPath": "",
+                "isSingleton": null,
+                "children": []
             }
         ]
     },
