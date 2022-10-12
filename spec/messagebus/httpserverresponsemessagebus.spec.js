@@ -51,11 +51,11 @@ describe("when an http server response messagebus publishes and http response me
         const metadata = { path: `/${factoryContainerBindingName}` };
         const expectedDecryptedClientText = `${factoryContainerBindingName}: Hello From Client`;
         const expectedDecryptedServerText = `${factoryContainerBindingName}: Hello From Server`;
-        const { httpClientRequestMessageBus } = createHttpClientRequestMessageBus({ factoryContainerBindingName });
-        const { httpClientResponseMessageBus } = createHttpClientResponseMessageBus({ factoryContainerBindingName });
-        const { httpServerResponseMessageBus } = createHttpServerResponseMessageBus({ factoryContainerBindingName });
+        const { clientRequestMessageBus } = createHttpClientRequestMessageBus({ factoryContainerBindingName });
+        const { clientResponseMessageBus } = createHttpClientResponseMessageBus({ factoryContainerBindingName });
+        const { serverResponseMessageBus } = createHttpServerResponseMessageBus({ factoryContainerBindingName });
 
-        httpClientRequestMessageBus.publish(createHttpRequestMessage({
+        clientRequestMessageBus.publish(createHttpRequestMessage({
             factoryContainerBindingName,
             messageStatusCode: 2, //pending
             Id: null,
@@ -69,7 +69,7 @@ describe("when an http server response messagebus publishes and http response me
         }));
 
         // Act
-        httpServerResponseMessageBus.publish(createHttpResponseMessage({
+        clientResponseMessageBus.publish(createHttpResponseMessage({
             factoryContainerBindingName,
             messageStatusCode: 0, //success
             Id: null,
@@ -83,7 +83,7 @@ describe("when an http server response messagebus publishes and http response me
         }));
     
         // Assert
-        httpClientResponseMessageBus.subscribe({ callback: ({ httpResponseMessage }) => {
+        serverResponseMessageBus.subscribe({ callback: ({ httpResponseMessage }) => {
             expect(httpResponseMessage).not.toBeNull();
             expect(httpResponseMessage).not.toBeUndefined();
             const { text } = httpResponseMessage.getDecryptedContent();

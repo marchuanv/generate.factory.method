@@ -1,32 +1,32 @@
 {
     "typeName": "HttpServerMessageBusManager",
     "typeVariableName": "httpServerMessageBusManager",
-    "scriptPath": "C://component//lib//http//httpservermessagebusmanager.js",
+    "scriptPath": "D://component//lib//http//httpservermessagebusmanager.js",
     "bindingName": "UserSecuritySpec",
-    "bindingFilePath": "C://component//lib//factory//generated//httpservermessagebusmanager//httpservermessagebusmanager.factory.container.usersecurityspec.binding.json",
+    "bindingFilePath": "D://component//lib//factory//generated//httpservermessagebusmanager//httpservermessagebusmanager.factory.container.usersecurityspec.binding.json",
     "defaultBindingName": "Default",
-    "defaultBindingFilePath": "C://component//lib//factory//generated//httpservermessagebusmanager//httpservermessagebusmanager.factory.container.default.binding.json",
+    "defaultBindingFilePath": "D://component//lib//factory//generated//httpservermessagebusmanager//httpservermessagebusmanager.factory.container.default.binding.json",
     "isBindingSingleton": true,
     "isSingleton": false,
     "ctorParameters": {
         "httpServerStoppedMessageQueueBinding": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpserverstoppedmessagequeuebinding//httpserverstoppedmessagequeuebinding.factory.container.usersecurityspec.binding.json"
+            "bindingFilePath": "D://component//lib//factory//generated//httpserverstoppedmessagequeuebinding//httpserverstoppedmessagequeuebinding.factory.container.usersecurityspec.binding.json"
         },
         "factoryContainerBindingName": null,
         "httpServerRequestMessageQueueBinding": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpserverrequestmessagequeuebinding//httpserverrequestmessagequeuebinding.factory.container.usersecurityspec.binding.json"
+            "bindingFilePath": "D://component//lib//factory//generated//httpserverrequestmessagequeuebinding//httpserverrequestmessagequeuebinding.factory.container.usersecurityspec.binding.json"
         },
         "httpServerResponseMessageQueueBinding": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpserverresponsemessagequeuebinding//httpserverresponsemessagequeuebinding.factory.container.usersecurityspec.binding.json"
+            "bindingFilePath": "D://component//lib//factory//generated//httpserverresponsemessagequeuebinding//httpserverresponsemessagequeuebinding.factory.container.usersecurityspec.binding.json"
         },
         "httpServerStartMessageQueueBinding": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpserverstartmessagequeuebinding//httpserverstartmessagequeuebinding.factory.container.usersecurityspec.binding.json"
+            "bindingFilePath": "D://component//lib//factory//generated//httpserverstartmessagequeuebinding//httpserverstartmessagequeuebinding.factory.container.usersecurityspec.binding.json"
         },
         "httpServerStartedMessageQueueBinding": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpserverstartedmessagequeuebinding//httpserverstartedmessagequeuebinding.factory.container.usersecurityspec.binding.json"
+            "bindingFilePath": "D://component//lib//factory//generated//httpserverstartedmessagequeuebinding//httpserverstartedmessagequeuebinding.factory.container.usersecurityspec.binding.json"
         },
         "httpServerStopMessageQueueBinding": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.container.usersecurityspec.binding.json"
+            "bindingFilePath": "D://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.container.usersecurityspec.binding.json"
         }
     }
 }

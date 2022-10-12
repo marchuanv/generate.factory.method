@@ -1,22 +1,22 @@
 {
     "typeName": "ServerMessageBus",
     "typeVariableName": "serverMessageBus",
-    "scriptPath": "C://component//lib//servermessagebus.js",
+    "scriptPath": "D://component//lib//servermessagebus.js",
     "bindingName": "HttpServerResponseMessageBusSpec",
-    "bindingFilePath": "C://component//lib//factory//generated//servermessagebus//servermessagebus.factory.container.httpserverresponsemessagebusspec.binding.json",
+    "bindingFilePath": "D://component//lib//factory//generated//servermessagebus//servermessagebus.factory.container.httpserverresponsemessagebusspec.binding.json",
     "defaultBindingName": "Default",
-    "defaultBindingFilePath": "C://component//lib//factory//generated//servermessagebus//servermessagebus.factory.container.default.binding.json",
+    "defaultBindingFilePath": "D://component//lib//factory//generated//servermessagebus//servermessagebus.factory.container.default.binding.json",
     "isBindingSingleton": true,
     "isSingleton": false,
     "ctorParameters": {
         "messageConverter": {
-            "bindingFilePath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.httpserverresponsemessagebusspec.binding.json"
+            "bindingFilePath": "D://component//lib//factory//generated//messageconverter//messageconverter.factory.container.httpserverresponsemessagebusspec.binding.json"
         },
         "serverResponseMessageBus": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpserverresponsemessagebus//httpserverresponsemessagebus.factory.container.httpserverresponsemessagebusspec.binding.json"
+            "bindingFilePath": "D://component//lib//factory//generated//httpserverresponsemessagebus//httpserverresponsemessagebus.factory.container.httpserverresponsemessagebusspec.binding.json"
         },
         "serverRequestMessageBus": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpserverrequestmessagebus//httpserverrequestmessagebus.factory.container.httpserverresponsemessagebusspec.binding.json"
+            "bindingFilePath": "D://component//lib//factory//generated//httpserverrequestmessagebus//httpserverrequestmessagebus.factory.container.httpserverresponsemessagebusspec.binding.json"
         }
     }
 }

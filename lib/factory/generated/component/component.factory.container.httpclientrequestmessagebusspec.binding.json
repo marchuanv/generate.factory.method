@@ -1,24 +1,24 @@
 {
     "typeName": "Component",
     "typeVariableName": "component",
-    "scriptPath": "C://component//lib//component.js",
+    "scriptPath": "D://component//lib//component.js",
     "bindingName": "HttpClientRequestMessageBusSpec",
-    "bindingFilePath": "C://component//lib//factory//generated//component//component.factory.container.httpclientrequestmessagebusspec.binding.json",
+    "bindingFilePath": "D://component//lib//factory//generated//component//component.factory.container.httpclientrequestmessagebusspec.binding.json",
     "defaultBindingName": "Default",
-    "defaultBindingFilePath": "C://component//lib//factory//generated//component//component.factory.container.default.binding.json",
+    "defaultBindingFilePath": "D://component//lib//factory//generated//component//component.factory.container.default.binding.json",
     "isBindingSingleton": true,
     "isSingleton": false,
     "ctorParameters": {
         "packageJson": null,
         "factoryContainerBindingName": null,
         "clientMessageBus": {
-            "bindingFilePath": "C://component//lib//factory//generated//clientmessagebus//clientmessagebus.factory.container.httpclientrequestmessagebusspec.binding.json"
+            "bindingFilePath": "D://component//lib//factory//generated//clientmessagebus//clientmessagebus.factory.container.httpclientrequestmessagebusspec.binding.json"
         },
         "serverMessageBus": {
-            "bindingFilePath": "C://component//lib//factory//generated//servermessagebus//servermessagebus.factory.container.httpclientrequestmessagebusspec.binding.json"
+            "bindingFilePath": "D://component//lib//factory//generated//servermessagebus//servermessagebus.factory.container.httpclientrequestmessagebusspec.binding.json"
         },
         "userSessions": {
-            "bindingFilePath": "C://component//lib//factory//generated//usersessions//usersessions.factory.container.httpclientrequestmessagebusspec.binding.json"
+            "bindingFilePath": "D://component//lib//factory//generated//usersessions//usersessions.factory.container.httpclientrequestmessagebusspec.binding.json"
         }
     }
 }

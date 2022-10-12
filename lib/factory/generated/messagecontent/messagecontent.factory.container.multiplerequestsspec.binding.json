@@ -1,23 +1,23 @@
 {
     "typeName": "MessageContent",
     "typeVariableName": "messageContent",
-    "scriptPath": "C://component//lib//messagecontent.js",
+    "scriptPath": "D://component//lib//messagecontent.js",
     "bindingName": "MultipleRequestsSpec",
-    "bindingFilePath": "C://component//lib//factory//generated//messagecontent//messagecontent.factory.container.multiplerequestsspec.binding.json",
+    "bindingFilePath": "D://component//lib//factory//generated//messagecontent//messagecontent.factory.container.multiplerequestsspec.binding.json",
     "defaultBindingName": "Default",
-    "defaultBindingFilePath": "C://component//lib//factory//generated//messagecontent//messagecontent.factory.container.default.binding.json",
+    "defaultBindingFilePath": "D://component//lib//factory//generated//messagecontent//messagecontent.factory.container.default.binding.json",
     "isBindingSingleton": false,
     "isSingleton": false,
     "ctorParameters": {
         "messageContentMetadata": {
-            "bindingFilePath": "C://component//lib//factory//generated//messagecontentmetadata//messagecontentmetadata.factory.container.multiplerequestsspec.binding.json"
+            "bindingFilePath": "D://component//lib//factory//generated//messagecontentmetadata//messagecontentmetadata.factory.container.multiplerequestsspec.binding.json"
         },
         "data": null,
         "userSessions": {
-            "bindingFilePath": "C://component//lib//factory//generated//usersessions//usersessions.factory.container.multiplerequestsspec.binding.json"
+            "bindingFilePath": "D://component//lib//factory//generated//usersessions//usersessions.factory.container.multiplerequestsspec.binding.json"
         },
         "messageMetadata": {
-            "bindingFilePath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.multiplerequestsspec.binding.json"
+            "bindingFilePath": "D://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.multiplerequestsspec.binding.json"
         }
     }
 }

@@ -1,16 +1,16 @@
 {
     "typeName": "HttpServerResponseMessageBus",
     "typeVariableName": "serverResponseMessageBus",
-    "scriptPath": "C://component//lib//http//httpserverresponsemessagebus.js",
+    "scriptPath": "D://component//lib//http//httpserverresponsemessagebus.js",
     "bindingName": "ClientComponentSpec",
-    "bindingFilePath": "C://component//lib//factory//generated//httpserverresponsemessagebus//httpserverresponsemessagebus.factory.container.clientcomponentspec.binding.json",
+    "bindingFilePath": "D://component//lib//factory//generated//httpserverresponsemessagebus//httpserverresponsemessagebus.factory.container.clientcomponentspec.binding.json",
     "defaultBindingName": "Default",
-    "defaultBindingFilePath": "C://component//lib//factory//generated//httpserverresponsemessagebus//httpserverresponsemessagebus.factory.container.default.binding.json",
+    "defaultBindingFilePath": "D://component//lib//factory//generated//httpserverresponsemessagebus//httpserverresponsemessagebus.factory.container.default.binding.json",
     "isBindingSingleton": true,
     "isSingleton": false,
     "ctorParameters": {
         "httpServerResponseMessageQueueBinding": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpserverresponsemessagequeuebinding//httpserverresponsemessagequeuebinding.factory.container.clientcomponentspec.binding.json"
+            "bindingFilePath": "D://component//lib//factory//generated//httpserverresponsemessagequeuebinding//httpserverresponsemessagequeuebinding.factory.container.clientcomponentspec.binding.json"
         }
     }
 }

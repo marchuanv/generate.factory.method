@@ -1,11 +1,11 @@
 {
     "typeName": "RecipientAddress",
     "typeVariableName": "recipientAddress",
-    "scriptPath": "C://component//lib//recipientaddress.js",
+    "scriptPath": "D://component//lib//recipientaddress.js",
     "bindingName": "UserSecuritySpec",
-    "bindingFilePath": "C://component//lib//factory//generated//recipientaddress//recipientaddress.factory.container.usersecurityspec.binding.json",
+    "bindingFilePath": "D://component//lib//factory//generated//recipientaddress//recipientaddress.factory.container.usersecurityspec.binding.json",
     "defaultBindingName": "Default",
-    "defaultBindingFilePath": "C://component//lib//factory//generated//recipientaddress//recipientaddress.factory.container.default.binding.json",
+    "defaultBindingFilePath": "D://component//lib//factory//generated//recipientaddress//recipientaddress.factory.container.default.binding.json",
     "isBindingSingleton": false,
     "isSingleton": false,
     "ctorParameters": {

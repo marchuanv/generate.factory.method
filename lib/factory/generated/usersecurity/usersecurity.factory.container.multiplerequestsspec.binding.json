@@ -1,11 +1,11 @@
 {
     "typeName": "UserSecurity",
     "typeVariableName": "userSecurity",
-    "scriptPath": "C://component//lib//usersecurity.js",
+    "scriptPath": "D://component//lib//usersecurity.js",
     "bindingName": "MultipleRequestsSpec",
-    "bindingFilePath": "C://component//lib//factory//generated//usersecurity//usersecurity.factory.container.multiplerequestsspec.binding.json",
+    "bindingFilePath": "D://component//lib//factory//generated//usersecurity//usersecurity.factory.container.multiplerequestsspec.binding.json",
     "defaultBindingName": "Default",
-    "defaultBindingFilePath": "C://component//lib//factory//generated//usersecurity//usersecurity.factory.container.default.binding.json",
+    "defaultBindingFilePath": "D://component//lib//factory//generated//usersecurity//usersecurity.factory.container.default.binding.json",
     "isBindingSingleton": true,
     "isSingleton": false,
     "ctorParameters": {

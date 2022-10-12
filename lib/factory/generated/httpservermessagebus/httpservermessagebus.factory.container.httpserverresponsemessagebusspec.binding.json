@@ -1,39 +1,39 @@
 {
     "typeName": "HttpServerMessageBus",
     "typeVariableName": "httpServerMessageBus",
-    "scriptPath": "C://component//lib//http//httpservermessagebus.js",
+    "scriptPath": "D://component//lib//http//httpservermessagebus.js",
     "bindingName": "HttpServerResponseMessageBusSpec",
-    "bindingFilePath": "C://component//lib//factory//generated//httpservermessagebus//httpservermessagebus.factory.container.httpserverresponsemessagebusspec.binding.json",
+    "bindingFilePath": "D://component//lib//factory//generated//httpservermessagebus//httpservermessagebus.factory.container.httpserverresponsemessagebusspec.binding.json",
     "defaultBindingName": "Default",
-    "defaultBindingFilePath": "C://component//lib//factory//generated//httpservermessagebus//httpservermessagebus.factory.container.default.binding.json",
+    "defaultBindingFilePath": "D://component//lib//factory//generated//httpservermessagebus//httpservermessagebus.factory.container.default.binding.json",
     "isBindingSingleton": true,
     "isSingleton": false,
     "ctorParameters": {
         "timeout": null,
         "factoryContainerBindingName": null,
         "httpServerRequestMessageQueueBinding": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpserverrequestmessagequeuebinding//httpserverrequestmessagequeuebinding.factory.container.httpserverresponsemessagebusspec.binding.json"
+            "bindingFilePath": "D://component//lib//factory//generated//httpserverrequestmessagequeuebinding//httpserverrequestmessagequeuebinding.factory.container.httpserverresponsemessagebusspec.binding.json"
         },
         "httpServerResponseMessageQueueBinding": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpserverresponsemessagequeuebinding//httpserverresponsemessagequeuebinding.factory.container.httpserverresponsemessagebusspec.binding.json"
+            "bindingFilePath": "D://component//lib//factory//generated//httpserverresponsemessagequeuebinding//httpserverresponsemessagequeuebinding.factory.container.httpserverresponsemessagebusspec.binding.json"
         },
         "httpServerStartMessageQueueBinding": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpserverstartmessagequeuebinding//httpserverstartmessagequeuebinding.factory.container.httpserverresponsemessagebusspec.binding.json"
+            "bindingFilePath": "D://component//lib//factory//generated//httpserverstartmessagequeuebinding//httpserverstartmessagequeuebinding.factory.container.httpserverresponsemessagebusspec.binding.json"
         },
         "httpServerStartedMessageQueueBinding": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpserverstartedmessagequeuebinding//httpserverstartedmessagequeuebinding.factory.container.httpserverresponsemessagebusspec.binding.json"
+            "bindingFilePath": "D://component//lib//factory//generated//httpserverstartedmessagequeuebinding//httpserverstartedmessagequeuebinding.factory.container.httpserverresponsemessagebusspec.binding.json"
         },
         "httpServerStopMessageQueueBinding": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.container.httpserverresponsemessagebusspec.binding.json"
+            "bindingFilePath": "D://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.container.httpserverresponsemessagebusspec.binding.json"
         },
         "httpServerStoppedMessageQueueBinding": {
-            "bindingFilePath": "C://component//lib//factory//generated//httpserverstoppedmessagequeuebinding//httpserverstoppedmessagequeuebinding.factory.container.httpserverresponsemessagebusspec.binding.json"
+            "bindingFilePath": "D://component//lib//factory//generated//httpserverstoppedmessagequeuebinding//httpserverstoppedmessagequeuebinding.factory.container.httpserverresponsemessagebusspec.binding.json"
         },
         "senderAddress": {
-            "bindingFilePath": "C://component//lib//factory//generated//senderaddress//senderaddress.factory.container.httpserverresponsemessagebusspec.binding.json"
+            "bindingFilePath": "D://component//lib//factory//generated//senderaddress//senderaddress.factory.container.httpserverresponsemessagebusspec.binding.json"
         },
         "logger": {
-            "bindingFilePath": "C://component//lib//factory//generated//logger//logger.factory.container.httpserverresponsemessagebusspec.binding.json"
+            "bindingFilePath": "D://component//lib//factory//generated//logger//logger.factory.container.httpserverresponsemessagebusspec.binding.json"
         }
     }
 }
