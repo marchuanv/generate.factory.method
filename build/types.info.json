@@ -11,8 +11,17 @@
                 "variableName": "messageConverter",
                 "scriptPath": "C://component//lib//messageconverter.js",
                 "prototypeScriptPath": "C://component//lib//messageconverter.prototype.js",
-                "isSingleton": true,
-                "children": []
+                "isSingleton": false,
+                "children": [
+                    {
+                        "typeName": "factoryContainerBindingName",
+                        "variableName": "factoryContainerBindingName",
+                        "scriptPath": "",
+                        "prototypeScriptPath": "",
+                        "isSingleton": null,
+                        "children": []
+                    }
+                ]
             },
             {
                 "typeName": "HttpClientRequestMessageBus",
@@ -97,6 +106,14 @@
                                 ]
                             }
                         ]
+                    },
+                    {
+                        "typeName": "factoryContainerBindingName",
+                        "variableName": "factoryContainerBindingName",
+                        "scriptPath": "",
+                        "prototypeScriptPath": "",
+                        "isSingleton": null,
+                        "children": []
                     }
                 ]
             }
@@ -137,8 +154,17 @@
                         "variableName": "messageConverter",
                         "scriptPath": "C://component//lib//messageconverter.js",
                         "prototypeScriptPath": "C://component//lib//messageconverter.prototype.js",
-                        "isSingleton": true,
-                        "children": []
+                        "isSingleton": false,
+                        "children": [
+                            {
+                                "typeName": "factoryContainerBindingName",
+                                "variableName": "factoryContainerBindingName",
+                                "scriptPath": "",
+                                "prototypeScriptPath": "",
+                                "isSingleton": null,
+                                "children": []
+                            }
+                        ]
                     },
                     {
                         "typeName": "HttpClientRequestMessageBus",
@@ -223,6 +249,14 @@
                                         ]
                                     }
                                 ]
+                            },
+                            {
+                                "typeName": "factoryContainerBindingName",
+                                "variableName": "factoryContainerBindingName",
+                                "scriptPath": "",
+                                "prototypeScriptPath": "",
+                                "isSingleton": null,
+                                "children": []
                             }
                         ]
                     }
@@ -240,8 +274,17 @@
                         "variableName": "messageConverter",
                         "scriptPath": "C://component//lib//messageconverter.js",
                         "prototypeScriptPath": "C://component//lib//messageconverter.prototype.js",
-                        "isSingleton": true,
-                        "children": []
+                        "isSingleton": false,
+                        "children": [
+                            {
+                                "typeName": "factoryContainerBindingName",
+                                "variableName": "factoryContainerBindingName",
+                                "scriptPath": "",
+                                "prototypeScriptPath": "",
+                                "isSingleton": null,
+                                "children": []
+                            }
+                        ]
                     },
                     {
                         "typeName": "HttpServerResponseMessageBus",
@@ -815,8 +858,17 @@
         "variableName": "messageConverter",
         "scriptPath": "C://component//lib//messageconverter.js",
         "prototypeScriptPath": "C://component//lib//messageconverter.prototype.js",
-        "isSingleton": true,
-        "children": []
+        "isSingleton": false,
+        "children": [
+            {
+                "typeName": "factoryContainerBindingName",
+                "variableName": "factoryContainerBindingName",
+                "scriptPath": "",
+                "prototypeScriptPath": "",
+                "isSingleton": null,
+                "children": []
+            }
+        ]
     },
     "MessageMetadata": {
         "typeName": "MessageMetadata",
@@ -997,8 +1049,17 @@
                 "variableName": "messageConverter",
                 "scriptPath": "C://component//lib//messageconverter.js",
                 "prototypeScriptPath": "C://component//lib//messageconverter.prototype.js",
-                "isSingleton": true,
-                "children": []
+                "isSingleton": false,
+                "children": [
+                    {
+                        "typeName": "factoryContainerBindingName",
+                        "variableName": "factoryContainerBindingName",
+                        "scriptPath": "",
+                        "prototypeScriptPath": "",
+                        "isSingleton": null,
+                        "children": []
+                    }
+                ]
             },
             {
                 "typeName": "HttpServerResponseMessageBus",
@@ -1553,6 +1614,14 @@
                         ]
                     }
                 ]
+            },
+            {
+                "typeName": "factoryContainerBindingName",
+                "variableName": "factoryContainerBindingName",
+                "scriptPath": "",
+                "prototypeScriptPath": "",
+                "isSingleton": null,
+                "children": []
             }
         ]
     },

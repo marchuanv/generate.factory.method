@@ -135,8 +135,10 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": true,
-        "ctorParametersInfo": {}
+        "isSingleton": false,
+        "ctorParametersInfo": {
+            "factoryContainerBindingName": null
+        }
     },
     {
         "typeName": "MessageMetadata",
@@ -374,7 +376,8 @@
         "isBindingSingleton": true,
         "isSingleton": false,
         "ctorParametersInfo": {
-            "httpClientResponseMessageQueueBinding": "HttpClientResponseMessageQueueBinding"
+            "httpClientResponseMessageQueueBinding": "HttpClientResponseMessageQueueBinding",
+            "factoryContainerBindingName": null
         }
     },
     {
@@ -975,8 +978,10 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": true,
-        "ctorParametersInfo": {}
+        "isSingleton": false,
+        "ctorParametersInfo": {
+            "factoryContainerBindingName": null
+        }
     },
     {
         "typeName": "MessageMetadata",
@@ -1214,7 +1219,8 @@
         "isBindingSingleton": true,
         "isSingleton": false,
         "ctorParametersInfo": {
-            "httpClientResponseMessageQueueBinding": "HttpClientResponseMessageQueueBinding"
+            "httpClientResponseMessageQueueBinding": "HttpClientResponseMessageQueueBinding",
+            "factoryContainerBindingName": null
         }
     },
     {
@@ -1815,8 +1821,10 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": true,
-        "ctorParametersInfo": {}
+        "isSingleton": false,
+        "ctorParametersInfo": {
+            "factoryContainerBindingName": null
+        }
     },
     {
         "typeName": "MessageMetadata",
@@ -2054,7 +2062,8 @@
         "isBindingSingleton": true,
         "isSingleton": false,
         "ctorParametersInfo": {
-            "httpClientResponseMessageQueueBinding": "HttpClientResponseMessageQueueBinding"
+            "httpClientResponseMessageQueueBinding": "HttpClientResponseMessageQueueBinding",
+            "factoryContainerBindingName": null
         }
     },
     {
@@ -2655,8 +2664,10 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": true,
-        "ctorParametersInfo": {}
+        "isSingleton": false,
+        "ctorParametersInfo": {
+            "factoryContainerBindingName": null
+        }
     },
     {
         "typeName": "MessageMetadata",
@@ -2894,7 +2905,8 @@
         "isBindingSingleton": true,
         "isSingleton": false,
         "ctorParametersInfo": {
-            "httpClientResponseMessageQueueBinding": "HttpClientResponseMessageQueueBinding"
+            "httpClientResponseMessageQueueBinding": "HttpClientResponseMessageQueueBinding",
+            "factoryContainerBindingName": null
         }
     },
     {
@@ -3495,8 +3507,10 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": true,
-        "ctorParametersInfo": {}
+        "isSingleton": false,
+        "ctorParametersInfo": {
+            "factoryContainerBindingName": null
+        }
     },
     {
         "typeName": "MessageMetadata",
@@ -3734,7 +3748,8 @@
         "isBindingSingleton": true,
         "isSingleton": false,
         "ctorParametersInfo": {
-            "httpClientResponseMessageQueueBinding": "HttpClientResponseMessageQueueBinding"
+            "httpClientResponseMessageQueueBinding": "HttpClientResponseMessageQueueBinding",
+            "factoryContainerBindingName": null
         }
     },
     {
@@ -4335,8 +4350,10 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": true,
-        "ctorParametersInfo": {}
+        "isSingleton": false,
+        "ctorParametersInfo": {
+            "factoryContainerBindingName": null
+        }
     },
     {
         "typeName": "MessageMetadata",
@@ -4574,7 +4591,8 @@
         "isBindingSingleton": true,
         "isSingleton": false,
         "ctorParametersInfo": {
-            "httpClientResponseMessageQueueBinding": "HttpClientResponseMessageQueueBinding"
+            "httpClientResponseMessageQueueBinding": "HttpClientResponseMessageQueueBinding",
+            "factoryContainerBindingName": null
         }
     },
     {
@@ -5175,8 +5193,10 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": true,
-        "ctorParametersInfo": {}
+        "isSingleton": false,
+        "ctorParametersInfo": {
+            "factoryContainerBindingName": null
+        }
     },
     {
         "typeName": "MessageMetadata",
@@ -5414,7 +5434,8 @@
         "isBindingSingleton": true,
         "isSingleton": false,
         "ctorParametersInfo": {
-            "httpClientResponseMessageQueueBinding": "HttpClientResponseMessageQueueBinding"
+            "httpClientResponseMessageQueueBinding": "HttpClientResponseMessageQueueBinding",
+            "factoryContainerBindingName": null
         }
     },
     {
@@ -6015,8 +6036,10 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": true,
-        "ctorParametersInfo": {}
+        "isSingleton": false,
+        "ctorParametersInfo": {
+            "factoryContainerBindingName": null
+        }
     },
     {
         "typeName": "MessageMetadata",
@@ -6254,7 +6277,8 @@
         "isBindingSingleton": true,
         "isSingleton": false,
         "ctorParametersInfo": {
-            "httpClientResponseMessageQueueBinding": "HttpClientResponseMessageQueueBinding"
+            "httpClientResponseMessageQueueBinding": "HttpClientResponseMessageQueueBinding",
+            "factoryContainerBindingName": null
         }
     },
     {
@@ -6855,8 +6879,10 @@
         "defaultBindingName": "Default",
         "defaultBindingFilePath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.default.binding.json",
         "isBindingSingleton": true,
-        "isSingleton": true,
-        "ctorParametersInfo": {}
+        "isSingleton": false,
+        "ctorParametersInfo": {
+            "factoryContainerBindingName": null
+        }
     },
     {
         "typeName": "MessageMetadata",
@@ -7094,7 +7120,8 @@
         "isBindingSingleton": true,
         "isSingleton": false,
         "ctorParametersInfo": {
-            "httpClientResponseMessageQueueBinding": "HttpClientResponseMessageQueueBinding"
+            "httpClientResponseMessageQueueBinding": "HttpClientResponseMessageQueueBinding",
+            "factoryContainerBindingName": null
         }
     },
     {

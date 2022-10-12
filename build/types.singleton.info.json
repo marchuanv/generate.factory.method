@@ -4,7 +4,7 @@
         "isBindingSingleton": true
     },
     "MessageConverter": {
-        "isSingleton": true,
+        "isSingleton": false,
         "isBindingSingleton": true
     },
     "HttpClientRequestMessageBus": {

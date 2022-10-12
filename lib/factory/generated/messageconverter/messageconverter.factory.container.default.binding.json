@@ -7,6 +7,8 @@
     "defaultBindingName": "Default",
     "defaultBindingFilePath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.default.binding.json",
     "isBindingSingleton": true,
-    "isSingleton": true,
-    "ctorParameters": {}
+    "isSingleton": false,
+    "ctorParameters": {
+        "factoryContainerBindingName": null
+    }
 }

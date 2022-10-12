@@ -56,7 +56,7 @@ describe("when an http server response messagebus publishes and http response me
         const { httpServerResponseMessageBus } = createHttpServerResponseMessageBus({ factoryContainerBindingName });
 
         httpClientRequestMessageBus.publish(createHttpRequestMessage({
-            factoryContainerBindingName: null,
+            factoryContainerBindingName,
             messageStatusCode: 2, //pending
             Id: null,
             data: expectedDecryptedClientText,
@@ -70,7 +70,7 @@ describe("when an http server response messagebus publishes and http response me
 
         // Act
         httpServerResponseMessageBus.publish(createHttpResponseMessage({
-            factoryContainerBindingName: null,
+            factoryContainerBindingName,
             messageStatusCode: 0, //success
             Id: null,
             data: expectedDecryptedServerText,
