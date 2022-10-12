@@ -4,5 +4,9 @@
   "MessageStore": true,
   "MessageConverter": true,
   "Logger": true,
-  "Message": false
+  "Message": false,
+  "HttpRequestMessage": false,
+  "HttpResponseMessage": false,
+  "WebSocketRequestMessage": false,
+  "WebSocketResponseMessage": false
 }

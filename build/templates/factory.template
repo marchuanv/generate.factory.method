@@ -8,6 +8,9 @@ function create[TypeName]({[PrimitiveArgsWithBindingName]}) {
     const bindings = [FactoryContainerBindingFilePaths];
     const bindingFilePath = bindings[factoryContainerBindingName];
     const binding = require(bindingFilePath);
+    if (!binding) {
+        throw new Error(`${factoryContainerBindingName} binding does not exist.`);
+    }
     const container = factory.getContainer({ binding });
     return container.getInstance({ ctorArgs: {[PrimitiveArgs]} });
 }

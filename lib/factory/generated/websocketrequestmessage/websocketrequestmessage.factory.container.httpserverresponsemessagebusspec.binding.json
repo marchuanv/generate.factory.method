@@ -6,7 +6,7 @@
     "bindingFilePath": "C://component//lib//factory//generated//websocketrequestmessage//websocketrequestmessage.factory.container.httpserverresponsemessagebusspec.binding.json",
     "defaultBindingName": "Default",
     "defaultBindingFilePath": "C://component//lib//factory//generated//websocketrequestmessage//websocketrequestmessage.factory.container.default.binding.json",
-    "isBindingSingleton": true,
+    "isBindingSingleton": false,
     "isSingleton": false,
     "ctorParameters": {
         "message": {
