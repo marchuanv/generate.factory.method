@@ -51,7 +51,7 @@ fdescribe("when asking a client messagebus to publish a request", function() {
       //Simulate a Server
       const { serverMessageBus } = createServerMessageBus({ factoryContainerBindingName, timeout, senderHost, senderPort });
       serverMessageBus.publish(createMessage({ 
-        factoryContainerBindingName: null,
+        factoryContainerBindingName,
         messageStatusCode: 0, Id: null, data: expectedDecryptedServerText, 
         recipientHost, recipientPort, metadata, token, senderHost, senderPort 
       }));
@@ -64,7 +64,7 @@ fdescribe("when asking a client messagebus to publish a request", function() {
 
     // Act
     clientMessageBus.publish(createMessage({ 
-      factoryContainerBindingName: null,
+      factoryContainerBindingName,
       messageStatusCode: 2, Id: null, data: expectedDecryptedClientText,
       recipientHost, recipientPort, metadata, token, senderHost, senderPort 
     }));
