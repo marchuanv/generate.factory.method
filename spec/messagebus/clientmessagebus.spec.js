@@ -1,4 +1,4 @@
-fdescribe("when asking a client messagebus to publish a request", function() {
+describe("when asking a client messagebus to publish a request", function() {
   
   const factoryContainerBindingName = "ClientMessageBusSpec";
   const timeout = 15000;

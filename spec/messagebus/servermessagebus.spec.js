@@ -48,7 +48,7 @@ describe("when asking the server messagebus to subscribe to request messages and
 
     const { clientMessageBus } = createClientMessageBus({ factoryContainerBindingName, timeout, senderHost, senderPort });
     clientMessageBus.publish(createMessage({ 
-      factoryContainerBindingName: null,
+      factoryContainerBindingName,
       messageStatusCode: 2, Id: null, data: expectedDecryptedClientText,
       recipientHost, recipientPort, metadata, token, senderHost, senderPort 
     }));
@@ -58,7 +58,7 @@ describe("when asking the server messagebus to subscribe to request messages and
     serverMessageBus.subscribe({ callback: ({ message }) => {
       requestMessage = message;
       serverMessageBus.publish(createMessage({ 
-        factoryContainerBindingName: null,
+        factoryContainerBindingName,
         messageStatusCode: 0, Id: null, data: expectedDecryptedServerText,
         recipientHost, recipientPort, metadata, token, senderHost, senderPort 
       }));
