@@ -1,0 +1,23 @@
+{
+    "typeName": "ClientMessageBus",
+    "typeVariableName": "clientMessageBus",
+    "scriptPath": "C://component//lib//clientmessagebus.js",
+    "contextName": "ClientComponentSpec",
+    "contextFilePath": "C://component//lib//factory//generated//clientmessagebus//clientmessagebus.factory.container.clientcomponentspec.context.json",
+    "defaultContextName": "Default",
+    "defaultContextFilePath": "C://component//lib//factory//generated//clientmessagebus//clientmessagebus.factory.container.default.context.json",
+    "isContextSingleton": true,
+    "isSingleton": false,
+    "ctorParameters": {
+        "messageConverter": {
+            "contextFilePath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.clientcomponentspec.context.json"
+        },
+        "contextName": null,
+        "clientRequestMessageBus": {
+            "contextFilePath": "C://component//lib//factory//generated//httpclientrequestmessagebus//httpclientrequestmessagebus.factory.container.clientcomponentspec.context.json"
+        },
+        "clientResponseMessageBus": {
+            "contextFilePath": "C://component//lib//factory//generated//httpclientresponsemessagebus//httpclientresponsemessagebus.factory.container.clientcomponentspec.context.json"
+        }
+    }
+}

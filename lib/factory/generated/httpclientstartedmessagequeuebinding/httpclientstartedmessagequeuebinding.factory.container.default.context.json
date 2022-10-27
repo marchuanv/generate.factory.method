@@ -1,0 +1,17 @@
+{
+    "typeName": "HttpClientStartedMessageQueueBinding",
+    "typeVariableName": "httpClientStartedMessageQueueBinding",
+    "scriptPath": "C://component//lib//http//binding//httpclientstartedmessagequeuebinding.js",
+    "contextName": "Default",
+    "contextFilePath": "C://component//lib//factory//generated//httpclientstartedmessagequeuebinding//httpclientstartedmessagequeuebinding.factory.container.default.context.json",
+    "defaultContextName": "Default",
+    "defaultContextFilePath": "C://component//lib//factory//generated//httpclientstartedmessagequeuebinding//httpclientstartedmessagequeuebinding.factory.container.default.context.json",
+    "isContextSingleton": true,
+    "isSingleton": true,
+    "ctorParameters": {
+        "contextName": null,
+        "messageQueue": {
+            "contextFilePath": "C://component//lib//factory//generated//messagequeue//messagequeue.factory.container.default.context.json"
+        }
+    }
+}

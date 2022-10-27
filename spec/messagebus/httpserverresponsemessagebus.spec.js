@@ -2,7 +2,7 @@ const utils = require('utils');
 describe("when an http server response messagebus publishes and http response message", function() {
 
     let token = null;
-    const factoryContainerBindingName = "HttpServerResponseMessageBusSpec";
+    const contextName = "HttpServerResponseMessageBusSpec";
     const timeout = 15000;
     const senderHost = 'localhost';
     const senderPort = 3000;
@@ -33,30 +33,30 @@ describe("when an http server response messagebus publishes and http response me
         ({ createHttpClientResponseMessageBus } = require('../../lib/factory/generated/httpclientresponsemessagebus/httpclientresponsemessagebus.factory.js'));
         ({ createHttpServerResponseMessageBus } = require('../../lib/factory/generated/httpserverresponsemessagebus/httpserverresponsemessagebus.factory.js'));
 
-        const userId = factoryContainerBindingName;
-        const secret = `${factoryContainerBindingName}1234`;
-        const { userSessions } = createUserSessions({ factoryContainerBindingName });
+        const userId = contextName;
+        const secret = `${contextName}1234`;
+        const { userSessions } = createUserSessions({ contextName });
         const { userSecurity } = userSessions.ensureSession({ userId });
         userSecurity.register({ secret });
         ({ token } = userSecurity.authenticate({ secret }));
-        createHttpServerMessageBus({ factoryContainerBindingName, timeout, senderHost, senderPort });
-        createHttpClientMessageBus({ factoryContainerBindingName, timeout });
-        createHttpServerMessageBusManager({ factoryContainerBindingName });
-        createHttpClientMessageBusManager({ factoryContainerBindingName });
+        createHttpServerMessageBus({ contextName, timeout, senderHost, senderPort });
+        createHttpClientMessageBus({ contextName, timeout });
+        createHttpServerMessageBusManager({ contextName });
+        createHttpClientMessageBusManager({ contextName });
     });
 
     it("the http client response messagebus should receive an http response message", (done) => {
         
         // Arrange
-        const metadata = { path: `/${factoryContainerBindingName}` };
-        const expectedDecryptedClientText = `${factoryContainerBindingName}: Hello From Client`;
-        const expectedDecryptedServerText = `${factoryContainerBindingName}: Hello From Server`;
-        const { clientRequestMessageBus } = createHttpClientRequestMessageBus({ factoryContainerBindingName });
-        const { clientResponseMessageBus } = createHttpClientResponseMessageBus({ factoryContainerBindingName });
-        const { serverResponseMessageBus } = createHttpServerResponseMessageBus({ factoryContainerBindingName });
+        const metadata = { path: `/${contextName}` };
+        const expectedDecryptedClientText = `${contextName}: Hello From Client`;
+        const expectedDecryptedServerText = `${contextName}: Hello From Server`;
+        const { clientRequestMessageBus } = createHttpClientRequestMessageBus({ contextName });
+        const { clientResponseMessageBus } = createHttpClientResponseMessageBus({ contextName });
+        const { serverResponseMessageBus } = createHttpServerResponseMessageBus({ contextName });
 
         clientRequestMessageBus.publish(createHttpRequestMessage({
-            factoryContainerBindingName,
+            contextName,
             messageStatusCode: 2, //pending
             Id: null,
             data: expectedDecryptedClientText,
@@ -70,7 +70,7 @@ describe("when an http server response messagebus publishes and http response me
 
         // Act
         clientResponseMessageBus.publish(createHttpResponseMessage({
-            factoryContainerBindingName,
+            contextName,
             messageStatusCode: 0, //success
             Id: null,
             data: expectedDecryptedServerText,

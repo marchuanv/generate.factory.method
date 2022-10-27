@@ -1,7 +1,7 @@
 describe("when asking a client messagebus to publish more than one request", function() {
 
   let token = null;
-  const factoryContainerBindingName  = 'MultipleRequestsSpec';
+  const contextName  = 'MultipleRequestsSpec';
   const timeout = 15000;
   const senderHost = 'localhost';
   const senderPort = 3000;
@@ -28,37 +28,37 @@ describe("when asking a client messagebus to publish more than one request", fun
     ({ createServerMessageBus } = require('../../lib/factory/generated/servermessagebus/servermessagebus.factory.js'));
     ({ createClientMessageBus } = require('../../lib/factory/generated/clientmessagebus/clientmessagebus.factory.js'));
 
-    const userId = factoryContainerBindingName;
-    const secret = `${factoryContainerBindingName}1234`;
-    const { userSessions } = createUserSessions({ factoryContainerBindingName });
+    const userId = contextName;
+    const secret = `${contextName}1234`;
+    const { userSessions } = createUserSessions({ contextName });
     const { userSecurity } = userSessions.ensureSession({ userId });
     userSecurity.register({ secret });
     ({ token } = userSecurity.authenticate({ secret }));
-    createHttpServerMessageBus({ factoryContainerBindingName, timeout, senderHost, senderPort });
-    createHttpClientMessageBus({ factoryContainerBindingName, timeout });
-    createHttpServerMessageBusManager({ factoryContainerBindingName });
-    createHttpClientMessageBusManager({ factoryContainerBindingName });
+    createHttpServerMessageBus({ contextName, timeout, senderHost, senderPort });
+    createHttpClientMessageBus({ contextName, timeout });
+    createHttpServerMessageBusManager({ contextName });
+    createHttpClientMessageBusManager({ contextName });
   });
 
   it("it should respond to every request", (done) => {
     
     // Arrange
-    const metadata = { path:  `/${factoryContainerBindingName}` };
-    let expectedDecryptedClientText1 = `${factoryContainerBindingName}: Hello From Client First`;
-    let expectedDecryptedClientText2 = `${factoryContainerBindingName}: Hello From Client Second`;
-    let expectedDecryptedServerText1 = `${factoryContainerBindingName}: Hello From Server First`;
-    let expectedDecryptedServerText2 = `${factoryContainerBindingName}: Hello From Server Second`;
+    const metadata = { path:  `/${contextName}` };
+    let expectedDecryptedClientText1 = `${contextName}: Hello From Client First`;
+    let expectedDecryptedClientText2 = `${contextName}: Hello From Client Second`;
+    let expectedDecryptedServerText1 = `${contextName}: Hello From Server First`;
+    let expectedDecryptedServerText2 = `${contextName}: Hello From Server Second`;
     let requestMessage1 = null;
     let requestMessage2 = null;
 
-    const { clientMessageBus } = createClientMessageBus({ factoryContainerBindingName, timeout, senderHost, senderPort });
+    const { clientMessageBus } = createClientMessageBus({ contextName, timeout, senderHost, senderPort });
     { 
       //Simulate a Server
-      const { serverMessageBus } = createServerMessageBus({ factoryContainerBindingName, timeout, senderHost, senderPort });
-      serverMessageBus.publish(createMessage({ factoryContainerBindingName, messageStatusCode: 0, 
+      const { serverMessageBus } = createServerMessageBus({ contextName, timeout, senderHost, senderPort });
+      serverMessageBus.publish(createMessage({ contextName, messageStatusCode: 0, 
         Id: null, data: expectedDecryptedServerText1, recipientHost, recipientPort, metadata, token, senderHost, senderPort 
       }));
-      serverMessageBus.publish(createMessage({ factoryContainerBindingName, messageStatusCode: 0, 
+      serverMessageBus.publish(createMessage({ contextName, messageStatusCode: 0, 
         Id: null, data: expectedDecryptedServerText2, recipientHost, recipientPort, metadata, token, senderHost, senderPort 
       }));
       serverMessageBus.subscribe({ callback: ({ message }) => {
@@ -72,11 +72,11 @@ describe("when asking a client messagebus to publish more than one request", fun
 
     // Act
     clientMessageBus.publish(createMessage({ 
-      factoryContainerBindingName, messageStatusCode: 2, Id: null, data: expectedDecryptedClientText1,
+      contextName, messageStatusCode: 2, Id: null, data: expectedDecryptedClientText1,
       recipientHost, recipientPort, metadata, token, senderHost, senderPort 
     }));
     clientMessageBus.publish(createMessage({ 
-      factoryContainerBindingName, messageStatusCode: 2, Id: null, data: expectedDecryptedClientText2,
+      contextName, messageStatusCode: 2, Id: null, data: expectedDecryptedClientText2,
       recipientHost, recipientPort, metadata, token, senderHost, senderPort 
     }));
 

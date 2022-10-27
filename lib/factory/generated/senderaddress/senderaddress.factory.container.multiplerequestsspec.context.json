@@ -1,0 +1,15 @@
+{
+    "typeName": "SenderAddress",
+    "typeVariableName": "senderAddress",
+    "scriptPath": "C://component//lib//senderaddress.js",
+    "contextName": "MultipleRequestsSpec",
+    "contextFilePath": "C://component//lib//factory//generated//senderaddress//senderaddress.factory.container.multiplerequestsspec.context.json",
+    "defaultContextName": "Default",
+    "defaultContextFilePath": "C://component//lib//factory//generated//senderaddress//senderaddress.factory.container.default.context.json",
+    "isContextSingleton": false,
+    "isSingleton": false,
+    "ctorParameters": {
+        "senderHost": null,
+        "senderPort": null
+    }
+}

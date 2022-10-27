@@ -1,0 +1,17 @@
+{
+    "typeName": "HttpClientResponseMessageQueueBinding",
+    "typeVariableName": "httpClientResponseMessageQueueBinding",
+    "scriptPath": "C://component//lib//http//binding//httpclientresponsemessagequeuebinding.js",
+    "contextName": "MultipleRequestsSpec",
+    "contextFilePath": "C://component//lib//factory//generated//httpclientresponsemessagequeuebinding//httpclientresponsemessagequeuebinding.factory.container.multiplerequestsspec.context.json",
+    "defaultContextName": "Default",
+    "defaultContextFilePath": "C://component//lib//factory//generated//httpclientresponsemessagequeuebinding//httpclientresponsemessagequeuebinding.factory.container.default.context.json",
+    "isContextSingleton": true,
+    "isSingleton": false,
+    "ctorParameters": {
+        "contextName": null,
+        "messageQueue": {
+            "contextFilePath": "C://component//lib//factory//generated//messagequeue//messagequeue.factory.container.multiplerequestsspec.context.json"
+        }
+    }
+}

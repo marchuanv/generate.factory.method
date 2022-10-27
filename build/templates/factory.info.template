@@ -1,8 +1,8 @@
 { 
     "typeName":"[TypeName]",
     "factoryScriptPath":"[FactoryScriptPath]",
-    "factoryContainerBindingFilePaths": [FactoryContainerBindingFilePaths],
+    "factoryContainerContextFilePaths": [FactoryContainerContextFilePaths],
     "minFactoryScriptPath":"[MinFactoryScriptPath]",
-    "ctorArgumentsWithBindingNames": [CtorArgumentsWithBindingNames],
+    "ctorArgumentsWithContextNames": [CtorArgumentsWithContextNames],
     "ctorArgumentNames": [CtorArgumentNames]
 }

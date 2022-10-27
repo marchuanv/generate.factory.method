@@ -1,0 +1,16 @@
+{
+    "typeName": "WebSocketServerRequestMessageBus",
+    "typeVariableName": "webSocketServerRequestMessageBus",
+    "scriptPath": "C://component//lib//websocket//websocketserverrequestmessagebus.js",
+    "contextName": "UserSecuritySpec",
+    "contextFilePath": "C://component//lib//factory//generated//websocketserverrequestmessagebus//websocketserverrequestmessagebus.factory.container.usersecurityspec.context.json",
+    "defaultContextName": "Default",
+    "defaultContextFilePath": "C://component//lib//factory//generated//websocketserverrequestmessagebus//websocketserverrequestmessagebus.factory.container.default.context.json",
+    "isContextSingleton": true,
+    "isSingleton": false,
+    "ctorParameters": {
+        "webSocketServerRequestMessageQueueBinding": {
+            "contextFilePath": "C://component//lib//factory//generated//websocketserverrequestmessagequeuebinding//websocketserverrequestmessagequeuebinding.factory.container.usersecurityspec.context.json"
+        }
+    }
+}

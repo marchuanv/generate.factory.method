@@ -1,0 +1,16 @@
+{
+    "typeName": "MessageQueue",
+    "typeVariableName": "messageQueue",
+    "scriptPath": "C://component//lib//messagequeue.js",
+    "contextName": "ServerComponentSpec",
+    "contextFilePath": "C://component//lib//factory//generated//messagequeue//messagequeue.factory.container.servercomponentspec.context.json",
+    "defaultContextName": "Default",
+    "defaultContextFilePath": "C://component//lib//factory//generated//messagequeue//messagequeue.factory.container.default.context.json",
+    "isContextSingleton": true,
+    "isSingleton": true,
+    "ctorParameters": {
+        "logger": {
+            "contextFilePath": "C://component//lib//factory//generated//logger//logger.factory.container.servercomponentspec.context.json"
+        }
+    }
+}

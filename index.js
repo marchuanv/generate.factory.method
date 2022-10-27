@@ -11,5 +11,5 @@ if (module) {
     const path = require('path');
     const { createComponent } = require("./lib/factory/component.factory");
     const packageJson = require(path.join(module.parent.path, 'package.json'));
-    module.exports = createComponent({ factoryContainerBindingName: packageJson.name, packageJson });
+    module.exports = createComponent({ contextName: packageJson.name, packageJson });
 }

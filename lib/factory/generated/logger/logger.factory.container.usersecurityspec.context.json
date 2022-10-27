@@ -1,0 +1,12 @@
+{
+    "typeName": "Logger",
+    "typeVariableName": "logger",
+    "scriptPath": "C://component//lib//logger.js",
+    "contextName": "UserSecuritySpec",
+    "contextFilePath": "C://component//lib//factory//generated//logger//logger.factory.container.usersecurityspec.context.json",
+    "defaultContextName": "Default",
+    "defaultContextFilePath": "C://component//lib//factory//generated//logger//logger.factory.container.default.context.json",
+    "isContextSingleton": true,
+    "isSingleton": true,
+    "ctorParameters": {}
+}

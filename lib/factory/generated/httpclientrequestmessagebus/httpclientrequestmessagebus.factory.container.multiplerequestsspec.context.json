@@ -1,0 +1,16 @@
+{
+    "typeName": "HttpClientRequestMessageBus",
+    "typeVariableName": "clientRequestMessageBus",
+    "scriptPath": "C://component//lib//http//request//httpclientrequestmessagebus.js",
+    "contextName": "MultipleRequestsSpec",
+    "contextFilePath": "C://component//lib//factory//generated//httpclientrequestmessagebus//httpclientrequestmessagebus.factory.container.multiplerequestsspec.context.json",
+    "defaultContextName": "Default",
+    "defaultContextFilePath": "C://component//lib//factory//generated//httpclientrequestmessagebus//httpclientrequestmessagebus.factory.container.default.context.json",
+    "isContextSingleton": true,
+    "isSingleton": false,
+    "ctorParameters": {
+        "httpClientRequestMessageQueueBinding": {
+            "contextFilePath": "C://component//lib//factory//generated//httpclientrequestmessagequeuebinding//httpclientrequestmessagequeuebinding.factory.container.multiplerequestsspec.context.json"
+        }
+    }
+}

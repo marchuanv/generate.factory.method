@@ -1,0 +1,14 @@
+{
+    "typeName": "ContentType",
+    "typeVariableName": "contentType",
+    "scriptPath": "C://component//lib//contentType.js",
+    "contextName": "ServerMessageBusSpec",
+    "contextFilePath": "C://component//lib//factory//generated//contenttype//contenttype.factory.container.servermessagebusspec.context.json",
+    "defaultContextName": "Default",
+    "defaultContextFilePath": "C://component//lib//factory//generated//contenttype//contenttype.factory.container.default.context.json",
+    "isContextSingleton": false,
+    "isSingleton": false,
+    "ctorParameters": {
+        "name": null
+    }
+}

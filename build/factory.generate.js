@@ -8,15 +8,15 @@ let factoryInfo = require(factoryInfoPath);
 
 for(const factoryInfoName of Object.keys(factoryInfo)) {
     const info = factoryInfo[factoryInfoName];
-    const { typeName, factoryContainerBindingFilePaths, ctorArgumentNames, ctorArgumentsWithBindingNames } = info;
+    const { typeName, factoryContainerContextFilePaths, ctorArgumentNames, ctorArgumentsWithContextNames } = info;
     const factoryGeneratedDir = path.join(__dirname, '../lib', 'factory', 'generated', typeName.toLowerCase());
     if (!existsSync(factoryGeneratedDir)){
         mkdirSync(factoryGeneratedDir);
     }
     const factoryJson = factoryTemplate
-        .replace(/\[FactoryContainerBindingFilePaths\]/g, utils.getJSONString(factoryContainerBindingFilePaths))
+        .replace(/\[FactoryContainerContextFilePaths\]/g, utils.getJSONString(factoryContainerContextFilePaths))
         .replace(/\[TypeName\]/g, typeName)
         .replace(/\[PrimitiveArgs\]/g, ctorArgumentNames.join(','))
-        .replace(/\[PrimitiveArgsWithBindingName\]/g, ctorArgumentsWithBindingNames.join(','));
+        .replace(/\[PrimitiveArgsWithContextName\]/g, ctorArgumentsWithContextNames.join(','));
     writeFileSync(info.factoryScriptPath, factoryJson, 'utf8');
 };

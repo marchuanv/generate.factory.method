@@ -1,0 +1,12 @@
+{
+    "typeName": "MessageStore",
+    "typeVariableName": "messageStore",
+    "scriptPath": "C://component//lib//messagestore.js",
+    "contextName": "MultipleRequestsSpec",
+    "contextFilePath": "C://component//lib//factory//generated//messagestore//messagestore.factory.container.multiplerequestsspec.context.json",
+    "defaultContextName": "Default",
+    "defaultContextFilePath": "C://component//lib//factory//generated//messagestore//messagestore.factory.container.default.context.json",
+    "isContextSingleton": true,
+    "isSingleton": true,
+    "ctorParameters": {}
+}

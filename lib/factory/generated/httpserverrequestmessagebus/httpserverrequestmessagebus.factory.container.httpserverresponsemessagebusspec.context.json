@@ -1,0 +1,17 @@
+{
+    "typeName": "HttpServerRequestMessageBus",
+    "typeVariableName": "serverRequestMessageBus",
+    "scriptPath": "C://component//lib//http//request//httpserverrequestmessagebus.js",
+    "contextName": "HttpServerResponseMessageBusSpec",
+    "contextFilePath": "C://component//lib//factory//generated//httpserverrequestmessagebus//httpserverrequestmessagebus.factory.container.httpserverresponsemessagebusspec.context.json",
+    "defaultContextName": "Default",
+    "defaultContextFilePath": "C://component//lib//factory//generated//httpserverrequestmessagebus//httpserverrequestmessagebus.factory.container.default.context.json",
+    "isContextSingleton": true,
+    "isSingleton": false,
+    "ctorParameters": {
+        "httpServerRequestMessageQueueBinding": {
+            "contextFilePath": "C://component//lib//factory//generated//httpserverrequestmessagequeuebinding//httpserverrequestmessagequeuebinding.factory.container.httpserverresponsemessagebusspec.context.json"
+        },
+        "contextName": null
+    }
+}

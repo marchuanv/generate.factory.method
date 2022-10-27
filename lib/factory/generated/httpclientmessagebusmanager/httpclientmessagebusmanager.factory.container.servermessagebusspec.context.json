@@ -1,0 +1,26 @@
+{
+    "typeName": "HttpClientMessageBusManager",
+    "typeVariableName": "httpClientMessageBusManager",
+    "scriptPath": "C://component//lib//http//httpclientmessagebusmanager.js",
+    "contextName": "ServerMessageBusSpec",
+    "contextFilePath": "C://component//lib//factory//generated//httpclientmessagebusmanager//httpclientmessagebusmanager.factory.container.servermessagebusspec.context.json",
+    "defaultContextName": "Default",
+    "defaultContextFilePath": "C://component//lib//factory//generated//httpclientmessagebusmanager//httpclientmessagebusmanager.factory.container.default.context.json",
+    "isContextSingleton": true,
+    "isSingleton": false,
+    "ctorParameters": {
+        "httpClientStoppedMessageQueueBinding": {
+            "contextFilePath": "C://component//lib//factory//generated//httpclientstoppedmessagequeuebinding//httpclientstoppedmessagequeuebinding.factory.container.servermessagebusspec.context.json"
+        },
+        "contextName": null,
+        "httpClientStartMessageQueueBinding": {
+            "contextFilePath": "C://component//lib//factory//generated//httpclientstartmessagequeuebinding//httpclientstartmessagequeuebinding.factory.container.servermessagebusspec.context.json"
+        },
+        "httpClientStartedMessageQueueBinding": {
+            "contextFilePath": "C://component//lib//factory//generated//httpclientstartedmessagequeuebinding//httpclientstartedmessagequeuebinding.factory.container.servermessagebusspec.context.json"
+        },
+        "httpClientStopMessageQueueBinding": {
+            "contextFilePath": "C://component//lib//factory//generated//httpclientstopmessagequeuebinding//httpclientstopmessagequeuebinding.factory.container.servermessagebusspec.context.json"
+        }
+    }
+}

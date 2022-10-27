@@ -1,0 +1,12 @@
+{
+    "typeName": "MessageStore",
+    "typeVariableName": "messageStore",
+    "scriptPath": "C://component//lib//messagestore.js",
+    "contextName": "HttpServerResponseMessageBusSpec",
+    "contextFilePath": "C://component//lib//factory//generated//messagestore//messagestore.factory.container.httpserverresponsemessagebusspec.context.json",
+    "defaultContextName": "Default",
+    "defaultContextFilePath": "C://component//lib//factory//generated//messagestore//messagestore.factory.container.default.context.json",
+    "isContextSingleton": true,
+    "isSingleton": true,
+    "ctorParameters": {}
+}

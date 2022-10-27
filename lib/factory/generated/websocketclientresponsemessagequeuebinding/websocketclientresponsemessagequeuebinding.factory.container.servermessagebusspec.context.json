@@ -1,0 +1,17 @@
+{
+    "typeName": "WebSocketClientResponseMessageQueueBinding",
+    "typeVariableName": "websocketClientResponseMessageQueueBinding",
+    "scriptPath": "C://component//lib//websocket//websocketclientresponsemessagequeuebinding.js",
+    "contextName": "ServerMessageBusSpec",
+    "contextFilePath": "C://component//lib//factory//generated//websocketclientresponsemessagequeuebinding//websocketclientresponsemessagequeuebinding.factory.container.servermessagebusspec.context.json",
+    "defaultContextName": "Default",
+    "defaultContextFilePath": "C://component//lib//factory//generated//websocketclientresponsemessagequeuebinding//websocketclientresponsemessagequeuebinding.factory.container.default.context.json",
+    "isContextSingleton": true,
+    "isSingleton": false,
+    "ctorParameters": {
+        "contextName": null,
+        "messageQueue": {
+            "contextFilePath": "C://component//lib//factory//generated//messagequeue//messagequeue.factory.container.servermessagebusspec.context.json"
+        }
+    }
+}

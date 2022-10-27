@@ -3,19 +3,19 @@ const { existsSync } = require('fs');
 
 /**
 * Create [TypeName]
-* @param {[PrimitiveArgsWithBindingName]}
+* @param {[PrimitiveArgsWithContextName]}
 */
-function create[TypeName]({[PrimitiveArgsWithBindingName]}) {
-    const bindings = [FactoryContainerBindingFilePaths];
-    const bindingFilePath = bindings[factoryContainerBindingName];
-    if (!existsSync(bindingFilePath)) {
-         throw new Error(`${bindingFilePath} does not exist.`);
+function create[TypeName]({[PrimitiveArgsWithContextName]}) {
+    const contexts = [FactoryContainerContextFilePaths];
+    const contextFilePath = contexts[contextName];
+    if (!existsSync(contextFilePath)) {
+         throw new Error(`${contextFilePath} does not exist.`);
     }
-    const binding = require(bindingFilePath);
-    if (!binding) {
-        throw new Error(`${factoryContainerBindingName} binding does not exist.`);
+    const context = require(contextFilePath);
+    if (!context) {
+        throw new Error(`${contextName} context does not exist.`);
     }
-    const container = factory.getContainer({ binding });
+    const container = factory.getContainer({ context });
     return container.getInstance({ ctorArgs: {[PrimitiveArgs]} });
 }
 module.exports = { create[TypeName] };

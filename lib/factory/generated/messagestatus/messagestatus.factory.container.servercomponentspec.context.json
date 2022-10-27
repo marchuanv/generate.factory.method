@@ -1,0 +1,14 @@
+{
+    "typeName": "MessageStatus",
+    "typeVariableName": "messageStatus",
+    "scriptPath": "C://component//lib//messagestatus.js",
+    "contextName": "ServerComponentSpec",
+    "contextFilePath": "C://component//lib//factory//generated//messagestatus//messagestatus.factory.container.servercomponentspec.context.json",
+    "defaultContextName": "Default",
+    "defaultContextFilePath": "C://component//lib//factory//generated//messagestatus//messagestatus.factory.container.default.context.json",
+    "isContextSingleton": false,
+    "isSingleton": false,
+    "ctorParameters": {
+        "messageStatusCode": null
+    }
+}

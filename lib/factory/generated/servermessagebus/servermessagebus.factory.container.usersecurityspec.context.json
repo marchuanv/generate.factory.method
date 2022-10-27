@@ -1,0 +1,22 @@
+{
+    "typeName": "ServerMessageBus",
+    "typeVariableName": "serverMessageBus",
+    "scriptPath": "C://component//lib//servermessagebus.js",
+    "contextName": "UserSecuritySpec",
+    "contextFilePath": "C://component//lib//factory//generated//servermessagebus//servermessagebus.factory.container.usersecurityspec.context.json",
+    "defaultContextName": "Default",
+    "defaultContextFilePath": "C://component//lib//factory//generated//servermessagebus//servermessagebus.factory.container.default.context.json",
+    "isContextSingleton": true,
+    "isSingleton": false,
+    "ctorParameters": {
+        "messageConverter": {
+            "contextFilePath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.usersecurityspec.context.json"
+        },
+        "serverResponseMessageBus": {
+            "contextFilePath": "C://component//lib//factory//generated//httpserverresponsemessagebus//httpserverresponsemessagebus.factory.container.usersecurityspec.context.json"
+        },
+        "serverRequestMessageBus": {
+            "contextFilePath": "C://component//lib//factory//generated//httpserverrequestmessagebus//httpserverrequestmessagebus.factory.container.usersecurityspec.context.json"
+        }
+    }
+}

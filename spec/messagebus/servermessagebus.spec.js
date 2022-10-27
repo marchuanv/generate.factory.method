@@ -1,7 +1,7 @@
 describe("when asking the server messagebus to subscribe to request messages and publish a response", () => {
 
   let token = null;
-  const factoryContainerBindingName = 'ServerMessageBusSpec';
+  const contextName = 'ServerMessageBusSpec';
   const timeout = 15000;
   const senderHost = 'localhost';
   const senderPort = 3000;
@@ -23,17 +23,17 @@ describe("when asking the server messagebus to subscribe to request messages and
     ({ createClientMessageBus } = require('../../lib/factory/generated/clientmessagebus/clientmessagebus.factory.js'));
     ({ createServerMessageBus } = require('../../lib/factory/generated/servermessagebus/servermessagebus.factory.js'));
 
-    const userId = factoryContainerBindingName;
-    const secret = `${factoryContainerBindingName}1234`;
+    const userId = contextName;
+    const secret = `${contextName}1234`;
     const { createUserSessions } = require('../../lib/factory/generated/usersessions/usersessions.factory.js');
-    const { userSessions } = createUserSessions({ factoryContainerBindingName });
+    const { userSessions } = createUserSessions({ contextName });
     const { userSecurity } = userSessions.ensureSession({ userId });
     userSecurity.register({ secret });
     ({ token } = userSecurity.authenticate({ secret }));
-    createHttpServerMessageBus({ factoryContainerBindingName, timeout, senderHost, senderPort });
-    createHttpClientMessageBus({ factoryContainerBindingName, timeout });
-    createHttpServerMessageBusManager({ factoryContainerBindingName });
-    createHttpClientMessageBusManager({ factoryContainerBindingName });
+    createHttpServerMessageBus({ contextName, timeout, senderHost, senderPort });
+    createHttpClientMessageBus({ contextName, timeout });
+    createHttpServerMessageBusManager({ contextName });
+    createHttpClientMessageBusManager({ contextName });
   });
 
   it("it should succeed without any errors", (done) => {
@@ -41,24 +41,24 @@ describe("when asking the server messagebus to subscribe to request messages and
     // Arrange
     const recipientHost = 'localhost';
     const recipientPort = 3000;
-    const metadata = { path:  `/${factoryContainerBindingName}` };
-    const expectedDecryptedClientText = `${factoryContainerBindingName}: Hello From Client`;
-    const expectedDecryptedServerText = `${factoryContainerBindingName}: Hello From Server`;
+    const metadata = { path:  `/${contextName}` };
+    const expectedDecryptedClientText = `${contextName}: Hello From Client`;
+    const expectedDecryptedServerText = `${contextName}: Hello From Server`;
     let requestMessage = null;
 
-    const { clientMessageBus } = createClientMessageBus({ factoryContainerBindingName, timeout, senderHost, senderPort });
+    const { clientMessageBus } = createClientMessageBus({ contextName, timeout, senderHost, senderPort });
     clientMessageBus.publish(createMessage({ 
-      factoryContainerBindingName,
+      contextName,
       messageStatusCode: 2, Id: null, data: expectedDecryptedClientText,
       recipientHost, recipientPort, metadata, token, senderHost, senderPort 
     }));
-    const { serverMessageBus } = createServerMessageBus({ factoryContainerBindingName, timeout, senderHost, senderPort });
+    const { serverMessageBus } = createServerMessageBus({ contextName, timeout, senderHost, senderPort });
 
     // Act
     serverMessageBus.subscribe({ callback: ({ message }) => {
       requestMessage = message;
       serverMessageBus.publish(createMessage({ 
-        factoryContainerBindingName,
+        contextName,
         messageStatusCode: 0, Id: null, data: expectedDecryptedServerText,
         recipientHost, recipientPort, metadata, token, senderHost, senderPort 
       }));

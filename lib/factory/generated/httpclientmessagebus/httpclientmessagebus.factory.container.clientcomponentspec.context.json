@@ -1,0 +1,33 @@
+{
+    "typeName": "HttpClientMessageBus",
+    "typeVariableName": "httpClientMessageBus",
+    "scriptPath": "C://component//lib//http//httpclientmessagebus.js",
+    "contextName": "ClientComponentSpec",
+    "contextFilePath": "C://component//lib//factory//generated//httpclientmessagebus//httpclientmessagebus.factory.container.clientcomponentspec.context.json",
+    "defaultContextName": "Default",
+    "defaultContextFilePath": "C://component//lib//factory//generated//httpclientmessagebus//httpclientmessagebus.factory.container.default.context.json",
+    "isContextSingleton": true,
+    "isSingleton": false,
+    "ctorParameters": {
+        "timeout": null,
+        "contextName": null,
+        "httpClientRequestMessageQueueBinding": {
+            "contextFilePath": "C://component//lib//factory//generated//httpclientrequestmessagequeuebinding//httpclientrequestmessagequeuebinding.factory.container.clientcomponentspec.context.json"
+        },
+        "httpClientResponseMessageQueueBinding": {
+            "contextFilePath": "C://component//lib//factory//generated//httpclientresponsemessagequeuebinding//httpclientresponsemessagequeuebinding.factory.container.clientcomponentspec.context.json"
+        },
+        "httpClientStartMessageQueueBinding": {
+            "contextFilePath": "C://component//lib//factory//generated//httpclientstartmessagequeuebinding//httpclientstartmessagequeuebinding.factory.container.clientcomponentspec.context.json"
+        },
+        "httpClientStartedMessageQueueBinding": {
+            "contextFilePath": "C://component//lib//factory//generated//httpclientstartedmessagequeuebinding//httpclientstartedmessagequeuebinding.factory.container.clientcomponentspec.context.json"
+        },
+        "httpClientStopMessageQueueBinding": {
+            "contextFilePath": "C://component//lib//factory//generated//httpclientstopmessagequeuebinding//httpclientstopmessagequeuebinding.factory.container.clientcomponentspec.context.json"
+        },
+        "httpClientStoppedMessageQueueBinding": {
+            "contextFilePath": "C://component//lib//factory//generated//httpclientstoppedmessagequeuebinding//httpclientstoppedmessagequeuebinding.factory.container.clientcomponentspec.context.json"
+        }
+    }
+}

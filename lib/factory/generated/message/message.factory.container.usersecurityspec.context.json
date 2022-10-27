@@ -1,0 +1,26 @@
+{
+    "typeName": "Message",
+    "typeVariableName": "message",
+    "scriptPath": "C://component//lib//message.js",
+    "contextName": "UserSecuritySpec",
+    "contextFilePath": "C://component//lib//factory//generated//message//message.factory.container.usersecurityspec.context.json",
+    "defaultContextName": "Default",
+    "defaultContextFilePath": "C://component//lib//factory//generated//message//message.factory.container.default.context.json",
+    "isContextSingleton": false,
+    "isSingleton": false,
+    "ctorParameters": {
+        "messageStatus": {
+            "contextFilePath": "C://component//lib//factory//generated//messagestatus//messagestatus.factory.container.usersecurityspec.context.json"
+        },
+        "contextName": null,
+        "messageContent": {
+            "contextFilePath": "C://component//lib//factory//generated//messagecontent//messagecontent.factory.container.usersecurityspec.context.json"
+        },
+        "messageContentMetadata": {
+            "contextFilePath": "C://component//lib//factory//generated//messagecontentmetadata//messagecontentmetadata.factory.container.usersecurityspec.context.json"
+        },
+        "messageMetadata": {
+            "contextFilePath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.usersecurityspec.context.json"
+        }
+    }
+}

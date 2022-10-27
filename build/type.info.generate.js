@@ -140,7 +140,7 @@ walkDependencyTree(depTree, (info) => {
         if (typesSingletonInfo[info.typeName] === undefined) {
             typesSingletonInfo[info.typeName] = {
                 isSingleton: false,
-                isBindingSingleton: true
+                isContextSingleton: true
             };
         }
     }

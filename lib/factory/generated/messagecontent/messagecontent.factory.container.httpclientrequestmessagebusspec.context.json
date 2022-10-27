@@ -1,0 +1,23 @@
+{
+    "typeName": "MessageContent",
+    "typeVariableName": "messageContent",
+    "scriptPath": "C://component//lib//messagecontent.js",
+    "contextName": "HttpClientRequestMessageBusSpec",
+    "contextFilePath": "C://component//lib//factory//generated//messagecontent//messagecontent.factory.container.httpclientrequestmessagebusspec.context.json",
+    "defaultContextName": "Default",
+    "defaultContextFilePath": "C://component//lib//factory//generated//messagecontent//messagecontent.factory.container.default.context.json",
+    "isContextSingleton": false,
+    "isSingleton": false,
+    "ctorParameters": {
+        "messageContentMetadata": {
+            "contextFilePath": "C://component//lib//factory//generated//messagecontentmetadata//messagecontentmetadata.factory.container.httpclientrequestmessagebusspec.context.json"
+        },
+        "data": null,
+        "userSessions": {
+            "contextFilePath": "C://component//lib//factory//generated//usersessions//usersessions.factory.container.httpclientrequestmessagebusspec.context.json"
+        },
+        "messageMetadata": {
+            "contextFilePath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.httpclientrequestmessagebusspec.context.json"
+        }
+    }
+}

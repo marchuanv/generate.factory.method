@@ -21,25 +21,25 @@ if (!existsSync(generatedFactoryScriptsDir)){
 
 require('./type.info.generate');
 
-require('./factory.container.bindings.info.generate')({ factoryContainerBindingName: 'MultipleRequestsSpec' });
-require('./factory.container.bindings.info.generate')({ factoryContainerBindingName: 'UserSecuritySpec' });
-require('./factory.container.bindings.info.generate')({ factoryContainerBindingName: 'ClientComponentSpec' });
-require('./factory.container.bindings.info.generate')({ factoryContainerBindingName: 'ServerComponentSpec' });
-require('./factory.container.bindings.info.generate')({ factoryContainerBindingName: 'ClientMessageBusSpec' });
-require('./factory.container.bindings.info.generate')({ factoryContainerBindingName: 'ServerMessageBusSpec' });
-require('./factory.container.bindings.info.generate')({ factoryContainerBindingName: 'HttpServerResponseMessageBusSpec' });
-require('./factory.container.bindings.info.generate')({ factoryContainerBindingName: 'HttpClientRequestMessageBusSpec' });
+require('./factory.container.context.info.generate')({ contextName: 'MultipleRequestsSpec' });
+require('./factory.container.context.info.generate')({ contextName: 'UserSecuritySpec' });
+require('./factory.container.context.info.generate')({ contextName: 'ClientComponentSpec' });
+require('./factory.container.context.info.generate')({ contextName: 'ServerComponentSpec' });
+require('./factory.container.context.info.generate')({ contextName: 'ClientMessageBusSpec' });
+require('./factory.container.context.info.generate')({ contextName: 'ServerMessageBusSpec' });
+require('./factory.container.context.info.generate')({ contextName: 'HttpServerResponseMessageBusSpec' });
+require('./factory.container.context.info.generate')({ contextName: 'HttpClientRequestMessageBusSpec' });
 
 require('./factory.info.generate');
 
-require('./factory.container.bindings.generate')({ factoryContainerBindingName: 'MultipleRequestsSpec' });
-require('./factory.container.bindings.generate')({ factoryContainerBindingName: 'UserSecuritySpec' });
-require('./factory.container.bindings.generate')({ factoryContainerBindingName: 'ClientComponentSpec' });
-require('./factory.container.bindings.generate')({ factoryContainerBindingName: 'ServerComponentSpec' });
-require('./factory.container.bindings.generate')({ factoryContainerBindingName: 'ClientMessageBusSpec' });
-require('./factory.container.bindings.generate')({ factoryContainerBindingName: 'ServerMessageBusSpec' });
-require('./factory.container.bindings.generate')({ factoryContainerBindingName: 'HttpServerResponseMessageBusSpec' });
-require('./factory.container.bindings.generate')({ factoryContainerBindingName: 'HttpClientRequestMessageBusSpec' });
+require('./factory.container.context.generate')({ contextName: 'MultipleRequestsSpec' });
+require('./factory.container.context.generate')({ contextName: 'UserSecuritySpec' });
+require('./factory.container.context.generate')({ contextName: 'ClientComponentSpec' });
+require('./factory.container.context.generate')({ contextName: 'ServerComponentSpec' });
+require('./factory.container.context.generate')({ contextName: 'ClientMessageBusSpec' });
+require('./factory.container.context.generate')({ contextName: 'ServerMessageBusSpec' });
+require('./factory.container.context.generate')({ contextName: 'HttpServerResponseMessageBusSpec' });
+require('./factory.container.context.generate')({ contextName: 'HttpClientRequestMessageBusSpec' });
 
 require('./factory.generate');
 

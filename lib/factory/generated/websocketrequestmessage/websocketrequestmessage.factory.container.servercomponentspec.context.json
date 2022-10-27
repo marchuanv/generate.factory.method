@@ -1,0 +1,16 @@
+{
+    "typeName": "WebSocketRequestMessage",
+    "typeVariableName": "webSocketRequestMessage",
+    "scriptPath": "C://component//lib//websocket//websocketrequestmessage.js",
+    "contextName": "ServerComponentSpec",
+    "contextFilePath": "C://component//lib//factory//generated//websocketrequestmessage//websocketrequestmessage.factory.container.servercomponentspec.context.json",
+    "defaultContextName": "Default",
+    "defaultContextFilePath": "C://component//lib//factory//generated//websocketrequestmessage//websocketrequestmessage.factory.container.default.context.json",
+    "isContextSingleton": false,
+    "isSingleton": false,
+    "ctorParameters": {
+        "message": {
+            "contextFilePath": "C://component//lib//factory//generated//message//message.factory.container.servercomponentspec.context.json"
+        }
+    }
+}

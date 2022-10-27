@@ -1,24 +1,24 @@
-xdescribe('when asking the factory for an instance given container binding location', function() {
-  it("it should load binding script, find binding config and return an instance of the ClientMessageBus", function() {
+xdescribe('when asking the factory for an instance given container context location', function() {
+  it("it should load context script, find context config and return an instance of the ClientMessageBus", function() {
 
     // Arrange
     const { Factory } = require('C:\\component\\lib\\factory.js');
-    const factoryContainerBindingName = 'test';
+    const contextName = 'test';
     const factory = new Factory({
       "typeName": "ClientMessageBus",
       "typeVariableName": "clientMessageBus",
       "typeScriptPath": "C://component//lib//clientmessagebus.js",
       "isSingleton": false,
-      "bindings": [
+      "contexts": [
           {
-              "factoryContainerBindingName": factoryContainerBindingName,
-              "factoryContainerBindingScriptPath": "C://component//lib//factory//clientmessagebus.container.test.binding.json"
+              "contextName": contextName,
+              "factoryContainerContextScriptPath": "C://component//lib//factory//clientmessagebus.container.test.context.json"
           }
       ]
     });
 
     // Act
-    const instance = factory.getInstance({ factoryContainerBindingName });
+    const instance = factory.getInstance({ contextName });
 
     // Assert
     expect(instance).not.toBeNull();
@@ -26,20 +26,20 @@ xdescribe('when asking the factory for an instance given container binding locat
 
 });
 
-xdescribe('when asking the factory for an instance given all container bindings', function() {
-  it("it should find binding config and return an instance of the ClientMessageBus", function() {
+xdescribe('when asking the factory for an instance given all container contexts', function() {
+  it("it should find context config and return an instance of the ClientMessageBus", function() {
 
     // Arrange
     const { Factory } = require('C:\\component\\lib\\factory.js');
-    const factoryContainerBindingName = 'test';
+    const contextName = 'test';
     const factory = new Factory({ 
       "typeName": "ClientMessageBus",
       "typeVariableName": "clientMessageBus",
       "typeScriptPath": "C://component//lib//clientmessagebus.js",
       "isSingleton": false,
-      "bindings": [
+      "contexts": [
         {
-          "factoryContainerBindingName": `${factoryContainerBindingName}`,
+          "contextName": `${contextName}`,
           "primitiveArgs": {
               "clientRequestMessageBus": null,
               "clientResponseMessageBus": null
@@ -56,7 +56,7 @@ xdescribe('when asking the factory for an instance given all container bindings'
     });
 
     // Act
-    const instance = factory.getInstance({ factoryContainerBindingName });
+    const instance = factory.getInstance({ contextName });
 
     // Assert
     expect(instance).not.toBeNull();

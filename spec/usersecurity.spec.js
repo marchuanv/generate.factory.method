@@ -4,13 +4,13 @@ describe("when encrypting data given a public key", function() {
     let userSecurity;
     let token = null;
     const userId = 'encryptiontest';
-    const factoryContainerBindingName = 'UserSecuritySpec';
+    const contextName = 'UserSecuritySpec';
     let createUserSecurity = null;
 
     beforeAll(() => {
         ({ createUserSecurity } = require("../lib/factory/generated/usersecurity/usersecurity.factory"));
         const secret = 'encryptiontest1234';
-        ({ userSecurity } = createUserSecurity({ factoryContainerBindingName, userId }));
+        ({ userSecurity } = createUserSecurity({ contextName, userId }));
         userSecurity.register({ secret });
         userSecurity.authenticate({ secret });
         ({ token } = userSecurity.authenticate({ secret }));

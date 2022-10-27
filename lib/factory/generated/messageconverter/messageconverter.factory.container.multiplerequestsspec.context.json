@@ -1,0 +1,14 @@
+{
+    "typeName": "MessageConverter",
+    "typeVariableName": "messageConverter",
+    "scriptPath": "C://component//lib//messageconverter.js",
+    "contextName": "MultipleRequestsSpec",
+    "contextFilePath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.multiplerequestsspec.context.json",
+    "defaultContextName": "Default",
+    "defaultContextFilePath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.default.context.json",
+    "isContextSingleton": true,
+    "isSingleton": false,
+    "ctorParameters": {
+        "contextName": null
+    }
+}

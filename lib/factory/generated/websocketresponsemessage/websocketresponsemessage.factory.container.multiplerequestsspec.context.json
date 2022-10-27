@@ -1,0 +1,16 @@
+{
+    "typeName": "WebSocketResponseMessage",
+    "typeVariableName": "webSocketResponseMessage",
+    "scriptPath": "C://component//lib//websocket//websocketresponsemessage.js",
+    "contextName": "MultipleRequestsSpec",
+    "contextFilePath": "C://component//lib//factory//generated//websocketresponsemessage//websocketresponsemessage.factory.container.multiplerequestsspec.context.json",
+    "defaultContextName": "Default",
+    "defaultContextFilePath": "C://component//lib//factory//generated//websocketresponsemessage//websocketresponsemessage.factory.container.default.context.json",
+    "isContextSingleton": false,
+    "isSingleton": false,
+    "ctorParameters": {
+        "message": {
+            "contextFilePath": "C://component//lib//factory//generated//message//message.factory.container.multiplerequestsspec.context.json"
+        }
+    }
+}

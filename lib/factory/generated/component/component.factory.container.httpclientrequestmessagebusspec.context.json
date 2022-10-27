@@ -1,0 +1,24 @@
+{
+    "typeName": "Component",
+    "typeVariableName": "component",
+    "scriptPath": "C://component//lib//component.js",
+    "contextName": "HttpClientRequestMessageBusSpec",
+    "contextFilePath": "C://component//lib//factory//generated//component//component.factory.container.httpclientrequestmessagebusspec.context.json",
+    "defaultContextName": "Default",
+    "defaultContextFilePath": "C://component//lib//factory//generated//component//component.factory.container.default.context.json",
+    "isContextSingleton": true,
+    "isSingleton": false,
+    "ctorParameters": {
+        "packageJson": null,
+        "contextName": null,
+        "clientMessageBus": {
+            "contextFilePath": "C://component//lib//factory//generated//clientmessagebus//clientmessagebus.factory.container.httpclientrequestmessagebusspec.context.json"
+        },
+        "serverMessageBus": {
+            "contextFilePath": "C://component//lib//factory//generated//servermessagebus//servermessagebus.factory.container.httpclientrequestmessagebusspec.context.json"
+        },
+        "userSessions": {
+            "contextFilePath": "C://component//lib//factory//generated//usersessions//usersessions.factory.container.httpclientrequestmessagebusspec.context.json"
+        }
+    }
+}
