@@ -1,9 +1,14 @@
 {
     "version": "0.2.0",
     "configurations": [{
-      "name": "Generate Factory Method",
+      "name": "Generate ClassTest Factory Method",
       "type": "node-terminal",
       "request": "launch",
-      "command": "node bin/generate.factory.method --defaultContextName Default --isSingleton true --scriptOutputDirPath ./output --scriptPath ./tests/classtest.js --prototypeScriptPath ./tests/classtest.prototype.js  --isContextSingleton false --contextName 123456t "
+      "command": "node bin/generate.factory.method --defaultContextName Default --isSingleton true --scriptOutputDirPath ./output --scriptPath ./tests/classtest.js --prototypeScriptPath ./tests/classtest.prototype.js --isContextSingleton false --contextName 123456t "
+    },{
+      "name": "Generate DepClassTest Factory Method",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "node bin/generate.factory.method --defaultContextName Default --isSingleton true --scriptOutputDirPath ./output --scriptPath ./tests/depclasstest.js --prototypeScriptPath ./tests/depclasstest.prototype.js --isContextSingleton false --contextName 123456t "
     }]
 }

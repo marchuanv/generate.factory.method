@@ -2,7 +2,11 @@
     "typeName": "[TypeName]",
     "typeVariableName": "[TypeVariableName]",
     "scriptPath": "[ScriptPath]",
-    "prototypeScriptPath": "[PrototypeScriptPath]",
-    "factoryScriptPath": "[FactoryScriptPath]",
-    "contexts": [Contexts]
+    "contextName": "[ContextName]",
+    "contextFilePath": "[ContextFilePath]",
+    "defaultContextName": "[DefaultContextName]",
+    "defaultContextFilePath": "[DefaultContextFilePath]",
+    "isContextSingleton": [IsContextSingleton],
+    "isSingleton": [IsSingleton],
+    "ctorParameters":  [CtorParameters]
 }

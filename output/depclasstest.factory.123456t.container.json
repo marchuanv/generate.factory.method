@@ -1,0 +1,12 @@
+{
+    "typeName": "DepClassTest",
+    "typeVariableName": "depClassTest",
+    "scriptPath": "D://generate.factory.method//tests//depclasstest.js",
+    "contextName": "123456t",
+    "contextFilePath": "D://generate.factory.method//output//depclasstest.factory.123456t.container.json",
+    "defaultContextName": "Default",
+    "defaultContextFilePath": "D://generate.factory.method//output//factory.default.container.json",
+    "isContextSingleton": false,
+    "isSingleton": true,
+    "ctorParameters": {}
+}

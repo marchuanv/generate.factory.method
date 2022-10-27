@@ -1,0 +1,15 @@
+{
+    "typeName": "ClassTest",
+    "typeVariableName": "classTest",
+    "scriptPath": "D://generate.factory.method//tests//classtest.js",
+    "contextName": "123456t",
+    "contextFilePath": "D://generate.factory.method//output//classtest.factory.123456t.container.json",
+    "defaultContextName": "Default",
+    "defaultContextFilePath": "D://generate.factory.method//output//factory.default.container.json",
+    "isContextSingleton": false,
+    "isSingleton": true,
+    "ctorParameters": {
+        "testParam01": null,
+        "testParam02": null
+    }
+}

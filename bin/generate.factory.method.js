@@ -3,6 +3,25 @@ const path = require('path');
 const typeInfo = require('../lib/type.info');
 const factoryContainer = require('../lib/factory.container');
 const { existsSync } = require('fs');
+const { readdirSync, writeFileSync, statSync, readFileSync } = require('fs');
+const factoryTemplate = readFileSync(path.join(__dirname, '../lib', 'templates', 'factory.template'),'utf8');
+
+function walk(dir) {
+    let results = [];
+    const list = readdirSync(dir);
+    list.forEach(function(file) {
+        const _file = path.join(dir, '/', file);
+        const stat = statSync(_file);
+        if (stat && stat.isDirectory()) { 
+            /* Recurse into a subdirectory */
+            results = results.concat(walk(_file));
+        } else { 
+            /* Is a file */
+            results.push(_file);
+        }
+    });
+    return results;
+}
 
 const args = {
     scriptPath: null,
@@ -51,9 +70,9 @@ typeInfo.add({ type, isSingleton });
 const _typeInfo = typeInfo.get({ typeName: type.name });
 
 const ctorArgumentsWithContextNames = _typeInfo.childInfoArray.map(ci => ci.variableName);
-const ctorArgumentNames = ctorArgumentsWithContextNames.filter(arg => arg.toLowerCase().indexOf('contextname') === -1);
+ctorArgumentNames = ctorArgumentsWithContextNames.concat(['contextName']);
 
-const container = factoryContainer.generate({ 
+factoryContainer.generate({ 
     typeInfo: _typeInfo,
     scriptPath,
     isContextSingleton,
@@ -61,11 +80,12 @@ const container = factoryContainer.generate({
     defaultContextName,
     jsonOutputDirPath: scriptOutputDirPath
 });
-const { containerContextFilePaths } = container;
 
+const factoryScriptPath = path.join(scriptOutputDirPath, `${_typeInfo.typeName.toLowerCase()}.factory.js`);
+const containerFilePaths = walk(scriptOutputDirPath).filter(p => p.indexOf(_typeInfo.typeName.toLowerCase()) > -1 ).map(p => p.replace(/\\/g,'//'));
 const factoryJs = factoryTemplate
-    .replace(/\[ContainerContextFilePaths\]/g, containerContextFilePaths)
+    .replace(/\[ContextFilePaths\]/g, JSON.stringify(containerFilePaths))
     .replace(/\[TypeName\]/g, _typeInfo.typeName)
     .replace(/\[PrimitiveArgs\]/g, ctorArgumentNames.join(','))
     .replace(/\[PrimitiveArgsWithContextName\]/g, ctorArgumentsWithContextNames.join(','));
-writeFileSync(scriptOutputDirPath, factoryJs, 'utf8');
+writeFileSync(factoryScriptPath, factoryJs, 'utf8');

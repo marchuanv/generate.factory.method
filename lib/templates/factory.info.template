@@ -1,8 +1,0 @@
-{ 
-    "typeName":"[TypeName]",
-    "factoryScriptPath":"[FactoryScriptPath]",
-    "factoryContainerContextFilePaths": [FactoryContainerContextFilePaths],
-    "minFactoryScriptPath":"[MinFactoryScriptPath]",
-    "ctorArgumentsWithContextNames": [CtorArgumentsWithContextNames],
-    "ctorArgumentNames": [CtorArgumentNames]
-}
