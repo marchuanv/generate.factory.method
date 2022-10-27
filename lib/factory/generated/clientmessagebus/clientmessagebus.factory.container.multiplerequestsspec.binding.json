@@ -1,22 +1,19 @@
 {
     "typeName": "ClientMessageBus",
     "typeVariableName": "clientMessageBus",
-    "scriptPath": "D://component//lib//clientmessagebus.js",
+    "scriptPath": "C://component//lib//clientmessagebus.js",
     "bindingName": "MultipleRequestsSpec",
-    "bindingFilePath": "D://component//lib//factory//generated//clientmessagebus//clientmessagebus.factory.container.multiplerequestsspec.binding.json",
+    "bindingFilePath": "C://component//lib//factory//generated//clientmessagebus//clientmessagebus.factory.container.multiplerequestsspec.binding.json",
     "defaultBindingName": "Default",
-    "defaultBindingFilePath": "D://component//lib//factory//generated//clientmessagebus//clientmessagebus.factory.container.default.binding.json",
+    "defaultBindingFilePath": "C://component//lib//factory//generated//clientmessagebus//clientmessagebus.factory.container.default.binding.json",
     "isBindingSingleton": true,
     "isSingleton": false,
     "ctorParameters": {
         "messageConverter": {
-            "bindingFilePath": "D://component//lib//factory//generated//messageconverter//messageconverter.factory.container.multiplerequestsspec.binding.json"
+            "bindingFilePath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.multiplerequestsspec.binding.json"
         },
-        "clientRequestMessageBus": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpclientrequestmessagebus//httpclientrequestmessagebus.factory.container.multiplerequestsspec.binding.json"
-        },
-        "clientResponseMessageBus": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpclientresponsemessagebus//httpclientresponsemessagebus.factory.container.multiplerequestsspec.binding.json"
-        }
+        "contextName": null,
+        "clientRequestMessageBus": null,
+        "clientResponseMessageBus": null
     }
 }

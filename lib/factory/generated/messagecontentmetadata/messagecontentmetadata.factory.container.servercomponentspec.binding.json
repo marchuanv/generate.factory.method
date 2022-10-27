@@ -1,11 +1,11 @@
 {
     "typeName": "MessageContentMetadata",
     "typeVariableName": "messageContentMetadata",
-    "scriptPath": "D://component//lib//messagecontentmetadata.js",
+    "scriptPath": "C://component//lib//messagecontentmetadata.js",
     "bindingName": "ServerComponentSpec",
-    "bindingFilePath": "D://component//lib//factory//generated//messagecontentmetadata//messagecontentmetadata.factory.container.servercomponentspec.binding.json",
+    "bindingFilePath": "C://component//lib//factory//generated//messagecontentmetadata//messagecontentmetadata.factory.container.servercomponentspec.binding.json",
     "defaultBindingName": "Default",
-    "defaultBindingFilePath": "D://component//lib//factory//generated//messagecontentmetadata//messagecontentmetadata.factory.container.default.binding.json",
+    "defaultBindingFilePath": "C://component//lib//factory//generated//messagecontentmetadata//messagecontentmetadata.factory.container.default.binding.json",
     "isBindingSingleton": false,
     "isSingleton": false,
     "ctorParameters": {

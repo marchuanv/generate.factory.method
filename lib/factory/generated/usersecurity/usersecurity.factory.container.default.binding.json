@@ -1,11 +1,11 @@
 {
     "typeName": "UserSecurity",
     "typeVariableName": "userSecurity",
-    "scriptPath": "D://component//lib//usersecurity.js",
+    "scriptPath": "C://component//lib//usersecurity.js",
     "bindingName": "Default",
-    "bindingFilePath": "D://component//lib//factory//generated//usersecurity//usersecurity.factory.container.default.binding.json",
+    "bindingFilePath": "C://component//lib//factory//generated//usersecurity//usersecurity.factory.container.default.binding.json",
     "defaultBindingName": "Default",
-    "defaultBindingFilePath": "D://component//lib//factory//generated//usersecurity//usersecurity.factory.container.default.binding.json",
+    "defaultBindingFilePath": "C://component//lib//factory//generated//usersecurity//usersecurity.factory.container.default.binding.json",
     "isBindingSingleton": true,
     "isSingleton": false,
     "ctorParameters": {

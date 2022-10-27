@@ -1,24 +1,24 @@
 {
     "typeName": "Component",
     "typeVariableName": "component",
-    "scriptPath": "D://component//lib//component.js",
+    "scriptPath": "C://component//lib//component.js",
     "bindingName": "ServerMessageBusSpec",
-    "bindingFilePath": "D://component//lib//factory//generated//component//component.factory.container.servermessagebusspec.binding.json",
+    "bindingFilePath": "C://component//lib//factory//generated//component//component.factory.container.servermessagebusspec.binding.json",
     "defaultBindingName": "Default",
-    "defaultBindingFilePath": "D://component//lib//factory//generated//component//component.factory.container.default.binding.json",
+    "defaultBindingFilePath": "C://component//lib//factory//generated//component//component.factory.container.default.binding.json",
     "isBindingSingleton": true,
     "isSingleton": false,
     "ctorParameters": {
         "packageJson": null,
         "factoryContainerBindingName": null,
         "clientMessageBus": {
-            "bindingFilePath": "D://component//lib//factory//generated//clientmessagebus//clientmessagebus.factory.container.servermessagebusspec.binding.json"
+            "bindingFilePath": "C://component//lib//factory//generated//clientmessagebus//clientmessagebus.factory.container.servermessagebusspec.binding.json"
         },
         "serverMessageBus": {
-            "bindingFilePath": "D://component//lib//factory//generated//servermessagebus//servermessagebus.factory.container.servermessagebusspec.binding.json"
+            "bindingFilePath": "C://component//lib//factory//generated//servermessagebus//servermessagebus.factory.container.servermessagebusspec.binding.json"
         },
         "userSessions": {
-            "bindingFilePath": "D://component//lib//factory//generated//usersessions//usersessions.factory.container.servermessagebusspec.binding.json"
+            "bindingFilePath": "C://component//lib//factory//generated//usersessions//usersessions.factory.container.servermessagebusspec.binding.json"
         }
     }
 }

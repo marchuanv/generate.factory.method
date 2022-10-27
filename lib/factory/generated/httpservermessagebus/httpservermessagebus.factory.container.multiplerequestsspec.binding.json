@@ -1,39 +1,27 @@
 {
     "typeName": "HttpServerMessageBus",
     "typeVariableName": "httpServerMessageBus",
-    "scriptPath": "D://component//lib//http//httpservermessagebus.js",
+    "scriptPath": "C://component//lib//http//httpservermessagebus.js",
     "bindingName": "MultipleRequestsSpec",
-    "bindingFilePath": "D://component//lib//factory//generated//httpservermessagebus//httpservermessagebus.factory.container.multiplerequestsspec.binding.json",
+    "bindingFilePath": "C://component//lib//factory//generated//httpservermessagebus//httpservermessagebus.factory.container.multiplerequestsspec.binding.json",
     "defaultBindingName": "Default",
-    "defaultBindingFilePath": "D://component//lib//factory//generated//httpservermessagebus//httpservermessagebus.factory.container.default.binding.json",
+    "defaultBindingFilePath": "C://component//lib//factory//generated//httpservermessagebus//httpservermessagebus.factory.container.default.binding.json",
     "isBindingSingleton": true,
     "isSingleton": false,
     "ctorParameters": {
         "timeout": null,
         "factoryContainerBindingName": null,
-        "httpServerRequestMessageQueueBinding": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpserverrequestmessagequeuebinding//httpserverrequestmessagequeuebinding.factory.container.multiplerequestsspec.binding.json"
-        },
-        "httpServerResponseMessageQueueBinding": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpserverresponsemessagequeuebinding//httpserverresponsemessagequeuebinding.factory.container.multiplerequestsspec.binding.json"
-        },
-        "httpServerStartMessageQueueBinding": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpserverstartmessagequeuebinding//httpserverstartmessagequeuebinding.factory.container.multiplerequestsspec.binding.json"
-        },
-        "httpServerStartedMessageQueueBinding": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpserverstartedmessagequeuebinding//httpserverstartedmessagequeuebinding.factory.container.multiplerequestsspec.binding.json"
-        },
-        "httpServerStopMessageQueueBinding": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpserverstopmessagequeuebinding//httpserverstopmessagequeuebinding.factory.container.multiplerequestsspec.binding.json"
-        },
-        "httpServerStoppedMessageQueueBinding": {
-            "bindingFilePath": "D://component//lib//factory//generated//httpserverstoppedmessagequeuebinding//httpserverstoppedmessagequeuebinding.factory.container.multiplerequestsspec.binding.json"
-        },
+        "httpServerRequestMessageQueueBinding": null,
+        "httpServerResponseMessageQueueBinding": null,
+        "httpServerStartMessageQueueBinding": null,
+        "httpServerStartedMessageQueueBinding": null,
+        "httpServerStopMessageQueueBinding": null,
+        "httpServerStoppedMessageQueueBinding": null,
         "senderAddress": {
-            "bindingFilePath": "D://component//lib//factory//generated//senderaddress//senderaddress.factory.container.multiplerequestsspec.binding.json"
+            "bindingFilePath": "C://component//lib//factory//generated//senderaddress//senderaddress.factory.container.multiplerequestsspec.binding.json"
         },
         "logger": {
-            "bindingFilePath": "D://component//lib//factory//generated//logger//logger.factory.container.multiplerequestsspec.binding.json"
+            "bindingFilePath": "C://component//lib//factory//generated//logger//logger.factory.container.multiplerequestsspec.binding.json"
         }
     }
 }

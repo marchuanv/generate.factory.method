@@ -1,11 +1,26 @@
-const { readdirSync, readFileSync, writeFileSync } = require('fs');
+const { readdirSync, readFileSync, writeFileSync, statSync } = require('fs');
+
+function walk(dir) {
+    let results = [];
+    const list = readdirSync(dir);
+    list.forEach(function(file) {
+        const _file = path.join(dir, '/', file);
+        const stat = statSync(_file);
+        if (stat && stat.isDirectory()) { 
+            /* Recurse into a subdirectory */
+            results = results.concat(walk(_file));
+        } else { 
+            /* Is a file */
+            results.push(_file);
+        }
+    });
+    return results;
+}
+
 const path = require('path');
 const utils = require('utils');
 const libDir = path.join(__dirname, '../lib');
-const rootScripts = readdirSync(libDir, { withFileTypes: true }).filter(dirent => dirent.isFile()).map(file => path.join(libDir, file.name));
-const httpScripts = readdirSync(path.join(libDir, 'http'), { withFileTypes: true }).filter(dirent => dirent.isFile()).map(file => path.join(libDir, 'http', file.name));
-const websocketScripts = readdirSync(path.join(libDir, 'websocket'), { withFileTypes: true }).filter(dirent => dirent.isFile()).map(file => path.join(libDir, 'websocket', file.name));
-const scripts = rootScripts.concat(httpScripts.concat(websocketScripts)).filter(scPath => scPath.indexOf('prototype.js') > -1);
+const prototypeScripts = walk(libDir).filter(scPath => scPath.indexOf('prototype.js') > -1);
 const typeInfoTemplate = readFileSync(path.join(__dirname,'templates', 'type.info.template'),'utf8');
 const typesInfoPath = path.join(__dirname, 'types.info.json');
 const typesInfo = require(typesInfoPath);
@@ -28,7 +43,7 @@ function walkDependencyTree(children, callback) {
 
 function getDependencyTree(info, pass = 'firstpass', types = []) {
     if (!info || utils.isEmptyObject(info)) {
-        const prototypeScriptPath = scripts.find(scPath => types.find(ti => ti.prototypeScriptPath === scPath.replace(/\\/g,'//')) === undefined);
+        const prototypeScriptPath = prototypeScripts.find(scPath => types.find(ti => ti.prototypeScriptPath === scPath.replace(/\\/g,'//')) === undefined);
         if (prototypeScriptPath) {
             try {
                 const sc = require(prototypeScriptPath);

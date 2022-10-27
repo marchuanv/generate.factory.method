@@ -1,16 +1,16 @@
 {
     "typeName": "HttpResponseMessage",
     "typeVariableName": "httpResponseMessage",
-    "scriptPath": "D://component//lib//http//httpresponsemessage.js",
+    "scriptPath": "C://component//lib//http//response//httpresponsemessage.js",
     "bindingName": "ClientMessageBusSpec",
-    "bindingFilePath": "D://component//lib//factory//generated//httpresponsemessage//httpresponsemessage.factory.container.clientmessagebusspec.binding.json",
+    "bindingFilePath": "C://component//lib//factory//generated//httpresponsemessage//httpresponsemessage.factory.container.clientmessagebusspec.binding.json",
     "defaultBindingName": "Default",
-    "defaultBindingFilePath": "D://component//lib//factory//generated//httpresponsemessage//httpresponsemessage.factory.container.default.binding.json",
+    "defaultBindingFilePath": "C://component//lib//factory//generated//httpresponsemessage//httpresponsemessage.factory.container.default.binding.json",
     "isBindingSingleton": false,
     "isSingleton": false,
     "ctorParameters": {
         "message": {
-            "bindingFilePath": "D://component//lib//factory//generated//message//message.factory.container.clientmessagebusspec.binding.json"
+            "bindingFilePath": "C://component//lib//factory//generated//message//message.factory.container.clientmessagebusspec.binding.json"
         }
     }
 }

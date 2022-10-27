@@ -1,11 +1,11 @@
 {
     "typeName": "MessageStatus",
     "typeVariableName": "messageStatus",
-    "scriptPath": "D://component//lib//messagestatus.js",
+    "scriptPath": "C://component//lib//messagestatus.js",
     "bindingName": "HttpServerResponseMessageBusSpec",
-    "bindingFilePath": "D://component//lib//factory//generated//messagestatus//messagestatus.factory.container.httpserverresponsemessagebusspec.binding.json",
+    "bindingFilePath": "C://component//lib//factory//generated//messagestatus//messagestatus.factory.container.httpserverresponsemessagebusspec.binding.json",
     "defaultBindingName": "Default",
-    "defaultBindingFilePath": "D://component//lib//factory//generated//messagestatus//messagestatus.factory.container.default.binding.json",
+    "defaultBindingFilePath": "C://component//lib//factory//generated//messagestatus//messagestatus.factory.container.default.binding.json",
     "isBindingSingleton": false,
     "isSingleton": false,
     "ctorParameters": {

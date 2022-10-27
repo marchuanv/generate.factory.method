@@ -1,11 +1,9 @@
 {
     "version": "0.2.0",
-    "configurations": [ {
-      "name": "Run Jasmine Tests",
-      "type": "node",
+    "configurations": [{
+      "name": "Run Specs",
+      "type": "node-terminal",
       "request": "launch",
-      "cwd": "${workspaceFolder}",
-      "runtimeExecutable": "npm",
-      "runtimeArgs": ["test"]
+      "command": "npm test"
     }]
 }

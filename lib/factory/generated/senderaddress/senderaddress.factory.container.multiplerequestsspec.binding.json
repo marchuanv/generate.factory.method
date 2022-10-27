@@ -1,11 +1,11 @@
 {
     "typeName": "SenderAddress",
     "typeVariableName": "senderAddress",
-    "scriptPath": "D://component//lib//senderaddress.js",
+    "scriptPath": "C://component//lib//senderaddress.js",
     "bindingName": "MultipleRequestsSpec",
-    "bindingFilePath": "D://component//lib//factory//generated//senderaddress//senderaddress.factory.container.multiplerequestsspec.binding.json",
+    "bindingFilePath": "C://component//lib//factory//generated//senderaddress//senderaddress.factory.container.multiplerequestsspec.binding.json",
     "defaultBindingName": "Default",
-    "defaultBindingFilePath": "D://component//lib//factory//generated//senderaddress//senderaddress.factory.container.default.binding.json",
+    "defaultBindingFilePath": "C://component//lib//factory//generated//senderaddress//senderaddress.factory.container.default.binding.json",
     "isBindingSingleton": false,
     "isSingleton": false,
     "ctorParameters": {

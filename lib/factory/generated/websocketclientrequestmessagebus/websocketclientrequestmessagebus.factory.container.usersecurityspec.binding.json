@@ -1,16 +1,16 @@
 {
     "typeName": "WebSocketClientRequestMessageBus",
     "typeVariableName": "webSocketClientRequestMessageBus",
-    "scriptPath": "D://component//lib//websocket//websocketclientrequestmessagebus.js",
+    "scriptPath": "C://component//lib//websocket//websocketclientrequestmessagebus.js",
     "bindingName": "UserSecuritySpec",
-    "bindingFilePath": "D://component//lib//factory//generated//websocketclientrequestmessagebus//websocketclientrequestmessagebus.factory.container.usersecurityspec.binding.json",
+    "bindingFilePath": "C://component//lib//factory//generated//websocketclientrequestmessagebus//websocketclientrequestmessagebus.factory.container.usersecurityspec.binding.json",
     "defaultBindingName": "Default",
-    "defaultBindingFilePath": "D://component//lib//factory//generated//websocketclientrequestmessagebus//websocketclientrequestmessagebus.factory.container.default.binding.json",
+    "defaultBindingFilePath": "C://component//lib//factory//generated//websocketclientrequestmessagebus//websocketclientrequestmessagebus.factory.container.default.binding.json",
     "isBindingSingleton": true,
     "isSingleton": false,
     "ctorParameters": {
         "websocketClientRequestMessageQueueBinding": {
-            "bindingFilePath": "D://component//lib//factory//generated//websocketclientrequestmessagequeuebinding//websocketclientrequestmessagequeuebinding.factory.container.usersecurityspec.binding.json"
+            "bindingFilePath": "C://component//lib//factory//generated//websocketclientrequestmessagequeuebinding//websocketclientrequestmessagequeuebinding.factory.container.usersecurityspec.binding.json"
         }
     }
 }

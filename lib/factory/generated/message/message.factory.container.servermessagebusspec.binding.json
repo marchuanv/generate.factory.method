@@ -1,27 +1,26 @@
 {
     "typeName": "Message",
     "typeVariableName": "message",
-    "scriptPath": "D://component//lib//message.js",
+    "scriptPath": "C://component//lib//message.js",
     "bindingName": "ServerMessageBusSpec",
-    "bindingFilePath": "D://component//lib//factory//generated//message//message.factory.container.servermessagebusspec.binding.json",
+    "bindingFilePath": "C://component//lib//factory//generated//message//message.factory.container.servermessagebusspec.binding.json",
     "defaultBindingName": "Default",
-    "defaultBindingFilePath": "D://component//lib//factory//generated//message//message.factory.container.default.binding.json",
+    "defaultBindingFilePath": "C://component//lib//factory//generated//message//message.factory.container.default.binding.json",
     "isBindingSingleton": false,
     "isSingleton": false,
     "ctorParameters": {
         "messageStatus": {
-            "bindingFilePath": "D://component//lib//factory//generated//messagestatus//messagestatus.factory.container.servermessagebusspec.binding.json"
+            "bindingFilePath": "C://component//lib//factory//generated//messagestatus//messagestatus.factory.container.servermessagebusspec.binding.json"
         },
-        "factoryContainerBindingName": null,
-        "Id": null,
+        "contextName": null,
         "messageContent": {
-            "bindingFilePath": "D://component//lib//factory//generated//messagecontent//messagecontent.factory.container.servermessagebusspec.binding.json"
+            "bindingFilePath": "C://component//lib//factory//generated//messagecontent//messagecontent.factory.container.servermessagebusspec.binding.json"
         },
         "messageContentMetadata": {
-            "bindingFilePath": "D://component//lib//factory//generated//messagecontentmetadata//messagecontentmetadata.factory.container.servermessagebusspec.binding.json"
+            "bindingFilePath": "C://component//lib//factory//generated//messagecontentmetadata//messagecontentmetadata.factory.container.servermessagebusspec.binding.json"
         },
         "messageMetadata": {
-            "bindingFilePath": "D://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.servermessagebusspec.binding.json"
+            "bindingFilePath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.servermessagebusspec.binding.json"
         }
     }
 }

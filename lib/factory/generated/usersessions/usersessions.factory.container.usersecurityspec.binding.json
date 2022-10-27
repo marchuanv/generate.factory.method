@@ -1,11 +1,11 @@
 {
     "typeName": "UserSessions",
     "typeVariableName": "userSessions",
-    "scriptPath": "D://component//lib//usersessions.js",
+    "scriptPath": "C://component//lib//usersessions.js",
     "bindingName": "UserSecuritySpec",
-    "bindingFilePath": "D://component//lib//factory//generated//usersessions//usersessions.factory.container.usersecurityspec.binding.json",
+    "bindingFilePath": "C://component//lib//factory//generated//usersessions//usersessions.factory.container.usersecurityspec.binding.json",
     "defaultBindingName": "Default",
-    "defaultBindingFilePath": "D://component//lib//factory//generated//usersessions//usersessions.factory.container.default.binding.json",
+    "defaultBindingFilePath": "C://component//lib//factory//generated//usersessions//usersessions.factory.container.default.binding.json",
     "isBindingSingleton": true,
     "isSingleton": true,
     "ctorParameters": {

@@ -1,11 +1,11 @@
 {
     "typeName": "MessageConverter",
     "typeVariableName": "messageConverter",
-    "scriptPath": "D://component//lib//messageconverter.js",
+    "scriptPath": "C://component//lib//messageconverter.js",
     "bindingName": "HttpServerResponseMessageBusSpec",
-    "bindingFilePath": "D://component//lib//factory//generated//messageconverter//messageconverter.factory.container.httpserverresponsemessagebusspec.binding.json",
+    "bindingFilePath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.httpserverresponsemessagebusspec.binding.json",
     "defaultBindingName": "Default",
-    "defaultBindingFilePath": "D://component//lib//factory//generated//messageconverter//messageconverter.factory.container.default.binding.json",
+    "defaultBindingFilePath": "C://component//lib//factory//generated//messageconverter//messageconverter.factory.container.default.binding.json",
     "isBindingSingleton": true,
     "isSingleton": false,
     "ctorParameters": {

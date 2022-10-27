@@ -1,11 +1,11 @@
 {
     "typeName": "Logger",
     "typeVariableName": "logger",
-    "scriptPath": "D://component//lib//logger.js",
+    "scriptPath": "C://component//lib//logger.js",
     "bindingName": "Default",
-    "bindingFilePath": "D://component//lib//factory//generated//logger//logger.factory.container.default.binding.json",
+    "bindingFilePath": "C://component//lib//factory//generated//logger//logger.factory.container.default.binding.json",
     "defaultBindingName": "Default",
-    "defaultBindingFilePath": "D://component//lib//factory//generated//logger//logger.factory.container.default.binding.json",
+    "defaultBindingFilePath": "C://component//lib//factory//generated//logger//logger.factory.container.default.binding.json",
     "isBindingSingleton": true,
     "isSingleton": true,
     "ctorParameters": {}

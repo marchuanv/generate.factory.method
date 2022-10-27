@@ -1,17 +1,17 @@
 {
     "typeName": "HttpServerStoppedMessageQueueBinding",
     "typeVariableName": "httpServerStoppedMessageQueueBinding",
-    "scriptPath": "D://component//lib//http//httpserverstoppedmessagequeuebinding.js",
+    "scriptPath": "C://component//lib//http//binding//httpserverstoppedmessagequeuebinding.js",
     "bindingName": "ClientComponentSpec",
-    "bindingFilePath": "D://component//lib//factory//generated//httpserverstoppedmessagequeuebinding//httpserverstoppedmessagequeuebinding.factory.container.clientcomponentspec.binding.json",
+    "bindingFilePath": "C://component//lib//factory//generated//httpserverstoppedmessagequeuebinding//httpserverstoppedmessagequeuebinding.factory.container.clientcomponentspec.binding.json",
     "defaultBindingName": "Default",
-    "defaultBindingFilePath": "D://component//lib//factory//generated//httpserverstoppedmessagequeuebinding//httpserverstoppedmessagequeuebinding.factory.container.default.binding.json",
+    "defaultBindingFilePath": "C://component//lib//factory//generated//httpserverstoppedmessagequeuebinding//httpserverstoppedmessagequeuebinding.factory.container.default.binding.json",
     "isBindingSingleton": true,
     "isSingleton": true,
     "ctorParameters": {
         "factoryContainerBindingName": null,
         "messageQueue": {
-            "bindingFilePath": "D://component//lib//factory//generated//messagequeue//messagequeue.factory.container.clientcomponentspec.binding.json"
+            "bindingFilePath": "C://component//lib//factory//generated//messagequeue//messagequeue.factory.container.clientcomponentspec.binding.json"
         }
     }
 }

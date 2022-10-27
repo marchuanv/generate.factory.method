@@ -1,21 +1,21 @@
 {
     "typeName": "MessageMetadata",
     "typeVariableName": "messageMetadata",
-    "scriptPath": "D://component//lib//messagemetadata.js",
+    "scriptPath": "C://component//lib//messagemetadata.js",
     "bindingName": "ClientComponentSpec",
-    "bindingFilePath": "D://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.clientcomponentspec.binding.json",
+    "bindingFilePath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.clientcomponentspec.binding.json",
     "defaultBindingName": "Default",
-    "defaultBindingFilePath": "D://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.default.binding.json",
+    "defaultBindingFilePath": "C://component//lib//factory//generated//messagemetadata//messagemetadata.factory.container.default.binding.json",
     "isBindingSingleton": false,
     "isSingleton": false,
     "ctorParameters": {
         "recipientAddress": {
-            "bindingFilePath": "D://component//lib//factory//generated//recipientaddress//recipientaddress.factory.container.clientcomponentspec.binding.json"
+            "bindingFilePath": "C://component//lib//factory//generated//recipientaddress//recipientaddress.factory.container.clientcomponentspec.binding.json"
         },
         "metadata": null,
         "token": null,
         "senderAddress": {
-            "bindingFilePath": "D://component//lib//factory//generated//senderaddress//senderaddress.factory.container.clientcomponentspec.binding.json"
+            "bindingFilePath": "C://component//lib//factory//generated//senderaddress//senderaddress.factory.container.clientcomponentspec.binding.json"
         }
     }
 }

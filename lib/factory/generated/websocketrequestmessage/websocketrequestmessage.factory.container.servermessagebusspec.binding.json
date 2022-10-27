@@ -1,16 +1,16 @@
 {
     "typeName": "WebSocketRequestMessage",
     "typeVariableName": "webSocketRequestMessage",
-    "scriptPath": "D://component//lib//websocket//websocketrequestmessage.js",
+    "scriptPath": "C://component//lib//websocket//websocketrequestmessage.js",
     "bindingName": "ServerMessageBusSpec",
-    "bindingFilePath": "D://component//lib//factory//generated//websocketrequestmessage//websocketrequestmessage.factory.container.servermessagebusspec.binding.json",
+    "bindingFilePath": "C://component//lib//factory//generated//websocketrequestmessage//websocketrequestmessage.factory.container.servermessagebusspec.binding.json",
     "defaultBindingName": "Default",
-    "defaultBindingFilePath": "D://component//lib//factory//generated//websocketrequestmessage//websocketrequestmessage.factory.container.default.binding.json",
+    "defaultBindingFilePath": "C://component//lib//factory//generated//websocketrequestmessage//websocketrequestmessage.factory.container.default.binding.json",
     "isBindingSingleton": false,
     "isSingleton": false,
     "ctorParameters": {
         "message": {
-            "bindingFilePath": "D://component//lib//factory//generated//message//message.factory.container.servermessagebusspec.binding.json"
+            "bindingFilePath": "C://component//lib//factory//generated//message//message.factory.container.servermessagebusspec.binding.json"
         }
     }
 }
