@@ -3,5 +3,6 @@
     "variableName":"[VariableName]",
     "isSingleton":[IsSingleton],
     "childInfoArray":[[ChildInfoArray]],
-    "isRef":[IsRef]
+    "isRef":[IsRef],
+    "isResolved":[IsResolved]
 }

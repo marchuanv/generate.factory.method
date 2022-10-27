@@ -1,0 +1,10 @@
+[
+    {
+        "typeName": "DepClassTest",
+        "variableName": "depClassTest",
+        "isSingleton": true,
+        "childInfoArray": [],
+        "isRef": true,
+        "isResolved": true
+    }
+]

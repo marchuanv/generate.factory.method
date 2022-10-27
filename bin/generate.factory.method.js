@@ -24,6 +24,7 @@ function walk(dir) {
 }
 
 const args = {
+    libGuid: null,
     scriptPath: null,
     prototypeScriptPath: null,
     isSingleton: null,
@@ -65,9 +66,8 @@ const script = require(scriptPath);
 const key = Object.keys(script)[0];
 const type = script[key];
 
-
-typeInfo.add({ type, isSingleton });
-const _typeInfo = typeInfo.get({ typeName: type.name });
+typeInfo.add({ type, isSingleton, typeInfoOutputDirPath:  scriptOutputDirPath });
+const _typeInfo = typeInfo.get({ type, typeInfoOutputDirPath: scriptOutputDirPath });
 
 const ctorArgumentsWithContextNames = _typeInfo.childInfoArray.map(ci => ci.variableName);
 ctorArgumentNames = ctorArgumentsWithContextNames.concat(['contextName']);

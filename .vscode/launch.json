@@ -4,11 +4,11 @@
       "name": "Generate ClassTest Factory Method",
       "type": "node-terminal",
       "request": "launch",
-      "command": "node bin/generate.factory.method --defaultContextName Default --isSingleton true --scriptOutputDirPath ./output --scriptPath ./tests/classtest.js --prototypeScriptPath ./tests/classtest.prototype.js --isContextSingleton false --contextName 123456t "
+      "command": "node bin/generate.factory.method --libGuid a667cb45-1ef3-4b4d-b7ce-be2a28dddc0a --defaultContextName Default --isSingleton true --scriptOutputDirPath ./output --scriptPath ./tests/classtest.js --prototypeScriptPath ./tests/classtest.prototype.js --isContextSingleton false --contextName 123456t "
     },{
       "name": "Generate DepClassTest Factory Method",
       "type": "node-terminal",
       "request": "launch",
-      "command": "node bin/generate.factory.method --defaultContextName Default --isSingleton true --scriptOutputDirPath ./output --scriptPath ./tests/depclasstest.js --prototypeScriptPath ./tests/depclasstest.prototype.js --isContextSingleton false --contextName 123456t "
+      "command": "node bin/generate.factory.method --libGuid a667cb45-1ef3-4b4d-b7ce-be2a28dddc0a --defaultContextName Default --isSingleton true --scriptOutputDirPath ./output --scriptPath ./tests/depclasstest.js --prototypeScriptPath ./tests/depclasstest.prototype.js --isContextSingleton false --contextName 123456t "
     }]
 }
