@@ -4,6 +4,6 @@
       "name": "Generate Factory Method",
       "type": "node-terminal",
       "request": "launch",
-      "command": "node bin/generate.factory.method"
+      "command": "node bin/generate.factory.method --defaultContextName Default --isSingleton true --scriptOutputDirPath ./output --scriptPath ./tests/classtest.js --prototypeScriptPath ./tests/classtest.prototype.js  --isContextSingleton false --contextName 123456t "
     }]
 }
