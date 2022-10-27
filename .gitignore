@@ -106,4 +106,4 @@ dist
 package-lock*
 
 jasmine-test-results.json
-useridentities.json
+generated/

@@ -1,9 +1,9 @@
 {
     "version": "0.2.0",
     "configurations": [{
-      "name": "Run Specs",
+      "name": "Generate Factory Method",
       "type": "node-terminal",
       "request": "launch",
-      "command": "npm test"
+      "command": "node bin/generate.factory.method"
     }]
 }

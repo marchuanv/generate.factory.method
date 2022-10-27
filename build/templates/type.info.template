@@ -1,9 +1,0 @@
-{ 
-    "typeName":"[TypeName]",
-    "variableName":"[VariableName]",
-    "scriptPath":"[ScriptPath]",
-    "prototypeScriptPath":"[PrototypeScriptPath]",
-    "isSingleton":[IsSingleton],
-    "passes": [[PassesArray]],
-    "children":[[ChildrenArray]]
-}

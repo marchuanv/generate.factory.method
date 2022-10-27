@@ -1,0 +1,7 @@
+{ 
+    "typeName":"[TypeName]",
+    "variableName":"[VariableName]",
+    "isSingleton":[IsSingleton],
+    "childInfoArray":[[ChildInfoArray]],
+    "IsResolved":[isResolved]
+}
