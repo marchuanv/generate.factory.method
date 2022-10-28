@@ -4,7 +4,7 @@
   "description": "generate a factory method from a class or function",
   "main": "bin/generate.factory.method.js",
   "bin": {
-    "add-type-info": "bin/add-type-info.js"
+    "generate.factory.method": "bin/generate-factory-method.js"
   },
   "engines": {
     "node": "16.13.2",
@@ -12,17 +12,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/marchuanv/generate.factory.method.git"
+    "url": "git+https://github.com/marchuanv/generate-factory-method.git"
   },
   "author": "Marchuan Van Der Merwe",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/marchuanv/generate.factory.method/issues"
+    "url": "https://github.com/marchuanv//generate-factory-method/issues"
   },
   "scripts": {
-    "add-type-info": "add-type-info"
+    "generate-factory-method": "node bin//generate-factory-method.js",
+    "add-type-info": "node bin//add-type-info.js"
   },
-  "homepage": "https://github.com/marchuanv/generate.factory.method#readme",
+  "homepage": "https://github.com/marchuanv//generate-factory-method#readme",
   "dependencies": {
     "utils": "marchuanv/utils"
   },

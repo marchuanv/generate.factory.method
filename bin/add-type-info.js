@@ -15,3 +15,4 @@ const key = Object.keys(script)[0];
 const type = script[key];
 
 typeInfo.add({ type, isSingleton, typeInfoOutputDirPath:  scriptOutputDirPath });
+typeInfo.resolve({ type, typeInfoOutputDirPath:  scriptOutputDirPath });

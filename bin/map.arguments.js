@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 const path = require('path');
 module.exports = {
+    command: null,
     libGuid: null,
     scriptPath: null,
     prototypeScriptPath: null,
@@ -10,10 +11,16 @@ module.exports = {
     contextName: null,
     defaultContextName: null
 };
-process.argv.forEach( (param, index) => {
+const args = process.argv.slice(2,process.argv.length);
+module.exports.command = args[0];
+if (module.exports.command.indexOf('--') > -1) {
+    module.exports.command = null;
+}
+for(const param of args) {
     const name = param.replace('--','');
+    const index = args.findIndex(x => x === param);
     if (module.exports [name] !== undefined) {
-        let value = process.argv[index + 1];
+        let value = args[index + 1];
         if (value.toLowerCase().indexOf('true') > -1) {
             value = true;
         } else if (value.toLowerCase().indexOf('false') > -1) {
@@ -24,4 +31,4 @@ process.argv.forEach( (param, index) => {
         }
         module.exports [name] = value;
     }
-});
+};

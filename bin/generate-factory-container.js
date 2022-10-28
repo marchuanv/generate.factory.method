@@ -23,34 +23,10 @@ function walk(dir) {
     return results;
 }
 
-const args = {
-    libGuid: null,
-    scriptPath: null,
-    prototypeScriptPath: null,
-    isSingleton: null,
-    isContextSingleton: null,
-    scriptOutputDirPath: null,
-    contextName: null,
-    defaultContextName: null
+const { command, scriptPath, prototypeScriptPath, isSingleton, isContextSingleton, scriptOutputDirPath, contextName, defaultContextName } = require('./map.arguments');
+if (command === 'add-type-info') {
+   return require('./add-type-info');
 }
-
-process.argv.forEach( (param, index) => {
-    const name = param.replace('--','');
-    if (args[name] !== undefined) {
-        let value = process.argv[index + 1];
-        if (value.toLowerCase().indexOf('true') > -1) {
-            value = true;
-        } else if (value.toLowerCase().indexOf('false') > -1) {
-            value = false;
-        }
-        if (typeof value === 'string' && (value.indexOf('/') > -1 || value.indexOf('\\') > -1 ) ) {
-            value = path.resolve(value);
-        }
-        args[name] = value;
-    }
-});
-
-const { scriptPath, prototypeScriptPath, isSingleton, isContextSingleton, scriptOutputDirPath, contextName, defaultContextName } = args;
 
 if (!existsSync(scriptPath)) {
     throw new Error(`${scriptPath} script does not exist.`);
