@@ -5,5 +5,6 @@
     "childInfoArray":[[ChildInfoArray]],
     "isRef":[IsRef],
     "isResolved":[IsResolved],
+    "scriptPath":"[ScriptPath]",
     "prototypeScriptPath":"[PrototypeScriptPath]"
 }

@@ -1,33 +1,27 @@
 [
     {
-        "typeName": "TestClassDepedency",
-        "variableName": "testClassDepedency",
-        "isSingleton": true,
-        "childInfoArray": [],
-        "isRef": true,
-        "isResolved": true
-    },
-    {
         "typeName": "TestClassDependency",
         "variableName": "testClassDependency",
-        "isSingleton": true,
+        "isSingleton": false,
         "childInfoArray": [],
         "isRef": true,
         "isResolved": true,
+        "scriptPath": "C://generate.factory.method//tests//testclassdepedency.js",
         "prototypeScriptPath": "C://generate.factory.method//tests//testclassdepedency.prototype.js"
     },
     {
         "typeName": "TestClass",
         "variableName": "testClass",
-        "isSingleton": true,
+        "isSingleton": false,
         "childInfoArray": [
             {
                 "typeName": "TestClassDependency",
                 "variableName": "testClassDependency",
-                "isSingleton": true,
+                "isSingleton": false,
                 "childInfoArray": [],
                 "isRef": true,
                 "isResolved": true,
+                "scriptPath": "C://generate.factory.method//tests//testclassdepedency.js",
                 "prototypeScriptPath": "C://generate.factory.method//tests//testclassdepedency.prototype.js"
             },
             {
@@ -37,6 +31,7 @@
                 "childInfoArray": [],
                 "isRef": false,
                 "isResolved": false,
+                "scriptPath": "",
                 "prototypeScriptPath": ""
             },
             {
@@ -46,11 +41,13 @@
                 "childInfoArray": [],
                 "isRef": false,
                 "isResolved": false,
+                "scriptPath": "",
                 "prototypeScriptPath": ""
             }
         ],
         "isRef": true,
         "isResolved": true,
+        "scriptPath": "C://generate.factory.method//tests//testclass.js",
         "prototypeScriptPath": "C://generate.factory.method//tests//testclass.prototype.js"
     }
 ]
