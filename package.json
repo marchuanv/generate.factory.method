@@ -4,7 +4,6 @@
   "description": "generate a factory method from a class or function",
   "main": "bin/generate.factory.method.js",
   "bin": {
-    "generate-factory-method": "bin/generate.factory.method.js",
     "add-type-info": "bin/add-type-info.js"
   },
   "engines": {
