@@ -4,5 +4,6 @@
     "isSingleton":[IsSingleton],
     "childInfoArray":[[ChildInfoArray]],
     "isRef":[IsRef],
-    "isResolved":[IsResolved]
+    "isResolved":[IsResolved],
+    "prototypeScriptPath":"[PrototypeScriptPath]"
 }
