@@ -26,6 +26,5 @@
   "homepage": "https://github.com/marchuanv//generate-factory-method#readme",
   "dependencies": {
     "utils": "marchuanv/utils"
-  },
-  "devDependencies": {}
+  }
 }

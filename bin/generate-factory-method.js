@@ -38,30 +38,43 @@ if (!existsSync(scriptOutputDirPath)){
     throw new Error(`${scriptOutputDirPath} script does not exist.`);
 }
 
-const script = require(scriptPath);
-const key = Object.keys(script)[0];
-const type = script[key];
+const script = require(prototypeScriptPath);
+const typeName = Object.keys(script)[0];
 
-typeInfo.add({ type, isSingleton, typeInfoOutputDirPath:  scriptOutputDirPath });
-const _typeInfo = typeInfo.get({ type, typeInfoOutputDirPath: scriptOutputDirPath });
+typeInfo.add({ scriptPath, prototypeScriptPath, isSingleton, isContextSingleton, typeInfoOutputDirPath: scriptOutputDirPath });
+typeInfo.resolve({ prototypeScriptPath, typeInfoOutputDirPath: scriptOutputDirPath });
 
-const ctorArgumentsWithContextNames = _typeInfo.childInfoArray.map(ci => ci.variableName);
-ctorArgumentNames = ctorArgumentsWithContextNames.concat(['contextName']);
+const info = typeInfo.get({ typeInfoOutputDirPath: scriptOutputDirPath, typeName });
 
-factoryContainer.generate({ 
-    typeInfo: _typeInfo,
-    scriptPath,
-    isContextSingleton,
-    contextName,
-    defaultContextName,
-    jsonOutputDirPath: scriptOutputDirPath
-});
+const ctorArgumentNames = info.childInfoArray.map(ci => ci.variableName);
+const ctorArgumentsWithContextNames = ctorArgumentNames.concat(['contextName']);
+for(const ctorArgumentName of ctorArgumentNames) {
+    {
+        const scriptPath = path.join(path.dirname(scriptOutputDirPath), `${ctorArgumentName.toLowerCase()}.js`);
+        const prototypeScriptPath = path.join(path.dirname(scriptOutputDirPath), `${ctorArgumentName.toLowerCase()}.prototype.js`);
+        if (existsSync(scriptPath) &&existsSync(prototypeScriptPath)) {
+            typeInfo.add({ scriptPath, prototypeScriptPath, isSingleton, isContextSingleton, typeInfoOutputDirPath: scriptOutputDirPath });
+            typeInfo.resolve({ prototypeScriptPath, typeInfoOutputDirPath: scriptOutputDirPath });
+        }
+    }
+};
 
-const factoryScriptPath = path.join(scriptOutputDirPath, `${_typeInfo.typeName.toLowerCase()}.factory.js`);
-const containerFilePaths = walk(scriptOutputDirPath).filter(p => p.indexOf(_typeInfo.typeName.toLowerCase()) > -1 ).map(p => p.replace(/\\/g,'//'));
-const factoryJs = factoryTemplate
-    .replace(/\[ContextFilePaths\]/g, JSON.stringify(containerFilePaths))
-    .replace(/\[TypeName\]/g, _typeInfo.typeName)
-    .replace(/\[PrimitiveArgs\]/g, ctorArgumentNames.join(','))
-    .replace(/\[PrimitiveArgsWithContextName\]/g, ctorArgumentsWithContextNames.join(','));
-writeFileSync(factoryScriptPath, factoryJs, 'utf8');
+typeInfo.resolve({ prototypeScriptPath, typeInfoOutputDirPath: scriptOutputDirPath });
+
+// factoryContainer.generate({ 
+//     typeInfo: info,
+//     scriptPath,
+//     isContextSingleton,
+//     contextName,
+//     defaultContextName,
+//     jsonOutputDirPath: scriptOutputDirPath
+// });
+
+// const factoryScriptPath = path.join(scriptOutputDirPath, `${info.typeName.toLowerCase()}.factory.js`);
+// const containerFilePaths = walk(scriptOutputDirPath).filter(p => p.indexOf(info.typeName.toLowerCase()) > -1 ).map(p => p.replace(/\\/g,'//'));
+// const factoryJs = factoryTemplate
+//     .replace(/\[ContextFilePaths\]/g, JSON.stringify(containerFilePaths))
+//     .replace(/\[TypeName\]/g, info.typeName)
+//     .replace(/\[PrimitiveArgs\]/g, ctorArgumentNames.join(','))
+//     .replace(/\[PrimitiveArgsWithContextName\]/g, ctorArgumentsWithContextNames.join(','));
+// writeFileSync(factoryScriptPath, factoryJs, 'utf8');

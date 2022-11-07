@@ -6,8 +6,8 @@
         "childInfoArray": [],
         "isRef": true,
         "isResolved": true,
-        "scriptPath": "C://generate.factory.method//tests//testclassdepedency.js",
-        "prototypeScriptPath": "C://generate.factory.method//tests//testclassdepedency.prototype.js"
+        "scriptPath": "C://generate.factory.method//tests//testclassdependency.js",
+        "prototypeScriptPath": "C://generate.factory.method//tests//testclassdependency.prototype.js"
     },
     {
         "typeName": "TestClass",
@@ -21,8 +21,8 @@
                 "childInfoArray": [],
                 "isRef": true,
                 "isResolved": true,
-                "scriptPath": "C://generate.factory.method//tests//testclassdepedency.js",
-                "prototypeScriptPath": "C://generate.factory.method//tests//testclassdepedency.prototype.js"
+                "scriptPath": "C://generate.factory.method//tests//testclassdependency.js",
+                "prototypeScriptPath": "C://generate.factory.method//tests//testclassdependency.prototype.js"
             },
             {
                 "typeName": "testParam01",

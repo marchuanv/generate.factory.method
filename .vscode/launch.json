@@ -4,12 +4,7 @@
       "name": "Generate Test Class Factory Method",
       "type": "node-terminal",
       "request": "launch",
-      "command": "npm un generate-factory-method --defaultContextName Default --isContextSingleton true --isSingleton false --scriptOutputDirPath ./tests/output --scriptPath ./tests/testclass.js --prototypeScriptPath ./tests/testclass.prototype.js --isContextSingleton false --contextName 123456t "
-    },{
-      "name": "Generate Test Class Dependency Factory Method",
-      "type": "node-terminal",
-      "request": "launch",
-      "command": "npm un generate-factory-method --defaultContextName Default --isContextSingleton true --isSingleton false --scriptOutputDirPath ./tests/output --scriptPath ./tests/testclassdepedency.js --prototypeScriptPath ./tests/testclassdepedency.prototype.js --isContextSingleton false --contextName 123456t "
+      "command": "npm run generate-factory-method -- --defaultContextName Default --isContextSingleton true --isSingleton false --scriptOutputDirPath ./tests/output --scriptPath ./tests/testclass.js --prototypeScriptPath ./tests/testclass.prototype.js --isContextSingleton false --contextName 123456t "
     },{
       "name": "Add Test Class Type Info",
       "type": "node-terminal",
@@ -19,6 +14,6 @@
       "name": "Add Test Class Depedency Type Info",
       "type": "node-terminal",
       "request": "launch",
-      "command": "npm run add-type-info -- --isContextSingleton true --isSingleton false --scriptOutputDirPath ./tests/output --prototypeScriptPath ./tests/testclassdepedency.prototype.js --scriptPath ./tests/testclassdepedency.js"
+      "command": "npm run add-type-info -- --isContextSingleton true --isSingleton false --scriptOutputDirPath ./tests/output --prototypeScriptPath ./tests/testclassdependency.prototype.js --scriptPath ./tests/testclassdependency.js"
     }]
 }

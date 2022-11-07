@@ -46,7 +46,7 @@ typeInfo.add({ type, isSingleton, typeInfoOutputDirPath:  scriptOutputDirPath })
 const _typeInfo = typeInfo.get({ type, typeInfoOutputDirPath: scriptOutputDirPath });
 
 const ctorArgumentsWithContextNames = _typeInfo.childInfoArray.map(ci => ci.variableName);
-ctorArgumentNames = ctorArgumentsWithContextNames.concat(['contextName']);
+const ctorArgumentNames = ctorArgumentsWithContextNames.concat(['contextName']);
 
 factoryContainer.generate({ 
     typeInfo: _typeInfo,
