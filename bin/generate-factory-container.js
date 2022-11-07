@@ -1,8 +1,7 @@
 #!/usr/bin/env node
 const path = require('path');
 const typeInfo = require('../lib/type.info');
-const factoryContainer = require('../lib/factory.container');
-const { existsSync } = require('fs');
+const factoryContainer = require('../lib/factory.container.old');
 const { readdirSync, writeFileSync, statSync, readFileSync } = require('fs');
 const factoryTemplate = readFileSync(path.join(__dirname, '../lib', 'templates', 'factory.template'),'utf8');
 
@@ -23,7 +22,7 @@ function walk(dir) {
     return results;
 }
 
-const { command, scriptPath, prototypeScriptPath, isSingleton, isContextSingleton, scriptOutputDirPath, contextName, defaultContextName } = require('./map.arguments');
+const { command, scriptPath, isContextSingleton, scriptOutputDirPath, contextName, defaultContextName } = require('./map.arguments');
 if (command === 'add-type-info') {
    return require('./add-type-info');
 }
@@ -32,7 +31,6 @@ const script = require(scriptPath);
 const key = Object.keys(script)[0];
 const type = script[key];
 
-typeInfo.add({ type, isSingleton, typeInfoOutputDirPath:  scriptOutputDirPath });
 const _typeInfo = typeInfo.get({ type, typeInfoOutputDirPath: scriptOutputDirPath });
 
 const ctorArgumentsWithContextNames = _typeInfo.childInfoArray.map(ci => ci.variableName);

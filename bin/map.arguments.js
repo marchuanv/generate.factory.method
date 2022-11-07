@@ -9,7 +9,9 @@ module.exports = {
     isContextSingleton: null,
     scriptOutputDirPath: null,
     contextName: null,
-    defaultContextName: null
+    defaultContextName: null,
+    containerFilePath: null,
+    typeInfoFilePath: null
 };
 const args = process.argv.slice(2,process.argv.length);
 module.exports.command = args[0];

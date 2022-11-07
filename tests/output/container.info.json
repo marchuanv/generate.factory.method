@@ -1,0 +1,16 @@
+[
+    {
+        "containerFilePath": "C://generate.factory.method//tests//output//testclass.factory.container.js",
+        "isContextSingleton": true,
+        "typeName": "TestClass"
+    },
+    {
+        "typeName": "TestClassDependency",
+        "isContextSingleton": true,
+        "prototypeScriptPath": "C://generate.factory.method//tests//testclassdependency.prototype.js",
+        "childContainerInfoArray": [],
+        "containerFilePath": "C://generate.factory.method//tests//output//testclassdependency.factory.container.js",
+        "isResolved": false,
+        "variableName": "testClassDependency"
+    }
+]

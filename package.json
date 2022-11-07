@@ -21,7 +21,8 @@
   },
   "scripts": {
     "generate-factory-method": "node bin//generate-factory-method.js",
-    "add-type-info": "node bin//add-type-info.js"
+    "add-type-info": "node bin//add-type-info.js",
+    "add-container-info": "node bin//add-container-info.js"
   },
   "homepage": "https://github.com/marchuanv//generate-factory-method#readme",
   "dependencies": {

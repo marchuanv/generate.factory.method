@@ -1,0 +1,9 @@
+{ 
+    "typeName":"[TypeName]",
+    "isContextSingleton":[IsContextSingleton],
+    "prototypeScriptPath":"[PrototypeScriptPath]",
+    "childContainerInfoArray":[ChildContainerInfoArray],
+    "containerFilePath":"[ContainerFilePath]",
+    "isResolved":[IsResolved],
+    "variableName":"[VariableName]"
+}

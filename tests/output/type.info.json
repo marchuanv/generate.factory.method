@@ -1,14 +1,24 @@
 [
     {
+        "typeName": "TestClassDependency",
+        "variableName": "testClassDependency",
+        "isSingleton": false,
+        "childTypeInfoArray": [],
+        "isRef": true,
+        "isResolved": true,
+        "scriptPath": "C://generate.factory.method//tests//testclassdependency.js",
+        "prototypeScriptPath": "C://generate.factory.method//tests//testclassdependency.prototype.js"
+    },
+    {
         "typeName": "TestClass",
         "variableName": "testClass",
         "isSingleton": false,
-        "childInfoArray": [
+        "childTypeInfoArray": [
             {
                 "typeName": "TestClassDependency",
                 "variableName": "testClassDependency",
                 "isSingleton": false,
-                "childInfoArray": [],
+                "childTypeInfoArray": [],
                 "isRef": true,
                 "isResolved": true,
                 "scriptPath": "C://generate.factory.method//tests//testclassdependency.js",
@@ -18,7 +28,7 @@
                 "typeName": "testParam01",
                 "variableName": "testParam01",
                 "isSingleton": false,
-                "childInfoArray": [],
+                "childTypeInfoArray": [],
                 "isRef": false,
                 "isResolved": false,
                 "scriptPath": "",
@@ -28,7 +38,7 @@
                 "typeName": "testParam02",
                 "variableName": "testParam02",
                 "isSingleton": false,
-                "childInfoArray": [],
+                "childTypeInfoArray": [],
                 "isRef": false,
                 "isResolved": false,
                 "scriptPath": "",
@@ -39,15 +49,5 @@
         "isResolved": true,
         "scriptPath": "C://generate.factory.method//tests//testclass.js",
         "prototypeScriptPath": "C://generate.factory.method//tests//testclass.prototype.js"
-    },
-    {
-        "typeName": "TestClassDependency",
-        "variableName": "testClassDependency",
-        "isSingleton": false,
-        "childInfoArray": [],
-        "isRef": true,
-        "isResolved": true,
-        "scriptPath": "C://generate.factory.method//tests//testclassdependency.js",
-        "prototypeScriptPath": "C://generate.factory.method//tests//testclassdependency.prototype.js"
     }
 ]

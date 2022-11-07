@@ -2,7 +2,7 @@
     "typeName":"[TypeName]",
     "variableName":"[VariableName]",
     "isSingleton":[IsSingleton],
-    "childInfoArray":[[ChildInfoArray]],
+    "childTypeInfoArray":[[ChildTypeInfoArray]],
     "isRef":[IsRef],
     "isResolved":[IsResolved],
     "scriptPath":"[ScriptPath]",
