@@ -28,16 +28,6 @@ if (command === 'add-type-info') {
    return require('./add-type-info');
 }
 
-if (!existsSync(scriptPath)) {
-    throw new Error(`${scriptPath} script does not exist.`);
-}
-if (!existsSync(prototypeScriptPath)) {
-    throw new Error(`${prototypeScriptPath} script does not exist.`);
-}
-if (!existsSync(scriptOutputDirPath)){
-    throw new Error(`${scriptOutputDirPath} script does not exist.`);
-}
-
 const script = require(scriptPath);
 const key = Object.keys(script)[0];
 const type = script[key];

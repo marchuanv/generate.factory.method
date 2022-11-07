@@ -32,3 +32,4 @@ for(const param of args) {
         module.exports [name] = value;
     }
 };
+require('./map.arguments.validation.js');

@@ -28,16 +28,6 @@ if (command === 'add-type-info') {
    return require('./add-type-info');
 }
 
-if (!existsSync(scriptPath)) {
-    throw new Error(`${scriptPath} script does not exist.`);
-}
-if (!existsSync(prototypeScriptPath)) {
-    throw new Error(`${prototypeScriptPath} script does not exist.`);
-}
-if (!existsSync(scriptOutputDirPath)){
-    throw new Error(`${scriptOutputDirPath} script does not exist.`);
-}
-
 const script = require(prototypeScriptPath);
 const typeName = Object.keys(script)[0];
 
@@ -61,20 +51,20 @@ for(const ctorArgumentName of ctorArgumentNames) {
 
 typeInfo.resolve({ prototypeScriptPath, typeInfoOutputDirPath: scriptOutputDirPath });
 
-// factoryContainer.generate({ 
-//     typeInfo: info,
-//     scriptPath,
-//     isContextSingleton,
-//     contextName,
-//     defaultContextName,
-//     jsonOutputDirPath: scriptOutputDirPath
-// });
+factoryContainer.generate({ 
+    typeInfo: info,
+    scriptPath,
+    isContextSingleton,
+    contextName,
+    defaultContextName,
+    jsonOutputDirPath: scriptOutputDirPath
+});
 
-// const factoryScriptPath = path.join(scriptOutputDirPath, `${info.typeName.toLowerCase()}.factory.js`);
-// const containerFilePaths = walk(scriptOutputDirPath).filter(p => p.indexOf(info.typeName.toLowerCase()) > -1 ).map(p => p.replace(/\\/g,'//'));
-// const factoryJs = factoryTemplate
-//     .replace(/\[ContextFilePaths\]/g, JSON.stringify(containerFilePaths))
-//     .replace(/\[TypeName\]/g, info.typeName)
-//     .replace(/\[PrimitiveArgs\]/g, ctorArgumentNames.join(','))
-//     .replace(/\[PrimitiveArgsWithContextName\]/g, ctorArgumentsWithContextNames.join(','));
-// writeFileSync(factoryScriptPath, factoryJs, 'utf8');
+const factoryScriptPath = path.join(scriptOutputDirPath, `${info.typeName.toLowerCase()}.factory.js`);
+const containerFilePaths = walk(scriptOutputDirPath).filter(p => p.indexOf(info.typeName.toLowerCase()) > -1 ).map(p => p.replace(/\\/g,'//'));
+const factoryJs = factoryTemplate
+    .replace(/\[ContextFilePaths\]/g, JSON.stringify(containerFilePaths))
+    .replace(/\[TypeName\]/g, info.typeName)
+    .replace(/\[PrimitiveArgs\]/g, ctorArgumentNames.join(','))
+    .replace(/\[PrimitiveArgsWithContextName\]/g, ctorArgumentsWithContextNames.join(','));
+writeFileSync(factoryScriptPath, factoryJs, 'utf8');

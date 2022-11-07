@@ -1,15 +1,5 @@
 [
     {
-        "typeName": "TestClassDependency",
-        "variableName": "testClassDependency",
-        "isSingleton": false,
-        "childInfoArray": [],
-        "isRef": true,
-        "isResolved": true,
-        "scriptPath": "C://generate.factory.method//tests//testclassdependency.js",
-        "prototypeScriptPath": "C://generate.factory.method//tests//testclassdependency.prototype.js"
-    },
-    {
         "typeName": "TestClass",
         "variableName": "testClass",
         "isSingleton": false,
@@ -49,5 +39,15 @@
         "isResolved": true,
         "scriptPath": "C://generate.factory.method//tests//testclass.js",
         "prototypeScriptPath": "C://generate.factory.method//tests//testclass.prototype.js"
+    },
+    {
+        "typeName": "TestClassDependency",
+        "variableName": "testClassDependency",
+        "isSingleton": false,
+        "childInfoArray": [],
+        "isRef": true,
+        "isResolved": true,
+        "scriptPath": "C://generate.factory.method//tests//testclassdependency.js",
+        "prototypeScriptPath": "C://generate.factory.method//tests//testclassdependency.prototype.js"
     }
 ]
