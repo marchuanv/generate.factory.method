@@ -1,10 +1,5 @@
 [
     {
-        "containerFilePath": "C://generate.factory.method//tests//output//testclass.factory.container.js",
-        "isContextSingleton": true,
-        "typeName": "TestClass"
-    },
-    {
         "typeName": "TestClassDependency",
         "isContextSingleton": true,
         "prototypeScriptPath": "C://generate.factory.method//tests//testclassdependency.prototype.js",
@@ -12,5 +7,42 @@
         "containerFilePath": "C://generate.factory.method//tests//output//testclassdependency.factory.container.js",
         "isResolved": false,
         "variableName": "testClassDependency"
+    },
+    {
+        "typeName": "TestClass",
+        "isContextSingleton": true,
+        "prototypeScriptPath": "C://generate.factory.method//tests//testclass.prototype.js",
+        "childContainerInfoArray": [
+            {
+                "typeName": "TestClassDependency",
+                "isContextSingleton": true,
+                "prototypeScriptPath": "C://generate.factory.method//tests//testclassdependency.prototype.js",
+                "childContainerInfoArray": [],
+                "containerFilePath": "C://generate.factory.method//tests//output//testclassdependency.factory.container.js",
+                "isResolved": false,
+                "variableName": "testClassDependency"
+            },
+            {
+                "typeName": "testParam01",
+                "isContextSingleton": true,
+                "prototypeScriptPath": "",
+                "childContainerInfoArray": [],
+                "containerFilePath": "C://generate.factory.method//tests//output//testparam01.factory.container.js",
+                "isResolved": false,
+                "variableName": "testParam01"
+            },
+            {
+                "typeName": "testParam02",
+                "isContextSingleton": true,
+                "prototypeScriptPath": "",
+                "childContainerInfoArray": [],
+                "containerFilePath": "C://generate.factory.method//tests//output//testparam02.factory.container.js",
+                "isResolved": false,
+                "variableName": "testParam02"
+            }
+        ],
+        "containerFilePath": "C://generate.factory.method//tests//output//testclass.factory.container.js",
+        "isResolved": false,
+        "variableName": "testClass"
     }
 ]
