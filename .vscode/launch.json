@@ -19,11 +19,11 @@
       "name": "Add Test Class Container Info",
       "type": "node-terminal",
       "request": "launch",
-      "command": "npm run add-container-info -- --isContextSingleton true --typeInfoFilePath ./tests/output/type.info.json --isContextSingleton true --scriptOutputDirPath ./tests/output --prototypeScriptPath ./tests/testclass.prototype.js"
+      "command": "npm run add-container-info -- --contextName testcontext --defaultContextName defaultcontext --typeInfoFilePath ./tests/output/type.info.json --isContextSingleton true --scriptOutputDirPath ./tests/output --prototypeScriptPath ./tests/testclass.prototype.js"
     },{
       "name": "Add Test Class Depedency Container Info",
       "type": "node-terminal",
       "request": "launch",
-      "command": "npm run add-container-info -- --isContextSingleton true --typeInfoFilePath ./tests/output/type.info.json --isContextSingleton true --scriptOutputDirPath ./tests/output --prototypeScriptPath ./tests/testclassdependency.prototype.js"
+      "command": "npm run add-container-info -- --contextName testcontext --defaultContextName defaultcontext --typeInfoFilePath ./tests/output/type.info.json --isContextSingleton true --scriptOutputDirPath ./tests/output --prototypeScriptPath ./tests/testclassdependency.prototype.js"
     }]
 }

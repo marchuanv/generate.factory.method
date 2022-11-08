@@ -1,9 +1,13 @@
 { 
     "typeName":"[TypeName]",
     "isContextSingleton":[IsContextSingleton],
-    "prototypeScriptPath":"[PrototypeScriptPath]",
     "childContainerInfoArray":[ChildContainerInfoArray],
     "containerFilePath":"[ContainerFilePath]",
+    "defaultContainerFilePath": "[DefaultContainerFilePath]",
     "isResolved":[IsResolved],
-    "variableName":"[VariableName]"
+    "variableName":"[VariableName]",
+    "scriptPath": "[ScriptPath]",
+    "contextName": "[ContextName]",
+    "defaultContextName": "[DefaultContextName]",
+    "isSingleton": [IsSingleton]
 }

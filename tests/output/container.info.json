@@ -1,48 +1,55 @@
 [
     {
-        "typeName": "TestClassDependency",
-        "isContextSingleton": true,
-        "prototypeScriptPath": "C://generate.factory.method//tests//testclassdependency.prototype.js",
-        "childContainerInfoArray": [],
-        "containerFilePath": "C://generate.factory.method//tests//output//testclassdependency.factory.container.js",
-        "isResolved": false,
-        "variableName": "testClassDependency"
-    },
-    {
         "typeName": "TestClass",
         "isContextSingleton": true,
-        "prototypeScriptPath": "C://generate.factory.method//tests//testclass.prototype.js",
         "childContainerInfoArray": [
             {
                 "typeName": "TestClassDependency",
                 "isContextSingleton": true,
-                "prototypeScriptPath": "C://generate.factory.method//tests//testclassdependency.prototype.js",
                 "childContainerInfoArray": [],
-                "containerFilePath": "C://generate.factory.method//tests//output//testclassdependency.factory.container.js",
+                "containerFilePath": "C://generate.factory.method//tests//output//testclassdependency.factory.testcontext.container.js",
+                "defaultContainerFilePath": "C://generate.factory.method//tests//output//testclassdependency.factory.defaultcontext.container.js",
                 "isResolved": false,
-                "variableName": "testClassDependency"
+                "variableName": "testClassDependency",
+                "scriptPath": "C://generate.factory.method//tests//testclassdependency.js",
+                "contextName": "testcontext",
+                "defaultContextName": "defaultcontext",
+                "isSingleton": false
             },
             {
                 "typeName": "testParam01",
                 "isContextSingleton": true,
-                "prototypeScriptPath": "",
                 "childContainerInfoArray": [],
-                "containerFilePath": "C://generate.factory.method//tests//output//testparam01.factory.container.js",
+                "containerFilePath": "C://generate.factory.method//tests//output//testparam01.factory.testcontext.container.js",
+                "defaultContainerFilePath": "C://generate.factory.method//tests//output//testparam01.factory.defaultcontext.container.js",
                 "isResolved": false,
-                "variableName": "testParam01"
+                "variableName": "testParam01",
+                "scriptPath": "",
+                "contextName": "testcontext",
+                "defaultContextName": "defaultcontext",
+                "isSingleton": false
             },
             {
                 "typeName": "testParam02",
                 "isContextSingleton": true,
-                "prototypeScriptPath": "",
                 "childContainerInfoArray": [],
-                "containerFilePath": "C://generate.factory.method//tests//output//testparam02.factory.container.js",
+                "containerFilePath": "C://generate.factory.method//tests//output//testparam02.factory.testcontext.container.js",
+                "defaultContainerFilePath": "C://generate.factory.method//tests//output//testparam02.factory.defaultcontext.container.js",
                 "isResolved": false,
-                "variableName": "testParam02"
+                "variableName": "testParam02",
+                "scriptPath": "",
+                "contextName": "testcontext",
+                "defaultContextName": "defaultcontext",
+                "isSingleton": false
             }
         ],
-        "containerFilePath": "C://generate.factory.method//tests//output//testclass.factory.container.js",
+        "containerFilePath": "C://generate.factory.method//tests//output//testclass.factory.testcontext.container.js",
+        "defaultContainerFilePath": "C://generate.factory.method//tests//output//testclass.factory.defaultcontext.container.js",
         "isResolved": false,
-        "variableName": "testClass"
+        "variableName": "testClass",
+        "scriptPath": "C://generate.factory.method//tests//testclass.js",
+        "contextName": "testcontext",
+        "defaultContextName": "defaultcontext",
+        "isSingleton": false
     }
 ]
