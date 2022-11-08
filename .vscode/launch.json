@@ -16,14 +16,14 @@
       "request": "launch",
       "command": "npm run add-type-info -- --isContextSingleton true --isSingleton false --scriptOutputDirPath ./tests/output --prototypeScriptPath ./tests/testclassdependency.prototype.js --scriptPath ./tests/testclassdependency.js"
     },{
-      "name": "Add Test Class Container Info",
+      "name": "Add Test Class TestContext1 Container Info",
       "type": "node-terminal",
       "request": "launch",
-      "command": "npm run add-container-info -- --contextName testcontext --defaultContextName defaultcontext --typeInfoFilePath ./tests/output/type.info.json --isContextSingleton true --scriptOutputDirPath ./tests/output --prototypeScriptPath ./tests/testclass.prototype.js"
+      "command": "npm run add-container-info -- --contextName testcontext1 --defaultContextName defaultcontext --typeInfoFilePath ./tests/output/type.info.json --isContextSingleton true --scriptOutputDirPath ./tests/output --prototypeScriptPath ./tests/testclass.prototype.js"
     },{
-      "name": "Add Test Class Depedency Container Info",
+      "name": "Add Test Class TestContext2 Container Info",
       "type": "node-terminal",
       "request": "launch",
-      "command": "npm run add-container-info -- --contextName testcontext --defaultContextName defaultcontext --typeInfoFilePath ./tests/output/type.info.json --isContextSingleton true --scriptOutputDirPath ./tests/output --prototypeScriptPath ./tests/testclassdependency.prototype.js"
+      "command": "npm run add-container-info -- --contextName testcontext2 --defaultContextName defaultcontext --typeInfoFilePath ./tests/output/type.info.json --isContextSingleton true --scriptOutputDirPath ./tests/output --prototypeScriptPath ./tests/testclass.prototype.js"
     }]
 }
