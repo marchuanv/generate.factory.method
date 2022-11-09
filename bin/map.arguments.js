@@ -7,11 +7,12 @@ module.exports = {
     prototypeScriptPath: null,
     isSingleton: null,
     isContextSingleton: null,
-    scriptOutputDirPath: null,
+    scriptsOutputDirPath: null,
     contextName: null,
     defaultContextName: null,
     containerFilePath: null,
-    typeInfoFilePath: null
+    typeInfoFilePath: null,
+    scriptsDirPath: null
 };
 const args = process.argv.slice(2,process.argv.length);
 module.exports.command = args[0];

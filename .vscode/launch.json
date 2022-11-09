@@ -9,12 +9,12 @@
       "name": "Add Test Class Type Info",
       "type": "node-terminal",
       "request": "launch",
-      "command": "npm run add-type-info -- --isContextSingleton true --isSingleton false --scriptOutputDirPath ./tests/output --prototypeScriptPath ./tests/testclass.prototype.js --scriptPath ./tests/testclass.js"
+      "command": "npm run add-type-info -- --isSingleton false --scriptsDirPath ./tests/ --scriptsOutputDirPath ./tests/output --prototypeScriptPath ./tests/testclass.prototype.js --scriptPath ./tests/testclass.js"
     },{
       "name": "Add Test Class Depedency Type Info",
       "type": "node-terminal",
       "request": "launch",
-      "command": "npm run add-type-info -- --isContextSingleton true --isSingleton false --scriptOutputDirPath ./tests/output --prototypeScriptPath ./tests/testclassdependency.prototype.js --scriptPath ./tests/testclassdependency.js"
+      "command": "npm run add-type-info -- --isSingleton false --scriptsDirPath ./tests/ --scriptsOutputDirPath ./tests/output --scriptOutputDirPath ./tests/output --prototypeScriptPath ./tests/testclassdependency.prototype.js --scriptPath ./tests/testclassdependency.js"
     },{
       "name": "Add Test Class TestContext1 Container Info",
       "type": "node-terminal",

@@ -1,53 +1,34 @@
-[
-    {
-        "typeName": "TestClassDependency",
-        "variableName": "testClassDependency",
-        "isSingleton": false,
-        "childTypeInfoArray": [],
-        "isRef": true,
-        "isResolved": true,
-        "scriptPath": "C://generate.factory.method//tests//testclassdependency.js",
-        "prototypeScriptPath": "C://generate.factory.method//tests//testclassdependency.prototype.js"
-    },
-    {
-        "typeName": "TestClass",
-        "variableName": "testClass",
-        "isSingleton": false,
-        "childTypeInfoArray": [
-            {
-                "typeName": "TestClassDependency",
-                "variableName": "testClassDependency",
+{
+    "Id": "f1080752-2add-4c50-ad10-07608bbada81",
+    "name": "root",
+    "childNodes": [
+        {
+            "Id": "3546f454-ef36-4bad-b1d7-65cfeec7537f",
+            "name": "TestClass",
+            "childNodes": [
+                {
+                    "Id": "8c4a06dc-ea00-4766-a3e2-b49a0665b280",
+                    "name": "TestClassDependency",
+                    "childNodes": [],
+                    "data": {
+                        "typeName": "TestClassDependency",
+                        "variableName": "testClassDependency",
+                        "isSingleton": false,
+                        "isRef": true,
+                        "scriptPath": "C://generate.factory.method//tests//testclassdependency.js",
+                        "prototypeScriptPath": "C://generate.factory.method//tests//testclassdependency.prototype.js"
+                    }
+                }
+            ],
+            "data": {
+                "typeName": "TestClass",
+                "variableName": "testClass",
                 "isSingleton": false,
-                "childTypeInfoArray": [],
                 "isRef": true,
-                "isResolved": true,
-                "scriptPath": "C://generate.factory.method//tests//testclassdependency.js",
-                "prototypeScriptPath": "C://generate.factory.method//tests//testclassdependency.prototype.js"
-            },
-            {
-                "typeName": "testParam01",
-                "variableName": "testParam01",
-                "isSingleton": false,
-                "childTypeInfoArray": [],
-                "isRef": false,
-                "isResolved": false,
-                "scriptPath": "",
-                "prototypeScriptPath": ""
-            },
-            {
-                "typeName": "testParam02",
-                "variableName": "testParam02",
-                "isSingleton": false,
-                "childTypeInfoArray": [],
-                "isRef": false,
-                "isResolved": false,
-                "scriptPath": "",
-                "prototypeScriptPath": ""
+                "scriptPath": "C://generate.factory.method//tests//testclass.js",
+                "prototypeScriptPath": "C://generate.factory.method//tests//testclass.prototype.js"
             }
-        ],
-        "isRef": true,
-        "isResolved": true,
-        "scriptPath": "C://generate.factory.method//tests//testclass.js",
-        "prototypeScriptPath": "C://generate.factory.method//tests//testclass.prototype.js"
-    }
-]
+        }
+    ],
+    "data": null
+}
